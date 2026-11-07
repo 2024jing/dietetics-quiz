@@ -43,6 +43,16 @@ h3{font-size:16px;font-weight:700;margin:22px 0 8px;scroll-margin-top:70px}
 .seg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:700}
 .dual[data-view="text"] .ppic,.dual[data-view="pic"] .ptext{display:none}
 .ppic .fig{margin:0}
+.anim{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 12px;display:grid;gap:8px}
+.anim .fig{margin:0;border:0;padding:0}
+.anim svg g{transition:transform .9s ease,opacity .6s ease}
+.anim-cap{margin:0;min-height:3.2em;font-size:15px;font-weight:600;color:var(--ink)}
+.anim-ctl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.anim-n{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-right:auto}
+.anim-mode{justify-self:start;display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.aseg button{font:inherit;font-size:13px;padding:5px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.aseg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:700}
+
 
 @media (max-width:600px){.fig{padding:4px;overflow:visible}.fig .wide{display:none}.fig .narrow{display:block}}
 .card{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:15px}
@@ -317,7 +327,13 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 <tr><th>打開怎麼做到</th><td>昇糖素、腎上腺素 → cAMP ↑ → 蛋白激酶 A 把 HSL 磷酸化 → 活化</td></tr>
 <tr><th>關掉怎麼做到</th><td>胰島素活化磷酸二酯酶 → cAMP ↓ → HSL 不被活化</td></tr>
 <tr><th>切的順序</th><td>ATGL 先切第 1 刀 → HSL → 單酸甘油脂解酶（考試答 HSL）</td></tr>
-<tr><th>存的骨架</th><td>脂肪細胞缺甘油激酶 → 甘油-3-磷酸要由葡萄糖來 → 吃飽才存得進去</td></tr></table></div><div class="pane ppic"><div class="fig chem"><svg viewBox='0 0 360 620' role='img' aria-label='脂肪組織 HSL 調控' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>脂肪組織：HSL 是開關</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>需要能量 → 打開；吃飽 → 關掉</text>
+<tr><th>存的骨架</th><td>脂肪細胞缺甘油激酶 → 甘油-3-磷酸要由葡萄糖來 → 吃飽才存得進去</td></tr></table></div><div class="pane ppic"><div class="anim" id="hslAnim">
+<div class="anim-top"><b>動畫：HSL 怎麼被打開、怎麼被關掉</b></div>
+<div class="aseg anim-mode"><button type="button" data-m="g" aria-pressed="true">餓了：打開</button><button type="button" data-m="i" aria-pressed="false">吃飽：關掉</button></div>
+<div class="fig chem"><svg viewBox='0 0 360 370' role='img' aria-label='HSL 開關動畫' font-family='inherit'><defs><marker id='aR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker><marker id='aB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker></defs><rect x='0' y='60' width='360' height='22' fill='var(--tint)'/><path d='M0 60H360' stroke='var(--edge)' stroke-width='1.2' fill='none'/><path d='M0 82H360' stroke='var(--edge)' stroke-width='1.2' fill='none'/><text x='8' y='20' text-anchor='start' font-size='10.5' fill='var(--muted)'>細胞外（血液）</text><text x='352' y='100' text-anchor='end' font-size='10.5' fill='var(--muted)'>脂肪細胞內</text><text x='8' y='75' text-anchor='start' font-size='10' fill='var(--muted)'>細胞膜</text><rect x='78' y='52' width='20' height='38' rx='4' fill='var(--good)' fill-opacity='.2' stroke='var(--good)'/><g id='hA-ac'><rect x='104' y='56' width='38' height='28' rx='6' fill='var(--accent)' fill-opacity='.2' stroke='var(--accent)'/><text x='123' y='75' text-anchor='middle' font-size='11' font-weight='700' fill='var(--accent)'>AC</text><text x='123' y='100' text-anchor='middle' font-size='9.5' fill='var(--accent)'>腺苷酸環化酶</text></g><g id='hA-g'><circle cx='88' cy='26' r='11' fill='var(--good)'/><text x='88' y='30' text-anchor='middle' font-size='11' font-weight='700' fill='#fff'>昇</text><text x='104' y='22' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--good)'>昇糖素</text><text x='104' y='36' text-anchor='start' font-size='9.5' fill='var(--good)'>腎上腺素</text></g><rect x='172' y='52' width='20' height='38' rx='4' fill='var(--bad)' fill-opacity='.2' stroke='var(--bad)'/><g id='hA-i'><path d='M182 15l9.5 5.5v11l-9.5 5.5l-9.5-5.5v-11z' fill='var(--bad)'/><text x='182' y='30' text-anchor='middle' font-size='11' font-weight='700' fill='#fff'>胰</text><text x='198' y='28' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--bad)'>胰島素</text></g><g id='hA-sig'><path d='M182 92V146' stroke='var(--bad)' stroke-width='1.6' stroke-dasharray='4 3' marker-end='url(#aR)'/></g><g id='hA-pde'><rect x='142' y='150' width='96' height='30' rx='8' fill='var(--bad)' fill-opacity='.15' stroke='var(--bad)'/><text x='190' y='170' text-anchor='middle' font-size='11' font-weight='700' fill='var(--bad)'>磷酸二酯酶</text></g><g id='hA-camp'><circle cx='96' cy='124' r='5' fill='var(--accent)'/><circle cx='116' cy='118' r='5' fill='var(--accent)'/><circle cx='110' cy='138' r='5' fill='var(--accent)'/><circle cx='130' cy='132' r='5' fill='var(--accent)'/><circle cx='90' cy='142' r='5' fill='var(--accent)'/><circle cx='126' cy='148' r='5' fill='var(--accent)'/><text x='140' y='124' text-anchor='start' font-size='11' font-weight='700' fill='var(--accent)'>cAMP</text><text x='104' y='112' text-anchor='end' font-size='10' fill='var(--muted)'>ATP →</text><path d='M100 152L80 170' stroke='var(--accent)' stroke-width='1.4' marker-end='url(#aB)'/></g><g id='hA-amp'><text x='190' y='198' text-anchor='middle' font-size='10.5' fill='var(--bad)'>cAMP → AMP（分解）</text></g><g id='hA-pka'><rect x='28' y='172' width='92' height='30' rx='8' fill='var(--accent)' fill-opacity='.18' stroke='var(--accent)' stroke-width='1.6'/><text x='74' y='192' text-anchor='middle' font-size='11.5' font-weight='700' fill='var(--accent)'>蛋白激酶 A</text></g><ellipse cx='215' cy='300' rx='92' ry='56' fill='var(--warm)' fill-opacity='.15' stroke='var(--warm)' stroke-width='1.6'/><text x='225' y='304' text-anchor='middle' font-size='12' font-weight='700' fill='var(--warm)'>油滴（TG）</text><g id='hA-hsl'><circle cx='60' cy='250' r='17' fill='var(--accent)' fill-opacity='.25' stroke='var(--accent)' stroke-width='1.8'/><text x='60' y='254' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--accent)'>HSL</text><g id='hA-p'><circle cx='76' cy='234' r='8' fill='var(--warm)'/><text x='76' y='238' text-anchor='middle' font-size='10' font-weight='700' fill='#fff'>P</text></g></g><g id='hA-prod'><path d='M262 222l7 -4l7 4l7 -4l7 4' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M262 234l7 -4l7 4l7 -4l7 4' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M262 246l7 -4l7 4l7 -4l7 4' stroke='var(--warm)' stroke-width='2' fill='none'/><text x='300' y='232' text-anchor='start' font-size='10' font-weight='700' fill='var(--warm)'>脂肪酸</text><text x='300' y='250' text-anchor='start' font-size='10' font-weight='700' fill='var(--muted)'>＋甘油</text></g></svg></div>
+<p class="anim-cap" aria-live="polite"></p>
+<div class="anim-ctl"><button type="button" class="btn small" data-a="prev">上一步</button><span class="anim-n"></span><button type="button" class="btn small primary" data-a="next">下一步</button><button type="button" class="btn small" data-a="play">自動播放</button></div>
+</div><div class="fig chem"><svg viewBox='0 0 360 620' role='img' aria-label='脂肪組織 HSL 調控' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>脂肪組織：HSL 是開關</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>需要能量 → 打開；吃飽 → 關掉</text>
 <rect x='12' y='52' width='164' height='81' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='94.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>打開 HSL</text><text x='94.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>昇糖素、腎上腺素、ACTH</text><text x='94.0' y='108' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ 細胞內 cAMP ↑</text><text x='94.0' y='125' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ 蛋白激酶 A 磷酸化 HSL</text>
 <rect x='184' y='52' width='164' height='81' rx='8' fill='var(--bad)' fill-opacity='0.12' stroke='var(--bad)' stroke-width='2'/><text x='266.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--bad)'>關掉 HSL</text><text x='266.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>胰島素（吃飽了）</text><text x='266.0' y='108' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ 磷酸二酯酶分解 cAMP</text><text x='266.0' y='125' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ HSL 不被打開</text>
 <path d='M94 133L160 159' stroke='var(--good)' stroke-width='1.6' fill='none' marker-end='url(#ag)'/>
@@ -912,13 +928,55 @@ document.addEventListener('click',function(e){if(!document.body.classList.contai
 <script>
 (function(){
 var ds=[].slice.call(document.querySelectorAll('.dual')),pb=document.getElementById('picBtn'),K='fatox-view';
-function setOne(d,v){d.dataset.view=v;d.querySelectorAll('.seg button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v)});}
+function setOne(d,v){d.dataset.view=v;d.querySelectorAll('.dhead .seg button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v)});}
 function setAll(v){ds.forEach(function(d){setOne(d,v)});pb.setAttribute('aria-pressed',v==='pic');pb.textContent=v==='pic'?'全部看文字':'全部看圖解';try{localStorage.setItem(K,v)}catch(e){}}
 var v0='text';try{v0=localStorage.getItem(K)||'text'}catch(e){}
 setAll(v0);
 pb.addEventListener('click',function(){setAll(pb.getAttribute('aria-pressed')==='true'?'text':'pic')});
-ds.forEach(function(d){d.querySelectorAll('.seg button').forEach(function(b){b.addEventListener('click',function(){setOne(d,b.dataset.v)})})});
+ds.forEach(function(d){d.querySelectorAll('.dhead .seg button').forEach(function(b){b.addEventListener('click',function(){setOne(d,b.dataset.v)})})});
 window.__dualJump=function(h){var d=h.closest('.dual');if(d&&d.dataset.view!=='text'){}};
+})();
+</script>
+<script>
+(function(){
+var R=document.getElementById('hslAnim');if(!R)return;
+var C={g:['起點：空腹，脂肪細胞裡的 HSL 還沒打開（淡色）',
+'① 昇糖素（或腎上腺素）接上細胞膜上的受體',
+'② 受體啟動腺苷酸環化酶（AC）：ATP → cAMP。cAMP 是細胞內的「傳令兵」',
+'③ cAMP 活化蛋白激酶 A',
+'④ 蛋白激酶 A 把一個磷酸（P）掛到 HSL 上 → HSL 被打開',
+'⑤ 打開的 HSL 到油滴表面切 TG → 甘油 ＋ 脂肪酸',
+'⑥ 脂肪酸、甘油離開細胞進血液（脂肪酸搭白蛋白，甘油去肝）'],
+i:['起點：HSL 掛著磷酸正在工作，脂肪一直被分解',
+'① 吃飽了：胰島素接上自己的受體（昇糖素同時減少）',
+'② 胰島素的訊號活化磷酸二酯酶',
+'③ 磷酸二酯酶把 cAMP 分解成 AMP → 傳令兵不見了',
+'④ 沒有 cAMP，蛋白激酶 A 停工',
+'⑤ HSL 上的磷酸被拿掉 → HSL 關閉，離開油滴，不再切 TG',
+'⑥ 同時胰島素讓細胞吸收葡萄糖，把脂肪酸存回 TG（第 23 題）']};
+var m='g',s=0,timer=null;
+function q(id){return R.querySelector('#hA-'+id)}
+function st(id,o,dx,dy){var e=q(id);e.style.opacity=o;e.style.transform='translate('+(dx||0)+'px,'+(dy||0)+'px)'}
+function draw(){
+ if(m==='g'){
+  st('g',1,0,s>=1?18:0);st('i',.2);st('sig',0);st('pde',.25);st('amp',0);
+  st('ac',s>=2?1:.3);st('camp',s>=2?1:0);st('pka',s>=3?1:.3);st('p',s>=4?1:0);
+  st('hsl',s>=4?1:.45,s>=5?72:0,s>=5?42:0);st('prod',s>=5?1:0,0,s>=6?-206:0);
+ }else{
+  st('g',s>=1?.2:1,0,s>=1?0:18);st('i',1,0,s>=1?18:0);st('sig',s>=2?1:0);st('pde',s>=2?1:.25);
+  st('ac',s>=1?.3:1);st('camp',s>=3?0:1);st('amp',s>=3?1:0);st('pka',s>=4?.3:1);st('p',s>=5?0:1);
+  st('hsl',s>=5?.45:1,s>=5?0:72,s>=5?0:42);st('prod',s>=5?0:1,0,0);
+ }
+ R.querySelector('.anim-cap').textContent=C[m][s];
+ R.querySelector('.anim-n').textContent=s+' / 6';
+ R.querySelector('[data-a=prev]').disabled=s===0;R.querySelector('[data-a=next]').disabled=s===6;
+}
+function stop(){if(timer){clearInterval(timer);timer=null;R.querySelector('[data-a=play]').textContent='自動播放';}}
+R.querySelectorAll('.anim-mode button').forEach(function(b){b.addEventListener('click',function(){stop();m=b.dataset.m;s=0;R.querySelectorAll('.anim-mode button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});draw();});});
+R.querySelector('[data-a=prev]').addEventListener('click',function(){stop();if(s>0){s--;draw();}});
+R.querySelector('[data-a=next]').addEventListener('click',function(){stop();if(s<6){s++;draw();}});
+R.querySelector('[data-a=play]').addEventListener('click',function(e){if(timer){stop();return;}if(s===6)s=0;draw();e.target.textContent='暫停';timer=setInterval(function(){if(s<6){s++;draw();}else stop();},1900);});
+draw();
 })();
 </script>
 </body>
