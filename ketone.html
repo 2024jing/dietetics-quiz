@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>生化｜酮體生成</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f3f6f4; --surface:#ffffff; --ink:#17231f; --muted:#5b6b65; --line:#d6e0db; --edge:#8a9a94;
+  --accent:#1f6fd1; --accent-soft:#e1ecfa; --warm:#e0672c; --tint:#e7ece9;
+  --yolk:#f2b632; --yolk-soft:#fdf1d4; --good:#1d8a4c; --good-soft:#e2f4e8; --bad:#c2402e; --bad-soft:#fbe6e2;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0f1715; --surface:#17221f; --ink:#e7efeb; --muted:#9fb1aa; --line:#2a3a35; --edge:#7d8f88;
+  --accent:#6ea8ff; --accent-soft:#1a2a40; --warm:#ff9a66; --tint:#22302c;
+  --yolk:#f2c45a; --yolk-soft:#3a2f14; --good:#5bd38d; --good-soft:#163323; --bad:#ff8a77; --bad-soft:#3b1e19;
+  color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.head-in{max-width:760px;margin:0 auto;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.head-in h1{margin:0;font-size:18px;font-weight:900}
+.head-in nav{display:flex;gap:6px;flex-wrap:wrap}
+.head-in nav a{font-size:13px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:3px 10px;background:var(--bg)}
+.lead{margin:20px 0 0;color:var(--muted)}
+h2{font-size:21px;font-weight:900;margin:40px 0 6px;text-wrap:balance;scroll-margin-top:70px}
+h3{font-size:16px;font-weight:700;margin:22px 0 8px;scroll-margin-top:70px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 8px}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto;margin:12px 0}
+.fig svg{display:block;width:100%;height:auto}.fig .narrow{display:none}.chem svg{max-width:420px;margin:0 auto}
+.dual{margin:22px 0 0}
+.dhead{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin:0 0 8px}
+.dhead h3{margin:0}
+.seg{display:inline-flex;flex:none;border:1px solid var(--line);border-radius:99px;overflow:hidden;background:var(--surface)}
+.seg button{font:inherit;font-size:13px;padding:4px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:700}
+.dual[data-view="text"] .ppic,.dual[data-view="pic"] .ptext{display:none}
+.ppic .fig{margin:0}
+.scene{margin:0 0 6px!important}.scene-cap{margin:0 0 8px;color:var(--muted);font-size:13px;text-align:center}
+.anim{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin:0 0 12px;display:grid;gap:8px}
+.anim .fig{margin:0;border:0;padding:0}
+.anim svg g{transition:transform .9s ease,opacity .6s ease}
+.anim-cap{margin:0;min-height:3.2em;font-size:15px;font-weight:600;color:var(--ink)}
+.anim-ctl{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.anim-n{font-family:var(--f-mono);font-size:13px;color:var(--muted);margin-right:auto}
+.anim-mode{justify-self:start;display:inline-flex;border:1px solid var(--line);border-radius:99px;overflow:hidden}
+.aseg button{font:inherit;font-size:13px;padding:5px 12px;border:0;background:transparent;color:var(--muted);cursor:pointer}
+.aseg button[aria-pressed="true"]{background:var(--accent);color:#fff;font-weight:700}
+
+.mapmore{margin:0 0 12px}.mapmore summary{cursor:pointer;font-weight:700;color:var(--accent);padding:6px 0}
+
+@media (max-width:600px){.fig{padding:4px;overflow:visible}.fig .wide{display:none}.fig .narrow{display:block}}
+.card{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:15px}
+.card th,.card td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.card tr:last-child th,.card tr:last-child td{border-bottom:0}
+.card th{width:34%;background:var(--tint);font-weight:700}
+@media (max-width:400px){.card{font-size:14.5px}.card th,.card td{padding:8px 9px}}
+.card .q{color:var(--muted);font-size:13px;white-space:nowrap}
+.tblwrap{overflow-x:auto}
+.grid4 th{width:auto;white-space:normal}
+.vocab{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.vocab>div{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:12px;row-gap:2px;padding:9px 12px;border-bottom:1px solid var(--line)}
+.vocab>div:last-child{border-bottom:0}
+.vocab>div{cursor:pointer;-webkit-tap-highlight-color:transparent}
+.vocab .hint{grid-column:1/-1;margin:0;color:var(--accent);font-size:13px;display:none}
+.vocab>div:not(.show) .zh,.vocab>div:not(.show) .nt{display:none}
+.vocab>div:not(.show) .hint{display:block}
+.vocab>div:not(.show) dt{grid-column:1/-1}
+.tools{display:flex;justify-content:flex-end;margin:0 0 4px}
+.navbtn{font:inherit;font-size:13px;color:var(--accent);border:1px solid var(--accent);border-radius:99px;padding:3px 10px;background:var(--bg);cursor:pointer}
+.navbtn[aria-pressed="true"]{background:var(--accent);color:#fff}
+body.cover .card:not(.grid4) td{cursor:pointer}
+body.cover .card:not(.grid4) td:not(.show){color:transparent;background:repeating-linear-gradient(135deg,var(--tint) 0 8px,var(--surface) 8px 16px)}
+body.cover .card:not(.grid4) td:not(.show) *{visibility:hidden}
+
+.vocab dt{font-weight:700;overflow-wrap:anywhere}
+.vocab dd{margin:0}
+.vocab .zh{font-weight:700}
+.vocab .nt{grid-column:1/-1;color:var(--muted);font-size:14px}
+
+.intro .big{font-size:17px;margin:6px 0 10px}
+.intro .note{background:var(--accent-soft);border-radius:12px;padding:12px 14px;font-size:15px}
+.intro h3.gh{margin:20px 0 6px}
+.route{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.route li{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.route .rt{font-size:15px}.route .rq{color:var(--muted);font-size:13px;margin-top:4px}
+.route .rc{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.go{font:inherit;font-size:13px;padding:3px 10px;border-radius:99px;border:1px solid var(--accent);background:var(--surface);color:var(--accent);cursor:pointer;margin:2px 4px 2px 0}
+.howto{margin:6px 0;padding-left:22px}.howto li{margin:3px 0}
+.kw th{width:52%!important;white-space:normal!important}
+h3.flash{animation:flash 1.6s ease}
+@keyframes flash{0%{background:var(--yolk-soft)}100%{background:transparent}}
+/* quiz */
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px}
+.qhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.stats{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.stats b{color:var(--ink)}
+.bar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.btn{font:inherit;font-size:14px;font-weight:700;padding:8px 16px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn.small{font-size:13px;font-weight:500;padding:4px 10px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn[disabled]{opacity:.4;cursor:default}
+.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}
+.qgrid button{font-family:var(--f-mono);font-size:13px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.qgrid .ok{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.qgrid .no{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.qgrid .cur{outline:2px solid var(--accent)}
+.pill{font-family:var(--f-mono);font-size:13px;background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:99px}
+.tag{font-size:12px;border:1px solid var(--yolk);background:var(--yolk-soft);padding:2px 8px;border-radius:6px}
+.stem{font-size:16.5px;font-weight:500;margin:0}
+.opts{display:grid;gap:9px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;font-size:15px;line-height:1.55;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;width:100%}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt .k{font-family:var(--f-mono);flex:0 0 26px;height:26px;border-radius:7px;display:grid;place-items:center;background:var(--tint);font-size:13px}
+.opt[disabled]{cursor:default}
+.opt.right{border-color:var(--good);background:var(--good-soft)}.opt.right .k{background:var(--good);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}.opt.wrong .k{background:var(--bad);color:#fff}
+.opt.dim{opacity:.55}
+.exp{border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:9px}
+.exp p{margin:0}.exp ul{margin:0;padding-left:1.2em;color:var(--muted);font-size:14.5px}
+.verdict{font-weight:900}.verdict.ok{color:var(--good)}.verdict.no{color:var(--bad)}
+.ref,.warn{font-size:14px;padding:8px 12px;border-radius:0 8px 8px 0}
+.ref{background:var(--yolk-soft);border-left:3px solid var(--yolk)}
+.ref a{color:var(--ink);font-weight:700}
+.warn{background:var(--bad-soft);border-left:3px solid var(--bad)}
+.nav{display:flex;justify-content:space-between;gap:10px}
+.big{font-family:var(--f-mono);font-size:40px;color:var(--accent);line-height:1.1}
+.wl{display:flex;flex-wrap:wrap;gap:6px}
+.wl button{font-family:var(--f-mono);font-size:13px;border:1px solid var(--bad);background:var(--bad-soft);color:var(--bad);border-radius:8px;padding:4px 10px;cursor:pointer}
+.appx p{margin:8px 0}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}h3.flash{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="head-in"><h1>生化｜酮體生成</h1>
+<nav><a href="#guide">導讀</a><a href="#overview">全貌</a><a href="#make">合成</a><a href="#use">利用</a><a href="#reg">調控</a><a href="#misc">其他</a><a href="#words">英文</a><a href="#quiz">題目練習</a><button type="button" id="picBtn" class="navbtn" aria-pressed="false">全部看圖解</button><button type="button" id="coverBtn" class="navbtn" aria-pressed="false">蓋右欄：關</button></nav></div></header>
+<div class="wrap">
+<p class="lead">酮體生成模擬考題共 12 題（含 114 年國考 3 題）。第一次讀請先看下面的「導讀」。</p>
+<section class="intro" id="guide">
+<h2 style="margin-top:28px">導讀：這一章在講什麼？</h2>
+<p class="big">一句話：<b>餓很久、缺醣時，肝臟把塞車的乙醯輔酶 A 做成「酮體」，送給肌肉、心臟、大腦當燃料。</b></p>
+<div class="note"><b>和上一章的關係</b>：上一章「脂肪酸氧化」把脂肪燒成乙醯輔酶 A。正常時乙醯輔酶 A 進 TCA 產能；但缺醣時 TCA 塞車，肝臟就走「另一個出口」做酮體。這一章就是把那個出口放大來看。</div>
+<h3 class="gh">為什麼有這些圖卡：分成幾段</h3>
+<p class="sub">按卡片名稱可以直接跳過去；灰字是對應的題號。</p>
+<ol class="route"><li><div class="rt"><b>起點</b>　為什麼要做酮體？</div><div class="rc"><button type="button" class="go" data-go="起點　為什麼做酮體">起點 為什麼做酮體</button></div><div class="rq">第 11 題</div></li><li><div class="rt"><b>① 怎麼做</b>　肝臟粒線體 3 步，做出三種酮體</div><div class="rc"><button type="button" class="go" data-go="卡 1　合成">卡 1 合成</button><button type="button" class="go" data-go="卡 2　三種酮體">卡 2 三種酮體</button></div><div class="rq">第 2、5、9、12 題</div></li><li><div class="rt"><b>② 怎麼用</b>　送到肝外變回乙醯輔酶 A；肝臟自己不能用</div><div class="rc"><button type="button" class="go" data-go="卡 3　肝外利用">卡 3 肝外利用</button><button type="button" class="go" data-go="卡 4　肝臟不能用">卡 4 肝臟不能用</button></div><div class="rq">第 1、6、8、12 題</div></li><li><div class="rt"><b>③ 誰在控制</b>　激素踩油門或煞車；失控 → 酮酸中毒</div><div class="rc"><button type="button" class="go" data-go="卡 5　激素調控">卡 5 激素調控</button><button type="button" class="go" data-go="卡 6　酮酸中毒">卡 6 酮酸中毒</button></div><div class="rq">第 10、11 題</div></li><li><div class="rt"><b>混入的題目</b>　和酮體無關，但這份有考</div><div class="rc"><button type="button" class="go" data-go="卡 7　瘦體素">卡 7 瘦體素</button><button type="button" class="go" data-go="卡 8　去飽和酶">卡 8 去飽和酶</button></div><div class="rq">第 3、4、7 題</div></li></ol>
+<h3 class="gh">怎麼用這一頁讀</h3>
+<ol class="howto"><li>先看「全貌」，知道酮體從哪來、到哪去</li><li>依序讀卡片，「文字」或「圖解」都可以（頂端可一次切換）</li><li>讀完一段，按「蓋右欄」自己考自己</li><li>到「題目練習」作答；答錯時點「回上面複習」跳回那張卡</li></ol>
+<h3 class="gh">看到題目怎麼想：先找關鍵字</h3>
+<table class="card grid4 kw"><tr><th>題目出現</th><td><b>去看</b></td></tr><tr><th>HMG-CoA、乙醯乙酸怎麼合成</th><td><button type="button" class="go" data-go="卡 1　合成">卡 1 合成</button></td></tr><tr><th>血中主要形式、β-羥丁酸、丙酮</th><td><button type="button" class="go" data-go="卡 2　三種酮體">卡 2 三種酮體</button></td></tr><tr><th>肌肉用什麼、分解為乙醯輔酶 A</th><td><button type="button" class="go" data-go="卡 3　肝外利用">卡 3 肝外利用</button></td></tr><tr><th>肝臟缺乏、無法利用、transferase</th><td><button type="button" class="go" data-go="卡 4　肝臟不能用">卡 4 肝臟不能用</button></td></tr><tr><th>糖皮質素、胰島素、昇糖素</th><td><button type="button" class="go" data-go="卡 5　激素調控">卡 5 激素調控</button></td></tr><tr><th>缺乏醣類、酮酸、糖尿病</th><td><button type="button" class="go" data-go="卡 6　酮酸中毒">卡 6 酮酸中毒</button></td></tr><tr><th>leptin</th><td><button type="button" class="go" data-go="卡 7　瘦體素">卡 7 瘦體素</button></td></tr><tr><th>desaturase、Δ12、Δ15</th><td><button type="button" class="go" data-go="卡 8　去飽和酶">卡 8 去飽和酶</button></td></tr></table>
+<div class="note" style="margin-top:12px"><b>示範：第 6 題「肝臟因為缺乏下列何種酵素，所以無法利用 acetoacetate 來產生能量？」</b>
+<ol class="howto"><li>關鍵字「肝臟缺乏、無法利用」→ 屬於「② 怎麼用」→ <button type="button" class="go" data-go="卡 4　肝臟不能用">卡 4 肝臟不能用</button></li><li>想卡 4 的表：做酮體要用的酵素（裂解酶、去氫酶）肝臟都有，只有「轉移酶」沒有</li><li>答案是 <b>β-酮醯基輔酶 A 轉移酶</b>。第 8 題是同一個觀念，換成英文 transferase</li></ol>
+<b>這份的陷阱</b>：β-羥甲基丁酸（HMB）不是酮體；酮體在「粒線體」做，不是細胞質。</div>
+</section>
+
+<h2 id="overview">先看全貌：酮體的一生</h2>
+<div class="fig chem"><svg viewBox='0 0 360 593' role='img' aria-label='酮體的一生' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>酮體的一生：從脂肪到能量</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>綠色＝肝臟裡；藍色＝肝臟外</text>
+<rect x='16' y='178' width='328' height='197' rx='12' fill='var(--good)' fill-opacity='.05' stroke='var(--good)' stroke-opacity='.5'/><text x='26' y='196' text-anchor='start' font-size='12' font-weight='700' fill='var(--good)'>肝臟</text>
+<rect x='40' y='52' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪組織</text><text x='180.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--muted)'>飢餓：HSL 打開，TG 剪開</text><path d='M180.0 101V113' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='115' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='136' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪酸 → 血液 → 肝臟</text><text x='180.0' y='154' text-anchor='middle' font-size='11.5' fill='var(--muted)'>搭白蛋白</text>
+<path d='M180 164V186' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<rect x='40' y='188' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='209' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>β-氧化（肝臟粒線體）</text><text x='180.0' y='227' text-anchor='middle' font-size='11.5' fill='var(--muted)'>做出大量乙醯輔酶 A</text><path d='M180.0 237V249' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='251' width='280' height='47' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='180.0' y='272' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>乙醯輔酶 A 塞車</text><text x='180.0' y='290' text-anchor='middle' font-size='11.5' fill='var(--ink)'>草醯乙酸被拿去做糖，進不了 TCA</text><path d='M180.0 300V312' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='314' width='280' height='47' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='180.0' y='335' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>做成酮體</text><text x='180.0' y='353' text-anchor='middle' font-size='11.5' fill='var(--ink)'>乙醯乙酸、β-羥丁酸、丙酮</text>
+<path d='M180 377V389' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<rect x='40' y='391' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='412' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>血液：溶於水，直接送</text><text x='180.0' y='430' text-anchor='middle' font-size='11.5' fill='var(--muted)'>β-羥丁酸最多；丙酮從呼吸排出</text>
+<path d='M180 440V460' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<rect x='40' y='462' width='280' height='47' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='180.0' y='483' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>肌肉、心臟、大腦</text><text x='180.0' y='501' text-anchor='middle' font-size='11.5' fill='var(--ink)'>酮體 → 變回乙醯輔酶 A</text><path d='M180.0 511V523' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='525' width='280' height='34' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='180.0' y='547' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>TCA → ATP</text>
+<text x='16' y='579' text-anchor='start' font-size='11.5' fill='var(--muted)'>肝臟做酮體、但自己不吃：缺轉移酶（卡 4）</text></svg></div>
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="起點　為什麼做酮體">起點　為什麼會做酮體？</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>比喻</th><td>TCA 是摩天輪：草醯乙酸＝車廂、乙醯輔酶 A＝乘客；車廂被拆去做糖 → 乘客塞車 → 做成酮體</td></tr><tr><th>時機</th><td>長期飢餓、低醣飲食（生酮飲食）、控制不良的第 1 型糖尿病</td></tr><tr><th>原因 1：脂肪大量分解</th><td>胰島素 ↓、昇糖素 ↑ → HSL 打開 → 大量脂肪酸進肝；malonyl-CoA ↓ → CAT I 不被抑制 → β-氧化很快 → 乙醯輔酶 A 大量產生</td></tr><tr><th>原因 2：醣類不夠</th><td>丙酮酸少，草醯乙酸又被拿去糖質新生 → 乙醯輔酶 A 沒有草醯乙酸可結合 → 進不了 TCA</td></tr><tr><th>結果</th><td>乙醯輔酶 A 塞車 → 肝臟做成酮體送出去</td></tr><tr><th>好處</th><td>酮體溶於水、能進大腦 → 大腦少用葡萄糖 → 少拆肌肉做糖（節省蛋白質）</td></tr><tr><th>考點</th><td>長期缺醣 → 促進酮酸生成 <span class="q">第 11 題</span></td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 506' role='img' aria-label='酮體情境圖' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>肝臟的乙醯輔酶 A 塞車了</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>長期飢餓：草醯乙酸被拿去做糖，TCA 入口沒人接</text>
+<path d='M14 64Q120 44 300 60Q352 70 346 120Q340 200 240 214Q120 228 40 196Q4 170 14 64Z' fill='var(--bad)' fill-opacity='.07' stroke='var(--bad)' stroke-width='1.6'/>
+<text x='32' y='82' text-anchor='start' font-size='12' font-weight='700' fill='var(--bad)'>肝臟</text>
+<circle cx='86' cy='146' r='34' fill='none' stroke='var(--accent)' stroke-width='3' stroke-dasharray='40 10'/><text x='86' y='150' text-anchor='middle' font-size='11' font-weight='700' fill='var(--accent)'>TCA</text>
+<circle cx='122' cy='112' r='11' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/><text x='122' y='116' text-anchor='middle' font-size='11' font-weight='700' fill='var(--muted)'>?</text>
+<text x='140' y='98' text-anchor='start' font-size='9.5' fill='var(--muted)'>草醯乙酸不在（被拿去做糖）</text>
+<rect x='135.0' y='124' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='148' y='136' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='165.0' y='124' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='178' y='136' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='195.0' y='124' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='208' y='136' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='225.0' y='124' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='238' y='136' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='255.0' y='124' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='268' y='136' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<text x='208' y='156' text-anchor='middle' font-size='10' font-weight='700' fill='var(--accent)'>乙醯輔酶 A 排隊＝塞車</text>
+<path d='M296 140L296 168' stroke='var(--good)' stroke-width='1.5' fill='none' marker-end='url(#sG)'/>
+<rect x='256' y='170' width='72' height='34' rx='4' fill='var(--good)' fill-opacity='.15' stroke='var(--good)'/><rect x='308' y='156' width='10' height='16' fill='var(--good)' fill-opacity='.4'/><text x='292' y='191' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>酮體工廠</text>
+<text x='176' y='196' text-anchor='middle' font-size='9.5' fill='var(--muted)'>肝臟自己不吃（缺轉移酶）</text>
+<rect x='0' y='236' width='360' height='50' fill='var(--bad)' fill-opacity='.06'/><path d='M0 236H360' stroke='var(--bad)' stroke-width='1.6' fill='none'/><path d='M0 286H360' stroke='var(--bad)' stroke-width='1.6' fill='none'/>
+<path d='M292 206L292 244' stroke='var(--good)' stroke-width='1.5' fill='none' marker-end='url(#sG)'/>
+<circle cx='60' cy='261' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='60' y='265' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<circle cx='120' cy='261' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='120' y='265' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<circle cx='180' cy='261' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='180' y='265' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<circle cx='240' cy='261' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='240' y='265' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<text x='352' y='280' text-anchor='end' font-size='9.5' fill='var(--bad)'>← 血液（溶於水，直接游）</text>
+<path d='M320 234q8 -12 0 -22' stroke='var(--muted)' stroke-width='1.2' fill='none' stroke-dasharray='2 2'/><text x='340' y='212' text-anchor='end' font-size='9.5' font-weight='700' fill='var(--muted)'>丙酮</text>
+<path d='M40 326Q40 306 70 306Q90 300 110 310Q140 310 140 336Q146 362 116 368Q80 376 54 364Q30 354 40 326Z' fill='var(--accent)' fill-opacity='.12' stroke='var(--accent)' stroke-width='1.5'/>
+<text x='90' y='342' text-anchor='middle' font-size='12' font-weight='700' fill='var(--accent)'>大腦</text>
+<path d='M156 300V378' stroke='var(--bad)' stroke-width='4' fill='none'/>
+<text x='156' y='394' text-anchor='middle' font-size='10' fill='var(--bad)'>血腦障壁</text>
+<circle cx='176' cy='318' r='9' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='176' y='322' text-anchor='middle' font-size='9' font-weight='700' fill='var(--good)'>酮</text>
+<path d='M166 318L146 326' stroke='var(--good)' stroke-width='1.5' fill='none' marker-end='url(#sG)'/>
+<text x='190' y='322' text-anchor='start' font-size='10' font-weight='700' fill='var(--good)'>✓ 酮體能進</text>
+<path d='M176 356L182 352 L188 356 L194 352 L200 356' stroke='var(--warm)' stroke-width='2' fill='none' stroke-linecap='round'/>
+<text x='206' y='360' text-anchor='start' font-size='10' font-weight='700' fill='var(--bad)'>✕ 脂肪酸進不去</text>
+<rect x='16' y='410' width='130' height='56' rx='12' fill='var(--warm)' fill-opacity='.08' stroke='var(--warm)'/>
+<path d='M28 424H134' stroke='var(--warm)' stroke-width='1' fill='none' stroke-dasharray='6 4'/>
+<path d='M28 434H134' stroke='var(--warm)' stroke-width='1' fill='none' stroke-dasharray='6 4'/>
+<path d='M28 444H134' stroke='var(--warm)' stroke-width='1' fill='none' stroke-dasharray='6 4'/>
+<path d='M28 454H134' stroke='var(--warm)' stroke-width='1' fill='none' stroke-dasharray='6 4'/>
+<text x='81' y='484' text-anchor='middle' font-size='11' font-weight='700' fill='var(--ink)'>肌肉、心臟</text>
+<path d='M150 438L186 438' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='193.0' y='430' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='206' y='442' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='223.0' y='430' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='236' y='442' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<text x='196' y='464' text-anchor='start' font-size='10' fill='var(--muted)'>酮體變回乙醯輔酶 A → ATP</text></svg></div><div class="fig chem scene"><svg viewBox='0 0 360 686' role='img' aria-label='草醯乙酸摩天輪' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>草醯乙酸＝摩天輪（TCA）的車廂</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>綠色「座」＝草醯乙酸；藍色 2C＝乙醯輔酶 A（乘客）</text>
+<rect x='8' y='56' width='168' height='236' rx='10' fill='var(--good)' fill-opacity='.05' stroke='var(--good)'/><text x='92' y='76' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--good)'>吃得夠</text>
+<rect x='184' y='56' width='168' height='236' rx='10' fill='var(--bad)' fill-opacity='.05' stroke='var(--bad)'/><text x='268' y='76' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--bad)'>長期飢餓、缺醣</text>
+<circle cx='92' cy='156' r='52' fill='none' stroke='var(--accent)' stroke-width='2.5'/><circle cx='92' cy='156' r='4' fill='var(--accent)'/><path d='M92 156L92.0 104.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='77.0' y='95.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='92.0' y='108.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M92 156L137.0 130.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='122.0' y='121.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='137.0' y='134.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M92 156L137.0 182.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='122.0' y='173.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='137.0' y='186.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M92 156L92.0 208.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='77.0' y='199.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='92.0' y='212.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M92 156L47.0 182.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='32.0' y='173.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='47.0' y='186.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M92 156L47.0 130.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='32.0' y='121.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='47.0' y='134.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text>
+<circle cx='268' cy='156' r='52' fill='none' stroke='var(--accent)' stroke-width='2.5'/><circle cx='268' cy='156' r='4' fill='var(--accent)'/><path d='M268 156L268.0 104.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='253.0' y='95.0' width='30' height='18' rx='6' fill='var(--good)' fill-opacity='.85'/><text x='268.0' y='108.0' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>座</text><path d='M268 156L313.0 130.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='298.0' y='121.0' width='30' height='18' rx='6' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/><path d='M268 156L313.0 182.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='298.0' y='173.0' width='30' height='18' rx='6' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/><path d='M268 156L268.0 208.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='253.0' y='199.0' width='30' height='18' rx='6' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/><path d='M268 156L223.0 182.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='208.0' y='173.0' width='30' height='18' rx='6' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/><path d='M268 156L223.0 130.0' stroke='var(--accent)' stroke-width='1' fill='none'/><rect x='208.0' y='121.0' width='30' height='18' rx='6' fill='none' stroke='var(--muted)' stroke-dasharray='3 2'/>
+<text x='92' y='232' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>車廂很多</text>
+<rect x='57.0' y='246' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='70' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='101.0' y='246' width='26' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='114' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<text x='92' y='282' text-anchor='middle' font-size='9.5' fill='var(--muted)'>乘客一來就上車 → 燒成能量</text>
+<text x='268' y='232' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--bad)'>車廂被拆走，只剩 1 個</text>
+<rect x='202.0' y='246' width='24' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='214' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='229.0' y='246' width='24' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='241' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='256.0' y='246' width='24' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='268' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='283.0' y='246' width='24' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='295' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='310.0' y='246' width='24' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='322' y='258' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<text x='268' y='282' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--accent)'>乘客排長隊＝塞車</text>
+<path d='M320 108L346 86' stroke='var(--bad)' stroke-width='1.5' fill='none' marker-end='url(#sR)'/>
+<text x='340' y='102' text-anchor='end' font-size='9' fill='var(--bad)'>拆去</text>
+<text x='16' y='308' text-anchor='start' font-size='13' font-weight='700' fill='var(--ink)'>一步一步看</text>
+<rect x='16' y='322' width='328' height='40' rx='8' fill='var(--accent)' fill-opacity='.07'/><text x='26' y='339' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--accent)'>① 上車</text><text x='26' y='355' text-anchor='start' font-size='10' fill='var(--ink)'>乘客（乙醯輔酶 A，2C）坐進車廂（草醯乙酸，4C）＝檸檬酸 6C</text>
+<rect x='16' y='366' width='328' height='40' rx='8' fill='var(--accent)' fill-opacity='.07'/><text x='26' y='383' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--accent)'>② 轉一圈</text><text x='26' y='399' text-anchor='start' font-size='10' fill='var(--ink)'>乘客被燒掉：放出 2 個 CO₂ ＋ 能量（NADH 等）</text>
+<rect x='16' y='410' width='328' height='40' rx='8' fill='var(--good)' fill-opacity='.07'/><text x='26' y='427' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--good)'>③ 空車回來</text><text x='26' y='443' text-anchor='start' font-size='10' fill='var(--ink)'>車廂（草醯乙酸）又空出來，載下一位 → 車廂可重複用</text>
+<rect x='16' y='454' width='328' height='40' rx='8' fill='var(--good)' fill-opacity='.07'/><text x='26' y='471' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--good)'>④ 新車廂哪來</text><text x='26' y='487' text-anchor='start' font-size='10' fill='var(--ink)'>丙酮酸（來自葡萄糖）＋ CO₂ → 草醯乙酸（丙酮酸羧化酶）</text>
+<rect x='16' y='498' width='328' height='40' rx='8' fill='var(--bad)' fill-opacity='.07'/><text x='26' y='515' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--bad)'>⑤ 飢餓時</text><text x='26' y='531' text-anchor='start' font-size='10' fill='var(--ink)'>沒有葡萄糖造新車廂，肝臟又把車廂拆去做葡萄糖 → 車廂不夠</text>
+<rect x='16' y='542' width='328' height='40' rx='8' fill='var(--bad)' fill-opacity='.07'/><text x='26' y='559' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--bad)'>⑥ 結果</text><text x='26' y='575' text-anchor='start' font-size='10' fill='var(--ink)'>乘客排長隊 → 肝臟把排隊的乙醯輔酶 A 做成酮體</text>
+<rect x='16' y='598' width='328' height='62' rx='8' fill='var(--warm)' fill-opacity='.08' stroke='var(--warm)'/>
+<text x='28' y='618' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--warm)'>「脂肪在醣類的火焰中燃燒」</text>
+<text x='28' y='636' text-anchor='start' font-size='11' fill='var(--ink)'>脂肪酸只會變成「乘客」，不會變成「車廂」</text>
+<text x='28' y='652' text-anchor='start' font-size='11' fill='var(--muted)'>→ 要燒脂肪，還得靠醣類幫忙造車廂</text>
+<text x='16' y='672' text-anchor='start' font-size='11.5' fill='var(--muted)'>例外：奇數碳脂肪酸 → 琥珀醯輔酶 A → 可以補車廂（卡 4）</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 465' role='img' aria-label='為什麼做酮體' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>為什麼會做酮體？兩個原因湊在一起</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>長期飢餓、缺醣、第 1 型糖尿病</text>
+<rect x='12' y='52' width='164' height='47' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='94.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>原因 1：脂肪大量分解</text><text x='94.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>胰島素 ↓、昇糖素 ↑</text><path d='M94.0 101V111' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='113' width='164' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='94.0' y='134' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>HSL 打開</text><text x='94.0' y='152' text-anchor='middle' font-size='11.5' fill='var(--muted)'>大量脂肪酸送到肝臟</text><path d='M94.0 162V172' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='174' width='164' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='94.0' y='195' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>malonyl-CoA ↓</text><text x='94.0' y='213' text-anchor='middle' font-size='11.5' fill='var(--muted)'>CAT I 不被抑制</text><path d='M94.0 223V233' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='235' width='164' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='94.0' y='256' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>β-氧化很快</text><text x='94.0' y='274' text-anchor='middle' font-size='11.5' fill='var(--muted)'>乙醯輔酶 A 大量產生</text>
+<rect x='184' y='52' width='164' height='47' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='266.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>原因 2：醣類不夠</text><text x='266.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>丙酮酸少</text><path d='M266.0 101V111' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='184' y='113' width='164' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='134' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>草醯乙酸被用掉</text><text x='266.0' y='152' text-anchor='middle' font-size='11.5' fill='var(--muted)'>拿去糖質新生做葡萄糖</text><path d='M266.0 162V172' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='184' y='174' width='164' height='64' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='195' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>TCA 第一步卡住</text><text x='266.0' y='213' text-anchor='middle' font-size='11.5' fill='var(--muted)'>乙醯輔酶 A 要和草醯乙酸</text><text x='266.0' y='230' text-anchor='middle' font-size='11.5' fill='var(--muted)'>結合才能進 TCA</text>
+<path d='M94 284L160 308M266 240L200 308' stroke='var(--edge)' stroke-width='1.4' fill='none'/>
+<rect x='60' y='310' width='240' height='47' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='180.0' y='331' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>乙醯輔酶 A 塞車</text><text x='180.0' y='349' text-anchor='middle' font-size='11.5' fill='var(--ink)'>肝臟把它做成酮體送出去</text>
+<rect x='16' y='377' width='328' height='62' rx='8' fill='var(--accent)' fill-opacity='.08' stroke='var(--accent)'/>
+<text x='28' y='398' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--accent)'>好處：酮體溶於水、能進大腦</text>
+<text x='28' y='417' text-anchor='start' font-size='11.5' fill='var(--ink)'>大腦少用葡萄糖 → 少拆肌肉做糖</text>
+<text x='28' y='433' text-anchor='start' font-size='11.5' fill='var(--muted)'>＝節省蛋白質</text>
+<text x='16' y='451' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 11 題：長期缺醣 → 促進酮酸生成</text></svg></div></div></div>
+
+<h2 id="make">① 怎麼做：肝臟粒線體</h2>
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 1　合成">卡 1　合成：3 步做出乙醯乙酸</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>地點</th><td>肝細胞<b>粒線體基質</b>（不是細胞質）<span class="q">第 12 題</span></td></tr><tr><th>原料</th><td>只有乙醯輔酶 A（不是 malonyl-CoA）</td></tr><tr><th>① 硫解酶</th><td>2 個乙醯輔酶 A → 乙醯乙醯輔酶 A（β-氧化第 ④ 步倒過來）</td></tr><tr><th>② HMG-CoA 合成酶</th><td>再接 1 個乙醯輔酶 A → HMG-CoA；<b>關鍵酶</b></td></tr><tr><th>③ HMG-CoA 裂解酶</th><td>HMG-CoA → <b>乙醯乙酸</b> ＋ 乙醯輔酶 A <span class="q">第 2 題</span></td></tr><tr><th>再變</th><td>乙醯乙酸 ＋ NADH → β-羥丁酸（β-羥丁酸去氫酶）；乙醯乙酸自己脫羧 → 丙酮</td></tr><tr><th>別搞混</th><td>細胞質也有 HMG-CoA，那是做膽固醇（下一章）</td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 630' role='img' aria-label='酮體積木圖' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>酮體的積木圖：用碳數看懂</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>每個方塊＝1 個碳；綠色標籤＝CoA；橘色＝這一步新加的</text>
+<text x='16' y='62' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--warm)'>肝臟（粒線體）：做酮體</text>
+<rect x='16' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='34' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='52' y='81' width='34' height='18' rx='9' fill='var(--good)'/><text x='69' y='94' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='99' y='95' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>＋</text>
+<rect x='110' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='128' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='146' y='81' width='34' height='18' rx='9' fill='var(--good)'/><text x='163' y='94' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<path d='M188 90L212 90' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='218' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='236' y='82' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='254' y='82' width='16' height='16' rx='3' fill='var(--warm)' fill-opacity='.85'/><rect x='272' y='82' width='16' height='16' rx='3' fill='var(--warm)' fill-opacity='.85'/><rect x='290' y='81' width='34' height='18' rx='9' fill='var(--good)'/><text x='307' y='94' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='344' y='114' text-anchor='end' font-size='9.5' font-weight='700' fill='var(--accent)'>乙醯乙醯輔酶 A（4C）</text>
+<text x='16' y='130' text-anchor='start' font-size='10.5' fill='var(--muted)'>① 硫解酶：兩個 2C 接成 4C（放掉 1 個 CoA）</text>
+<rect x='16' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='34' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='52' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='70' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='88' y='159' width='34' height='18' rx='9' fill='var(--good)'/><text x='105' y='172' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='135' y='173' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>＋</text>
+<rect x='146' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='164' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='182' y='159' width='34' height='18' rx='9' fill='var(--good)'/><text x='199' y='172' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<path d='M224 168L242 168' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='246' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='264' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='282' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='300' y='160' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='282' y='142' width='16' height='16' rx='3' fill='var(--warm)' fill-opacity='.85'/><rect x='318' y='159' width='34' height='18' rx='9' fill='var(--good)'/><text x='335' y='172' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<rect x='282' y='124' width='0' height='0'/>
+<text x='344' y='192' text-anchor='end' font-size='9.5' font-weight='700' fill='var(--accent)'>HMG-CoA（6C）</text>
+<text x='16' y='208' text-anchor='start' font-size='10.5' fill='var(--muted)'>② HMG-CoA 合成酶（關鍵酶）：再接 2C → 6C</text>
+<rect x='16' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='34' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='52' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='70' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='52' y='222' width='16' height='16' rx='3' fill='var(--warm)' fill-opacity='.85'/><rect x='88' y='239' width='34' height='18' rx='9' fill='var(--good)'/><text x='105' y='252' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='136' y='254' text-anchor='middle' font-size='15' fill='var(--bad)'>✂</text>
+<path d='M148 248L168 248' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='174' y='240' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='192' y='240' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='210' y='240' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='228' y='240' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<text x='256' y='253' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>＋</text>
+<rect x='266' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='284' y='240' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='302' y='239' width='34' height='18' rx='9' fill='var(--good)'/><text x='319' y='252' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='210' y='272' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>乙醯乙酸（沒有 CoA）</text>
+<text x='16' y='288' text-anchor='start' font-size='10.5' fill='var(--muted)'>③ HMG-CoA 裂解酶：剪成 4C ＋ 2C</text>
+<path d='M120 306L70 324M200 306L250 324' stroke='var(--edge)' stroke-width='1.4' fill='none'/>
+<rect x='16' y='332' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='34' y='332' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='52' y='332' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='70' y='332' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<text x='94' y='345' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--warm)'>＋2H</text>
+<text x='16' y='366' text-anchor='start' font-size='11' font-weight='700' fill='var(--good)'>β-羥丁酸（4C）</text>
+<text x='16' y='380' text-anchor='start' font-size='9.5' fill='var(--muted)'>血中最多、主要運送形式</text>
+<rect x='196' y='332' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='214' y='332' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='232' y='332' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/>
+<circle cx='266' cy='334' r='11' fill='none' stroke='var(--muted)' stroke-dasharray='2 2'/><text x='266' y='338' text-anchor='middle' font-size='8' fill='var(--muted)'>CO₂</text>
+<text x='196' y='366' text-anchor='start' font-size='11' font-weight='700' fill='var(--muted)'>丙酮（3C）</text>
+<text x='196' y='380' text-anchor='start' font-size='9.5' fill='var(--muted)'>少 1 碳 → 從呼吸排出</text>
+<rect x='8' y='402' width='344' height='2' fill='var(--edge)' fill-opacity='.4'/>
+<text x='16' y='424' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--accent)'>肝外（肌肉、心臟、大腦）：用酮體</text>
+<rect x='16' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='34' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='52' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='70' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<path d='M92 452L112 452' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='118' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='136' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='154' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='172' y='444' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='190' y='443' width='34' height='18' rx='9' fill='var(--good)'/><text x='207' y='456' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='16' y='480' text-anchor='start' font-size='10.5' fill='var(--muted)'>④ 轉移酶：向琥珀醯輔酶 A 借一個 CoA</text>
+<text x='16' y='494' text-anchor='start' font-size='10' fill='var(--bad)'>（肝臟沒有這個酵素 → 自己不能用）</text>
+<rect x='16' y='516' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='34' y='516' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='52' y='516' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='70' y='516' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='88' y='515' width='34' height='18' rx='9' fill='var(--good)'/><text x='105' y='528' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='136' y='530' text-anchor='middle' font-size='15' fill='var(--bad)'>✂</text>
+<path d='M148 524L168 524' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='174' y='516' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='192' y='516' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='210' y='515' width='34' height='18' rx='9' fill='var(--good)'/><text x='227' y='528' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<rect x='254' y='516' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='272' y='516' width='16' height='16' rx='3' fill='var(--accent)' fill-opacity='.85'/><rect x='290' y='515' width='34' height='18' rx='9' fill='var(--good)'/><text x='307' y='528' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='16' y='552' text-anchor='start' font-size='10.5' fill='var(--muted)'>⑤ 硫解酶：剪成 2 個乙醯輔酶 A → TCA → ATP</text>
+<rect x='16' y='572' width='328' height='44' rx='8' fill='var(--accent)' fill-opacity='.08' stroke='var(--accent)'/>
+<text x='28' y='590' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--accent)'>記法：2＋2＝4，4＋2＝6，6 剪成 4＋2</text>
+<text x='28' y='607' text-anchor='start' font-size='10.5' fill='var(--muted)'>到了肝外再倒過來：4 → 2＋2</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 563' role='img' aria-label='酮體合成' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>合成：肝臟粒線體裡 3 步做出乙醯乙酸</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>原料只有乙醯輔酶 A</text>
+<text x='180' y='66' text-anchor='middle' font-size='13' font-weight='700'><tspan fill='var(--accent)'>CH₃–CO–S-CoA</tspan><tspan fill='var(--muted)'>　＋　</tspan><tspan fill='var(--accent)'>CH₃–CO–S-CoA</tspan></text>
+<text x='180' y='84' text-anchor='middle' font-size='11' fill='var(--muted)'>2 個乙醯輔酶 A</text>
+<path d='M50 92V142' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><text x='62' y='108' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>① 硫解酶（thiolase）</text><text x='62' y='125' text-anchor='start' font-size='11' fill='var(--muted)'>兩個接起來，放掉 1 個 CoA</text><text x='62' y='141' text-anchor='start' font-size='11' fill='var(--warm)'>＝β-氧化第 ④ 步倒過來</text>
+<text x='180' y='164' text-anchor='middle' font-size='13' font-weight='700'><tspan fill='var(--warm)'>CH₃–CO–CH₂</tspan><tspan fill='var(--ink)'>–CO–S-CoA</tspan></text>
+<text x='180' y='182' text-anchor='middle' font-size='11' fill='var(--muted)'>乙醯乙醯輔酶 A（4 碳）</text>
+<path d='M50 190V240' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><text x='62' y='206' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>② HMG-CoA 合成酶</text><text x='62' y='223' text-anchor='start' font-size='11' fill='var(--muted)'>再接上第 3 個乙醯輔酶 A</text><text x='62' y='239' text-anchor='start' font-size='11' fill='var(--warm)'>關鍵酶（限速）</text>
+<text x='180' y='262' text-anchor='middle' font-size='12.5' font-weight='700'><tspan fill='var(--warm)'>HOOC–CH₂–</tspan><tspan fill='var(--ink)'>C(OH)(CH₃)</tspan><tspan fill='var(--ink)'>–CH₂–CO–S-CoA</tspan></text>
+<text x='180' y='280' text-anchor='middle' font-size='11' fill='var(--muted)'>HMG-CoA（6 碳）</text>
+<path d='M50 288V338' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><text x='62' y='304' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>③ HMG-CoA 裂解酶</text><text x='62' y='321' text-anchor='start' font-size='11' fill='var(--muted)'>切下 1 個乙醯輔酶 A</text><text x='62' y='337' text-anchor='start' font-size='11' fill='var(--warm)'>第 2 題答案</text>
+<text x='180' y='360' text-anchor='middle' font-size='14' font-weight='700'><tspan fill='var(--good)'>CH₃–CO–CH₂–COOH</tspan></text>
+<text x='180' y='378' text-anchor='middle' font-size='11' font-weight='700' fill='var(--good)'>乙醯乙酸（第一個酮體）</text>
+<path d='M140 390L90 414M220 390L270 414' stroke='var(--edge)' stroke-width='1.4' fill='none'/>
+<rect x='12' y='418' width='164' height='64' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='94.0' y='439' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>β-羥丁酸</text><text x='94.0' y='457' text-anchor='middle' font-size='11.5' fill='var(--ink)'>＋NADH 還原</text><text x='94.0' y='474' text-anchor='middle' font-size='11.5' fill='var(--ink)'>（β-羥丁酸去氫酶）</text>
+<rect x='184' y='418' width='164' height='64' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='439' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>丙酮</text><text x='266.0' y='457' text-anchor='middle' font-size='11.5' fill='var(--muted)'>自己脫羧，放出 CO₂</text><text x='266.0' y='474' text-anchor='middle' font-size='11.5' fill='var(--muted)'>不需要酵素</text>
+<text x='16' y='500' text-anchor='start' font-size='12' font-weight='700' fill='var(--bad)'>注意</text>
+<text x='16' y='517' text-anchor='start' font-size='11.5' fill='var(--muted)'>在粒線體，不是細胞質（第 12 題 A 錯）</text>
+<text x='16' y='533' text-anchor='start' font-size='11.5' fill='var(--muted)'>不用 malonyl-CoA，那是合成脂肪酸的（12 題 B 錯）</text>
+<text x='16' y='549' text-anchor='start' font-size='11.5' fill='var(--muted)'>細胞質也有 HMG-CoA，但那是做膽固醇（下一章）</text></svg></div></div></div>
+
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 2　三種酮體">卡 2　三種酮體</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>乙醯乙酸</th><td>有酮基，真正的「酮」；可被利用</td></tr><tr><th>β-羥丁酸</th><td>酮基被還原成 OH；<b>血中最多、送到肝外最主要的形式</b><span class="q">第 5、9 題</span></td></tr><tr><th>丙酮</th><td>自己脫羧產生，量少；不能利用，從呼吸、尿排出（水果味）</td></tr><tr><th>為什麼 β-羥丁酸最多</th><td>飢餓時肝臟粒線體 NADH 多 → 推向還原形</td></tr><tr><th>不是酮體</th><td>β-羥甲基丁酸（HMB）是白胺酸的代謝物<span class="q">第 9、12 題</span></td></tr></table></div><div class="pane ppic"><div class="fig chem"><svg viewBox='0 0 360 508' role='img' aria-label='三種酮體' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>三種酮體</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>都是從乙醯乙酸變來的</text>
+<rect x='16' y='52' width='328' height='34' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='180.0' y='74' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>乙醯乙酸　acetoacetate</text>
+<text x='180' y='110' text-anchor='middle' font-size='14' font-weight='700'><tspan fill='var(--accent)'>CH₃–CO–CH₂–COOH</tspan></text>
+<text x='180' y='132' text-anchor='middle' font-size='11' fill='var(--muted)'>有酮基（C＝O），真正的「酮」</text>
+<text x='180' y='148' text-anchor='middle' font-size='11' fill='var(--muted)'>可被肝外組織利用</text>
+<rect x='16' y='52' width='328' height='110' rx='8' fill='none' stroke='var(--accent)' stroke-width='1' stroke-opacity='.6'/>
+<rect x='16' y='176' width='328' height='34' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='180.0' y='198' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>β-羥丁酸　β-hydroxybutyrate</text>
+<text x='180' y='234' text-anchor='middle' font-size='14' font-weight='700'><tspan fill='var(--good)'>CH₃–CH(OH)–CH₂–COOH</tspan></text>
+<text x='180' y='256' text-anchor='middle' font-size='11' fill='var(--muted)'>酮基被還原成 OH</text>
+<text x='180' y='272' text-anchor='middle' font-size='11' fill='var(--muted)'>血中最多、送到肝外最主要的形式</text>
+<rect x='16' y='176' width='328' height='110' rx='8' fill='none' stroke='var(--good)' stroke-width='1' stroke-opacity='.6'/>
+<rect x='16' y='300' width='328' height='34' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='322' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>丙酮　acetone</text>
+<text x='180' y='358' text-anchor='middle' font-size='14' font-weight='700'><tspan fill='var(--ink)'>CH₃–CO–CH₃</tspan></text>
+<text x='180' y='380' text-anchor='middle' font-size='11' fill='var(--muted)'>自己脫羧產生，量少</text>
+<text x='180' y='396' text-anchor='middle' font-size='11' fill='var(--muted)'>不能利用 → 呼吸、尿排出（水果味）</text>
+<rect x='16' y='300' width='328' height='110' rx='8' fill='none' stroke='var(--edge)' stroke-width='1' stroke-opacity='.6'/>
+<text x='16' y='424' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>為什麼血中 β-羥丁酸最多？</text>
+<text x='16' y='441' text-anchor='start' font-size='11.5' fill='var(--muted)'>飢餓時肝臟粒線體 NADH 很多 → 把乙醯乙酸推向還原形</text>
+<text x='16' y='461' text-anchor='start' font-size='12' font-weight='700' fill='var(--bad)'>不是酮體：β-羥甲基丁酸（HMB）</text>
+<text x='16' y='478' text-anchor='start' font-size='11.5' fill='var(--muted)'>是白胺酸的代謝物（第 9 題 D、第 12 題 C 的陷阱）</text>
+<text x='16' y='494' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 5、9 題</text></svg></div></div></div>
+
+<h2 id="use">② 怎麼用：送到肝外</h2>
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 3　肝外利用">卡 3　肝外利用：變回乙醯輔酶 A</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>比喻</th><td>借提把：轉移酶把琥珀醯輔酶 A 的 CoA 搬到乙醯乙酸上，再剪成 2 個乙醯輔酶 A</td></tr><tr><th>誰用</th><td>肌肉、心臟、腎臟；大腦飢餓數天後大量使用 <span class="q">第 1 題</span></td></tr><tr><th>怎麼送</th><td>溶於水，不用白蛋白；靠細胞膜上的運輸蛋白進細胞（也能進大腦）</td></tr><tr><th>① 去氫</th><td>β-羥丁酸 → 乙醯乙酸，產生 NADH</td></tr><tr><th>② 借 CoA</th><td><b>β-酮醯基輔酶 A 轉移酶</b>：向琥珀醯輔酶 A 借 CoA → 乙醯乙醯輔酶 A</td></tr><tr><th>③ 硫解</th><td>＋CoA → 2 個乙醯輔酶 A → TCA → ATP <span class="q">第 12 題</span></td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 528' role='img' aria-label='肌肉利用酮體' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>肌肉怎麼吃酮體：借提把 → 剪開 → 燒掉</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>方塊＝碳；綠色標籤＝CoA 提把</text>
+<rect x='0' y='54' width='360' height='40' fill='var(--bad)' fill-opacity='.06'/><path d='M0 54H360' stroke='var(--bad)' stroke-width='1.6' fill='none'/><path d='M0 94H360' stroke='var(--bad)' stroke-width='1.6' fill='none'/>
+<circle cx='40' cy='74' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='40' y='78' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<circle cx='100' cy='74' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='100' y='78' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<circle cx='160' cy='74' r='10' fill='var(--good)' fill-opacity='.3' stroke='var(--good)'/><text x='160' y='78' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>酮</text>
+<text x='352' y='88' text-anchor='end' font-size='9.5' fill='var(--bad)'>血液（溶於水）</text>
+<rect x='8' y='102' width='344' height='392' rx='26' fill='var(--warm)' fill-opacity='.03' stroke='var(--ink)' stroke-width='1.6'/>
+<rect x='206' y='96' width='36' height='14' rx='4' fill='var(--accent)'/>
+<path d='M224 84L224 128' stroke='var(--accent)' stroke-width='1.5' fill='none' marker-end='url(#sB)'/>
+<text x='250' y='126' text-anchor='start' font-size='9.5' font-weight='700' fill='var(--accent)'>運輸蛋白（門）</text>
+<text x='26' y='124' text-anchor='start' font-size='11' font-weight='700' fill='var(--muted)'>肌肉細胞</text>
+<text x='24' y='150' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>① 去氫：β-羥丁酸 → 乙醯乙酸</text>
+<rect x='30' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='48' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='66' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='84' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<path d='M108 170L136 170' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='142' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='160' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='178' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='196' y='162' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<rect x='226' y='160' width='44' height='20' rx='4' fill='var(--good)' fill-opacity='.2' stroke='var(--good)'/><text x='248' y='174' text-anchor='middle' font-size='9.5' font-weight='700' fill='var(--good)'>NADH</text>
+<text x='24' y='208' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>② 借提把：轉移酶把琥珀醯輔酶 A 的 CoA 搬過來</text>
+<rect x='30' y='248' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='48' y='248' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='66' y='248' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='84' y='248' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='102' y='247' width='34' height='18' rx='9' fill='var(--good)'/><text x='119' y='260' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='30' y='280' text-anchor='start' font-size='9.5' fill='var(--muted)'>琥珀醯輔酶 A</text>
+<rect x='200' y='248' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='218' y='248' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='236' y='248' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='254' y='248' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/>
+<text x='200' y='280' text-anchor='start' font-size='9.5' fill='var(--good)'>乙醯乙酸</text>
+<path d='M122 244Q169.0 222 284 244' stroke='var(--good)' stroke-width='1.5' fill='none' marker-end='url(#sG)'/>
+<rect x='30' y='292' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='48' y='292' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='66' y='292' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/><rect x='84' y='292' width='16' height='16' rx='3' fill='var(--muted)' fill-opacity='.85'/>
+<text x='30' y='324' text-anchor='start' font-size='9.5' fill='var(--muted)'>琥珀酸（回 TCA）</text>
+<rect x='200' y='292' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='218' y='292' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='236' y='292' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='254' y='292' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='272' y='291' width='34' height='18' rx='9' fill='var(--good)'/><text x='289' y='304' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='200' y='324' text-anchor='start' font-size='9.5' fill='var(--good)'>乙醯乙醯輔酶 A</text>
+<text x='180' y='342' text-anchor='middle' font-size='10' font-weight='700' fill='var(--bad)'>肝臟沒有這個轉移酶 → 肝臟不能吃酮體</text>
+<text x='24' y='366' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>③ 硫解酶剪開：4C → 2C ＋ 2C</text>
+<rect x='30' y='380' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='48' y='380' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='66' y='380' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='84' y='380' width='16' height='16' rx='3' fill='var(--good)' fill-opacity='.85'/><rect x='102' y='379' width='34' height='18' rx='9' fill='var(--good)'/><text x='119' y='392' text-anchor='middle' font-size='9.5' font-weight='700' fill='#fff'>CoA</text>
+<text x='150' y='394' text-anchor='middle' font-size='15' fill='var(--bad)'>✂</text>
+<path d='M162 388L182 388' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<rect x='199.0' y='380' width='30' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='214' y='392' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<rect x='235.0' y='380' width='30' height='16' rx='8' fill='var(--accent)' fill-opacity='.85'/><text x='250' y='392' text-anchor='middle' font-size='9' font-weight='700' fill='#fff'>2C</text>
+<text x='24' y='420' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>④ 進 TCA 燒掉 → ATP</text>
+<circle cx='90' cy='470' r='30' fill='none' stroke='var(--accent)' stroke-width='3' stroke-dasharray='34 8'/><text x='90' y='474' text-anchor='middle' font-size='11' font-weight='700' fill='var(--accent)'>TCA</text>
+<path d='M126 470L160 470' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<circle cx='180' cy='470' r='12' fill='var(--yolk)' stroke='var(--warm)' stroke-width='1'/><text x='180' y='473.5' text-anchor='middle' font-size='8.5' font-weight='700' fill='var(--ink)'>ATP</text>
+<circle cx='208' cy='470' r='12' fill='var(--yolk)' stroke='var(--warm)' stroke-width='1'/><text x='208' y='473.5' text-anchor='middle' font-size='8.5' font-weight='700' fill='var(--ink)'>ATP</text>
+<circle cx='236' cy='470' r='12' fill='var(--yolk)' stroke='var(--warm)' stroke-width='1'/><text x='236' y='473.5' text-anchor='middle' font-size='8.5' font-weight='700' fill='var(--ink)'>ATP</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 438' role='img' aria-label='酮體利用' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>肝外組織怎麼用酮體</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>肌肉、心臟、腎臟；大腦飢餓數天後</text>
+<rect x='40' y='52' width='280' height='64' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>血液中的酮體</text><text x='180.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--muted)'>溶於水，不用白蛋白</text><text x='180.0' y='108' text-anchor='middle' font-size='11.5' fill='var(--muted)'>靠運輸蛋白進細胞（也能進大腦）</text>
+<path d='M180 118V140' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<rect x='8' y='142' width='344' height='10' fill='none'/>
+<text x='180' y='156' text-anchor='middle' font-size='13.5' font-weight='700'><tspan fill='var(--good)'>β-羥丁酸</tspan></text>
+<path d='M50 164V214' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><text x='62' y='180' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>β-羥丁酸去氫酶</text><text x='62' y='197' text-anchor='start' font-size='11' fill='var(--muted)'>去氫 → 產生 NADH</text>
+<text x='180' y='222' text-anchor='middle' font-size='13.5' font-weight='700'><tspan fill='var(--accent)'>乙醯乙酸</tspan></text>
+<path d='M50 232V292' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<text x='62' y='248' text-anchor='start' font-size='12' font-weight='700' fill='var(--good)'>β-酮醯基輔酶 A 轉移酶</text>
+<text x='62' y='265' text-anchor='start' font-size='11' fill='var(--muted)'>向琥珀醯輔酶 A「借」CoA</text>
+<text x='62' y='281' text-anchor='start' font-size='11' fill='var(--warm)'>琥珀醯輔酶 A → 琥珀酸</text>
+<text x='260' y='265' text-anchor='start' font-size='11' font-weight='700' fill='var(--bad)'>肝臟沒有</text>
+<text x='260' y='281' text-anchor='start' font-size='11' fill='var(--bad)'>→ 卡 4</text>
+<text x='180' y='312' text-anchor='middle' font-size='13.5' font-weight='700'><tspan fill='var(--ink)'>乙醯乙醯輔酶 A</tspan></text>
+<path d='M50 322V372' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><text x='62' y='338' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>硫解酶（thiolase）</text><text x='62' y='355' text-anchor='start' font-size='11' fill='var(--muted)'>＋CoA，從中間切開</text>
+<text x='180' y='382' text-anchor='middle' font-size='13.5' font-weight='700'><tspan fill='var(--accent)'>2 個乙醯輔酶 A → TCA → ATP</tspan></text>
+<text x='16' y='408' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 12 題 D：酮體在肝外分解為乙醯輔酶 A ✓</text>
+<text x='16' y='424' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 1 題：長期飢餓時肌肉用酮體當燃料</text></svg></div></div></div>
+
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 4　肝臟不能用">卡 4　肝臟為什麼不能用？</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>比喻</th><td>肝臟像麵包店：會做麵包，但店員自己不吃；肌肉、心臟、大腦是顧客</td></tr><tr><th>缺什麼</th><td><b>β-酮醯基輔酶 A 轉移酶</b>（又叫 SCOT，琥珀醯輔酶 A：3-酮酸 CoA 轉移酶）<span class="q">第 6、8 題</span></td></tr><tr><th>結果</th><td>乙醯乙酸接不上 CoA → 變不回乙醯輔酶 A</td></tr><tr><th>意義</th><td>肝臟只負責做、不自己吃 → 酮體全部送給別的組織</td></tr><tr><th>刪選項</th><td>HMG-CoA 裂解酶、β-羥丁酸去氫酶、硫解酶：肝臟做酮體都要用 → 有</td></tr><tr><th>陷阱</th><td>「乙醯乙酸脫羧酶」不必要：丙酮是自己脫羧產生</td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 404' role='img' aria-label='肝臟與肌肉工具箱' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>工具箱比一比：肝臟會做、肌肉會吃</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>肝臟像麵包店：會做麵包，但店員自己不吃；肌肉是顧客</text>
+<path d='M58 66V58H122V66' stroke='var(--warm)' stroke-width='3' fill='none'/><rect x='8' y='66' width='164' height='190' rx='10' fill='var(--warm)' fill-opacity='.08' stroke='var(--warm)' stroke-width='1.8'/><text x='90' y='86' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--warm)'>肝臟</text><rect x='18' y='96' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='90' y='113' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ 硫解酶</text><rect x='18' y='128' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='90' y='145' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ HMG-CoA 合成酶</text><rect x='18' y='160' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='90' y='177' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ HMG-CoA 裂解酶</text><rect x='18' y='192' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='90' y='209' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ β-羥丁酸去氫酶</text><rect x='18' y='224' width='144' height='26' rx='6' fill='none' stroke='var(--bad)' stroke-dasharray='4 3'/><text x='90' y='241' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--bad)'>✕ 轉移酶（借 CoA）</text>
+<path d='M238 66V58H302V66' stroke='var(--accent)' stroke-width='3' fill='none'/><rect x='188' y='66' width='164' height='190' rx='10' fill='var(--accent)' fill-opacity='.08' stroke='var(--accent)' stroke-width='1.8'/><text x='270' y='86' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--accent)'>肌肉、心臟、大腦</text><rect x='198' y='96' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='270' y='113' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ 硫解酶</text><rect x='198' y='128' width='144' height='26' rx='6' fill='var(--tint)' fill-opacity='.5'/><text x='270' y='145' text-anchor='middle' font-size='10.5' fill='var(--muted)'>— HMG-CoA 合成酶</text><rect x='198' y='160' width='144' height='26' rx='6' fill='var(--tint)' fill-opacity='.5'/><text x='270' y='177' text-anchor='middle' font-size='10.5' fill='var(--muted)'>— HMG-CoA 裂解酶</text><rect x='198' y='192' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='270' y='209' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ β-羥丁酸去氫酶</text><rect x='198' y='224' width='144' height='26' rx='6' fill='var(--good)' fill-opacity='.18'/><text x='270' y='241' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--good)'>✓ 轉移酶（借 CoA）</text>
+<text x='90' y='278' text-anchor='middle' font-size='11.5' font-weight='700' fill='var(--warm)'>只會做、不會吃</text>
+<text x='270' y='278' text-anchor='middle' font-size='11.5' font-weight='700' fill='var(--accent)'>只會吃、不會做</text>
+<path d='M90 286L90 310' stroke='var(--warm)' stroke-width='1.5' fill='none' marker-end='url(#sW)'/>
+<text x='90' y='326' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--ink)'>酮體全部送出去</text>
+<path d='M176 322L206 322' stroke='var(--edge)' stroke-width='1.5' fill='none' marker-end='url(#sA)'/>
+<text x='270' y='326' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--ink)'>收下來燒成 ATP</text>
+<rect x='16' y='346' width='328' height='44' rx='8' fill='var(--bad)' fill-opacity='.06' stroke='var(--bad)' stroke-opacity='.6'/>
+<text x='28' y='364' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--bad)'>第 6、8 題：肝臟缺的就是那個紅色虛線的工具</text>
+<text x='28' y='381' text-anchor='start' font-size='10.5' fill='var(--muted)'>β-酮醯基輔酶 A 轉移酶（SCOT）</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 388' role='img' aria-label='肝臟不能用酮體' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>肝臟做酮體，但自己不能用</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>差在一個酵素</text>
+<text x='160' y='60' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--warm)'>肝臟</text>
+<text x='260' y='60' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--accent)'>肌肉等</text>
+<rect x='12' y='70' width='336' height='30' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='20' y='90' text-anchor='start' font-size='11.5' fill='var(--ink)'>硫解酶</text>
+<text x='200' y='90' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<text x='300' y='90' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<rect x='12' y='104' width='336' height='30' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='20' y='124' text-anchor='start' font-size='11.5' fill='var(--ink)'>HMG-CoA 合成酶</text>
+<text x='200' y='124' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<text x='300' y='124' text-anchor='middle' font-size='12' font-weight='700' fill='var(--muted)'>—</text>
+<rect x='12' y='138' width='336' height='30' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='20' y='158' text-anchor='start' font-size='11.5' fill='var(--ink)'>HMG-CoA 裂解酶</text>
+<text x='200' y='158' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<text x='300' y='158' text-anchor='middle' font-size='12' font-weight='700' fill='var(--muted)'>—</text>
+<rect x='12' y='172' width='336' height='30' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='20' y='192' text-anchor='start' font-size='11.5' fill='var(--ink)'>β-羥丁酸去氫酶</text>
+<text x='200' y='192' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<text x='300' y='192' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<rect x='12' y='206' width='336' height='30' rx='6' fill='var(--bad)' fill-opacity='.1'/>
+<text x='20' y='226' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--bad)'>β-酮醯基輔酶 A 轉移酶</text>
+<text x='200' y='226' text-anchor='middle' font-size='12' font-weight='700' fill='var(--bad)'>✕ 沒有</text>
+<text x='300' y='226' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>✓ 有</text>
+<rect x='16' y='248' width='328' height='78' rx='8' fill='var(--bad)' fill-opacity='.06' stroke='var(--bad)'/>
+<text x='28' y='270' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--bad)'>肝臟缺 β-酮醯基輔酶 A 轉移酶</text>
+<text x='28' y='289' text-anchor='start' font-size='11.5' fill='var(--ink)'>乙醯乙酸接不上 CoA → 變不回乙醯輔酶 A</text>
+<text x='28' y='307' text-anchor='start' font-size='11.5' fill='var(--muted)'>→ 肝臟只負責做，全部送出去給別人（第 6、8 題）</text>
+<text x='16' y='340' text-anchor='start' font-size='11.5' fill='var(--muted)'>別名：琥珀醯輔酶 A：3-酮酸 CoA 轉移酶（SCOT）</text>
+<text x='16' y='357' text-anchor='start' font-size='11.5' fill='var(--muted)'>刪選項：裂解酶、去氫酶、硫解酶，肝臟做酮體時都要用 → 有</text>
+<text x='16' y='374' text-anchor='start' font-size='11.5' fill='var(--muted)'>「乙醯乙酸脫羧酶」不用：丙酮是自己脫羧產生</text></svg></div></div></div>
+
+<h2 id="reg">③ 誰在控制</h2>
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 5　激素調控">卡 5　激素調控</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>比喻</th><td>油門：昇糖素、腎上腺素、糖皮質素、胰島素 ↓；煞車：胰島素、吃醣類</td></tr><tr><th>踩油門</th><td>胰島素 ↓（HSL 開、malonyl-CoA ↓）、昇糖素 ↑（糖質新生用掉草醯乙酸）、糖皮質素 ↑</td></tr><tr><th>糖皮質素</th><td>分解肌肉蛋白質、分解脂肪、<b>促進肝臟酮體生成</b>、升高血糖 <span class="q">第 10 題</span></td></tr><tr><th>踩煞車</th><td>吃夠醣類 → 胰島素 ↑ → malonyl-CoA ↑ → 抑制 CAT I；醣類 → 丙酮酸 → 草醯乙酸夠 → 乙醯輔酶 A 順利進 TCA</td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 503' role='img' aria-label='酮體油門煞車' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>油門與煞車：誰叫肝臟多做酮體？</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>指針＝肝臟做酮體的速度</text>
+<path d='M32 130A60 60 0 0 1 152 130' stroke='var(--tint)' stroke-width='14' fill='none'/><path d='M32 130A60 60 0 0 1 62 78' stroke='var(--good)' stroke-width='14' fill='none' stroke-opacity='.6'/><path d='M122 78A60 60 0 0 1 152 130' stroke='var(--bad)' stroke-width='14' fill='none' stroke-opacity='.6'/><path d='M92 130L49.2 108.2' stroke='var(--ink)' stroke-width='3' fill='none'/><circle cx='92' cy='130' r='5' fill='var(--ink)'/><text x='92' y='152' text-anchor='middle' font-size='12' font-weight='700' fill='var(--good)'>吃飽</text><text x='32' y='142' text-anchor='middle' font-size='9' fill='var(--muted)'>少</text><text x='152' y='142' text-anchor='middle' font-size='9' fill='var(--muted)'>多</text>
+<path d='M208 130A60 60 0 0 1 328 130' stroke='var(--tint)' stroke-width='14' fill='none'/><path d='M208 130A60 60 0 0 1 238 78' stroke='var(--good)' stroke-width='14' fill='none' stroke-opacity='.6'/><path d='M298 78A60 60 0 0 1 328 130' stroke='var(--bad)' stroke-width='14' fill='none' stroke-opacity='.6'/><path d='M268 130L310.8 108.2' stroke='var(--ink)' stroke-width='3' fill='none'/><circle cx='268' cy='130' r='5' fill='var(--ink)'/><text x='268' y='152' text-anchor='middle' font-size='12' font-weight='700' fill='var(--bad)'>長期飢餓</text><text x='208' y='142' text-anchor='middle' font-size='9' fill='var(--muted)'>少</text><text x='328' y='142' text-anchor='middle' font-size='9' fill='var(--muted)'>多</text>
+<rect x='8' y='176' width='164' height='106' rx='10' fill='var(--bad)' fill-opacity='.1' stroke='var(--bad)' stroke-width='1.6'/><text x='90' y='197' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--bad)'>踩油門（做多一點）</text><text x='90' y='216' text-anchor='middle' font-size='10.5' fill='var(--ink)'>昇糖素 ↑</text><text x='90' y='234' text-anchor='middle' font-size='10.5' fill='var(--ink)'>腎上腺素 ↑</text><text x='90' y='252' text-anchor='middle' font-size='10.5' fill='var(--ink)'>糖皮質素 ↑（第 10 題）</text><text x='90' y='270' text-anchor='middle' font-size='10.5' fill='var(--ink)'>胰島素 ↓</text>
+<rect x='188' y='176' width='164' height='106' rx='10' fill='var(--good)' fill-opacity='.1' stroke='var(--good)' stroke-width='1.6'/><text x='270' y='197' text-anchor='middle' font-size='12.5' font-weight='700' fill='var(--good)'>踩煞車（做少一點）</text><text x='270' y='216' text-anchor='middle' font-size='10.5' fill='var(--ink)'>胰島素 ↑</text><text x='270' y='234' text-anchor='middle' font-size='10.5' fill='var(--ink)'>吃進醣類</text><text x='270' y='252' text-anchor='middle' font-size='10.5' fill='var(--ink)'>→ malonyl-CoA ↑</text><text x='270' y='270' text-anchor='middle' font-size='10.5' fill='var(--ink)'>→ 草醯乙酸夠用</text>
+<text x='16' y='312' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>油門怎麼讓酮體變多？</text>
+<rect x='40' y='320' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='341' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>HSL 打開</text><text x='180.0' y='359' text-anchor='middle' font-size='11.5' fill='var(--muted)'>脂肪酸大量送到肝臟</text><path d='M180.0 369V379' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='381' width='280' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='180.0' y='402' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>CAT I 不被擋</text><text x='180.0' y='420' text-anchor='middle' font-size='11.5' fill='var(--muted)'>脂肪酸大量進粒線體 β-氧化</text><path d='M180.0 430V440' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='442' width='280' height='47' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='180.0' y='463' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>草醯乙酸被拿去做糖</text><text x='180.0' y='481' text-anchor='middle' font-size='11.5' fill='var(--ink)'>乙醯輔酶 A 塞車 → 做成酮體</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 586' role='img' aria-label='酮體激素調控' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>誰叫肝臟做酮體？</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>飢餓激素一起推；胰島素踩煞車</text>
+<rect x='12' y='52' width='200' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='112.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>胰島素 ↓</text><text x='112.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--muted)'>HSL 打開、malonyl-CoA ↓</text><path d='M112.0 101V109' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='111' width='200' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='112.0' y='132' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>昇糖素 ↑</text><text x='112.0' y='150' text-anchor='middle' font-size='11.5' fill='var(--muted)'>糖質新生用掉草醯乙酸</text><path d='M112.0 160V168' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='170' width='200' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='112.0' y='191' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>糖皮質素 ↑</text><text x='112.0' y='209' text-anchor='middle' font-size='11.5' fill='var(--muted)'>促進肝臟做酮體</text>
+<rect x='232' y='102' width='116' height='47' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='290.0' y='123' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>酮體 ↑</text><text x='290.0' y='141' text-anchor='middle' font-size='11.5' fill='var(--ink)'>生成增加</text>
+<path d='M213 69L230 122' stroke='var(--edge)' stroke-width='1.3' fill='none' marker-end='url(#ar)'/>
+<path d='M213 125L230 122' stroke='var(--edge)' stroke-width='1.3' fill='none' marker-end='url(#ar)'/>
+<path d='M213 181L230 122' stroke='var(--edge)' stroke-width='1.3' fill='none' marker-end='url(#ar)'/>
+<text x='16' y='243' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>第 10 題：糖皮質素（皮質醇）做了什麼</text>
+<rect x='16' y='261' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='279' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>肌肉蛋白質</text>
+<text x='130' y='279' text-anchor='start' font-size='11.5' fill='var(--muted)'>分解（A 說合成 ✕）</text>
+<rect x='16' y='291' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='309' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>三酸甘油酯</text>
+<text x='130' y='309' text-anchor='start' font-size='11.5' fill='var(--muted)'>分解增加（B 說降低 ✕）</text>
+<rect x='16' y='321' width='328' height='26' rx='6' fill='var(--good)' fill-opacity='.15'/>
+<text x='26' y='339' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>肝臟酮體</text>
+<text x='130' y='339' text-anchor='start' font-size='11.5' fill='var(--good)'>生成增加（C ✓）</text>
+<rect x='16' y='351' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='369' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>血糖</text>
+<text x='130' y='369' text-anchor='start' font-size='11.5' fill='var(--muted)'>升高（D 說降低 ✕）</text>
+<text x='16' y='403' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--accent)'>吃夠醣類就能踩煞車（老師講義題）</text>
+<rect x='12' y='413' width='164' height='34' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='94.0' y='435' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>胰島素 ↑</text><path d='M94.0 449V457' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='459' width='164' height='47' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='94.0' y='480' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>malonyl-CoA ↑</text><text x='94.0' y='498' text-anchor='middle' font-size='11.5' fill='var(--muted)'>抑制 CAT I</text><path d='M94.0 508V516' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='12' y='518' width='164' height='34' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='94.0' y='540' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪酸進不了粒線體</text>
+<rect x='184' y='413' width='164' height='34' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='266.0' y='435' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>醣類 → 丙酮酸</text><path d='M266.0 449V457' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='184' y='459' width='164' height='34' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='481' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>草醯乙酸夠</text><path d='M266.0 495V503' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='184' y='505' width='164' height='34' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='527' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>乙醯輔酶 A 進 TCA</text>
+<text x='16' y='572' text-anchor='start' font-size='12' font-weight='700' fill='var(--good)'>→ 酮體少做，防止酮酸中毒</text></svg></div></div></div>
+
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 6　酮酸中毒">卡 6　酮酸中毒</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>血液 pH</th><td>正常 7.35–7.45；低於 7.35＝酸中毒</td></tr><tr><th>是什麼</th><td>酮體做太快、肝外用不完 → 乙醯乙酸、β-羥丁酸是酸 → 血液 pH 下降</td></tr><tr><th>徵兆</th><td>呼吸有水果味（丙酮）、呼吸深快（排 CO₂）、尿中有酮體、脫水</td></tr><tr><th>誰最容易</th><td>第 1 型糖尿病（沒有胰島素，煞車失靈）；飢餓時仍有少量胰島素，較少到中毒</td></tr><tr><th>考點</th><td>長期缺醣 → 促進酮酸生成；酮酸會和尿酸搶著排，尿酸反而升高 <span class="q">第 11 題</span></td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 422' role='img' aria-label='酮酸中毒' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>酮酸中毒：血液變酸了</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>正常血液 pH 7.35–7.45；低於 7.35＝酸中毒</text>
+<rect x='30' y='92' width='300' height='16' rx='8' fill='var(--tint)'/>
+<rect x='30' y='92' width='168.7' height='16' rx='8' fill='var(--bad)' fill-opacity='.45'/>
+<rect x='198.7' y='92' width='37.5' height='16' fill='var(--good)' fill-opacity='.7'/>
+<text x='67.49999999999987' y='124' text-anchor='middle' font-size='9.5' fill='var(--muted)'>7.0</text>
+<text x='142.49999999999994' y='124' text-anchor='middle' font-size='9.5' fill='var(--muted)'>7.2</text>
+<text x='217.50000000000003' y='124' text-anchor='middle' font-size='9.5' fill='var(--muted)'>7.4</text>
+<text x='292.4999999999998' y='124' text-anchor='middle' font-size='9.5' fill='var(--muted)'>7.6</text>
+<text x='217.50000000000003' y='86' text-anchor='middle' font-size='10' font-weight='700' fill='var(--good)'>正常</text>
+<path d='M105.0 78l-6 -10h12z' fill='var(--bad)'/>
+<text x='104.99999999999974' y='64' text-anchor='middle' font-size='10' font-weight='700' fill='var(--bad)'>酮酸中毒</text>
+<circle cx='180' cy='174' r='24' fill='var(--warm)' fill-opacity='.12' stroke='var(--ink)' stroke-width='1.5'/>
+<rect x='146' y='202' width='68' height='110' rx='26' fill='var(--warm)' fill-opacity='.08' stroke='var(--ink)' stroke-width='1.5'/>
+<ellipse cx='166' cy='238' rx='11' ry='18' fill='var(--bad)' fill-opacity='.2'/><ellipse cx='194' cy='238' rx='11' ry='18' fill='var(--bad)' fill-opacity='.2'/>
+<path d='M202 178q16 -6 26 -2q10 -10 22 -2' stroke='var(--muted)' stroke-width='1.4' fill='none' stroke-dasharray='3 2'/>
+<text x='232' y='160' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--warm)'>呼吸有水果味</text>
+<text x='232' y='174' text-anchor='start' font-size='9.5' fill='var(--muted)'>（丙酮從肺排出）</text>
+<text x='134' y='234' text-anchor='end' font-size='10.5' font-weight='700' fill='var(--accent)'>呼吸又深又快</text>
+<text x='134' y='248' text-anchor='end' font-size='9.5' fill='var(--muted)'>（吐出 CO₂ 降酸）</text>
+<path d='M230 294q-7 10 0 16q7 -6 0 -16z' fill='var(--yolk)'/>
+<text x='244' y='296' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--warm)'>尿中有酮體</text>
+<text x='244' y='310' text-anchor='start' font-size='9.5' fill='var(--muted)'>帶走水分 → 脫水</text>
+<rect x='12' y='330' width='164' height='64' rx='8' fill='var(--bad)' fill-opacity='0.12' stroke='var(--bad)' stroke-width='2'/><text x='94.0' y='351' text-anchor='middle' font-size='13' font-weight='700' fill='var(--bad)'>第 1 型糖尿病</text><text x='94.0' y='369' text-anchor='middle' font-size='11.5' fill='var(--ink)'>完全沒有胰島素</text><text x='94.0' y='386' text-anchor='middle' font-size='11.5' fill='var(--ink)'>煞車失靈 → 最危險</text>
+<rect x='184' y='330' width='164' height='64' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='351' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>長期飢餓、低醣</text><text x='266.0' y='369' text-anchor='middle' font-size='11.5' fill='var(--muted)'>還有少量胰島素</text><text x='266.0' y='386' text-anchor='middle' font-size='11.5' fill='var(--muted)'>酮體升高，少到中毒</text>
+<text x='16' y='408' text-anchor='start' font-size='11.5' fill='var(--muted)'>酮酸還會和尿酸搶著從腎臟排 → 尿酸升高（第 11 題 C）</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 479' role='img' aria-label='酮酸中毒' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>酮酸中毒：做太快、用不完</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>乙醯乙酸、β-羥丁酸都是「酸」</text>
+<rect x='40' y='52' width='280' height='34' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='180.0' y='74' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>酮體產生 > 肝外使用</text><path d='M180.0 88V100' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/><rect x='40' y='102' width='280' height='47' rx='8' fill='var(--bad)' fill-opacity='0.12' stroke='var(--bad)' stroke-width='2'/><text x='180.0' y='123' text-anchor='middle' font-size='13' font-weight='700' fill='var(--bad)'>血中酸增加</text><text x='180.0' y='141' text-anchor='middle' font-size='11.5' fill='var(--ink)'>血液 pH 下降＝酮酸中毒</text>
+<text x='16' y='171' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>身體出現的徵兆</text>
+<circle cx='26' cy='197' r='4' fill='var(--bad)'/>
+<text x='38' y='201' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>呼吸有水果味</text>
+<text x='38' y='217' text-anchor='start' font-size='11.5' fill='var(--muted)'>丙酮從肺排出</text>
+<circle cx='26' cy='233' r='4' fill='var(--bad)'/>
+<text x='38' y='237' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>呼吸又深又快</text>
+<text x='38' y='253' text-anchor='start' font-size='11.5' fill='var(--muted)'>排出 CO₂ 來降低酸</text>
+<circle cx='26' cy='269' r='4' fill='var(--bad)'/>
+<text x='38' y='273' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>尿中有酮體</text>
+<text x='38' y='289' text-anchor='start' font-size='11.5' fill='var(--muted)'>腎臟幫忙排</text>
+<circle cx='26' cy='305' r='4' fill='var(--bad)'/>
+<text x='38' y='309' text-anchor='start' font-size='12' font-weight='700' fill='var(--ink)'>脫水</text>
+<text x='38' y='325' text-anchor='start' font-size='11.5' fill='var(--muted)'>酮體帶著水從尿排出</text>
+<text x='16' y='359' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>誰最容易？</text>
+<rect x='12' y='369' width='164' height='64' rx='8' fill='var(--bad)' fill-opacity='0.12' stroke='var(--bad)' stroke-width='2'/><text x='94.0' y='390' text-anchor='middle' font-size='13' font-weight='700' fill='var(--bad)'>第 1 型糖尿病</text><text x='94.0' y='408' text-anchor='middle' font-size='11.5' fill='var(--ink)'>完全沒有胰島素</text><text x='94.0' y='425' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ 煞車失靈，最危險</text>
+<rect x='184' y='369' width='164' height='64' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='266.0' y='390' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>長期飢餓、低醣</text><text x='266.0' y='408' text-anchor='middle' font-size='11.5' fill='var(--muted)'>還有少量胰島素</text><text x='266.0' y='425' text-anchor='middle' font-size='11.5' fill='var(--muted)'>→ 酮體升高，少到中毒</text>
+<text x='16' y='449' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 11 題：長期缺醣 → 促進酮酸生成</text>
+<text x='16' y='465' text-anchor='start' font-size='11.5' fill='var(--muted)'>酮酸和尿酸搶著從腎臟排 → 尿酸反而升高（C 錯）</text></svg></div></div></div>
+
+<h2 id="misc">混入的題目</h2>
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 7　瘦體素">卡 7　瘦體素（leptin）</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>比喻</th><td>脂肪細胞寫信給大腦；肥胖者信很多，大腦卻聽不到＝瘦體素阻抗</td></tr><tr><th>誰產生</th><td><b>脂肪細胞</b>；脂肪越多分泌越多</td></tr><tr><th>作用在哪</th><td><b>腦部下視丘</b> → 抑制食慾、增加能量消耗 <span class="q">第 3 題</span></td></tr><tr><th>性質</th><td>蛋白質激素，不是酵素</td></tr><tr><th>肥胖者</th><td>後天肥胖者通常偏高，但大腦反應變差＝瘦體素阻抗；先天缺乏很少見</td></tr></table></div><div class="pane ppic"><div class="fig chem scene"><svg viewBox='0 0 360 402' role='img' aria-label='瘦體素' font-family='inherit'><defs><marker id='sA' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='sB' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='sG' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='sW' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker><marker id='sR' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--bad)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>瘦體素：脂肪細胞寫給大腦的信</text>
+<text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>脂肪越多 → 寄越多封信</text>
+<circle cx='56' cy='100' r='34' fill='var(--warm)' fill-opacity='.15' stroke='var(--warm)' stroke-width='1.6'/><circle cx='56' cy='100' r='20' fill='var(--yolk)' fill-opacity='.6'/><text x='56' y='148' text-anchor='middle' font-size='11' font-weight='700' fill='var(--warm)'>脂肪細胞</text>
+<rect x='110' y='80' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M110 80l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='146' y='96' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M146 96l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<path d='M176 104L222 100' stroke='var(--warm)' stroke-width='1.5' fill='none' marker-end='url(#sW)'/>
+<text x='160' y='132' text-anchor='middle' font-size='9.5' fill='var(--warm)'>瘦體素（血液）</text>
+<path d='M236 98Q236 72 266 70Q290 62 312 76Q338 82 334 108Q338 132 306 136Q270 142 248 128Q230 118 236 98Z' fill='var(--accent)' fill-opacity='.12' stroke='var(--accent)' stroke-width='1.5'/>
+<circle cx='288' cy='112' r='8' fill='var(--accent)' fill-opacity='.6'/>
+<text x='286' y='154' text-anchor='middle' font-size='10.5' font-weight='700' fill='var(--accent)'>腦：下視丘（藍點）</text>
+<rect x='214' y='166' width='138' height='30' rx='14' fill='var(--good)' fill-opacity='.15' stroke='var(--good)'/><text x='283' y='186' text-anchor='middle' font-size='11' font-weight='700' fill='var(--good)'>「存夠了，少吃點」</text>
+<text x='220' y='214' text-anchor='start' font-size='10.5' font-weight='700' fill='var(--good)'>→ 食慾 ↓、消耗 ↑</text>
+<rect x='8' y='236' width='344' height='150' rx='12' fill='var(--bad)' fill-opacity='.04' stroke='var(--bad)' stroke-opacity='.5'/>
+<text x='18' y='256' text-anchor='start' font-size='12' font-weight='700' fill='var(--bad)'>肥胖的人：信很多，大腦卻「聽不到」</text>
+<rect x='24' y='276' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M24 276l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='54' y='276' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M54 276l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='84' y='276' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M84 276l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='24' y='300' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M24 300l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='54' y='300' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M54 300l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<rect x='84' y='300' width='26' height='18' rx='2' fill='var(--surface)' stroke='var(--warm)' stroke-width='1.4'/><path d='M84 300l13 10l13 -10' stroke='var(--warm)' stroke-width='1.2' fill='none'/>
+<path d='M122 300L214 300' stroke='var(--warm)' stroke-width='1.5' fill='none' marker-end='url(#sW)'/>
+<path d='M236 302Q236 276 266 274Q290 266 312 280Q338 286 334 312Q338 336 306 340Q270 346 248 332Q230 322 236 302Z' fill='var(--accent)' fill-opacity='.12' stroke='var(--accent)' stroke-width='1.5'/>
+<rect x='228' y='294' width='12' height='22' rx='5' fill='var(--ink)'/><rect x='330' y='294' width='12' height='22' rx='5' fill='var(--ink)'/><path d='M234 294Q286 248 336 294' stroke='var(--ink)' stroke-width='3' fill='none'/>
+<text x='180' y='362' text-anchor='middle' font-size='11' font-weight='700' fill='var(--ink)'>＝瘦體素阻抗：血中瘦體素偏高，仍然覺得餓</text>
+<text x='180' y='378' text-anchor='middle' font-size='10' fill='var(--muted)'>所以「後天肥胖者缺少瘦體素」是錯的（第 3 題）</text></svg></div><p class="scene-cap">↓ 下面是步驟整理</p><div class="fig chem"><svg viewBox='0 0 360 398' role='img' aria-label='瘦體素' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>瘦體素（leptin）：脂肪細胞寫給大腦的信</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>第 3 題</text>
+<rect x='12' y='52' width='150' height='47' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='87.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪細胞</text><text x='87.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>脂肪越多，分泌越多</text>
+<rect x='198' y='52' width='150' height='47' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='273.0' y='73' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>腦：下視丘</text><text x='273.0' y='91' text-anchor='middle' font-size='11.5' fill='var(--ink)'>接收訊號</text>
+<path d='M164 76H196' stroke='var(--edge)' stroke-width='1.6' marker-end='url(#ar)'/>
+<text x='180' y='68' text-anchor='middle' font-size='10' fill='var(--muted)'>血液</text>
+<rect x='198' y='113' width='150' height='47' rx='8' fill='var(--good)' fill-opacity='0.12' stroke='var(--good)' stroke-width='2'/><text x='273.0' y='134' text-anchor='middle' font-size='13' font-weight='700' fill='var(--good)'>「存夠了」</text><text x='273.0' y='152' text-anchor='middle' font-size='11.5' fill='var(--ink)'>抑制食慾、增加能量消耗</text>
+<text x='16' y='180' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>四個選項怎麼判斷</text>
+<rect x='16' y='196' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='214' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>是一種酵素</text>
+<text x='196' y='214' text-anchor='start' font-size='11.5' fill='var(--muted)'>✕ 是蛋白質「激素」</text>
+<rect x='16' y='226' width='328' height='26' rx='6' fill='var(--good)' fill-opacity='.15'/>
+<text x='26' y='244' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>作用目標是腦部</text>
+<text x='196' y='244' text-anchor='start' font-size='11.5' fill='var(--good)'>✓ 下視丘</text>
+<rect x='16' y='256' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='274' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>後天肥胖者缺少它</text>
+<text x='196' y='274' text-anchor='start' font-size='11.5' fill='var(--muted)'>✕ 通常反而偏高</text>
+<rect x='16' y='286' width='328' height='26' rx='6' fill='var(--tint)' fill-opacity='.35'/>
+<text x='26' y='304' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>腦部產生、作用於脂肪</text>
+<text x='196' y='304' text-anchor='start' font-size='11.5' fill='var(--muted)'>✕ 方向相反</text>
+<rect x='16' y='324' width='328' height='62' rx='8' fill='var(--warm)' fill-opacity='.08' stroke='var(--warm)'/>
+<text x='28' y='345' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--warm)'>瘦體素阻抗</text>
+<text x='28' y='364' text-anchor='start' font-size='11.5' fill='var(--ink)'>肥胖者瘦體素很多，但大腦「聽不見」</text>
+<text x='28' y='380' text-anchor='start' font-size='11.5' fill='var(--muted)'>先天缺乏瘦體素的人很少見</text></svg></div></div></div>
+
+<div class="dual" data-view="text"><div class="dhead"><h3 data-card="卡 8　去飽和酶">卡 8　去飽和酶</h3><div class="seg" role="group" aria-label="切換"><button type="button" data-v="text" aria-pressed="true">文字</button><button type="button" data-v="pic" aria-pressed="false">圖解</button></div></div><div class="pane ptext"><table class="card"><tr><th>人有</th><td>Δ9（以及加長後用的 Δ5、Δ6）</td></tr><tr><th>人沒有 Δ12</th><td>做不出亞麻油酸 18:2 Δ9,12 <span class="q">第 4 題</span></td></tr><tr><th>人沒有 Δ15</th><td>亞麻油酸不能變次亞麻油酸 18:3 Δ9,12,15 <span class="q">第 7 題</span></td></tr><tr><th>結果</th><td>兩者都是必需脂肪酸；ω-6 不能變 ω-3</td></tr></table></div><div class="pane ppic"><div class="fig chem"><svg viewBox='0 0 360 346' role='img' aria-label='去飽和酶' font-family='inherit'><defs><marker id='ar' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker><marker id='ab' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--accent)'/></marker><marker id='ag' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--good)'/></marker><marker id='aw' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--warm)'/></marker></defs><text x='16' y='22' text-anchor='start' font-size='14' font-weight='700' fill='var(--ink)'>人缺哪兩個去飽和酶？</text><text x='16' y='40' text-anchor='start' font-size='11.5' fill='var(--muted)'>植物有、人沒有 → 必需脂肪酸</text>
+<text x='16' y='56' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>油酸 18:1 Δ9</text>
+<text x='16' y='72' text-anchor='start' font-size='11.5' fill='var(--good)'>人可以自己做</text>
+<path d='M34 92H51' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M51 92H68' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M68 92H85' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M85 92H102' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M102 92H119' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M119 92H136' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M136 92H153' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M153 92H170' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M170 89H187M170 95H187' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M187 92H204' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M204 92H221' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M221 92H238' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M238 92H255' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M255 92H272' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M272 92H289' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M289 92H306' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M306 92H323' stroke='var(--edge)' stroke-width='1.6' fill='none'/><circle cx='34' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='51' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='68' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='85' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='102' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='119' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='136' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='153' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='170' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='170' y='80' text-anchor='middle' font-size='10' fill='var(--accent)'>9</text><circle cx='187' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='204' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='221' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='238' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='255' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='272' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='289' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='306' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='323' cy='92' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/>
+<path d='M180 112V130' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<text x='190' y='126' text-anchor='start' font-size='11' font-weight='700' fill='var(--bad)'>＋Δ12 去飽和酶</text>
+<text x='16' y='144' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>亞麻油酸 18:2 Δ9,12</text>
+<text x='16' y='160' text-anchor='start' font-size='11.5' fill='var(--bad)'>要 Δ12：人沒有（第 4 題）</text>
+<path d='M34 180H51' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M51 180H68' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M68 180H85' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M85 180H102' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M102 180H119' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M119 180H136' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M136 180H153' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M153 180H170' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M170 177H187M170 183H187' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M187 180H204' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M204 180H221' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M221 177H238M221 183H238' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M238 180H255' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M255 180H272' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M272 180H289' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M289 180H306' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M306 180H323' stroke='var(--edge)' stroke-width='1.6' fill='none'/><circle cx='34' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='51' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='68' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='85' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='102' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='119' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='136' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='153' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='170' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='170' y='168' text-anchor='middle' font-size='10' fill='var(--accent)'>9</text><circle cx='187' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='204' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='221' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='221' y='168' text-anchor='middle' font-size='10' fill='var(--accent)'>12</text><circle cx='238' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='255' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='272' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='289' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='306' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='323' cy='180' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/>
+<path d='M180 200V218' stroke='var(--edge)' stroke-width='1.4' fill='none' marker-end='url(#ar)'/>
+<text x='190' y='214' text-anchor='start' font-size='11' font-weight='700' fill='var(--bad)'>＋Δ15 去飽和酶</text>
+<text x='16' y='232' text-anchor='start' font-size='12.5' font-weight='700' fill='var(--ink)'>次亞麻油酸 18:3 Δ9,12,15</text>
+<text x='16' y='248' text-anchor='start' font-size='11.5' fill='var(--bad)'>要 Δ15：人沒有（第 7 題）</text>
+<path d='M34 268H51' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M51 268H68' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M68 268H85' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M85 268H102' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M102 268H119' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M119 268H136' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M136 268H153' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M153 268H170' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M170 265H187M170 271H187' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M187 268H204' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M204 268H221' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M221 265H238M221 271H238' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M238 268H255' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M255 268H272' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M272 265H289M272 271H289' stroke='var(--warm)' stroke-width='2' fill='none'/><path d='M289 268H306' stroke='var(--edge)' stroke-width='1.6' fill='none'/><path d='M306 268H323' stroke='var(--edge)' stroke-width='1.6' fill='none'/><circle cx='34' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='51' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='68' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='85' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='102' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='119' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='136' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='153' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='170' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='170' y='256' text-anchor='middle' font-size='10' fill='var(--accent)'>9</text><circle cx='187' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='204' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='221' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='221' y='256' text-anchor='middle' font-size='10' fill='var(--accent)'>12</text><circle cx='238' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='255' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='272' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><text x='272' y='256' text-anchor='middle' font-size='10' fill='var(--accent)'>15</text><circle cx='289' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='306' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/><circle cx='323' cy='268' r='5' fill='var(--surface)' stroke='var(--ink)' stroke-width='1.6'/>
+<text x='16' y='300' text-anchor='start' font-size='11.5' fill='var(--muted)'>人有：Δ9（以及加長後用的 Δ5、Δ6）</text>
+<text x='16' y='316' text-anchor='start' font-size='11.5' fill='var(--muted)'>所以 ω-6（亞麻油酸）不能變 ω-3（次亞麻油酸）</text>
+<text x='16' y='332' text-anchor='start' font-size='11.5' fill='var(--muted)'>詳見「脂肪酸氧化」那頁的名稱卡 3</text></svg></div></div></div>
+
+<h2 id="words">必背英文名詞</h2>
+<p class="sub">中文先藏起來：看英文說說看意思，再點那一格看答案。</p><div class="tools"><button class="btn small" id="vocabAll" type="button">全部顯示中文</button></div><h3>名詞</h3><dl class="vocab"><div><dt>ketone bodies</dt><dd class="zh">酮體</dd><dd class="hint">點一下看中文</dd><dd class="nt">乙醯乙酸、β-羥丁酸、丙酮</dd></div><div><dt>acetoacetate</dt><dd class="zh">乙醯乙酸</dd><dd class="hint">點一下看中文</dd><dd class="nt">第一個做出來的酮體</dd></div><div><dt>β-hydroxybutyrate</dt><dd class="zh">β-羥丁酸</dd><dd class="hint">點一下看中文</dd><dd class="nt">血中最多的酮體</dd></div><div><dt>acetone</dt><dd class="zh">丙酮</dd><dd class="hint">點一下看中文</dd><dd class="nt">呼吸排出，水果味</dd></div><div><dt>ketoacidosis</dt><dd class="zh">酮酸中毒</dd><dd class="hint">點一下看中文</dd><dd class="nt">酮體太多，血液變酸</dd></div></dl><h3>酵素</h3><dl class="vocab"><div><dt>thiolase</dt><dd class="zh">硫解酶</dd><dd class="hint">點一下看中文</dd><dd class="nt">2 乙醯輔酶 A ↔ 乙醯乙醯輔酶 A</dd></div><div><dt>HMG-CoA synthase</dt><dd class="zh">HMG-CoA 合成酶</dd><dd class="hint">點一下看中文</dd><dd class="nt">酮體合成關鍵酶</dd></div><div><dt>HMG-CoA lyase</dt><dd class="zh">HMG-CoA 裂解酶</dd><dd class="hint">點一下看中文</dd><dd class="nt">切出乙醯乙酸</dd></div><div><dt>β-ketoacyl-CoA transferase</dt><dd class="zh">β-酮醯基輔酶 A 轉移酶</dd><dd class="hint">點一下看中文</dd><dd class="nt">肝外用酮體；肝臟沒有</dd></div><div><dt>desaturase</dt><dd class="zh">去飽和酶</dd><dd class="hint">點一下看中文</dd><dd class="nt">加雙鍵；人缺 Δ12、Δ15</dd></div></dl><h3>激素</h3><dl class="vocab"><div><dt>glucocorticoid</dt><dd class="zh">糖皮質素</dd><dd class="hint">點一下看中文</dd><dd class="nt">皮質醇；促進酮體生成</dd></div><div><dt>leptin</dt><dd class="zh">瘦體素</dd><dd class="hint">點一下看中文</dd><dd class="nt">脂肪細胞分泌，作用於下視丘</dd></div><div><dt>hypothalamus</dt><dd class="zh">下視丘</dd><dd class="hint">點一下看中文</dd><dd class="nt">控制食慾的腦區</dd></div></dl>
+
+<h2 id="quiz">題目練習</h2>
+<p class="sub">點選答案後才顯示對錯與解析。作答進度會記在這台裝置的瀏覽器裡。</p>
+<section class="quiz" id="quizbox" aria-live="polite"></section>
+
+<footer>保健營養菜單研究室｜生化模擬考題整理｜<a href="fat-oxidation.html">上一章：脂肪酸氧化</a></footer>
+</div>
+
+<script>
+const Q = [{"s": "在長期饑餓時，肌肉會主要以下列何者做為能量來源？", "o": ["葡萄糖", "酮體", "甘油", "胺基酸"], "a": 1, "e": "長期飢餓時葡萄糖要留給大腦、紅血球；肝臟做的酮體送到肌肉、心臟當燃料。（卡 3 肌肉吃酮體圖）", "x": ["A ✕ 葡萄糖要省下來給大腦、紅血球", "C ✕ 甘油量少，主要送肝做糖", "D ✕ 胺基酸拿去做糖，不是肌肉的主燃料"], "w": "較新的教科書認為飢餓很久之後，肌肉會改多用脂肪酸、把酮體讓給大腦；但本題選項沒有脂肪酸，答酮體。", "r": "② 怎麼用 → 卡 3　肝外利用"}, {"s": "在肝細胞之粒線體內，酮體（ketone body）中之乙醯乙酸（acetoacetate）是經由下列何種方式合成？", "o": ["由丙酮酸（pyruvic acid）經羧化反應（carboxylation）後產生", "由天門冬胺酸（aspartic acid）經轉胺作用（transamination）後產生", "由 β-羥基-β-甲基戊二酸單醯輔酶 A（HMG-CoA）裂解反應後產生", "由 α-酮戊二酸（α-ketoglutaric acid）經氧化脫羧作用後產生"], "a": 2, "e": "HMG-CoA 裂解酶把 HMG-CoA 切成乙醯乙酸 ＋ 乙醯輔酶 A。", "x": ["A ✕ 丙酮酸羧化 → 草醯乙酸（補 TCA 車廂、糖質新生）", "B ✕ 天門冬胺酸轉胺 → 草醯乙酸", "D ✕ α-酮戊二酸氧化脫羧 → 琥珀醯輔酶 A（TCA 的一步）"], "r": "① 怎麼做 → 卡 1　合成"}, {"s": "關於 leptin 之敘述，下列何者正確？", "o": ["是一種酵素", "主要的作用目標器官是腦部", "後天型肥胖者通常缺少它", "係由腦部產生而作用於脂肪細胞"], "a": 1, "e": "瘦體素由脂肪細胞分泌，作用在腦部下視丘，抑制食慾。", "x": ["A ✕ 是蛋白質「激素」，不是酵素", "C ✕ 後天肥胖者通常偏高（瘦體素阻抗），不是缺少", "D ✕ 方向相反：脂肪細胞產生 → 作用於腦"], "r": "混入的題目 → 卡 7　瘦體素"}, {"s": "人類因缺乏下列何種酵素，因此無法合成 linoleic acid？", "o": ["Δ5 desaturase", "Δ6 desaturase", "Δ9 desaturase", "Δ12 desaturase"], "a": 3, "e": "亞麻油酸 18:2 Δ9,12 第 12 碳的雙鍵要 Δ12 去飽和酶，人體沒有。", "x": ["A、B、C ✕ Δ5、Δ6、Δ9 去飽和酶人體都有", "D ✓ 第 12 碳的雙鍵要 Δ12，人體沒有"], "r": "混入的題目 → 卡 8　去飽和酶"}, {"s": "肝臟會合成酮體，下列何種酮體是送至肝外組織提供能量利用最主要的形式？", "o": ["乙醯輔酶 A（acetyl-CoA）", "β-羥基丁酸（β-hydroxybutyric acid）", "β-羥基丁醯-輔酶 A（β-hydroxybutyryl-CoA）", "乙醯乙酸（acetoacetate）"], "a": 1, "e": "血中酮體以 β-羥丁酸最多，是送到肝外最主要的形式。", "x": ["A ✕ 乙醯輔酶 A 出不了細胞，也不是酮體", "C ✕ 帶 CoA 的分子都留在細胞內", "D ✕ 乙醯乙酸也是酮體，但量比 β-羥丁酸少"], "r": "① 怎麼做 → 卡 2　三種酮體"}, {"s": "肝臟因為缺乏下列何種酵素，所以無法利用 acetoacetate 來產生能量？", "o": ["β-酮醯基輔酶 A 轉移酶（β-ketoacyl-CoA transferase）", "β-羥基丁酸去氫酶（β-hydroxybutyrate dehydrogenase）", "HMG-輔酶 A 裂解酶（HMG-CoA lyase）", "乙醯乙酸脫羧酶（acetoacetate decarboxylase）"], "a": 0, "e": "肝外組織靠這個轉移酶向琥珀醯輔酶 A 借 CoA，把乙醯乙酸變回乙醯乙醯輔酶 A；肝臟沒有它。（卡 4 工具箱圖：肝臟缺的就是它）", "x": ["B ✕ β-羥丁酸去氫酶：肝臟做 β-羥丁酸要用，有", "C ✕ HMG-CoA 裂解酶：肝臟做乙醯乙酸要用，有", "D ✕ 乙醯乙酸變丙酮是自己脫羧，人體不靠這個酵素"], "r": "② 怎麼用 → 卡 4　肝臟不能用"}, {"s": "人體因缺乏那一個去飽和酶（desaturase），無法將飲食中亞麻油酸（linoleic acid）轉換為 α-次亞麻油酸（linolenic acid）？", "o": ["Δ6 desaturase", "Δ9 desaturase", "Δ12 desaturase", "Δ15 desaturase"], "a": 3, "e": "亞麻油酸 18:2 Δ9,12 → 次亞麻油酸 18:3 Δ9,12,15，差在第 15 碳的雙鍵；人體缺 Δ15 去飽和酶。", "x": ["A、B ✕ Δ6、Δ9 人體有", "C ✕ 人也缺 Δ12，但亞麻油酸本來就有 Δ12 雙鍵；變成次亞麻油酸只差第 15 碳", "所以 ω-6 不能變 ω-3"], "r": "混入的題目 → 卡 8　去飽和酶"}, {"s": "肝臟缺乏下列何者酵素，使得酮體無法代謝為乙醯輔酶 A（acetyl-CoA），故無法以酮體作為能量來源？", "o": ["HMG-CoA lyase", "β-3-hydroxybutyrate dehydrogenase", "β-3-ketoacyl-CoA transferase", "thiolase"], "a": 2, "e": "和第 6 題同一個觀念：肝臟缺 β-酮醯基輔酶 A 轉移酶。", "x": ["A ✕ HMG-CoA lyase 肝臟有（做酮體用）", "B ✕ β-羥丁酸去氫酶肝臟有", "D ✕ thiolase 肝臟有，做酮體第一步就用它"], "r": "② 怎麼用 → 卡 4　肝臟不能用"}, {"s": "酮體於肝臟合成後，會透過血液循環送至肝外組織，血液中的酮體主要型態為何？", "o": ["乙醯輔酶 A（acetyl-CoA）", "乙醯乙酸（acetoacetate）", "β-羥基丁酸（β-hydroxybutyric acid）", "β-羥甲基丁酸（β-hydroxymethylbutyric acid）"], "a": 2, "e": "血中酮體主要是 β-羥丁酸，量比乙醯乙酸多好幾倍。", "x": ["A ✕ 乙醯輔酶 A 不能離開細胞", "B ✕ 乙醯乙酸也是酮體，但量比 β-羥丁酸少", "D ✕ β-羥甲基丁酸（HMB）是白胺酸代謝物，不是酮體"], "r": "① 怎麼做 → 卡 2　三種酮體"}, {"s": "下列有關糖皮質素（glucocorticoid）代謝作用的敘述，何者最適當？", "o": ["促進肌肉的蛋白質合成", "降低三酸甘油酯分解", "促進肝細胞酮體生成", "降低血糖"], "a": 2, "t": "114-1 國考", "e": "糖皮質素（皮質醇）是壓力、飢餓激素：分解肌肉蛋白質、分解脂肪、促進肝臟糖質新生與酮體生成、升高血糖。", "x": ["A 錯：是促進蛋白質「分解」", "B 錯：是「增加」TG 分解", "D 錯：是「升高」血糖"], "r": "③ 誰在控制 → 卡 5　激素調控"}, {"s": "下列何者為長期缺乏醣類可能引起的代謝作用異常？", "o": ["促進酮酸生成", "促進肝醣合成", "抑制尿酸生成", "抑制葡萄糖合成"], "a": 0, "t": "114-1 國考", "e": "長期缺醣：胰島素低、脂肪大量分解、草醯乙酸不足 → 肝臟大量做酮體 → 酮酸增加。", "x": ["缺醣不會促進肝醣合成", "酮酸和尿酸搶著排 → 尿酸反而升高", "會「促進」葡萄糖合成（糖質新生）"], "r": "③ 誰在控制 → 卡 6　酮酸中毒"}, {"s": "有關人體合成及利用酮體（ketone bodies）的敘述，下列何者正確？", "o": ["肝臟細胞的細胞質為合成酮體的場所，所產生酮體再運送至肝外組織作能量來源", "酮體合成材料是 acetyl-CoA 和 malonyl-CoA，生成的中間產物為 3-hydroxy-3-methylglutaryl-CoA（HMG-CoA）", "人體產生的酮體包括 acetone、acetoacetate、β-hydroxylmethylbutyrate", "酮體運送至肝外組織後會分解為 acetyl-CoA 而進入檸檬酸循環"], "a": 3, "t": "114-2 國考", "e": "酮體到肝外組織後變回乙醯輔酶 A，進入檸檬酸循環。", "x": ["A 錯：在肝細胞「粒線體」，不是細胞質", "B 錯：原料只有乙醯輔酶 A；malonyl-CoA 是合成脂肪酸用的", "C 錯：第三種是 β-羥丁酸，不是 β-羥甲基丁酸"], "r": "② 怎麼用 → 卡 3　肝外利用"}];
+const KEY="ket-page-v1", L=["A","B","C","D"];
+let ans={}, cur=0, onlyWrong=null, showGrid=false;
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s){ans=s.ans||{}; cur=Number.isInteger(s.cur)?s.cur:0;}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({ans,cur}))}catch(e){}};
+const box=document.getElementById("quizbox");
+const order=()=>onlyWrong||Q.map((_,i)=>i);
+function cardLink(r){const name=r.split("→").pop().trim();return `<a href="#" data-card-link="${name}">${r}</a>`;}
+function jump(name){const h=[...document.querySelectorAll("h3[data-card]")].find(x=>x.dataset.card===name);if(!h)return;h.scrollIntoView({behavior:"smooth",block:"start"});h.classList.remove("flash");void h.offsetWidth;h.classList.add("flash");}
+function counts(){const done=Object.keys(ans).length, ok=Object.entries(ans).filter(([i,v])=>Q[i].a===v).length;return{done,ok};}
+function head(){const {done,ok}=counts();
+  let g=""; if(showGrid){g=`<div class="qgrid">`+Q.map((q,i)=>{let c=i in ans?(ans[i]===q.a?"ok":"no"):"";if(i===cur)c+=" cur";return `<button type="button" class="${c}" data-go="${i}" aria-label="第 ${i+1} 題">${i+1}</button>`}).join("")+`</div>`;}
+  return `<div class="qhead"><span class="stats">答對 <b>${ok}</b>／已答 ${done}／共 ${Q.length}</span><button type="button" class="btn small" id="tg">${showGrid?"收起題號":"題號總覽"}</button></div><div class="bar"><i style="width:${done/Q.length*100}%"></i></div>${g}`;}
+function render(){
+  if(cur===-1) return result();
+  const ord=order(), pos=ord.indexOf(cur), q=Q[cur], p=ans[cur], done=p!==undefined;
+  let h=head()+`<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill">第 ${cur+1} 題</span>${q.t?`<span class="tag">${q.t}</span>`:""}${onlyWrong?`<span class="tag">重做答錯 ${pos+1}／${ord.length}</span>`:""}</div><p class="stem">${q.s}</p><div class="opts">`;
+  q.o.forEach((t,j)=>{let c="opt";if(done){c+=j===q.a?" right":j===p?" wrong":" dim";}h+=`<button type="button" class="${c}" data-j="${j}" ${done?"disabled":""}><span class="k">${L[j]}</span><span>${t}</span></button>`;});
+  h+=`</div>`;
+  if(done){const ok=p===q.a;h+=`<div class="exp"><div class="verdict ${ok?"ok":"no"}">${ok?"答對了":"答錯了，正確答案是 "+L[q.a]}</div><p>${q.e}</p>${q.x.length?`<ul>${q.x.map(s=>`<li>${s}</li>`).join("")}</ul>`:""}${q.w?`<div class="warn">⚠ ${q.w}</div>`:""}<div class="ref">回上面複習：${cardLink(q.r)}</div></div>`;}
+  h+=`<div class="nav"><button type="button" class="btn" id="prev" ${pos<=0?"disabled":""}>上一題</button><button type="button" class="btn primary" id="next" ${done?"":"disabled"}>${pos===ord.length-1?"看成績":"下一題"}</button></div>`;
+  box.innerHTML=h; wire();
+  box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ans[cur]=+b.dataset.j;save();render();});
+  box.querySelector("#prev").onclick=()=>go(ord[pos-1]);
+  box.querySelector("#next").onclick=()=>{if(pos===ord.length-1){cur=-1;render();}else go(ord[pos+1]);};
+}
+function result(){
+  const {done,ok}=counts(); const wrong=Q.map((_,i)=>i).filter(i=>i in ans&&ans[i]!==Q[i].a); const left=Q.length-done;
+  box.innerHTML=head()+`<div><div class="stats">成績</div><div class="big">${ok} ／ ${Q.length}</div></div><p style="margin:0">已作答 ${done} 題${left?`，還有 ${left} 題未作答`:""}。</p>${wrong.length?`<p style="margin:0">答錯的題目（點題號回去看解析）：</p><div class="wl">${wrong.map(i=>`<button type="button" data-go="${i}">${i+1}</button>`).join("")}</div>`:""}<div class="nav">${wrong.length?`<button type="button" class="btn primary" id="redo">只重做答錯的 ${wrong.length} 題</button>`:""}<button type="button" class="btn" id="reset">全部重來</button></div>`;
+  wire();
+  const r=box.querySelector("#redo"); if(r) r.onclick=()=>{onlyWrong=wrong.slice();wrong.forEach(i=>delete ans[i]);go(wrong[0]);};
+  box.querySelector("#reset").onclick=()=>{ans={};onlyWrong=null;go(0);};
+}
+function wire(){
+  box.querySelector("#tg").onclick=()=>{showGrid=!showGrid;render();};
+  box.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{onlyWrong=null;showGrid=false;go(+b.dataset.go);});
+  box.querySelectorAll("[data-card-link]").forEach(a=>a.onclick=e=>{e.preventDefault();jump(a.dataset.cardLink);});
+}
+function go(i){cur=i;save();render();box.scrollIntoView({block:"start"});}
+if(cur<-1||cur>=Q.length) cur=0;
+render();
+</script>
+<script>
+(function(){
+var vs=[].slice.call(document.querySelectorAll('.vocab>div')),all=document.getElementById('vocabAll');
+function sync(){var n=vs.filter(function(d){return d.classList.contains('show')}).length;all.textContent=n===vs.length?'全部隱藏中文':'全部顯示中文';}
+vs.forEach(function(d){d.setAttribute('tabindex','0');d.addEventListener('click',function(){d.classList.toggle('show');sync();});d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();d.click();}});});
+all.addEventListener('click',function(){var show=all.textContent.indexOf('顯示')>-1;vs.forEach(function(d){d.classList.toggle('show',show)});sync();});
+var b=document.getElementById('coverBtn'),K='ket-cover';
+function setCover(on){document.body.classList.toggle('cover',on);b.setAttribute('aria-pressed',on);b.textContent='蓋右欄：'+(on?'開':'關');document.querySelectorAll('.card td.show').forEach(function(t){t.classList.remove('show')});try{localStorage.setItem(K,on?'1':'0')}catch(e){}}
+var on=false;try{on=localStorage.getItem(K)==='1'}catch(e){}
+setCover(on);
+b.addEventListener('click',function(){setCover(!document.body.classList.contains('cover'))});
+document.addEventListener('click',function(e){if(!document.body.classList.contains('cover'))return;var td=e.target.closest&&e.target.closest('.card:not(.grid4) td');if(td)td.classList.toggle('show');});
+})();
+</script>
+<script>document.querySelectorAll(".go").forEach(function(b){b.addEventListener("click",function(){if(typeof jump==="function")jump(b.dataset.go)})});</script>
+<script>
+(function(){
+var ds=[].slice.call(document.querySelectorAll('.dual')),pb=document.getElementById('picBtn'),K='ket-view';
+function setOne(d,v){d.dataset.view=v;d.querySelectorAll('.dhead .seg button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.v===v)});}
+function setAll(v){ds.forEach(function(d){setOne(d,v)});pb.setAttribute('aria-pressed',v==='pic');pb.textContent=v==='pic'?'全部看文字':'全部看圖解';try{localStorage.setItem(K,v)}catch(e){}}
+var v0='text';try{v0=localStorage.getItem(K)||'text'}catch(e){}
+setAll(v0);
+pb.addEventListener('click',function(){setAll(pb.getAttribute('aria-pressed')==='true'?'text':'pic')});
+ds.forEach(function(d){d.querySelectorAll('.dhead .seg button').forEach(function(b){b.addEventListener('click',function(){setOne(d,b.dataset.v)})})});
+window.__dualJump=function(h){var d=h.closest('.dual');if(d&&d.dataset.view!=='text'){}};
+})();
+</script>
+<script>
+(function(){
+var R=document.getElementById('hslAnim');if(!R)return;
+var C={g:['起點：HSL（剪刀）還沒開始剪（淡色）',
+'① 昇糖素（或腎上腺素）接上受體＝老闆在門外按電鈴；激素本身不進細胞',
+'② 腺苷酸環化酶把 ATP 變成 cAMP＝打開倉庫廣播',
+'③ cAMP 活化蛋白激酶 A＝工頭聽到廣播，拿起印章',
+'④ 蛋白激酶 A 把磷酸 P 掛到 HSL 上＝蓋章 → 剪刀可以剪了',
+'⑤ HSL 到油滴表面把 TG 剪開 → 甘油 ＋ 脂肪酸',
+'⑥ 脂肪酸、甘油送出細胞進血液，拿去當燃料'],
+i:['起點：HSL 掛著章（P）正在工作，脂肪一直被分解',
+'① 胰島素接上自己的受體＝另一位老闆說「吃飽了，停！」；昇糖素同時減少',
+'② 訊號活化磷酸二酯酶＝派人去關廣播',
+'③ cAMP 被分解成 AMP＝廣播關掉了',
+'④ 蛋白激酶 A 停工＝工頭不再蓋新的章',
+'⑤ 蛋白質磷酸酶把 HSL 上的 P 拿掉＝擦掉章 → 剪刀停下來',
+'⑥ 剪刀離開油滴；葡萄糖進細胞，脂肪改成存起來（第 23 題）']};
+var m='g',s=0,timer=null;
+function q(id){return R.querySelector('#hA-'+id)}
+function st(id,o,dx,dy){var e=q(id);e.style.opacity=o;e.style.transform='translate('+(dx||0)+'px,'+(dy||0)+'px)'}
+function draw(){
+ if(m==='g'){
+  st('ph',.25);st('glu',0);
+  st('g',1,0,s>=1?18:0);st('i',.2);st('sig',0);st('pde',.25);st('amp',0);
+  st('ac',s>=2?1:.3);st('camp',s>=2?1:0);st('pka',s>=3?1:.3);st('p',s>=4?1:0);
+  st('hsl',s>=4?1:.45,s>=5?72:0,s>=5?42:0);st('prod',s>=5?1:0,0,s>=6?-206:0);
+ }else{
+  st('g',s>=1?.2:1,0,s>=1?0:18);st('i',1,0,s>=1?18:0);st('sig',s>=2?1:0);st('pde',s>=2?1:.25);
+  st('ac',s>=1?.3:1);st('camp',s>=3?0:1);st('amp',s>=3?1:0);st('pka',s>=4?.3:1);st('p',s>=5?0:1);
+  st('ph',s>=5?1:.25,s>=5?24:0,s>=5?-8:0);st('glu',s>=6?1:0,s>=6?30:0,s>=6?96:0);
+  st('hsl',s>=5?.45:1,s>=6?0:72,s>=6?0:42);st('prod',s>=5?0:1,0,0);
+ }
+ R.querySelector('.anim-cap').textContent=C[m][s];
+ R.querySelector('.anim-n').textContent=s+' / 6';
+ R.querySelector('[data-a=prev]').disabled=s===0;R.querySelector('[data-a=next]').disabled=s===6;
+}
+function stop(){if(timer){clearInterval(timer);timer=null;R.querySelector('[data-a=play]').textContent='自動播放';}}
+R.querySelectorAll('.anim-mode button').forEach(function(b){b.addEventListener('click',function(){stop();m=b.dataset.m;s=0;R.querySelectorAll('.anim-mode button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});draw();});});
+R.querySelector('[data-a=prev]').addEventListener('click',function(){stop();if(s>0){s--;draw();}});
+R.querySelector('[data-a=next]').addEventListener('click',function(){stop();if(s<6){s++;draw();}});
+R.querySelector('[data-a=play]').addEventListener('click',function(e){if(timer){stop();return;}if(s===6)s=0;draw();e.target.textContent='暫停';timer=setInterval(function(){if(s<6){s++;draw();}else stop();},1900);});
+draw();
+})();
+</script>
+<script>
+(function(){
+function heads(){document.querySelectorAll('svg [marker-end]').forEach(function(p){
+ try{var L=p.getTotalLength();if(!L)return;var a=p.getPointAtLength(L),b=p.getPointAtLength(Math.max(0,L-2));
+ var ang=Math.atan2(a.y-b.y,a.x-b.x);var sw=parseFloat(p.getAttribute('stroke-width'))||1.4;var len=6+sw*1.6,hw=3+sw*0.9;
+ var x1=a.x-len*Math.cos(ang)+hw*Math.sin(ang),y1=a.y-len*Math.sin(ang)-hw*Math.cos(ang),x2=a.x-len*Math.cos(ang)-hw*Math.sin(ang),y2=a.y-len*Math.sin(ang)+hw*Math.cos(ang);
+ var t=document.createElementNS('http://www.w3.org/2000/svg','path');t.setAttribute('d','M'+a.x+' '+a.y+'L'+x1+' '+y1+'L'+x2+' '+y2+'Z');t.setAttribute('fill',p.getAttribute('stroke')||'currentColor');
+ p.parentNode.insertBefore(t,p.nextSibling);p.removeAttribute('marker-end');}catch(e){}});}
+if(document.readyState!=='loading')heads();else document.addEventListener('DOMContentLoaded',heads);
+})();
+</script>
+</body>
+</html>
