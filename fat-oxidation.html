@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>生化｜脂肪酸氧化</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f3f6f4; --surface:#ffffff; --ink:#17231f; --muted:#5b6b65; --line:#d6e0db; --edge:#8a9a94;
+  --accent:#1f6fd1; --accent-soft:#e1ecfa; --warm:#e0672c; --tint:#e7ece9;
+  --yolk:#f2b632; --yolk-soft:#fdf1d4; --good:#1d8a4c; --good-soft:#e2f4e8; --bad:#c2402e; --bad-soft:#fbe6e2;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){:root{
+  --bg:#0f1715; --surface:#17221f; --ink:#e7efeb; --muted:#9fb1aa; --line:#2a3a35; --edge:#7d8f88;
+  --accent:#6ea8ff; --accent-soft:#1a2a40; --warm:#ff9a66; --tint:#22302c;
+  --yolk:#f2c45a; --yolk-soft:#3a2f14; --good:#5bd38d; --good-soft:#163323; --bad:#ff8a77; --bad-soft:#3b1e19;
+  color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65}
+.wrap{max-width:760px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.head-in{max-width:760px;margin:0 auto;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.head-in h1{margin:0;font-size:18px;font-weight:900}
+.head-in nav{display:flex;gap:6px;flex-wrap:wrap}
+.head-in nav a{font-size:13px;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:99px;padding:3px 10px;background:var(--bg)}
+.lead{margin:20px 0 0;color:var(--muted)}
+h2{font-size:21px;font-weight:900;margin:40px 0 6px;text-wrap:balance;scroll-margin-top:70px}
+h3{font-size:16px;font-weight:700;margin:22px 0 8px;scroll-margin-top:70px}
+.sub{color:var(--muted);font-size:14px;margin:0 0 8px}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:8px;overflow-x:auto;margin:12px 0}
+.fig svg{display:block;width:100%;min-width:560px;height:auto}
+.card{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:15px}
+.card th,.card td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+.card tr:last-child th,.card tr:last-child td{border-bottom:0}
+.card th{width:30%;background:var(--tint);font-weight:700;white-space:nowrap}
+.card .q{color:var(--muted);font-size:13px;white-space:nowrap}
+.tblwrap{overflow-x:auto}
+.grid4 th{width:auto;white-space:normal}
+h3.flash{animation:flash 1.6s ease}
+@keyframes flash{0%{background:var(--yolk-soft)}100%{background:transparent}}
+/* quiz */
+.quiz{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;display:grid;gap:14px}
+.qhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px}
+.stats{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.stats b{color:var(--ink)}
+.bar{height:6px;border-radius:99px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--accent);transition:width .3s}
+.btn{font:inherit;font-size:14px;font-weight:700;padding:8px 16px;border-radius:9px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.btn.small{font-size:13px;font-weight:500;padding:4px 10px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn[disabled]{opacity:.4;cursor:default}
+.btn:focus-visible,.opt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(40px,1fr));gap:6px}
+.qgrid button{font-family:var(--f-mono);font-size:13px;height:34px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.qgrid .ok{background:var(--good-soft);border-color:var(--good);color:var(--good)}
+.qgrid .no{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.qgrid .cur{outline:2px solid var(--accent)}
+.pill{font-family:var(--f-mono);font-size:13px;background:var(--accent-soft);color:var(--accent);padding:2px 10px;border-radius:99px}
+.tag{font-size:12px;border:1px solid var(--yolk);background:var(--yolk-soft);padding:2px 8px;border-radius:6px}
+.stem{font-size:16.5px;font-weight:500;margin:0}
+.opts{display:grid;gap:9px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;font:inherit;font-size:15px;line-height:1.55;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;width:100%}
+.opt:hover:not([disabled]){border-color:var(--accent)}
+.opt .k{font-family:var(--f-mono);flex:0 0 26px;height:26px;border-radius:7px;display:grid;place-items:center;background:var(--tint);font-size:13px}
+.opt[disabled]{cursor:default}
+.opt.right{border-color:var(--good);background:var(--good-soft)}.opt.right .k{background:var(--good);color:#fff}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}.opt.wrong .k{background:var(--bad);color:#fff}
+.opt.dim{opacity:.55}
+.exp{border-top:1px dashed var(--line);padding-top:12px;display:grid;gap:9px}
+.exp p{margin:0}.exp ul{margin:0;padding-left:1.2em;color:var(--muted);font-size:14.5px}
+.verdict{font-weight:900}.verdict.ok{color:var(--good)}.verdict.no{color:var(--bad)}
+.ref,.warn{font-size:14px;padding:8px 12px;border-radius:0 8px 8px 0}
+.ref{background:var(--yolk-soft);border-left:3px solid var(--yolk)}
+.ref a{color:var(--ink);font-weight:700}
+.warn{background:var(--bad-soft);border-left:3px solid var(--bad)}
+.nav{display:flex;justify-content:space-between;gap:10px}
+.big{font-family:var(--f-mono);font-size:40px;color:var(--accent);line-height:1.1}
+.wl{display:flex;flex-wrap:wrap;gap:6px}
+.wl button{font-family:var(--f-mono);font-size:13px;border:1px solid var(--bad);background:var(--bad-soft);color:var(--bad);border-radius:8px;padding:4px 10px;cursor:pointer}
+.appx p{margin:8px 0}
+footer{color:var(--muted);font-size:13px;margin-top:40px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.bar i{transition:none}h3.flash{animation:none}}
+</style>
+</head>
+<body>
+<header><div class="head-in"><h1>生化｜脂肪酸氧化</h1>
+<nav><a href="#overview">全貌</a><a href="#beta">β-氧化</a><a href="#names">名稱</a><a href="#words">英文</a><a href="#quiz">題目練習</a></nav></div></header>
+<div class="wrap">
+<p class="lead">模擬考題（fat oxidation）共 26 題。先看卡片與路徑圖，再到「題目練習」作答；作答後才顯示解析，並可點連結跳回對應的卡片。複習時可蓋住表格右欄，看左欄能不能說出內容。</p>
+
+<h2 id="overview">先看全貌：脂肪的旅程</h2>
+<div class="fig"><svg viewBox='0 0 760 426' role='img' aria-label='脂肪的旅程' font-family='inherit'><defs><marker id='ja' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker></defs><text x='24' y='30' text-anchor='start' font-size='15' font-weight='700' fill='var(--ink)'>脂肪的旅程：從小腸一路到粒線體產生 ATP</text><text x='24' y='50' text-anchor='start' font-size='11.5' fill='var(--muted)'>①～⑤ 對應下方的第 1～5 站；藍框是這份題目的重點</text><path d='M235 116H275' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M485 116H525' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M630 160V180H130V200' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M235 244H275' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M485 244H525' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M630 288V330' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><path d='M525 366H485' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#ja)'/><rect x='25' y='72' width='210' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='130' y='96' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>① 小腸：消化吸收</text><text x='130' y='114' text-anchor='middle' font-size='11.5' fill='var(--muted)'>膽鹽乳化 → 脂解酶分解</text><text x='130' y='130' text-anchor='middle' font-size='11.5' fill='var(--muted)'>重組成 TG，包進乳糜微粒</text><rect x='275' y='72' width='210' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='380' y='96' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>淋巴 → 血液</text><text x='380' y='114' text-anchor='middle' font-size='11.5' fill='var(--muted)'>乳糜微粒先走淋巴</text><text x='380' y='130' text-anchor='middle' font-size='11.5' fill='var(--muted)'>再進入血液送到全身</text><rect x='525' y='72' width='210' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='630' y='96' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>② 脂肪組織：儲存</text><text x='630' y='114' text-anchor='middle' font-size='11.5' fill='var(--muted)'>吃飽：TG 存進脂肪細胞</text><text x='630' y='130' text-anchor='middle' font-size='11.5' fill='var(--muted)'>餓了：HSL 把 TG 切開</text><text x='630' y='146' text-anchor='middle' font-size='11.5' fill='var(--muted)'>胰島素關、昇糖素開</text><rect x='25' y='200' width='210' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='130' y='224' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>③ 血液：運送</text><text x='130' y='242' text-anchor='middle' font-size='11.5' fill='var(--muted)'>脂肪酸搭白蛋白</text><text x='130' y='258' text-anchor='middle' font-size='11.5' fill='var(--muted)'>甘油溶於水，送到肝臟</text><text x='130' y='274' text-anchor='middle' font-size='11.5' fill='var(--muted)'>（可進糖解或糖質新生）</text><rect x='275' y='200' width='210' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='380' y='224' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>④ 細胞質：活化</text><text x='380' y='242' text-anchor='middle' font-size='11.5' fill='var(--muted)'>脂肪酸 + CoA</text><text x='380' y='258' text-anchor='middle' font-size='11.5' fill='var(--muted)'>→ 脂肪醯輔酶 A</text><text x='380' y='274' text-anchor='middle' font-size='11.5' fill='var(--muted)'>（消耗 ATP）</text><rect x='525' y='200' width='210' height='88' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='630' y='224' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>⑤ 粒線體：產能</text><text x='630' y='242' text-anchor='middle' font-size='11.5' fill='var(--ink)'>肉鹼帶過內膜</text><text x='630' y='258' text-anchor='middle' font-size='11.5' fill='var(--ink)'>β-氧化切成乙醯輔酶 A</text><text x='630' y='274' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ TCA → 電子傳遞鏈 → ATP</text><text x='640' y='314' text-anchor='start' font-size='11.5' fill='var(--muted)'>長期飢餓（肝臟）</text><rect x='525' y='330' width='210' height='72' rx='8' fill='var(--warm)' fill-opacity='0.12' stroke='var(--warm)' stroke-width='2'/><text x='630' y='354' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>肝臟的另一個出口</text><text x='630' y='372' text-anchor='middle' font-size='11.5' fill='var(--ink)'>乙醯輔酶 A 太多時</text><text x='630' y='388' text-anchor='middle' font-size='11.5' fill='var(--ink)'>做成酮體送出去</text><rect x='275' y='330' width='210' height='72' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='380' y='354' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>大腦、肌肉</text><text x='380' y='372' text-anchor='middle' font-size='11.5' fill='var(--muted)'>用酮體當燃料</text><text x='380' y='388' text-anchor='middle' font-size='11.5' fill='var(--muted)'>（大腦不直接用脂肪酸）</text></svg></div>
+
+<h3 data-card="第 1 站　小腸">第 1 站　小腸：消化吸收</h3>
+<table class="card"><tr><th>原料 → 產物</th><td>TG → 2-單酸甘油 ＋ 2 脂肪酸</td></tr>
+<tr><th>乳化</th><td>膽鹽（兩性分子：一頭親水、一頭親油）→ 大油滴變小油滴 → 表面積增加</td></tr>
+<tr><th>水解</th><td>胰脂解酶（需 colipase）切開 TG 第 1、3 位的酯鍵</td></tr>
+<tr><th>吸收</th><td>膽鹽包成微膠粒 → 送到小腸細胞；膽鹽在迴腸回收</td></tr>
+<tr><th>之後</th><td>細胞內重組 TG → 乳糜微粒 → 淋巴 → 血液</td></tr>
+<tr><th>例外</th><td>短、中鏈脂肪酸 → 門靜脈 → 肝</td></tr>
+<tr><th>考點</th><td>膽鹽 ＝ 膽酸 ＋ taurine 或 glycine <span class="q">第 5、7 題</span></td></tr></table>
+
+<h3 data-card="第 2 站　脂肪組織">第 2 站　脂肪組織：儲存與釋出</h3>
+<table class="card"><tr><th>吃飽</th><td>TG 存入脂肪細胞</td></tr>
+<tr><th>餓了</th><td>激素敏感性脂解酶（HSL）：TG → 甘油 ＋ 3 脂肪酸</td></tr>
+<tr><th>打開 HSL</th><td>昇糖素、腎上腺素、ACTH（需要能量）</td></tr>
+<tr><th>關掉 HSL</th><td>胰島素（吃飽了） <span class="q">第 23 題</span></td></tr></table>
+
+<h3 data-card="第 3 站　血液">第 3 站　血液：運送</h3>
+<table class="card"><tr><th>脂肪酸</th><td>搭白蛋白（albumin） <span class="q">第 4 題</span></td></tr>
+<tr><th>甘油</th><td>溶於水 → 肝 → 甘油-3-磷酸 → 糖解或糖質新生 <span class="q">第 10 題</span></td></tr></table>
+
+<h3 data-card="第 4 站　細胞">第 4 站　細胞：進粒線體</h3>
+<table class="card"><tr><th>活化</th><td>細胞質：脂肪酸 ＋ CoA → 脂肪醯輔酶 A（耗 ATP）</td></tr>
+<tr><th>進粒線體</th><td>靠肉鹼穿過內膜（見下一節）</td></tr>
+<tr><th>切段</th><td>β-氧化 → 乙醯輔酶 A</td></tr></table>
+
+<h3 data-card="第 5 站　粒線體">第 5 站　粒線體：產能</h3>
+<table class="card"><tr><th>路線</th><td>乙醯輔酶 A → TCA 循環 → NADH、FADH₂ → 電子傳遞鏈 → ATP</td></tr>
+<tr><th>交叉路口</th><td>丙酮酸、乙醯輔酶 A 串聯三大營養素 <span class="q">第 26 題</span></td></tr></table>
+
+<h3 data-card="另一個出口　肝臟：酮體">另一個出口　肝臟：酮體</h3>
+<table class="card"><tr><th>時機</th><td>長期飢餓：乙醯輔酶 A 過多，草醯乙酸被拿去做糖</td></tr>
+<tr><th>結果</th><td>肝臟做成酮體 → 送大腦、肌肉當燃料 <span class="q">第 22 題</span></td></tr>
+<tr><th>大腦</th><td>不直接用脂肪酸，用葡萄糖或酮體 <span class="q">第 21 題</span></td></tr></table>
+
+<h2 id="beta">脂肪酸進粒線體與 β-氧化</h2>
+<p class="sub">對應第 1、11、13、14、16、17、19、20 題。</p>
+<div class="fig"><svg viewBox='0 0 760 500' role='img' aria-label='肉鹼穿梭與 β-氧化' font-family='inherit'><defs><marker id='jb' viewBox='0 0 10 10' refX='9' refY='5' markerWidth='6' markerHeight='6' orient='auto-start-reverse'><path d='M0 0L10 5L0 10z' fill='var(--edge)'/></marker></defs><text x='24' y='30' text-anchor='start' font-size='15' font-weight='700' fill='var(--ink)'>脂肪酸靠肉鹼進粒線體，再每圈切下 2 個碳</text><text x='24' y='50' text-anchor='start' font-size='11.5' fill='var(--muted)'>上半：肉鹼穿梭；下半：β-氧化的 4 個步驟</text><rect x='230' y='70' width='12' height='150' fill='var(--tint)' stroke='var(--edge)'/><rect x='400' y='70' width='12' height='150' fill='var(--tint)' stroke='var(--edge)'/><text x='236' y='234' text-anchor='middle' font-size='11.5' fill='var(--muted)'>外膜</text><text x='406' y='234' text-anchor='middle' font-size='11.5' fill='var(--muted)'>內膜</text><text x='118' y='90' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>細胞質</text><text x='321' y='90' text-anchor='middle' font-size='11.5' fill='var(--muted)'>膜間腔</text><text x='574' y='90' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>粒線體基質</text><path d='M196 130H204' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M268 130H278' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M380 130H420' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M484 130H498' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M570 152V250H110V288' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M180 334H213' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M355 334H388' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M530 334H563' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M590 378V410H110V380' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><path d='M665 378V438' fill='none' stroke='var(--edge)' stroke-width='1.25' marker-end='url(#jb)'/><rect x='40' y='108' width='156' height='44' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='118.0' y='127' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪醯輔酶 A</text><text x='118.0' y='143' text-anchor='middle' font-size='11.5' fill='var(--muted)'>fatty acyl-CoA</text><rect x='206' y='110' width='62' height='40' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='237.0' y='129' text-anchor='middle' font-size='12' font-weight='700' fill='var(--ink)'>CAT I</text><text x='237.0' y='145' text-anchor='middle' font-size='10.5' fill='var(--ink)'>換上肉鹼</text><rect x='280' y='108' width='100' height='44' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='330.0' y='127' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪醯肉鹼</text><text x='330.0' y='143' text-anchor='middle' font-size='11.5' fill='var(--muted)'>acyl-carnitine</text><text x='330' y='170' text-anchor='middle' font-size='10.5' fill='var(--muted)'>唯一能穿過內膜的形式</text><rect x='422' y='110' width='62' height='40' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='453.0' y='129' text-anchor='middle' font-size='12' font-weight='700' fill='var(--ink)'>CAT II</text><text x='453.0' y='145' text-anchor='middle' font-size='10.5' fill='var(--ink)'>換回 CoA</text><rect x='500' y='108' width='140' height='44' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='570.0' y='127' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>脂肪醯輔酶 A</text><text x='570.0' y='143' text-anchor='middle' font-size='11.5' fill='var(--muted)'>準備進入 β-氧化</text><path d='M180 192L228 154' fill='none' stroke='var(--bad)' stroke-width='1.5' stroke-dasharray='4 3'/><line x1='222' y1='150' x2='234' y2='158' stroke='var(--bad)' stroke-width='2'/><text x='40' y='200' text-anchor='start' font-size='11.5' font-weight='700' fill='var(--ink)'>丙二醯輔酶 A</text><text x='40' y='216' text-anchor='start' font-size='11.5' fill='var(--muted)'>吃飽時增加，抑制 CAT I</text><text x='200' y='272' text-anchor='start' font-size='13' font-weight='700' fill='var(--ink)'>β-氧化：每轉一圈 4 步</text><rect x='40' y='290' width='140' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='110' y='314' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>1 氧化（去氫）</text><text x='110' y='332' text-anchor='middle' font-size='11.5' fill='var(--ink)'>產生 1 個 FADH₂</text><text x='110' y='348' text-anchor='middle' font-size='11.5' fill='var(--muted)'>形成雙鍵</text><rect x='215' y='290' width='140' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='285' y='314' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>2 加水</text><text x='285' y='332' text-anchor='middle' font-size='11.5' fill='var(--ink)'>雙鍵加上 H₂O</text><text x='285' y='348' text-anchor='middle' font-size='11.5' fill='var(--muted)'>β 碳接上 -OH</text><rect x='390' y='290' width='140' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='460' y='314' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>3 氧化（去氫）</text><text x='460' y='332' text-anchor='middle' font-size='11.5' fill='var(--ink)'>產生 1 個 NADH</text><text x='460' y='348' text-anchor='middle' font-size='11.5' fill='var(--muted)'>→ β-酮醯基輔酶 A</text><rect x='565' y='290' width='140' height='88' rx='8' fill='none' stroke='var(--edge)' stroke-width='1.25'/><text x='635' y='314' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>4 硫解</text><text x='635' y='332' text-anchor='middle' font-size='11.5' fill='var(--ink)'>用新的 CoA 切斷</text><text x='635' y='348' text-anchor='middle' font-size='11.5' fill='var(--muted)'>放出 1 個乙醯輔酶 A</text><text x='340' y='428' text-anchor='middle' font-size='11.5' fill='var(--muted)'>剩下的脂肪醯輔酶 A 少了 2 個碳，再轉一圈</text><rect x='600' y='440' width='130' height='48' rx='8' fill='var(--accent)' fill-opacity='0.12' stroke='var(--accent)' stroke-width='2'/><text x='665' y='460' text-anchor='middle' font-size='13' font-weight='700' fill='var(--ink)'>乙醯輔酶 A</text><text x='665' y='477' text-anchor='middle' font-size='11.5' fill='var(--ink)'>→ 檸檬酸循環</text><text x='24' y='470' text-anchor='start' font-size='11.5' fill='var(--muted)'>例：16 碳棕櫚酸轉 7 圈 → 8 個乙醯輔酶 A、7 FADH₂、7 NADH</text></svg></div>
+
+<h3 data-card="卡 1　活化">卡 1　活化</h3>
+<table class="card"><tr><th>地點</th><td>細胞質</td></tr>
+<tr><th>反應</th><td>脂肪酸 ＋ CoA → 脂肪醯輔酶 A（fatty acyl-CoA）</td></tr>
+<tr><th>酵素</th><td>醯基輔酶 A 合成酶（acyl-CoA synthetase）</td></tr>
+<tr><th>能量</th><td>消耗 ATP</td></tr></table>
+
+<h3 data-card="卡 2　肉鹼穿梭">卡 2　肉鹼穿梭</h3>
+<table class="card"><tr><th>問題</th><td>脂肪醯輔酶 A 穿不過粒線體<b>內膜</b></td></tr>
+<tr><th>CAT I（外膜）</th><td>脂肪醯基從 CoA 換到肉鹼 → 脂肪醯肉鹼 <span class="q">第 20 題</span></td></tr>
+<tr><th>穿過內膜</th><td>只有<b>脂肪醯肉鹼</b>能過 <span class="q">第 19 題</span></td></tr>
+<tr><th>CAT II（內膜內側）</th><td>脂肪醯基從肉鹼換回 CoA；肉鹼回收</td></tr>
+<tr><th>肉鹼的功能</th><td>帶脂肪醯基穿過粒線體內膜 <span class="q">第 17 題</span></td></tr>
+<tr><th>調控</th><td>吃飽 → malonyl-CoA 升高 → 抑制 CAT I → 不燒脂肪 <span class="q">第 11 題</span></td></tr></table>
+
+<h3 data-card="卡 3　β-氧化">卡 3　β-氧化（每圈 4 步、切下 2 碳）</h3>
+<table class="card"><tr><th>地點</th><td>粒線體基質</td></tr>
+<tr><th>1 氧化</th><td>產生 FADH₂</td></tr>
+<tr><th>2 加水</th><td>雙鍵加上 H₂O</td></tr>
+<tr><th>3 氧化</th><td>β-羥醯基輔酶 A 去氫酶 → 產生 NADH；產物為 β-酮醯基輔酶 A</td></tr>
+<tr><th>4 硫解</th><td>用 CoA 切下 1 個乙醯輔酶 A</td></tr>
+<tr><th>16 碳棕櫚酸</th><td>7 圈 → 8 個乙醯輔酶 A ＋ 7 FADH₂ ＋ 7 NADH <span class="q">第 1 題</span></td></tr>
+<tr><th>不需要</th><td>生物素（合成脂肪酸才要） <span class="q">第 13 題</span></td></tr>
+<tr><th>不會產生</th><td>malonyl-CoA（合成脂肪酸的原料） <span class="q">第 16 題</span></td></tr>
+<tr><th>調控</th><td>NADH／NAD⁺ 高 → 第 3 步變慢 <span class="q">第 11 題</span></td></tr></table>
+
+<h3 data-card="卡 4　奇數碳脂肪酸">卡 4　奇數碳脂肪酸</h3>
+<table class="card"><tr><th>特有產物</th><td>最後剩 3 碳：丙醯輔酶 A（propionyl-CoA） <span class="q">第 14 題</span></td></tr>
+<tr><th>轉換</th><td>丙醯輔酶 A → 甲基丙二醯輔酶 A → 琥珀醯輔酶 A → TCA</td></tr>
+<tr><th>需要</th><td>生物素（羧化酶）、維生素 B12（變位酶）</td></tr></table>
+
+<h3 data-card="卡 5　不相關的途徑">卡 5　不相關的途徑</h3>
+<table class="card"><tr><th>Cori 氏循環</th><td>肌肉乳酸 → 肝 → 葡萄糖；屬醣類代謝，不屬脂肪產能 <span class="q">第 15 題</span></td></tr></table>
+
+<h2 id="names">脂肪酸的名稱與分類</h2>
+<p class="sub">對應第 2、3、6、8、9、12、18、24 題、附錄第 35、36 題。</p>
+
+<h3 data-card="卡 1　結構">卡 1　結構</h3>
+<table class="card"><tr><th>兩端</th><td>羧基端（-COOH）、甲基端（-CH₃）</td></tr>
+<tr><th>飽和</th><td>全是單鍵：棕櫚酸 16:0、硬脂酸 18:0</td></tr>
+<tr><th>不飽和</th><td>有雙鍵：1 個 ＝ 單元，2 個以上 ＝ 多元</td></tr>
+<tr><th>完全氫化</th><td>18 碳不飽和（油酸、亞麻油酸、次亞麻油酸）→ 硬脂酸 <span class="q">第 3 題</span></td></tr></table>
+
+<h3 data-card="卡 2　讀懂名字">卡 2　讀懂名字</h3>
+<table class="card"><tr><th>18:2 Δ9,12</th><td>18 碳、2 個雙鍵、在第 9 和第 12 碳（從羧基端數）</td></tr>
+<tr><th>ω 公式</th><td>ω ＝ 碳數 − 最後一個 Δ 數字（從甲基端數）</td></tr></table>
+<div class="tblwrap" style="margin-top:10px"><table class="card grid4"><tr><th>名稱</th><th>寫法</th><th>計算</th><th>類別</th></tr>
+<tr><td>油酸 oleic acid</td><td>18:1 Δ9</td><td>18 − 9</td><td>ω-9</td></tr>
+<tr><td>亞麻油酸 linoleic acid</td><td>18:2 Δ9,12</td><td>18 − 12</td><td>ω-6</td></tr>
+<tr><td>次亞麻油酸 α-linolenic acid</td><td>18:3 Δ9,12,15</td><td>18 − 15</td><td>ω-3</td></tr>
+<tr><td>花生四烯酸 arachidonic acid</td><td>20:4 Δ5,8,11,14</td><td>20 − 14</td><td>ω-6（第 6 題）</td></tr>
+<tr><td>EPA</td><td>20:5 Δ5,8,11,14,17</td><td>20 − 17</td><td>ω-3</td></tr>
+<tr><td>DHA</td><td>22:6 Δ4,7,10,13,16,19</td><td>22 − 19</td><td>ω-3</td></tr></table></div>
+
+<h3 data-card="卡 3　必需脂肪酸">卡 3　必需脂肪酸</h3>
+<table class="card"><tr><th>人體有</th><td>Δ9 去飽和酶（第 9 碳以前可加雙鍵）</td></tr>
+<tr><th>人體沒有</th><td>Δ12、Δ15 去飽和酶（植物有）</td></tr>
+<tr><th>結果</th><td>亞麻油酸（ω-6）、次亞麻油酸（ω-3）要從食物攝取 <span class="q">第 8 題</span></td></tr>
+<tr><th>ω-6 不能變 ω-3</th><td>缺 Δ15 <span class="q">附錄第 35 題</span></td></tr>
+<tr><th>代謝產物</th><td>亞麻油酸 → 花生四烯酸 <span class="q">第 12 題</span></td></tr></table>
+
+<h3 data-card="卡 4　ω-3 與食物">卡 4　ω-3 與食物</h3>
+<table class="card"><tr><th>魚油</th><td>EPA、DHA → 抑制血小板凝集 <span class="q">第 9 題</span></td></tr>
+<tr><th>芥花油</th><td>亞麻油酸、次亞麻油酸都多 <span class="q">第 24 題</span></td></tr>
+<tr><th>橄欖油</th><td>油酸（ω-9）為主</td></tr>
+<tr><th>葵花油、玉米油</th><td>亞麻油酸多、次亞麻油酸少</td></tr></table>
+
+<h3 data-card="卡 5　磷脂質">卡 5　磷脂質</h3>
+<table class="card"><tr><th>骨架</th><td>甘油 ＋ 2 脂肪酸 ＋ 磷酸 ＋ 一個「頭」</td></tr>
+<tr><th>卵磷脂 lecithin（PC）</th><td>頭 ＝ 膽鹼 choline；水解得甘油 <span class="q">第 18 題</span></td></tr>
+<tr><th>腦磷脂 cephalin（PE）</th><td>頭 ＝ 乙醇胺 ethanolamine <span class="q">附錄第 36 題</span></td></tr>
+<tr><th>缺膽鹼</th><td>卵磷脂不足 → VLDL 做不出 → TG 堆在肝 → 脂肪肝 <span class="q">第 2 題</span></td></tr></table>
+
+<h2 id="words">必背英文名詞</h2>
+<div class="tblwrap"><table class="card grid4"><tr><th>英文</th><th>中文</th><th>一句話記住</th></tr>
+<tr><td>triacylglycerol（TG）</td><td>三酸甘油酯</td><td>1 甘油 ＋ 3 脂肪酸</td></tr>
+<tr><td>bile salts</td><td>膽鹽</td><td>膽酸 ＋ taurine／glycine，乳化脂肪</td></tr>
+<tr><td>chylomicron</td><td>乳糜微粒</td><td>從小腸經淋巴運送飲食脂肪</td></tr>
+<tr><td>hormone-sensitive lipase（HSL）</td><td>激素敏感性脂解酶</td><td>分解脂肪組織 TG；胰島素抑制</td></tr>
+<tr><td>albumin</td><td>白蛋白</td><td>血液中運送游離脂肪酸</td></tr>
+<tr><td>fatty acyl-CoA</td><td>脂肪醯輔酶 A</td><td>活化後的脂肪酸</td></tr>
+<tr><td>acyl-CoA synthetase</td><td>醯基輔酶 A 合成酶</td><td>活化脂肪酸</td></tr>
+<tr><td>carnitine</td><td>肉鹼</td><td>帶脂肪醯基穿過粒線體內膜</td></tr>
+<tr><td>carnitine acyltransferase I（CAT I／CPT I）</td><td>肉鹼醯基轉移酶 I</td><td>外膜；被 malonyl-CoA 抑制</td></tr>
+<tr><td>fatty acyl-carnitine</td><td>脂肪醯肉鹼</td><td>唯一能穿過內膜的形式</td></tr>
+<tr><td>β-oxidation</td><td>β-氧化</td><td>每圈切下 2 碳</td></tr>
+<tr><td>acetyl-CoA</td><td>乙醯輔酶 A</td><td>2 碳單位，進入 TCA</td></tr>
+<tr><td>β-ketoacyl-CoA</td><td>β-酮醯基輔酶 A</td><td>β-氧化第 3 步的產物</td></tr>
+<tr><td>propionyl-CoA</td><td>丙醯輔酶 A</td><td>奇數碳最後的 3 碳</td></tr>
+<tr><td>succinyl-CoA</td><td>琥珀醯輔酶 A</td><td>丙醯輔酶 A 轉成它才進 TCA</td></tr>
+<tr><td>malonyl-CoA</td><td>丙二醯輔酶 A</td><td>合成脂肪酸的原料，抑制 CAT I</td></tr>
+<tr><td>acetyl-CoA carboxylase</td><td>乙醯輔酶 A 羧化酶</td><td>合成脂肪酸第一步，需要生物素</td></tr>
+<tr><td>ketone bodies</td><td>酮體</td><td>肝臟用多餘 acetyl-CoA 做的燃料</td></tr>
+<tr><td>linoleic acid（LA）</td><td>亞麻油酸</td><td>ω-6 必需脂肪酸，18:2</td></tr>
+<tr><td>α-linolenic acid（ALA）</td><td>次亞麻油酸</td><td>ω-3 必需脂肪酸，18:3</td></tr>
+<tr><td>arachidonic acid（AA）</td><td>花生四烯酸</td><td>由亞麻油酸做成，20:4，ω-6</td></tr>
+<tr><td>desaturase</td><td>去飽和酶</td><td>加雙鍵；人缺 Δ12、Δ15</td></tr>
+<tr><td>lecithin（phosphatidylcholine）</td><td>卵磷脂</td><td>頭是 choline</td></tr>
+<tr><td>cephalin（phosphatidylethanolamine）</td><td>腦磷脂</td><td>頭是 ethanolamine</td></tr>
+<tr><td>choline</td><td>膽鹼</td><td>缺乏會造成脂肪肝</td></tr>
+<tr><td>blood-brain barrier</td><td>血腦障壁</td><td>擋住脂肪酸進入大腦</td></tr></table></div>
+
+<h2 id="quiz">題目練習</h2>
+<p class="sub">點選答案後才顯示對錯與解析。作答進度會記在這台裝置的瀏覽器裡。</p>
+<section class="quiz" id="quizbox" aria-live="polite"></section>
+
+<h2 id="appendix">附錄：第 34–39 題</h2>
+<div class="appx">
+<p class="sub">原卷沒有標答案，第 27–33 題不在檔案中；以下為參考解答，請對照老師答案。</p>
+<p><b>34.（題幹缺漏）</b>剩下的選項「合成 PC 需要 SAM 提供甲基」本身正確：PE 加上 3 個甲基 → PC，甲基來自 SAM。</p>
+<p><b>35. 答 C：Δ15 desaturase</b>。亞麻油酸 18:2 Δ9,12 與次亞麻油酸 18:3 Δ9,12,15 只差第 15 碳的雙鍵；elongase 是延長碳鏈，不是加雙鍵。</p>
+<p><b>36. 答 D：ethanolamine</b>。腦磷脂（PE）的頭是乙醇胺；choline 屬卵磷脂，inositol 屬磷脂醯肌醇。</p>
+<p><b>37. 答 C：lysine</b>。色胺酸 → 血清素；麩胺酸本身是神經傳導物質，也能做成 GABA；酪胺酸 → 多巴胺、正腎上腺素、腎上腺素。</p>
+<p><b>38. 答 C</b>：合成 phosphatidylcholine 與 creatine 都需要 SAM 提供甲基。苯酮尿症是苯丙胺酸羥化酶缺陷；甲硫胺酸是必需胺基酸，由同半胱胺酸回收時反而需要甲基。</p>
+<p><b>39. 答 B</b>：甲硫胺酸合成酶把 5-甲基四氫葉酸的甲基交給同半胱胺酸，需要 B12。葉酸輔酶帶的是多個麩胺酸（不是麩醯胺酸）；同半胱胺酸升高是 B2、葉酸、B12「缺乏」造成。</p>
+</div>
+<footer>保健營養菜單研究室｜生化模擬考題整理</footer>
+</div>
+
+<script>
+const Q = [
+{s:"在正常生理狀況下，當一個分子的 16 碳飽和脂肪酸進行完全 β-氧化反應時，下列何者為其產物？",
+ o:["一個分子的乙酸（acetic acid）","八個分子的乙醯輔酶 A（acetyl CoA）","八個分子的乙酸（acetic acid）","一個分子的乙醯乙酸（acetoacetic acid）"],a:1,
+ e:"每圈 β-氧化切下 2 碳：16 ÷ 2 ＝ 8 個乙醯輔酶 A（轉 7 圈）。",
+ x:["產物帶著 CoA，是乙醯輔酶 A，不是乙酸","乙醯乙酸是酮體，要在肝臟另外合成"],r:"脂肪酸進粒線體與 β-氧化 → 卡 3　β-氧化"},
+{s:"當膳食中缺乏膽鹼（choline）時，主要會引起下列何種代謝異常？",
+ o:["脂質（lipids）","蛋白質（proteins）","碳水化合物（carbohydrates）","核蛋白質（nucleoproteins）"],a:0,
+ e:"膽鹼是卵磷脂的原料；卵磷脂不足 → VLDL 做不出 → TG 堆在肝 → 脂肪肝。",
+ x:[],r:"脂肪酸的名稱與分類 → 卡 5　磷脂質"},
+{s:"有關油酸、亞麻油酸與次亞麻油酸的敘述，下列何者正確？",
+ o:["三者均為飽和脂肪酸","三者均含有 20 個碳原子","在完全氫化後，三者均能產生硬脂酸","在完全氫化後，三者均可產生許多乙酸斷片（acetate fragments）"],a:2,
+ e:"三者都是 18 碳不飽和脂肪酸（18:1、18:2、18:3）；雙鍵全部加氫 → 18:0 硬脂酸。",
+ x:["都有雙鍵，是不飽和","都是 18 碳"],r:"脂肪酸的名稱與分類 → 卡 1　結構"},
+{s:"人類的血液循環系統在運送游離脂肪酸時，下列何者最常與脂肪酸結合？",
+ o:["白蛋白（albumin）","球蛋白（globulin）","高密度脂蛋白（HDL）","低密度脂蛋白（LDL）"],a:0,
+ e:"游離脂肪酸不溶於水，在血中搭白蛋白運送。",
+ x:["HDL、LDL 運送膽固醇與 TG，不是載游離脂肪酸"],r:"先看全貌 → 第 3 站　血液"},
+{s:"牛磺膽酸鈉（sodium taurocholate）與甘胺膽酸鈉（sodium glycocholate）係用於輔助下列何種化合物的吸收？",
+ o:["核酸","甘油","胺基酸","脂肪酸"],a:3,
+ e:"這兩者就是膽鹽：乳化油滴、形成微膠粒，幫助脂肪酸等脂溶性物質吸收。",
+ x:["甘油、胺基酸溶於水，不需要膽鹽"],r:"先看全貌 → 第 1 站　小腸"},
+{s:"下列何者不是 ω-3 脂肪酸？",
+ o:["18:3，Δ9,12,15","20:4，Δ5,8,11,14","20:5，Δ5,8,11,14,17","22:6，Δ4,7,10,13,16,19"],a:1,
+ e:"ω ＝ 碳數 − 最後一個 Δ：20 − 14 ＝ 6，是 ω-6 的花生四烯酸。",
+ x:["18 − 15 ＝ 3（次亞麻油酸）","20 − 17 ＝ 3（EPA）","22 − 19 ＝ 3（DHA）"],r:"脂肪酸的名稱與分類 → 卡 2　讀懂名字"},
+{s:"膽鹽是膽酸鈉鹽與下列何者聯結（conjugated）後的產物？",
+ o:["cysteine 與 serine","taurine 與 glycine","methionine 與 lysine","homocysteine 與 ornithine"],a:1,
+ e:"膽酸接上牛磺酸（taurine）或甘胺酸（glycine）→ 結合型膽酸 → 膽鹽。",
+ x:["名字就是線索：「牛磺」膽酸鈉、「甘胺」膽酸鈉"],r:"先看全貌 → 第 1 站　小腸"},
+{s:"何者是人體無法合成但植物可以合成的脂肪酸？",
+ o:["棕櫚酸（palmitic acid）","月桂酸（lauric acid）","硬脂酸（stearic acid）","亞麻油酸（linoleic acid）"],a:3,
+ e:"人體缺 Δ12 去飽和酶，做不出亞麻油酸；植物有。",
+ x:["棕櫚酸、月桂酸、硬脂酸是飽和脂肪酸，人體可自行合成"],r:"脂肪酸的名稱與分類 → 卡 3　必需脂肪酸"},
+{s:"愛斯基摩人攝取高脂飲食但是少有心臟病，可能原因為何？",
+ o:["所攝取之冰原魚類富含長鏈的飽和脂肪酸，且膽固醇含量較低","這些魚類富含大量的奇數碳脂肪酸，在體內產生特殊代謝產物所致","大量的魚油攝取使得體內的凝血作用受到抑制","魚類提供大量膠原蛋白可以抑制體內發炎反應與膽固醇合成"],a:2,
+ e:"魚油富含 ω-3（EPA、DHA）→ 抑制血小板凝集 → 血栓少。",
+ x:["魚油是多元不飽和，不是飽和","不是奇數碳脂肪酸的作用"],r:"脂肪酸的名稱與分類 → 卡 4　ω-3 與食物"},
+{s:"下列何者可以藉由甘油醛三磷酸之型式進入糖解作用？",
+ o:["短鏈脂肪酸","白胺酸","中鏈脂肪酸","甘油"],a:3,
+ e:"甘油 → 甘油-3-磷酸 → 二羥丙酮磷酸 → 甘油醛-3-磷酸 → 進入糖解（或糖質新生）。",
+ x:["脂肪酸不論長短都走 β-氧化","白胺酸是生酮胺基酸"],r:"先看全貌 → 第 3 站　血液"},
+{s:"關於飯後血糖上升，同時脂肪酸的代謝也會受到調節，下列敘述何者錯誤？",
+ o:["細胞內的 [NADH]／[NAD⁺] 比例上升，會抑制 β-羥基乙醯－輔酶 A 去氫酶，進而抑制脂肪酸的 β-氧化作用","丙二醯－輔酶 A（malonyl-CoA）的生成會抑制糖解作用之進行，過多的糖可轉成三酸甘油酯貯存起來","胰島素的分泌具有活化乙醯－輔酶 A 羧化酶（acetyl-CoA carboxylase）之作用","肉鹼醯基轉移酶（carnitine acyltransferase）會受抑制，以確保脂肪酸不會進入細胞質而進行氧化反應"],a:3,
+ e:"錯在「細胞質」：malonyl-CoA 抑制 CAT I，是讓脂肪酸不會進入「粒線體」被氧化。",
+ x:["NADH 比例高 → β-氧化第 3 步變慢（正確）","胰島素活化乙醯輔酶 A 羧化酶 → 合成脂肪（正確）"],
+ w:"老師答案為 D。但第 2 個選項說「malonyl-CoA 抑制糖解」也不對（它抑制的是 CAT I），可能是抄題錯誤，考前可向老師確認。",
+ r:"脂肪酸進粒線體與 β-氧化 → 卡 2　肉鹼穿梭"},
+{s:"下列何種化合物可能是必需脂肪酸的代謝產物？",
+ o:["油酸（oleic acid）","棕櫚烯酸（palmitoleic acid）","花生四烯酸（arachidonic acid）","乳酸"],a:2,
+ e:"亞麻油酸 → 延長、加雙鍵 → 花生四烯酸。",
+ x:["油酸、棕櫚烯酸可由飽和脂肪酸直接做出","乳酸是糖解產物"],r:"脂肪酸的名稱與分類 → 卡 3　必需脂肪酸"},
+{s:"關於長鏈脂肪酸的 β-氧化作用，下列敘述何者錯誤？",
+ o:["反應中所參與的酵素複合物含有生物素","FADH₂ 是氧化過程中的電子攜帶者","NADH 是反應過程所需的電子攜帶者","15 個碳的脂肪酸至少會產生一分子的丙醯輔酶 A（propionyl-CoA）"],a:0,
+ e:"β-氧化 4 步都不需要生物素；需要生物素的是羧化反應（合成脂肪酸的乙醯輔酶 A 羧化酶、奇數碳的丙醯輔酶 A 羧化酶）。",
+ x:["15 碳 → 最後剩 3 碳 → 丙醯輔酶 A（正確）"],r:"脂肪酸進粒線體與 β-氧化 → 卡 3　β-氧化"},
+{s:"下列何者是奇數碳脂肪酸於氧化分解中特有的產物？",
+ o:["琥珀醯輔酶 A（succinyl-CoA）","丙醯輔酶 A（propionyl-CoA）","丙二醯輔酶 A（malonyl-CoA）","磷酸烯醇丙酮酸（phosphoenolpyruvate）"],a:1,
+ e:"奇數碳切到最後剩 3 碳 → 丙醯輔酶 A。",
+ x:["琥珀醯輔酶 A 是之後轉成的，TCA 本來就有","丙二醯輔酶 A 是合成脂肪酸的原料"],r:"脂肪酸進粒線體與 β-氧化 → 卡 4　奇數碳脂肪酸"},
+{s:"下列何種代謝途徑，不參與脂肪分解產生能量的過程？",
+ o:["β-氧化反應","檸檬酸循環","電子傳遞鏈","Cori 氏循環"],a:3,
+ e:"脂肪產能：β-氧化 → 檸檬酸循環 → 電子傳遞鏈。Cori 氏循環是肌肉乳酸 → 肝 → 葡萄糖，屬醣類代謝。",
+ x:[],r:"脂肪酸進粒線體與 β-氧化 → 卡 5　不相關的途徑"},
+{s:"脂肪酸氧化生成 acetyl-CoA 不會產生下列何種產物？",
+ o:["NADH","FADH₂","丙二醯輔酶 A（malonyl-CoA）","β-酮醯輔酶 A（β-ketoacyl-CoA）"],a:2,
+ e:"malonyl-CoA 只在「合成」脂肪酸時出現，分解不會產生。",
+ x:["NADH、FADH₂ 是 β-氧化產物","β-酮醯輔酶 A 是第 3 步的中間產物"],r:"脂肪酸進粒線體與 β-氧化 → 卡 3　β-氧化"},
+{s:"肉鹼（carnitine）可以協助脂肪酸氧化進行，原因何在？",
+ o:["協助脂肪醯基－輔酶 A 通過粒線體內膜","協助活化醯基輔酶 A 合成酶（acyl-CoA synthetase）","協助脂解酶將三酸甘油酯上的脂肪酸水解","協助過氧化體（peroxisome）的氧化過程"],a:0,
+ e:"肉鹼是脂肪醯基穿過粒線體內膜的通行證。",
+ x:["嚴格說穿膜的是接在肉鹼上的脂肪醯基，此選項是最接近的說法"],r:"脂肪酸進粒線體與 β-氧化 → 卡 2　肉鹼穿梭"},
+{s:"卵磷脂的結構包含磷酸、脂肪酸、膽鹼以及下列何者？",
+ o:["固醇","甘油","乙醇胺","甲硫胺酸"],a:1,
+ e:"卵磷脂（PC）＝ 甘油 ＋ 2 脂肪酸 ＋ 磷酸 ＋ 膽鹼。",
+ x:["乙醇胺是腦磷脂（PE）的頭"],r:"脂肪酸的名稱與分類 → 卡 5　磷脂質"},
+{s:"下列何者可以穿越粒線體內膜？",
+ o:["丙二醯－輔酶 A（malonyl-CoA）","脂肪醯－輔酶 A（fatty acyl-CoA）","脂肪醯－肉鹼（fatty acyl-carnitine）","乙醯輔酶 A（acetyl-CoA）"],a:2,
+ e:"帶著 CoA 的分子都穿不過內膜；只有換成肉鹼的脂肪醯肉鹼可以。",
+ x:[],r:"脂肪酸進粒線體與 β-氧化 → 卡 2　肉鹼穿梭"},
+{s:"脂肪酸從細胞質進入粒線體進行 β-氧化作用，須先轉換成脂肪醯輔酶 A，再透過哪一個轉移酶與肉鹼共價結合進入粒線體內？",
+ o:["Carnitine acyltransferase I","Carnitine acyltransferase II","Acyl-CoA：cholesterol acyltransferase（ACAT）","Lecithin：cholesterol acyltransferase（LCAT）"],a:0,
+ e:"CAT I 在外膜，把脂肪醯基接到肉鹼上。",
+ x:["CAT II 在內膜內側，把脂肪醯基換回 CoA","ACAT、LCAT 是膽固醇酯化酵素"],r:"脂肪酸進粒線體與 β-氧化 → 卡 2　肉鹼穿梭"},
+{s:"大腦不利用脂肪酸作為能量來源的主要原因為何？",
+ o:["大腦內缺乏氧化代謝脂肪的酵素","大腦缺乏粒線體","甘油無法跨越血腦障蔽","脂肪酸無法跨越血腦障蔽"],a:3,
+ e:"國考教科書標準答案：脂肪酸（與白蛋白結合）不易通過血腦障壁，大腦靠葡萄糖，長期飢餓改用酮體。",
+ x:["大腦有粒線體"],r:"先看全貌 → 另一個出口　肝臟：酮體"},
+{s:"關於長時間禁食下脂肪酸代謝的敘述，何者正確？",
+ o:["乙醯輔酶 A 進入克氏循環，代謝成二氧化碳和水","脂肪酸轉換成酮體，提供全身能源","脂肪酸與白蛋白結合，提供神經組織代謝","脂肪酸轉換成酮酸，作為葡萄糖來源"],a:1,
+ e:"禁食：乙醯輔酶 A 過多、草醯乙酸被拿去做糖 → 肝臟做成酮體送全身。",
+ x:["脂肪酸不能轉成葡萄糖"],r:"先看全貌 → 另一個出口　肝臟：酮體"},
+{s:"脂肪組織中 hormone-sensitive lipase（HSL）可將三酸甘油酯分解釋出脂肪酸，下列何種荷爾蒙可抑制 HSL 活性？",
+ o:["Adrenocorticotropic hormone（ACTH）","Epinephrine","Glucagon","Insulin"],a:3,
+ e:"胰島素＝吃飽訊號 → 關掉 HSL。",
+ x:["ACTH、腎上腺素、昇糖素＝需要能量 → 打開 HSL"],r:"先看全貌 → 第 2 站　脂肪組織"},
+{s:"下列植物油何者富含亞麻油酸（18:2 n-6）與次亞麻油酸（18:3 n-3）？",
+ o:["橄欖油","芥花油","葵花油","玉米油"],a:1,
+ e:"芥花油：亞麻油酸約二成、次亞麻油酸約一成，兩者都多。",
+ x:["橄欖油以油酸為主","葵花油、玉米油次亞麻油酸很少"],r:"脂肪酸的名稱與分類 → 卡 4　ω-3 與食物"},
+{s:"有關脂質功能的敘述，下列何者錯誤？",
+ o:["三酸甘油酯、磷脂質與膽固醇皆可提供熱量","磷脂質與游離膽固醇可構成細胞膜","膽固醇有生成膽酸及固醇類荷爾蒙功能","磷脂質上脂肪酸可形成類二十碳酸（eicosanoids）"],a:0,
+ e:"膽固醇的環狀結構人體打不開，不能氧化產生熱量。",
+ x:[],r:"脂肪酸的名稱與分類 → 卡 5　磷脂質"},
+{s:"三大營養素產能代謝途徑中，下列哪些是主要的串聯分子？①glucose-6-phosphate　②pyruvate　③acetyl-CoA　④citrate　⑤malate",
+ o:["①②","②③","③④","④⑤"],a:1,t:"115-1 國考",
+ e:"醣類、許多胺基酸 → 丙酮酸；丙酮酸、脂肪酸、部分胺基酸 → 乙醯輔酶 A → TCA。",
+ x:["葡萄糖-6-磷酸主要是醣類自己的交叉點"],r:"先看全貌 → 第 5 站　粒線體"}
+];
+const KEY="fatox-page-v1", L=["A","B","C","D"];
+let ans={}, cur=0, onlyWrong=null, showGrid=false;
+try{const s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s){ans=s.ans||{}; cur=Number.isInteger(s.cur)?s.cur:0;}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify({ans,cur}))}catch(e){}};
+const box=document.getElementById("quizbox");
+const order=()=>onlyWrong||Q.map((_,i)=>i);
+function cardLink(r){const name=r.split("→").pop().trim();return `<a href="#" data-card-link="${name}">${r}</a>`;}
+function jump(name){const h=[...document.querySelectorAll("h3[data-card]")].find(x=>x.dataset.card===name);if(!h)return;h.scrollIntoView({behavior:"smooth",block:"start"});h.classList.remove("flash");void h.offsetWidth;h.classList.add("flash");}
+function counts(){const done=Object.keys(ans).length, ok=Object.entries(ans).filter(([i,v])=>Q[i].a===v).length;return{done,ok};}
+function head(){const {done,ok}=counts();
+  let g=""; if(showGrid){g=`<div class="qgrid">`+Q.map((q,i)=>{let c=i in ans?(ans[i]===q.a?"ok":"no"):"";if(i===cur)c+=" cur";return `<button type="button" class="${c}" data-go="${i}" aria-label="第 ${i+1} 題">${i+1}</button>`}).join("")+`</div>`;}
+  return `<div class="qhead"><span class="stats">答對 <b>${ok}</b>／已答 ${done}／共 ${Q.length}</span><button type="button" class="btn small" id="tg">${showGrid?"收起題號":"題號總覽"}</button></div><div class="bar"><i style="width:${done/Q.length*100}%"></i></div>${g}`;}
+function render(){
+  if(cur===-1) return result();
+  const ord=order(), pos=ord.indexOf(cur), q=Q[cur], p=ans[cur], done=p!==undefined;
+  let h=head()+`<div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center"><span class="pill">第 ${cur+1} 題</span>${q.t?`<span class="tag">${q.t}</span>`:""}${onlyWrong?`<span class="tag">重做答錯 ${pos+1}／${ord.length}</span>`:""}</div><p class="stem">${q.s}</p><div class="opts">`;
+  q.o.forEach((t,j)=>{let c="opt";if(done){c+=j===q.a?" right":j===p?" wrong":" dim";}h+=`<button type="button" class="${c}" data-j="${j}" ${done?"disabled":""}><span class="k">${L[j]}</span><span>${t}</span></button>`;});
+  h+=`</div>`;
+  if(done){const ok=p===q.a;h+=`<div class="exp"><div class="verdict ${ok?"ok":"no"}">${ok?"答對了":"答錯了，正確答案是 "+L[q.a]}</div><p>${q.e}</p>${q.x.length?`<ul>${q.x.map(s=>`<li>${s}</li>`).join("")}</ul>`:""}${q.w?`<div class="warn">⚠ ${q.w}</div>`:""}<div class="ref">回上面複習：${cardLink(q.r)}</div></div>`;}
+  h+=`<div class="nav"><button type="button" class="btn" id="prev" ${pos<=0?"disabled":""}>上一題</button><button type="button" class="btn primary" id="next" ${done?"":"disabled"}>${pos===ord.length-1?"看成績":"下一題"}</button></div>`;
+  box.innerHTML=h; wire();
+  box.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{ans[cur]=+b.dataset.j;save();render();});
+  box.querySelector("#prev").onclick=()=>go(ord[pos-1]);
+  box.querySelector("#next").onclick=()=>{if(pos===ord.length-1){cur=-1;render();}else go(ord[pos+1]);};
+}
+function result(){
+  const {done,ok}=counts(); const wrong=Q.map((_,i)=>i).filter(i=>i in ans&&ans[i]!==Q[i].a); const left=Q.length-done;
+  box.innerHTML=head()+`<div><div class="stats">成績</div><div class="big">${ok} ／ ${Q.length}</div></div><p style="margin:0">已作答 ${done} 題${left?`，還有 ${left} 題未作答`:""}。</p>${wrong.length?`<p style="margin:0">答錯的題目（點題號回去看解析）：</p><div class="wl">${wrong.map(i=>`<button type="button" data-go="${i}">${i+1}</button>`).join("")}</div>`:""}<div class="nav">${wrong.length?`<button type="button" class="btn primary" id="redo">只重做答錯的 ${wrong.length} 題</button>`:""}<button type="button" class="btn" id="reset">全部重來</button></div>`;
+  wire();
+  const r=box.querySelector("#redo"); if(r) r.onclick=()=>{onlyWrong=wrong.slice();wrong.forEach(i=>delete ans[i]);go(wrong[0]);};
+  box.querySelector("#reset").onclick=()=>{ans={};onlyWrong=null;go(0);};
+}
+function wire(){
+  box.querySelector("#tg").onclick=()=>{showGrid=!showGrid;render();};
+  box.querySelectorAll("[data-go]").forEach(b=>b.onclick=()=>{onlyWrong=null;showGrid=false;go(+b.dataset.go);});
+  box.querySelectorAll("[data-card-link]").forEach(a=>a.onclick=e=>{e.preventDefault();jump(a.dataset.cardLink);});
+}
+function go(i){cur=i;save();render();box.scrollIntoView({block:"start"});}
+if(cur<-1||cur>=Q.length) cur=0;
+render();
+</script>
+</body>
+</html>
