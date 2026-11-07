@@ -44,6 +44,14 @@ h3{font-size:16px;font-weight:700;margin:22px 0 8px;scroll-margin-top:70px}
 .card .q{color:var(--muted);font-size:13px;white-space:nowrap}
 .tblwrap{overflow-x:auto}
 .grid4 th{width:auto;white-space:normal}
+.vocab{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.vocab>div{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);column-gap:12px;row-gap:2px;padding:9px 12px;border-bottom:1px solid var(--line)}
+.vocab>div:last-child{border-bottom:0}
+.vocab dt{font-weight:700;overflow-wrap:anywhere}
+.vocab dd{margin:0}
+.vocab .zh{font-weight:700}
+.vocab .nt{grid-column:1/-1;color:var(--muted);font-size:14px}
+
 h3.flash{animation:flash 1.6s ease}
 @keyframes flash{0%{background:var(--yolk-soft)}100%{background:transparent}}
 /* quiz */
@@ -105,7 +113,7 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 <tr><th>吸收</th><td>膽鹽包成微膠粒 → 送到小腸細胞；膽鹽在迴腸回收</td></tr>
 <tr><th>之後</th><td>細胞內重組 TG → 乳糜微粒 → 淋巴 → 血液</td></tr>
 <tr><th>例外</th><td>短、中鏈脂肪酸 → 門靜脈 → 肝</td></tr>
-<tr><th>考點</th><td>膽鹽 ＝ 膽酸 ＋ taurine 或 glycine <span class="q">第 5、7 題</span></td></tr></table>
+<tr><th>考點</th><td>膽鹽 ＝ 膽酸 ＋ taurine 或 glycine（牛磺膽酸鈉、甘胺膽酸鈉）→ 幫脂肪酸吸收 <span class="q">第 5、7 題</span></td></tr></table>
 
 <h3 data-card="第 2 站　脂肪組織">第 2 站　脂肪組織：儲存與釋出</h3>
 <table class="card"><tr><th>吃飽</th><td>TG 存入脂肪細胞</td></tr>
@@ -115,7 +123,8 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 
 <h3 data-card="第 3 站　血液">第 3 站　血液：運送</h3>
 <table class="card"><tr><th>脂肪酸</th><td>搭白蛋白（albumin） <span class="q">第 4 題</span></td></tr>
-<tr><th>甘油</th><td>溶於水 → 肝 → 甘油-3-磷酸 → 糖解或糖質新生 <span class="q">第 10 題</span></td></tr></table>
+<tr><th>甘油</th><td>溶於水 → 肝 → 甘油-3-磷酸 → 二羥丙酮磷酸 → <b>甘油醛-3-磷酸</b> → 糖解或糖質新生 <span class="q">第 10 題</span></td></tr>
+<tr><th>對比</th><td>脂肪酸不論長短都走 β-氧化，不會變成甘油醛-3-磷酸</td></tr></table>
 
 <h3 data-card="第 4 站　細胞">第 4 站　細胞：進粒線體</h3>
 <table class="card"><tr><th>活化</th><td>細胞質：脂肪酸 ＋ CoA → 脂肪醯輔酶 A（耗 ATP）</td></tr>
@@ -129,7 +138,7 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 <h3 data-card="另一個出口　肝臟：酮體">另一個出口　肝臟：酮體</h3>
 <table class="card"><tr><th>時機</th><td>長期飢餓：乙醯輔酶 A 過多，草醯乙酸被拿去做糖</td></tr>
 <tr><th>結果</th><td>肝臟做成酮體 → 送大腦、肌肉當燃料 <span class="q">第 22 題</span></td></tr>
-<tr><th>大腦</th><td>不直接用脂肪酸，用葡萄糖或酮體 <span class="q">第 21 題</span></td></tr></table>
+<tr><th>大腦</th><td>脂肪酸（搭白蛋白）過不了<b>血腦障壁</b> → 平時用葡萄糖，長期飢餓用酮體 <span class="q">第 21 題</span></td></tr></table>
 
 <h2 id="beta">脂肪酸進粒線體與 β-氧化</h2>
 <p class="sub">對應第 1、11、13、14、16、17、19、20 題。</p>
@@ -161,7 +170,7 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 <tr><th>調控</th><td>NADH／NAD⁺ 高 → 第 3 步變慢 <span class="q">第 11 題</span></td></tr></table>
 
 <h3 data-card="卡 4　奇數碳脂肪酸">卡 4　奇數碳脂肪酸</h3>
-<table class="card"><tr><th>特有產物</th><td>最後剩 3 碳：丙醯輔酶 A（propionyl-CoA） <span class="q">第 14 題</span></td></tr>
+<table class="card"><tr><th>特有產物</th><td>最後剩 3 碳：丙醯輔酶 A（propionyl-CoA）；例：15 碳 → 至少 1 個 <span class="q">第 13、14 題</span></td></tr>
 <tr><th>轉換</th><td>丙醯輔酶 A → 甲基丙二醯輔酶 A → 琥珀醯輔酶 A → TCA</td></tr>
 <tr><th>需要</th><td>生物素（羧化酶）、維生素 B12（變位酶）</td></tr></table>
 
@@ -201,40 +210,17 @@ footer{color:var(--muted);font-size:13px;margin-top:40px}
 <tr><th>橄欖油</th><td>油酸（ω-9）為主</td></tr>
 <tr><th>葵花油、玉米油</th><td>亞麻油酸多、次亞麻油酸少</td></tr></table>
 
-<h3 data-card="卡 5　磷脂質">卡 5　磷脂質</h3>
+<h3 data-card="卡 5　磷脂質">卡 5　磷脂質與膽固醇</h3>
 <table class="card"><tr><th>骨架</th><td>甘油 ＋ 2 脂肪酸 ＋ 磷酸 ＋ 一個「頭」</td></tr>
 <tr><th>卵磷脂 lecithin（PC）</th><td>頭 ＝ 膽鹼 choline；水解得甘油 <span class="q">第 18 題</span></td></tr>
 <tr><th>腦磷脂 cephalin（PE）</th><td>頭 ＝ 乙醇胺 ethanolamine <span class="q">附錄第 36 題</span></td></tr>
-<tr><th>缺膽鹼</th><td>卵磷脂不足 → VLDL 做不出 → TG 堆在肝 → 脂肪肝 <span class="q">第 2 題</span></td></tr></table>
+<tr><th>缺膽鹼</th><td>卵磷脂不足 → VLDL 做不出 → TG 堆在肝 → 脂肪肝 <span class="q">第 2 題</span></td></tr>
+<tr><th>細胞膜</th><td>磷脂質 ＋ 游離膽固醇</td></tr>
+<tr><th>類二十碳酸</th><td>磷脂上的花生四烯酸切下 → 前列腺素等</td></tr>
+<tr><th>膽固醇</th><td>做膽酸、固醇類激素；環打不開 → <b>不能產生熱量</b> <span class="q">第 25 題</span></td></tr></table>
 
 <h2 id="words">必背英文名詞</h2>
-<div class="tblwrap"><table class="card grid4"><tr><th>英文</th><th>中文</th><th>一句話記住</th></tr>
-<tr><td>triacylglycerol（TG）</td><td>三酸甘油酯</td><td>1 甘油 ＋ 3 脂肪酸</td></tr>
-<tr><td>bile salts</td><td>膽鹽</td><td>膽酸 ＋ taurine／glycine，乳化脂肪</td></tr>
-<tr><td>chylomicron</td><td>乳糜微粒</td><td>從小腸經淋巴運送飲食脂肪</td></tr>
-<tr><td>hormone-sensitive lipase（HSL）</td><td>激素敏感性脂解酶</td><td>分解脂肪組織 TG；胰島素抑制</td></tr>
-<tr><td>albumin</td><td>白蛋白</td><td>血液中運送游離脂肪酸</td></tr>
-<tr><td>fatty acyl-CoA</td><td>脂肪醯輔酶 A</td><td>活化後的脂肪酸</td></tr>
-<tr><td>acyl-CoA synthetase</td><td>醯基輔酶 A 合成酶</td><td>活化脂肪酸</td></tr>
-<tr><td>carnitine</td><td>肉鹼</td><td>帶脂肪醯基穿過粒線體內膜</td></tr>
-<tr><td>carnitine acyltransferase I（CAT I／CPT I）</td><td>肉鹼醯基轉移酶 I</td><td>外膜；被 malonyl-CoA 抑制</td></tr>
-<tr><td>fatty acyl-carnitine</td><td>脂肪醯肉鹼</td><td>唯一能穿過內膜的形式</td></tr>
-<tr><td>β-oxidation</td><td>β-氧化</td><td>每圈切下 2 碳</td></tr>
-<tr><td>acetyl-CoA</td><td>乙醯輔酶 A</td><td>2 碳單位，進入 TCA</td></tr>
-<tr><td>β-ketoacyl-CoA</td><td>β-酮醯基輔酶 A</td><td>β-氧化第 3 步的產物</td></tr>
-<tr><td>propionyl-CoA</td><td>丙醯輔酶 A</td><td>奇數碳最後的 3 碳</td></tr>
-<tr><td>succinyl-CoA</td><td>琥珀醯輔酶 A</td><td>丙醯輔酶 A 轉成它才進 TCA</td></tr>
-<tr><td>malonyl-CoA</td><td>丙二醯輔酶 A</td><td>合成脂肪酸的原料，抑制 CAT I</td></tr>
-<tr><td>acetyl-CoA carboxylase</td><td>乙醯輔酶 A 羧化酶</td><td>合成脂肪酸第一步，需要生物素</td></tr>
-<tr><td>ketone bodies</td><td>酮體</td><td>肝臟用多餘 acetyl-CoA 做的燃料</td></tr>
-<tr><td>linoleic acid（LA）</td><td>亞麻油酸</td><td>ω-6 必需脂肪酸，18:2</td></tr>
-<tr><td>α-linolenic acid（ALA）</td><td>次亞麻油酸</td><td>ω-3 必需脂肪酸，18:3</td></tr>
-<tr><td>arachidonic acid（AA）</td><td>花生四烯酸</td><td>由亞麻油酸做成，20:4，ω-6</td></tr>
-<tr><td>desaturase</td><td>去飽和酶</td><td>加雙鍵；人缺 Δ12、Δ15</td></tr>
-<tr><td>lecithin（phosphatidylcholine）</td><td>卵磷脂</td><td>頭是 choline</td></tr>
-<tr><td>cephalin（phosphatidylethanolamine）</td><td>腦磷脂</td><td>頭是 ethanolamine</td></tr>
-<tr><td>choline</td><td>膽鹼</td><td>缺乏會造成脂肪肝</td></tr>
-<tr><td>blood-brain barrier</td><td>血腦障壁</td><td>擋住脂肪酸進入大腦</td></tr></table></div>
+<p class="sub">依章節分組。先蓋住中文和說明，看英文能不能說出意思。</p><h3>消化與運送</h3><dl class="vocab"><div><dt>triacylglycerol（TG）</dt><dd class="zh">三酸甘油酯</dd><dd class="nt">1 甘油 ＋ 3 脂肪酸</dd></div><div><dt>bile salts</dt><dd class="zh">膽鹽</dd><dd class="nt">膽酸 ＋ taurine／glycine，乳化脂肪</dd></div><div><dt>chylomicron</dt><dd class="zh">乳糜微粒</dd><dd class="nt">從小腸經淋巴運送飲食脂肪</dd></div><div><dt>hormone-sensitive lipase（HSL）</dt><dd class="zh">激素敏感性脂解酶</dd><dd class="nt">分解脂肪組織 TG；胰島素抑制</dd></div><div><dt>albumin</dt><dd class="zh">白蛋白</dd><dd class="nt">血液中運送游離脂肪酸</dd></div></dl><h3>活化與進粒線體</h3><dl class="vocab"><div><dt>fatty acyl-CoA</dt><dd class="zh">脂肪醯輔酶 A</dd><dd class="nt">活化後的脂肪酸</dd></div><div><dt>acyl-CoA synthetase</dt><dd class="zh">醯基輔酶 A 合成酶</dd><dd class="nt">活化脂肪酸</dd></div><div><dt>carnitine</dt><dd class="zh">肉鹼</dd><dd class="nt">帶脂肪醯基穿過粒線體內膜</dd></div><div><dt>carnitine acyltransferase I（CAT I／CPT I）</dt><dd class="zh">肉鹼醯基轉移酶 I</dd><dd class="nt">外膜；被 malonyl-CoA 抑制</dd></div><div><dt>fatty acyl-carnitine</dt><dd class="zh">脂肪醯肉鹼</dd><dd class="nt">唯一能穿過內膜的形式</dd></div></dl><h3>β-氧化與產物</h3><dl class="vocab"><div><dt>β-oxidation</dt><dd class="zh">β-氧化</dd><dd class="nt">每圈切下 2 碳</dd></div><div><dt>acetyl-CoA</dt><dd class="zh">乙醯輔酶 A</dd><dd class="nt">2 碳單位，進入 TCA</dd></div><div><dt>β-ketoacyl-CoA</dt><dd class="zh">β-酮醯基輔酶 A</dd><dd class="nt">β-氧化第 3 步的產物</dd></div><div><dt>propionyl-CoA</dt><dd class="zh">丙醯輔酶 A</dd><dd class="nt">奇數碳最後的 3 碳</dd></div><div><dt>succinyl-CoA</dt><dd class="zh">琥珀醯輔酶 A</dd><dd class="nt">丙醯輔酶 A 轉成它才進 TCA</dd></div><div><dt>ketone bodies</dt><dd class="zh">酮體</dd><dd class="nt">肝臟用多餘 acetyl-CoA 做的燃料</dd></div><div><dt>blood-brain barrier</dt><dd class="zh">血腦障壁</dd><dd class="nt">擋住脂肪酸進入大腦</dd></div></dl><h3>合成與調控</h3><dl class="vocab"><div><dt>malonyl-CoA</dt><dd class="zh">丙二醯輔酶 A</dd><dd class="nt">合成脂肪酸的原料，抑制 CAT I</dd></div><div><dt>acetyl-CoA carboxylase</dt><dd class="zh">乙醯輔酶 A 羧化酶</dd><dd class="nt">合成脂肪酸第一步，需要生物素</dd></div></dl><h3>必需脂肪酸</h3><dl class="vocab"><div><dt>linoleic acid（LA）</dt><dd class="zh">亞麻油酸</dd><dd class="nt">ω-6 必需脂肪酸，18:2</dd></div><div><dt>α-linolenic acid（ALA）</dt><dd class="zh">次亞麻油酸</dd><dd class="nt">ω-3 必需脂肪酸，18:3</dd></div><div><dt>arachidonic acid（AA）</dt><dd class="zh">花生四烯酸</dd><dd class="nt">由亞麻油酸做成，20:4，ω-6</dd></div><div><dt>desaturase</dt><dd class="zh">去飽和酶</dd><dd class="nt">加雙鍵；人缺 Δ12、Δ15</dd></div></dl><h3>磷脂與膽鹼</h3><dl class="vocab"><div><dt>lecithin（phosphatidylcholine）</dt><dd class="zh">卵磷脂</dd><dd class="nt">頭是 choline</dd></div><div><dt>cephalin（phosphatidylethanolamine）</dt><dd class="zh">腦磷脂</dd><dd class="nt">頭是 ethanolamine</dd></div><div><dt>choline</dt><dd class="zh">膽鹼</dd><dd class="nt">缺乏會造成脂肪肝</dd></div></dl>
 
 <h2 id="quiz">題目練習</h2>
 <p class="sub">點選答案後才顯示對錯與解析。作答進度會記在這台裝置的瀏覽器裡。</p>
