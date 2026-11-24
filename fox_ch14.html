@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 14 章 心輸出量、血流與血壓</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="14">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 14 章　心輸出量、血流與血壓</h1>
+  <div class="en">Chapter 14 Cardiac Output, Blood Flow, and Blood Pressure（課本 p.479–524）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">14.1 心輸出量</a>
+  <a class="sub" href="#h1">心輸出量的定義 Cardiac Output</a>
+  <a class="sub" href="#h2">心率的調節 Regulation of Cardiac Rate</a>
+  <a class="sub" href="#h3">心搏量的調節 Regulation of Stroke Volume</a>
+  <a class="sub" href="#h4">靜脈回流 Venous Return</a>
+  <a href="#s2">14.2 血容積</a>
+  <a class="sub" href="#h5">組織液的形成 Exchange of Fluid Between Capillaries and Tissues</a>
+  <a class="sub" href="#h6">腎臟對血容積的調節 Regulation of Blood Volume by the Kidneys</a>
+  <a href="#s3">14.3 血管阻力與血流</a>
+  <a class="sub" href="#h7">血流的物理定律 Physical Laws Describing Blood Flow</a>
+  <a class="sub" href="#h8">外在調節 Extrinsic Regulation of Blood Flow</a>
+  <a class="sub" href="#h9">內在調節 Intrinsic Regulation of Blood Flow</a>
+  <a href="#s4">14.4 心臟與骨骼肌的血流</a>
+  <a class="sub" href="#h10">冠狀循環的有氧需求 Aerobic Requirements of the Heart</a>
+  <a class="sub" href="#h11">骨骼肌的血流調節 Regulation of Blood Flow Through Skeletal Muscles</a>
+  <a class="sub" href="#h12">運動時的循環變化 Circulatory Changes During Exercise</a>
+  <a href="#s5">14.5 腦與皮膚的血流</a>
+  <a class="sub" href="#h13">腦循環 Cerebral Circulation</a>
+  <a class="sub" href="#h14">皮膚的血流 Cutaneous Blood Flow</a>
+  <a href="#s6">14.6 血壓</a>
+  <a class="sub" href="#h15">決定血壓的因素 Factors Affecting Blood Pressure</a>
+  <a class="sub" href="#h16">壓力感受器反射 Baroreceptor Reflex</a>
+  <a class="sub" href="#h17">心房伸張反射 Atrial Stretch Reflexes</a>
+  <a class="sub" href="#h18">測量血壓 Measurement of Blood Pressure</a>
+  <a class="sub" href="#h19">脈壓與平均動脈壓 Pulse Pressure and Mean Arterial Pressure</a>
+  <a href="#s7">14.7 高血壓、休克與鬱血性心衰竭</a>
+  <a class="sub" href="#h20">高血壓 Hypertension</a>
+  <a class="sub" href="#h21">循環性休克 Circulatory Shock</a>
+  <a class="sub" href="#h22">鬱血性心衰竭 Congestive Heart Failure</a>
+  <a href="#s8">本章重點整理</a>
+  <a class="sub" href="#h23">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 13 章認識了血液、心臟與血管這些「零件」；這一章問的是<span class="key">它們合起來怎麼運作：心臟每分鐘打出多少血（心輸出量）、血管裡有多少血（血容積）、血流遇到多少阻力、血液怎麼依需要分配到心臟、肌肉、腦、皮膚，以及這些因素怎麼共同決定血壓並被調節。</span>最後看血壓與循環失調的三個例子：高血壓、休克、心衰竭。</div>
+  <div class="path">
+    <div class="step"><span class="sn">14.1</span><div><b>心輸出量</b><br><span class="sq">心率 × 心搏量；心率與心搏量各受什麼調節（法蘭克—史達林定律）。</span></div></div>
+    <div class="arr">↓ 心搏量要靠足夠的回流血量，血量怎麼維持？</div>
+    <div class="step"><span class="sn">14.2</span><div><b>血容積</b><br><span class="sq">組織液的形成（史達林力）與水腫；腎臟、ADH、醛固酮、RAAS、ANP 調節血容積。</span></div></div>
+    <div class="arr">↓ 血打出去後，流量由壓力差與阻力決定</div>
+    <div class="step"><span class="sn">14.3</span><div><b>血管阻力與血流</b><br><span class="sq">流量＝壓力差 ÷ 阻力；半徑的四次方；外在與內在調節。</span></div></div>
+    <div class="arr">↓ 把原理用到需要最多變化的器官</div>
+    <div class="step"><span class="sn">14.4</span><div><b>心臟與骨骼肌的血流</b><br><span class="sq">冠狀循環、運動時血流的重新分配。</span></div></div>
+    <div class="arr">↓ 再看兩個特殊器官</div>
+    <div class="step"><span class="sn">14.5</span><div><b>腦與皮膚的血流</b><br><span class="sq">腦血流的自動調節；皮膚血流與體溫調節。</span></div></div>
+    <div class="arr">↓ 把以上合起來：血壓</div>
+    <div class="step"><span class="sn">14.6</span><div><b>血壓</b><br><span class="sq">壓力感受器反射、伐氏操作、測量血壓、脈壓與平均動脈壓。</span></div></div>
+    <div class="arr">↓ 調節失敗時</div>
+    <div class="step"><span class="sn">14.7</span><div><b>高血壓、休克與心衰竭</b><br><span class="sq">高血壓的原因與飲食；休克的類型；鬱血性心衰竭。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 14.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">14.1</span>心輸出量</h2>
+  <div class="en">Cardiac Output</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>心輸出量</b>的定義與計算（心率 × 心搏量），以及兩個因子分別怎麼被調節：<b>心率</b>受自主神經與激素調節；<b>心搏量</b>受<b>心舒期末容積（法蘭克—史達林定律）</b>、<b>收縮力</b>與<b>後負荷</b>三者影響；最後是<b>靜脈回流</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>心輸出量是整個循環的「供應量」，也是決定血壓的兩大因素之一。第 13 章學過的心動週期、竇房結、心肌特性，在這裡變成可以計算、可以調整的數字。</div></div>
+  <div class="oneline">心輸出量＝心率 × 心搏量（靜止時約 70 × 70 mL ≈ 5 L/分）；交感神經與腎上腺素加快心率、增強收縮力，副交感減慢心率；心搏量隨心舒期末容積增加而增加（心室被撐得越開，收縮越強＝法蘭克—史達林定律），隨收縮力增加而增加，隨動脈壓（後負荷）升高而減少；心臟打出的血量自動配合回流的血量。</div>
+  <div class="think">運動時心輸出量可以增加到靜止時的 5 倍以上，心臟是怎麼做到的？</div>
+
+  <h3 id="h1">心輸出量的定義 Cardiac Output</h3>
+  <p class="core">心輸出量（CO）＝每分鐘一個心室打出的血量＝心率（HR）× 心搏量（SV）；靜止時約 72 次/分 × 70 mL ≈ 5 L/分，約等於全身血量；劇烈運動時可達 20–35 L/分。</p>
+  <p><b>心輸出量</b> <i class="en-term">cardiac output</i> 是每分鐘<b>一個心室</b>打出的血量：</p>
+  <p class="key" style="text-align:center;font-size:18px">心輸出量（CO）＝ 心率（HR）× 心搏量（SV）</p>
+  <p>靜止時約 72 次/分 × 70 mL/次 ≈ <b>5 L/分</b>，大約就是全身的血量——全身的血每分鐘繞一圈。左右心室的輸出量相等。劇烈運動時，一般人可增加到約 20–25 L/分，頂尖耐力運動員可達 35 L/分。</p>
+
+  <h3 id="h2">心率的調節 Regulation of Cardiac Rate</h3>
+  <p class="core">竇房結本身約 100 次/分；靜止時副交感（迷走神經）抑制占優勢 → 約 70；交感神經（NE）與腎上腺素（β₁ 受體 → cAMP → HCN 通道）加快心率，副交感（ACh → 開 K⁺ 通道）減慢；延腦心臟控制中樞整合壓力感受器等訊息；體溫、甲狀腺激素也會加快心率。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a141" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="160" y="10" width="160" height="44" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="240" y="30" font-size="13" text-anchor="middle" font-weight="bold">延腦心臟控制中樞</text><text x="240" y="47" font-size="11" text-anchor="middle">心臟加速／抑制中樞</text>
+    <path d="M190,54 L100,100" stroke="#e11d48" stroke-width="2.5" marker-end="url(#a141)"/><path d="M290,54 L380,100" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a141)"/>
+    <rect x="10" y="104" width="190" height="64" rx="10" fill="#ffe4e6" stroke="#e11d48" stroke-width="2"/><text x="105" y="126" font-size="13" text-anchor="middle" font-weight="bold" fill="#9f1239">交感神經＋腎上腺素</text><text x="105" y="144" font-size="11" text-anchor="middle">β₁ → cAMP → HCN 開更多</text><text x="105" y="160" font-size="11" text-anchor="middle">心率↑、收縮力↑、傳導快</text>
+    <rect x="280" y="104" width="190" height="64" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="375" y="126" font-size="13" text-anchor="middle" font-weight="bold" fill="#1d4ed8">副交感（迷走神經）</text><text x="375" y="144" font-size="11" text-anchor="middle">ACh → M₂ → 開 K⁺ 通道</text><text x="375" y="160" font-size="11" text-anchor="middle">心率↓、房室傳導慢</text>
+    <path d="M105,168 L210,206" stroke="#e11d48" stroke-width="2.5" marker-end="url(#a141)"/><path d="M375,168 L270,206" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a141)"/>
+    <circle cx="240" cy="222" r="26" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="220" font-size="12" text-anchor="middle" font-weight="bold">竇房結</text><text x="240" y="236" font-size="10" text-anchor="middle">本身約 100</text>
+    <text x="10" y="236" font-size="11" fill="#6b7280">靜止時迷走神經占優勢</text><text x="10" y="252" font-size="11" fill="#6b7280">→ 心率約 70 次/分</text>
+    <text x="470" y="240" font-size="11" text-anchor="end" fill="#6b7280">一踩油門、一踩煞車</text>
+  </svg><figcaption>心率的雙重控制：交感神經像油門，副交感（迷走神經）像煞車；靜止時煞車輕踩著，所以心率比竇房結本身的節律慢。</figcaption></figure>
+  <p>竇房結本身的節律約每分鐘 100 次，但靜止心率只有約 70，因為靜止時<b>副交感（迷走神經）的抑制</b>占優勢。心率由延腦的<b>心臟控制中樞</b>（cardiac control center）經自主神經調整（第 9、13 章）：</p>
+  <ul class="dots">
+    <li><b>正變時作用</b>（chronotropic，加快心率）：<b>交感神經</b>釋放 NE，加上腎上腺髓質的<b>腎上腺素</b>，作用於 β₁ 受體 → cAMP↑ → HCN 通道更容易打開 → 節律點電位爬升更快。</li>
+    <li><b>負變時作用</b>（減慢心率）：迷走神經釋放 ACh → 蕈毒鹼受體 → 打開 K⁺ 通道 → 爬升更慢。</li>
+    <li>其他：體溫升高（發燒時心率加快）、甲狀腺激素（增加 β 受體）、血中離子濃度。</li>
+  </ul>
+  <div class="warn"><b class="t">國考考過：自主神經對心臟的作用</b>——交感：心率↑、收縮力↑、傳導速度↑（β₁）；副交感：主要使心率↓與房室傳導變慢，因為迷走神經主要分布在竇房結、房室結與心房，<b>對心室收縮力的直接影響很小</b>。</div>
+
+  <h3 id="h3">心搏量的調節 Regulation of Stroke Volume</h3>
+  <p class="core">心搏量受三因素調節：①心舒期末容積（前負荷）——EDV 越大，心肌被拉長越多，收縮越強（法蘭克—史達林定律）；②收縮力——交感與腎上腺素增加 Ca²⁺ 而增強（正變力作用）；③總周邊阻力／動脈壓（後負荷）——阻力越大，心搏量越小。射出分率＝SV ÷ EDV，約 60%。</p>
+  <ol class="steps">
+    <li><b>心舒期末容積（前負荷）</b> <i class="en-term">end-diastolic volume, preload</i>：心舒期回到心室的血越多，心室被撐得越大。</li>
+    <li><b>收縮力</b> <i class="en-term">contractility</i>：在相同的 EDV 下，心肌收縮的力量。</li>
+    <li><b>總周邊阻力（後負荷）</b> <i class="en-term">total peripheral resistance, afterload</i>：心室要打開半月瓣，壓力必須超過動脈壓；動脈壓或阻力越高，能射出的血越少。</li>
+  </ol>
+  <p>心室每次只射出 EDV 的一部分，<b>射出分率</b> <i class="en-term">ejection fraction</i>＝SV ÷ EDV，正常約 60%（55–70%）。</p>
+  <h4>法蘭克—史達林定律 Frank-Starling Law of the Heart</h4>
+  <p class="core">回流到心室的血越多（EDV↑）→ 心肌纖維被拉長到較理想的長度 → 粗細肌絲重疊更適當、對 Ca²⁺ 的敏感度增加 → 收縮力增強 → 心搏量增加；讓心臟「回來多少就打出多少」，並使左右心室輸出量保持相等。這是心臟的內在調節，不需神經。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="60" y1="200" x2="460" y2="200" stroke="#374151" stroke-width="2"/><line x1="60" y1="200" x2="60" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="260" y="226" font-size="12" text-anchor="middle">心舒期末容積（心肌被拉長的程度）→</text>
+    <text x="30" y="110" font-size="12" text-anchor="middle" transform="rotate(-90 30 110)">心搏量 →</text>
+    <path d="M70,190 C150,150 220,80 320,60 C380,50 420,50 450,52" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+    <path d="M70,192 C150,165 220,115 320,100 C380,93 420,92 450,94" fill="none" stroke="#2563eb" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="330" y="44" font-size="12" fill="#b91c1c" font-weight="bold">交感刺激（收縮力↑）</text>
+    <text x="330" y="120" font-size="12" fill="#1d4ed8" font-weight="bold">正常</text>
+    <circle cx="200" cy="124" r="6" fill="#2563eb"/><circle cx="280" cy="105" r="6" fill="#2563eb"/>
+    <text x="170" y="110" font-size="11" fill="#374151">回流少</text><text x="276" y="132" font-size="11" fill="#374151">回流多 → 打得多</text>
+  </svg><figcaption>法蘭克—史達林曲線：同一條曲線上，回流越多、打出越多（內在調節）；交感刺激使整條曲線往上移（收縮力增加，外在調節）。</figcaption></figure>
+  <p>心室被回流的血液撐得越開（EDV 越大），心肌纖維被拉長，收縮就越有力，打出的血也越多——這是心臟的<b>內在</b>特性，稱為<b>法蘭克—史達林定律</b>。原因是：被拉長的心肌節長度更接近最適長度（第 12 章長度—張力關係），而且肌絲對 Ca²⁺ 的敏感度增加。</p>
+  <p>它的意義是讓心臟<b>「回來多少，就打出多少」</b>，也讓左右心室的輸出量自動保持相等：如果右心打出的稍多，下一刻回到左心的血就多，左心也就自動打得更多。</p>
+  <h4>外在調節：收縮力 Extrinsic Control of Contractility</h4>
+  <p class="core">交感神經（NE）與腎上腺素經 β₁ → cAMP → PKA，使 L 型 Ca²⁺ 通道開更多、肌漿網釋放與回收 Ca²⁺ 更快 → 收縮更強也更快放鬆（正變力作用）；在同樣 EDV 下 SV 更大、ESV 更小、射出分率提高。</p>
+  <p><b>交感神經</b>與<b>腎上腺素</b>增加心肌的收縮力（正變力作用 positive inotropic effect）：經 β₁ 受體 → cAMP → 蛋白激酶 A，使 Ca²⁺ 流入與肌漿網釋放的 Ca²⁺ 增加，收縮更強；同時肌漿網回收 Ca²⁺ 加快，放鬆也更快（心跳快時仍能充血）。結果在同樣的 EDV 下打出更多血、ESV 變小、射出分率提高。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>運動時：①交感興奮、迷走神經抑制減弱 → <b>心率</b>可從 70 增到 180 以上；②交感與腎上腺素使<b>收縮力</b>增強，射出分率提高；③肌肉幫浦與呼吸幫浦使<b>靜脈回流</b>增加 → EDV 增加 → 法蘭克—史達林定律使心搏量再增加；④運動肌肉的血管擴張使阻力下降。四者相乘，心輸出量可增加到 5 倍以上。</div>
+
+  <h3 id="h4">靜脈回流 Venous Return</h3>
+  <p class="core">靜脈回流決定 EDV：受靜脈壓與右心房壓的差（靜脈壓僅約 10 mmHg、右心房約 0–2）、交感神經使靜脈收縮（容量血管把血推回心臟）、骨骼肌幫浦、呼吸幫浦、血容積影響。</p>
+  <p>心臟只能打出回流的血，所以<b>靜脈回流</b> <i class="en-term">venous return</i> 決定 EDV。靜脈容納全身約 2/3 的血液，而推動回流的壓力差很小（小靜脈約 10 mmHg、右心房約 0–2 mmHg），所以需要幫助：</p>
+  <ul class="dots">
+    <li><b>交感神經</b>使靜脈平滑肌收縮，減少靜脈的容量，把儲存的血推回心臟。</li>
+    <li><b>骨骼肌幫浦</b>與<b>靜脈瓣</b>（第 13 章）。</li>
+    <li><b>呼吸幫浦</b>：吸氣時胸內壓下降、腹內壓上升。</li>
+    <li><b>血容積</b>：總血量越多，靜脈壓與回流越高（14.2）。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>CO＝HR × SV，靜止約 5 L/分；運動可增加 5 倍以上。</li>
+      <li>心率：交感與腎上腺素（β₁、cAMP）↑；迷走神經（ACh、開 K⁺）↓；靜止時迷走占優勢。</li>
+      <li>心搏量三要素：前負荷（EDV）、收縮力、後負荷（周邊阻力／動脈壓）；射出分率約 60%。</li>
+      <li>法蘭克—史達林定律：EDV↑ → 心肌拉長 → 收縮力↑ → SV↑（內在，回來多少打多少，左右平衡）。</li>
+      <li>交感使收縮力↑（正變力）；靜脈回流靠靜脈收縮、肌肉與呼吸幫浦、血容積。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>心輸出量</td><td>cardiac output</td><td>心率</td><td>cardiac rate (heart rate)</td></tr>
+      <tr><td>心搏量</td><td>stroke volume</td><td>射出分率</td><td>ejection fraction</td></tr>
+      <tr><td>前負荷／後負荷</td><td>preload / afterload</td><td>收縮力</td><td>contractility</td></tr>
+      <tr><td>法蘭克—史達林定律</td><td>Frank-Starling law of the heart</td><td>正變力／正變時作用</td><td>positive inotropic / chronotropic effect</td></tr>
+      <tr><td>總周邊阻力</td><td>total peripheral resistance</td><td>靜脈回流</td><td>venous return</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">14.2</span>血容積</h2>
+  <div class="en">Blood Volume</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>血漿與組織液之間怎麼交換水分（<b>史達林力</b>：微血管靜水壓與膠體滲透壓）、什麼情況下會<b>水腫</b>；以及<b>腎臟</b>在 <b>ADH、醛固酮、腎素—血管收縮素系統（RAAS）、心房利鈉胜肽（ANP）</b>的調控下，如何維持血容積。</div><div><span class="lt lt2">為什麼接在 14.1 後面？</span>靜脈回流與 EDV 取決於血容積；血容積又和血壓直接相關。所以要先懂血量怎麼被維持，才能理解血壓的長期調節與高血壓。</div></div>
+  <div class="oneline">微血管動脈端的靜水壓大於膠體滲透壓，液體濾出到組織；靜脈端靜水壓降低，膠體滲透壓把大部分液體吸回，剩下的由淋巴回收；靜水壓升高、白蛋白降低、通透性增加或淋巴阻塞都會造成水腫；腎臟是調節血容積的主角：血量少時 ADH、醛固酮（經 RAAS）增加使身體保水保鈉，血量多時心房分泌 ANP 使腎臟排鈉排水。</div>
+  <div class="think">為什麼吃太鹹，隔天會覺得臉和手腳有點腫？</div>
+
+  <p>血液約占體重的 7–8%。體液中約 2/3 在細胞內、1/3 在細胞外；細胞外液中約 80% 是組織液、20% 是血漿。血漿與組織液之間不斷經由微血管交換水分。</p>
+
+  <h3 id="h5">組織液的形成 Exchange of Fluid Between Capillaries and Tissues</h3>
+  <p class="core">史達林力：微血管靜水壓（血壓）把液體推出，血漿膠體滲透壓（主要是白蛋白，約 25 mmHg）把液體拉回；動脈端靜水壓約 37 mmHg → 淨濾出，靜脈端約 17 mmHg → 淨吸回；濾出量略大於吸回量，多出的由淋巴回收。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a142" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="40" y="100" width="400" height="44" rx="22" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="70" y="127" font-size="12" font-weight="bold" fill="#b91c1c">動脈端</text><text x="410" y="127" font-size="12" font-weight="bold" fill="#1d4ed8" text-anchor="end">靜脈端</text>
+    <path d="M110,100 L110,50" stroke="#dc2626" stroke-width="4" marker-end="url(#a142)"/><text x="120" y="60" font-size="12" fill="#b91c1c">靜水壓 37</text>
+    <path d="M170,40 L170,94" stroke="#0891b2" stroke-width="2" marker-end="url(#a142)"/><text x="180" y="78" font-size="12" fill="#0e7490">膠體滲透壓 25</text>
+    <text x="110" y="28" font-size="13" font-weight="bold" fill="#b91c1c">淨濾出 → 組織</text>
+    <path d="M330,94 L330,40" stroke="#dc2626" stroke-width="2" marker-end="url(#a142)"/><text x="240" y="62" font-size="12" fill="#b91c1c">靜水壓 17</text>
+    <path d="M390,40 L390,96" stroke="#0891b2" stroke-width="4" marker-end="url(#a142)"/><text x="398" y="78" font-size="12" fill="#0e7490">25</text>
+    <text x="300" y="28" font-size="13" font-weight="bold" fill="#0e7490">淨吸回 ← 組織</text>
+    <path d="M60,144 C150,150 330,150 420,144" fill="none" stroke="#9ca3af" stroke-dasharray="4 3"/>
+    <text x="240" y="176" font-size="12" text-anchor="middle">血管內的白蛋白產生膠體滲透壓，像海綿把水拉回</text>
+    <rect x="130" y="190" width="220" height="34" rx="10" fill="#dcfce7" stroke="#16a34a"/><text x="240" y="212" font-size="12" text-anchor="middle">濾出比吸回多一點 → 淋巴回收</text>
+    <text x="240" y="244" font-size="11" text-anchor="middle" fill="#6b7280">數字單位 mmHg，為課本常用的示範值</text>
+  </svg><figcaption>微血管兩端的力量：動脈端血壓高，把液體推到組織；靜脈端血壓降低，白蛋白的膠體滲透壓把液體拉回。</figcaption></figure>
+  <p>微血管壁對水與小分子通透，但大多數血漿蛋白過不去。決定液體進出的力量叫<b>史達林力</b> <i class="en-term">Starling forces</i>：</p>
+  <ul class="dots">
+    <li><b>微血管靜水壓</b>（血壓）：把液體<b>推出</b>微血管。動脈端約 37 mmHg，沿著微血管逐漸下降到靜脈端約 17 mmHg。</li>
+    <li><b>膠體滲透壓</b> <i class="en-term">colloid osmotic (oncotic) pressure</i>：血漿中留在血管內的蛋白質（主要是<b>白蛋白</b>）把水<b>拉回</b>，約 25 mmHg，兩端大致相同。組織液的靜水壓與蛋白質很少，影響較小。</li>
+  </ul>
+  <p>所以<b>動脈端淨濾出、靜脈端淨吸回</b>。每天濾出的總量略大於吸回量，多出的約 2–3 公升由<b>淋巴</b>送回血液（第 13 章）。</p>
+  <h4>水腫的原因 Causes of Edema</h4>
+  <p class="core">水腫＝組織液過多：①微血管靜水壓升高（高血壓、心衰竭使靜脈壓升高、久站）；②血漿白蛋白降低（肝病、蛋白質營養不良、腎病症候群蛋白尿）；③微血管通透性增加（發炎、過敏，蛋白質漏出）；④淋巴回流受阻；⑤黏液水腫（甲狀腺功能低下）。</p>
+  <div class="tblwrap"><table>
+    <tr><th>原因</th><th>機制</th><th>例子</th></tr>
+    <tr><td><b>靜水壓升高</b></td><td>推出去的力量太大</td><td>高血壓、<b>心衰竭</b>使靜脈回流受阻、靜脈阻塞、久站</td></tr>
+    <tr><td><b>血漿蛋白（白蛋白）降低</b></td><td>拉回來的力量不足</td><td><b>肝硬化</b>（製造少）、<b>蛋白質營養不良</b>（瓜西奧科兒症）、<b>腎病症候群</b>（從尿流失）、嚴重燒傷</td></tr>
+    <tr><td><b>微血管通透性增加</b></td><td>蛋白質漏到組織，反而把水拉出去</td><td>發炎、過敏（組織胺）</td></tr>
+    <tr><td><b>淋巴回流受阻</b></td><td>多出的液體無法回收</td><td>淋巴結切除、絲蟲病（象皮病）</td></tr>
+    <tr><td><b>黏液水腫</b></td><td>組織中黏多醣堆積吸水</td><td>甲狀腺功能低下</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>營養評估時看到<b>水腫</b>，要想到可能是白蛋白低、心衰竭或腎病，不能只看體重——水腫會使體重<b>高估</b>真正的組織量。肝硬化腹水、腎病症候群、心衰竭的飲食都要<b>限鈉</b>；蛋白質攝取則依疾病調整。</div>
+
+  <h3 id="h6">腎臟對血容積的調節 Regulation of Blood Volume by the Kidneys</h3>
+  <p class="core">腎臟每天過濾約 180 L 血漿、排出約 1.5 L 尿，大部分被再吸收；調節：ADH（血漿滲透壓↑或血量↓ → 腦垂腺後葉 → 腎臟回收水）、醛固酮（腎臟回收 Na⁺ → 水跟著回收）、RAAS、ANP（排鈉排水）；水跟著鈉走，所以體內鈉的總量決定細胞外液與血容積。</p>
+  <p>腎臟每天過濾約 180 公升的血漿，最後只排出約 1.5 公升的尿，其餘都被再吸收。只要調整再吸收的多寡，就能調整血容積（第 17 章）。<span class="key">水跟著鈉走：體內鈉的總量決定細胞外液與血容積。</span></p>
+  <h4>抗利尿激素 Antidiuretic Hormone</h4>
+  <p class="core">脫水 → 血漿滲透壓↑ → 下視丘滲透壓受器 → 口渴＋腦垂腺後葉釋放 ADH → 腎集尿管插入水通道（aquaporin）→ 回收水、尿量少而濃；血量大減時（如失血）左心房的伸張受器訊號減少，也刺激 ADH；ADH 高濃度時也收縮血管（又稱血管加壓素）。</p>
+  <ul class="dots">
+    <li>脫水或吃太鹹時<b>血漿滲透壓升高</b> → <b>下視丘滲透壓受器</b> → ①<b>口渴</b>而喝水；②腦垂腺後葉釋放 <b>ADH</b>（抗利尿激素）。</li>
+    <li>ADH 作用在腎臟<b>集尿管</b>，使細胞膜插入<b>水通道蛋白</b>（aquaporin），回收更多水 → 尿量減少、變濃 → 血漿滲透壓回到正常，血容積增加。</li>
+    <li>血量大量減少（如失血）時，左心房的伸張受器訊號減少，也會刺激 ADH 分泌。</li>
+    <li>ADH 在高濃度時也使血管收縮，所以又叫<b>血管加壓素</b> <i class="en-term">vasopressin</i>。</li>
+    <li>相反地，喝很多水使滲透壓下降 → ADH 減少 → 排出大量稀尿。酒精抑制 ADH 分泌，所以喝酒後尿多、易脫水。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>吃太鹹 → 血漿 Na⁺ 與滲透壓升高 → 口渴、喝水，ADH 分泌使腎臟保水 → 為了把鹽稀釋到正常濃度，身體留住更多水 → 細胞外液與血容積增加 → 組織液也增加，所以臉、手腳有點腫。腎臟在一兩天內把多餘的鈉和水排掉後就消了。</div>
+  <h4>醛固酮與腎素—血管收縮素—醛固酮系統 Aldosterone and the RAAS</h4>
+  <p class="core">血量或血壓↓、交感刺激、遠端小管 Na⁺ 少 → 腎臟近腎絲球細胞分泌腎素 → 血管收縮素原（肝）→ 血管收縮素 I → 血管收縮素轉化酶 ACE（主要在肺微血管）→ 血管收縮素 II → ①強力收縮血管 ②刺激腎上腺皮質分泌醛固酮 → 腎臟保鈉保水 ③刺激口渴與 ADH；高血鉀直接刺激醛固酮分泌；ACE 抑制劑與血管收縮素受體阻斷劑（ARB）用於治療高血壓。</p>
+  <figure class="pic"><svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a143" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="120" y="8" width="240" height="36" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="240" y="31" font-size="13" text-anchor="middle" font-weight="bold">血量↓、血壓↓、交感興奮</text>
+    <path d="M240,44 L240,62" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/>
+    <rect x="120" y="66" width="240" height="36" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="89" font-size="13" text-anchor="middle" font-weight="bold">腎臟（近腎絲球細胞）分泌腎素</text>
+    <path d="M240,102 L240,120" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/>
+    <text x="250" y="116" font-size="11" fill="#6b7280">切割</text>
+    <rect x="80" y="124" width="320" height="36" rx="10" fill="#fff" stroke="#9ca3af" stroke-width="2"/><text x="240" y="147" font-size="13" text-anchor="middle">血管收縮素原（肝臟）→ 血管收縮素 I</text>
+    <path d="M240,160 L240,180" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/><text x="250" y="176" font-size="11" fill="#6b7280">ACE（主要在肺）</text>
+    <rect x="120" y="184" width="240" height="38" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2.5"/><text x="240" y="208" font-size="14" text-anchor="middle" font-weight="bold" fill="#b91c1c">血管收縮素 II</text>
+    <path d="M150,222 L70,256" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/><path d="M240,222 L240,256" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/><path d="M330,222 L410,256" stroke="#374151" stroke-width="2.5" marker-end="url(#a143)"/>
+    <rect x="4" y="260" width="140" height="50" rx="10" fill="#ffe4e6" stroke="#e11d48"/><text x="74" y="281" font-size="12" text-anchor="middle" font-weight="bold">小動脈收縮</text><text x="74" y="299" font-size="11" text-anchor="middle">周邊阻力↑</text>
+    <rect x="170" y="260" width="140" height="50" rx="10" fill="#fef3c7" stroke="#b45309"/><text x="240" y="281" font-size="12" text-anchor="middle" font-weight="bold">腎上腺皮質</text><text x="240" y="299" font-size="11" text-anchor="middle">醛固酮 → 保鈉保水</text>
+    <rect x="336" y="260" width="140" height="50" rx="10" fill="#dbeafe" stroke="#2563eb"/><text x="406" y="281" font-size="12" text-anchor="middle" font-weight="bold">下視丘</text><text x="406" y="299" font-size="11" text-anchor="middle">口渴、ADH↑</text>
+    <rect x="120" y="322" width="240" height="32" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="343" font-size="13" text-anchor="middle" font-weight="bold">血容積與血壓回升（負回饋）</text>
+  </svg><figcaption>腎素—血管收縮素—醛固酮系統：腎臟偵測到血壓下降，啟動一連串反應，最後由血管收縮素 II 從三個方向把血壓拉回來。</figcaption></figure>
+  <ol class="steps">
+    <li>血量或血壓下降（腎臟入球小動脈的血壓降低）、交感神經興奮（β₁），或流到遠端小管的 Na⁺ 減少時，腎臟的<b>近腎絲球細胞</b> <i class="en-term">juxtaglomerular cells</i> 分泌<b>腎素</b> <i class="en-term">renin</i>（一種酵素）。</li>
+    <li>腎素把肝臟製造的<b>血管收縮素原</b>切成<b>血管收縮素 I</b>。</li>
+    <li>主要在<b>肺</b>微血管內皮的<b>血管收縮素轉化酶</b>（<b>ACE</b>）把它轉成<b>血管收縮素 II</b> <i class="en-term">angiotensin II</i>。</li>
+    <li>血管收縮素 II 的作用：①強力<b>收縮小動脈</b> → 周邊阻力↑；②刺激<b>腎上腺皮質</b>分泌<b>醛固酮</b> → 腎臟保 Na⁺ 排 K⁺，水跟著回收；③刺激下視丘<b>口渴</b>與 <b>ADH</b> 分泌。</li>
+  </ol>
+  <p>此外，<b>血鉀升高會直接刺激</b>腎上腺皮質分泌醛固酮（不經腎素）。治療高血壓的 <b>ACE 抑制劑</b>（如 captopril，名字多以 -pril 結尾）與<b>血管收縮素 II 受體阻斷劑</b>（ARB，多以 -sartan 結尾）就是阻斷這個系統；它們會使血鉀上升，所以服藥者要注意鉀的攝取。</p>
+  <h4>心房利鈉胜肽 Atrial Natriuretic Peptide</h4>
+  <p class="core">血容積增加 → 心房被撐開 → 心房細胞分泌 ANP → 腎臟排鈉排水（利鈉、利尿）、抑制腎素與醛固酮、擴張血管 → 血容積與血壓下降；作用與 RAAS 相反。</p>
+  <p>血容積增加使心房被撐大時，心房肌細胞分泌<b>心房利鈉胜肽</b> <i class="en-term">atrial natriuretic peptide, ANP</i>：促進腎臟<b>排鈉</b>（natriuresis）與排水、抑制腎素與醛固酮分泌、擴張血管 → 血容積與血壓下降。它是 RAAS 的「反方向」。另外，心房被撐開也經神經反射減少 ADH 與交感活性。</p>
+  <div class="tblwrap"><table>
+    <tr><th>情況</th><th>ADH</th><th>腎素→醛固酮</th><th>ANP</th><th>結果</th></tr>
+    <tr><td>脫水、失血、血壓下降</td><td>↑</td><td>↑</td><td>↓</td><td>保水保鈉、血管收縮 → 血量、血壓回升</td></tr>
+    <tr><td>喝大量水、血量過多</td><td>↓</td><td>↓</td><td>↑</td><td>排水排鈉 → 血量回降</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>史達林力：靜水壓推出、白蛋白膠體滲透壓拉回；動脈端濾出、靜脈端吸回，多出的由淋巴回收。</li>
+      <li>水腫：靜水壓↑（心衰竭）、白蛋白↓（肝病、營養不良、腎病）、通透性↑（發炎）、淋巴阻塞、黏液水腫。</li>
+      <li>水跟著鈉走；ADH（滲透壓↑、血量↓）→ 集尿管水通道 → 保水；酒精抑制 ADH。</li>
+      <li>RAAS：腎素 → 血管收縮素 I →（ACE，肺）→ 血管收縮素 II → 血管收縮、醛固酮、口渴與 ADH；高血鉀直接刺激醛固酮。</li>
+      <li>ANP：心房被撐開 → 排鈉排水、抑制 RAAS、擴張血管。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>史達林力</td><td>Starling forces</td><td>膠體滲透壓</td><td>colloid osmotic (oncotic) pressure</td></tr>
+      <tr><td>靜水壓</td><td>hydrostatic pressure</td><td>水腫</td><td>edema</td></tr>
+      <tr><td>抗利尿激素／血管加壓素</td><td>ADH / vasopressin</td><td>水通道蛋白</td><td>aquaporin</td></tr>
+      <tr><td>腎素</td><td>renin</td><td>近腎絲球細胞</td><td>juxtaglomerular cells</td></tr>
+      <tr><td>血管收縮素 I／II</td><td>angiotensin I / II</td><td>血管收縮素轉化酶</td><td>angiotensin-converting enzyme (ACE)</td></tr>
+      <tr><td>心房利鈉胜肽</td><td>atrial natriuretic peptide (ANP)</td><td>利鈉作用</td><td>natriuresis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">14.3</span>血管阻力與血流</h2>
+  <div class="en">Vascular Resistance to Blood Flow</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>血流的物理原則：<b>流量＝壓力差 ÷ 阻力</b>，而阻力取決於血管長度、血液黏度，特別是<b>半徑的四次方</b>（<b>泊肅葉定律</b>）；以及血管口徑如何被<b>外在</b>（神經、激素）與<b>內在</b>（自動調節、代謝產物、內皮分泌的 NO）兩類機制調節。</div><div><span class="lt lt2">為什麼接在 14.2 後面？</span>有了心輸出量與血容積這兩個「供應面」，接下來看「分配面」：同樣的血要怎麼依各器官的需要分配？答案就在小動脈的阻力。</div></div>
+  <div class="oneline">血流量與兩端的壓力差成正比、與阻力成反比；阻力與血管長度、血液黏度成正比，與半徑的四次方成反比，所以小動脈口徑稍微改變就大幅改變血流；交感神經（α₁）使大多數小動脈收縮，內皮分泌的一氧化氮使血管擴張；各器官還能依自己的代謝需要和壓力變化自動調節血流。</div>
+  <div class="think">為什麼血管半徑只縮小一半，血流就會降到原來的十六分之一？</div>
+
+  <h3 id="h7">血流的物理定律 Physical Laws Describing Blood Flow</h3>
+  <p class="core">流量（F）＝壓力差（ΔP）÷ 阻力（R）；泊肅葉定律：阻力 ∝ 長度 × 黏度 ÷ 半徑⁴ → 流量 ∝ ΔP × r⁴ ÷（長度 × 黏度）；體內長度與黏度變化小（紅血球增多症、脫水使黏度↑），主要靠改變小動脈半徑調節；全身各器官並聯，總周邊阻力主要由小動脈決定。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="30" y="40" width="180" height="80" rx="40" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="120" y="86" font-size="14" text-anchor="middle" font-weight="bold">半徑 r</text>
+    <text x="120" y="148" font-size="13" text-anchor="middle">流量 ＝ 16 份</text>
+    <rect x="300" y="60" width="140" height="40" rx="20" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+    <text x="370" y="86" font-size="13" text-anchor="middle" font-weight="bold">半徑 r/2</text>
+    <text x="370" y="148" font-size="13" text-anchor="middle">流量 ＝ 1 份</text>
+    <text x="255" y="86" font-size="22" text-anchor="middle">→</text>
+    <g fill="#2563eb"><circle cx="60" cy="80" r="5"/><circle cx="80" cy="65" r="5"/><circle cx="80" cy="95" r="5"/><circle cx="100" cy="80" r="5"/><circle cx="140" cy="70" r="5"/><circle cx="160" cy="90" r="5"/><circle cx="180" cy="75" r="5"/><circle cx="330" cy="80" r="4"/></g>
+    <text x="240" y="186" font-size="14" text-anchor="middle" font-weight="bold">流量 ∝ 壓力差 × 半徑⁴ ／（長度 × 黏度）</text>
+    <text x="240" y="208" font-size="12" text-anchor="middle" fill="#6b7280">(1/2)⁴＝1/16：口徑的小改變造成流量的大改變</text>
+  </svg><figcaption>泊肅葉定律：阻力和半徑的四次方成反比。所以身體只要讓小動脈稍微收縮或放鬆，就能大幅調整流到某個器官的血量。</figcaption></figure>
+  <p>血液從高壓流向低壓，<b>流量</b>與兩端的<b>壓力差</b>成正比，與<b>阻力</b>成反比：</p>
+  <p class="key" style="text-align:center;font-size:17px">流量 ＝ 壓力差（ΔP）÷ 阻力（R）</p>
+  <p>阻力由<b>泊肅葉定律</b> <i class="en-term">Poiseuille's law</i> 描述：阻力與<b>血管長度</b>和<b>血液黏度</b>成正比，與<b>半徑的四次方</b>成反比。體內血管長度幾乎不變；黏度主要由血比容決定（紅血球增多症、嚴重脫水時增加，貧血時降低）；所以平常調節血流主要靠改變<b>半徑</b>——而半徑的影響是四次方。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>阻力與半徑的四次方成反比：半徑變成 1/2，阻力變成 2⁴＝<b>16 倍</b>，在壓力差不變時流量就只剩 <b>1/16</b>。反過來，運動時肌肉小動脈只要擴張一點點，血流就能增加很多倍。</div>
+  <p>全身各器官的血管是<b>並聯</b>的（主動脈分支分別供應各器官），所以每個器官可以獨立調整自己的阻力而改變血流分配。全身所有血管阻力的總和叫<b>總周邊阻力</b>，主要由<b>小動脈</b>決定，它是決定血壓的另一個主要因素：</p>
+  <p class="key" style="text-align:center;font-size:17px">平均動脈壓 ≈ 心輸出量 × 總周邊阻力</p>
+
+  <h3 id="h8">外在調節 Extrinsic Regulation of Blood Flow</h3>
+  <p class="core">交感腎上腺素性神經（NE → α₁）使大多數器官小動脈收縮（腹部內臟、皮膚最明顯）；骨骼肌的 β₂ 受體與腎上腺素可使其血管擴張；副交感性血管擴張只見於少數部位（如生殖器官勃起組織、唾液腺）；血管收縮素 II、ADH 使血管收縮。</p>
+  <ul class="dots">
+    <li><b>交感神經</b>：釋放 NE 作用於 <b>α₁ 受體</b>，使大多數器官的小動脈收縮，特別是<b>腹部內臟</b>與<b>皮膚</b>；靜止時就有一定的交感張力。增加交感活性 → 收縮，減少 → 擴張。</li>
+    <li><b>腎上腺素</b>：在骨骼肌（與冠狀動脈）可經 <b>β₂ 受體</b>使血管擴張；高濃度時以 α₁ 收縮為主。</li>
+    <li><b>副交感神經</b>：大多數血管沒有副交感支配；例外是<b>勃起組織</b>（經 NO 擴張）、唾液腺、消化道的部分血管。</li>
+    <li><b>激素</b>：血管收縮素 II、ADH（血管加壓素）使血管收縮；ANP 使血管擴張。</li>
+  </ul>
+
+  <h3 id="h9">內在調節 Intrinsic Regulation of Blood Flow</h3>
+  <p class="core">自動調節：器官在血壓變動時維持穩定血流——肌原性調節（血管被撐開 → 平滑肌收縮）與代謝性調節（組織代謝旺盛 → O₂↓、CO₂↑、H⁺↑、K⁺↑、腺苷↑ → 小動脈擴張）；內皮旁泌：一氧化氮（NO，由 L-精胺酸經 NO 合成酶產生 → 平滑肌 cGMP↑ → 擴張）、前列環素擴張、內皮素收縮。</p>
+  <ul class="dots">
+    <li><b>肌原性調節</b> <i class="en-term">myogenic regulation</i>：血壓升高把小動脈撐開時，平滑肌被拉長而反射性<b>收縮</b>；血壓下降時放鬆。讓器官（特別是腦與腎）的血流在一定血壓範圍內保持穩定，稱為<b>自動調節</b> <i class="en-term">autoregulation</i>。</li>
+    <li><b>代謝性調節</b> <i class="en-term">metabolic regulation</i>：組織代謝旺盛時，局部 <b>O₂ 降低</b>，<b>CO₂、H⁺（pH 下降）、K⁺、腺苷</b>增加，使小動脈擴張，血流增加，把產物帶走、送來氧氣。運動後或阻斷血流後出現的血流大增，叫<b>反應性充血</b>（reactive hyperemia）。</li>
+    <li><b>內皮細胞分泌的旁泌調節物</b>：
+      <ul class="dots">
+        <li><b>一氧化氮</b> <i class="en-term">nitric oxide, NO</i>：內皮的 NO 合成酶以 <b>L-精胺酸</b>為原料製造，擴散到平滑肌 → 活化鳥苷酸環化酶 → <b>cGMP</b> 增加 → 平滑肌放鬆 → <b>血管擴張</b>。血流的剪力、ACh、緩激肽都刺激 NO 釋放。硝化甘油與威而鋼（延長 cGMP 作用）都作用在這條路徑上。</li>
+        <li><b>前列環素</b>：擴張血管、抑制血小板。</li>
+        <li><b>內皮素</b> <i class="en-term">endothelin-1</i>：強力的血管收縮物質。</li>
+      </ul></li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>甜菜根、深綠色葉菜中的<b>硝酸鹽</b>經口腔細菌與胃轉變成亞硝酸鹽，再在體內產生 <b>NO</b>，可能有助於擴張血管、略降血壓。動脈粥狀硬化、高血糖、抽菸會損害內皮，使 NO 減少（<b>內皮功能異常</b>），是心血管疾病的早期變化。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>流量＝壓力差 ÷ 阻力；泊肅葉：阻力 ∝ 長度 × 黏度 ÷ r⁴；半徑減半 → 流量 1/16。</li>
+      <li>器官並聯；總周邊阻力主要在小動脈；平均動脈壓 ≈ CO × 總周邊阻力。</li>
+      <li>外在：交感 α₁ 收縮（內臟、皮膚）、β₂ 使骨骼肌血管擴張、副交感只在少數部位；血管收縮素 II、ADH 收縮。</li>
+      <li>內在：肌原性與代謝性（O₂↓、CO₂、H⁺、K⁺、腺苷↑）自動調節；內皮 NO（精胺酸 → cGMP → 擴張）、前列環素、內皮素。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>泊肅葉定律</td><td>Poiseuille's law</td><td>黏度</td><td>viscosity</td></tr>
+      <tr><td>總周邊阻力</td><td>total peripheral resistance</td><td>血管收縮／擴張</td><td>vasoconstriction / vasodilation</td></tr>
+      <tr><td>外在／內在調節</td><td>extrinsic / intrinsic regulation</td><td>自動調節</td><td>autoregulation</td></tr>
+      <tr><td>肌原性調節</td><td>myogenic regulation</td><td>代謝性調節</td><td>metabolic regulation</td></tr>
+      <tr><td>反應性充血</td><td>reactive hyperemia</td><td>一氧化氮</td><td>nitric oxide (NO)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">14.4</span>心臟與骨骼肌的血流</h2>
+  <div class="en">Blood Flow to the Heart and Skeletal Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>冠狀循環</b>的特點（心肌攝氧率高、血流主要在心舒期）；骨骼肌血流在<b>休息與運動</b>時的巨大差異；以及<b>運動時的循環變化</b>（血流重新分配、心輸出量增加）。</div><div><span class="lt lt2">為什麼接在 14.3 後面？</span>這兩個器官是 14.3 原理最好的例子：它們的需氧量變化最大，最依賴代謝性調節來增加血流。</div></div>
+  <div class="oneline">心肌靜止時就從血液中取走約 75% 的氧，需要更多氧時只能靠增加冠狀血流（主要由腺苷等代謝產物擴張冠狀動脈）；左心室的冠狀血流主要發生在心舒期；骨骼肌休息時血流少，運動時代謝產物使小動脈大幅擴張，血流可增加 20 倍以上；運動時心輸出量增加且血流從內臟與腎轉向肌肉、心臟與皮膚。</div>
+  <div class="think">心跳很快時（例如心搏過速），心臟自己反而容易缺氧，為什麼？</div>
+
+  <h3 id="h10">冠狀循環的有氧需求 Aerobic Requirements of the Heart</h3>
+  <p class="core">冠狀動脈從主動脈根部發出；心肌含大量粒線體與肌紅素，幾乎完全靠有氧代謝（脂肪酸為主）；靜止時就取走血中約 75% 的 O₂，所以需氧增加時主要靠增加冠狀血流（代謝性擴張：腺苷、CO₂、H⁺、K⁺、NO，加上交感 β 與腎上腺素）；左心室收縮時壓迫冠狀血管，血流主要在心舒期 → 心率太快縮短心舒期，冠狀血流反而受限。</p>
+  <ul class="dots">
+    <li>心臟由<b>左右冠狀動脈</b>供應，它們從主動脈根部（主動脈瓣上方）發出；血液經冠狀竇回到右心房。</li>
+    <li>心肌富含粒線體與肌紅素，幾乎完全靠<b>有氧代謝</b>，主要燃料是<b>脂肪酸</b>，也用葡萄糖、乳酸、酮體。</li>
+    <li>靜止時心肌就從血液中取走約 <b>75% 的氧</b>（其他組織約 25%），沒有多少可以再多取，所以需氧增加時<b>只能靠增加冠狀血流</b>：代謝產物（特別是<b>腺苷</b>）、NO 與交感 β 刺激使冠狀動脈擴張。</li>
+    <li>左心室收縮時心肌壓迫穿過其中的冠狀血管，所以左心室的冠狀血流<b>主要發生在心舒期</b>。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>心跳越快，心肌越耗氧；但心跳快時縮短的主要是<b>心舒期</b>，而冠狀血流主要在心舒期，所以供氧時間反而變短。若冠狀動脈已有狹窄，就容易出現心肌缺血與心絞痛。這也是治療心絞痛常用 β 阻斷劑減慢心率的原因之一。</div>
+
+  <h3 id="h11">骨骼肌的血流調節 Regulation of Blood Flow Through Skeletal Muscles</h3>
+  <p class="core">靜止時骨骼肌血流量小（約占心輸出量 15–20%，因交感 α₁ 張力使小動脈收縮、許多微血管關閉）；運動時代謝性擴張壓過交感收縮，微血管全面開放，肌肉血流可增加 20 倍以上（可占心輸出量 80% 以上）；運動前的預期也經交感膽鹼性纖維與腎上腺素（β₂）使肌肉血管擴張。</p>
+  <p>靜止時骨骼肌雖占體重約 40%，血流卻只占心輸出量約 15–20%：交感神經（α₁）使小動脈維持收縮，許多微血管是關閉的。運動時，肌肉產生的代謝產物（CO₂、H⁺、K⁺、腺苷、O₂ 降低）使小動脈與微血管前括約肌<b>大幅擴張</b>，局部效應壓過交感的收縮；腎上腺素經 β₂ 也有幫助。肌肉血流可增加 <b>20 倍以上</b>。</p>
+
+  <h3 id="h12">運動時的循環變化 Circulatory Changes During Exercise</h3>
+  <p class="core">運動時：心輸出量↑（心率與心搏量都↑）；血流重新分配——骨骼肌、心臟大增，皮膚先減後增（散熱），腹部內臟與腎臟減少，腦血流維持穩定；總周邊阻力下降（肌肉血管擴張），所以收縮壓上升而舒張壓不變或稍降，平均動脈壓只小幅上升。</p>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="130" y="20" font-size="13" text-anchor="middle" font-weight="bold">靜止（約 5 L/分）</text><text x="360" y="20" font-size="13" text-anchor="middle" font-weight="bold">劇烈運動（約 25 L/分）</text>
+    <g font-size="11" text-anchor="end"><text x="60" y="52">肌肉</text><text x="60" y="82">內臟</text><text x="60" y="112">腎臟</text><text x="60" y="142">腦</text><text x="60" y="172">心臟</text><text x="60" y="202">皮膚</text></g>
+    <g><rect x="66" y="42" width="24" height="14" fill="#dc2626"/><rect x="66" y="72" width="34" height="14" fill="#f59e0b"/><rect x="66" y="102" width="30" height="14" fill="#7c3aed"/><rect x="66" y="132" width="20" height="14" fill="#2563eb"/><rect x="66" y="162" width="6" height="14" fill="#e11d48"/><rect x="66" y="192" width="12" height="14" fill="#0891b2"/></g>
+    <g font-size="10" fill="#6b7280"><text x="94" y="53">1.0</text><text x="104" y="83">1.4</text><text x="100" y="113">1.1</text><text x="90" y="143">0.75</text><text x="76" y="173">0.25</text><text x="82" y="203">0.5</text></g>
+    <line x1="230" y1="30" x2="230" y2="215" stroke="#e5e7eb"/>
+    <g font-size="11" text-anchor="end"><text x="290" y="52">肌肉</text><text x="290" y="82">內臟</text><text x="290" y="112">腎臟</text><text x="290" y="142">腦</text><text x="290" y="172">心臟</text><text x="290" y="202">皮膚</text></g>
+    <g><rect x="296" y="42" width="125" height="14" fill="#dc2626"/><rect x="296" y="72" width="14" height="14" fill="#f59e0b"/><rect x="296" y="102" width="14" height="14" fill="#7c3aed"/><rect x="296" y="132" width="20" height="14" fill="#2563eb"/><rect x="296" y="162" width="25" height="14" fill="#e11d48"/><rect x="296" y="192" width="18" height="14" fill="#0891b2"/></g>
+    <g font-size="10" fill="#6b7280"><text x="425" y="53">20+</text><text x="314" y="83">↓</text><text x="314" y="113">↓</text><text x="320" y="143">不變</text><text x="325" y="173">約 1</text><text x="318" y="203">↑（散熱）</text></g>
+    <text x="240" y="240" font-size="12" text-anchor="middle">單位：L/分（概略值，示意用）</text>
+    <text x="240" y="262" font-size="12" text-anchor="middle" fill="#374151">血流從內臟與腎臟「借」給肌肉與心臟；腦的血流始終維持</text>
+  </svg><figcaption>運動時的血流重新分配：心輸出量增加數倍，增加的部分幾乎都流向運動中的肌肉；內臟與腎臟的血流減少，腦血流保持穩定。</figcaption></figure>
+  <ul class="dots">
+    <li><b>心輸出量增加</b>：交感興奮、迷走神經抑制減弱 → 心率↑；收縮力↑與靜脈回流↑（肌肉幫浦、呼吸幫浦、靜脈收縮）→ 心搏量↑。</li>
+    <li><b>血流重新分配</b>：交感使<b>腹部內臟與腎臟</b>血管收縮、血流減少；運動<b>肌肉</b>與<b>心臟</b>經代謝性擴張大幅增加；<b>腦</b>血流因自動調節維持穩定；<b>皮膚</b>血流初期減少，體溫上升後增加以散熱。</li>
+    <li><b>血壓</b>：肌肉血管擴張使總周邊阻力<b>下降</b>，所以雖然心輸出量大增，平均動脈壓只小幅上升；<b>收縮壓上升</b>、<b>舒張壓不變或稍降</b>。</li>
+    <li><b>耐力訓練的適應</b>：心室變大、心搏量增加，所以靜止心率變慢（運動員心搏過緩）、最大心輸出量增加；血容積增加；肌肉微血管增多（第 12 章）。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>飯後馬上劇烈運動，消化道需要的血流和運動肌肉需要的血流互相競爭，容易腹部不適、抽筋。一般建議大餐後間隔 1–2 小時再做劇烈運動，或運動前改吃少量、易消化的醣類。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>心肌靜止時就取走約 75% 的氧 → 需氧增加只能靠增加冠狀血流（腺苷等代謝性擴張）。</li>
+      <li>左心室冠狀血流主要在心舒期；心跳太快反而不利心肌供氧。</li>
+      <li>骨骼肌靜止時血流少（交感 α₁），運動時代謝性擴張使血流增加 20 倍以上。</li>
+      <li>運動：CO↑、血流轉向肌肉與心臟、內臟與腎減少、腦不變、皮膚後期增加；周邊阻力↓；收縮壓↑、舒張壓不變或稍降。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>冠狀動脈</td><td>coronary arteries</td><td>腺苷</td><td>adenosine</td></tr>
+      <tr><td>血流重新分配</td><td>redistribution of blood flow</td><td>運動員心搏過緩</td><td>athlete's bradycardia</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">14.5</span>腦與皮膚的血流</h2>
+  <div class="en">Blood Flow to the Brain and Skin</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>腦血流</b>為什麼幾乎恆定（自動調節，對 CO₂ 特別敏感），以及<b>皮膚血流</b>怎麼隨體溫大幅改變（動靜脈吻合、交感神經）。</div><div><span class="lt lt2">為什麼接在 14.4 後面？</span>兩個極端的對照：腦需要的是「穩定」，皮膚的血流則為了調節體溫而「變化最大」。</div></div>
+  <div class="oneline">腦約占心輸出量 15%，總血流靠肌原性與代謝性自動調節維持穩定，對血中 CO₂ 最敏感（CO₂ 高 → 擴張；過度換氣 CO₂ 低 → 收縮而頭暈）；腦中活躍的區域局部血流增加；皮膚血流主要為了散熱，交感神經控制動靜脈吻合與小動脈，熱時擴張、冷時收縮。</div>
+  <div class="think">為什麼緊張時快速大口呼吸（過度換氣），反而會頭暈、手腳發麻？</div>
+
+  <h3 id="h13">腦循環 Cerebral Circulation</h3>
+  <p class="core">腦約占體重 2%，卻用掉約 15% 心輸出量與 20% 氧；總腦血流靠自動調節維持穩定（平均動脈壓約 60–150 mmHg 範圍內），交感神經影響很小；對動脈 CO₂ 分壓最敏感：CO₂↑（H⁺↑）→ 腦血管擴張，CO₂↓（過度換氣）→ 收縮 → 頭暈；局部活躍腦區血流增加（功能性磁振造影的原理）。</p>
+  <ul class="dots">
+    <li>腦只占體重約 2%，卻用掉約 <b>15% 的心輸出量</b>與 <b>20% 的氧</b>，幾乎完全依賴葡萄糖有氧代謝，所以血流中斷數秒就失去意識、數分鐘就造成損傷。</li>
+    <li><b>總腦血流維持穩定</b>：靠<b>肌原性</b>與<b>代謝性自動調節</b>，平均動脈壓在大約 60–150 mmHg 之間變動時，腦血流幾乎不變；交感神經的影響很小。</li>
+    <li>對動脈血 <b>CO₂ 分壓</b>非常敏感：CO₂ 增加（腦脊液 H⁺ 增加）→ 腦小動脈<b>擴張</b>；CO₂ 降低 → <b>收縮</b>。</li>
+    <li><b>局部</b>血流隨腦區活動改變：正在工作的腦區代謝增加，血流也增加（功能性磁振造影 fMRI 就是偵測這個變化）。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>過度換氣把太多 CO₂ 呼出，血中 CO₂ 降低 → <b>腦血管收縮</b>、腦血流減少 → 頭暈；同時血液變鹼（呼吸性鹼中毒），使血中游離 Ca²⁺ 下降，神經變得容易興奮 → 手腳與嘴唇發麻、甚至抽筋。放慢呼吸、讓 CO₂ 回升即可改善（第 16 章）。</div>
+
+  <h3 id="h14">皮膚的血流 Cutaneous Blood Flow</h3>
+  <p class="core">皮膚血流的主要功能是調節體溫：熱 → 交感張力減少（加上汗腺的交感膽鹼性纖維使緩激肽產生）→ 小動脈與動靜脈吻合擴張 → 血流大增、散熱；冷 → 交感使其收縮 → 保熱；皮膚可耐受長時間低血流；大量皮膚擴張會降低血壓（泡溫泉、熱天昏倒）；情緒也影響（臉紅、臉色蒼白）。</p>
+  <ul class="dots">
+    <li>皮膚需要的氧很少，血流主要用來<b>調節體溫</b>：皮膚血流可以從接近 0 變到約 3 L/分以上。</li>
+    <li>手、腳、耳、鼻等處有<b>動靜脈吻合</b> <i class="en-term">arteriovenous anastomoses</i>，讓血液繞過微血管直接從小動脈流到小靜脈，受<b>交感神經</b>控制。</li>
+    <li><b>熱</b>：下視丘使皮膚的交感收縮訊號減少，加上流汗時汗腺附近產生的<b>緩激肽</b>等擴張血管 → 皮膚血流大增 → 散熱。</li>
+    <li><b>冷</b>：交感興奮使皮膚血管收縮 → 減少散熱；皮膚可以忍受長時間的低血流，但太久會凍傷。</li>
+    <li>大量皮膚血管擴張會使總周邊阻力下降、血液積在皮膚，靜脈回流與血壓下降——泡溫泉、在大熱天久站時容易頭暈甚至昏倒。</li>
+    <li>情緒：尷尬時臉紅（臉部血管擴張），驚嚇時臉色蒼白（交感收縮）。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>腦：約 15% 心輸出量、20% 氧；總血流靠自動調節維持穩定；對 CO₂ 最敏感（CO₂↓ → 收縮 → 頭暈）；活躍腦區局部血流↑。</li>
+      <li>皮膚：血流主要為了調節體溫；交感控制小動脈與動靜脈吻合；熱擴張、冷收縮；大量擴張使血壓下降。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>腦循環</td><td>cerebral circulation</td><td>皮膚血流</td><td>cutaneous blood flow</td></tr>
+      <tr><td>動靜脈吻合</td><td>arteriovenous anastomoses</td><td>緩激肽</td><td>bradykinin</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">14.6</span>血壓</h2>
+  <div class="en">Blood Pressure</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>動脈血壓由哪些因素決定、怎麼被<b>壓力感受器反射</b>快速調節（含姿勢改變、<b>伐氏操作</b>），其他的反射（心房伸張受器），以及怎麼<b>測量血壓</b>、<b>脈壓</b>與<b>平均動脈壓</b>的計算。</div><div><span class="lt lt2">為什麼接在 14.5 後面？</span>前面講的心輸出量、血容積、周邊阻力，三者合起來就決定血壓；血壓又是推動血液到所有器官的動力，所以身體用反射時時把它維持住。</div></div>
+  <div class="oneline">血壓由心輸出量、總周邊阻力與血容積決定；頸動脈竇與主動脈弓的壓力感受器偵測血壓，經延腦調整自主神經：血壓高 → 心率慢、血管擴張；血壓低 → 心率快、血管收縮——站起來時不會昏倒、伐氏操作時心率的變化都是這個反射；聽診時聽到的柯氏音出現時是收縮壓、消失時是舒張壓；脈壓＝收縮壓－舒張壓，平均動脈壓≈舒張壓＋1/3 脈壓。</div>
+  <div class="think">躺很久突然站起來，為什麼有時眼前一黑？身體又是怎麼很快恢復的？</div>
+
+  <h3 id="h15">決定血壓的因素 Factors Affecting Blood Pressure</h3>
+  <p class="core">動脈血壓由三者決定：心輸出量（心率 × 心搏量）、總周邊阻力（小動脈口徑）、血容積；短期靠神經反射（壓力感受器）調整心率、收縮力與血管口徑，長期靠腎臟調整血容積（ADH、RAAS、ANP）。</p>
+  <ul class="dots">
+    <li><b>心輸出量</b>：心率與心搏量（14.1）。</li>
+    <li><b>總周邊阻力</b>：小動脈的口徑（14.3）。</li>
+    <li><b>血容積</b>：影響靜脈回流與心搏量（14.2）。</li>
+  </ul>
+  <p>短期（秒到分鐘）主要靠<b>神經反射</b>，長期（小時到天）主要靠<b>腎臟</b>調節血容積。</p>
+
+  <h3 id="h16">壓力感受器反射 Baroreceptor Reflex</h3>
+  <p class="core">壓力感受器：頸動脈竇（舌咽神經）與主動脈弓（迷走神經）的伸張受器 → 延腦心血管中樞（血管運動中樞與心臟控制中樞）；血壓↑ → 放電↑ → 副交感↑、交感↓ → 心率↓、收縮力↓、血管擴張 → 血壓↓；血壓↓ → 相反 → 心率↑、血管收縮；姿勢改變時迅速作用；是負回饋，負責短期調節。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a144" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="150" y="10" width="180" height="40" rx="10" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="240" y="35" font-size="13" text-anchor="middle" font-weight="bold">站起來 → 血壓突然下降</text>
+    <path d="M240,50 L240,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a144)"/>
+    <rect x="110" y="74" width="260" height="48" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="94" font-size="13" text-anchor="middle" font-weight="bold">壓力感受器放電減少</text><text x="240" y="112" font-size="11" text-anchor="middle">頸動脈竇（舌咽神經）、主動脈弓（迷走神經）</text>
+    <path d="M240,122 L240,142" stroke="#374151" stroke-width="2.5" marker-end="url(#a144)"/>
+    <rect x="130" y="146" width="220" height="40" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="240" y="171" font-size="13" text-anchor="middle" font-weight="bold">延腦心血管中樞</text>
+    <path d="M180,186 L100,214" stroke="#e11d48" stroke-width="2.5" marker-end="url(#a144)"/><path d="M300,186 L380,214" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a144)"/>
+    <rect x="10" y="218" width="190" height="44" rx="10" fill="#ffe4e6" stroke="#e11d48"/><text x="105" y="237" font-size="12" text-anchor="middle" font-weight="bold">交感↑</text><text x="105" y="254" font-size="11" text-anchor="middle">心率↑、收縮力↑、血管收縮</text>
+    <rect x="280" y="218" width="190" height="44" rx="10" fill="#dbeafe" stroke="#2563eb"/><text x="375" y="237" font-size="12" text-anchor="middle" font-weight="bold">副交感（迷走）↓</text><text x="375" y="254" font-size="11" text-anchor="middle">對心臟的煞車放鬆</text>
+    <text x="240" y="290" font-size="13" text-anchor="middle" font-weight="bold" fill="#15803d">→ 數秒內血壓回升（負回饋）</text>
+  </svg><figcaption>壓力感受器反射：血壓一下降，頸動脈竇與主動脈弓的感受器放電變少，延腦隨即加強交感、減弱副交感，把血壓拉回來；血壓升高時則反過來。</figcaption></figure>
+  <p><b>壓力感受器</b> <i class="en-term">baroreceptors</i> 是位於<b>頸動脈竇</b>（頸總動脈分叉處，訊號經<b>舌咽神經</b>）與<b>主動脈弓</b>（經<b>迷走神經</b>）管壁中的伸張受器。血壓升高把動脈壁撐開，它們的放電頻率就增加。訊號傳到延腦的<b>心血管中樞</b>（血管運動中樞與心臟控制中樞）：</p>
+  <ul class="dots">
+    <li><b>血壓升高</b> → 放電增加 → 副交感（迷走）↑、交感↓ → 心率↓、收縮力↓、血管擴張 → 血壓回降。</li>
+    <li><b>血壓下降</b> → 放電減少 → 交感↑、副交感↓ → 心率↑、收縮力↑、小動脈與靜脈收縮 → 血壓回升。</li>
+  </ul>
+  <p>這是快速的負回饋，主要負責<b>短期</b>（如姿勢改變）的調節；長期血壓偏高時，壓力感受器會「重新設定」到較高的血壓，所以無法單靠它矯正高血壓。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>從躺著突然站起來，重力使約 500–700 mL 血液積在下肢靜脈 → 靜脈回流與心輸出量下降 → 血壓下降 → 腦血流短暫不足 → 眼前一黑。幾秒內<b>壓力感受器反射</b>使心率加快、血管收縮，血壓就恢復了。若反射不足（老年人、脫水、某些降壓藥、自主神經病變），就會出現<b>姿勢性（直立性）低血壓</b>。</div>
+  <h4>伐氏操作 The Valsalva Maneuver</h4>
+  <p class="core">伐氏操作＝聲門關閉時用力呼氣（如用力排便、舉重憋氣）→ 胸內壓大增 → 壓迫胸腔大靜脈，靜脈回流↓ → 心輸出量與血壓↓ → 壓力感受器反射使心率↑、血管收縮；放鬆後回流的血一下湧入，心輸出量與血壓暫時超過原本 → 反射使心率↓（反射性心搏過緩）；臨床用來測試自主神經與壓力感受器反射，也能終止某些心搏過速。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="40" y1="110" x2="470" y2="110" stroke="#e5e7eb"/><text x="36" y="114" font-size="11" text-anchor="end" fill="#6b7280">基準</text>
+    <path d="M40,110 L90,110 L95,80 C120,90 150,130 200,140 C215,140 225,128 240,120 L250,100 L260,150 C275,110 290,70 315,62 C340,70 360,100 400,108 L470,110" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <text x="110" y="72" font-size="11" fill="#b91c1c">血壓</text>
+    <path d="M40,200 L90,200 L120,198 C160,190 200,170 245,166 L260,168 C280,200 300,222 330,224 C370,216 410,204 470,200" fill="none" stroke="#2563eb" stroke-width="3"/>
+    <text x="120" y="226" font-size="11" fill="#1d4ed8">心率↑（反射）</text><text x="300" y="214" font-size="11" fill="#1d4ed8" text-anchor="end">心率↓</text>
+    <rect x="90" y="20" width="160" height="22" fill="#fef3c7"/><text x="170" y="36" font-size="12" text-anchor="middle" font-weight="bold">憋氣用力（胸內壓↑）</text>
+    <text x="350" y="36" font-size="12" text-anchor="middle" font-weight="bold">放鬆後</text>
+    <text x="96" y="152" font-size="11" fill="#374151">回流↓ → 血壓↓</text><text x="300" y="56" font-size="11" fill="#374151">血湧回 → 血壓暫時↑</text>
+  </svg><figcaption>伐氏操作中血壓（紅）與心率（藍）的變化（示意）：憋氣時血壓下降、心率反射性加快；放鬆後血壓暫時衝高、心率反射性變慢。</figcaption></figure>
+  <p><b>伐氏操作</b> <i class="en-term">Valsalva maneuver</i> 是<b>聲門關閉時用力呼氣</b>，日常例子有用力排便、舉重時憋氣、吹氣球、分娩用力：</p>
+  <ol class="steps">
+    <li>用力時<b>胸內壓大幅升高</b>，壓迫胸腔內的大靜脈 → <b>靜脈回流減少</b> → 心搏量、心輸出量與<b>血壓下降</b>。</li>
+    <li>壓力感受器偵測到血壓下降 → 反射性<b>心率加快</b>、血管收縮。</li>
+    <li>放鬆後，積在周邊的血一下子回流，心輸出量增加，加上血管仍在收縮 → <b>血壓暫時超過原本的水準</b> → 壓力感受器反射使<b>心率變慢</b>。</li>
+  </ol>
+  <div class="warn"><b class="t">國考考過：伐氏操作</b>——關鍵是「聲門關閉、用力呼氣 → 胸內壓↑ → 靜脈回流↓ → 心輸出量↓、血壓↓ → 反射性心率↑」；放鬆後血壓回衝 → 反射性心率↓。臨床用來檢查壓力感受器反射與自主神經功能，也能經迷走神經終止某些陣發性上心室心搏過速。心臟病人用力排便時可能因此誘發心律不整，所以要預防便秘（高纖、足夠水分）。</div>
+
+  <h3 id="h17">心房伸張反射 Atrial Stretch Reflexes</h3>
+  <p class="core">心房的低壓伸張受器偵測靜脈回流與血容積：血容積↑ → 心房被撐開 → 減少 ADH 與交感（使腎臟排水）、分泌 ANP，並使心率加快（班布里奇反射）以把多餘的血打出去。</p>
+  <p>心房（與大靜脈）壁上的<b>低壓伸張受器</b>偵測血容積。血容積增加使心房被撐開時：反射性<b>減少 ADH</b> 分泌與腎臟的交感活性（多排水）、心房分泌 <b>ANP</b>（14.2），並使心率略為加快（<b>班布里奇反射</b> Bainbridge reflex），把多出的血打出去。</p>
+
+  <h3 id="h18">測量血壓 Measurement of Blood Pressure</h3>
+  <p class="core">聽診法：壓脈帶加壓到超過收縮壓（血流停止，無聲）→ 慢慢放氣 → 第一個柯氏音出現＝收縮壓（血液在壓迫處斷續噴出產生亂流聲）→ 聲音消失＝舒張壓（血流恢復平順層流）；正常約 120/80 mmHg。</p>
+  <ol class="steps">
+    <li>在上臂綁<b>壓脈帶</b>，充氣到壓力超過<b>收縮壓</b>，肱動脈被壓扁、血流停止，聽診器聽不到聲音。</li>
+    <li>慢慢放氣，當壓脈帶壓力剛低於收縮壓時，每次心縮期的高壓把血液擠過被壓扁的動脈，形成<b>亂流</b>，產生「咚、咚」的<b>柯氏音</b> <i class="en-term">sounds of Korotkoff</i>——第一個聲音出現時的壓力就是<b>收縮壓</b>。</li>
+    <li>繼續放氣，當壓力低於<b>舒張壓</b>時，動脈整個週期都保持暢通，血流恢復平順的<b>層流</b>，聲音<b>消失</b>——此時的壓力就是舒張壓。</li>
+  </ol>
+  <p>正常成人約 <b>120/80 mmHg</b>（收縮壓/舒張壓）。電子血壓計則多用震盪法偵測動脈壁的振動。</p>
+
+  <h3 id="h19">脈壓與平均動脈壓 Pulse Pressure and Mean Arterial Pressure</h3>
+  <p class="core">脈壓＝收縮壓－舒張壓（120－80＝40 mmHg），摸到的脈搏就是脈壓造成的；平均動脈壓 ≈ 舒張壓＋1/3 脈壓（80＋13≈93 mmHg），因心舒期較長所以較接近舒張壓；平均動脈壓是推動血液到各器官的有效壓力。</p>
+  <ul class="dots">
+    <li><b>脈壓</b> <i class="en-term">pulse pressure</i>＝收縮壓－舒張壓，例：120－80＝40 mmHg。在手腕摸到的<b>脈搏</b>就是脈壓造成的動脈擴張。動脈硬化（失去彈性）時收縮壓升高、脈壓變大。</li>
+    <li><b>平均動脈壓</b> <i class="en-term">mean arterial pressure, MAP</i>≈ 舒張壓＋1/3 脈壓，例：80＋40/3 ≈ <b>93 mmHg</b>。因為心舒期比心縮期長，平均值較接近舒張壓。它代表推動血液流到各器官的平均驅動力。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>血壓由心輸出量、總周邊阻力、血容積決定；短期靠反射、長期靠腎臟。</li>
+      <li>壓力感受器：頸動脈竇（舌咽）、主動脈弓（迷走）→ 延腦；血壓↓ → 交感↑、心率↑、血管收縮；姿勢性低血壓。</li>
+      <li>國考：伐氏操作＝聲門關閉用力呼氣 → 胸內壓↑ → 回流↓ → 血壓↓ → 心率↑；放鬆後血壓回衝 → 心率↓。</li>
+      <li>心房伸張受器：血量↑ → ADH↓、ANP↑、班布里奇反射。</li>
+      <li>聽診：柯氏音出現＝收縮壓、消失＝舒張壓；脈壓＝收縮壓－舒張壓；MAP ≈ 舒張壓＋1/3 脈壓。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>壓力感受器</td><td>baroreceptor</td><td>壓力感受器反射</td><td>baroreceptor reflex</td></tr>
+      <tr><td>頸動脈竇／主動脈弓</td><td>carotid sinus / aortic arch</td><td>伐氏操作</td><td>Valsalva maneuver</td></tr>
+      <tr><td>姿勢性低血壓</td><td>orthostatic (postural) hypotension</td><td>班布里奇反射</td><td>Bainbridge reflex</td></tr>
+      <tr><td>柯氏音</td><td>sounds of Korotkoff</td><td>收縮壓／舒張壓</td><td>systolic / diastolic pressure</td></tr>
+      <tr><td>脈壓</td><td>pulse pressure</td><td>平均動脈壓</td><td>mean arterial pressure (MAP)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 14.7 ============ -->
+<section class="sec det" id="s7">
+  <h2><span class="no">14.7</span>高血壓、休克與鬱血性心衰竭</h2>
+  <div class="en">Hypertension, Shock, and Congestive Heart Failure</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>血壓與循環調節失敗的三個情況：<b>高血壓</b>（定義、原因、危險與治療，包括飲食）；<b>循環性休克</b>（低血容積、敗血性、過敏性、神經性、心因性）；<b>鬱血性心衰竭</b>（心臟打不出回流的血，造成水腫）。</div><div><span class="lt lt2">為什麼放最後？</span>前六節講正常的調節；這一節把所學用來理解疾病，也是營養師在臨床最常遇到的情況（限鈉飲食、DASH 飲食、心衰竭的水分與鈉控制）。</div></div>
+  <div class="oneline">高血壓多為原因不明的原發性，與鈉攝取、肥胖、腎臟保鈉、交感與 RAAS 活性有關，長期傷害血管、心、腦、腎，可用減鹽、DASH 飲食、減重、運動與藥物控制；休克是組織灌流不足，身體以交感與 RAAS 代償；心衰竭時心輸出量不足，腎臟以為血量不夠而保鈉保水，造成肺水腫或周邊水腫。</div>
+  <div class="think">為什麼高血壓被稱為「沉默殺手」？</div>
+
+  <h3 id="h20">高血壓 Hypertension</h3>
+  <p class="core">高血壓：簡報定義為血壓持續 ≥ 140/90 mmHg（台灣 2022 年指引已改為 ≥ 130/80 mmHg）；約 90–95% 為原發性（原因不明，與遺傳、高鈉、肥胖、腎臟排鈉能力、交感與 RAAS、胰島素阻抗有關），其餘為續發性（腎臟病、腎動脈狹窄、醛固酮過多、庫欣、嗜鉻細胞瘤等）；長期增加心臟負荷（左心室肥大）、加速動脈粥狀硬化，導致中風、心肌梗塞、心衰竭、腎衰竭；治療：減鈉、DASH 飲食、減重、運動、限酒，藥物有利尿劑、β 阻斷劑、ACE 抑制劑、ARB、鈣通道阻斷劑。</p>
+  <p><b>高血壓</b> <i class="en-term">hypertension</i> 是血壓<b>持續</b>偏高。</p>
+  <div class="tblwrap"><table>
+    <tr><th>來源</th><th>高血壓的定義</th></tr>
+    <tr><td>課堂簡報（課本）</td><td>收縮壓 ≥ <b>140</b> 或舒張壓 ≥ <b>90</b> mmHg</td></tr>
+    <tr><td>台灣高血壓治療指引（2022，台灣心臟學會與高血壓學會）</td><td>收縮壓 ≥ <b>130</b> 或舒張壓 ≥ <b>80</b> mmHg；並建議多數病人的治療目標為 &lt; 130/80</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">注意：</b>考試時依題目給的標準作答；若題目沒說明，國際上傳統的分界是 140/90，新版國內外指引多採 130/80。這是依老師決定在簡報數字旁加註的現行指引，<b>不是課本原文</b>。</div>
+  <ul class="dots">
+    <li><b>原發性（本態性）高血壓</b> <i class="en-term">essential hypertension</i>：約占 <b>90–95%</b>，沒有單一明確原因，與遺傳、<b>高鈉飲食</b>、<b>肥胖</b>、腎臟排鈉能力下降、交感與 RAAS 活性增加、胰島素阻抗、老化（動脈變硬）、飲酒、壓力有關。總周邊阻力增加是共同特徵。</li>
+    <li><b>續發性高血壓</b> <i class="en-term">secondary hypertension</i>：有明確原因，例如腎臟疾病、<b>腎動脈狹窄</b>（腎臟血流少 → 腎素大增）、原發性醛固酮過多症、庫欣氏症候群、嗜鉻細胞瘤（第 11 章）、睡眠呼吸中止、某些藥物。</li>
+    <li><b>危險</b>：高血壓多半<b>沒有症狀</b>，卻長期增加左心室的後負荷（<b>左心室肥大</b>，最後心衰竭）、損傷血管內皮並<b>加速動脈粥狀硬化</b>，導致<b>中風</b>、心肌梗塞、腎衰竭、視網膜病變。</li>
+    <li><b>藥物</b>：<b>利尿劑</b>（排鈉排水、降低血容積）、<b>β 阻斷劑</b>（減慢心率與收縮力、抑制腎素）、<b>ACE 抑制劑</b>與 <b>ARB</b>（阻斷 RAAS）、<b>鈣通道阻斷劑</b>（使血管平滑肌放鬆）、α₁ 阻斷劑。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>大多數高血壓患者<b>沒有任何感覺</b>，卻在多年之間默默損傷血管、心臟、腦與腎臟，往往到發生中風或心肌梗塞才發現。所以定期量血壓很重要（例如國健署推廣的「722」居家量血壓原則）。</div>
+  <div class="nut"><b class="t">營養連結：</b>高血壓的生活與飲食建議：①<b>減鈉</b>（衛福部建議成人每日鈉 &lt; 2,400 mg，約 6 g 鹽；減少加工食品、醬料、湯汁）；②<b>DASH 飲食</b>（多蔬果、全穀、低脂乳品、堅果豆類，富含<b>鉀、鎂、鈣</b>與纖維，減少飽和脂肪、紅肉、甜食）；③<b>減重</b>（每減 1 公斤約降 1 mmHg）；④規律有氧運動；⑤限酒、戒菸。注意：腎功能不佳或服用 ACE 抑制劑、ARB、保鉀利尿劑者，增加鉀攝取前要先評估血鉀。</div>
+
+  <h3 id="h21">循環性休克 Circulatory Shock</h3>
+  <p class="core">休克＝組織灌流不足（血流無法供應足夠的氧與養分）；代償：壓力感受器 → 交感↑（心率快、皮膚濕冷蒼白、血管收縮）、RAAS 與 ADH ↑（尿少、口渴）、組織液被吸回血管；種類：低血容積性（出血、脫水、燒傷）、敗血性（細菌毒素 → 大量 NO 使血管擴張）、過敏性（組織胺使血管擴張、通透性增加）、神經性（交感張力喪失，如脊髓損傷、強烈情緒）、心因性（心輸出量不足，如大面積心肌梗塞）；嚴重時進入不可逆階段。</p>
+  <p><b>循環性休克</b> <i class="en-term">circulatory shock</i> 是<b>組織灌流不足</b>：血液無法送給組織足夠的氧與養分、帶走廢物。身體會盡力<b>代償</b>：</p>
+  <ul class="dots">
+    <li>壓力感受器反射 → 交感神經強烈興奮：<b>心率加快</b>（脈搏快而弱）、皮膚與內臟血管收縮（<b>皮膚蒼白、濕冷</b>）、靜脈收縮增加回流。</li>
+    <li>腎臟血流減少 → <b>RAAS</b> 與 <b>ADH</b> 增加 → 保鈉保水、<b>尿量減少</b>、口渴。</li>
+    <li>微血管靜水壓下降 → 組織液被吸回血管，暫時補充血量。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>原因</th><th>機制</th></tr>
+    <tr><td><b>低血容積性</b> hypovolemic</td><td>大出血、嚴重嘔吐腹瀉、大面積燒傷</td><td>血量減少 → 回流與心輸出量下降</td></tr>
+    <tr><td><b>敗血性</b> septic</td><td>嚴重細菌感染（內毒素）</td><td>大量 NO 與發炎物質使血管廣泛擴張、通透性增加</td></tr>
+    <tr><td><b>過敏性</b> anaphylactic</td><td>嚴重過敏（藥物、蜂螫、花生等食物）</td><td>大量<b>組織胺</b>使血管擴張、微血管漏液；需立即注射腎上腺素</td></tr>
+    <tr><td><b>神經性</b> neurogenic</td><td>脊髓損傷、深度麻醉、強烈情緒（昏厥）</td><td>交感血管張力喪失 → 血管擴張</td></tr>
+    <tr><td><b>心因性</b> cardiogenic</td><td>大面積心肌梗塞、嚴重心律不整</td><td>心臟打不出血</td></tr>
+  </table></div>
+  <p>如果代償不足或時間太長，組織缺氧造成酸中毒、細胞受損，心肌本身也缺血，就會進入惡性循環的<b>不可逆休克</b>。</p>
+
+  <h3 id="h22">鬱血性心衰竭 Congestive Heart Failure</h3>
+  <p class="core">心衰竭＝心輸出量不足以應付身體需要（心肌梗塞、長期高血壓、瓣膜病、心肌病變造成）；腎臟血流少 → 誤以為血量不足 → RAAS、ADH、交感↑ → 保鈉保水 → 血容積增加 → 靜脈壓升高 → 水腫：左心衰竭 → 肺鬱血、肺水腫、呼吸困難（躺下更喘）；右心衰竭 → 周邊水腫（腳踝）、肝腫大、頸靜脈怒張；治療：利尿劑、ACE 抑制劑／ARB、β 阻斷劑，限鈉與限水。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a145" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="150" y="10" width="180" height="40" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="240" y="35" font-size="13" text-anchor="middle" font-weight="bold">心臟收縮力不足</text>
+    <path d="M240,50 L240,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a145)"/>
+    <rect x="130" y="74" width="220" height="40" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="99" font-size="13" text-anchor="middle" font-weight="bold">心輸出量↓、腎血流↓</text>
+    <path d="M240,114 L240,134" stroke="#374151" stroke-width="2.5" marker-end="url(#a145)"/>
+    <rect x="90" y="138" width="300" height="40" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="240" y="163" font-size="13" text-anchor="middle" font-weight="bold">RAAS、ADH、交感↑ → 保鈉保水</text>
+    <path d="M240,178 L240,198" stroke="#374151" stroke-width="2.5" marker-end="url(#a145)"/>
+    <rect x="110" y="202" width="260" height="40" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="240" y="227" font-size="13" text-anchor="middle" font-weight="bold">血容積↑、靜脈壓↑ → 水腫</text>
+    <path d="M390,222 C460,200 460,60 334,30" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a145)"/><text x="464" y="130" font-size="11" fill="#b91c1c" text-anchor="end">心臟負荷更重</text>
+    <text x="10" y="236" font-size="11" fill="#1d4ed8">左心衰竭 → 肺水腫</text><text x="10" y="254" font-size="11" fill="#1d4ed8">右心衰竭 → 腳踝水腫</text>
+  </svg><figcaption>心衰竭的惡性循環：腎臟以為血量不夠，拚命保鈉保水，結果血量更多、心臟負荷更重，並造成水腫。治療就是打斷這個循環。</figcaption></figure>
+  <p><b>鬱血性心衰竭</b> <i class="en-term">congestive heart failure</i> 是心臟打出的血不足以應付身體需要，常見原因有心肌梗塞、長期高血壓、瓣膜疾病、心肌病變。</p>
+  <ul class="dots">
+    <li><b>代償反而加重</b>：心輸出量下降使腎臟血流減少，腎臟「誤以為」血量不夠，啟動 <b>RAAS、ADH</b> 與交感神經，保鈉保水 → 血容積增加 → 靜脈壓升高 → 心臟負荷更重。</li>
+    <li><b>左心衰竭</b>：血液回堵到<b>肺靜脈</b> → 肺微血管靜水壓升高 → <b>肺鬱血、肺水腫</b> → 呼吸困難，躺下時更喘（端坐呼吸）。</li>
+    <li><b>右心衰竭</b>：血液回堵到<b>體循環靜脈</b> → <b>周邊水腫</b>（腳踝、小腿，壓下去有凹陷）、肝腫大、腹水、頸靜脈怒張。</li>
+    <li><b>治療</b>：利尿劑（排鈉排水）、ACE 抑制劑或 ARB（阻斷 RAAS）、β 阻斷劑（降低交感的長期傷害）等；並<b>限鈉</b>、依醫囑<b>限水</b>，每天量體重監測水分滯留。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>心衰竭病人每天早上固定量體重：短期內體重突然增加（例如 2–3 天增加 1–2 公斤）多半是<b>水分滯留</b>而非長胖，要回報醫療團隊。飲食重點是<b>限鈉</b>、依醫囑<b>限水</b>、少量多餐；長期心衰竭可能出現<b>心臟惡病質</b>（肌肉流失），要注意熱量與蛋白質足夠。</div>
+  <div class="warn"><b class="t">補充：電解質與心臟</b>——<b>高血鉀</b>使心肌靜止電位升高、興奮性與傳導下降，嚴重時心臟<b>停在舒張期</b>；<b>高血鈣</b>使收縮增強，極高時心臟<b>停在收縮期</b>（依老師簡報採用的說法）。腎衰竭病人要注意鉀的攝取。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>高血壓：簡報 ≥ 140/90；台灣 2022 指引 ≥ 130/80；90–95% 原發性；續發性如腎動脈狹窄、醛固酮過多。</li>
+      <li>危害：左心室肥大、動脈粥狀硬化、中風、心梗、腎衰竭；多無症狀。</li>
+      <li>治療：減鈉、DASH（鉀鎂鈣）、減重、運動、限酒；利尿劑、β 阻斷劑、ACE 抑制劑、ARB、鈣通道阻斷劑。</li>
+      <li>休克：組織灌流不足；代償（交感、RAAS、ADH）；低血容積、敗血、過敏、神經性、心因性。</li>
+      <li>心衰竭：腎臟保鈉保水的惡性循環；左 → 肺水腫，右 → 周邊水腫；限鈉、限水、利尿劑、ACE 抑制劑。</li>
+      <li>高血鉀 → 停在舒張期；高血鈣 → 停在收縮期。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>高血壓</td><td>hypertension</td><td>原發性／續發性高血壓</td><td>essential / secondary hypertension</td></tr>
+      <tr><td>左心室肥大</td><td>left ventricular hypertrophy</td><td>利尿劑</td><td>diuretic</td></tr>
+      <tr><td>β 阻斷劑</td><td>β-blocker</td><td>鈣通道阻斷劑</td><td>calcium channel blocker</td></tr>
+      <tr><td>循環性休克</td><td>circulatory shock</td><td>低血容積性休克</td><td>hypovolemic shock</td></tr>
+      <tr><td>敗血性／過敏性休克</td><td>septic / anaphylactic shock</td><td>心因性休克</td><td>cardiogenic shock</td></tr>
+      <tr><td>鬱血性心衰竭</td><td>congestive heart failure</td><td>肺水腫</td><td>pulmonary edema</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s8">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>心輸出量</td><td>CO＝HR × SV，約 5 L/分；心搏量由前負荷、收縮力、後負荷決定</td></tr>
+    <tr><td>法蘭克—史達林</td><td>EDV↑ → 心肌拉長 → 收縮↑ → SV↑；回來多少打多少</td></tr>
+    <tr><td>自主神經（國考）</td><td>交感：心率、收縮力、傳導↑；副交感：心率、房室傳導↓，對心室收縮力影響小</td></tr>
+    <tr><td>史達林力與水腫</td><td>靜水壓推出、白蛋白拉回；水腫：靜水壓↑、白蛋白↓、通透性↑、淋巴阻塞</td></tr>
+    <tr><td>血容積調節</td><td>ADH（水通道）；RAAS：腎素 → AI →（ACE）→ AII → 收縮、醛固酮、口渴；ANP 相反</td></tr>
+    <tr><td>血流</td><td>流量＝ΔP ÷ R；阻力 ∝ 1/r⁴；MAP ≈ CO × 總周邊阻力</td></tr>
+    <tr><td>血管調節</td><td>交感 α₁ 收縮；代謝產物、NO（精胺酸 → cGMP）擴張；自動調節</td></tr>
+    <tr><td>器官血流</td><td>心肌取氧 75%、冠狀血流在心舒期；運動時肌肉血流 20 倍；腦恆定、對 CO₂ 敏感；皮膚調體溫</td></tr>
+    <tr><td>壓力感受器</td><td>頸動脈竇（IX）、主動脈弓（X）；血壓↓ → 交感↑；姿勢性低血壓</td></tr>
+    <tr><td>國考：伐氏操作</td><td>聲門關閉用力呼氣 → 胸內壓↑ → 回流↓ → 血壓↓ → 心率↑；放鬆後回衝 → 心率↓</td></tr>
+    <tr><td>測量</td><td>柯氏音出現＝收縮壓、消失＝舒張壓；脈壓；MAP ≈ 舒張壓＋1/3 脈壓</td></tr>
+    <tr><td>疾病</td><td>高血壓（140/90；台灣 130/80）、DASH 與減鈉；休克五型；心衰竭與水腫</td></tr>
+  </table></div>
+  <h3 id="h23">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 寫出心輸出量公式，說出影響心搏量的三個因素？</li>
+    <li>□ 用自己的話解釋法蘭克—史達林定律？</li>
+    <li>□ 用史達林力解釋組織液的形成，並說出四種水腫原因？</li>
+    <li>□ 依序畫出 RAAS，說出血管收縮素 II 的三個作用？</li>
+    <li>□ 用泊肅葉定律解釋小動脈為何是調節血流的主角？</li>
+    <li>□ 說明運動時血流怎麼重新分配、血壓怎麼變化？</li>
+    <li>□ 說明壓力感受器反射與伐氏操作中的心率變化（國考）？</li>
+    <li>□ 計算脈壓與平均動脈壓？</li>
+    <li>□ 說出高血壓的飲食建議與心衰竭為何會水腫？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 14 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"心率 75 次/分、心舒期末容積 140 mL、心縮期末容積 60 mL，心輸出量約為？",o:["4.5 L/分","6.0 L/分","10.5 L/分","5.6 L/分"],a:1,e:"心搏量＝140－60＝80 mL；CO＝75 × 80＝<b>6,000 mL/分＝6.0 L/分</b>。"},
+ {q:"回流到心室的血越多，心室收縮越有力、打出越多，稱為？",o:["泊肅葉定律","法蘭克—史達林定律","伐氏操作","班布里奇反射"],a:1,e:"<b>法蘭克—史達林定律</b>：心臟的內在調節，回來多少打多少。"},
+ {q:"下列何者會使心搏量減少？",o:["心舒期末容積增加","交感神經刺激","動脈壓（後負荷）升高","腎上腺素"],a:2,e:"<b>後負荷</b>越高，心室越難把血射出。"},
+ {q:"副交感神經對心臟的作用，下列何者錯誤？（國考）",o:["心率變慢","房室傳導變慢","心室收縮力大幅增強","釋放乙醯膽鹼"],a:2,e:"迷走神經主要分布在節律與傳導組織，對心室收縮力影響小；增強收縮力的是<b>交感</b>。"},
+ {q:"將液體從血管拉回、維持血容積的主要力量是？",o:["微血管靜水壓","血漿膠體滲透壓（白蛋白）","組織液靜水壓","淋巴管收縮"],a:1,e:"白蛋白產生的<b>膠體滲透壓</b>把水拉回。"},
+ {q:"肝硬化病人出現水腫與腹水，主要原因是？",o:["微血管通透性增加","血漿白蛋白降低","淋巴管阻塞","ADH 分泌減少"],a:1,e:"肝臟製造<b>白蛋白</b>減少 → 膠體滲透壓↓（門脈高壓也有影響）。"},
+ {q:"把血管收縮素 I 轉成血管收縮素 II 的酵素主要位於？",o:["腎臟近腎絲球細胞","肝臟","肺臟微血管內皮","腎上腺皮質"],a:2,e:"<b>ACE</b> 主要在肺微血管內皮；腎素才是腎臟分泌。"},
+ {q:"下列何者不是血管收縮素 II 的作用？",o:["收縮小動脈","刺激醛固酮分泌","刺激口渴與 ADH","促進腎臟排鈉"],a:3,e:"血管收縮素 II 使身體<b>保鈉</b>；排鈉的是 ANP。"},
+ {q:"血容積增加使心房被撐開時，心房分泌的激素作用是？",o:["保鈉保水","排鈉排水、擴張血管","收縮血管","刺激腎素"],a:1,e:"<b>ANP</b>：利鈉、利尿、抑制 RAAS、擴張血管。"},
+ {q:"小動脈半徑縮小為原來的一半，在壓力差不變下血流變為？",o:["1/2","1/4","1/8","1/16"],a:3,e:"阻力與半徑四次方成反比：(1/2)⁴＝<b>1/16</b>。"},
+ {q:"血管內皮產生一氧化氮的原料胺基酸是？",o:["麩醯胺酸","L-精胺酸","酪胺酸","色胺酸"],a:1,e:"NO 合成酶以 <b>L-精胺酸</b>製造 NO → cGMP → 平滑肌放鬆。"},
+ {q:"左心室的冠狀血流主要發生在？",o:["心縮期","心舒期","等容積收縮期","射血期"],a:1,e:"收縮時心肌壓迫冠狀血管，所以主要在<b>心舒期</b>。"},
+ {q:"劇烈運動時，下列哪個器官的血流量大致維持不變？",o:["骨骼肌","腎臟","腦","腸胃道"],a:2,e:"<b>腦血流</b>靠自動調節維持穩定。"},
+ {q:"過度換氣後頭暈，主要是因為？",o:["血中 CO₂ 下降使腦血管收縮","血中 O₂ 過高","血壓升高","腦血管擴張"],a:0,e:"CO₂↓ → <b>腦小動脈收縮</b> → 腦血流減少。"},
+ {q:"頸動脈竇的壓力感受器訊號經哪條神經傳到延腦？",o:["迷走神經","舌咽神經","顏面神經","膈神經"],a:1,e:"頸動脈竇 → <b>舌咽神經</b>；主動脈弓 → 迷走神經。"},
+ {q:"伐氏操作用力憋氣期間，下列何者正確？（國考）",o:["胸內壓下降，靜脈回流增加","胸內壓上升，靜脈回流減少，心率反射性加快","血壓上升，心率變慢","心輸出量增加"],a:1,e:"聲門關閉用力呼氣 → <b>胸內壓↑ → 回流↓ → 血壓↓ → 心率反射性↑</b>；放鬆後才是血壓回衝、心率變慢。"},
+ {q:"以聽診法量血壓時，柯氏音「消失」時壓脈帶的壓力代表？",o:["收縮壓","舒張壓","平均動脈壓","脈壓"],a:1,e:"聲音出現＝收縮壓；<b>消失＝舒張壓</b>。"},
+ {q:"血壓 130/70 mmHg，平均動脈壓約為？",o:["100","90","83","60"],a:1,e:"脈壓＝130－70＝60；MAP ≈ 70＋60/3＝<b>90 mmHg</b>。"},
+ {q:"下列何者為過敏性休克的主要機制？",o:["大量出血","組織胺使血管擴張、微血管漏液","心肌收縮力不足","交感張力增加"],a:1,e:"過敏性休克：大量<b>組織胺</b>；需立即注射腎上腺素。"},
+ {q:"左心衰竭最典型的表現是？",o:["腳踝水腫","肺水腫、呼吸困難","肝腫大","頸靜脈怒張"],a:1,e:"左心衰竭 → 血回堵到肺 → <b>肺水腫</b>；右心衰竭 → 周邊水腫、肝腫大、頸靜脈怒張。"},
+ {q:"高血壓的飲食建議（DASH）強調增加哪些礦物質？",o:["鈉、氯","鉀、鎂、鈣","鐵、鋅","磷、硫"],a:1,e:"DASH 富含<b>鉀、鎂、鈣</b>與纖維，並減少鈉。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

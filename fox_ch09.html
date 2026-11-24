@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 9 章 自主神經系統</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="9">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 9 章　自主神經系統</h1>
+  <div class="en">Chapter 9 The Autonomic Nervous System（課本 p.257–280）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">9.1 不隨意動器的神經控制</a>
+  <a class="sub" href="#h1">自主神經元 Autonomic Neurons</a>
+  <a class="sub" href="#h2">內臟動器 Visceral Effector Organs</a>
+  <a href="#s2">9.2 自主神經系統的分支</a>
+  <a class="sub" href="#h3">交感神經 Sympathetic Division</a>
+  <a class="sub" href="#h4">副交感神經 Parasympathetic Division</a>
+  <a href="#s3">9.3 自主神經系統的功能</a>
+  <a class="sub" href="#h5">腎上腺素性與膽鹼性傳遞 Adrenergic and Cholinergic Synaptic Transmission</a>
+  <a class="sub" href="#h6">腎上腺素性刺激的反應 Responses to Adrenergic Stimulation</a>
+  <a class="sub" href="#h7">膽鹼性刺激的反應 Responses to Cholinergic Stimulation</a>
+  <a class="sub" href="#h8">其他自主神經傳遞物質 Other Autonomic Neurotransmitters</a>
+  <a class="sub" href="#h9">雙重支配的器官 Organs with Dual Innervation</a>
+  <a class="sub" href="#h10">沒有雙重支配的器官 Organs without Dual Innervation</a>
+  <a href="#s4">9.4 高級腦中樞對自主神經的控制</a>
+  <a class="sub" href="#h11">腦的各層級控制</a>
+  <a href="#s5">本章重點整理</a>
+  <a class="sub" href="#h12">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　心跳、血壓、消化、流汗、瞳孔大小……這些你不用想就會自動調整，靠的是<b>自主神經系統</b>。<span class="key">它是第 1 章「外在調節」中神經部分的主力：交感神經讓身體準備「戰或逃」，副交感神經讓身體「休息與消化」，兩者像油門和煞車一樣拮抗調節大多數內臟器官。</span></div>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="10" y="10" width="225" height="260" rx="14" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/>
+    <rect x="245" y="10" width="225" height="260" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="122" y="38" font-size="17" text-anchor="middle" font-weight="bold" fill="#be123c">交感：戰或逃</text>
+    <text x="357" y="38" font-size="17" text-anchor="middle" font-weight="bold" fill="#1d4ed8">副交感：休息與消化</text>
+    <g font-size="14" fill="#374151">
+      <text x="30" y="72">・瞳孔放大</text><text x="30" y="100">・心跳加快、收縮變強</text><text x="30" y="128">・支氣管擴張</text><text x="30" y="156">・血糖上升（肝醣分解）</text><text x="30" y="184">・消化變慢、括約肌收縮</text><text x="30" y="212">・流汗</text><text x="30" y="240">・皮膚與內臟血管收縮</text>
+      <text x="265" y="72">・瞳孔縮小、看近</text><text x="265" y="100">・心跳變慢</text><text x="265" y="128">・支氣管收縮</text><text x="265" y="156">・儲存能量</text><text x="265" y="184">・消化液分泌、蠕動增加</text><text x="265" y="212">・唾液、淚液分泌</text><text x="265" y="240">・排尿、排便</text></g>
+  </svg><figcaption>交感與副交感對同一個器官常常作用相反。被狗追的時候是左邊；吃飽飯坐著休息時是右邊。</figcaption></figure>
+  <div class="path">
+    <div class="step"><span class="sn">9.1</span><div><b>不隨意動器的神經控制</b><br><span class="sq">自主神經和體運動神經有什麼不同：兩個神經元串聯（節前、節後），作用在心肌、平滑肌、腺體。</span></div></div>
+    <div class="arr">↓ 自主神經分成兩支，從不同的地方出發</div>
+    <div class="step"><span class="sn">9.2</span><div><b>交感與副交感的構造</b><br><span class="sq">交感從胸腰段、神經節在脊柱旁；副交感從腦幹與薦段、神經節靠近器官；腎上腺髓質。</span></div></div>
+    <div class="arr">↓ 它們用什麼神經傳遞物質、作用在哪些受體？</div>
+    <div class="step"><span class="sn">9.3</span><div><b>自主神經的功能</b><br><span class="sq">腎上腺素性（α、β 受體）與膽鹼性（菸鹼型、毒蕈鹼型）傳遞；雙重支配與單一支配的器官。</span></div></div>
+    <div class="arr">↓ 誰在指揮自主神經？</div>
+    <div class="step"><span class="sn">9.4</span><div><b>高級腦中樞的控制</b><br><span class="sq">延腦、下視丘、邊緣系統與大腦皮質怎麼影響自主神經。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 9.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">9.1</span>不隨意動器的神經控制</h2>
+  <div class="en">Neural Control of Involuntary Effectors</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>自主神經的<b>兩個神經元</b>串聯構造（節前、節後神經元）、和體運動神經的比較，以及<b>內臟動器</b>（心肌、平滑肌、腺體）的特性。</div><div><span class="lt lt2">為什麼放第一節？</span>先建立自主神經的基本「線路圖」，9.2 再比較交感與副交感的線路有何不同。</div></div>
+  <div class="oneline">體運動神經：一個神經元直達骨骼肌，只會興奮；自主神經：節前神經元（在 CNS）→ 自主神經節 → 節後神經元 → 心肌、平滑肌、腺體，可以興奮或抑制；內臟動器在沒有神經支配時仍有一定活性。</div>
+
+  <h3 id="h1">自主神經元 Autonomic Neurons</h3>
+  <p class="core">自主神經＝兩個神經元：節前（細胞本體在腦幹或脊髓側角、有髓鞘）→ 節後（細胞本體在自主神經節、無髓鞘）→ 動器。</p>
+  <figure class="pic"><svg viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="10" y="24" font-size="14" font-weight="bold" fill="#374151">體運動神經</text>
+    <rect x="20" y="40" width="70" height="40" rx="10" fill="#f5f3ff" stroke="#7c3aed"/><text x="55" y="65" font-size="12" text-anchor="middle">脊髓</text>
+    <circle cx="80" cy="60" r="6" fill="#7c3aed"/><line x1="86" y1="60" x2="380" y2="60" stroke="#7c3aed" stroke-width="4"/>
+    <rect x="384" y="42" width="80" height="36" rx="14" fill="#fecdd3" stroke="#e11d48"/><text x="424" y="65" font-size="12" text-anchor="middle">骨骼肌</text>
+    <text x="230" y="52" font-size="12" text-anchor="middle">一個神經元、有髓鞘、ACh → 只會興奮</text>
+    <text x="10" y="116" font-size="14" font-weight="bold" fill="#374151">自主神經</text>
+    <rect x="20" y="132" width="70" height="40" rx="10" fill="#f5f3ff" stroke="#7c3aed"/><text x="55" y="157" font-size="12" text-anchor="middle">CNS</text>
+    <circle cx="80" cy="152" r="6" fill="#2563eb"/><line x1="86" y1="152" x2="215" y2="152" stroke="#2563eb" stroke-width="4"/>
+    <ellipse cx="235" cy="152" rx="22" ry="16" fill="#fde68a" stroke="#b45309" stroke-width="2"/><circle cx="240" cy="152" r="6" fill="#16a34a"/>
+    <line x1="246" y1="152" x2="380" y2="152" stroke="#16a34a" stroke-width="3" stroke-dasharray="7 4"/>
+    <rect x="384" y="134" width="80" height="36" rx="14" fill="#dcfce7" stroke="#16a34a"/><text x="424" y="149" font-size="11" text-anchor="middle">心肌、平滑肌</text><text x="424" y="163" font-size="11" text-anchor="middle">腺體</text>
+    <text x="150" y="142" font-size="12" text-anchor="middle" fill="#1d4ed8">節前（有髓鞘）</text>
+    <text x="315" y="142" font-size="12" text-anchor="middle" fill="#15803d">節後（無髓鞘）</text>
+    <text x="235" y="190" font-size="12" text-anchor="middle" fill="#92400e">自主神經節</text>
+    <text x="320" y="200" font-size="12" text-anchor="middle">可興奮或抑制</text>
+  </svg><figcaption>體運動神經「一站直達」；自主神經要在神經節「轉車」一次。</figcaption></figure>
+  <p>和支配骨骼肌的體運動神經不同，自主神經從中樞到動器要經過<b>兩個神經元</b>：</p>
+  <ol class="steps">
+    <li><b>節前神經元</b> <i class="en-term">preganglionic neuron</i>：細胞本體在<b>腦幹</b>或<b>脊髓側角</b>，軸突（薄髓鞘）離開中樞到達<b>自主神經節</b>。</li>
+    <li><b>節後神經元</b> <i class="en-term">postganglionic neuron</i>：細胞本體在自主神經節內，軸突（<b>無髓鞘</b>）延伸到動器。</li>
+  </ol>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>體運動神經</th><th>自主神經</th></tr>
+    <tr><td>神經元數</td><td>1 個（脊髓或腦幹 → 肌肉）</td><td>2 個（節前 → 神經節 → 節後）</td></tr>
+    <tr><td>動器</td><td>骨骼肌</td><td>心肌、平滑肌、腺體</td></tr>
+    <tr><td>神經傳遞物質</td><td>只有 ACh</td><td>ACh 或正腎上腺素</td></tr>
+    <tr><td>效果</td><td>只有<b>興奮</b></td><td><b>興奮或抑制</b></td></tr>
+    <tr><td>切斷神經後</td><td>肌肉癱瘓、萎縮</td><td>器官仍有一定活性（之後甚至變得更敏感）</td></tr>
+    <tr><td>意識控制</td><td>隨意</td><td>不隨意</td></tr>
+  </table></div>
+
+  <h3 id="h2">內臟動器 Visceral Effector Organs</h3>
+  <p class="core">內臟動器有內在活性（心臟自律、平滑肌自發收縮、腺體基礎分泌），自主神經是「調整」它們，而非從零開始啟動；去神經後產生過敏感性。</p>
+  <p>心肌、平滑肌與腺體即使沒有神經刺激也有一定的<b>內在活性</b>：心臟有節律點會自己跳（第 13 章）、許多平滑肌會自發收縮、腺體有基礎分泌。所以自主神經的角色是<b>增加或減少</b>這些活動，而不是從零啟動。切斷自主神經後器官不會萎縮，反而會增加受體數量，對神經傳遞物質<b>更敏感</b>（去神經過敏感性 denervation hypersensitivity）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>自主神經＝節前神經元（CNS，有髓鞘）→ 自主神經節 → 節後神經元（無髓鞘）→ 動器。</li>
+      <li>體運動：1 個神經元、骨骼肌、ACh、只興奮；自主：2 個神經元、心肌平滑肌腺體、ACh 或 NE、可興奮或抑制。</li>
+      <li>內臟動器有內在活性；自主神經負責上調或下調；去神經後過敏感。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>節前／節後神經元</td><td>preganglionic / postganglionic neuron</td><td>自主神經節</td><td>autonomic ganglion</td></tr>
+      <tr><td>內臟動器</td><td>visceral effector</td><td>去神經過敏感性</td><td>denervation hypersensitivity</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 9.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">9.2</span>自主神經系統的分支</h2>
+  <div class="en">Divisions of the Autonomic Nervous System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>交感神經</b>（胸腰段）與<b>副交感神經</b>（顱薦段）從哪裡發出、神經節在哪裡、節前與節後纖維的長短，以及<b>腎上腺髓質</b>的特殊角色。</div><div><span class="lt lt2">為什麼接在 9.1 後面？</span>知道基本線路後，比較兩支的「配線」差異，就能理解為什麼交感常常全身一起反應、副交感比較局部精準。</div></div>
+  <div class="oneline">交感：胸腰段（T1–L2）發出，神經節在脊柱兩旁的交感鏈（節前短、節後長），常全身同時活化；副交感：腦幹（III、VII、IX、X 腦神經）與薦段（S2–S4）發出，神經節在器官附近或壁內（節前長、節後短），作用較局部。</div>
+  <div class="think">為什麼受到驚嚇時，心跳、瞳孔、流汗、血糖會「同時」改變？</div>
+
+  <h3 id="h3">交感神經 Sympathetic Division</h3>
+  <p class="core">胸腰段（T1–L2）脊髓側角 → 短節前纖維 → 交感鏈（椎旁神經節）或椎前（側副）神經節 → 長節後纖維；分歧多 → 大範圍同時反應；腎上腺髓質＝特化的節後神經元群，分泌腎上腺素（約 80%）與正腎上腺素入血。</p>
+  <ul class="dots">
+    <li><b>起源</b>：脊髓<b>胸段與腰段（T1–L2）</b>的側角，所以又稱<b>胸腰系統</b>。</li>
+    <li><b>神經節</b>：
+      <ul>
+        <li><b>椎旁神經節</b>：排在脊柱兩側、上下相連成<b>交感神經鏈</b> <i class="en-term">sympathetic chain</i>。</li>
+        <li><b>椎前（側副）神經節</b>：腹腔神經節、上下腸繫膜神經節，主要支配腹部與骨盆內臟。</li>
+      </ul></li>
+    <li><b>纖維長度</b>：<b>節前短、節後長</b>（神經節離中樞近、離器官遠）。</li>
+    <li><b>分歧</b>：一條節前纖維可在交感鏈中上下延伸，與許多節後神經元形成突觸（約 1:20 以上），所以交感常<b>全身同時</b>活化——這就是「<b>大量放電</b>」（mass activation）。</li>
+  </ul>
+  <h4>腎上腺髓質 Adrenal Medulla</h4>
+  <p class="core">特化的交感節後神經元群：受節前纖維刺激，把腎上腺素（約 80%）與正腎上腺素（約 20%）直接分泌入血，使交感反應更廣、更久。</p>
+  <p><b>腎上腺髓質</b> <i class="en-term">adrenal medulla</i> 由神經嵴發育而來，本質上是一群<b>特化的交感節後神經元</b>（沒有軸突）。交感節前纖維直接支配它，受刺激時把<b>腎上腺素（約 80%）</b>與<b>正腎上腺素（約 20%）</b>直接分泌到<b>血液</b>中，當作激素作用於全身，使交感反應更廣泛、更持久。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>交感節前纖維分歧很廣，加上腎上腺髓質把腎上腺素送進血液，所以驚嚇時全身的交感效應<b>同時</b>出現：心跳加快、瞳孔放大、流汗、肝臟分解肝醣使血糖上升、血液重新分配到骨骼肌——為戰鬥或逃跑做好準備。</div>
+
+  <h3 id="h4">副交感神經 Parasympathetic Division</h3>
+  <p class="core">腦幹（腦神經 III、VII、IX、X）＋薦段（S2–S4）→ 長節前纖維 → 終末神經節（器官附近或器官壁內）→ 短節後纖維；迷走神經占副交感纖維約 75%；分歧少 → 作用較局部。</p>
+  <ul class="dots">
+    <li><b>起源</b>：<b>腦幹</b>（經腦神經 III、VII、IX、X）與脊髓<b>薦段（S2–S4）</b>，所以又稱<b>顱薦系統</b>。</li>
+    <li><b>神經節</b>：<b>終末神經節</b>，位於標的器官旁邊或器官壁內。</li>
+    <li><b>纖維長度</b>：<b>節前長、節後短</b>。</li>
+    <li><b>分歧少</b>：作用較<b>局部、精準</b>，可以只影響某一個器官。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th>腦神經</th><th>副交感支配</th></tr>
+    <tr><td>III 動眼神經</td><td>瞳孔縮小（虹膜括約肌）、睫狀肌收縮（看近）</td></tr>
+    <tr><td>VII 顏面神經</td><td>淚腺、頜下腺、舌下腺分泌</td></tr>
+    <tr><td>IX 舌咽神經</td><td>腮腺分泌</td></tr>
+    <tr><td>X <b>迷走神經</b></td><td>心、肺、食道、胃、小腸、肝、胰、大腸前段——約 <b>75%</b> 的副交感纖維</td></tr>
+    <tr><td>薦神經（S2–S4）</td><td>大腸後段、直腸、膀胱、生殖器官</td></tr>
+  </table></div>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>交感</th><th>副交感</th></tr>
+    <tr><td>發出部位</td><td>胸腰段 T1–L2</td><td>腦幹（III、VII、IX、X）、薦段 S2–S4</td></tr>
+    <tr><td>神經節位置</td><td>脊柱旁（交感鏈）、椎前</td><td>器官旁或器官壁內</td></tr>
+    <tr><td>節前／節後纖維</td><td><b>短／長</b></td><td><b>長／短</b></td></tr>
+    <tr><td>分歧</td><td>多 → 大範圍</td><td>少 → 局部</td></tr>
+    <tr><td>節後神經傳遞物質</td><td>多為<b>正腎上腺素</b>（汗腺例外為 ACh）</td><td><b>乙醯膽鹼</b></td></tr>
+  </table></div>
+  <div class="warn"><b class="t">記法：</b>交感「<b>胸腰</b>、節在<b>脊旁</b>、前短後長」；副交感「<b>顱薦</b>、節在<b>器官</b>、前長後短」。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>交感：T1–L2；交感鏈與椎前神經節；節前短、節後長；分歧多 → 大量放電。</li>
+      <li>腎上腺髓質＝特化交感節後神經元，分泌腎上腺素約 80%＋正腎上腺素約 20% 入血。</li>
+      <li>副交感：腦神經 III、VII、IX、X＋S2–S4；終末神經節；節前長、節後短；局部。</li>
+      <li>迷走神經占副交感約 75%，支配胸腔與大部分腹腔內臟。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>交感／副交感</td><td>sympathetic / parasympathetic</td><td>胸腰／顱薦系統</td><td>thoracolumbar / craniosacral</td></tr>
+      <tr><td>交感神經鏈</td><td>sympathetic chain</td><td>椎前（側副）神經節</td><td>prevertebral (collateral) ganglia</td></tr>
+      <tr><td>終末神經節</td><td>terminal ganglia</td><td>大量放電</td><td>mass activation</td></tr>
+      <tr><td>腎上腺髓質</td><td>adrenal medulla</td><td>戰或逃</td><td>fight or flight</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 9.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">9.3</span>自主神經系統的功能</h2>
+  <div class="en">Functions of the Autonomic Nervous System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>自主神經用哪些神經傳遞物質（<b>腎上腺素性</b>與<b>膽鹼性</b>）、作用在哪些受體（<b>α1、α2、β1、β2、β3；菸鹼型、毒蕈鹼型</b>），以及各器官的反應；<b>雙重支配</b>（拮抗、互補、協同）與<b>只有交感支配</b>的器官。</div><div><span class="lt lt2">為什麼接在 9.2 後面？</span>知道線路後，要知道「訊號是什麼、器官怎麼解讀」。同樣是正腎上腺素，血管收縮、支氣管卻擴張——答案在受體種類。這也是大量藥物（β 阻斷劑、支氣管擴張劑、阿托平）的作用原理。</div></div>
+  <div class="oneline">所有節前神經元與副交感節後神經元釋放 ACh（膽鹼性）；多數交感節後神經元釋放正腎上腺素（腎上腺素性）；α1 使血管收縮、β1 使心跳加快、β2 使支氣管擴張；毒蕈鹼型受體使心跳變慢、腸胃蠕動增加。</div>
+  <div class="think">氣喘病人為什麼要小心使用某些降血壓藥（非選擇性 β 阻斷劑）？</div>
+
+  <h3 id="h5">腎上腺素性與膽鹼性傳遞 Adrenergic and Cholinergic Synaptic Transmission</h3>
+  <p class="core">膽鹼性（釋放 ACh）：所有節前、副交感節後、交感節後到汗腺（及部分骨骼肌血管）；腎上腺素性（釋放 NE）：其餘交感節後。終止：ACh 被 AChE 分解；NE 主要被再攝取，再由 MAO、COMT 分解。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <g font-size="13" font-weight="bold"><text x="10" y="26" fill="#be123c">交感</text><text x="10" y="112" fill="#be123c">交感→汗腺</text><text x="10" y="196" fill="#1d4ed8">副交感</text></g>
+    <g>
+      <line x1="20" y1="50" x2="140" y2="50" stroke="#2563eb" stroke-width="4"/><ellipse cx="160" cy="50" rx="18" ry="13" fill="#fde68a" stroke="#b45309"/><line x1="178" y1="50" x2="380" y2="50" stroke="#dc2626" stroke-width="4"/>
+      <rect x="384" y="34" width="90" height="32" rx="12" fill="#f3f4f6" stroke="#6b7280"/><text x="429" y="55" font-size="12" text-anchor="middle">多數器官</text>
+      <text x="100" y="42" font-size="12" fill="#1d4ed8">ACh</text><text x="140" y="74" font-size="11" fill="#6b7280">菸鹼型</text><text x="290" y="42" font-size="12" fill="#b91c1c" font-weight="bold">正腎上腺素</text><text x="340" y="74" font-size="11" fill="#6b7280">α、β 受體</text>
+    </g>
+    <g>
+      <line x1="20" y1="136" x2="140" y2="136" stroke="#2563eb" stroke-width="4"/><ellipse cx="160" cy="136" rx="18" ry="13" fill="#fde68a" stroke="#b45309"/><line x1="178" y1="136" x2="380" y2="136" stroke="#2563eb" stroke-width="4"/>
+      <rect x="384" y="120" width="90" height="32" rx="12" fill="#f3f4f6" stroke="#6b7280"/><text x="429" y="141" font-size="12" text-anchor="middle">汗腺</text>
+      <text x="100" y="128" font-size="12" fill="#1d4ed8">ACh</text><text x="290" y="128" font-size="12" fill="#1d4ed8" font-weight="bold">ACh（例外）</text><text x="340" y="160" font-size="11" fill="#6b7280">毒蕈鹼型</text>
+    </g>
+    <g>
+      <line x1="20" y1="220" x2="300" y2="220" stroke="#2563eb" stroke-width="4"/><ellipse cx="320" cy="220" rx="18" ry="13" fill="#fde68a" stroke="#b45309"/><line x1="338" y1="220" x2="380" y2="220" stroke="#2563eb" stroke-width="4"/>
+      <rect x="384" y="204" width="90" height="32" rx="12" fill="#f3f4f6" stroke="#6b7280"/><text x="429" y="225" font-size="12" text-anchor="middle">器官</text>
+      <text x="150" y="212" font-size="12" fill="#1d4ed8">ACh（節前長）</text><text x="300" y="246" font-size="11" fill="#6b7280">菸鹼型</text><text x="346" y="212" font-size="11" fill="#1d4ed8">ACh</text><text x="380" y="256" font-size="11" fill="#6b7280">毒蕈鹼型</text>
+    </g>
+    <text x="240" y="268" font-size="12" text-anchor="middle" fill="#374151">藍＝膽鹼性（ACh）　紅＝腎上腺素性（NE）</text>
+  </svg><figcaption>記住一條規則：<b>所有節前都是 ACh，神經節上都是菸鹼型</b>；只有交感節後（汗腺除外）用正腎上腺素。</figcaption></figure>
+  <ul class="dots">
+    <li><b>膽鹼性</b> <i class="en-term">cholinergic</i>（釋放 ACh）：<b>所有自主神經的節前神經元</b>（作用在神經節的<b>菸鹼型</b>受體）、<b>副交感節後神經元</b>（作用在器官的<b>毒蕈鹼型</b>受體）、以及<b>交感節後到汗腺</b>的神經（例外）。</li>
+    <li><b>腎上腺素性</b> <i class="en-term">adrenergic</i>（釋放正腎上腺素）：其餘<b>大多數交感節後神經元</b>。</li>
+    <li>訊號終止：ACh 被<b>乙醯膽鹼酯酶</b>迅速分解；正腎上腺素主要被節後末梢<b>再攝取</b>，再由 <b>MAO</b>、<b>COMT</b> 分解（第 7 章）。</li>
+  </ul>
+
+  <h3 id="h6">腎上腺素性刺激的反應 Responses to Adrenergic Stimulation</h3>
+  <p class="core">α1：血管收縮（皮膚、內臟）、瞳孔放大、括約肌收縮；α2：抑制 NE 釋放（突觸前）、抑制胰島素；β1：心跳加快、收縮力增強、腎素分泌；β2：支氣管擴張、骨骼肌血管擴張、肝醣分解；β3：脂肪分解。</p>
+  <p>正腎上腺素與腎上腺素作用在<b>腎上腺素性受體</b> <i class="en-term">adrenergic receptors</i>，分為 α 與 β 兩大類，同一種物質作用在不同受體會產生相反效果：</p>
+  <div class="tblwrap"><table>
+    <tr><th>受體</th><th>主要位置與反應</th><th>第二傳訊者</th></tr>
+    <tr><td><b>α1</b></td><td>多數<b>血管平滑肌收縮</b>（皮膚、腸胃、腎）→ 血壓上升；瞳孔放大肌收縮（<b>瞳孔放大</b>）；腸胃與膀胱<b>括約肌收縮</b></td><td>Ca²⁺（IP₃）</td></tr>
+    <tr><td><b>α2</b></td><td>交感神經末梢（突觸前）：<b>抑制正腎上腺素釋放</b>（負回饋）；胰島 β 細胞：<b>抑制胰島素</b>分泌</td><td>cAMP↓</td></tr>
+    <tr><td><b>β1</b></td><td><b>心臟</b>：心跳加快、收縮力增強；<b>腎臟</b>：促進<b>腎素</b>分泌</td><td>cAMP↑</td></tr>
+    <tr><td><b>β2</b></td><td><b>支氣管平滑肌放鬆（擴張）</b>；骨骼肌與冠狀動脈的血管擴張；子宮、膀胱壁平滑肌放鬆；肝臟<b>肝醣分解</b></td><td>cAMP↑</td></tr>
+    <tr><td><b>β3</b></td><td>脂肪組織：<b>脂肪分解</b>；膀胱放鬆</td><td>cAMP↑</td></tr>
+  </table></div>
+  <p>正腎上腺素對 α 受體作用較強；腎上腺素對 α、β 都強，對 β2 特別有效。</p>
+  <div class="tblwrap"><table>
+    <tr><th>藥物</th><th>作用</th><th>用途</th></tr>
+    <tr><td>非選擇性 β 阻斷劑（propranolol）</td><td>阻斷 β1 與 β2</td><td>降血壓、降心跳；但會阻斷 β2 → <b>支氣管收縮</b></td></tr>
+    <tr><td>選擇性 β1 阻斷劑（atenolol、metoprolol）</td><td>主要阻斷心臟 β1</td><td>高血壓、心絞痛、心律不整</td></tr>
+    <tr><td>β2 致效劑（albuterol／salbutamol）</td><td>活化支氣管 β2 → 擴張</td><td><b>氣喘</b>急性發作</td></tr>
+    <tr><td>α1 阻斷劑</td><td>血管放鬆</td><td>高血壓、攝護腺肥大排尿困難</td></tr>
+    <tr><td>α1 致效劑（phenylephrine）</td><td>鼻黏膜血管收縮</td><td>鼻塞</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>非選擇性 β 阻斷劑除了阻斷心臟的 β1，也阻斷<b>支氣管的 β2</b>，使支氣管失去擴張作用而收縮，可能誘發<b>氣喘</b>發作，所以氣喘病人需改用選擇性 β1 阻斷劑或其他降壓藥。</div>
+
+  <h3 id="h7">膽鹼性刺激的反應 Responses to Cholinergic Stimulation</h3>
+  <p class="core">副交感 ACh 作用在毒蕈鹼型受體：心跳變慢（M2）、腸胃平滑肌收縮與分泌增加、支氣管收縮、瞳孔縮小、膀胱收縮；阿托平阻斷 → 心跳加快、瞳孔放大、口乾、腸胃蠕動減少。</p>
+  <ul class="dots">
+    <li>副交感節後神經元釋放的 ACh 作用在<b>毒蕈鹼型受體</b>，多數經 G 蛋白作用：<b>心跳變慢</b>（打開 K⁺ 通道）、<b>腸胃蠕動與消化液分泌增加</b>、支氣管收縮與黏液分泌、<b>瞳孔縮小</b>、睫狀肌收縮（看近）、膀胱逼尿肌收縮（排尿）。</li>
+    <li><b>阿托平</b>阻斷毒蕈鹼型受體：心跳加快、瞳孔放大（眼科散瞳）、口乾、腸胃蠕動減少，用於手術前減少分泌、治療心搏過慢與有機磷中毒。</li>
+    <li>神經節上的受體是<b>菸鹼型</b>，所以菸鹼型阻斷劑（神經節阻斷劑）會同時阻斷交感與副交感。</li>
+  </ul>
+
+  <h3 id="h8">其他自主神經傳遞物質 Other Autonomic Neurotransmitters</h3>
+  <p class="core">非腎上腺素非膽鹼性（NANC）傳遞：ATP、NO、VIP 等；例：NO 使血管與陰莖海綿體平滑肌放鬆。</p>
+  <p>有些自主神經的節後纖維既不釋放 ACh 也不釋放 NE，稱為<b>非腎上腺素非膽鹼性</b>（NANC）傳遞，使用 <b>ATP、一氧化氮（NO）、血管活性腸胜肽（VIP）</b>等。例如陰莖勃起時副交感神經釋放 NO，使海綿體血管平滑肌放鬆、充血；腸道的 NO 與 VIP 使平滑肌放鬆。</p>
+
+  <h3 id="h9">雙重支配的器官 Organs with Dual Innervation</h3>
+  <p class="core">拮抗（心臟、腸胃、瞳孔）；互補（唾液腺都分泌，但性質不同）；協同（生殖：副交感勃起、交感射精；排尿）。</p>
+  <p>多數內臟同時接受交感與副交感支配，兩者的關係有三種：</p>
+  <div class="tblwrap"><table>
+    <tr><th>關係</th><th>例子</th></tr>
+    <tr><td><b>拮抗</b> antagonistic</td><td><b>心臟</b>：交感（β1）加快心跳、增強收縮；副交感（迷走神經，毒蕈鹼型）減慢心跳。<b>瞳孔</b>：交感使放大肌收縮（放大），副交感使括約肌收縮（縮小）。<b>腸胃</b>：交感抑制、副交感促進蠕動與分泌</td></tr>
+    <tr><td><b>互補</b> complementary</td><td><b>唾液腺</b>：兩者都促進分泌，副交感使分泌<b>大量稀薄</b>的水樣唾液，交感使血管收縮、分泌<b>少量黏稠</b>的唾液（緊張時口乾）</td></tr>
+    <tr><td><b>協同</b> cooperative</td><td><b>生殖</b>：副交感使勃起、交感使射精；<b>排尿</b>：副交感使膀胱收縮，交感與體神經協助括約肌控制</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">國考考過：自主神經對心臟的作用</b>——交感（正腎上腺素 → β1）：心跳加快（正變時）、收縮力增強（正變力）、傳導加快；副交感（迷走神經 ACh → 毒蕈鹼型 M2）：心跳變慢、房室傳導變慢，對心室收縮力影響小。安靜時心臟受<b>副交感（迷走神經）張力</b>主導，所以靜止心跳（約 70 次）比節律點本身的速率（約 100 次）慢。</div>
+
+  <h3 id="h10">沒有雙重支配的器官 Organs without Dual Innervation</h3>
+  <p class="core">只有交感支配：腎上腺髓質、汗腺、豎毛肌、大部分血管；由交感「張力」的增減來調節（如血管收縮程度、體溫散熱）。</p>
+  <p>有些器官<b>只有交感神經</b>支配：<b>腎上腺髓質、汗腺、豎毛肌、大部分血管</b>。它們靠交感放電頻率的增減來雙向調節。例如<b>血管</b>平時有一定的交感<b>張力</b>（部分收縮），交感增加 → 收縮、血壓上升；交感減少 → 放鬆擴張。體溫調節時，皮膚血管與汗腺都由交感控制（第 1、14 章）。</p>
+  <div class="tblwrap"><table>
+    <tr><th>器官</th><th>交感</th><th>副交感</th></tr>
+    <tr><td>眼（瞳孔）</td><td>放大（α1）</td><td>縮小</td></tr>
+    <tr><td>心臟</td><td>心跳↑、收縮力↑（β1）</td><td>心跳↓</td></tr>
+    <tr><td>支氣管</td><td>擴張（β2）</td><td>收縮</td></tr>
+    <tr><td>腸胃道</td><td>蠕動↓、括約肌收縮</td><td>蠕動↑、分泌↑</td></tr>
+    <tr><td>肝臟</td><td>肝醣分解、糖質新生（β2、α）</td><td>—</td></tr>
+    <tr><td>胰島</td><td>胰島素↓（α2）、升糖素↑</td><td>胰島素↑</td></tr>
+    <tr><td>脂肪組織</td><td>脂肪分解（β3）</td><td>—</td></tr>
+    <tr><td>腎臟</td><td>腎素分泌↑（β1）</td><td>—</td></tr>
+    <tr><td>膀胱</td><td>逼尿肌放鬆、括約肌收縮（儲尿）</td><td>逼尿肌收縮（排尿）</td></tr>
+    <tr><td>汗腺</td><td>分泌（ACh、毒蕈鹼型）</td><td>—</td></tr>
+    <tr><td>唾液腺</td><td>少量黏稠</td><td>大量稀薄</td></tr>
+    <tr><td>大部分血管</td><td>收縮（α1）；骨骼肌血管擴張（β2）</td><td>—（多數無支配）</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>膽鹼性：所有節前（神經節菸鹼型）、副交感節後（毒蕈鹼型）、交感到汗腺；腎上腺素性：其餘交感節後（NE）。</li>
+      <li>α1：血管收縮、瞳孔放大、括約肌收縮；α2：抑制 NE 釋放與胰島素；β1：心臟↑、腎素↑；β2：支氣管擴張、骨骼肌血管擴張、肝醣分解；β3：脂肪分解。</li>
+      <li>非選擇性 β 阻斷劑可能誘發氣喘；β2 致效劑治療氣喘。</li>
+      <li>毒蕈鹼型：心跳↓、腸胃↑、瞳孔縮小、排尿；阿托平阻斷。</li>
+      <li>NANC 傳遞：ATP、NO、VIP。</li>
+      <li>雙重支配：拮抗（心、瞳孔、腸胃）、互補（唾液腺）、協同（生殖、排尿）；只有交感：腎上腺髓質、汗腺、豎毛肌、大部分血管。</li>
+      <li>心臟（國考）：交感 β1 加速增強；副交感 M2 減慢；靜止時迷走張力主導。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>膽鹼性／腎上腺素性</td><td>cholinergic / adrenergic</td><td>腎上腺素性受體</td><td>adrenergic receptor</td></tr>
+      <tr><td>β 阻斷劑</td><td>β-blocker</td><td>致效劑／拮抗劑</td><td>agonist / antagonist</td></tr>
+      <tr><td>非腎上腺素非膽鹼性</td><td>nonadrenergic noncholinergic (NANC)</td><td>雙重支配</td><td>dual innervation</td></tr>
+      <tr><td>拮抗／互補／協同</td><td>antagonistic / complementary / cooperative</td><td>迷走張力</td><td>vagal tone</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 9.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">9.4</span>高級腦中樞對自主神經的控制</h2>
+  <div class="en">Control of the Autonomic Nervous System by Higher Brain Centers</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>誰在指揮自主神經：<b>延腦</b>（心血管、呼吸反射）、<b>下視丘</b>（體溫、飢餓、情緒反應）、<b>邊緣系統</b>與<b>大腦皮質</b>（情緒、心理狀態）。</div><div><span class="lt lt2">為什麼放最後？</span>自主神經雖然「不隨意」，但不是不受腦控制；這一節把第 8 章的腦區和本章的自主神經接起來，解釋情緒為什麼會影響身體。</div></div>
+  <div class="oneline">延腦直接管理心血管與呼吸等自主反射（如壓力感受器反射）；下視丘整合體溫、飢餓、口渴與情緒，經腦幹調節自主神經；邊緣系統與大腦皮質讓情緒與想法影響內臟（緊張腹瀉、臉紅、暈倒）。</div>
+  <div class="think">為什麼考試前會緊張到肚子痛、想跑廁所？</div>
+
+  <h3 id="h11">腦的各層級控制</h3>
+  <p class="core">延腦：心血管中樞、呼吸中樞、吞嚥嘔吐（壓力感受器反射）；下視丘：自主神經的主要整合中樞；邊緣系統：情緒 → 自主反應；大腦皮質：可透過想像、生物回饋影響自主功能。</p>
+  <ul class="dots">
+    <li><b>延腦</b>：直接控制自主反射的中樞，包括心血管中樞與呼吸中樞。它接收<b>壓力感受器</b>（頸動脈竇、主動脈弓）傳來的血壓訊息，經迷走與交感神經即時調整心跳與血管（<b>壓力感受器反射</b>，第 14 章），也負責吞嚥、嘔吐、咳嗽等反射。</li>
+    <li><b>下視丘</b>：自主神經最重要的<b>整合中樞</b>，透過下行路徑調節腦幹與脊髓的自主神經元，協調<b>體溫</b>（流汗、血管收縮）、<b>飢餓與口渴</b>、<b>性行為</b>，以及<b>恐懼、憤怒</b>時的交感反應。</li>
+    <li><b>邊緣系統</b>（杏仁核等）：產生情緒，並經下視丘引發相應的自主反應（害怕時心跳加快、尷尬時臉紅）。</li>
+    <li><b>大腦皮質</b>：想法與記憶也能影響自主功能。例如想到酸梅會流口水；看到血突然暈倒（<b>血管迷走性昏厥</b>：副交感突然增強、交感撤退 → 心跳變慢、血壓下降、腦血流不足）。<b>生物回饋</b>訓練可以讓人學會一定程度地控制心跳、血壓或肌肉張力。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>考試的壓力經大腦皮質與邊緣系統傳到下視丘，改變自主神經對腸道的調控（以及壓力激素），腸道蠕動與分泌改變，使人肚子痛或想跑廁所。這也是「腦—腸軸」的例子，<b>腸躁症</b>的症狀常隨壓力加重。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>延腦：心血管與呼吸中樞、壓力感受器反射、吞嚥嘔吐咳嗽。</li>
+      <li>下視丘：自主神經的主要整合中樞（體溫、飢渴、性、恐懼憤怒）。</li>
+      <li>邊緣系統：情緒 → 經下視丘引發自主反應。</li>
+      <li>大腦皮質：想法影響自主功能；血管迷走性昏厥；生物回饋。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>壓力感受器反射</td><td>baroreceptor reflex</td><td>血管迷走性昏厥</td><td>vasovagal syncope</td></tr>
+      <tr><td>生物回饋</td><td>biofeedback</td><td>腦腸軸</td><td>gut–brain axis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s5">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>線路</td><td>節前（CNS、有髓鞘）→ 自主神經節 → 節後（無髓鞘）→ 心肌、平滑肌、腺體</td></tr>
+    <tr><td>交感</td><td>T1–L2、交感鏈、前短後長、大量放電；腎上腺髓質分泌腎上腺素約 80%</td></tr>
+    <tr><td>副交感</td><td>III、VII、IX、X＋S2–S4、終末神經節、前長後短；迷走神經約 75%</td></tr>
+    <tr><td>傳遞物質</td><td>節前全為 ACh（菸鹼型）；副交感節後 ACh（毒蕈鹼型）；交感節後 NE（汗腺例外 ACh）</td></tr>
+    <tr><td>α 受體</td><td>α1 血管收縮、瞳孔放大；α2 抑制 NE 釋放與胰島素</td></tr>
+    <tr><td>β 受體</td><td>β1 心臟↑、腎素↑；β2 支氣管擴張、肝醣分解；β3 脂肪分解</td></tr>
+    <tr><td>心臟（國考）</td><td>交感 β1：快、強；副交感 M2：慢；靜止時迷走張力主導</td></tr>
+    <tr><td>雙重支配</td><td>拮抗（心、瞳孔、腸胃）、互補（唾液腺）、協同（生殖、排尿）</td></tr>
+    <tr><td>只有交感</td><td>腎上腺髓質、汗腺、豎毛肌、大部分血管</td></tr>
+    <tr><td>腦的控制</td><td>延腦（反射）、下視丘（整合）、邊緣系統（情緒）、皮質</td></tr>
+  </table></div>
+  <h3 id="h12">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 比較體運動神經與自主神經的五個差異？</li>
+    <li>□ 比較交感與副交感的發出部位、神經節、纖維長度？</li>
+    <li>□ 說出哪些神經元是膽鹼性、哪些是腎上腺素性？</li>
+    <li>□ 說出 α1、α2、β1、β2、β3 的主要作用？</li>
+    <li>□ 解釋非選擇性 β 阻斷劑為什麼可能誘發氣喘？</li>
+    <li>□ 說明交感與副交感對心臟的作用（國考）？</li>
+    <li>□ 舉例說明拮抗、互補、協同的雙重支配？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 9 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"自主神經與體運動神經相比，下列何者正確？",o:["自主神經只有一個神經元","自主神經由節前與節後兩個神經元串聯","自主神經只會興奮動器","自主神經支配骨骼肌"],a:1,
+  e:"自主神經：<b>節前 → 自主神經節 → 節後</b>，可興奮或抑制心肌、平滑肌、腺體。"},
+ {q:"交感神經的節前神經元位於脊髓的哪一段？",o:["頸段","胸腰段（T1–L2）","薦段（S2–S4）","腦幹"],a:1,
+  e:"交感＝<b>胸腰系統</b>；副交感＝顱薦系統（腦幹＋S2–S4）。"},
+ {q:"關於副交感神經，下列何者正確？",o:["神經節在脊柱兩旁形成鏈","節前纖維短、節後纖維長","神經節位於器官附近或器官壁內","主要由胸腰段發出"],a:2,
+  e:"副交感的<b>終末神經節</b>在器官旁或壁內，所以節前長、節後短。"},
+ {q:"約 75% 的副交感纖維經由哪一對腦神經分布？",o:["動眼神經","顏面神經","舌咽神經","迷走神經"],a:3,
+  e:"<b>迷走神經</b>支配心、肺與大部分腹腔內臟。"},
+ {q:"腎上腺髓質主要分泌？",o:["皮質醇","醛固酮","腎上腺素（約 80%）與正腎上腺素","乙醯膽鹼"],a:2,
+  e:"腎上腺髓質是特化的交感節後神經元群，分泌<b>腎上腺素約 80%</b>、正腎上腺素約 20% 入血。"},
+ {q:"所有自主神經節前神經元釋放的神經傳遞物質為？",o:["正腎上腺素","乙醯膽鹼","多巴胺","腎上腺素"],a:1,
+  e:"所有節前都是<b>ACh</b>，作用在神經節的菸鹼型受體。"},
+ {q:"交感神經支配汗腺的節後神經元釋放？",o:["正腎上腺素","乙醯膽鹼","腎上腺素","一氧化氮"],a:1,
+  e:"汗腺是例外：交感節後釋放 <b>ACh</b>，作用於毒蕈鹼型受體。"},
+ {q:"使心跳加快、收縮力增強的腎上腺素性受體是？",o:["α1","α2","β1","β2"],a:2,
+  e:"<b>β1</b> 在心臟（及腎臟促進腎素分泌）。"},
+ {q:"活化後使支氣管平滑肌放鬆擴張的受體是？",o:["α1","β1","β2","毒蕈鹼型"],a:2,
+  e:"<b>β2</b>：支氣管擴張；氣喘藥 albuterol 是 β2 致效劑。"},
+ {q:"氣喘病人使用非選擇性 β 阻斷劑可能造成？",o:["支氣管擴張","支氣管收縮、誘發氣喘","心跳加快","血糖升高"],a:1,
+  e:"阻斷支氣管的 <b>β2</b> → 失去擴張作用 → 支氣管收縮。"},
+ {q:"副交感神經使心跳變慢，是經由？",o:["NE 作用在 β1","ACh 作用在毒蕈鹼型受體，打開 K⁺ 通道","ACh 作用在菸鹼型受體","NE 作用在 α1"],a:1,
+  e:"迷走神經 ACh → <b>毒蕈鹼型（M2）</b> → G 蛋白開 K⁺ 通道 → 過極化 → 心跳變慢（國考考過）。"},
+ {q:"阿托平（atropine）不會造成下列何者？",o:["瞳孔放大","心跳加快","口乾","腸胃蠕動增加"],a:3,
+  e:"阿托平阻斷毒蕈鹼型受體 → 副交感作用減弱 → 腸胃蠕動<b>減少</b>。"},
+ {q:"唾液腺受交感與副交感共同促進分泌，但分泌物性質不同，這屬於？",o:["拮抗","互補","協同","無雙重支配"],a:1,
+  e:"兩者都促進分泌（副交感稀薄量多、交感黏稠量少）→ <b>互補</b>。"},
+ {q:"下列器官何者只接受交感神經支配？",o:["心臟","汗腺","瞳孔","腸胃道"],a:1,
+  e:"只有交感：<b>汗腺</b>、豎毛肌、腎上腺髓質、大部分血管。"},
+ {q:"自主神經系統最重要的整合中樞是？",o:["小腦","下視丘","基底核","視丘"],a:1,
+  e:"<b>下視丘</b>整合體溫、飢渴、情緒等，經腦幹調節自主神經；延腦負責直接的自主反射。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

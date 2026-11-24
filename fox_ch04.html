@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 4 章 酵素與能量</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="4">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 4 章　酵素與能量</h1>
+  <div class="en">Chapter 4 Enzymes and Energy（課本 p.93–112）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">4.1 酵素是催化劑</a>
+  <a class="sub" href="#h1">催化劑與活化能</a>
+  <a class="sub" href="#h2">酵素的作用機制 Mechanism of Enzyme Action</a>
+  <a class="sub" href="#h3">酵素的命名 Naming of Enzymes</a>
+  <a href="#s2">4.2 酵素活性的控制</a>
+  <a class="sub" href="#h4">溫度與 pH 的影響 Effects of Temperature and pH</a>
+  <a class="sub" href="#h5">輔因子與輔酶 Cofactors and Coenzymes</a>
+  <a class="sub" href="#h6">酵素的活化 Enzyme Activation</a>
+  <a class="sub" href="#h7">受質濃度與可逆反應 Substrate Concentration and Reversible Reactions</a>
+  <a class="sub" href="#h8">代謝路徑 Metabolic Pathways</a>
+  <a href="#s3">4.3 生物能學</a>
+  <a class="sub" href="#h9">釋能與吸能反應 Endergonic and Exergonic Reactions</a>
+  <a class="sub" href="#h10">偶聯反應：ATP Coupled Reactions: ATP</a>
+  <a class="sub" href="#h11">偶聯反應：氧化還原 Coupled Reactions: Oxidation-Reduction</a>
+  <a href="#s4">本章重點整理</a>
+  <a class="sub" href="#h12">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　細胞裡每秒鐘發生成千上萬個化學反應，若沒有幫手，大多數反應在體溫下慢到幾乎不會發生。<span class="key">這一章回答兩個問題：反應靠誰加速（酵素）？反應需要的能量從哪裡來、怎麼傳遞（ATP 與氧化還原）？</span>第 5 章的細胞呼吸，就是用這兩個工具把食物變成能量。</div>
+  <div class="path">
+    <div class="step"><span class="sn">4.1</span><div><b>酵素是催化劑</b><br><span class="sq">酵素怎麼降低活化能、怎麼和受質結合、怎麼命名；同工酶與臨床檢驗。</span></div></div>
+    <div class="arr">↓ 酵素會加速反應，那身體怎麼控制「加速多少」？</div>
+    <div class="step"><span class="sn">4.2</span><div><b>酵素活性的控制</b><br><span class="sq">溫度、pH、輔因子與輔酶（維生素）、受質濃度、代謝路徑的回饋抑制，以及先天代謝異常。</span></div></div>
+    <div class="arr">↓ 反應能進行了，但有些反應需要能量，能量從哪來？</div>
+    <div class="step"><span class="sn">4.3</span><div><b>生物能學</b><br><span class="sq">釋能與吸能反應、ATP 作為能量貨幣的偶聯反應、NAD 與 FAD 搬運電子的氧化還原反應。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 4.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">4.1</span>酵素是催化劑</h2>
+  <div class="en">Enzymes as Catalysts</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>什麼是<b>催化劑</b>、酵素怎麼<b>降低活化能</b>、酵素與受質怎麼結合（鎖鑰與誘導契合），以及酵素的命名與<b>同工酶</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>第 2 章說蛋白質的形狀決定功能；酵素就是最典型的例子。先懂酵素怎麼作用，4.2 才能討論怎麼控制它。</div></div>
+  <div class="oneline">酵素是蛋白質催化劑：降低反應所需的活化能，使反應加快，本身不被消耗；它的活性部位只容得下特定受質。</div>
+  <div class="think">一顆方糖放在桌上好幾年也不會自己燒起來，但在你的細胞裡幾秒鐘就能被分解，差在哪裡？</div>
+
+  <h3 id="h1">催化劑與活化能</h3>
+  <p class="core">催化劑加快反應、不被消耗、不改變反應的最終平衡；酵素靠降低活化能來加快反應。</p>
+  <p><b>催化劑</b> <i class="en-term">catalyst</i> 是能加快化學反應速率、反應前後本身不改變的物質。身體的催化劑幾乎都是<b>酵素</b> <i class="en-term">enzymes</i>（少數 RNA 也有催化能力，稱為核酶 ribozyme）。</p>
+  <p>化學反應要發生，反應物分子必須先獲得一定的能量，越過一道「能量門檻」，這道門檻叫<b>活化能</b> <i class="en-term">activation energy</i>。實驗室可以加熱讓分子越過門檻，但身體不能把溫度升高，所以用酵素<b>把門檻降低</b>。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a41" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="6" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <line x1="50" y1="240" x2="460" y2="240" stroke="#374151" stroke-width="2"/><line x1="50" y1="240" x2="50" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="30" y="130" font-size="13" transform="rotate(-90 30 130)" text-anchor="middle">能量</text><text x="440" y="256" font-size="12" text-anchor="end">反應進行 →</text>
+    <path d="M60,150 C150,150 170,40 240,40 C310,40 330,200 450,200" fill="none" stroke="#dc2626" stroke-width="4"/>
+    <path d="M60,150 C150,150 180,105 240,105 C300,105 330,200 450,200" fill="none" stroke="#16a34a" stroke-width="4"/>
+    <text x="78" y="140" font-size="14">反應物</text><text x="420" y="225" font-size="14">產物</text>
+    <line x1="240" y1="150" x2="240" y2="44" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="4 3"/>
+    
+    <text x="290" y="36" font-size="14" fill="#b91c1c">沒有酵素：活化能高</text>
+    <text x="330" y="96" font-size="14" fill="#15803d">有酵素：活化能低</text>
+    <line x1="70" y1="150" x2="455" y2="150" stroke="#93c5fd" stroke-dasharray="3 3"/><line x1="455" y1="152" x2="455" y2="196" stroke="#2563eb" stroke-width="2" marker-end="url(#a41)"/><text x="448" y="175" font-size="13" fill="#1d4ed8" text-anchor="end">釋出能量</text>
+    <text x="240" y="280" font-size="13" text-anchor="middle" fill="#374151">起點和終點不變：酵素只降低門檻，不改變放出多少能量</text>
+  </svg><figcaption>活化能像要翻過的一座山。酵素開了一條隧道（綠線），讓反應更容易發生；但起點與終點的高度（反應物與產物的能量）不變。</figcaption></figure>
+  <p>酵素的特點：</p>
+  <ul class="dots">
+    <li>使反應速率提高數百萬倍以上。</li>
+    <li>反應後酵素<b>不被消耗</b>，可以一再使用，所以只需要少量。</li>
+    <li><b>不改變反應的平衡與總能量變化</b>：它只加快反應到達平衡的速度，不能讓本來不會發生的反應發生，也不改變反應放出或吸收多少能量。</li>
+  </ul>
+
+  <h3 id="h2">酵素的作用機制 Mechanism of Enzyme Action</h3>
+  <p class="core">受質結合到酵素的活性部位 → 酵素—受質複合物 → 產物釋出；鎖鑰模型與誘導契合模型；專一性高。</p>
+  <p>酵素作用的對象叫<b>受質</b> <i class="en-term">substrate</i>。酵素表面有一個凹槽，形狀與電荷剛好和受質相合，叫<b>活性部位</b> <i class="en-term">active site</i>：</p>
+  <figure class="pic"><svg viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a42" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <path d="M10,150 L10,90 L40,90 L40,110 L70,110 L70,90 L110,90 L110,150 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+    <rect x="42" y="62" width="26" height="46" rx="4" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <text x="55" y="56" font-size="13" text-anchor="middle" fill="#92400e">受質</text><text x="60" y="172" font-size="13" text-anchor="middle" fill="#5b21b6">酵素（活性部位）</text>
+    <path d="M120,120 L150,120" stroke="#374151" stroke-width="2.5" marker-end="url(#a42)"/>
+    <path d="M160,150 L160,90 L190,90 L190,110 L220,110 L220,90 L260,90 L260,150 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+    <rect x="192" y="88" width="26" height="22" rx="3" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <text x="210" y="172" font-size="13" text-anchor="middle">酵素—受質複合物</text>
+    <path d="M270,120 L300,120" stroke="#374151" stroke-width="2.5" marker-end="url(#a42)"/>
+    <path d="M310,150 L310,90 L340,90 L340,110 L370,110 L370,90 L410,90 L410,150 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+    <rect x="420" y="70" width="24" height="22" rx="3" fill="#86efac" stroke="#16a34a" stroke-width="2"/><rect x="448" y="96" width="24" height="22" rx="3" fill="#86efac" stroke="#16a34a" stroke-width="2"/>
+    <text x="446" y="140" font-size="13" text-anchor="middle" fill="#15803d">產物</text>
+    <text x="360" y="172" font-size="13" text-anchor="middle">酵素不變，可再使用</text>
+    <text x="240" y="24" font-size="15" text-anchor="middle" font-weight="bold">E ＋ S ⇌ ES → E ＋ P</text>
+  </svg><figcaption>酵素（E）和受質（S）結合成複合物（ES），反應完成後釋出產物（P），酵素恢復原狀。</figcaption></figure>
+  <ul class="dots">
+    <li><b>鎖鑰模型</b> <i class="en-term">lock-and-key model</i>：受質像鑰匙、活性部位像鎖，形狀剛好吻合。這解釋了酵素的<b>專一性</b> <i class="en-term">specificity</i>——一種酵素通常只作用在一種或一類受質上。</li>
+    <li><b>誘導契合模型</b> <i class="en-term">induced-fit model</i>：比較符合現在的認識。受質結合時，酵素的形狀會<b>稍微改變</b>，把受質包得更緊，像手套被手撐開，同時使受質的化學鍵受力、更容易反應。</li>
+  </ul>
+  <p>結合後形成<b>酵素—受質複合物</b> <i class="en-term">enzyme-substrate complex</i>，反應完成後產物離開，酵素可以接著和下一個受質結合。</p>
+
+  <h3 id="h3">酵素的命名 Naming of Enzymes</h3>
+  <p class="core">多數酵素＝受質名或反應名＋「-ase（酶）」：乳糖酶、蛋白酶、脫氫酶、激酶、磷酸酶。</p>
+  <p>現代命名多在受質或反應類型後加上字尾 <b>-ase</b>（中文「酶」）：</p>
+  <div class="tblwrap"><table>
+    <tr><th>名稱</th><th>做什麼</th><th>例子</th></tr>
+    <tr><td>依受質命名</td><td>分解該受質</td><td>乳糖酶 lactase（分解乳糖）、脂肪酶 lipase、蛋白酶 protease、澱粉酶 amylase</td></tr>
+    <tr><td><b>水解酶</b> hydrolase</td><td>以水解切斷鍵</td><td>消化酶幾乎都是</td></tr>
+    <tr><td><b>磷酸酶</b> phosphatase</td><td>移除磷酸基</td><td>鹼性磷酸酶</td></tr>
+    <tr><td><b>激酶</b> kinase</td><td><b>加上</b>磷酸基（通常來自 ATP）</td><td>己糖激酶、蛋白質激酶</td></tr>
+    <tr><td><b>合成酶</b> synthase / synthetase</td><td>合成</td><td>肝醣合成酶、ATP 合成酶</td></tr>
+    <tr><td><b>脫氫酶</b> dehydrogenase</td><td>移走氫（氧化反應）</td><td>乳酸脫氫酶</td></tr>
+    <tr><td><b>異構酶</b> isomerase</td><td>重新排列成異構物</td><td>磷酸葡萄糖異構酶</td></tr>
+  </table></div>
+  <p>也有些傳統名稱沒有規則，例如胃蛋白酶 pepsin、胰蛋白酶 trypsin。</p>
+  <div class="warn"><b class="t">易混淆：</b><b>激酶 kinase＝加磷酸</b>；<b>磷酸酶 phosphatase＝拿掉磷酸</b>。細胞常用這一對「開關」調節酵素活性（4.2）。</div>
+
+  <h4>同工酶與臨床檢驗 Isoenzymes</h4>
+  <p><b>同工酶</b> <i class="en-term">isoenzymes / isozymes</i> 是催化<b>相同反應</b>、但<b>結構不同</b>的酵素，常分布在不同器官。例如<b>乳酸脫氫酶</b>（LDH）有五種同工酶，<b>肌酸激酶</b>（CK）有骨骼肌型（MM）、心肌型（MB）、腦型（BB）。</p>
+  <p>器官受損時，細胞內的酵素會漏到血中，所以測血中的特定酵素可以幫助診斷：</p>
+  <div class="tblwrap"><table>
+    <tr><th>血中酵素升高</th><th>可能代表</th></tr>
+    <tr><td>ALT（GPT）、AST（GOT）</td><td>肝細胞受損（肝炎）；AST 也存在心肌、骨骼肌</td></tr>
+    <tr><td>CK-MB、（現多用心肌旋轉蛋白 troponin）</td><td>心肌梗塞</td></tr>
+    <tr><td>澱粉酶、脂肪酶</td><td>胰臟炎</td></tr>
+    <tr><td>鹼性磷酸酶 ALP</td><td>阻塞性肝膽疾病、骨骼疾病</td></tr>
+    <tr><td>酸性磷酸酶、PSA</td><td>前列腺疾病</td></tr>
+  </table></div>
+
+  <details class="stop"><summary>回到開頭：方糖在桌上不會燒起來，在細胞裡卻能被分解，差在哪裡？</summary>
+    <div>糖的氧化本來就會放出能量（熱力學上可以進行），但活化能很高，室溫下幾乎不發生。細胞用一連串<b>酵素</b>分段降低活化能，讓反應在 37°C 下快速進行，而且能量是一點一點放出、存成 ATP，不會像燃燒一樣一次全部變成熱。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>酵素是蛋白質催化劑：降低活化能、加快反應、本身不被消耗、不改變平衡與總能量變化。</li>
+      <li>受質結合到活性部位形成 ES 複合物；鎖鑰模型解釋專一性；誘導契合：結合時酵素形狀會改變。</li>
+      <li>命名：受質＋ase；激酶加磷酸、磷酸酶去磷酸、脫氫酶移走氫、合成酶合成。</li>
+      <li>同工酶：催化相同反應、結構不同（LDH、CK）；血中酵素升高可幫助診斷器官受損。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>催化劑</td><td>catalyst</td><td>活化能</td><td>activation energy</td></tr>
+      <tr><td>受質</td><td>substrate</td><td>活性部位</td><td>active site</td></tr>
+      <tr><td>鎖鑰模型</td><td>lock-and-key model</td><td>誘導契合</td><td>induced fit</td></tr>
+      <tr><td>酵素—受質複合物</td><td>enzyme-substrate complex</td><td>專一性</td><td>specificity</td></tr>
+      <tr><td>激酶／磷酸酶</td><td>kinase / phosphatase</td><td>脫氫酶</td><td>dehydrogenase</td></tr>
+      <tr><td>同工酶</td><td>isoenzyme</td><td>肌酸激酶</td><td>creatine kinase</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 4.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">4.2</span>酵素活性的控制</h2>
+  <div class="en">Control of Enzyme Activity</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>影響酵素反應速率的因素：<b>溫度、pH、輔因子與輔酶、酵素活化、受質濃度</b>；以及代謝路徑怎麼用<b>終產物抑制</b>自我調節，和酵素缺陷造成的<b>先天代謝異常</b>。</div><div><span class="lt lt2">為什麼接在 4.1 後面？</span>知道酵素怎麼工作後，接著要知道身體怎麼「調速」——這正是第 1 章恆定與負回饋在分子層次的表現。</div></div>
+  <div class="oneline">酵素有最適溫度與最適 pH；許多酵素需要礦物質（輔因子）或維生素做成的輔酶；受質越多反應越快直到飽和；代謝路徑的終產物常抑制前面的酵素（負回饋）。</div>
+  <div class="think">為什麼缺乏維生素 B 群會讓人覺得疲倦、沒力氣？</div>
+
+  <h3 id="h4">溫度與 pH 的影響 Effects of Temperature and pH</h3>
+  <p class="core">每種酵素有最適溫度（人體約 37°C）與最適 pH；太熱會變性；胃蛋白酶最適 pH 約 2，胰蛋白酶約 8。</p>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="15" text-anchor="middle" font-weight="bold">溫度</text>
+    <line x1="20" y1="180" x2="220" y2="180" stroke="#374151" stroke-width="2"/><line x1="20" y1="180" x2="20" y2="30" stroke="#374151" stroke-width="2"/>
+    <path d="M25,170 C80,160 110,60 140,50 C160,45 170,120 190,175" fill="none" stroke="#dc2626" stroke-width="4"/>
+    <line x1="140" y1="50" x2="140" y2="180" stroke="#9ca3af" stroke-dasharray="3 3"/><text x="140" y="198" font-size="13" text-anchor="middle">37°C</text>
+    <text x="70" y="214" font-size="12" text-anchor="middle">太冷：分子動得慢</text><text x="190" y="214" font-size="12" text-anchor="middle" fill="#b91c1c">太熱：變性</text>
+    <text x="360" y="20" font-size="15" text-anchor="middle" font-weight="bold">pH</text>
+    <line x1="260" y1="180" x2="470" y2="180" stroke="#374151" stroke-width="2"/><line x1="260" y1="180" x2="260" y2="30" stroke="#374151" stroke-width="2"/>
+    <path d="M265,175 C285,160 290,55 302,55 C314,55 318,160 340,176" fill="none" stroke="#b91c1c" stroke-width="4"/>
+    <path d="M330,176 C360,160 365,60 380,60 C395,60 400,160 425,176" fill="none" stroke="#16a34a" stroke-width="4"/>
+    <path d="M370,176 C395,160 405,70 420,70 C435,70 445,160 465,176" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <text x="302" y="48" font-size="12" text-anchor="middle" fill="#b91c1c">胃蛋白酶</text><text x="302" y="198" font-size="12" text-anchor="middle">pH 2</text>
+    <text x="370" y="52" font-size="12" text-anchor="middle" fill="#15803d">唾液澱粉酶</text><text x="380" y="198" font-size="12" text-anchor="middle">7</text>
+    <text x="440" y="62" font-size="12" text-anchor="middle" fill="#1d4ed8">胰蛋白酶</text><text x="420" y="198" font-size="12" text-anchor="middle">8</text>
+    <text x="365" y="218" font-size="12" text-anchor="middle">每種酵素在它工作的地方最有效</text>
+  </svg><figcaption>酵素活性對溫度與 pH 都呈「山形」：只在最適條件下最快。胃中的酵素喜歡酸，小腸中的喜歡偏鹼。</figcaption></figure>
+  <ul class="dots">
+    <li><b>溫度</b>：溫度升高時分子運動快、碰撞多，反應加快；但超過<b>最適溫度</b> <i class="en-term">optimum temperature</i>（人體酵素約 37°C）後，酵素的立體結構被破壞（<b>變性</b>），活性迅速下降。所以高燒（約 41°C 以上）很危險。</li>
+    <li><b>pH</b>：pH 改變會影響活性部位上胺基酸的帶電狀態，改變形狀與結合能力。每種酵素有自己的<b>最適 pH</b> <i class="en-term">pH optimum</i>：胃蛋白酶約 2（胃酸中）、唾液澱粉酶約 7、胰蛋白酶約 8（小腸中，有胰液的 HCO₃⁻）。這也是為什麼食物進入胃後，唾液澱粉酶會被胃酸停止作用。</li>
+  </ul>
+
+  <h3 id="h5">輔因子與輔酶 Cofactors and Coenzymes</h3>
+  <p class="core">輔因子＝酵素需要的金屬離子（Ca²⁺、Mg²⁺、Zn²⁺、Fe、Cu）；輔酶＝由水溶性維生素做成的有機分子（NAD⁺←菸鹼酸、FAD←B2、輔酶 A←泛酸）。</p>
+  <p>許多酵素需要額外的非蛋白質成分才能工作：</p>
+  <ul class="dots">
+    <li><b>輔因子</b> <i class="en-term">cofactors</i>：<b>金屬離子</b>，如 Ca²⁺、Mg²⁺、Mn²⁺、Cu²⁺、Zn²⁺、Fe、Se。它們幫助活性部位形成正確形狀，或直接參與反應。</li>
+    <li><b>輔酶</b> <i class="en-term">coenzymes</i>：<b>有機分子</b>，大多由<b>水溶性維生素</b>（B 群）做成。它們常負責「搬運」化學基團或電子，從一個反應帶到另一個反應。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th>維生素</th><th>做成的輔酶</th><th>參與的反應</th></tr>
+    <tr><td>B1 硫胺 thiamine</td><td>TPP（硫胺焦磷酸）</td><td>丙酮酸 → 乙醯輔酶 A 等脫羧反應</td></tr>
+    <tr><td>B2 核黃素 riboflavin</td><td><b>FAD</b>、FMN</td><td>氧化還原（搬電子）</td></tr>
+    <tr><td>菸鹼酸 niacin</td><td><b>NAD⁺</b>、NADP⁺</td><td>氧化還原（搬電子）</td></tr>
+    <tr><td>泛酸 pantothenic acid</td><td><b>輔酶 A</b>（CoA）</td><td>乙醯基的搬運（克氏循環、脂肪酸代謝）</td></tr>
+    <tr><td>B6 吡哆醇</td><td>PLP（磷酸吡哆醛）</td><td>胺基酸代謝（轉胺作用）</td></tr>
+    <tr><td>葉酸、B12</td><td>四氫葉酸、甲鈷胺</td><td>一碳單位與甲基搬運（DNA 合成）</td></tr>
+    <tr><td>生物素 biotin</td><td>生物素</td><td>羧化反應（糖質新生、脂肪酸合成）</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結（回答開頭問題）：</b>能量代謝的每一步都需要 B 群做成的輔酶。缺乏時，酵素無法正常運作，葡萄糖與脂肪無法有效轉成 ATP，於是出現疲倦、無力；例如缺 B1 造成腳氣病、缺菸鹼酸造成癩皮病。維生素本身不提供熱量，而是讓產生熱量的酵素能工作。</div>
+
+  <h3 id="h6">酵素的活化 Enzyme Activation</h3>
+  <p class="core">有些酵素先以不活化的前驅物（酶原）合成，需切割才活化（胃蛋白酶原 → 胃蛋白酶）；也可以用磷酸化開關活性。</p>
+  <ul class="dots">
+    <li><b>酶原</b> <i class="en-term">zymogen / proenzyme</i>：有些酵素先以<b>不活化</b>的形式製造與分泌，要被切掉一段才能活化。這可以保護製造它的細胞不被自己的酵素分解。例：胃的主細胞分泌<b>胃蛋白酶原</b>（pepsinogen），遇到胃酸被切成<b>胃蛋白酶</b>（pepsin）；胰臟分泌<b>胰蛋白酶原</b>（trypsinogen），在小腸被腸激酶活化（第 18 章）。若胰蛋白酶在胰臟內就提早活化，會消化胰臟本身，造成胰臟炎。</li>
+    <li><b>磷酸化與去磷酸化</b>：<b>蛋白質激酶</b>把磷酸基接到酵素上、<b>磷酸酶</b>把它拿掉，可以快速打開或關閉酵素活性。激素常透過這種方式調控代謝（第 6、11 章）。例如升糖素使肝臟的肝醣磷酸化酶被磷酸化而活化，促進肝醣分解。</li>
+    <li>酵素的<b>量</b>也會調整：透過基因表現增加或減少酵素的合成與分解（第 3 章）。</li>
+  </ul>
+
+  <h3 id="h7">受質濃度與可逆反應 Substrate Concentration and Reversible Reactions</h3>
+  <p class="core">受質越多反應越快，直到所有酵素都被占滿（飽和）；許多反應可逆，方向由質量作用定律決定。</p>
+  <p>酵素量固定時，<b>受質濃度增加，反應速率增加</b>；但當所有酵素的活性部位都被占滿時，速率就不再上升，這叫<b>飽和</b> <i class="en-term">saturation</i>，達到最大速率。之後要再加快，只能增加酵素的量。</p>
+  <p>許多反應是<b>可逆</b>的：例如碳酸酐酶 <i class="en-term">carbonic anhydrase</i> 催化 CO₂＋H₂O ⇌ H₂CO₃。反應往哪個方向進行，取決於兩邊物質的濃度：一邊多了，反應就往另一邊推，這叫<b>質量作用定律</b> <i class="en-term">law of mass action</i>。</p>
+  <div class="eg"><b class="t">例子：</b>在組織，CO₂ 濃度高 → 反應往右，CO₂ 變成 H₂CO₃（再變 HCO₃⁻）帶進血液；到了肺，CO₂ 被呼出、濃度低 → 反應往左，HCO₃⁻ 變回 CO₂ 呼出。同一個酵素，兩個地方方向相反（第 16 章）。</div>
+
+  <h3 id="h8">代謝路徑 Metabolic Pathways</h3>
+  <p class="core">代謝路徑＝一連串酵素反應；終產物抑制前面的酵素（負回饋、異位抑制）；分支點決定代謝走向；酵素缺陷造成先天代謝異常（如苯酮尿症）。</p>
+  <p>細胞裡的反應通常串成<b>代謝路徑</b> <i class="en-term">metabolic pathway</i>：第一個反應的產物是第二個反應的受質，以此類推，每一步由不同的酵素催化。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a43" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="18" font-weight="bold" text-anchor="middle">
+      <circle cx="40" cy="90" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="40" y="96">A</text>
+      <circle cx="140" cy="90" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="140" y="96">B</text>
+      <circle cx="240" cy="90" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="96">C</text>
+      <circle cx="340" cy="90" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="340" y="96">D</text>
+      <circle cx="440" cy="90" r="24" fill="#bbf7d0" stroke="#16a34a" stroke-width="3"/><text x="440" y="96">E</text></g>
+    <g stroke="#374151" stroke-width="2.5"><path d="M66,90 L112,90" marker-end="url(#a43)"/><path d="M166,90 L212,90" marker-end="url(#a43)"/><path d="M266,90 L312,90" marker-end="url(#a43)"/><path d="M366,90 L412,90" marker-end="url(#a43)"/></g>
+    <g font-size="13" fill="#6d28d9" text-anchor="middle"><text x="90" y="78">酵素1</text><text x="190" y="78">酵素2</text><text x="290" y="78">酵素3</text><text x="390" y="78">酵素4</text></g>
+    <path d="M440,118 C440,180 90,180 90,104" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#a43)"/>
+    <text x="90" y="108" font-size="22" fill="#dc2626" text-anchor="middle" font-weight="bold">✕</text>
+    <text x="265" y="196" font-size="14" text-anchor="middle" fill="#b91c1c">終產物 E 多了 → 回頭抑制第一個酵素 → 停止生產</text>
+    <text x="240" y="30" font-size="14" text-anchor="middle">代謝路徑：一個酵素的產物，是下一個酵素的受質</text>
+  </svg><figcaption>終產物抑制就是分子層次的負回饋：產品夠了，就關掉生產線的第一道工序，避免浪費原料。</figcaption></figure>
+  <h4>終產物抑制 End-Product Inhibition</h4>
+  <p class="core">終產物多了 → 回頭抑制路徑前段的速率限制酶（異位抑制）＝負回饋；例：膽固醇抑制 HMG-CoA 還原酶（statin 藥物也抑制它）。</p>
+  <p>路徑的<b>終產物</b>累積時，會回頭和路徑<b>前段</b>（通常是第一個或分支點）的酵素結合，抑制它，使整條路徑減速。這叫<b>終產物抑制</b> <i class="en-term">end-product inhibition</i>，是一種<b>負回饋</b>。終產物通常結合在酵素活性部位以外的地方，改變酵素形狀而降低活性，稱為<b>異位（變構）抑制</b> <i class="en-term">allosteric inhibition</i>。被調控的這個酵素常是路徑中最慢的一步，叫<b>速率限制酶</b> <i class="en-term">rate-limiting enzyme</i>。</p>
+  <div class="eg"><b class="t">例子：</b>膽固醇合成的速率限制酶是 <b>HMG-CoA 還原酶</b>，細胞內膽固醇多時會抑制它。降膽固醇藥物 statin 類就是抑制這個酵素（第 13 章）。</div>
+  <p>路徑也常有<b>分支點</b>：同一個中間產物可以走向不同終產物，由各分支的酵素活性決定走哪一條。</p>
+
+  <h4>先天代謝異常 Inborn Errors of Metabolism</h4>
+  <p>若某個基因突變，使路徑中某一個酵素缺乏或失去功能，就會造成<b>先天代謝異常</b> <i class="en-term">inborn errors of metabolism</i>：該酵素的<b>受質（上游物質）堆積</b>，<b>下游產物缺乏</b>，堆積物還可能轉往其他路徑形成有害產物。</p>
+  <div class="tblwrap"><table>
+    <tr><th>疾病</th><th>缺乏的酵素</th><th>結果</th><th>飲食處理</th></tr>
+    <tr><td><b>苯酮尿症</b> PKU</td><td>苯丙胺酸羥化酶（苯丙胺酸 → 酪胺酸）</td><td>苯丙胺酸堆積、轉成苯酮類，傷害腦部發育；酪胺酸不足</td><td><b>低苯丙胺酸飲食</b>，酪胺酸變成必需；避免阿斯巴甜</td></tr>
+    <tr><td>白化症</td><td>酪胺酸酶（酪胺酸 → 黑色素）</td><td>無法製造黑色素</td><td>—</td></tr>
+    <tr><td>半乳糖血症</td><td>半乳糖代謝酵素</td><td>半乳糖堆積，傷害肝、腦、眼（白內障）</td><td>去除乳糖、半乳糖</td></tr>
+    <tr><td>楓糖尿症</td><td>支鏈胺基酸代謝酵素</td><td>支鏈胺基酸與其酮酸堆積，尿有楓糖味</td><td>限制白胺酸、異白胺酸、纈胺酸</td></tr>
+    <tr><td>肝醣儲積症</td><td>肝醣分解相關酵素</td><td>肝醣堆積、低血糖</td><td>少量多餐、玉米澱粉</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>台灣新生兒篩檢包含苯酮尿症、半乳糖血症、楓糖尿症等多項先天代謝異常。這些疾病多以<b>特殊飲食</b>治療，營養師在其中扮演關鍵角色（膳食療養學會學到）。</div>
+
+  <details class="stop"><summary>想一想：苯酮尿症的病人，為什麼酪胺酸會變成「必需」胺基酸？</summary>
+    <div>正常人可以用苯丙胺酸做出酪胺酸；PKU 病人缺少這個酵素，做不出酪胺酸，而飲食又要限制苯丙胺酸，所以酪胺酸必須由飲食直接補充，成為條件性必需胺基酸。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>最適溫度（約 37°C，過熱變性）；最適 pH（胃蛋白酶約 2、唾液澱粉酶約 7、胰蛋白酶約 8）。</li>
+      <li>輔因子＝金屬離子；輔酶＝水溶性維生素做成（NAD⁺←菸鹼酸、FAD←B2、CoA←泛酸、TPP←B1、PLP←B6）。</li>
+      <li>酶原需切割活化（胃蛋白酶原、胰蛋白酶原）；激酶磷酸化、磷酸酶去磷酸化可開關酵素。</li>
+      <li>受質增加 → 速率增加直到飽和；可逆反應方向依質量作用定律（碳酸酐酶）。</li>
+      <li>終產物抑制＝負回饋，多為異位抑制、作用在速率限制酶（HMG-CoA 還原酶）。</li>
+      <li>先天代謝異常：受質堆積、產物缺乏；PKU 缺苯丙胺酸羥化酶 → 低苯丙胺酸飲食。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>最適溫度／pH</td><td>optimum temperature / pH</td><td>輔因子／輔酶</td><td>cofactor / coenzyme</td></tr>
+      <tr><td>酶原</td><td>zymogen</td><td>胃蛋白酶原</td><td>pepsinogen</td></tr>
+      <tr><td>飽和</td><td>saturation</td><td>質量作用定律</td><td>law of mass action</td></tr>
+      <tr><td>碳酸酐酶</td><td>carbonic anhydrase</td><td>代謝路徑</td><td>metabolic pathway</td></tr>
+      <tr><td>終產物抑制</td><td>end-product inhibition</td><td>異位抑制</td><td>allosteric inhibition</td></tr>
+      <tr><td>速率限制酶</td><td>rate-limiting enzyme</td><td>先天代謝異常</td><td>inborn errors of metabolism</td></tr>
+      <tr><td>苯酮尿症</td><td>phenylketonuria (PKU)</td><td>半乳糖血症</td><td>galactosemia</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 4.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">4.3</span>生物能學</h2>
+  <div class="en">Bioenergetics</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>能量在細胞中怎麼流動：<b>釋能與吸能反應</b>、用 <b>ATP</b> 把兩者偶聯起來，以及 <b>NAD⁺、FAD</b> 在<b>氧化還原反應</b>中搬運電子。</div><div><span class="lt lt2">為什麼放最後？</span>前兩節講反應「怎麼加速、怎麼控制」；這節講反應「能量怎麼算」。這是第 5 章細胞呼吸的直接前導：糖解、克氏循環、電子傳遞鏈，就是一連串氧化還原與 ATP 生成。</div></div>
+  <div class="oneline">分解養分是釋能反應，合成與做功是吸能反應；細胞用 ATP 在兩者之間傳遞能量；氧化＝失去電子、還原＝得到電子，NAD⁺ 與 FAD 負責搬運電子。</div>
+  <div class="think">為什麼說 ATP 像「現金」，而脂肪像「定存」？</div>
+
+  <h3 id="h9">釋能與吸能反應 Endergonic and Exergonic Reactions</h3>
+  <p class="core">能量不會消失，只會轉換（熱力學第一定律）；每次轉換都有部分變成熱（第二定律）；釋能反應放出能量、吸能反應需要能量。</p>
+  <p><b>生物能學</b> <i class="en-term">bioenergetics</i> 研究生物體內能量的流動，遵守兩個熱力學定律：</p>
+  <ul class="dots">
+    <li><b>熱力學第一定律</b>：能量不會被創造或消滅，只會從一種形式轉換成另一種（例如食物中的化學能 → ATP 的化學能 → 肌肉收縮的機械能＋熱）。</li>
+    <li><b>熱力學第二定律</b>：每次轉換都會有一部分能量變成<b>熱</b>（無法再利用的能量），系統的亂度（熵）會增加。人體把養分能量轉成 ATP 的效率約四成，其餘變成熱，用來維持體溫。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>釋能反應 exergonic</th><th>吸能反應 endergonic</th></tr>
+    <tr><td>能量</td><td>產物能量<b>低於</b>反應物 → <b>放出</b>能量</td><td>產物能量<b>高於</b>反應物 → <b>需要</b>輸入能量</td></tr>
+    <tr><td>例子</td><td>葡萄糖氧化成 CO₂＋H₂O；ATP 水解</td><td>由胺基酸合成蛋白質；由葡萄糖合成肝醣；主動運輸；肌肉收縮</td></tr>
+    <tr><td>代謝分類</td><td><b>異化作用</b> catabolism（分解）</td><td><b>同化作用</b> anabolism（合成）</td></tr>
+  </table></div>
+  <p>身體所有的化學反應合稱<b>代謝</b> <i class="en-term">metabolism</i>＝異化作用＋同化作用。</p>
+
+  <h3 id="h10">偶聯反應：ATP Coupled Reactions: ATP</h3>
+  <p class="core">ATP＝腺嘌呤＋核糖＋3 個磷酸；ATP → ADP＋Pi 放出能量供吸能反應使用；養分分解的能量再把 ADP 變回 ATP。</p>
+  <p>吸能反應不會自己發生，必須和一個釋能反應「綁在一起」，用後者放出的能量推動前者，這叫<b>偶聯反應</b> <i class="en-term">coupled reactions</i>。細胞中負責這種連結的分子就是 <b>ATP</b>（三磷酸腺苷 <i class="en-term">adenosine triphosphate</i>）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a44" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="10" refY="6.5" orient="auto"><path d="M0,0 L13,6.5 L0,13 z" fill="#374151"/></marker></defs>
+    <g transform="translate(240,140)">
+      <rect x="-70" y="-120" width="140" height="44" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+      <text x="-14" y="-92" font-size="18" text-anchor="middle" font-weight="bold" fill="#92400e">ATP</text>
+      <g transform="translate(26,-98)"><circle r="5" fill="#f59e0b"/><circle cx="12" r="5" fill="#f59e0b"/><circle cx="24" r="5" fill="#f59e0b"/></g>
+      <rect x="-70" y="76" width="140" height="44" rx="12" fill="#e5e7eb" stroke="#6b7280" stroke-width="2.5"/>
+      <text x="0" y="104" font-size="18" text-anchor="middle" font-weight="bold" fill="#374151">ADP ＋ Pi</text>
+      <path d="M80,-90 C150,-60 150,60 80,90" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#a44)"/>
+      <path d="M-80,90 C-150,60 -150,-60 -80,-90" fill="none" stroke="#16a34a" stroke-width="4" marker-end="url(#a44)"/>
+    </g>
+    <text x="410" y="120" font-size="15" fill="#b91c1c" font-weight="bold" text-anchor="middle">花掉</text>
+    <text x="410" y="142" font-size="13" text-anchor="middle">放出能量給</text><text x="410" y="160" font-size="13" text-anchor="middle">吸能反應：</text>
+    <text x="410" y="180" font-size="12" text-anchor="middle">肌肉收縮</text><text x="410" y="196" font-size="12" text-anchor="middle">主動運輸</text><text x="410" y="212" font-size="12" text-anchor="middle">合成蛋白質</text>
+    <text x="70" y="120" font-size="15" fill="#15803d" font-weight="bold" text-anchor="middle">賺回</text>
+    <text x="70" y="142" font-size="13" text-anchor="middle">用養分分解</text><text x="70" y="160" font-size="13" text-anchor="middle">（細胞呼吸）</text>
+    <text x="70" y="178" font-size="13" text-anchor="middle">放出的能量</text><text x="70" y="196" font-size="13" text-anchor="middle">把 ADP 充回 ATP</text>
+    <text x="240" y="150" font-size="14" text-anchor="middle" fill="#374151">像可充電電池</text>
+  </svg><figcaption>ATP—ADP 循環：細胞不斷把 ATP 用掉（右）、再用食物的能量充回來（左）。一個人一天循環的 ATP 總重接近自己的體重，但體內任何時刻只存約幾十克。</figcaption></figure>
+  <ul class="dots">
+    <li><b>構造</b>：ATP＝腺嘌呤＋核糖＋<b>三個磷酸基</b>。最後兩個磷酸之間的鍵斷開時放出較多能量（俗稱「高能磷酸鍵」）。</li>
+    <li><b>花用</b>：ATP → <b>ADP</b>（二磷酸腺苷）＋ <b>Pi</b>（無機磷酸）＋ 能量。這個釋能反應和吸能反應偶聯，推動肌肉收縮、主動運輸（如鈉鉀幫浦）、合成反應、神經傳導等。</li>
+    <li><b>充電</b>：細胞呼吸分解葡萄糖、脂肪酸等養分（釋能反應），用放出的能量把 ADP＋Pi 合成回 ATP。</li>
+  </ul>
+  <p>所以 ATP 被稱為細胞的<b>能量貨幣</b> <i class="en-term">universal energy carrier</i>：食物的能量不能直接用，要先「換成」ATP 這種通用貨幣，細胞各處才能使用。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>ATP 像隨身的<b>現金</b>，隨時可用，但身上只帶一點點，幾秒到幾分鐘就會用完，要一直補充；脂肪像銀行<b>定存</b>，量很大，但要先「解約」（分解、經細胞呼吸）才能換成現金。肌肉中的磷酸肌酸則像錢包裡的「零錢備用金」，能在幾秒內快速把 ADP 補回 ATP（第 12 章）。</div>
+
+  <h3 id="h11">偶聯反應：氧化還原 Coupled Reactions: Oxidation-Reduction</h3>
+  <p class="core">氧化＝失去電子（或氫）；還原＝得到電子（或氫）；兩者一定同時發生；NAD⁺ 與 FAD 接受電子成為 NADH、FADH₂，把電子帶到電子傳遞鏈產生 ATP。</p>
+  <p>養分裡的能量，主要藏在化學鍵的<b>電子</b>中。細胞取得能量的方式，就是一步一步把電子從養分上拿下來，這牽涉到<b>氧化還原反應</b> <i class="en-term">oxidation-reduction（redox）reactions</i>：</p>
+  <ul class="dots">
+    <li><b>氧化</b> <i class="en-term">oxidation</i>：分子<b>失去電子</b>。在生物反應中電子常和質子一起以<b>氫原子</b>的形式被拿走，所以也可以說是「失去氫」。</li>
+    <li><b>還原</b> <i class="en-term">reduction</i>：分子<b>得到電子</b>（或得到氫）。</li>
+    <li>電子不會憑空消失，所以一個分子被氧化，必定有另一個分子被還原——兩者<b>一定同時發生</b>（偶聯）。給出電子的叫<b>還原劑</b>，接受電子的叫<b>氧化劑</b>。</li>
+  </ul>
+  <div class="warn"><b class="t">記法：</b>英文 <b>OIL RIG</b>：Oxidation Is Loss（of electrons）, Reduction Is Gain。或中文「<b>氧失還得</b>」。</div>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a45" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="15" y="40" width="130" height="60" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="80" y="66" font-size="15" text-anchor="middle">養分（葡萄糖）</text><text x="80" y="88" font-size="13" text-anchor="middle" fill="#b91c1c">被氧化：失去電子</text>
+    <rect x="175" y="40" width="130" height="60" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="240" y="66" font-size="15" text-anchor="middle">NAD⁺ → NADH</text><text x="240" y="88" font-size="13" text-anchor="middle" fill="#15803d">被還原：得到電子</text>
+    <rect x="335" y="40" width="130" height="60" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="400" y="66" font-size="15" text-anchor="middle">電子傳遞鏈</text><text x="400" y="88" font-size="13" text-anchor="middle">（粒線體內膜）</text>
+    <path d="M145,70 L172,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a45)"/><path d="M305,70 L332,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a45)"/>
+    <circle cx="158" cy="56" r="6" fill="#f59e0b"/><circle cx="318" cy="56" r="6" fill="#f59e0b"/>
+    <path d="M400,100 L400,140" stroke="#374151" stroke-width="2.5" marker-end="url(#a45)"/>
+    <rect x="335" y="145" width="130" height="50" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="400" y="167" font-size="15" text-anchor="middle">O₂ 接受電子</text><text x="400" y="187" font-size="13" text-anchor="middle">→ 形成 H₂O</text>
+    <path d="M335,170 L240,170" stroke="#374151" stroke-width="2.5" marker-end="url(#a45)" stroke-dasharray="6 4"/>
+    <rect x="130" y="148" width="105" height="44" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="182" y="176" font-size="16" text-anchor="middle" font-weight="bold" fill="#92400e">產生 ATP</text>
+    <text x="240" y="24" font-size="14" text-anchor="middle">電子（黃點）像接力棒：養分 → NADH → 電子傳遞鏈 → 氧</text>
+    <text x="240" y="220" font-size="13" text-anchor="middle" fill="#374151">FAD 也一樣：接受電子變成 FADH₂</text>
+  </svg><figcaption>NAD⁺ 和 FAD 像「電子計程車」，從養分載走電子，送到粒線體的電子傳遞鏈；電子一路傳到氧，途中放出的能量用來做 ATP（第 5 章）。</figcaption></figure>
+  <p>細胞中負責搬運電子的主要是兩個由維生素做成的輔酶：</p>
+  <div class="tblwrap"><table>
+    <tr><th>氧化型（空車）</th><th>還原型（載滿電子）</th><th>來自哪種維生素</th></tr>
+    <tr><td><b>NAD⁺</b>（菸鹼醯胺腺嘌呤二核苷酸）</td><td><b>NADH</b>（＋H⁺）</td><td>菸鹼酸 niacin（B3）</td></tr>
+    <tr><td><b>FAD</b>（黃素腺嘌呤二核苷酸）</td><td><b>FADH₂</b></td><td>核黃素 riboflavin（B2）</td></tr>
+  </table></div>
+  <p>NAD⁺ 每次接受 2 個電子和 1 個質子（另一個質子留在溶液中），寫成 NADH＋H⁺；FAD 接受 2 個電子和 2 個質子成為 FADH₂。它們把電子交給粒線體內膜上的<b>電子傳遞鏈</b>後，又變回 NAD⁺、FAD，可以再去載電子。電子最後由<b>氧</b>接收並和質子結合成水——這就是為什麼我們需要呼吸氧氣（第 5 章）。</p>
+  <div class="nut"><b class="t">營養連結：</b>NADP⁺／NADPH 是另一對類似的電子搬運者，主要用在<b>合成</b>反應（如脂肪酸、膽固醇合成），以及維持抗氧化物麩胱甘肽的還原狀態。NADPH 主要由五碳醣磷酸路徑產生，該路徑的酵素 G6PD 缺乏時，紅血球易受氧化傷害而溶血（蠶豆症）。</div>
+
+  <details class="stop"><summary>想一想：葡萄糖在細胞內被「氧化」，為什麼不像燃燒一樣產生火焰？</summary>
+    <div>燃燒時，電子一次直接傳給氧，能量瞬間以熱和光的形式放出。細胞則把電子分成很多小步驟傳遞（先交給 NAD⁺、FAD，再經電子傳遞鏈一站一站傳下去），能量一點一點放出，大部分被用來合成 ATP，只有部分變成熱，所以不會「起火」。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>熱力學第一定律：能量守恆、只會轉換；第二定律：每次轉換都有部分變成熱。</li>
+      <li>釋能（異化、分解，放出能量）vs 吸能（同化、合成，需要能量）；代謝＝異化＋同化。</li>
+      <li>ATP＝腺嘌呤＋核糖＋3 磷酸；ATP → ADP＋Pi 放出能量推動吸能反應（偶聯）；細胞呼吸把 ADP 充回 ATP；ATP 是能量貨幣。</li>
+      <li>氧化＝失去電子（氫），還原＝得到電子（氫），一定同時發生（OIL RIG／氧失還得）。</li>
+      <li>NAD⁺（菸鹼酸）→ NADH、FAD（B2）→ FADH₂，把電子送到電子傳遞鏈，最後交給氧形成水並產生 ATP。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>生物能學</td><td>bioenergetics</td><td>熱力學定律</td><td>laws of thermodynamics</td></tr>
+      <tr><td>釋能／吸能反應</td><td>exergonic / endergonic reaction</td><td>異化／同化作用</td><td>catabolism / anabolism</td></tr>
+      <tr><td>代謝</td><td>metabolism</td><td>偶聯反應</td><td>coupled reactions</td></tr>
+      <tr><td>三磷酸腺苷</td><td>adenosine triphosphate (ATP)</td><td>無機磷酸</td><td>inorganic phosphate (Pi)</td></tr>
+      <tr><td>氧化／還原</td><td>oxidation / reduction</td><td>氧化劑／還原劑</td><td>oxidizing / reducing agent</td></tr>
+      <tr><td>菸鹼醯胺腺嘌呤二核苷酸</td><td>NAD</td><td>黃素腺嘌呤二核苷酸</td><td>FAD</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s4">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>酵素</td><td>蛋白質催化劑：降低活化能、不被消耗、不改變平衡</td></tr>
+    <tr><td>作用</td><td>受質＋活性部位 → ES 複合物；鎖鑰（專一性）、誘導契合</td></tr>
+    <tr><td>命名</td><td>激酶加磷酸、磷酸酶去磷酸、脫氫酶去氫</td></tr>
+    <tr><td>臨床</td><td>同工酶（LDH、CK）；ALT/AST 肝、CK-MB 心、澱粉酶／脂肪酶 胰</td></tr>
+    <tr><td>影響因素</td><td>最適溫度 37°C；最適 pH：胃蛋白酶 2、胰蛋白酶 8；受質濃度至飽和</td></tr>
+    <tr><td>輔助</td><td>輔因子＝金屬；輔酶＝B 群（NAD⁺ 菸鹼酸、FAD B2、CoA 泛酸、TPP B1、PLP B6）</td></tr>
+    <tr><td>活化</td><td>酶原切割（胃蛋白酶原、胰蛋白酶原）；磷酸化開關</td></tr>
+    <tr><td>調控</td><td>終產物抑制＝負回饋、異位抑制速率限制酶（HMG-CoA 還原酶）</td></tr>
+    <tr><td>先天代謝異常</td><td>PKU（苯丙胺酸羥化酶）、半乳糖血症、楓糖尿症</td></tr>
+    <tr><td>能量</td><td>釋能＝異化；吸能＝同化；ATP → ADP＋Pi 偶聯</td></tr>
+    <tr><td>氧化還原</td><td>氧失還得；NAD⁺→NADH、FAD→FADH₂ → 電子傳遞鏈 → O₂</td></tr>
+  </table></div>
+  <h3 id="h12">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 畫出有無酵素時的活化能曲線，說明酵素改變了什麼、沒改變什麼？</li>
+    <li>□ 解釋為什麼食物進入胃後唾液澱粉酶就停止作用？</li>
+    <li>□ 說出 NAD⁺、FAD、輔酶 A 分別來自哪種維生素？</li>
+    <li>□ 用 HMG-CoA 還原酶說明終產物抑制？</li>
+    <li>□ 說明苯酮尿症的缺陷、後果與飲食處理？</li>
+    <li>□ 解釋 ATP 怎麼把釋能反應與吸能反應偶聯？</li>
+    <li>□ 定義氧化與還原，說明 NADH 的電子最後交給誰？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 4 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"酵素加快化學反應速率的主要方式是？",o:["提高反應溫度","降低反應的活化能","增加反應放出的總能量","改變反應的平衡點"],a:1,
+  e:"酵素<b>降低活化能</b>；它不改變反應的總能量變化，也不改變平衡，只加快到達平衡的速度。"},
+ {q:"「誘導契合模型（induced fit）」的意思是？",o:["受質與活性部位形狀永遠固定吻合","受質結合時酵素形狀稍微改變而更貼合","酵素結合後就被消耗","受質會改變酵素的一級結構"],a:1,
+  e:"受質結合時，酵素的<b>形狀會稍微改變</b>，包得更緊、促進反應。鎖鑰模型則假設形狀固定。"},
+ {q:"把磷酸基接到受質（通常來自 ATP）上的酵素稱為？",o:["磷酸酶 phosphatase","激酶 kinase","脫氫酶 dehydrogenase","異構酶 isomerase"],a:1,
+  e:"<b>激酶＝加磷酸</b>；磷酸酶＝去除磷酸。"},
+ {q:"血中 ALT（GPT）明顯升高，最可能代表哪個器官受損？",o:["胰臟","肝臟","腎臟","骨骼"],a:1,
+  e:"ALT 主要存在<b>肝細胞</b>，肝炎時大量漏入血中；胰臟炎看澱粉酶、脂肪酶。"},
+ {q:"下列酵素何者的最適 pH 最低？",o:["唾液澱粉酶","胰蛋白酶","胃蛋白酶","胰脂肪酶"],a:2,
+  e:"<b>胃蛋白酶</b>在胃酸中作用，最適 pH 約 2；唾液澱粉酶約 7，胰臟酵素約 8。"},
+ {q:"輔酶 NAD⁺ 是由哪一種維生素做成的？",o:["維生素 B1","維生素 B2","菸鹼酸","泛酸"],a:2,
+  e:"NAD⁺←<b>菸鹼酸</b>；FAD←B2（核黃素）；輔酶 A←泛酸；TPP←B1。"},
+ {q:"胃的主細胞分泌胃蛋白酶原，而不是直接分泌胃蛋白酶，主要目的為何？",o:["胃蛋白酶原活性更強","避免分泌細胞被自己的酵素消化","胃蛋白酶原不需要胃酸","讓胃蛋白酶能在小腸作用"],a:1,
+  e:"以<b>酶原</b>形式合成與分泌，可保護製造它的細胞；在胃酸中才切成活化的胃蛋白酶。"},
+ {q:"酵素量固定時，受質濃度增加到某程度後反應速率不再上升，原因是？",o:["酵素變性","酵素活性部位已全部被占滿（飽和）","受質變成抑制劑","產物消失"],a:1,
+  e:"所有活性部位都被占滿 → <b>飽和</b>，達最大速率；要更快只能增加酵素量。"},
+ {q:"代謝路徑的終產物回頭抑制路徑前段的酵素，這屬於？",o:["正回饋","負回饋（終產物抑制）","酶原活化","競爭性興奮"],a:1,
+  e:"<b>終產物抑制</b>是負回饋，常以異位抑制作用在速率限制酶，例如膽固醇抑制 HMG-CoA 還原酶。"},
+ {q:"苯酮尿症（PKU）病人缺乏的酵素與飲食處理為何？",o:["酪胺酸酶；補充苯丙胺酸","苯丙胺酸羥化酶；限制苯丙胺酸","乳糖酶；去除乳糖","半乳糖激酶；限制果糖"],a:1,
+  e:"PKU 缺<b>苯丙胺酸羥化酶</b>，苯丙胺酸無法轉成酪胺酸而堆積；需<b>低苯丙胺酸飲食</b>，酪胺酸成為必需。"},
+ {q:"下列何者屬於「吸能反應（endergonic）」？",o:["葡萄糖氧化成 CO₂ 和水","ATP 水解成 ADP 和 Pi","由胺基酸合成蛋白質","肝醣水解成葡萄糖"],a:2,
+  e:"合成大分子需要輸入能量，屬<b>吸能、同化作用</b>；其他三項都是釋能反應。"},
+ {q:"關於 ATP 的敘述，何者錯誤？",o:["含腺嘌呤、核糖與三個磷酸","水解成 ADP＋Pi 時放出能量","體內儲存量很大，可用好幾天","可與吸能反應偶聯"],a:2,
+  e:"ATP 是隨用隨補的「現金」，體內<b>存量很少</b>，必須不斷由細胞呼吸再生；長期儲能靠脂肪與肝醣。"},
+ {q:"在氧化還原反應中，「氧化」是指分子？",o:["得到電子","失去電子","得到氫","與水結合"],a:1,
+  e:"<b>氧化＝失去電子（或氫）</b>、還原＝得到電子（或氫）；OIL RIG／氧失還得。"},
+ {q:"NADH 與 FADH₂ 攜帶的電子，最終交給哪一個分子？",o:["二氧化碳","葡萄糖","氧","ATP"],a:2,
+  e:"電子經粒線體電子傳遞鏈，最後交給<b>氧</b>，與質子結合成水；過程中放出的能量用來合成 ATP。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

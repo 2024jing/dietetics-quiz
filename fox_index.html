@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fox《人體生理學》16 版 逐章導讀</title><link rel="stylesheet" href="fox.css">
+<style>.chl a{display:flex;gap:10px;align-items:center;background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:10px 0;color:#1f2937;text-decoration:none}
+.chl .n{background:#9f1239;color:#fff;border-radius:8px;min-width:36px;text-align:center;font-weight:700}.chl .p{margin-left:auto;color:#6b7280;font-size:14px}
+.chl a.todo{opacity:.45;pointer-events:none}</style></head>
+<body><header><div class="book">Fox & Rompolski《人體生理學》第十六版（偉明）</div><h1>逐章導讀</h1><div class="en">Human Physiology 16E — Study Guide</div></header>
+<main>
+<div class="chl" id="chl"></div>
+</main>
+<script src="fox_core.js"></script>
+<script>
+const pages=[0,1,25,53,93,113,139,171,217,257,281,335,381,429,479,525,569,621,663,711,755];
+const done=FOX_DONE;
+document.getElementById('chl').innerHTML=FOX_CH.map((t,i)=>{const k=i+1,f=`fox_ch${String(k).padStart(2,'0')}.html`;
+ return `<a href="${f}" class="${done.includes(k)?'':'todo'}"><span class="n">${k}</span><span>${t}</span><span class="p">p.${pages[k]}${done.includes(k)?'':'・製作中'}</span></a>`}).join('');
+</script></body></html>

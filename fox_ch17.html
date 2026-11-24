@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 17 章 腎臟生理學</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="17">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 17 章　腎臟生理學</h1>
+  <div class="en">Chapter 17 Physiology of the Kidneys（課本 p.621–662）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">17.1 腎臟的構造與功能</a>
+  <a class="sub" href="#h1">腎臟的功能與大體構造 Functions and Gross Structure</a>
+  <a class="sub" href="#h2">腎元 The Nephron</a>
+  <a class="sub" href="#h3">腎臟的血管 Renal Blood Vessels</a>
+  <a class="sub" href="#h4">排尿的神經控制 Micturition Reflex</a>
+  <a href="#s2">17.2 腎絲球過濾</a>
+  <a class="sub" href="#h5">腎絲球的過濾膜 Glomerular Ultrafiltrate</a>
+  <a class="sub" href="#h6">腎絲球過濾率 Glomerular Filtration Rate</a>
+  <a class="sub" href="#h7">GFR 的調節 Regulation of Glomerular Filtration Rate</a>
+  <a href="#s3">17.3 鹽與水的再吸收</a>
+  <a class="sub" href="#h8">近曲小管的再吸收 Reabsorption in the Proximal Tubule</a>
+  <a class="sub" href="#h9">亨利氏環的逆流倍增系統 The Countercurrent Multiplier System</a>
+  <a class="sub" href="#h10">集尿管與 ADH Effects of ADH on the Collecting Duct</a>
+  <a href="#s4">17.4 腎血漿清除率</a>
+  <a class="sub" href="#h11">清除率的定義 Renal Clearance</a>
+  <a class="sub" href="#h12">以菊糖與肌酸酐測量 GFR Clearance of Inulin and Creatinine</a>
+  <a class="sub" href="#h13">其他物質的清除率 Clearance of Other Substances</a>
+  <a class="sub" href="#h14">葡萄糖的再吸收與滲透性利尿 Reabsorption of Glucose</a>
+  <a href="#s5">17.5 電解質與酸鹼平衡的腎臟調控</a>
+  <a class="sub" href="#h15">醛固酮與鈉、鉀 Role of Aldosterone in Na⁺/K⁺ Balance</a>
+  <a class="sub" href="#h16">腎臟對酸鹼平衡的調節 Renal Acid-Base Regulation</a>
+  <a href="#s6">17.6 利尿劑與腎功能檢查</a>
+  <a class="sub" href="#h17">利尿劑的作用 Use of Diuretics</a>
+  <a class="sub" href="#h18">腎功能檢查與腎臟疾病 Renal Function Tests and Kidney Disease</a>
+  <a href="#s7">本章重點整理</a>
+  <a class="sub" href="#h19">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章說恆定要維持體液的成分穩定；第 14 章說腎臟調節血容積與血壓；第 16 章說腎臟調節 HCO₃⁻。這一章把腎臟本身講清楚：<span class="key">腎臟用「先大量過濾、再把有用的收回來、最後把多餘的分泌出去」的方式，決定體內水、鹽、鉀、酸、廢物的去留，並維持血漿的濃度與 pH。</span>章節依尿液形成的順序排列，最後介紹怎麼用清除率評估腎功能，以及利尿劑與腎臟疾病。</div>
+  <div class="path">
+    <div class="step"><span class="sn">17.1</span><div><b>腎臟的構造與功能</b><br><span class="sq">腎元、腎臟的血管、排尿的神經控制。</span></div></div>
+    <div class="arr">↓ 尿液形成第一步：過濾</div>
+    <div class="step"><span class="sn">17.2</span><div><b>腎絲球過濾</b><br><span class="sq">過濾膜、過濾壓、腎絲球過濾率與調節。</span></div></div>
+    <div class="arr">↓ 第二步：把 99% 收回來</div>
+    <div class="step"><span class="sn">17.3</span><div><b>鹽與水的再吸收</b><br><span class="sq">近曲小管、亨利氏環的逆流倍增、集尿管與 ADH。</span></div></div>
+    <div class="arr">↓ 怎麼衡量腎臟處理了多少？</div>
+    <div class="step"><span class="sn">17.4</span><div><b>腎血漿清除率</b><br><span class="sq">清除率的概念、菊糖與肌酸酐、葡萄糖的再吸收極限與滲透性利尿。</span></div></div>
+    <div class="arr">↓ 第三步：精細調整電解質與酸鹼</div>
+    <div class="step"><span class="sn">17.5</span><div><b>電解質與酸鹼平衡的腎臟調控</b><br><span class="sq">醛固酮與 Na⁺／K⁺、ANP、腎臟對 H⁺ 與 HCO₃⁻ 的處理。</span></div></div>
+    <div class="arr">↓ 應用：藥物與疾病</div>
+    <div class="step"><span class="sn">17.6</span><div><b>利尿劑與腎功能檢查</b><br><span class="sq">各類利尿劑的作用部位、腎功能檢查、急性與慢性腎臟病、透析。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 17.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">17.1</span>腎臟的構造與功能</h2>
+  <div class="en">Structure and Function of the Kidneys</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>腎臟的功能；腎臟的<b>大體構造</b>（皮質、髓質、腎盂）；功能單位<b>腎元</b>的各段（腎小體、近曲小管、亨利氏環、遠曲小管、集尿管）；腎臟特殊的<b>血管排列</b>（兩套微血管）；以及<b>排尿反射</b>的神經控制。</div><div><span class="lt lt2">為什麼放第一節？</span>腎元每一段都有不同的工作，後面的過濾、再吸收、分泌都要對照到「在哪一段發生」。排尿的神經控制則是國考考點，先在這裡學好。</div></div>
+  <div class="oneline">腎臟調節水、電解質、酸鹼、血壓，排出代謝廢物，並分泌腎素、EPO、活化維生素 D；每個腎臟約有 100 萬個腎元，腎元由腎小體（腎絲球＋鮑氏囊）與腎小管（近曲小管 → 亨利氏環 → 遠曲小管）組成，再接到集尿管；血液經入球小動脈 → 腎絲球微血管 → 出球小動脈 → 管周微血管；排尿時膀胱被撐開，經副交感神經使逼尿肌收縮、內括約肌打開，外括約肌由體神經隨意控制。</div>
+  <div class="think">嬰兒為什麼不能控制尿尿？脊髓損傷的病人又會怎樣？</div>
+
+  <h3 id="h1">腎臟的功能與大體構造 Functions and Gross Structure</h3>
+  <p class="core">功能：調節細胞外液容積與血壓、血漿滲透壓、電解質（Na⁺、K⁺、Ca²⁺、磷）、酸鹼；排除代謝廢物（尿素、肌酸酐、尿酸）與藥物；內分泌：腎素、紅血球生成素（EPO）、活化維生素 D（1α-羥化）；糖質新生（飢餓時）；構造：外層皮質、內層髓質（腎錐體）→ 腎乳頭 → 腎盞 → 腎盂 → 輸尿管 → 膀胱 → 尿道；腎臟約占心輸出量 20–25%。</p>
+  <ul class="dots">
+    <li><b>調節</b>：細胞外液的容積與血壓（第 14 章）、血漿滲透壓（水）、電解質（Na⁺、K⁺、Ca²⁺、磷酸）、酸鹼平衡（第 16 章）。</li>
+    <li><b>排泄</b>：蛋白質代謝產生的<b>尿素</b>、肌肉產生的<b>肌酸酐</b>、核酸代謝的<b>尿酸</b>，以及藥物與毒素。</li>
+    <li><b>內分泌</b>：分泌<b>腎素</b>（RAAS）、<b>紅血球生成素</b>（EPO，第 13 章），並把維生素 D 轉成<b>活性形式</b>（1,25-(OH)₂D₃，第 11 章）。</li>
+    <li>長期飢餓時也進行<b>糖質新生</b>。</li>
+  </ul>
+  <p>大體構造：外層<b>皮質</b>、內層<b>髓質</b>（由數個<b>腎錐體</b>組成）；尿液從腎錐體尖端的<b>腎乳頭</b>流入<b>腎盞</b>、<b>腎盂</b>，再經<b>輸尿管</b>送到<b>膀胱</b>儲存，經<b>尿道</b>排出。兩個腎臟只占體重 0.4%，卻接受約 <b>20–25% 的心輸出量</b>（約 1.1 L/分），可見過濾工作量之大。</p>
+
+  <h3 id="h2">腎元 The Nephron</h3>
+  <p class="core">腎元（每腎約 100 萬個）＝腎小體（腎絲球微血管＋包住它的鮑氏囊）＋腎小管：近曲小管（皮質）→ 亨利氏環（下行枝、上行枝，深入髓質）→ 遠曲小管（皮質）→ 集尿管（多個腎元共用，穿過髓質）；皮質腎元（約 85%）亨利氏環短；近髓質腎元（約 15%）亨利氏環長、深入內髓質，負責濃縮尿液。</p>
+  <figure class="pic"><svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="10" y="10" width="460" height="120" fill="#fff7ed"/><text x="20" y="28" font-size="12" fill="#9a3412">皮質</text>
+    <rect x="10" y="130" width="460" height="220" fill="#fef2f2"/><text x="20" y="148" font-size="12" fill="#991b1b">髓質</text>
+    <circle cx="110" cy="70" r="30" fill="#fff" stroke="#2563eb" stroke-width="3"/><path d="M90,60 C100,80 120,50 130,75 C120,90 100,85 95,72" fill="none" stroke="#dc2626" stroke-width="4"/>
+    <path d="M40,58 L88,64" stroke="#dc2626" stroke-width="5"/><path d="M90,82 L40,96" stroke="#b91c1c" stroke-width="4"/>
+    <text x="20" y="52" font-size="10" fill="#b91c1c">入球小動脈</text><text x="20" y="112" font-size="10" fill="#991b1b">出球小動脈</text>
+    <path d="M140,70 C180,40 200,100 230,60 C250,40 270,90 250,110 C240,120 230,130 230,140" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+    <path d="M230,140 L230,320 C230,336 262,336 262,320 L262,150" fill="none" stroke="#7c3aed" stroke-width="7"/>
+    <path d="M262,150 L262,120 C262,100 300,90 310,70 C320,50 350,60 360,80" fill="none" stroke="#0891b2" stroke-width="7" stroke-linecap="round"/>
+    <path d="M360,80 L400,80 L400,340" fill="none" stroke="#16a34a" stroke-width="10"/>
+    <g font-size="12" font-weight="bold"><text x="96" y="122" fill="#1d4ed8">腎小體</text><text x="168" y="34" fill="#1d4ed8">① 近曲小管</text><text x="120" y="250" fill="#6d28d9">② 亨利氏環</text><text x="120" y="268" font-size="10" font-weight="normal" fill="#6d28d9">（下行↓ 上行↑）</text><text x="292" y="46" fill="#0e7490">③ 遠曲小管</text><text x="410" y="210" fill="#15803d">④ 集尿管</text></g>
+    <text x="392" y="236" font-size="10" fill="#15803d" text-anchor="end">（多個腎元共用）</text>
+    <text x="430" y="352" font-size="11" text-anchor="end">→ 腎盂 → 輸尿管</text>
+    <text x="70" y="160" font-size="10" fill="#6b7280">腎絲球＋鮑氏囊</text>
+  </svg><figcaption>一個腎元：血漿在腎小體被濾出，依序流過近曲小管、深入髓質的亨利氏環、遠曲小管，最後進入集尿管。每一段負責不同的再吸收與分泌工作。</figcaption></figure>
+  <p><b>腎元</b> <i class="en-term">nephron</i> 是腎臟的功能單位，每個腎臟約有 <b>100 萬個</b>。依液體流動的順序：</p>
+  <ol class="steps">
+    <li><b>腎小體</b> <i class="en-term">renal corpuscle</i>：<b>腎絲球</b>（一團微血管）被杯狀的<b>鮑氏囊</b>（腎絲球囊）包住，血漿在這裡被濾出成為<b>濾液</b>。</li>
+    <li><b>近曲小管</b> <i class="en-term">proximal convoluted tubule</i>：在皮質中彎曲盤繞，上皮有大量<b>微絨毛</b>（刷狀緣）與粒線體，是再吸收最多的地方。</li>
+    <li><b>亨利氏環</b> <i class="en-term">loop of Henle</i>：深入髓質的 U 形管，分<b>下行枝</b>與<b>上行枝</b>（上行枝的較粗段稱粗上行枝）。</li>
+    <li><b>遠曲小管</b> <i class="en-term">distal convoluted tubule</i>：回到皮質，靠近自己的腎小體。</li>
+    <li><b>集尿管</b> <i class="en-term">collecting duct</i>：許多腎元的遠曲小管匯入同一條集尿管，往下穿過髓質，最後在腎乳頭把尿排入腎盞。</li>
+  </ol>
+  <p>約 85% 的腎元是<b>皮質腎元</b>，亨利氏環短；約 15% 是<b>近髓質腎元</b>，腎小體靠近髓質、亨利氏環很長，深入內髓質，負責產生濃縮的尿液（17.3）。</p>
+
+  <h3 id="h3">腎臟的血管 Renal Blood Vessels</h3>
+  <p class="core">腎動脈 → 葉間動脈 → 弓狀動脈 → 小葉間動脈 → 入球小動脈 → 腎絲球微血管（過濾）→ 出球小動脈 → 管周微血管（圍繞腎小管，再吸收的物質回到血液）與直血管（近髓質腎元，沿亨利氏環走）→ 靜脈；兩套微血管串聯，腎絲球微血管壓力高（約 60 mmHg）利於過濾，管周微血管壓力低利於再吸收。</p>
+  <p>腎動脈分支後形成<b>入球小動脈</b> <i class="en-term">afferent arteriole</i>，進入腎絲球；離開腎絲球的是<b>出球小動脈</b> <i class="en-term">efferent arteriole</i>（不是靜脈）。出球小動脈再分成第二套微血管：圍繞腎小管的<b>管周微血管</b> <i class="en-term">peritubular capillaries</i>，以及沿近髓質腎元的亨利氏環深入髓質的<b>直血管</b> <i class="en-term">vasa recta</i>，最後才匯入靜脈。</p>
+  <p>這種「兩套微血管串聯」的排列很特別：<b>腎絲球微血管</b>夾在兩條小動脈之間，壓力高（約 60 mmHg），適合<b>過濾</b>；<b>管周微血管</b>壓力低、血漿蛋白濃度因過濾而升高（膠體滲透壓高），適合<b>再吸收</b>。</p>
+
+  <h3 id="h4">排尿的神經控制 Micturition Reflex</h3>
+  <p class="core">膀胱壁的逼尿肌（平滑肌）＋內括約肌（平滑肌，不隨意）＋外括約肌（骨骼肌，隨意，陰部神經）；膀胱充盈（約 200–300 mL 以上）→ 伸張受器 → 薦髓排尿中樞 → 副交感神經（骨盆神經，ACh、蕈毒鹼受體）使逼尿肌收縮、內括約肌放鬆；大腦皮質與腦幹（橋腦排尿中心）抑制或允許反射，並控制外括約肌；交感神經（β₃ 放鬆逼尿肌、α₁ 收縮內括約肌）幫助儲尿；嬰兒尚未建立大腦控制；脊髓損傷 → 反射性尿失禁或尿滯留。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a171" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="320" y="10" width="150" height="44" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="395" y="30" font-size="12" text-anchor="middle" font-weight="bold">大腦皮質、橋腦</text><text x="395" y="46" font-size="10" text-anchor="middle">允許或抑制（隨意）</text>
+    <rect x="330" y="120" width="130" height="44" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="395" y="140" font-size="12" text-anchor="middle" font-weight="bold">薦髓排尿中樞</text><text x="395" y="156" font-size="10" text-anchor="middle">S2–S4</text>
+    <path d="M395,54 L395,116" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#a171)"/>
+    <path d="M60,90 C40,140 50,210 120,230 C190,250 230,200 230,150 C230,90 190,60 140,60 C100,60 70,70 60,90 z" fill="#fef3c7" stroke="#b45309" stroke-width="5"/>
+    <text x="140" y="140" font-size="13" text-anchor="middle" font-weight="bold">膀胱</text><text x="140" y="158" font-size="11" text-anchor="middle">逼尿肌（平滑肌）</text>
+    <rect x="128" y="236" width="24" height="16" fill="#f59e0b"/><text x="160" y="250" font-size="11">內括約肌（平滑肌）</text>
+    <rect x="124" y="262" width="32" height="14" fill="#dc2626"/><text x="160" y="292" font-size="11" fill="#b91c1c">外括約肌（骨骼肌，隨意）</text>
+    <path d="M140,276 L140,296" stroke="#b45309" stroke-width="5"/>
+    <path d="M228,120 C270,110 300,130 326,138" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a171)"/><text x="244" y="104" font-size="11" fill="#15803d">① 膀胱撐開</text><text x="244" y="118" font-size="11" fill="#15803d">伸張受器</text>
+    <path d="M330,156 C290,180 260,180 232,170" fill="none" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a171)"/><text x="248" y="198" font-size="11" fill="#1d4ed8">② 副交感（骨盆神經）</text><text x="248" y="212" font-size="11" fill="#1d4ed8">逼尿肌收縮、內括約肌放鬆</text>
+    <path d="M395,164 C395,240 300,262 162,266" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#a171)"/><text x="250" y="234" font-size="11" fill="#b91c1c">③ 陰部神經：放鬆外括約肌</text>
+  </svg><figcaption>排尿反射：膀胱被撐開 → 薦髓 → 副交感神經使逼尿肌收縮；但最後一道門（外括約肌）由大腦隨意控制，所以成年人能憋尿、選擇時機。</figcaption></figure>
+  <p>膀胱的構造：膀胱壁的平滑肌叫<b>逼尿肌</b> <i class="en-term">detrusor muscle</i>；尿道起始處有<b>內括約肌</b>（平滑肌，不隨意）與<b>外括約肌</b>（<b>骨骼肌</b>，可隨意控制）。</p>
+  <ol class="steps">
+    <li><b>儲尿期</b>：<b>交感神經</b>使逼尿肌放鬆（β₃）、內括約肌收縮（α₁）；外括約肌由陰部神經維持收縮。</li>
+    <li>膀胱充盈到約 200–300 mL 以上，壁上的<b>伸張受器</b>把訊號傳到<b>薦髓</b>（S2–S4）的排尿中樞。</li>
+    <li><b>排尿反射</b>：<b>副交感神經</b>（骨盆神經，ACh 作用於蕈毒鹼受體）使<b>逼尿肌收縮</b>、內括約肌放鬆。</li>
+    <li><b>大腦皮質</b>與腦幹（橋腦排尿中心）決定是否允許：時機不對時抑制反射並維持<b>外括約肌收縮</b>（憋尿）；時機適當時解除抑制、放鬆外括約肌，尿液排出。</li>
+  </ol>
+  <div class="warn"><b class="t">國考重點：排尿的神經控制</b>——逼尿肌收縮靠<b>副交感</b>（骨盆神經、ACh、蕈毒鹼受體）；儲尿靠<b>交感</b>（逼尿肌放鬆、內括約肌收縮）；<b>外括約肌是骨骼肌</b>，由體神經（陰部神經）隨意控制；反射中樞在<b>薦髓</b>，大腦與橋腦負責隨意調控。抗膽鹼藥物可能造成尿滯留，也用來治療膀胱過動。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>嬰兒的排尿是單純的<b>脊髓反射</b>：膀胱一滿就排，因為大腦對反射的抑制與對外括約肌的控制還沒有發育成熟，通常 2–3 歲才逐漸學會。<b>脊髓損傷</b>（在薦髓以上）使大腦無法控制，膀胱可能變成不受控制的反射性排尿（失禁），或在損傷初期因反射消失而<b>尿滯留</b>，需要導尿。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>腎臟：調節容積、滲透壓、電解質、酸鹼、血壓；排尿素、肌酸酐、尿酸；分泌腎素、EPO、活化維生素 D。</li>
+      <li>腎元：腎小體（腎絲球＋鮑氏囊）→ 近曲小管 → 亨利氏環 → 遠曲小管 → 集尿管；近髓質腎元負責濃縮。</li>
+      <li>入球小動脈 → 腎絲球微血管（高壓、過濾）→ 出球小動脈 → 管周微血管與直血管（低壓、再吸收）。</li>
+      <li>國考：排尿反射——薦髓中樞；副交感使逼尿肌收縮；交感幫助儲尿；外括約肌為骨骼肌、隨意（陰部神經）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>腎元</td><td>nephron</td><td>腎小體</td><td>renal corpuscle</td></tr>
+      <tr><td>腎絲球／鮑氏囊</td><td>glomerulus / Bowman's capsule</td><td>近曲小管</td><td>proximal convoluted tubule</td></tr>
+      <tr><td>亨利氏環</td><td>loop of Henle</td><td>遠曲小管</td><td>distal convoluted tubule</td></tr>
+      <tr><td>集尿管</td><td>collecting duct</td><td>入球／出球小動脈</td><td>afferent / efferent arteriole</td></tr>
+      <tr><td>管周微血管</td><td>peritubular capillaries</td><td>直血管</td><td>vasa recta</td></tr>
+      <tr><td>排尿</td><td>micturition</td><td>逼尿肌</td><td>detrusor muscle</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 17.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">17.2</span>腎絲球過濾</h2>
+  <div class="en">Glomerular Filtration</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>尿液形成的第一步：血漿怎麼通過<b>過濾膜</b>（哪些東西過得去、哪些過不去）；推動過濾的<b>淨過濾壓</b>；<b>腎絲球過濾率</b>（GFR）有多大；以及 GFR 怎麼被<b>交感神經</b>與<b>自動調節</b>控制。</div><div><span class="lt lt2">為什麼接在 17.1 後面？</span>看完構造，照尿液形成的順序從頭開始。GFR 也是評估腎功能最重要的指標（17.4、17.6）。</div></div>
+  <div class="oneline">腎絲球的過濾膜由有窗孔的微血管內皮、基底膜與足細胞的過濾縫隙組成，水、離子、葡萄糖、胺基酸、尿素等小分子都能通過，血球與大部分蛋白質（如白蛋白）不能；高的腎絲球微血管血壓推動過濾，淨過濾壓約 10 mmHg；GFR 約 125 mL/分、每天約 180 L；入球小動脈的口徑由交感神經與自動調節控制，使 GFR 在一般血壓變動下保持穩定。</div>
+  <div class="think">為什麼驗尿出現「蛋白尿」代表腎臟可能有問題？</div>
+
+  <h3 id="h5">腎絲球的過濾膜 Glomerular Ultrafiltrate</h3>
+  <p class="core">過濾膜三層：①有窗孔的微血管內皮（擋血球）②腎絲球基底膜（帶負電，擋蛋白質）③鮑氏囊臟層的足細胞，足突間的過濾縫隙（有縫隙膜）；可通過：水、離子、葡萄糖、胺基酸、尿素、肌酸酐等小分子；不可通過：血球、大部分血漿蛋白（白蛋白帶負電且大）；濾液成分與血漿相似但幾乎不含蛋白質（超過濾液）；蛋白尿表示過濾膜受損。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="10" y="20" width="460" height="50" fill="#fee2e2"/><text x="20" y="40" font-size="12" fill="#991b1b">腎絲球微血管（血液）</text>
+    <g fill="#dc2626"><ellipse cx="300" cy="44" rx="14" ry="9"/></g><text x="320" y="48" font-size="11">血球</text>
+    <circle cx="400" cy="44" r="10" fill="#f59e0b"/><text x="414" y="48" font-size="11">白蛋白（－）</text>
+    <g fill="#2563eb"><circle cx="160" cy="54" r="3"/><circle cx="180" cy="60" r="3"/><circle cx="200" cy="52" r="3"/></g>
+    <rect x="10" y="70" width="460" height="12" fill="#f87171"/><g fill="#fee2e2"><rect x="60" y="70" width="10" height="12"/><rect x="140" y="70" width="10" height="12"/><rect x="220" y="70" width="10" height="12"/><rect x="300" y="70" width="10" height="12"/><rect x="380" y="70" width="10" height="12"/></g>
+    <text x="474" y="80" font-size="10" text-anchor="end">① 內皮（窗孔）</text>
+    <rect x="10" y="82" width="460" height="14" fill="#a78bfa"/><text x="474" y="93" font-size="10" text-anchor="end" fill="#fff">② 基底膜（帶負電）</text>
+    <g fill="#16a34a"><rect x="10" y="96" width="36" height="22" rx="6"/><rect x="56" y="96" width="36" height="22" rx="6"/><rect x="102" y="96" width="36" height="22" rx="6"/><rect x="148" y="96" width="36" height="22" rx="6"/><rect x="194" y="96" width="36" height="22" rx="6"/><rect x="240" y="96" width="36" height="22" rx="6"/></g>
+    <text x="290" y="112" font-size="10" fill="#15803d">③ 足細胞足突與過濾縫隙</text>
+    <rect x="10" y="118" width="460" height="70" fill="#e0f2fe"/><text x="20" y="140" font-size="12" fill="#0e7490">鮑氏囊腔（濾液）</text>
+    <path d="M180,64 L180,150" stroke="#2563eb" stroke-width="2.5"/><path d="M174,144 L180,156 L186,144" fill="#2563eb"/>
+    <text x="194" y="160" font-size="11" fill="#1d4ed8">水、Na⁺、葡萄糖、胺基酸、尿素、肌酸酐通過</text>
+    <text x="240" y="214" font-size="12" text-anchor="middle">血球與白蛋白過不去 → 正常尿液幾乎沒有蛋白質</text>
+  </svg><figcaption>腎絲球過濾膜的三層篩子：內皮的窗孔擋血球、帶負電的基底膜擋蛋白質、足細胞之間的縫隙再篩一次；小分子都能通過。</figcaption></figure>
+  <p>腎絲球的<b>過濾膜</b>有三層：</p>
+  <ol class="steps">
+    <li><b>微血管內皮</b>：有大的<b>窗孔</b>（第 13 章窗孔型微血管），擋住血球。</li>
+    <li><b>腎絲球基底膜</b>：帶<b>負電</b>的醣蛋白網，阻擋大分子與帶負電的蛋白質（如白蛋白）。</li>
+    <li><b>足細胞</b> <i class="en-term">podocytes</i>：鮑氏囊的內層細胞，伸出許多<b>足突</b>包住微血管，足突之間的<b>過濾縫隙</b>有一層縫隙膜，是最後一道篩子。</li>
+  </ol>
+  <p>濾出的液體叫<b>超過濾液</b>（腎絲球濾液），成分與血漿相似——含水、離子、葡萄糖、胺基酸、尿素、肌酸酐——但<b>幾乎沒有蛋白質</b>。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>正常的過濾膜擋住白蛋白，所以尿液幾乎沒有蛋白質。如果出現<b>蛋白尿</b>（特別是白蛋白），表示過濾膜受損，例如<b>糖尿病腎病變</b>、高血壓、腎絲球腎炎。尿中微量白蛋白（UACR）是糖尿病腎病變的早期指標。大量蛋白尿（腎病症候群）會使血漿白蛋白下降而<b>水腫</b>（第 14 章）。</div>
+
+  <h3 id="h6">腎絲球過濾率 Glomerular Filtration Rate</h3>
+  <p class="core">淨過濾壓＝腎絲球微血管靜水壓（約 55–60）－鮑氏囊靜水壓（約 15）－血漿膠體滲透壓（約 30）≈ 10 mmHg；腎絲球微血管通透性比其他微血管高 100–400 倍；GFR 約 125 mL/分（每天約 180 L），男性略高於女性；全身血漿每天被過濾約 60 次，但 99% 被再吸收，尿量約 1–2 L/天。</p>
+  <ul class="dots">
+    <li>推動過濾的力量：<b>腎絲球微血管靜水壓</b>（約 55–60 mmHg）。</li>
+    <li>對抗過濾的力量：<b>鮑氏囊內的靜水壓</b>（約 15 mmHg）與<b>血漿膠體滲透壓</b>（約 30 mmHg）。</li>
+    <li><b>淨過濾壓</b>≈ 60－15－30＝約 <b>10–15 mmHg</b>。</li>
+  </ul>
+  <p>淨過濾壓不大，但腎絲球微血管的通透性比其他微血管高 100–400 倍，面積又大，所以<b>腎絲球過濾率</b> <i class="en-term">glomerular filtration rate, GFR</i> 很高：約 <b>125 mL/分</b>，也就是<b>每天約 180 公升</b>。全身約 3 公升的血漿每天被過濾約 60 次，但其中 <b>99% 以上被再吸收</b>，每天的尿量只有約 1–2 公升。</p>
+
+  <h3 id="h7">GFR 的調節 Regulation of Glomerular Filtration Rate</h3>
+  <p class="core">交感神經（α₁）使入球小動脈收縮 → GFR↓、尿量↓（失血、劇烈運動時保留血量）；自動調節：平均動脈壓約 70–180 mmHg 範圍內 GFR 穩定——①肌原性（血壓↑ 撐開入球小動脈 → 反射性收縮）②腎小管腎絲球回饋（緻密斑偵測遠端小管 NaCl↑ → 分泌腺苷等使入球小動脈收縮）；血管收縮素 II 優先收縮出球小動脈，在低血壓時維持 GFR。</p>
+  <ul class="dots">
+    <li><b>交感神經</b>：失血、脫水、劇烈運動時，交感神經（α₁）使<b>入球小動脈收縮</b> → 腎絲球壓力下降 → GFR 與尿量減少，保留血量。</li>
+    <li><b>自動調節</b>：平均動脈壓在約 70–180 mmHg 之間時，GFR 大致不變，不會因為血壓的日常波動而大量排出或保留水分。機制有兩種：
+      <ul class="dots">
+        <li><b>肌原性調節</b>：血壓升高撐開入球小動脈，平滑肌反射性收縮（第 14 章）。</li>
+        <li><b>腎小管腎絲球回饋</b> <i class="en-term">tubuloglomerular feedback</i>：遠曲小管起始處的<b>緻密斑</b>細胞（與入球小動脈的近腎絲球細胞合稱<b>近腎絲球器</b>）偵測流過的 NaCl；GFR 太高時 NaCl 增加，緻密斑釋放腺苷等使<b>入球小動脈收縮</b>，把 GFR 降回來。</li>
+      </ul></li>
+    <li><b>血管收縮素 II</b>：在血壓偏低時較優先收縮<b>出球小動脈</b>，使腎絲球壓力維持，GFR 不致下降太多。所以腎動脈狹窄或脫水的病人使用 ACE 抑制劑時，GFR 可能明顯下降。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>過濾膜：窗孔內皮（擋血球）、帶負電的基底膜（擋蛋白）、足細胞過濾縫隙；濾液幾乎無蛋白質；蛋白尿表示受損。</li>
+      <li>淨過濾壓 ≈ 60－15－30 ≈ 10–15 mmHg；GFR 約 125 mL/分＝180 L/天；99% 被再吸收。</li>
+      <li>交感使入球小動脈收縮 → GFR↓。</li>
+      <li>自動調節（MAP 70–180）：肌原性、腎小管腎絲球回饋（緻密斑）。</li>
+      <li>血管收縮素 II 收縮出球小動脈，維持低血壓時的 GFR。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>足細胞</td><td>podocyte</td><td>過濾縫隙</td><td>filtration slit</td></tr>
+      <tr><td>腎絲球基底膜</td><td>glomerular basement membrane</td><td>超過濾液</td><td>ultrafiltrate</td></tr>
+      <tr><td>腎絲球過濾率</td><td>glomerular filtration rate (GFR)</td><td>蛋白尿</td><td>proteinuria</td></tr>
+      <tr><td>腎小管腎絲球回饋</td><td>tubuloglomerular feedback</td><td>緻密斑</td><td>macula densa</td></tr>
+      <tr><td>近腎絲球器</td><td>juxtaglomerular apparatus</td><td>自動調節</td><td>autoregulation</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 17.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">17.3</span>鹽與水的再吸收</h2>
+  <div class="en">Reabsorption of Salt and Water</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>每天 180 公升的濾液怎麼被收回 99%：<b>近曲小管</b>（大量等張再吸收）；<b>亨利氏環</b>的<b>逆流倍增</b>在髓質建立濃度梯度；<b>直血管</b>的逆流交換；以及<b>集尿管</b>在 <b>ADH</b> 控制下決定尿是濃是稀。</div><div><span class="lt lt2">為什麼接在 17.2 後面？</span>尿液形成的第二步。這一節解釋為什麼人能排出比血漿濃 4 倍的尿——腎臟能保水，是人在陸地上生存的關鍵。</div></div>
+  <div class="oneline">近曲小管以 Na⁺/K⁺ 幫浦為動力，再吸收約 65% 的 Na⁺ 與水、幾乎全部的葡萄糖與胺基酸，濾液仍與血漿等張；亨利氏環下行枝只讓水出去、上行枝只把 NaCl 主動打出去而不讓水出去，兩者配合（逆流倍增）使髓質越深越鹹（最高約 1,200 mOsm）；集尿管穿過鹹的髓質，ADH 存在時插入水通道蛋白，水被吸出，尿變濃；沒有 ADH 時排出大量稀尿。</div>
+  <div class="think">為什麼在海上漂流，喝海水反而會更渴？</div>
+
+  <h3 id="h8">近曲小管的再吸收 Reabsorption in the Proximal Tubule</h3>
+  <p class="core">近曲小管再吸收約 65% 的 Na⁺、Cl⁻ 與水，約 100% 的葡萄糖與胺基酸（與 Na⁺ 共同運輸），大部分 HCO₃⁻、K⁺、磷酸；動力來自基底側膜的 Na⁺/K⁺ 幫浦（耗 ATP）；水經水通道蛋白被動跟隨（滲透），所以離開近曲小管的濾液仍與血漿等張（約 300 mOsm）；這部分是「必然性」再吸收，不受激素大幅調節。</p>
+  <p>近曲小管的上皮有大量微絨毛與粒線體，是<b>再吸收量最多</b>的地方：</p>
+  <ul class="dots">
+    <li>基底側膜（面向血液那一面）的 <b>Na⁺/K⁺ 幫浦</b>把 Na⁺ 打出細胞，使細胞內 Na⁺ 很低；管腔中的 Na⁺ 就順著梯度進入細胞——這是所有再吸收的<b>動力</b>（耗 ATP）。</li>
+    <li><b>葡萄糖</b>、<b>胺基酸</b>藉 Na⁺ 共同運輸（第 6 章 SGLT）幾乎<b>全部</b>被再吸收；大部分 <b>HCO₃⁻</b>、K⁺、磷酸也在這裡回收。</li>
+    <li>Cl⁻ 跟著正電荷被動移動，<b>水</b>經<b>水通道蛋白</b>以滲透作用跟著溶質走。</li>
+  </ul>
+  <p>結果約 <b>65%</b> 的 Na⁺ 與水在這裡被收回，但溶質與水等比例移動，所以離開近曲小管的濾液仍與血漿<b>等張</b>（約 300 mOsm/L）。這部分屬「必然性再吸收」，不太受激素調節。</p>
+
+  <h3 id="h9">亨利氏環的逆流倍增系統 The Countercurrent Multiplier System</h3>
+  <p class="core">下行枝：對水通透、對鹽不通透 → 水被髓質的高滲吸出，管內液體越往下越濃；上行枝（粗上行枝）：對水不通透，以 Na⁺–K⁺–2Cl⁻ 共同運輸器（NKCC2）主動把 NaCl 打到間質 → 間質變鹹、管內液體變稀（離開時約 100 mOsm，低張）；兩枝液體流向相反（逆流），使效果層層疊加 → 髓質滲透壓由外向內 300 → 1,200 mOsm；尿素也從內髓質集尿管滲出，增加髓質滲透壓（約占一半）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><linearGradient id="g171" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7ed"/><stop offset="1" stop-color="#fdba74"/></linearGradient>
+    <marker id="a172" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="40" width="460" height="300" fill="url(#g171)"/>
+    <g font-size="11" fill="#9a3412" text-anchor="end"><text x="470" y="60">300</text><text x="470" y="140">600</text><text x="470" y="220">900</text><text x="470" y="320">1,200 mOsm</text></g>
+    <text x="20" y="30" font-size="12" fill="#6b7280">皮質</text><text x="20" y="335" font-size="12" fill="#9a3412">內髓質（最鹹）</text>
+    <path d="M100,20 L100,310 C100,340 160,340 160,310 L160,20" fill="none" stroke="#7c3aed" stroke-width="12"/>
+    <path d="M100,40 L100,80" stroke="#fff" stroke-width="2" marker-end="url(#a172)"/>
+    <path d="M160,80 L160,40" stroke="#fff" stroke-width="2" marker-end="url(#a172)"/>
+    <g stroke="#2563eb" stroke-width="2.5"><path d="M94,120 L64,120" marker-end="url(#a172)"/><path d="M94,200 L64,200" marker-end="url(#a172)"/><path d="M94,280 L64,280" marker-end="url(#a172)"/></g>
+    <text x="20" y="110" font-size="11" fill="#1d4ed8">水出去</text>
+    <g stroke="#dc2626" stroke-width="2.5"><path d="M166,110 L196,110" marker-end="url(#a172)"/><path d="M166,190 L196,190" marker-end="url(#a172)"/><path d="M166,270 L196,270" marker-end="url(#a172)"/></g>
+    <text x="200" y="104" font-size="11" fill="#b91c1c">NaCl 主動打出</text><text x="200" y="118" font-size="10" fill="#b91c1c">（水不能跟出）</text>
+    <text x="70" y="16" font-size="11" fill="#6d28d9">下行枝：越來越濃</text><text x="140" y="352" font-size="11" text-anchor="middle" fill="#6d28d9">環底最濃</text><text x="168" y="16" font-size="11" fill="#6d28d9">上行枝：越來越稀 → 100</text>
+    <path d="M360,20 L360,330" stroke="#16a34a" stroke-width="12"/><text x="372" y="34" font-size="12" fill="#15803d" font-weight="bold">集尿管</text>
+    <g stroke="#2563eb" stroke-width="2.5"><path d="M354,150 L324,150" marker-end="url(#a172)"/><path d="M354,250 L324,250" marker-end="url(#a172)"/></g>
+    <text x="250" y="170" font-size="11" fill="#1d4ed8">有 ADH：水被吸出</text><text x="250" y="270" font-size="11" fill="#1d4ed8">→ 尿最濃可達 1,200</text>
+    <text x="372" y="200" font-size="11" fill="#15803d">尿素也滲出</text><text x="372" y="214" font-size="11" fill="#15803d">增加髓質濃度</text>
+  </svg><figcaption>逆流倍增：亨利氏環上行枝把鹽打進髓質（但水出不去），下行枝的水被鹹的髓質吸走；一來一往使髓質越深越鹹。集尿管穿過這片鹹的區域，有 ADH 時水就被吸出，尿變濃。</figcaption></figure>
+  <p>亨利氏環的兩枝特性不同：</p>
+  <ul class="dots">
+    <li><b>下行枝</b>：對<b>水通透</b>、對鹽不通透。往下流時，周圍髓質越來越鹹，水被吸出，管內液體越來越<b>濃</b>，在環底達到最高。</li>
+    <li><b>上行枝</b>（特別是<b>粗上行枝</b>）：對<b>水不通透</b>，但以 <b>Na⁺–K⁺–2Cl⁻ 共同運輸器</b>（NKCC2）主動把 NaCl 打到間質。管內液體越往上越<b>稀</b>，離開時約 100 mOsm（比血漿稀）；被打出的鹽使髓質間質變鹹。</li>
+  </ul>
+  <p>兩枝相鄰、液體流向相反（<b>逆流</b>），上行枝打出的鹽讓下行枝的水被吸出，下行枝濃縮後的液體轉到上行枝又提供更多鹽可以打出——效果層層疊加，稱為<b>逆流倍增系統</b> <i class="en-term">countercurrent multiplier system</i>。結果髓質間質的滲透壓從皮質交界的約 300 一路增加到內髓質的約 <b>1,200 mOsm</b>。此外，<b>尿素</b>從內髓質的集尿管滲出到間質，貢獻了內髓質約一半的滲透壓。</p>
+  <h4>直血管的逆流交換 Vasa Recta</h4>
+  <p class="core">直血管沿亨利氏環作 U 形走行，下行時吸收鹽、失去水，上行時放出鹽、吸回水（逆流交換），使血流不會把髓質的鹽沖走，同時帶走再吸收的水；直血管血流量小也有助於維持梯度。</p>
+  <p>供應髓質的<b>直血管</b>也呈 U 形：往下走時從鹹的間質吸收鹽、失去水，往上走時把鹽還回間質、吸回水。這種<b>逆流交換</b> <i class="en-term">countercurrent exchange</i> 讓血流不會把髓質的濃度梯度沖掉，同時把再吸收的水帶回循環。</p>
+
+  <h3 id="h10">集尿管與 ADH Effects of ADH on the Collecting Duct</h3>
+  <p class="core">集尿管穿過高滲的髓質；ADH（血漿滲透壓↑或血量↓時由腦垂腺後葉釋放）→ 集尿管主細胞 V2 受體 → cAMP → 含水通道蛋白-2 的小泡插入管腔側膜 → 水被髓質吸出 → 尿濃縮（最高約 1,200 mOsm）、尿量少；無 ADH → 集尿管對水不通透 → 大量稀尿（可低到約 50–100 mOsm）；約 85% 的水再吸收是必然性（近曲小管、下行枝），約 15% 是受 ADH 調節的兼性再吸收；尿崩症：ADH 缺乏（中樞性）或腎臟無反應（腎性）。</p>
+  <ul class="dots">
+    <li>集尿管往下穿過越來越鹹的髓質。</li>
+    <li><b>有 ADH</b>：ADH 與集尿管<b>主細胞</b>的 V2 受體結合 → cAMP → 含<b>水通道蛋白-2</b>（aquaporin-2）的小泡插入管腔側的細胞膜 → 水被高滲的髓質<b>吸出</b> → 排出量少而<b>濃</b>的尿（最高約 1,200 mOsm，約血漿的 4 倍）。</li>
+    <li><b>沒有 ADH</b>：集尿管對水不通透，從上行枝下來的稀濾液就這樣排出 → 量多而<b>稀</b>的尿。</li>
+  </ul>
+  <p>水的再吸收中，約 <b>85%</b> 是<b>必然性</b>的（近曲小管與下行枝，不受控制），約 <b>15%</b> 是<b>兼性</b>的（集尿管，由 ADH 決定）——這 15% 就決定了每天尿量從約 0.5 公升到 20 公升以上的差別。</p>
+  <p><b>尿崩症</b>：ADH 分泌不足（中樞性，如腦垂腺受損）或腎臟對 ADH 沒有反應（腎性），每天排出大量稀尿、極度口渴（第 11 章）。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>海水的鹽濃度約 1,000 mOsm 以上，接近甚至超過人類尿液能濃縮的上限（約 1,200 mOsm）。喝下海水後，要把這些鹽排掉需要的水，比喝進去的還多，結果身體反而失去更多水，越喝越渴、越脫水。</div>
+  <div class="nut"><b class="t">營養連結：</b>每天至少要排出約 600 mOsm 的溶質（主要是尿素與鹽），以最濃 1,200 mOsm 計算，<b>最少需要約 500 mL 尿</b>（必然尿量）。高蛋白飲食產生較多尿素、高鹽飲食增加鹽的負荷，都需要更多水。<b>老年人</b>的濃縮能力與口渴感下降，容易脫水；嬰兒的腎臟濃縮能力也還不成熟，配方奶不可沖泡過濃。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>近曲小管：再吸收約 65% Na⁺ 與水、全部葡萄糖與胺基酸、大部分 HCO₃⁻；動力為 Na⁺/K⁺ 幫浦；仍等張（300）。</li>
+      <li>下行枝：水出、鹽不出（越往下越濃）；粗上行枝：NKCC2 打出 NaCl、水不出（離開時約 100，低張）。</li>
+      <li>逆流倍增 → 髓質 300 → 1,200 mOsm；尿素貢獻內髓質約一半。</li>
+      <li>直血管逆流交換，維持梯度。</li>
+      <li>集尿管：ADH → V2 → cAMP → 水通道蛋白-2 → 濃尿；無 ADH → 稀尿；必然性 85%、兼性 15%。</li>
+      <li>尿崩症；最少必然尿量約 500 mL；喝海水更渴。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>再吸收</td><td>reabsorption</td><td>必然性／兼性再吸收</td><td>obligatory / facultative reabsorption</td></tr>
+      <tr><td>逆流倍增系統</td><td>countercurrent multiplier system</td><td>逆流交換</td><td>countercurrent exchange</td></tr>
+      <tr><td>粗上行枝</td><td>thick ascending limb</td><td>Na⁺–K⁺–2Cl⁻ 共同運輸器</td><td>NKCC2</td></tr>
+      <tr><td>水通道蛋白-2</td><td>aquaporin-2</td><td>尿崩症</td><td>diabetes insipidus</td></tr>
+      <tr><td>主細胞</td><td>principal cell</td><td>滲透濃度</td><td>osmolality</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 17.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">17.4</span>腎血漿清除率</h2>
+  <div class="en">Renal Plasma Clearance</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>清除率</b>的概念與計算；用<b>菊糖</b>與<b>肌酸酐</b>測 GFR；用 PAH 測腎血流；被再吸收或分泌的物質清除率怎麼比較；以及<b>葡萄糖的再吸收</b>有<b>運輸上限</b>，超過時出現<b>糖尿</b>與<b>滲透性利尿</b>。</div><div><span class="lt lt2">為什麼接在 17.3 後面？</span>知道腎臟會過濾、再吸收與分泌後，需要一個可以量化的工具：清除率。它也是臨床評估腎功能的基礎；而糖尿病的滲透性利尿是國考考點。</div></div>
+  <div class="oneline">清除率＝每分鐘被腎臟完全清除某物質的血漿量＝（尿中濃度 × 尿量）÷ 血漿濃度；菊糖只過濾、不再吸收也不分泌，它的清除率就等於 GFR（約 125 mL/分）；臨床常用肌酸酐估算；清除率小於 GFR 表示有再吸收（如尿素、葡萄糖為 0），大於 GFR 表示有分泌（如 PAH，可測腎血漿流量）；葡萄糖的載體有上限，血糖超過約 180 mg/dL 時尿中出現葡萄糖，帶走水分造成多尿。</div>
+  <div class="think">為什麼糖尿病的「三多」是吃多、喝多、尿多？尿多是怎麼來的？</div>
+
+  <h3 id="h11">清除率的定義 Renal Clearance</h3>
+  <p class="core">清除率（C）＝（U × V）÷ P：U＝尿中濃度、V＝尿流量（mL/分）、P＝血漿濃度；單位 mL/分；意義：每分鐘有多少毫升的血漿被完全清除該物質；腎臟處理物質的三種方式：過濾、再吸收（回血液）、分泌（從管周微血管進入小管）；排泄量＝過濾量－再吸收量＋分泌量。</p>
+  <p>腎臟處理一種物質有三種方式：<b>過濾</b>（從腎絲球進入濾液）、<b>再吸收</b>（從小管回到血液）、<b>分泌</b> <i class="en-term">secretion</i>（從管周微血管主動送進小管，例如 H⁺、K⁺、許多藥物）：</p>
+  <p class="key" style="text-align:center">排泄量 ＝ 過濾量 － 再吸收量 ＋ 分泌量</p>
+  <p><b>清除率</b> <i class="en-term">renal plasma clearance</i> 是「每分鐘有多少毫升的血漿被腎臟完全清除了該物質」：</p>
+  <p class="key" style="text-align:center;font-size:17px">清除率（C）＝ 尿中濃度（U）× 尿流量（V）÷ 血漿濃度（P）</p>
+
+  <h3 id="h12">以菊糖與肌酸酐測量 GFR Clearance of Inulin and Creatinine</h3>
+  <p class="core">菊糖（果糖聚合物）：自由過濾、不被再吸收、不被分泌、不被代謝 → 清除率＝GFR（約 125 mL/分）；但需靜脈輸注，臨床不常用；肌酸酐：肌肉中肌酸自然分解產生、量穩定，主要靠過濾，少量分泌 → 肌酸酐清除率略高估 GFR；臨床常以血清肌酸酐（正常約 0.6–1.2 mg/dL）配合年齡、性別計算估計腎絲球過濾率（eGFR）；GFR 降一半，血清肌酸酐約上升一倍；肌肉量少的人（老人、營養不良）肌酸酐偏低，可能高估腎功能。</p>
+  <ul class="dots">
+    <li><b>菊糖</b> <i class="en-term">inulin</i>（一種植物來源的果糖聚合物，不是胰島素 insulin）：能被自由過濾，但<b>既不被再吸收也不被分泌</b>，所以每分鐘從尿排出的量正好等於每分鐘被濾出的量——它的清除率就<b>等於 GFR</b>（約 125 mL/分）。研究上是標準方法，但需持續靜脈輸注，臨床不常用。</li>
+    <li><b>肌酸酐</b> <i class="en-term">creatinine</i>：肌肉中肌酸與磷酸肌酸自然分解的產物，每天產生量相當穩定，主要靠過濾排出（只有少量分泌），所以<b>肌酸酐清除率</b>可用來估計 GFR（略為高估）。</li>
+    <li>臨床最常用<b>血清肌酸酐</b>（正常約 0.6–1.2 mg/dL）配合年齡、性別代入公式，算出<b>估計腎絲球過濾率</b>（<b>eGFR</b>）。GFR 下降時肌酸酐排不出去，血中濃度上升（GFR 降一半，血清肌酸酐約增加一倍）。</li>
+  </ul>
+  <div class="warn"><b class="t">國考重點：腎功能指標</b>——①<b>GFR／eGFR</b>（最重要，菊糖清除率是標準，臨床用血清<b>肌酸酐</b>估算）；②<b>血清肌酸酐</b>；③<b>血中尿素氮</b>（BUN，正常約 7–20 mg/dL，但受蛋白質攝取、脫水、腸胃出血、組織分解影響，較不專一）；④<b>尿蛋白</b>（白蛋白／肌酸酐比值 UACR）。肌肉量少的老人或營養不良者，血清肌酸酐偏低，可能<b>高估</b>腎功能。</div>
+  <div class="nut"><b class="t">營養連結：</b>大量吃肉（特別是燉煮過的肉）或服用<b>肌酸補充劑</b>，可能使血清肌酸酐暫時上升，誤判腎功能；<b>高蛋白飲食</b>與<b>脫水</b>使 BUN 上升。慢性腎臟病依 eGFR 分期（第 1–5 期），飲食的蛋白質、鉀、磷限制也依分期調整（17.6）。</div>
+
+  <h3 id="h13">其他物質的清除率 Clearance of Other Substances</h3>
+  <p class="core">清除率 &lt; GFR → 有淨再吸收（尿素約 60–75 mL/分，部分再吸收；葡萄糖、胺基酸正常為 0）；清除率 &gt; GFR → 有淨分泌（PAH 幾乎在一次通過時被完全清除，其清除率≈腎血漿流量約 625 mL/分；腎血流＝腎血漿流量 ÷（1－血比容）≈ 1.1 L/分）；許多藥物（盤尼西林等）經腎小管分泌排出，腎功能差時需調整劑量。</p>
+  <div class="tblwrap"><table>
+    <tr><th>清除率與 GFR 比較</th><th>代表</th><th>例子</th></tr>
+    <tr><td>＝ GFR</td><td>只過濾，不再吸收也不分泌</td><td><b>菊糖</b>（肌酸酐接近）</td></tr>
+    <tr><td>&lt; GFR</td><td>有淨<b>再吸收</b></td><td><b>尿素</b>（部分再吸收，約 60–75 mL/分）；<b>葡萄糖、胺基酸</b>（正常完全再吸收，清除率 0）</td></tr>
+    <tr><td>&gt; GFR</td><td>有淨<b>分泌</b></td><td><b>PAH</b>（對胺基馬尿酸）、盤尼西林等許多藥物</td></tr>
+  </table></div>
+  <p><b>PAH</b> 在血液流經腎臟一次時，幾乎被過濾加分泌完全清除，所以它的清除率約等於<b>腎血漿流量</b>（約 625 mL/分）；再除以（1－血比容）就得到<b>腎血流量</b>（約 1.1 L/分）。許多藥物經腎小管分泌排出，腎功能不佳時需<b>調整劑量</b>。</p>
+
+  <h3 id="h14">葡萄糖的再吸收與滲透性利尿 Reabsorption of Glucose</h3>
+  <p class="core">葡萄糖在近曲小管由 SGLT（與 Na⁺ 共同運輸）完全再吸收；載體數量有限 → 運輸上限（Tm，約 375 mg/分）；當血糖超過腎閾值（約 180 mg/dL）時，濾出的葡萄糖超過再吸收能力 → 糖尿；尿中多餘的葡萄糖使小管液滲透壓增加，留住水分 → 滲透性利尿 → 多尿 → 脫水 → 口渴多喝（三多中的多尿、多喝）；SGLT2 抑制劑是利用這個機制降血糖的藥物。</p>
+  <figure class="pic"><svg viewBox="0 0 480 272" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="50" y1="220" x2="460" y2="220" stroke="#374151" stroke-width="2"/><line x1="50" y1="220" x2="50" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="255" y="262" font-size="12" text-anchor="middle">血漿葡萄糖濃度（mg/dL）→</text><text x="22" y="120" font-size="12" text-anchor="middle" transform="rotate(-90 22 120)">每分鐘的量</text>
+    <path d="M50,220 L450,40" fill="none" stroke="#2563eb" stroke-width="2.5"/><text x="370" y="62" font-size="12" fill="#1d4ed8" font-weight="bold">過濾量</text>
+    <path d="M50,220 L210,148 C230,138 240,134 260,134 L450,134" fill="none" stroke="#16a34a" stroke-width="3"/><text x="330" y="156" font-size="12" fill="#15803d" font-weight="bold">再吸收（上限 Tm）</text>
+    <path d="M200,220 C230,210 260,190 450,128" fill="none" stroke="#dc2626" stroke-width="3" stroke-dasharray="6 4"/><text x="330" y="200" font-size="12" fill="#b91c1c" font-weight="bold">尿中排出量（糖尿）</text>
+    <line x1="200" y1="20" x2="200" y2="226" stroke="#9ca3af" stroke-dasharray="4 3"/><text x="200" y="238" font-size="11" text-anchor="middle">腎閾值約 180</text>
+    <text x="64" y="40" font-size="11" fill="#374151">低於腎閾值：全部收回，尿中無糖</text>
+  </svg><figcaption>葡萄糖的再吸收有上限：血糖不高時濾出多少就收回多少；血糖超過約 180 mg/dL，載體忙不過來，多出的葡萄糖就排到尿中（糖尿），並把水一起帶走。</figcaption></figure>
+  <ul class="dots">
+    <li>葡萄糖在近曲小管由 <b>SGLT</b>（鈉—葡萄糖共同運輸蛋白，主要是 SGLT2）與 Na⁺ 一起再吸收，正常情況下<b>全部收回</b>。</li>
+    <li>載體數量有限，所以再吸收有<b>最大運輸量</b>（<b>Tm</b>，transport maximum，約 375 mg/分）。</li>
+    <li>血糖超過約 <b>180 mg/dL</b>（<b>腎閾值</b>）時，濾出的葡萄糖超過載體能收回的量，多出的就出現在尿中——<b>糖尿</b> <i class="en-term">glycosuria</i>。</li>
+    <li>留在小管中的葡萄糖使小管液<b>滲透壓升高</b>，阻止水被再吸收，大量水分隨尿排出——<b>滲透性利尿</b> <i class="en-term">osmotic diuresis</i>。</li>
+  </ul>
+  <div class="warn"><b class="t">國考重點：糖尿病的滲透性利尿</b>——血糖超過腎閾值（約 180 mg/dL）→ 葡萄糖超過近曲小管再吸收的運輸上限 → 糖尿 → 小管液滲透壓↑ → 水再吸收↓ → <b>多尿</b> → 脫水、血漿滲透壓↑ → <b>口渴多喝</b>；葡萄糖與水分流失加上細胞無法利用葡萄糖 → <b>多吃</b>、體重減輕。<b>甘露醇</b>是利用同樣原理的利尿劑（17.6）。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>①<b>尿多</b>：血糖超過腎閾值，尿中的葡萄糖把水帶走（滲透性利尿）。②<b>喝多</b>：大量排尿造成脫水，血漿滲透壓升高而口渴。③<b>吃多</b>：胰島素不足或阻抗使細胞無法利用葡萄糖，加上大量熱量從尿中流失，身體處於「飢餓」狀態。治療第 2 型糖尿病的 <b>SGLT2 抑制劑</b>，就是刻意阻斷葡萄糖再吸收，讓多餘的糖從尿排出——所以服藥者尿糖會呈陽性，也要注意水分補充與泌尿道感染。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>排泄＝過濾－再吸收＋分泌；清除率 C＝U × V ÷ P。</li>
+      <li>菊糖清除率＝GFR（約 125）；臨床用血清肌酸酐估算 eGFR；BUN 較不專一；尿蛋白（UACR）。</li>
+      <li>清除率 &lt; GFR：再吸收（尿素部分、葡萄糖 0）；&gt; GFR：分泌（PAH ≈ 腎血漿流量）。</li>
+      <li>國考：葡萄糖有 Tm，腎閾值約 180 → 糖尿 → 滲透性利尿 → 多尿、口渴；SGLT2 抑制劑。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>清除率</td><td>renal plasma clearance</td><td>分泌</td><td>secretion</td></tr>
+      <tr><td>菊糖</td><td>inulin</td><td>肌酸酐</td><td>creatinine</td></tr>
+      <tr><td>估計腎絲球過濾率</td><td>eGFR</td><td>血中尿素氮</td><td>blood urea nitrogen (BUN)</td></tr>
+      <tr><td>對胺基馬尿酸</td><td>para-aminohippuric acid (PAH)</td><td>最大運輸量</td><td>transport maximum (Tm)</td></tr>
+      <tr><td>腎閾值</td><td>renal plasma threshold</td><td>糖尿</td><td>glycosuria</td></tr>
+      <tr><td>滲透性利尿</td><td>osmotic diuresis</td><td>鈉—葡萄糖共同運輸蛋白</td><td>SGLT</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 17.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">17.5</span>電解質與酸鹼平衡的腎臟調控</h2>
+  <div class="en">Renal Control of Electrolyte and Acid-Base Balance</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>在遠曲小管與集尿管進行的「精細調整」：<b>醛固酮</b>怎麼調節 Na⁺ 再吸收與 <b>K⁺ 分泌</b>；<b>近腎絲球器</b>與腎素；<b>ANP</b>；Na⁺、K⁺、H⁺ 之間的關係；以及腎臟怎麼<b>分泌 H⁺</b>、<b>回收與製造 HCO₃⁻</b>、用磷酸鹽與氨<b>緩衝尿液</b>，來調節酸鹼。</div><div><span class="lt lt2">為什麼接在 17.4 後面？</span>近曲小管與亨利氏環收回了大部分的鹽和水，剩下的少量在後段由激素精細調整——這決定了血鉀、血鈉與酸鹼的最終結果。這是國考考過的「腎臟對電解質與酸鹼的調節」。</div></div>
+  <div class="oneline">濾出的 Na⁺ 約 90% 在醛固酮作用前就被收回，剩下的由醛固酮決定：醛固酮使遠曲小管後段與集尿管主細胞再吸收 Na⁺、分泌 K⁺（與 H⁺）；K⁺ 的排出主要靠這裡的分泌，高血鉀直接刺激醛固酮；ANP 促進排鈉；腎臟分泌 H⁺，同時回收濾出的 HCO₃⁻ 並製造新的 HCO₃⁻，分泌的 H⁺ 由尿中的磷酸鹽與氨（NH₃ → NH₄⁺）緩衝後排出。</div>
+  <div class="think">為什麼使用某些利尿劑的人要多吃香蕉、柳丁？而腎衰竭的人卻要少吃？</div>
+
+  <h3 id="h15">醛固酮與鈉、鉀 Role of Aldosterone in Na⁺/K⁺ Balance</h3>
+  <p class="core">濾出 Na⁺ 約 90% 在近曲小管與亨利氏環被收回（不受醛固酮控制），剩約 10% 在遠曲小管後段與皮質集尿管由醛固酮調節（最多影響約 2%，每天仍約 30 g 鹽）；醛固酮 → 主細胞增加 ENaC 鈉通道與 Na⁺/K⁺ 幫浦 → Na⁺ 再吸收↑、K⁺ 分泌↑；濾出的 K⁺ 大部分在近曲小管與亨利氏環被再吸收，尿中的 K⁺ 主要來自集尿管的分泌；醛固酮分泌：RAAS（Na⁺↓、血量↓）與高血鉀（直接刺激）；醛固酮過多 → 高血壓、低血鉀；不足（愛迪生氏症）→ 低血鈉、高血鉀。</p>
+  <ul class="dots">
+    <li>濾出的 Na⁺ 約 <b>90%</b> 在近曲小管與亨利氏環被收回，不受醛固酮控制；剩下約 10% 到達遠曲小管後段與<b>皮質集尿管</b>，由<b>醛固酮</b>決定收回多少。醛固酮最多只影響約 2% 的濾出量，但因為每天濾出的 Na⁺ 很多，這相當於每天約 30 公克的鹽。</li>
+    <li><b>醛固酮的作用</b>：進入集尿管<b>主細胞</b>的細胞核，促進合成管腔側的<b>上皮鈉通道</b>（ENaC）與基底側的 Na⁺/K⁺ 幫浦 → <b>Na⁺ 再吸收增加</b>（水跟著回收），同時細胞內 K⁺ 增加而經 K⁺ 通道<b>分泌到尿中</b>。</li>
+    <li><b>K⁺ 的排出</b>：濾出的 K⁺ 大部分在近曲小管與亨利氏環被收回；<b>尿中的 K⁺ 主要來自集尿管的分泌</b>，受醛固酮控制。</li>
+    <li><b>醛固酮的分泌</b>：①血中 Na⁺ 或血量下降 → RAAS → 血管收縮素 II；②<b>血鉀升高直接刺激</b>腎上腺皮質（不經腎素）——所以醛固酮的主要任務之一是排鉀。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th>情況</th><th>Na⁺</th><th>K⁺</th><th>血壓</th></tr>
+    <tr><td>醛固酮過多（原發性醛固酮過多症）</td><td>滯留</td><td><b>低血鉀</b></td><td>高血壓</td></tr>
+    <tr><td>醛固酮不足（愛迪生氏症）</td><td><b>低血鈉</b>、脫水</td><td><b>高血鉀</b></td><td>低血壓</td></tr>
+  </table></div>
+  <p>血鉀必須維持在很窄的範圍（約 3.5–5.0 mEq/L），因為 K⁺ 決定神經與肌肉的靜止膜電位（第 6 章）；過高或過低都可能引起致命的心律不整（第 13、14 章）。</p>
+  <h4>近腎絲球器與 ANP Juxtaglomerular Apparatus and ANP</h4>
+  <p class="core">近腎絲球器＝入球小動脈的近腎絲球細胞（分泌腎素）＋遠曲小管的緻密斑（偵測 NaCl）；腎素分泌的刺激：入球小動脈血壓↓、交感（β₁）、緻密斑偵測 NaCl↓；ANP（血量↑、心房被撐開）→ 抑制集尿管 Na⁺ 再吸收、增加 GFR、抑制腎素與醛固酮 → 排鈉排水。</p>
+  <ul class="dots">
+    <li><b>近腎絲球器</b> <i class="en-term">juxtaglomerular apparatus</i>：入球小動脈壁上的<b>近腎絲球細胞</b>（分泌腎素）＋ 遠曲小管起始處的<b>緻密斑</b>（偵測流過的 NaCl）。</li>
+    <li>腎素分泌增加的情況：入球小動脈<b>血壓下降</b>（壓力感受）、<b>交感神經</b>（β₁）、緻密斑偵測到 <b>NaCl 減少</b>（第 14 章 RAAS）。</li>
+    <li><b>ANP</b>：血量增加、心房被撐開時分泌 → 抑制集尿管再吸收 Na⁺、增加 GFR、抑制腎素與醛固酮 → <b>排鈉排水</b>。</li>
+  </ul>
+  <h4>Na⁺、K⁺ 與 H⁺ 的關係 Relationship Between Na⁺, K⁺, and H⁺</h4>
+  <p class="core">集尿管中 Na⁺ 再吸收時，以分泌 K⁺ 或 H⁺ 交換；酸中毒時 H⁺ 進入細胞換出 K⁺、腎臟優先分泌 H⁺ 而少分泌 K⁺ → 高血鉀；鹼中毒時相反 → 低血鉀；低血鉀時腎臟多分泌 H⁺ → 代謝性鹼中毒；到達集尿管的 Na⁺ 越多（如使用作用在前段的利尿劑），K⁺ 分泌越多 → 低血鉀。</p>
+  <ul class="dots">
+    <li>集尿管再吸收 Na⁺ 時，帶正電的 <b>K⁺ 或 H⁺</b> 被分泌到尿中，兩者有競爭關係。</li>
+    <li><b>酸中毒</b>：血中 H⁺ 多 → H⁺ 進入細胞、把 K⁺ 換出來；腎臟多分泌 H⁺、少分泌 K⁺ → 容易<b>高血鉀</b>。</li>
+    <li><b>鹼中毒</b>：相反 → 容易<b>低血鉀</b>；而低血鉀又使腎臟多分泌 H⁺，加重代謝性鹼中毒。</li>
+    <li>流到集尿管的 Na⁺ 與液體越多，K⁺ 分泌越多——這是許多利尿劑造成低血鉀的原因（17.6）。</li>
+  </ul>
+
+  <h3 id="h16">腎臟對酸鹼平衡的調節 Renal Acid-Base Regulation</h3>
+  <p class="core">腎小管細胞以碳酸酐酶產生 H⁺ 與 HCO₃⁻：H⁺ 分泌到管腔（近曲小管用 Na⁺/H⁺ 交換，集尿管 α 間插細胞用 H⁺-ATPase），HCO₃⁻ 回到血液；①回收濾出的 HCO₃⁻（近曲小管約 80–90%：管腔中 H⁺＋HCO₃⁻ → CO₂＋H₂O → 進細胞再生成 HCO₃⁻ 回血液）；②製造新的 HCO₃⁻：分泌的 H⁺ 被尿中的磷酸鹽（HPO₄²⁻ → H₂PO₄⁻，可滴定酸）與氨（麩醯胺酸 → NH₃，NH₃＋H⁺ → NH₄⁺ 排出）緩衝，每排出一個 H⁺ 就有一個新的 HCO₃⁻ 進入血液；尿 pH 最低約 4.5；酸中毒時氨的生成增加，是主要代償。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a173" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="20" width="140" height="260" rx="10" fill="#e0f2fe" stroke="#0891b2"/><text x="80" y="42" font-size="13" text-anchor="middle" font-weight="bold">小管腔（尿）</text>
+    <rect x="160" y="20" width="160" height="260" rx="10" fill="#fef3c7" stroke="#b45309"/><text x="240" y="42" font-size="13" text-anchor="middle" font-weight="bold">小管細胞</text>
+    <rect x="330" y="20" width="140" height="260" rx="10" fill="#fee2e2" stroke="#dc2626"/><text x="400" y="42" font-size="13" text-anchor="middle" font-weight="bold">血液</text>
+    <text x="240" y="80" font-size="12" text-anchor="middle">CO₂＋H₂O</text><text x="240" y="98" font-size="10" text-anchor="middle" fill="#6d28d9">碳酸酐酶</text>
+    <text x="240" y="118" font-size="12" text-anchor="middle">→ H⁺ ＋ HCO₃⁻</text>
+    <path d="M206,124 L130,150" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#a173)"/><text x="148" y="160" font-size="11" fill="#b91c1c">H⁺ 分泌</text>
+    <path d="M276,124 L360,150" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#a173)"/><text x="350" y="170" font-size="11" fill="#1d4ed8">HCO₃⁻ 回到血液</text>
+    <rect x="20" y="180" width="120" height="40" rx="8" fill="#fff"/><text x="80" y="196" font-size="11" text-anchor="middle">H⁺＋HPO₄²⁻</text><text x="80" y="212" font-size="11" text-anchor="middle">→ H₂PO₄⁻</text>
+    <rect x="20" y="228" width="120" height="44" rx="8" fill="#fff"/><text x="80" y="246" font-size="11" text-anchor="middle">H⁺＋NH₃</text><text x="80" y="262" font-size="11" text-anchor="middle">→ NH₄⁺ 排出</text>
+    <text x="240" y="230" font-size="11" text-anchor="middle">麩醯胺酸 → NH₃</text><path d="M200,240 L146,250" stroke="#374151" stroke-width="2" marker-end="url(#a173)"/>
+    <text x="400" y="230" font-size="11" text-anchor="middle" fill="#15803d">每排出一個 H⁺</text><text x="400" y="246" font-size="11" text-anchor="middle" fill="#15803d">＝ 血中多一個 HCO₃⁻</text>
+    <text x="80" y="140" font-size="10" text-anchor="middle" fill="#6b7280">尿中緩衝劑</text>
+  </svg><figcaption>腎臟調節酸鹼：小管細胞把 H⁺ 送到尿中、把 HCO₃⁻ 送回血液；尿中的磷酸鹽與氨接住 H⁺，讓腎臟能排出大量的酸。</figcaption></figure>
+  <p>腎小管細胞以<b>碳酸酐酶</b>把 CO₂ 與水變成 H⁺ 與 HCO₃⁻：H⁺ 被<b>分泌</b>到管腔（近曲小管靠 Na⁺/H⁺ 交換，集尿管的間插細胞靠 H⁺-ATPase 幫浦），HCO₃⁻ 則<b>回到血液</b>。這達成兩件事：</p>
+  <ol class="steps">
+    <li><b>回收濾出的 HCO₃⁻</b>：濾液中的 HCO₃⁻ 不能直接穿過細胞膜，而是與分泌的 H⁺ 結合成碳酸 → CO₂＋H₂O（管腔側的碳酸酐酶）→ CO₂ 進入細胞再變回 HCO₃⁻ 回到血液。結果是濾出的 HCO₃⁻ 幾乎全部被收回（約 80–90% 在近曲小管）。</li>
+    <li><b>製造新的 HCO₃⁻</b>、真正排出酸：分泌到尿中的 H⁺ 若沒有被緩衝，尿 pH 很快降到極限（約 <b>4.5</b>）。尿中的兩種緩衝劑接住 H⁺：
+      <ul class="dots">
+        <li><b>磷酸鹽</b>：HPO₄²⁻＋H⁺ → H₂PO₄⁻（稱為可滴定酸）。</li>
+        <li><b>氨</b>：小管細胞分解<b>麩醯胺酸</b>產生 NH₃，NH₃＋H⁺ → <b>NH₄⁺</b>（銨）隨尿排出。酸中毒時氨的產生大幅增加，是腎臟最主要的代償方式（需數天）。</li>
+      </ul>
+      每排出一個被緩衝的 H⁺，就有一個<b>新的 HCO₃⁻</b> 進入血液，補充被身體中和非揮發性酸時用掉的 HCO₃⁻。</li>
+  </ol>
+  <p>呼吸性酸中毒時，腎臟增加 H⁺ 分泌與 HCO₃⁻ 生成來代償；鹼中毒時則減少 H⁺ 分泌，讓 HCO₃⁻ 排到尿中（第 16 章）。</p>
+  <div class="warn"><b class="t">國考重點：腎臟對電解質與酸鹼的調節</b>——①Na⁺ 大部分在近曲小管回收，最後的精細調整靠<b>醛固酮</b>（集尿管主細胞：保 Na⁺、排 K⁺）；②<b>高血鉀直接刺激醛固酮</b>；③水由 <b>ADH</b>（水通道蛋白-2）調整；④腎臟<b>分泌 H⁺、回收並製造 HCO₃⁻</b>，H⁺ 以<b>磷酸鹽</b>與<b>氨（NH₄⁺）</b>的形式排出；⑤酸中毒常伴隨高血鉀，鹼中毒常伴隨低血鉀。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>許多利尿劑（環利尿劑、噻嗪類）使更多 Na⁺ 與水流到集尿管，K⁺ 分泌增加而造成<b>低血鉀</b>，所以醫師可能建議多吃富含鉀的蔬果（或補充鉀）。<b>腎衰竭</b>的病人則因為 GFR 很低、排不出鉀，容易<b>高血鉀</b>而引起心律不整，必須<b>限制鉀</b>（蔬菜先切後燙、少喝蔬果汁與菜湯、避免低鈉鹽——低鈉鹽是用氯化鉀取代部分氯化鈉）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>Na⁺ 約 90% 在前段回收；醛固酮在集尿管主細胞：ENaC＋Na⁺/K⁺ 幫浦 → 保 Na⁺、排 K⁺。</li>
+      <li>尿中 K⁺ 主要來自集尿管分泌；高血鉀直接刺激醛固酮；醛固酮過多 → 低血鉀＋高血壓。</li>
+      <li>近腎絲球器＝近腎絲球細胞（腎素）＋緻密斑（NaCl）；ANP 排鈉。</li>
+      <li>K⁺ 與 H⁺ 競爭分泌：酸中毒 → 高血鉀、鹼中毒 → 低血鉀。</li>
+      <li>腎臟分泌 H⁺、回收濾出 HCO₃⁻、製造新 HCO₃⁻；H⁺ 以 H₂PO₄⁻ 與 NH₄⁺（麩醯胺酸 → 氨）排出；尿 pH 最低約 4.5。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>醛固酮</td><td>aldosterone</td><td>上皮鈉通道</td><td>epithelial Na⁺ channel (ENaC)</td></tr>
+      <tr><td>低／高血鉀</td><td>hypokalemia / hyperkalemia</td><td>低血鈉</td><td>hyponatremia</td></tr>
+      <tr><td>近腎絲球器</td><td>juxtaglomerular apparatus</td><td>間插細胞</td><td>intercalated cell</td></tr>
+      <tr><td>可滴定酸</td><td>titratable acid</td><td>銨</td><td>ammonium (NH₄⁺)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 17.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">17.6</span>利尿劑與腎功能檢查</h2>
+  <div class="en">Diuretics and Renal Function Tests</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>各類<b>利尿劑</b>作用在腎元的哪一段、效力與副作用（特別是血鉀）；<b>腎功能檢查</b>；以及<b>急性腎損傷</b>、<b>慢性腎臟病</b>、<b>腎病症候群</b>與<b>透析</b>。</div><div><span class="lt lt2">為什麼放最後？</span>利尿劑正好是複習腎元各段功能的好方法——每一種藥都阻斷某一段的某一個運輸蛋白。最後連結到營養師常面對的腎臟病飲食。</div></div>
+  <div class="oneline">環利尿劑（如 furosemide）阻斷粗上行枝的 NKCC2，效力最強；噻嗪類阻斷遠曲小管的 Na⁺–Cl⁻ 共同運輸；兩者都使 K⁺ 流失；保鉀利尿劑阻斷醛固酮或 ENaC，不會低血鉀但可能高血鉀；碳酸酐酶抑制劑與滲透性利尿劑（甘露醇）作用在近端；慢性腎臟病依 eGFR 分期，飲食需調整蛋白質、鈉、鉀、磷與水分，末期需透析或腎臟移植。</div>
+
+  <h3 id="h17">利尿劑的作用 Use of Diuretics</h3>
+  <p class="core">環利尿劑（furosemide）：抑制粗上行枝 NKCC2 → 破壞髓質梯度，效力最強，低血鉀；噻嗪類（hydrochlorothiazide）：抑制遠曲小管 Na⁺–Cl⁻ 共同運輸，低血鉀，常用於高血壓；保鉀利尿劑：螺內酯（醛固酮拮抗劑）、amiloride（阻斷 ENaC）→ 可能高血鉀；碳酸酐酶抑制劑（acetazolamide）：近曲小管，HCO₃⁻ 流失 → 代謝性酸中毒（高山症預防）；滲透性利尿劑（甘露醇）：被過濾但不被再吸收 → 留住水分（降腦壓）；咖啡因、酒精（抑制 ADH）也有利尿作用。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <path d="M60,40 C100,20 120,80 150,50 L150,240 C150,270 200,270 200,240 L200,70 C220,40 260,60 280,50 L320,50 L320,280" fill="none" stroke="#9ca3af" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="96" cy="44" r="12" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="90" y="88" font-size="11" text-anchor="middle" fill="#92400e">① 碳酸酐酶抑制劑</text><text x="90" y="102" font-size="11" text-anchor="middle" fill="#92400e">滲透性（甘露醇）</text>
+    <circle cx="200" cy="180" r="12" fill="#fecaca" stroke="#dc2626" stroke-width="2"/><text x="214" y="170" font-size="11" fill="#b91c1c">② 環利尿劑（最強）</text><text x="214" y="184" font-size="10" fill="#b91c1c">粗上行枝 NKCC2</text>
+    <circle cx="258" cy="56" r="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><text x="214" y="28" font-size="11" fill="#1d4ed8">③ 噻嗪類：遠曲小管 Na⁺–Cl⁻</text>
+    <circle cx="320" cy="140" r="12" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="338" y="134" font-size="11" fill="#15803d">④ 保鉀利尿劑</text><text x="338" y="148" font-size="10" fill="#15803d">集尿管（醛固酮、ENaC）</text>
+    <text x="338" y="250" font-size="11" fill="#374151">②③ → 低血鉀</text><text x="338" y="266" font-size="11" fill="#374151">④ → 可能高血鉀</text>
+  </svg><figcaption>利尿劑的作用部位：越前段的利尿劑能擋住越多 Na⁺，但近曲小管之後還有補償；作用在亨利氏環的環利尿劑效力最強。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>類別</th><th>作用部位與機制</th><th>特點與副作用</th></tr>
+    <tr><td><b>碳酸酐酶抑制劑</b>（acetazolamide）</td><td>近曲小管：抑制 HCO₃⁻ 回收</td><td>效力弱；尿偏鹼、代謝性酸中毒；預防高山症、青光眼</td></tr>
+    <tr><td><b>滲透性利尿劑</b>（甘露醇）</td><td>被過濾但不被再吸收，提高小管液滲透壓</td><td>降低腦壓、腦水腫；原理同糖尿病的多尿</td></tr>
+    <tr><td><b>環利尿劑</b>（furosemide，速尿錠）</td><td>亨利氏環<b>粗上行枝</b>：抑制 <b>NKCC2</b>，破壞髓質濃度梯度</td><td><b>效力最強</b>（可排出濾出 Na⁺ 的 25%）；用於心衰竭水腫、肺水腫；<b>低血鉀</b>、低血鎂、脫水</td></tr>
+    <tr><td><b>噻嗪類</b>（hydrochlorothiazide）</td><td><b>遠曲小管</b>：抑制 Na⁺–Cl⁻ 共同運輸</td><td>中等效力，常用於<b>高血壓</b>；<b>低血鉀</b>、高尿酸、高血糖；減少尿鈣（可預防部分腎結石）</td></tr>
+    <tr><td><b>保鉀利尿劑</b>（螺內酯 spironolactone；amiloride）</td><td><b>集尿管</b>：拮抗醛固酮或阻斷 ENaC</td><td>效力弱，常與前兩類合用；<b>可能高血鉀</b>（腎功能差、服 ACE 抑制劑者要小心）</td></tr>
+  </table></div>
+  <p>咖啡因（增加 GFR、抑制 Na⁺ 再吸收）與酒精（抑制 ADH）也有利尿作用。</p>
+  <div class="nut"><b class="t">營養連結：</b>服用<b>環利尿劑或噻嗪類</b>者注意<b>低血鉀</b>（肌肉無力、心律不整），可多攝取蔬果、豆類等含鉀食物；服用<b>保鉀利尿劑、ACE 抑制劑或 ARB</b>者，則應避免大量高鉀食物與<b>低鈉鹽</b>（含氯化鉀）。利尿劑治療時仍需<b>限鈉</b>，否則藥效被抵銷。</div>
+
+  <h3 id="h18">腎功能檢查與腎臟疾病 Renal Function Tests and Kidney Disease</h3>
+  <p class="core">檢查：血清肌酸酐與 eGFR、BUN、尿液檢查（蛋白、潛血、尿糖、比重）、UACR；急性腎損傷：數小時到數天內腎功能急降（嚴重脫水或休克、腎毒性藥物如 NSAIDs 與顯影劑、尿路阻塞），常可恢復；慢性腎臟病：依 eGFR 分 5 期（第 5 期 &lt; 15 mL/分/1.73m²），主因糖尿病、高血壓、腎絲球腎炎；併發症：高血鉀、代謝性酸中毒、高磷低鈣與次發性副甲狀腺亢進（腎性骨病變）、貧血（EPO 不足）、水分滯留與高血壓、尿毒症；腎病症候群：大量蛋白尿、低白蛋白血症、水腫、高血脂；末期：血液透析、腹膜透析或腎臟移植。</p>
+  <ul class="dots">
+    <li><b>腎功能檢查</b>：血清肌酸酐與 eGFR、BUN、尿液檢查（尿蛋白、潛血、尿糖、比重）、尿白蛋白／肌酸酐比值（UACR）、腎臟超音波。</li>
+    <li><b>急性腎損傷</b>（AKI）：數小時到數天內腎功能快速下降，原因有腎血流不足（嚴重脫水、休克、心衰竭）、腎毒性藥物（如大量 <b>NSAIDs</b>、某些抗生素、顯影劑）、尿路阻塞；及早處理常可恢復。</li>
+    <li><b>慢性腎臟病</b>（CKD）：腎功能持續下降超過 3 個月，依 eGFR 分 1–5 期（第 5 期 &lt; 15 mL/分/1.73 m²）；台灣盛行率高，最主要原因是<b>糖尿病</b>，其次是<b>高血壓</b>、腎絲球腎炎。
+      <ul class="dots">
+        <li>併發症：<b>高血鉀</b>、<b>代謝性酸中毒</b>、<b>高磷、低鈣</b>與次發性副甲狀腺亢進（腎臟無法活化維生素 D、排磷減少 → 腎性骨病變）、<b>貧血</b>（EPO 不足）、水分滯留與<b>高血壓</b>，末期出現<b>尿毒症</b>（噁心、食慾差、搔癢、意識改變）。</li>
+      </ul></li>
+    <li><b>腎病症候群</b>：腎絲球過濾膜受損，<b>大量蛋白尿</b>（每天 &gt; 3.5 g）→ <b>低白蛋白血症</b> → <b>水腫</b>，並常有高血脂。</li>
+    <li><b>末期腎病</b>的治療：<b>血液透析</b>（血液流過人工膜，以濃度差清除廢物與多餘的鉀、水，每週約 3 次）、<b>腹膜透析</b>（以自己的腹膜為過濾膜，透析液留在腹腔中交換），或<b>腎臟移植</b>。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：慢性腎臟病的飲食原則</b>（實際需依分期、透析與否與個別狀況，由營養師評估）——①<b>蛋白質</b>：未透析時適度限制（並以高生物價蛋白為主）以減少尿素與延緩惡化；<b>透析後反而要增加</b>，因為透析會流失胺基酸；②<b>熱量足夠</b>，避免肌肉被分解；③<b>限鈉</b>控制血壓與水腫；④<b>限鉀</b>（高血鉀時；蔬菜燙過再炒、避免湯汁與低鈉鹽）；⑤<b>限磷</b>（加工食品的磷酸鹽添加物吸收率特別高，乳製品、內臟、全穀、堅果也較多，必要時隨餐服用磷結合劑）；⑥透析病人依尿量<b>限制水分</b>。</div>
+  <div class="nut"><b class="t">營養連結：腎結石</b>——最常見的是<b>草酸鈣</b>結石。預防重點是<b>多喝水</b>（每天尿量 2 公升以上）、<b>減鈉</b>（鈉多使尿鈣增加）、適量動物性蛋白質；<b>不需要刻意限鈣</b>——飲食中足夠的鈣在腸道與草酸結合，反而減少草酸吸收；高草酸食物（菠菜、堅果、茶）不宜大量；檸檬酸（柑橘類）可抑制結石形成。尿酸結石則與高普林飲食、尿液過酸有關。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>碳酸酐酶抑制劑（近曲小管，代謝性酸中毒）、滲透性（甘露醇）。</li>
+      <li>環利尿劑：粗上行枝 NKCC2，最強，低血鉀；噻嗪類：遠曲小管 Na⁺–Cl⁻，高血壓常用，低血鉀。</li>
+      <li>保鉀利尿劑：集尿管（醛固酮拮抗、ENaC 阻斷），可能高血鉀。</li>
+      <li>腎功能：肌酸酐、eGFR、BUN、尿蛋白（UACR）。</li>
+      <li>CKD：糖尿病與高血壓為主因；高鉀、酸中毒、高磷低鈣、貧血、高血壓；飲食調整蛋白質、鈉、鉀、磷、水。</li>
+      <li>腎病症候群：大量蛋白尿、低白蛋白、水腫；透析與移植。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>利尿劑</td><td>diuretic</td><td>環利尿劑</td><td>loop diuretic</td></tr>
+      <tr><td>噻嗪類利尿劑</td><td>thiazide diuretic</td><td>保鉀利尿劑</td><td>potassium-sparing diuretic</td></tr>
+      <tr><td>急性腎損傷</td><td>acute kidney injury</td><td>慢性腎臟病</td><td>chronic kidney disease</td></tr>
+      <tr><td>腎病症候群</td><td>nephrotic syndrome</td><td>尿毒症</td><td>uremia</td></tr>
+      <tr><td>血液透析／腹膜透析</td><td>hemodialysis / peritoneal dialysis</td><td>腎結石</td><td>renal stone (calculus)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s7">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>腎臟功能</td><td>調容積、滲透壓、電解質、酸鹼、血壓；排尿素、肌酸酐、尿酸；腎素、EPO、活化維生素 D</td></tr>
+    <tr><td>腎元</td><td>腎小體 → 近曲小管 → 亨利氏環 → 遠曲小管 → 集尿管；入球 → 腎絲球 → 出球 → 管周微血管</td></tr>
+    <tr><td>國考：排尿</td><td>薦髓中樞；副交感 → 逼尿肌收縮；交感 → 儲尿；外括約肌骨骼肌隨意（陰部神經）</td></tr>
+    <tr><td>過濾</td><td>過濾膜三層（擋血球與蛋白）；淨過濾壓約 10；GFR 125 mL/分＝180 L/天；自動調節、緻密斑</td></tr>
+    <tr><td>再吸收</td><td>近曲小管 65%、葡萄糖胺基酸全收；逆流倍增 → 髓質 1,200；ADH → 水通道蛋白-2 → 濃尿</td></tr>
+    <tr><td>國考：腎功能指標</td><td>GFR（菊糖＝標準）、血清肌酸酐／eGFR、BUN、尿蛋白；清除率＝U×V÷P</td></tr>
+    <tr><td>國考：滲透性利尿</td><td>血糖 &gt; 腎閾值約 180 → 超過 Tm → 糖尿 → 多尿、口渴；SGLT2 抑制劑；甘露醇</td></tr>
+    <tr><td>國考：電解質與酸鹼</td><td>醛固酮：保 Na⁺、排 K⁺（高血鉀直接刺激）；ANP 排鈉；分泌 H⁺、回收與製造 HCO₃⁻；磷酸鹽與 NH₄⁺</td></tr>
+    <tr><td>利尿劑</td><td>環利尿劑（NKCC2，最強）、噻嗪類（遠曲小管）→ 低血鉀；保鉀 → 高血鉀</td></tr>
+    <tr><td>腎臟疾病</td><td>CKD 主因糖尿病、高血壓；高鉀、酸中毒、高磷、貧血；腎病症候群；透析</td></tr>
+  </table></div>
+  <h3 id="h19">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 依順序說出腎元各段，以及血液經過的兩套微血管？</li>
+    <li>□ 說明排尿反射的中樞、自主神經與隨意控制（國考）？</li>
+    <li>□ 說出過濾膜擋住什麼、GFR 的正常值與調節方式？</li>
+    <li>□ 用逆流倍增與 ADH 解釋尿液怎麼被濃縮？</li>
+    <li>□ 寫出清除率公式，說明菊糖、肌酸酐、BUN 的意義（國考）？</li>
+    <li>□ 解釋糖尿病為何會多尿（滲透性利尿，國考）？</li>
+    <li>□ 說明醛固酮對 Na⁺、K⁺ 的作用，以及腎臟怎麼排酸（國考）？</li>
+    <li>□ 比較三類主要利尿劑的作用部位與血鉀變化？</li>
+    <li>□ 說出慢性腎臟病的併發症與飲食原則？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 17 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"下列何者不是腎臟的功能？",o:["分泌紅血球生成素","活化維生素 D","分泌胰島素","分泌腎素"],a:2,e:"胰島素由胰島 β 細胞分泌；腎臟分泌 <b>EPO、腎素</b>並<b>活化維生素 D</b>。"},
+ {q:"血液離開腎絲球後，接著流入？",o:["腎靜脈","出球小動脈","入球小動脈","集尿管"],a:1,e:"入球小動脈 → 腎絲球 → <b>出球小動脈</b> → 管周微血管。"},
+ {q:"排尿時使逼尿肌收縮的是？（國考）",o:["交感神經","副交感神經（骨盆神經）","陰部神經","膈神經"],a:1,e:"<b>副交感</b>（ACh、蕈毒鹼受體）使逼尿肌收縮、內括約肌放鬆。"},
+ {q:"可以隨意控制、讓人憋尿的是？（國考）",o:["逼尿肌","內括約肌","外括約肌（骨骼肌）","輸尿管平滑肌"],a:2,e:"<b>外括約肌</b>是骨骼肌，由陰部神經（體神經）隨意控制。"},
+ {q:"正常腎絲球濾液中幾乎不含？",o:["葡萄糖","尿素","白蛋白","Na⁺"],a:2,e:"過濾膜擋住血球與大部分蛋白質，<b>白蛋白</b>幾乎濾不出。"},
+ {q:"正常成人的腎絲球過濾率約為？",o:["12.5 mL/分","125 mL/分","1,250 mL/分","5 L/分"],a:1,e:"<b>約 125 mL/分</b>，每天約 180 L。"},
+ {q:"再吸收 Na⁺ 與水最多的部位是？",o:["近曲小管","亨利氏環下行枝","遠曲小管","集尿管"],a:0,e:"<b>近曲小管</b>約 65%；葡萄糖與胺基酸幾乎全部在此回收。"},
+ {q:"亨利氏環上行枝的特性是？",o:["對水通透，對鹽不通透","主動打出 NaCl，對水不通透","受 ADH 控制水的通透","分泌葡萄糖"],a:1,e:"粗上行枝以 <b>NKCC2</b> 打出 NaCl 但水出不去，建立髓質梯度。"},
+ {q:"ADH 使尿液濃縮，是作用在？",o:["近曲小管","亨利氏環","集尿管（水通道蛋白-2）","腎絲球"],a:2,e:"ADH → V2 → cAMP → <b>水通道蛋白-2</b> 插入集尿管膜。"},
+ {q:"某物質只被過濾、不被再吸收也不被分泌，其清除率等於？",o:["腎血流量","GFR","0","尿流量"],a:1,e:"例如<b>菊糖</b>，清除率＝GFR。"},
+ {q:"臨床最常用來估計 GFR 的血液指標是？（國考）",o:["血糖","血清肌酸酐","血清白蛋白","血紅素"],a:1,e:"以<b>血清肌酸酐</b>配合年齡、性別算 eGFR；BUN 較易受飲食與脫水影響。"},
+ {q:"葡萄糖的清除率在正常人為？",o:["0","約 60 mL/分","等於 GFR","大於 GFR"],a:0,e:"正常時葡萄糖<b>全部被再吸收</b>，清除率為 0。"},
+ {q:"糖尿病人多尿的主要機制是？（國考）",o:["ADH 分泌過多","血糖超過腎閾值 → 糖尿 → 滲透性利尿","醛固酮過多","GFR 下降"],a:1,e:"超過 Tm（腎閾值約 180 mg/dL）→ 尿中葡萄糖留住水 → <b>滲透性利尿</b>。"},
+ {q:"醛固酮對集尿管的作用是？（國考）",o:["再吸收 K⁺、分泌 Na⁺","再吸收 Na⁺、分泌 K⁺","再吸收葡萄糖","增加水通道蛋白-2"],a:1,e:"<b>保 Na⁺、排 K⁺</b>（與 H⁺）；增加水通道的是 ADH。"},
+ {q:"下列何者直接刺激腎上腺皮質分泌醛固酮？（國考）",o:["低血鉀","高血鉀","ANP","高血鈉"],a:1,e:"<b>高血鉀</b>直接刺激醛固酮分泌，不需經過腎素。"},
+ {q:"腎小管分泌的 H⁺ 在尿中主要以何種形式排出？（國考）",o:["游離 H⁺","H₂PO₄⁻ 與 NH₄⁺","HCO₃⁻","H₂O"],a:1,e:"由<b>磷酸鹽</b>與<b>氨</b>緩衝；每排一個 H⁺ 就多一個新的 HCO₃⁻ 回血液。"},
+ {q:"酸中毒時血鉀常會？",o:["上升","下降","不變","變成零"],a:0,e:"H⁺ 進細胞換出 K⁺，腎臟優先分泌 H⁺ → <b>高血鉀</b>。"},
+ {q:"效力最強、作用在亨利氏環粗上行枝的利尿劑是？",o:["噻嗪類","環利尿劑（furosemide）","螺內酯","乙醯唑胺"],a:1,e:"<b>環利尿劑</b>抑制 NKCC2；會造成低血鉀。"},
+ {q:"服用後可能造成高血鉀的利尿劑是？",o:["環利尿劑","噻嗪類","保鉀利尿劑（螺內酯）","甘露醇"],a:2,e:"<b>保鉀利尿劑</b>拮抗醛固酮或阻斷 ENaC。"},
+ {q:"慢性腎臟病常見的併發症不包括？",o:["高血鉀","貧血","高血磷","低血壓與多尿為主"],a:3,e:"CKD 常見<b>高血鉀、代謝性酸中毒、高磷低鈣、貧血、高血壓</b>與水分滯留。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

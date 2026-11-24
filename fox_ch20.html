@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 20 章 生殖</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="20">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 20 章　生殖</h1>
+  <div class="en">Chapter 20 Reproduction（課本 p.755–）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">20.1 有性生殖</a>
+  <a class="sub" href="#h1">性別決定 Sex Determination</a>
+  <a class="sub" href="#h2">生殖器官的發育 Development of Accessory Sex Organs</a>
+  <a href="#s2">20.2 生殖的內分泌調節</a>
+  <a class="sub" href="#h3">下視丘—腦垂腺—性腺軸 Interactions Between the Hypothalamus, Pituitary, and Gonads</a>
+  <a class="sub" href="#h4">青春期 Onset of Puberty</a>
+  <a class="sub" href="#h5">松果腺 Pineal Gland</a>
+  <a href="#s3">20.3 男性生殖系統</a>
+  <a class="sub" href="#h6">睪丸的構造與激素 Structure of the Testes and Endocrine Functions</a>
+  <a class="sub" href="#h7">精子生成 Spermatogenesis</a>
+  <a class="sub" href="#h8">副性器官、勃起與射精 Male Accessory Sex Organs, Erection, and Ejaculation</a>
+  <a href="#s4">20.4 女性生殖系統</a>
+  <a class="sub" href="#h9">女性生殖器官 Female Reproductive Organs</a>
+  <a class="sub" href="#h10">卵巢週期：濾泡的發育 Ovarian Cycle</a>
+  <a class="sub" href="#h11">雌激素的製造：雙細胞模式 Two-Cell, Two-Gonadotropin Model</a>
+  <a class="sub" href="#h12">排卵與黃體 Ovulation and the Corpus Luteum</a>
+  <a href="#s5">20.5 月經週期</a>
+  <a class="sub" href="#h13">月經週期的各期 Phases of the Menstrual Cycle</a>
+  <a class="sub" href="#h14">荷爾蒙避孕 Contraceptive Methods</a>
+  <a class="sub" href="#h15">更年期與停經 Menopause</a>
+  <a href="#s6">20.6 受精、懷孕與分娩</a>
+  <a class="sub" href="#h16">受精與著床 Fertilization and Implantation</a>
+  <a class="sub" href="#h17">胎盤 The Placenta</a>
+  <a class="sub" href="#h18">分娩 Labor and Parturition</a>
+  <a class="sub" href="#h19">泌乳 Lactation</a>
+  <a href="#s7">本章重點整理</a>
+  <a class="sub" href="#h20">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　前面十九章都在講「個體」怎麼維持恆定與生存；生殖系統的任務則是讓<b>物種</b>延續。<span class="key">這一章回答：性別怎麼決定、下視丘—腦垂腺—性腺軸怎麼控制生殖、男性怎麼製造精子與睪固酮、女性怎麼每月排卵並準備子宮（月經週期）、受精後怎麼著床、懷孕、分娩與哺乳，以及不同人生階段（青春期、更年期）的內分泌變化。</span>它大量運用第 11 章內分泌的觀念：負回饋、正回饋、激素的允許與協同作用。</div>
+  <div class="path">
+    <div class="step"><span class="sn">20.1</span><div><b>有性生殖</b><br><span class="sq">減數分裂、性染色體與 SRY、生殖器官的分化。</span></div></div>
+    <div class="arr">↓ 生殖由誰控制？</div>
+    <div class="step"><span class="sn">20.2</span><div><b>生殖的內分泌調節</b><br><span class="sq">GnRH、FSH、LH、性類固醇；青春期；褪黑激素。</span></div></div>
+    <div class="arr">↓ 先看男性</div>
+    <div class="step"><span class="sn">20.3</span><div><b>男性生殖系統</b><br><span class="sq">睪丸的雷氏細胞與賽托利氏細胞、精子生成、勃起與射精。</span></div></div>
+    <div class="arr">↓ 再看女性</div>
+    <div class="step"><span class="sn">20.4</span><div><b>女性生殖系統</b><br><span class="sq">卵巢、濾泡的發育、卵子生成、排卵。</span></div></div>
+    <div class="arr">↓ 女性的激素每月一循環</div>
+    <div class="step"><span class="sn">20.5</span><div><b>月經週期</b><br><span class="sq">卵巢週期與子宮內膜週期、LH 高峰的正回饋、避孕、更年期。</span></div></div>
+    <div class="arr">↓ 若受精了</div>
+    <div class="step"><span class="sn">20.6</span><div><b>受精、懷孕與分娩</b><br><span class="sq">受精、著床、胎盤激素、分娩的正回饋、泌乳。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 20.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">20.1</span>有性生殖</h2>
+  <div class="en">Sexual Reproduction</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>有性生殖的意義；<b>性別決定</b>——Y 染色體上的 <b>SRY 基因</b>使胚胎的性腺發育成睪丸；之後<b>睪丸分泌的激素</b>（睪固酮、抗穆勒氏管激素）決定內外生殖器官的發育方向。</div><div><span class="lt lt2">為什麼放第一節？</span>男女生殖系統的差異從胚胎時期就開始。先理解「為什麼會長成男性或女性」，後面學兩性的生殖生理會更容易對照。</div></div>
+  <div class="oneline">精子與卵子經減數分裂成為單倍體，受精後恢復 46 條染色體；性染色體 XX 為女性、XY 為男性；Y 染色體上的 SRY 基因使原始性腺發育成睪丸，否則發育成卵巢；睪丸分泌的睪固酮使沃爾夫氏管發育成男性內生殖管，抗穆勒氏管激素使穆勒氏管退化；沒有這些激素時，穆勒氏管發育成輸卵管、子宮與陰道上部；外生殖器則由二氫睪固酮決定。</div>
+
+  <h3 id="h1">性別決定 Sex Determination</h3>
+  <p class="core">人類 23 對染色體：22 對體染色體＋1 對性染色體（女 XX、男 XY）；配子（精子、卵子）經減數分裂成為單倍體（23 條）；受精時精子帶 X 或 Y 決定性別；Y 染色體上的 SRY 基因（睪丸決定因子）使未分化的原始性腺在約第 7 週發育成睪丸；無 SRY → 卵巢；X 染色體失活（女性細胞中一條 X 濃縮成巴氏體）。</p>
+  <ul class="dots">
+    <li>人類有 23 對染色體：22 對<b>體染色體</b>與 1 對<b>性染色體</b>——女性 <b>XX</b>、男性 <b>XY</b>。</li>
+    <li>精子與卵子經<b>減數分裂</b>成為只含 23 條染色體的<b>單倍體</b>配子；受精後恢復成 46 條的二倍體。卵子都帶 X，精子帶 X 或 Y，所以<b>精子決定胎兒的性別</b>。</li>
+    <li>Y 染色體上的 <b>SRY 基因</b>（sex-determining region of the Y，睪丸決定因子）使胚胎約第 7 週時未分化的<b>原始性腺</b>發育成<b>睪丸</b>；沒有 SRY 時，原始性腺發育成<b>卵巢</b>。</li>
+    <li>女性細胞中兩條 X 之一隨機失活、濃縮成<b>巴氏體</b>，使 X 染色體基因的表現量與男性相當。</li>
+  </ul>
+
+  <h3 id="h2">生殖器官的發育 Development of Accessory Sex Organs</h3>
+  <p class="core">胚胎同時有兩套管道：沃爾夫氏管（中腎管）與穆勒氏管（副中腎管）；睪丸的賽托利氏細胞分泌抗穆勒氏管激素（AMH）→ 穆勒氏管退化；雷氏細胞分泌睪固酮 → 沃爾夫氏管發育成副睪、輸精管、儲精囊；睪固酮經 5α-還原酶轉成二氫睪固酮（DHT）→ 外生殖器男性化（陰莖、陰囊）與前列腺；無睪丸（卵巢或無性腺）→ 沃爾夫氏管退化、穆勒氏管發育成輸卵管、子宮、陰道上部，外生殖器發育為女性；「女性是預設途徑」；異常：雄性素不敏感症候群（XY、受體缺陷、外觀女性）、5α-還原酶缺乏。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a201" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="160" y="10" width="160" height="50" rx="12" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="240" y="32" font-size="13" text-anchor="middle" font-weight="bold">原始性腺</text><text x="240" y="50" font-size="11" text-anchor="middle">＋沃爾夫氏管＋穆勒氏管</text>
+    <path d="M200,60 L110,100" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a201)"/><text x="80" y="80" font-size="11" fill="#1d4ed8">有 SRY（XY）</text>
+    <path d="M280,60 L370,100" stroke="#db2777" stroke-width="2.5" marker-end="url(#a201)"/><text x="330" y="80" font-size="11" fill="#be185d">無 SRY（XX）</text>
+    <rect x="20" y="104" width="190" height="44" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="115" y="131" font-size="13" text-anchor="middle" font-weight="bold">睪丸</text>
+    <rect x="270" y="104" width="190" height="44" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><text x="365" y="131" font-size="13" text-anchor="middle" font-weight="bold">卵巢</text>
+    <g font-size="11"><text x="20" y="176" fill="#1d4ed8">賽托利氏細胞 → AMH</text><text x="20" y="192">→ 穆勒氏管退化</text>
+      <text x="20" y="216" fill="#1d4ed8">雷氏細胞 → 睪固酮</text><text x="20" y="232">→ 沃爾夫氏管：副睪、輸精管、儲精囊</text>
+      <text x="20" y="256" fill="#1d4ed8">→ DHT：陰莖、陰囊、前列腺</text>
+      <text x="270" y="176" fill="#be185d">沒有 AMH、沒有睪固酮</text><text x="270" y="192">→ 沃爾夫氏管退化</text>
+      <text x="270" y="216">→ 穆勒氏管：輸卵管、子宮、</text><text x="270" y="232">　陰道上部</text>
+      <text x="270" y="256">→ 女性外生殖器</text></g>
+    <text x="240" y="284" font-size="11" text-anchor="middle" fill="#6b7280">沒有睪丸激素時，預設發育成女性構造</text>
+  </svg><figcaption>性別分化：SRY 決定性腺是睪丸還是卵巢；睪丸分泌的 AMH 與睪固酮再決定內外生殖器官往男性發育，否則預設往女性發育。</figcaption></figure>
+  <ul class="dots">
+    <li>胚胎早期同時具有兩套管道：<b>沃爾夫氏管</b>（中腎管，可發育成男性管道）與<b>穆勒氏管</b>（副中腎管，可發育成女性管道）。</li>
+    <li><b>有睪丸時</b>：睪丸的<b>賽托利氏細胞</b>分泌<b>抗穆勒氏管激素</b>（AMH）使穆勒氏管退化；<b>雷氏細胞</b>分泌<b>睪固酮</b>使沃爾夫氏管發育成<b>副睪、輸精管、儲精囊</b>；睪固酮經 <b>5α-還原酶</b>轉成<b>二氫睪固酮</b>（DHT），使外生殖器男性化（陰莖、陰囊）並形成前列腺。</li>
+    <li><b>沒有睪丸時</b>（卵巢）：沃爾夫氏管退化，穆勒氏管發育成<b>輸卵管、子宮與陰道上部</b>，外生殖器發育成女性。所以女性構造是沒有雄性激素時的「預設」路徑。</li>
+    <li>異常例子：<b>雄性素不敏感症候群</b>——染色體 XY、有睪丸也分泌睪固酮，但雄性素受體缺陷，外觀為女性；5α-還原酶缺乏——出生時外生殖器不明顯，青春期睪固酮大增後才男性化。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>22 對體染色體＋性染色體（XX 女、XY 男）；配子經減數分裂成單倍體；精子決定性別。</li>
+      <li>SRY → 原始性腺變睪丸；無 SRY → 卵巢。</li>
+      <li>AMH（賽托利氏細胞）→ 穆勒氏管退化；睪固酮（雷氏細胞）→ 沃爾夫氏管發育；DHT → 外生殖器與前列腺。</li>
+      <li>無睪丸激素 → 穆勒氏管發育成輸卵管、子宮，外生殖器為女性。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>減數分裂</td><td>meiosis</td><td>單倍體／二倍體</td><td>haploid / diploid</td></tr>
+      <tr><td>性染色體</td><td>sex chromosomes</td><td>SRY 基因</td><td>sex-determining region of Y</td></tr>
+      <tr><td>沃爾夫氏管</td><td>wolffian (mesonephric) duct</td><td>穆勒氏管</td><td>müllerian (paramesonephric) duct</td></tr>
+      <tr><td>抗穆勒氏管激素</td><td>anti-müllerian hormone (AMH)</td><td>二氫睪固酮</td><td>dihydrotestosterone (DHT)</td></tr>
+      <tr><td>雄性素不敏感症候群</td><td>androgen insensitivity syndrome</td><td>巴氏體</td><td>Barr body</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 20.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">20.2</span>生殖的內分泌調節</h2>
+  <div class="en">Endocrine Regulation of Reproduction</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>兩性共同的<b>下視丘—腦垂腺—性腺軸</b>：脈衝式分泌的 <b>GnRH</b>、腦垂腺前葉的 <b>FSH 與 LH</b>、性腺的<b>性類固醇</b>與<b>抑制素</b>，以及它們之間的<b>負回饋</b>；<b>青春期</b>怎麼啟動；以及<b>松果腺</b>的褪黑激素。</div><div><span class="lt lt2">為什麼接在 20.1 後面？</span>出生後生殖系統長期「待機」，到青春期才由這個軸啟動。它是後面男性精子生成、女性月經週期的共同控制系統（第 11 章已介紹軸的概念）。</div></div>
+  <div class="oneline">下視丘以脈衝方式分泌 GnRH，刺激腦垂腺前葉分泌 FSH 與 LH（促性腺激素）；性腺受刺激後分泌性類固醇（睪固酮、雌激素、黃體素）與抑制素，再負回饋抑制下視丘與腦垂腺（抑制素主要抑制 FSH）；GnRH 必須是脈衝式，持續給予反而抑制；青春期是 GnRH 脈衝增加的結果，與體脂（瘦體素）、遺傳、營養有關。</div>
+  <div class="think">為什麼體脂過低的運動員或厭食症患者常會停經？</div>
+
+  <h3 id="h3">下視丘—腦垂腺—性腺軸 Interactions Between the Hypothalamus, Pituitary, and Gonads</h3>
+  <p class="core">GnRH（下視丘，每 1–2 小時脈衝分泌）→ 腦垂腺前葉 FSH 與 LH；男性：LH → 雷氏細胞分泌睪固酮；FSH（＋睪固酮）→ 賽托利氏細胞支持精子生成、分泌抑制素；女性：FSH → 濾泡發育與顆粒細胞分泌雌激素；LH → 鞘膜細胞分泌雄性素（被顆粒細胞芳香酶轉成雌激素）、觸發排卵、維持黃體；負回饋：性類固醇抑制 GnRH 與 LH（及 FSH），抑制素選擇性抑制 FSH；例外：排卵前高雌激素對 LH 產生正回饋；GnRH 若持續給予（非脈衝）→ 受體下調 → 抑制 FSH、LH（GnRH 類似物用於治療前列腺癌、子宮內膜異位症、性早熟）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a202" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="160" y="10" width="160" height="44" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="240" y="30" font-size="13" text-anchor="middle" font-weight="bold">下視丘</text><text x="240" y="46" font-size="11" text-anchor="middle">GnRH（脈衝式）</text>
+    <path d="M240,54 L240,84" stroke="#374151" stroke-width="2.5" marker-end="url(#a202)"/>
+    <rect x="160" y="88" width="160" height="44" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="108" font-size="13" text-anchor="middle" font-weight="bold">腦垂腺前葉</text><text x="240" y="124" font-size="11" text-anchor="middle">FSH、LH</text>
+    <path d="M240,132 L240,164" stroke="#374151" stroke-width="2.5" marker-end="url(#a202)"/>
+    <rect x="130" y="168" width="220" height="50" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="190" font-size="13" text-anchor="middle" font-weight="bold">性腺（睪丸／卵巢）</text><text x="240" y="208" font-size="11" text-anchor="middle">性類固醇＋抑制素</text>
+    <path d="M130,193 C40,180 40,60 156,32" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a202)"/>
+    <path d="M140,182 C90,160 100,120 156,110" fill="none" stroke="#dc2626" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a202)"/>
+    <text x="10" y="120" font-size="12" fill="#b91c1c" font-weight="bold">負回饋（－）</text><text x="10" y="138" font-size="11" fill="#b91c1c">性類固醇</text>
+    <path d="M350,193 C420,170 410,130 324,114" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a202)"/><text x="380" y="160" font-size="11" fill="#92400e">抑制素</text><text x="380" y="176" font-size="11" fill="#92400e">（只抑制 FSH）</text>
+    <rect x="80" y="240" width="320" height="50" rx="10" fill="#fff" stroke="#db2777" stroke-width="2"/><text x="240" y="262" font-size="12" text-anchor="middle" fill="#be185d" font-weight="bold">例外：排卵前高雌激素 → 正回饋</text><text x="240" y="280" font-size="11" text-anchor="middle">→ LH 高峰 → 排卵（20.5）</text>
+  </svg><figcaption>下視丘—腦垂腺—性腺軸：GnRH 以脈衝方式刺激 FSH、LH，性腺的激素再回頭抑制上游；只有排卵前會短暫轉為正回饋。</figcaption></figure>
+  <ul class="dots">
+    <li><b>下視丘</b>以<b>脈衝</b>方式（約每 1–2 小時一次）分泌<b>促性腺激素釋放激素</b>（<b>GnRH</b>），經門脈系統送到腦垂腺前葉（第 11 章）。</li>
+    <li><b>腦垂腺前葉</b>分泌兩種<b>促性腺激素</b>：<b>濾泡刺激素</b>（FSH）與<b>黃體生成素</b>（LH）。兩性都有這兩種激素，名稱取自它們在女性的作用。</li>
+    <li><b>性腺</b>受刺激後分泌<b>性類固醇</b>（睪固酮、雌激素、黃體素）與胜肽激素<b>抑制素</b>（inhibin），並產生配子。</li>
+    <li><b>負回饋</b>：性類固醇抑制 GnRH 與 LH（也抑制 FSH）；<b>抑制素</b>則<b>選擇性</b>抑制 FSH。</li>
+    <li><b>正回饋</b>的例外：女性排卵前，高而持續的雌激素反而促進 LH 大量分泌（LH 高峰，20.5）。</li>
+    <li>GnRH 必須是<b>脈衝式</b>才有效；若持續給予長效 GnRH 類似物，受體會<b>下調</b>，反而抑制 FSH 與 LH——臨床用來治療前列腺癌、子宮內膜異位症與<b>性早熟</b>。</li>
+  </ul>
+
+  <h3 id="h4">青春期 Onset of Puberty</h3>
+  <p class="core">兒童期 GnRH 分泌被抑制；青春期下視丘 GnRH 脈衝的頻率與幅度增加（最初在夜間睡眠時）→ FSH、LH↑ → 性類固醇↑ → 第二性徵；女孩約 8–13 歲開始（乳房發育），初經平均約 12–13 歲；男孩約 9–14 歲（睪丸變大）；影響因素：遺傳、營養與體脂（瘦體素允許作用；營養改善使初經提早，體脂過低使延遲或停經）、kisspeptin（刺激 GnRH）；腎上腺雄性素增加（腎上腺皮質功能初現）促進陰毛與腋毛。</p>
+  <ul class="dots">
+    <li>兒童期下視丘的 GnRH 分泌處於抑制狀態；<b>青春期</b>時 GnRH 脈衝的頻率與幅度增加（最初在<b>夜間睡眠</b>時）→ FSH、LH 上升 → 性腺分泌性類固醇 → 出現<b>第二性徵</b>，並開始產生成熟的配子。</li>
+    <li>女孩通常約 8–13 歲開始（最先是乳房發育），<b>初經</b>平均約 12–13 歲；男孩約 9–14 歲開始（最先是睪丸變大）。</li>
+    <li>啟動因素包括遺傳、下視丘的 <b>kisspeptin</b>（刺激 GnRH 神經元），以及<b>營養與體脂</b>：<b>瘦體素</b>代表能量儲存足夠，對青春期啟動有<b>允許作用</b>。營養改善使近百年來初經年齡提早；肥胖的女孩初經也較早。</li>
+    <li>腎上腺皮質的雄性素在青春期前後增加，促進陰毛與腋毛生長。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>體脂過低、熱量長期不足或過度運動時，<b>瘦體素</b>下降，加上壓力激素升高，下視丘的 <b>GnRH 脈衝被抑制</b> → FSH、LH 減少 → 不排卵、雌激素低 → <b>停經</b>（下視丘性無月經）。這是身體在能量不足時「暫停生殖」的保護機制，但低雌激素會造成<b>骨質流失</b>，女性運動員可能同時出現能量不足、月經失調與骨質疏鬆（相對能量不足症候群）。</div>
+
+  <h3 id="h5">松果腺 Pineal Gland</h3>
+  <p class="core">松果腺在黑暗時分泌褪黑激素（光線經視網膜→視交叉上核→交感神經抑制其分泌）；調節晝夜節律與睡眠；在季節性繁殖的動物中抑制生殖（長夜時）；在人類對青春期的影響不明確，松果腺腫瘤可能造成性早熟或延遲。</p>
+  <p><b>松果腺</b>在<b>黑暗</b>中分泌<b>褪黑激素</b>，光線經視網膜傳到下視丘的視交叉上核（生物時鐘）後抑制其分泌，因此褪黑激素參與<b>晝夜節律</b>與睡眠（第 8、11 章）。在季節性繁殖的動物（如倉鼠、羊）中，褪黑激素隨日照長短調控生殖季節；在人類對生殖的作用尚不明確。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>GnRH（脈衝）→ FSH、LH → 性類固醇＋抑制素；性類固醇負回饋 GnRH 與 LH；抑制素選擇性抑制 FSH。</li>
+      <li>例外：排卵前高雌激素正回饋 → LH 高峰。</li>
+      <li>GnRH 持續給予 → 受體下調 → 抑制（治療前列腺癌、性早熟）。</li>
+      <li>青春期：GnRH 脈衝增加；kisspeptin；瘦體素與體脂的允許作用；體脂過低 → 停經、骨質流失。</li>
+      <li>松果腺褪黑激素：黑暗分泌、晝夜節律。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>促性腺激素釋放激素</td><td>GnRH</td><td>濾泡刺激素</td><td>follicle-stimulating hormone (FSH)</td></tr>
+      <tr><td>黃體生成素</td><td>luteinizing hormone (LH)</td><td>促性腺激素</td><td>gonadotropins</td></tr>
+      <tr><td>抑制素</td><td>inhibin</td><td>性類固醇</td><td>sex steroids</td></tr>
+      <tr><td>青春期</td><td>puberty</td><td>初經</td><td>menarche</td></tr>
+      <tr><td>第二性徵</td><td>secondary sex characteristics</td><td>褪黑激素</td><td>melatonin</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 20.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">20.3</span>男性生殖系統</h2>
+  <div class="en">Male Reproductive System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>睪丸的兩個部分——製造精子的<b>細精管</b>（含<b>賽托利氏細胞</b>）與分泌睪固酮的<b>雷氏細胞</b>；<b>睪固酮</b>的作用；<b>精子生成</b>的過程；以及副性器官、<b>勃起</b>與<b>射精</b>的神經控制。</div><div><span class="lt lt2">為什麼接在 20.2 後面？</span>把剛學的下視丘—腦垂腺—性腺軸先用在比較單純的男性：FSH、LH、睪固酮、抑制素各自作用在睪丸的哪一種細胞。</div></div>
+  <div class="oneline">LH 刺激睪丸間質的雷氏細胞分泌睪固酮；FSH 與睪固酮作用在細精管的賽托利氏細胞，支持精子生成並分泌抑制素與雄性素結合蛋白；精子生成約需 74 天，從精原細胞經減數分裂到精子細胞，再分化成有尾巴的精子，並在副睪中成熟；陰囊使睪丸溫度比體溫低約 2–3℃；勃起由副交感神經經一氧化氮使陰莖血管擴張，射精由交感神經控制。</div>
+  <div class="think">為什麼使用合成類固醇（雄性素）增肌的人，反而可能睪丸萎縮、精子減少？</div>
+
+  <h3 id="h6">睪丸的構造與激素 Structure of the Testes and Endocrine Functions</h3>
+  <p class="core">睪丸位於陰囊，溫度約比體溫低 2–3℃（精子生成所需；隱睪症 → 不孕風險）；細精管（約占 90%）：生殖細胞＋賽托利氏細胞（支持細胞：緊密接合形成血睪障壁、提供養分、吞噬殘餘細胞質、分泌雄性素結合蛋白 ABP、抑制素、AMH，受 FSH 與睪固酮作用）；間質的雷氏細胞（間質細胞）：受 LH 刺激分泌睪固酮；睪固酮在標的組織轉成 DHT（5α-還原酶：前列腺、外生殖器、毛囊）或雌二醇（芳香酶：腦、骨骼、脂肪）；睪固酮作用：精子生成、副性器官、第二性徵（喉結、聲音低沉、體毛、肌肉與骨骼）、蛋白質合成、紅血球生成、性慾；負回饋抑制 GnRH 與 LH，抑制素抑制 FSH。</p>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <circle cx="160" cy="140" r="110" fill="#fef3c7" stroke="#b45309" stroke-width="3"/>
+    <circle cx="160" cy="140" r="30" fill="#fff" stroke="#e5e7eb"/><text x="160" y="144" font-size="10" text-anchor="middle">管腔</text>
+    <g fill="#bfdbfe" stroke="#2563eb"><circle cx="160" cy="40" r="10"/><circle cx="240" cy="80" r="10"/><circle cx="260" cy="150" r="10"/><circle cx="80" cy="80" r="10"/><circle cx="60" cy="150" r="10"/><circle cx="160" cy="240" r="10"/></g>
+    <g fill="#c4b5fd" stroke="#7c3aed"><circle cx="160" cy="80" r="8"/><circle cx="210" cy="110" r="8"/><circle cx="110" cy="110" r="8"/><circle cx="210" cy="170" r="8"/><circle cx="110" cy="170" r="8"/></g>
+    <g stroke="#16a34a" stroke-width="2" fill="none"><path d="M160,112 l0,-8 M180,128 l6,-6 M140,128 l-6,-6 M180,152 l6,6"/></g>
+    <path d="M150,20 L170,20 L172,128 L148,128 z" fill="#fca5a5" opacity="0.5" stroke="#dc2626"/>
+    <rect x="290" y="30" width="40" height="30" rx="8" fill="#fde68a" stroke="#ca8a04" stroke-width="2"/><rect x="300" y="236" width="40" height="30" rx="8" fill="#fde68a" stroke="#ca8a04" stroke-width="2"/>
+    <g font-size="12"><text x="340" y="50" font-weight="bold" fill="#a16207">雷氏細胞</text><text x="340" y="66" font-size="11">（細精管之間）</text><text x="340" y="82" font-size="11">LH → 睪固酮</text>
+      <text x="300" y="120" font-weight="bold" fill="#1d4ed8">● 精原細胞（外圍）</text>
+      <text x="300" y="146" font-weight="bold" fill="#6d28d9">● 精母細胞（減數分裂）</text>
+      <text x="300" y="172" font-weight="bold" fill="#15803d">→ 精子（向管腔）</text>
+      <text x="300" y="198" font-weight="bold" fill="#b91c1c">▮ 賽托利氏細胞</text><text x="300" y="214" font-size="11">FSH → 支持精子生成、抑制素</text></g>
+  </svg><figcaption>細精管的橫切面：精原細胞在外圍，越往管腔越成熟，最後成為精子；賽托利氏細胞從基底延伸到管腔支持它們；細精管之間的雷氏細胞分泌睪固酮。</figcaption></figure>
+  <ul class="dots">
+    <li>睪丸位於體外的<b>陰囊</b>，溫度比體溫低約 2–3℃，這是精子生成所必需的；睪丸未降入陰囊（<b>隱睪症</b>）會影響生育並增加睪丸癌風險。</li>
+    <li><b>細精管</b>（約占睪丸 90%）：製造精子；管壁中有<b>賽托利氏細胞</b>（支持細胞）——細胞之間的緊密接合形成<b>血睪障壁</b>，保護減數分裂後的生殖細胞不被免疫系統攻擊；提供養分、吞噬精子多餘的細胞質；分泌<b>雄性素結合蛋白</b>（ABP，讓細精管內睪固酮濃度很高）、<b>抑制素</b>、AMH。賽托利氏細胞受 <b>FSH</b> 與<b>睪固酮</b>作用。</li>
+    <li><b>雷氏細胞</b>（間質細胞）：位於細精管之間，受 <b>LH</b> 刺激分泌<b>睪固酮</b>。</li>
+  </ul>
+  <p><b>睪固酮</b>的作用：促進<b>精子生成</b>（需高局部濃度）；維持副性器官；產生<b>男性第二性徵</b>（喉結與低沉聲音、臉與體毛、肌肉與骨骼發達）；促進蛋白質合成（合成作用）、<b>紅血球生成</b>；影響性慾。睪固酮在部分組織轉成作用更強的 <b>DHT</b>（前列腺、外生殖器、毛囊——與攝護腺肥大、男性禿頭有關），在腦、骨骼與脂肪中則經<b>芳香酶</b>轉成<b>雌二醇</b>（男性骨骼也需要雌激素）。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>外來的大量雄性素會強烈<b>負回饋</b>抑制下視丘 GnRH 與腦垂腺 LH、FSH → 自己的雷氏細胞不再分泌睪固酮，細精管內的局部睪固酮與 FSH 都不足 → <b>睪丸萎縮、精子生成減少</b>（甚至不孕）。此外部分雄性素經芳香酶轉成雌激素，可能使男性乳房發育；也有肝損傷、血脂異常、心血管風險。</div>
+
+  <h3 id="h7">精子生成 Spermatogenesis</h3>
+  <p class="core">精原細胞（2n，幹細胞，持續有絲分裂）→ 初級精母細胞（2n）→ 第一次減數分裂 → 次級精母細胞（n）→ 第二次減數分裂 → 精細胞（n）→ 精子形成（變態：形成頂體、鞭毛，丟棄大部分細胞質）→ 精子；每個初級精母細胞產生 4 個精子；全程約 74 天；每天產生約一億個以上；精子在副睪中成熟並獲得運動能力；在女性生殖道中獲能（capacitation）才能受精；頂體含酵素以穿過卵子外層。</p>
+  <ol class="steps">
+    <li><b>精原細胞</b>（2n）：位於細精管外圍的幹細胞，持續以有絲分裂增生，一部分保留為幹細胞。</li>
+    <li><b>初級精母細胞</b>（2n）進行<b>第一次減數分裂</b> → 兩個<b>次級精母細胞</b>（n）。</li>
+    <li><b>第二次減數分裂</b> → 四個<b>精細胞</b>（n）。</li>
+    <li><b>精子形成</b>（變態）：精細胞丟掉大部分細胞質，形成含酵素的<b>頂體</b>（覆蓋頭部，用來穿過卵子外層）、中段的粒線體與<b>鞭毛</b>，成為<b>精子</b>。</li>
+  </ol>
+  <p>整個過程約 <b>74 天</b>，每天產生一億個以上的精子；一個初級精母細胞產生<b>4 個</b>精子（女性則只產生 1 個卵子，20.4）。精子經過<b>副睪</b>時逐漸成熟並獲得運動能力，進入女性生殖道後還要經過<b>獲能</b>（capacitation）才能受精。</p>
+  <div class="nut"><b class="t">營養連結：</b>精子生成需要足夠的<b>鋅</b>、硒、葉酸、抗氧化營養素與熱量；肥胖（芳香酶使雌激素增加、睪固酮下降）、陰囊過熱（長時間泡溫泉、筆電放大腿上）、吸菸與過量飲酒都可能降低精子品質。精子約需 2–3 個月生成，所以改善生活型態需持續數月才看得到效果。</div>
+
+  <h3 id="h8">副性器官、勃起與射精 Male Accessory Sex Organs, Erection, and Ejaculation</h3>
+  <p class="core">精子路徑：細精管 → 副睪（成熟、儲存）→ 輸精管 → 射精管 → 尿道；精液：儲精囊（約 60%，果糖供精子能量、前列腺素）、前列腺（約 30%，弱鹼性、凝固與液化酵素、PSA）、尿道球腺（潤滑）；勃起：性刺激 → 副交感神經 → 陰莖海綿體動脈內皮與神經釋放一氧化氮 → cGMP → 平滑肌放鬆、血液充滿海綿體 → 壓迫靜脈 → 勃起；PDE5 抑制劑（威而鋼）延長 cGMP 作用；射精：交感神經使輸精管、儲精囊、前列腺平滑肌收縮（洩精），再由骨骼肌節律收縮射出（「point and shoot」：副交感勃起、交感射精）；輸精管結紮。</p>
+  <ul class="dots">
+    <li><b>精子的路徑</b>：細精管 → <b>副睪</b>（成熟、儲存）→ <b>輸精管</b> → 射精管 → 尿道。</li>
+    <li><b>精液</b>的成分：<b>儲精囊</b>分泌約 60%（含<b>果糖</b>作為精子的能量、前列腺素）；<b>前列腺</b>分泌約 30%（弱鹼性，中和陰道酸性；含凝固與液化酵素，以及<b>前列腺特異抗原</b> PSA）；尿道球腺分泌少量潤滑液。</li>
+    <li><b>勃起</b>：性刺激 → <b>副交感神經</b> → 陰莖動脈的神經與內皮釋放<b>一氧化氮</b> → 平滑肌細胞 <b>cGMP</b> 增加 → 平滑肌放鬆、動脈擴張 → 血液充滿海綿體並壓迫靜脈回流 → 勃起。<b>PDE5 抑制劑</b>（如威而鋼）減緩 cGMP 分解而延長作用（第 14 章 NO）。</li>
+    <li><b>射精</b>：<b>交感神經</b>使輸精管、儲精囊、前列腺平滑肌收縮，把精液送入尿道（洩精），接著陰莖根部骨骼肌節律收縮將精液射出。口訣：副交感勃起、交感射精（第 9 章）。</li>
+    <li><b>輸精管結紮</b>：切斷輸精管，精子無法進入精液，但睪固酮分泌與第二性徵不受影響。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b><b>勃起功能障礙</b>常是血管內皮功能異常（NO 減少）的早期表現，與糖尿病、高血壓、高血脂、吸菸、肥胖密切相關，也是心血管疾病的警訊；改善血管健康的飲食與運動也能改善勃起功能。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>陰囊溫度較低；隱睪症。</li>
+      <li>雷氏細胞：LH → 睪固酮；賽托利氏細胞：FSH＋睪固酮 → 支持精子生成、血睪障壁、ABP、抑制素、AMH。</li>
+      <li>睪固酮 → DHT（5α-還原酶：前列腺、外生殖器、毛囊）或雌二醇（芳香酶）；作用：精子生成、第二性徵、肌肉骨骼、紅血球。</li>
+      <li>精子生成約 74 天：精原細胞 → 初級精母細胞 → 減數分裂 → 精細胞 → 精子（頂體、鞭毛）；1 個初級精母細胞 → 4 個精子；副睪成熟、獲能。</li>
+      <li>精液：儲精囊（果糖）、前列腺（PSA、鹼性）；勃起：副交感 → NO → cGMP；射精：交感。</li>
+      <li>外源雄性素 → 負回饋 → 睪丸萎縮、精子減少。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>細精管</td><td>seminiferous tubules</td><td>賽托利氏細胞</td><td>Sertoli cells</td></tr>
+      <tr><td>雷氏細胞</td><td>Leydig cells</td><td>血睪障壁</td><td>blood-testis barrier</td></tr>
+      <tr><td>精子生成</td><td>spermatogenesis</td><td>精原細胞／精母細胞／精細胞</td><td>spermatogonium / spermatocyte / spermatid</td></tr>
+      <tr><td>頂體</td><td>acrosome</td><td>獲能</td><td>capacitation</td></tr>
+      <tr><td>副睪／輸精管</td><td>epididymis / ductus deferens</td><td>儲精囊／前列腺</td><td>seminal vesicle / prostate</td></tr>
+      <tr><td>勃起／射精</td><td>erection / ejaculation</td><td>芳香酶</td><td>aromatase</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 20.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">20.4</span>女性生殖系統</h2>
+  <div class="en">Female Reproductive System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>女性生殖器官；<b>卵巢</b>中<b>濾泡</b>的發育（原始 → 初級 → 次級 → 成熟／格拉夫氏濾泡）；<b>卵子生成</b>與男性精子生成的差異；濾泡細胞如何合作製造<b>雌激素</b>（雙細胞雙促性腺激素）；以及<b>排卵</b>與<b>黃體</b>。</div><div><span class="lt lt2">為什麼接在 20.3 後面？</span>與男性對照：同樣是 FSH、LH 作用在性腺的兩種細胞，但女性的配子數量從出生就固定，而且每月只排出一個。理解濾泡與黃體後，20.5 的月經週期就水到渠成。</div></div>
+  <div class="oneline">卵巢中的濾泡由卵母細胞與包圍它的顆粒細胞、鞘膜細胞組成；女嬰出生時約有一兩百萬個停在第一次減數分裂前期的初級卵母細胞，青春期時剩約 40 萬個，一生只排出約 400 個；每個週期多個濾泡開始發育，只有一個成熟為格拉夫氏濾泡；LH 刺激鞘膜細胞製造雄性素，FSH 使顆粒細胞以芳香酶把它轉成雌激素；LH 高峰引起排卵，次級卵母細胞要等受精才完成第二次減數分裂；排卵後的濾泡變成分泌黃體素與雌激素的黃體。</div>
+  <div class="think">為什麼女性的生育力在 35 歲以後下降得特別快？</div>
+
+  <h3 id="h9">女性生殖器官 Female Reproductive Organs</h3>
+  <p class="core">卵巢（製造卵子與激素）→ 輸卵管（繖部捕捉卵子；壺腹部為通常受精處；以纖毛與蠕動送往子宮）→ 子宮（子宮內膜：功能層每月剝落、基底層再生；子宮肌層：平滑肌，分娩時收縮；子宮頸）→ 陰道；外陰部；乳房（第二性徵，泌乳）。</p>
+  <ul class="dots">
+    <li><b>卵巢</b>：產生卵子並分泌雌激素、黃體素與抑制素。</li>
+    <li><b>輸卵管</b>：末端的<b>繖部</b>捕捉排出的卵子；<b>壺腹部</b>是通常<b>受精</b>的地方；以纖毛與平滑肌蠕動把受精卵送往子宮（約 3–4 天）。若受精卵卡在輸卵管著床，稱為<b>子宮外孕</b>。</li>
+    <li><b>子宮</b>：內層<b>子宮內膜</b>分為每月隨月經剝落的<b>功能層</b>與負責再生的<b>基底層</b>；中層<b>子宮肌層</b>是厚的平滑肌，分娩時收縮；下端是<b>子宮頸</b>。</li>
+    <li><b>陰道</b>與外陰部；<b>乳房</b>是第二性徵，懷孕後負責泌乳（20.6）。</li>
+  </ul>
+
+  <h3 id="h10">卵巢週期：濾泡的發育 Ovarian Cycle</h3>
+  <p class="core">卵子生成：胎兒期卵原細胞有絲分裂 → 初級卵母細胞（2n），進入第一次減數分裂後停在前期 I（停滯數十年）；出生時約 100–200 萬個，青春期約 40 萬個，一生排卵約 400 個，其餘閉鎖；濾泡發育：原始濾泡（單層扁平細胞）→ 初級濾泡（立方顆粒細胞、透明帶）→ 次級濾泡（多層顆粒細胞、鞘膜細胞、出現濾泡腔）→ 成熟（格拉夫氏）濾泡（大濾泡腔，卵母細胞位於卵丘，外圍放射冠）；每週期多個濾泡被徵召，FSH 最敏感者成為優勢濾泡，其餘閉鎖；排卵前初級卵母細胞完成第一次減數分裂 → 次級卵母細胞（n）＋第一極體，停在中期 II，受精時才完成第二次減數分裂（產生第二極體）；1 個初級卵母細胞 → 1 個卵子；高齡卵母細胞染色體不分離機率增加（唐氏症風險）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a203" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <circle cx="40" cy="80" r="16" fill="#fff" stroke="#db2777" stroke-width="2"/><circle cx="40" cy="80" r="7" fill="#fbcfe8"/>
+    <circle cx="110" cy="80" r="22" fill="#fef3c7" stroke="#db2777" stroke-width="2"/><circle cx="110" cy="80" r="9" fill="#fbcfe8" stroke="#be185d"/>
+    <circle cx="200" cy="80" r="36" fill="#fde68a" stroke="#db2777" stroke-width="2"/><path d="M200,58 a12,10 0 1 1 1,0" fill="#e0f2fe"/><circle cx="188" cy="88" r="9" fill="#fbcfe8" stroke="#be185d"/>
+    <circle cx="330" cy="80" r="60" fill="#fde68a" stroke="#db2777" stroke-width="3"/><circle cx="340" cy="74" r="40" fill="#e0f2fe"/><circle cx="300" cy="110" r="11" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+    <path d="M58,80 L84,80" stroke="#374151" stroke-width="2" marker-end="url(#a203)"/><path d="M134,80 L160,80" stroke="#374151" stroke-width="2" marker-end="url(#a203)"/><path d="M238,80 L266,80" stroke="#374151" stroke-width="2" marker-end="url(#a203)"/>
+    <g font-size="11" text-anchor="middle"><text x="40" y="118">原始濾泡</text><text x="110" y="118">初級濾泡</text><text x="200" y="130">次級濾泡</text><text x="330" y="156">成熟（格拉夫氏）濾泡</text></g>
+    <text x="344" y="78" font-size="11" text-anchor="middle">濾泡腔</text><text x="300" y="134" font-size="10" text-anchor="middle">卵母細胞</text>
+    <path d="M394,90 L440,120" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a203)"/><text x="400" y="80" font-size="11" fill="#b91c1c">LH 高峰</text><text x="400" y="96" font-size="11" fill="#b91c1c">→ 排卵</text>
+    <ellipse cx="440" cy="160" rx="34" ry="26" fill="#fde047" stroke="#ca8a04" stroke-width="2"/><text x="440" y="164" font-size="11" text-anchor="middle">黃體</text>
+    <text x="440" y="202" font-size="10" text-anchor="middle">黃體素＋雌激素</text>
+    <rect x="10" y="214" width="380" height="48" rx="10" fill="#fdf2f8" stroke="#db2777"/>
+    <text x="200" y="234" font-size="11" text-anchor="middle">出生約 100–200 萬個 → 青春期約 40 萬個 → 一生排卵約 400 個</text>
+    <text x="200" y="252" font-size="11" text-anchor="middle" fill="#6b7280">其餘在不同階段閉鎖（凋亡）</text>
+  </svg><figcaption>濾泡的發育：卵母細胞周圍的顆粒細胞越來越多、出現充滿液體的濾泡腔，成為成熟濾泡；LH 高峰使它破裂排卵，剩下的細胞變成黃體。</figcaption></figure>
+  <ul class="dots">
+    <li><b>卵子生成</b> <i class="en-term">oogenesis</i>：胎兒時卵原細胞以有絲分裂增生，然後全部進入第一次減數分裂，<b>停在前期 I</b>，成為<b>初級卵母細胞</b>，就這樣停滯十幾到五十年。</li>
+    <li>數量：胎兒期最多約 600–700 萬個，<b>出生時約 100–200 萬個</b>，青春期約 <b>40 萬個</b>，一生只排出約 <b>400 個</b>，其餘都在不同階段<b>閉鎖</b>（凋亡）。女性不會再產生新的卵母細胞。</li>
+    <li><b>濾泡的發育</b>：<b>原始濾泡</b>（卵母細胞＋單層扁平細胞）→ <b>初級濾泡</b>（立方的<b>顆粒細胞</b>，出現<b>透明帶</b>）→ <b>次級濾泡</b>（多層顆粒細胞，外圍出現<b>鞘膜細胞</b>，開始出現<b>濾泡腔</b>）→ <b>成熟濾泡</b>（<b>格拉夫氏濾泡</b>，大濾泡腔，卵母細胞位於<b>卵丘</b>上，外面包著<b>放射冠</b>）。</li>
+    <li>每個週期有一群濾泡被徵召，其中對 FSH 最敏感、分泌最多雌激素的成為<b>優勢濾泡</b>；雌激素與抑制素使 FSH 下降，其他濾泡因此閉鎖——通常每個月只排一個卵。</li>
+    <li>排卵前，初級卵母細胞<b>完成第一次減數分裂</b>，成為<b>次級卵母細胞</b>（n）與一個小的<b>第一極體</b>；次級卵母細胞又<b>停在中期 II</b>，只有<b>受精</b>時才完成第二次減數分裂（產生第二極體）。所以一個初級卵母細胞只產生 <b>1 個</b>卵子（細胞質集中給卵子），與精子生成的 4 個不同。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>女性出生時卵母細胞的數量就固定了，之後只會減少；35 歲以後剩下的卵母細胞數量更少、而且已經停在減數分裂中三十多年，染色體分離時出錯（<b>不分離</b>）的機率增加——所以生育力下降、流產與<b>唐氏症</b>（21 號染色體三體）等染色體異常的風險上升。血中 <b>AMH</b>（由小濾泡的顆粒細胞分泌）可估計卵巢庫存量。</div>
+
+  <h3 id="h11">雌激素的製造：雙細胞模式 Two-Cell, Two-Gonadotropin Model</h3>
+  <p class="core">LH → 鞘膜細胞以膽固醇製造雄性素（雄烯二酮、睪固酮）→ 擴散到顆粒細胞 → FSH 誘導的芳香酶 → 雌激素（雌二醇）；顆粒細胞也分泌抑制素與 AMH；排卵後黃體：顆粒與鞘膜細胞黃體化，在 LH 作用下分泌大量黃體素與雌激素；雌激素種類：雌二醇（生育期主要）、雌酮（停經後主要）、雌三醇（懷孕時胎盤）。</p>
+  <ul class="dots">
+    <li><b>鞘膜細胞</b>受 <b>LH</b> 刺激，以膽固醇製造<b>雄性素</b>（雄烯二酮、睪固酮）。</li>
+    <li>雄性素擴散到<b>顆粒細胞</b>，在 <b>FSH</b> 誘導的<b>芳香酶</b>作用下轉成<b>雌激素</b>（主要是<b>雌二醇</b>）。</li>
+    <li>這叫「雙細胞、雙促性腺激素」模式：兩種細胞、兩種激素合作才能製造雌激素。</li>
+    <li>雌激素有三種：<b>雌二醇</b>（生育期最主要、作用最強）、<b>雌酮</b>（停經後最主要，20.5）、<b>雌三醇</b>（懷孕時胎盤大量製造，20.6）。</li>
+  </ul>
+
+  <h3 id="h12">排卵與黃體 Ovulation and the Corpus Luteum</h3>
+  <p class="core">成熟濾泡分泌大量雌激素 → 正回饋 → LH 高峰（約第 13–14 天）→ 約 24–36 小時後濾泡壁破裂排卵（次級卵母細胞＋放射冠）；卵子排出後約 12–24 小時內可受精；精子在女性體內可存活約 3–5 天；排卵後殘餘的濾泡細胞在 LH 作用下變成黃體，分泌黃體素與雌激素；未受精 → 約 10–14 天後黃體退化成白體；受精 → 胚胎的 hCG 維持黃體。</p>
+  <ul class="dots">
+    <li>成熟濾泡分泌大量雌激素 → <b>正回饋</b>引起 <b>LH 高峰</b>（28 天週期約第 13–14 天）→ 約 24–36 小時後濾泡壁被酵素分解而破裂，次級卵母細胞連同放射冠被排出——<b>排卵</b> <i class="en-term">ovulation</i>。</li>
+    <li>卵子排出後約 <b>12–24 小時</b>內可以受精；精子在女性生殖道可存活約 3–5 天，所以排卵前數天到排卵當天是受孕機會最高的時候。</li>
+    <li>排卵後殘留的濾泡細胞在 LH 作用下變成<b>黃體</b> <i class="en-term">corpus luteum</i>（含黃色脂質），分泌大量<b>黃體素</b>與雌激素。</li>
+    <li>若<b>未受精</b>，黃體約 10–14 天後退化成白色疤痕組織（<b>白體</b>）；若<b>受精</b>，胚胎分泌的 <b>hCG</b> 維持黃體繼續分泌（20.6）。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>卵巢 → 輸卵管（壺腹部受精）→ 子宮（內膜功能層與基底層、肌層）→ 陰道。</li>
+      <li>初級卵母細胞停在前期 I；出生約 100–200 萬、青春期約 40 萬、一生排約 400 個；高齡 → 不分離風險↑。</li>
+      <li>原始 → 初級（透明帶）→ 次級（鞘膜、濾泡腔）→ 成熟（格拉夫氏）濾泡；優勢濾泡，其餘閉鎖。</li>
+      <li>排卵時為次級卵母細胞停在中期 II，受精才完成；1 個初級卵母細胞 → 1 個卵子。</li>
+      <li>雙細胞：LH → 鞘膜細胞製造雄性素 → FSH 誘導的芳香酶（顆粒細胞）→ 雌二醇。</li>
+      <li>LH 高峰 → 排卵；黃體分泌黃體素與雌激素；未受精 → 白體；受精 → hCG 維持。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>卵子生成</td><td>oogenesis</td><td>初級／次級卵母細胞</td><td>primary / secondary oocyte</td></tr>
+      <tr><td>濾泡</td><td>follicle</td><td>格拉夫氏濾泡</td><td>graafian (mature) follicle</td></tr>
+      <tr><td>顆粒細胞／鞘膜細胞</td><td>granulosa / theca cells</td><td>透明帶</td><td>zona pellucida</td></tr>
+      <tr><td>閉鎖</td><td>atresia</td><td>極體</td><td>polar body</td></tr>
+      <tr><td>排卵</td><td>ovulation</td><td>黃體／白體</td><td>corpus luteum / corpus albicans</td></tr>
+      <tr><td>雌二醇／雌酮／雌三醇</td><td>estradiol / estrone / estriol</td><td>子宮內膜</td><td>endometrium</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 20.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">20.5</span>月經週期</h2>
+  <div class="en">Menstrual Cycle</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>約 28 天的<b>月經週期</b>中，<b>卵巢週期</b>（濾泡期、排卵、黃體期）與<b>子宮內膜週期</b>（月經期、增生期、分泌期）怎麼同步，以及 FSH、LH、雌激素、黃體素的變化；<b>LH 高峰</b>的正回饋；<b>荷爾蒙避孕</b>的原理；以及<b>更年期</b>的內分泌變化與<b>停經後雌激素的來源</b>。</div><div><span class="lt lt2">為什麼接在 20.4 後面？</span>上一節認識了濾泡、排卵、黃體這些「零件」；這一節把它們放在時間軸上，看激素如何一步步推動。這也是國考「女性各時期的內分泌」的核心。</div></div>
+  <div class="oneline">濾泡期 FSH 使濾泡發育、雌激素逐漸上升，使子宮內膜增生；排卵前雌激素高到一定程度轉為正回饋，引起 LH 高峰而排卵；黃體期黃體分泌大量黃體素與雌激素，使內膜分泌、準備著床，並負回饋抑制 FSH、LH；未受精時黃體退化，黃體素與雌激素驟降，內膜剝落成為月經；停經後卵巢不再分泌雌二醇，FSH 與 LH 大幅上升，剩下的雌激素主要是脂肪組織以芳香酶把腎上腺雄性素轉成的雌酮。</div>
+  <div class="think">為什麼避孕藥裡含有雌激素和黃體素，就能讓人不排卵？</div>
+
+  <h3 id="h13">月經週期的各期 Phases of the Menstrual Cycle</h3>
+  <p class="core">以 28 天為例（月經第一天為第 1 天）：①月經期（第 1–5 天，子宮內膜功能層剝落；卵巢為早期濾泡期，雌激素與黃體素低 → FSH 稍升，招募濾泡）；②濾泡期／增生期（第 1–13 天：FSH → 濾泡發育、雌二醇上升 → 子宮內膜增生變厚、子宮頸黏液稀薄利於精子通過；雌激素與抑制素負回饋使 FSH 下降）；③排卵（約第 14 天：雌二醇高峰持續約 36 小時以上 → 正回饋 → LH 高峰（與 FSH 小高峰）→ 排卵）；④黃體期／分泌期（第 15–28 天：黃體分泌黃體素（高峰約第 21 天）與雌激素 → 子宮內膜分泌期（腺體分泌肝醣、血管增生、準備著床）、子宮頸黏液變稠、基礎體溫上升約 0.3–0.5℃；黃體素與雌激素、抑制素負回饋抑制 FSH 與 LH）；⑤未受精 → 黃體退化（約第 24–28 天）→ 黃體素與雌激素驟降 → 子宮內膜螺旋動脈收縮（前列腺素）→ 功能層缺血壞死剝落 → 月經；濾泡期長度較不固定，黃體期約 14 天較固定。</p>
+  <figure class="pic"><svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <g font-size="11" fill="#6b7280" text-anchor="middle"><text x="60" y="392">1</text><text x="160" y="392">7</text><text x="260" y="392">14</text><text x="360" y="392">21</text><text x="450" y="392">28 天</text></g>
+    <line x1="260" y1="10" x2="260" y2="380" stroke="#9ca3af" stroke-dasharray="4 3"/><text x="264" y="22" font-size="11" fill="#6b7280">排卵</text>
+    <text x="10" y="40" font-size="11" font-weight="bold">腦垂腺</text>
+    <path d="M50,96 C100,86 150,94 230,96 C245,94 250,30 260,28 C270,30 275,94 290,100 C340,108 400,110 460,104" fill="none" stroke="#dc2626" stroke-width="3"/><text x="276" y="40" font-size="11" fill="#b91c1c" font-weight="bold">LH 高峰</text>
+    <path d="M50,92 C80,80 110,84 160,96 C210,104 240,100 260,80 C275,96 300,110 360,114 C410,114 440,104 460,94" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/><text x="70" y="76" font-size="11" fill="#1d4ed8">FSH</text>
+    <text x="10" y="140" font-size="11" font-weight="bold">卵巢激素</text>
+    <path d="M50,220 C120,218 180,200 230,150 C245,140 255,150 270,190 C300,200 340,170 370,172 C410,180 440,210 460,220" fill="none" stroke="#db2777" stroke-width="3"/><text x="200" y="150" font-size="11" fill="#be185d" font-weight="bold">雌二醇</text>
+    <path d="M50,226 L240,226 C280,224 310,170 360,160 C410,166 440,210 460,226" fill="none" stroke="#ca8a04" stroke-width="3"/><text x="372" y="152" font-size="11" fill="#a16207" font-weight="bold">黃體素</text>
+    <text x="10" y="250" font-size="11" font-weight="bold">卵巢</text>
+    <rect x="50" y="256" width="210" height="22" fill="#fde68a"/><text x="155" y="272" font-size="11" text-anchor="middle">濾泡期（濾泡發育）</text>
+    <rect x="260" y="256" width="200" height="22" fill="#fef08a"/><text x="360" y="272" font-size="11" text-anchor="middle">黃體期（約 14 天，較固定）</text>
+    <text x="10" y="302" font-size="11" font-weight="bold">子宮內膜</text>
+    <path d="M50,370 L50,360 C60,362 90,368 110,366 C180,350 230,334 260,326 C320,316 400,306 440,312 C450,340 455,360 460,370 z" fill="#fecaca" stroke="#dc2626"/>
+    <g font-size="11" text-anchor="middle"><text x="80" y="356">月經期</text><text x="190" y="356">增生期</text><text x="360" y="346">分泌期</text></g>
+  </svg><figcaption>月經週期（28 天示意）：濾泡期雌二醇逐漸上升，到高點時引起 LH 高峰而排卵；黃體期黃體素與雌二醇維持子宮內膜；黃體退化後兩者驟降，內膜剝落成月經。</figcaption></figure>
+  <p>以典型 28 天週期為例（月經第一天算第 1 天）：</p>
+  <div class="tblwrap"><table>
+    <tr><th>時期</th><th>卵巢</th><th>主要激素</th><th>子宮內膜</th></tr>
+    <tr><td><b>第 1–5 天</b></td><td>早期濾泡期：一群濾泡被徵召</td><td>雌激素、黃體素低 → 負回饋解除 → <b>FSH 稍升</b></td><td><b>月經期</b>：功能層剝落</td></tr>
+    <tr><td><b>第 6–13 天</b></td><td>濾泡期：優勢濾泡發育</td><td><b>雌二醇逐漸上升</b>；雌激素與抑制素負回饋使 FSH 下降</td><td><b>增生期</b>：內膜增厚、腺體與螺旋動脈生長；子宮頸黏液稀薄有彈性</td></tr>
+    <tr><td><b>約第 14 天</b></td><td><b>排卵</b></td><td>雌二醇高峰 → <b>正回饋</b> → <b>LH 高峰</b>（與 FSH 小高峰）</td><td>—</td></tr>
+    <tr><td><b>第 15–28 天</b></td><td>黃體期：黃體</td><td><b>黃體素</b>大增（高峰約第 21 天）＋雌激素；負回饋抑制 FSH、LH</td><td><b>分泌期</b>：腺體分泌肝醣、血管豐富，準備著床；黏液變稠</td></tr>
+    <tr><td><b>約第 24–28 天</b></td><td>未受精 → 黃體退化</td><td>黃體素與雌激素<b>驟降</b></td><td>螺旋動脈收縮（前列腺素）→ 功能層缺血剝落 → 下一次月經</td></tr>
+  </table></div>
+  <ul class="dots">
+    <li><b>LH 高峰的正回饋</b>：雌二醇平常負回饋抑制 LH；但當雌二醇濃度夠高、並持續約 36 小時以上，下視丘與腦垂腺的反應反轉，大量釋放 LH——這是生理上少見的正回饋例子（第 1 章）。</li>
+    <li>黃體素使<b>基礎體溫</b>上升約 0.3–0.5℃，所以排卵後體溫會升高，可用來推測是否排卵。</li>
+    <li>週期長短的差異主要在<b>濾泡期</b>；<b>黃體期</b>相對固定，約 14 天。</li>
+    <li>月經痛（原發性經痛）與子宮內膜釋放的<b>前列腺素</b>使子宮肌收縮、缺血有關，所以 NSAIDs 有效。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>每次月經約流失 30–40 mL 血液（約 15–20 mg 鐵），所以育齡女性的<b>鐵</b>需要量高於男性（台灣成年女性每日 15 mg、男性 10 mg）。經血量多者容易缺鐵性貧血。部分女性在黃體期食慾增加、水腫（經前症候群），規律運動、減少鹽與咖啡因可能有幫助。</div>
+
+  <h3 id="h14">荷爾蒙避孕 Contraceptive Methods</h3>
+  <p class="core">口服避孕藥（合成雌激素＋黃體素）：持續的負回饋抑制 GnRH、FSH、LH → 濾泡不發育、無 LH 高峰 → 不排卵；黃體素也使子宮頸黏液變稠、內膜不利著床；停藥一週造成撤退性出血；其他：單一黃體素製劑、皮下植入、子宮內避孕器、緊急避孕藥（高劑量黃體素類，阻止或延遲排卵）；保險套兼防性病。</p>
+  <ul class="dots">
+    <li><b>口服避孕藥</b>（合成的雌激素＋黃體素）：模仿黃體期，持續<b>負回饋</b>抑制 GnRH、FSH 與 LH → 濾泡不發育、<b>沒有 LH 高峰 → 不排卵</b>；黃體素也使子宮頸黏液變稠（精子難通過）、內膜不利著床。每月停藥（或服用安慰劑）約一週時，激素下降引起<b>撤退性出血</b>。</li>
+    <li>其他：只含黃體素的藥丸、針劑、皮下植入；子宮內避孕器；<b>緊急避孕藥</b>（高劑量黃體素類，主要是阻止或延遲排卵，越早服用越有效）。</li>
+    <li>保險套另外能減少性傳染病。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>排卵需要兩個條件：FSH 讓濾泡長大，以及雌激素在週期中段「先升高再轉為正回饋」引起 LH 高峰。避孕藥持續提供穩定濃度的雌激素與黃體素，讓下視丘與腦垂腺一直處在<b>負回饋</b>狀態——FSH 不足以使濾泡成熟，也不會出現 LH 高峰，所以<b>不排卵</b>。</div>
+
+  <h3 id="h15">更年期與停經 Menopause</h3>
+  <p class="core">停經＝連續 12 個月無月經，平均約 50–51 歲；原因：卵巢中濾泡耗盡 → 雌二醇與抑制素大幅下降 → 負回饋消失 → FSH 與 LH 大幅上升（FSH 尤其明顯，可作診斷參考）；停經後雌激素的來源（國考）：卵巢已不分泌雌二醇，主要靠周邊組織（特別是脂肪組織）的芳香酶，把腎上腺皮質（與卵巢間質）分泌的雄性素（雄烯二酮）轉成雌酮（雌酮成為主要雌激素）；所以體脂較多者停經後雌激素較高（骨質流失較慢，但子宮內膜癌與乳癌風險較高）；症狀與影響：熱潮紅、盜汗、失眠、情緒變化、陰道乾燥、骨質流失加速（骨質疏鬆）、LDL 上升與心血管風險增加；荷爾蒙療法需評估利弊。</p>
+  <ul class="dots">
+    <li><b>停經</b> <i class="en-term">menopause</i>：連續 12 個月沒有月經，台灣女性平均約 50 歲；之前數年的過渡期稱為<b>更年期</b>（停經前後期），週期常變得不規則。</li>
+    <li><b>原因</b>：卵巢中的濾泡耗盡 → 雌二醇與抑制素大幅下降 → 對下視丘與腦垂腺的<b>負回饋消失</b> → <b>FSH 與 LH 大幅上升</b>（FSH 升高特別明顯）。</li>
+    <li><b>停經後雌激素的來源</b>：卵巢不再分泌雌二醇；剩下的雌激素主要來自<b>周邊組織</b>——特別是<b>脂肪組織</b>中的<b>芳香酶</b>，把<b>腎上腺皮質</b>（以及卵巢間質）分泌的<b>雄性素</b>（主要是<b>雄烯二酮</b>）轉成<b>雌酮</b>。所以停經後主要的雌激素是<b>雌酮</b>，濃度遠低於生育期。</li>
+    <li><b>影響</b>：熱潮紅、盜汗、失眠、情緒變化、陰道乾燥；<b>骨質流失加速</b>（雌激素抑制蝕骨細胞，第 19 章）；LDL 上升、HDL 下降，心血管疾病風險增加；內臟脂肪增加。</li>
+  </ul>
+  <div class="warn"><b class="t">國考重點：女性各時期的內分泌與停經後雌激素的來源</b>——①<b>兒童期</b>：GnRH 受抑制，FSH、LH、雌激素都低；②<b>青春期</b>：GnRH 脈衝增加 → FSH、LH、雌二醇上升；③<b>生育期</b>：週期性變化，濾泡期以雌二醇為主、排卵前 LH 高峰、黃體期以黃體素為主；④<b>懷孕</b>：hCG 維持黃體，之後胎盤分泌大量雌三醇與黃體素，FSH、LH 被抑制；⑤<b>停經後</b>：雌二醇與抑制素↓、<b>FSH、LH↑↑</b>，雌激素主要是<b>脂肪組織以芳香酶把腎上腺雄性素（雄烯二酮）轉成的雌酮</b>。</div>
+  <div class="nut"><b class="t">營養連結：</b>停經後婦女要特別注意：足夠的<b>鈣</b>（每日 1,000 mg）與<b>維生素 D</b>、蛋白質與<b>負重運動</b>以減緩骨質流失；控制體重與腰圍、減少飽和脂肪以照顧心血管。<b>大豆異黃酮</b>（植物雌激素）可能略為緩解熱潮紅，但效果因人而異。體脂較多的女性停經後雌酮較多，骨質流失較慢，但子宮內膜癌與乳癌風險較高——這也說明了芳香酶在脂肪組織中的角色。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>濾泡期／增生期：FSH → 濾泡；雌二醇↑ → 內膜增生；負回饋使 FSH↓。</li>
+      <li>雌二醇高峰（持續）→ 正回饋 → LH 高峰 → 排卵（約第 14 天）。</li>
+      <li>黃體期／分泌期：黃體素（高峰約第 21 天）＋雌激素 → 內膜分泌、準備著床；基礎體溫↑；黃體期約 14 天較固定。</li>
+      <li>未受精 → 黃體退化 → 激素驟降 → 前列腺素 → 月經；月經流失鐵。</li>
+      <li>避孕藥：持續負回饋 → 無 LH 高峰 → 不排卵。</li>
+      <li>國考：停經後 FSH、LH↑↑；雌激素主要為脂肪組織芳香酶把腎上腺雄性素轉成的雌酮；骨質與心血管風險↑。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>月經週期</td><td>menstrual cycle</td><td>濾泡期／黃體期</td><td>follicular / luteal phase</td></tr>
+      <tr><td>增生期／分泌期</td><td>proliferative / secretory phase</td><td>月經期</td><td>menstrual phase</td></tr>
+      <tr><td>LH 高峰</td><td>LH surge</td><td>基礎體溫</td><td>basal body temperature</td></tr>
+      <tr><td>口服避孕藥</td><td>oral contraceptive pill</td><td>撤退性出血</td><td>withdrawal bleeding</td></tr>
+      <tr><td>停經／更年期</td><td>menopause / perimenopause</td><td>熱潮紅</td><td>hot flash</td></tr>
+      <tr><td>雄烯二酮</td><td>androstenedione</td><td>經前症候群</td><td>premenstrual syndrome</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 20.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">20.6</span>受精、懷孕與分娩</h2>
+  <div class="en">Fertilization, Pregnancy, and Parturition</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>受精</b>的過程；受精卵的分裂與<b>著床</b>；<b>hCG</b> 如何「救援」黃體；<b>胎盤</b>的構造、物質交換與激素（雌三醇、黃體素、hPL）；懷孕期母體的生理變化；<b>分娩</b>的正回饋；以及<b>泌乳</b>（泌乳素與催產素）。</div><div><span class="lt lt2">為什麼放最後？</span>這是生殖過程的終點，也是本書的最後一節：它整合了內分泌（第 11 章）、免疫（被動免疫）、循環與營養，並把新生命交還給第 1 章所說的恆定與回饋。</div></div>
+  <div class="oneline">受精通常在輸卵管壺腹部發生，精子以頂體酵素穿過放射冠與透明帶，一個精子進入後卵子阻止其他精子並完成第二次減數分裂；受精卵分裂成胚囊，約第 6–7 天著床於子宮內膜；滋養層分泌 hCG 維持黃體，使黃體素與雌激素持續、不會月經（也是驗孕的依據）；約第 10 週後由胎盤接手分泌大量黃體素與雌三醇，並分泌 hPL 使母體產生胰島素阻抗；分娩時胎兒撐開子宮頸引起催產素釋放，催產素使子宮收縮，形成正回饋；產後泌乳素製造乳汁，吸吮引起催產素使乳汁射出。</div>
+  <div class="think">為什麼懷孕中期常會做「妊娠糖尿病篩檢」？</div>
+
+  <h3 id="h16">受精與著床 Fertilization and Implantation</h3>
+  <p class="core">受精：通常在輸卵管壺腹部；精子獲能後以頂體反應（釋放頂體酵素）穿過放射冠與透明帶，精卵膜融合；皮質反應使透明帶改變，防止多精受精；次級卵母細胞完成第二次減數分裂（第二極體），雌雄原核融合成受精卵（2n）；卵裂 → 桑椹胚（約第 3 天進入子宮）→ 胚囊（外層滋養層、內細胞團將發育成胚胎）→ 約第 6–7 天著床於分泌期子宮內膜；滋養層分泌 hCG（驗孕的檢測對象，約受精後 8–10 天可測到，約第 8–10 週達高峰）→ 維持黃體分泌黃體素與雌激素 → 子宮內膜不剝落；約 7–10 週後胎盤接手（黃體—胎盤轉移）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a204" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <path d="M20,60 C120,40 240,40 330,80 C380,100 400,140 420,200" fill="none" stroke="#f9a8d4" stroke-width="28" stroke-linecap="round"/>
+    <path d="M400,180 C420,220 460,240 470,250" fill="none" stroke="#fecaca" stroke-width="30"/>
+    <circle cx="50" cy="56" r="12" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/><text x="50" y="28" font-size="11" text-anchor="middle">① 排卵</text>
+    <circle cx="130" cy="48" r="10" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="130" y="24" font-size="11" text-anchor="middle">② 受精（壺腹部）</text>
+    <g fill="#fde68a" stroke="#b45309"><circle cx="216" cy="46" r="5"/><circle cx="224" cy="46" r="5"/><circle cx="220" cy="54" r="5"/></g><text x="220" y="80" font-size="11" text-anchor="middle">③ 卵裂</text>
+    <circle cx="310" cy="72" r="10" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="318" y="102" font-size="11">④ 桑椹胚（約第 3–4 天）</text>
+    <circle cx="410" cy="186" r="14" fill="#fff" stroke="#b45309" stroke-width="2"/><circle cx="404" cy="182" r="6" fill="#fde68a"/>
+    <text x="300" y="160" font-size="11">⑤ 胚囊著床</text><text x="300" y="176" font-size="11">（約第 6–7 天）</text>
+    <rect x="20" y="170" width="250" height="80" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="145" y="192" font-size="12" text-anchor="middle" font-weight="bold">滋養層分泌 hCG</text>
+    <text x="145" y="212" font-size="11" text-anchor="middle">→ 維持黃體 → 黃體素、雌激素持續</text>
+    <text x="145" y="230" font-size="11" text-anchor="middle">→ 不會月經；驗孕試劑檢測 hCG</text>
+    <path d="M272,212 L390,194" stroke="#374151" stroke-width="2" stroke-dasharray="4 3"/>
+  </svg><figcaption>從排卵到著床：受精通常在輸卵管壺腹部，受精卵一邊分裂一邊被送往子宮，約第 6–7 天以胚囊的形式埋入子宮內膜，並開始分泌 hCG。</figcaption></figure>
+  <ul class="dots">
+    <li><b>受精</b> <i class="en-term">fertilization</i>：通常在輸卵管<b>壺腹部</b>。已<b>獲能</b>的精子遇到卵子時發生<b>頂體反應</b>，釋放酵素穿過<b>放射冠</b>與<b>透明帶</b>；一個精子與卵子細胞膜融合後，卵子發生<b>皮質反應</b>使透明帶變硬，阻止其他精子進入（防止多精受精）。</li>
+    <li>精子進入刺激次級卵母細胞<b>完成第二次減數分裂</b>（排出第二極體），兩個<b>原核</b>結合成二倍體的<b>受精卵</b>。</li>
+    <li>受精卵一邊<b>卵裂</b>、一邊被送往子宮：約第 3–4 天成為<b>桑椹胚</b>進入子宮，發育成<b>胚囊</b>——外層的<b>滋養層</b>（將形成胎盤的一部分）與內細胞團（將發育成胚胎；也是胚胎幹細胞的來源）。</li>
+    <li>約第 <b>6–7 天</b>，胚囊<b>著床</b> <i class="en-term">implantation</i>，埋入處於分泌期的子宮內膜。</li>
+    <li><b>hCG 的救援</b>：滋養層分泌<b>人類絨毛膜促性腺激素</b>（hCG），作用類似 LH，<b>維持黃體</b>繼續分泌黃體素與雌激素 → 子宮內膜不剝落、不會月經。hCG 在受精後約 8–10 天就可在血中與尿中測到——這就是<b>驗孕</b>的原理；約懷孕 8–10 週達高峰。約 7–10 週後，<b>胎盤</b>分泌的激素足以取代黃體。</li>
+  </ul>
+
+  <h3 id="h17">胎盤 The Placenta</h3>
+  <p class="core">胎盤由胚胎的絨毛膜（絨毛）與母體的子宮內膜（基蛻膜）組成；母血與胎血不直接混合，物質經絨毛擴散或運輸：O₂、葡萄糖（促進性擴散）、胺基酸（主動運輸）、IgG（胞吞）、多數藥物、酒精、部分病毒可通過；胎兒血紅素 HbF 親和力高；胎盤內分泌：hCG、雌激素（以胎兒腎上腺的 DHEA-S 為原料，主要是雌三醇；胎兒—胎盤單位）、黃體素（抑制子宮收縮、維持懷孕）、人類胎盤催乳素 hPL（又稱人類絨毛膜體乳促素，使母體胰島素阻抗、脂解增加，把葡萄糖與胺基酸留給胎兒，並促進乳腺發育）、鬆弛素、CRH（與分娩時機有關）；懷孕期 FSH、LH 被抑制、不排卵。</p>
+  <ul class="dots">
+    <li><b>胎盤</b>由胚胎的<b>絨毛膜</b>（絨毛深入母體血池）與母體的子宮內膜（<b>基蛻膜</b>）共同組成。母血與胎血<b>不直接混合</b>，物質經絨毛的薄層交換：O₂、CO₂ 擴散；<b>葡萄糖</b>以促進性擴散；<b>胺基酸</b>主動運輸；母體 <b>IgG</b> 以胞吞作用進入（第 15 章被動免疫）。可惜<b>酒精</b>、多數藥物、尼古丁與部分病毒也能通過。</li>
+    <li>胎兒以對 O₂ 親和力較高的<b>胎兒血紅素</b>（HbF）從母血取得 O₂（第 16 章）。</li>
+  </ul>
+  <p>胎盤也是重要的<b>內分泌器官</b>：</p>
+  <div class="tblwrap"><table>
+    <tr><th>激素</th><th>作用</th></tr>
+    <tr><td><b>hCG</b></td><td>早期維持黃體；也刺激男性胎兒的睪丸分泌睪固酮</td></tr>
+    <tr><td><b>黃體素</b></td><td>維持子宮內膜、<b>抑制子宮收縮</b>（維持懷孕）、促進乳腺腺泡發育</td></tr>
+    <tr><td><b>雌激素</b>（主要是<b>雌三醇</b>）</td><td>子宮與乳腺導管生長；增加子宮對催產素的敏感性（催產素受體、間隙接合）。胎盤缺乏某些酵素，需利用<b>胎兒腎上腺</b>的 DHEA-S 為原料——稱為<b>胎兒—胎盤單位</b></td></tr>
+    <tr><td><b>人類胎盤催乳素</b>（hPL，人類絨毛膜體乳促素）</td><td>使母體產生<b>胰島素阻抗</b>、增加脂解，把葡萄糖與胺基酸留給胎兒；促進乳腺發育</td></tr>
+    <tr><td>鬆弛素、CRH 等</td><td>鬆弛恥骨聯合與子宮頸；胎盤 CRH 與分娩時機有關</td></tr>
+  </table></div>
+  <p>懷孕期間高濃度的雌激素與黃體素負回饋抑制 FSH 與 LH，所以<b>不排卵</b>；雌激素也刺激腦垂腺分泌泌乳素，但高黃體素與雌激素在懷孕時抑制乳汁分泌。</p>
+  <h4>懷孕時母體的變化 Maternal Changes During Pregnancy</h4>
+  <p class="core">血容積增加約 40–50%（血漿增加多於紅血球 → 生理性血液稀釋）、心輸出量增加約 30–50%、GFR 增加約 50%、換氣量增加（黃體素刺激呼吸中樞，PCO₂ 略降）、胰島素阻抗（後期）、基礎代謝率上升；體重增加建議依孕前 BMI；營養需求：葉酸（孕前開始，預防神經管缺陷）、鐵、碘、鈣、蛋白質、熱量（第二、三孕期增加）；避免酒精。</p>
+  <ul class="dots">
+    <li><b>血容積</b>增加約 40–50%，血漿增加比紅血球多 → 血紅素濃度相對下降（生理性血液稀釋）；<b>心輸出量</b>增加約 30–50%；<b>GFR</b> 增加約 50%。</li>
+    <li>黃體素刺激呼吸中樞，<b>換氣增加</b>，母體 PCO₂ 略降，有利胎兒的 CO₂ 擴散到母血。</li>
+    <li>懷孕後期因 hPL、皮質醇、黃體素等產生<b>胰島素阻抗</b>，基礎代謝率上升。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>懷孕中後期胎盤分泌大量 <b>hPL</b>（與黃體素、皮質醇），使母體產生<b>胰島素阻抗</b>，好把葡萄糖留給胎兒。大多數孕婦的 β 細胞能分泌更多胰島素來代償；代償不足的人就會發生<b>妊娠糖尿病</b>。它會增加巨嬰、難產與新生兒低血糖的風險，所以台灣建議在懷孕 <b>24–28 週</b>做口服葡萄糖耐受試驗篩檢。妊娠糖尿病的媽媽日後罹患第 2 型糖尿病的風險也較高。</div>
+  <div class="nut"><b class="t">營養連結：</b>①<b>葉酸</b>：神經管在受孕後約 3–4 週就閉合（常在知道懷孕前），所以建議<b>計畫懷孕的女性在孕前至少 1 個月</b>開始每天補充 400 µg 葉酸，預防<b>神經管缺陷</b>（無腦症、脊柱裂）。②<b>鐵</b>：血容積增加與胎兒需求使鐵需要量大增，第三孕期常需補充。③<b>碘</b>：胎兒腦部發育所需（呆小症，第 11 章），孕期碘需要量增加。④熱量：第二、三孕期每天約增加 300 大卡；體重增加量依孕前 BMI 調整。⑤<b>酒精</b>沒有安全劑量，可能造成胎兒酒精症候群。</div>
+
+  <h3 id="h18">分娩 Labor and Parturition</h3>
+  <p class="core">分娩前：雌激素／黃體素比值上升、子宮催產素受體與間隙接合增加、胎盤 CRH↑；子宮收縮 → 胎頭壓迫子宮頸 → 感覺神經 → 下視丘 → 腦垂腺後葉釋放催產素 → 子宮更強收縮（並刺激前列腺素）→ 胎頭更壓迫子宮頸 → 正回饋循環，直到胎兒娩出（佛格森反射）；三期：子宮頸擴張期、胎兒娩出期、胎盤娩出期；合成催產素（Pitocin）用於引產與產後止血；前列腺素使子宮頸成熟。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a205" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="170" y="14" width="140" height="44" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="240" y="36" font-size="13" text-anchor="middle" font-weight="bold">子宮收縮</text><text x="240" y="52" font-size="10" text-anchor="middle">（前列腺素也加強）</text>
+    <rect x="330" y="104" width="140" height="44" rx="12" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="400" y="124" font-size="12" text-anchor="middle" font-weight="bold">胎頭壓迫</text><text x="400" y="140" font-size="11" text-anchor="middle">撐開子宮頸</text>
+    <rect x="170" y="194" width="140" height="44" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="240" y="214" font-size="12" text-anchor="middle" font-weight="bold">下視丘 → 後葉</text><text x="240" y="230" font-size="11" text-anchor="middle">釋放催產素</text>
+    <rect x="10" y="104" width="140" height="44" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="80" y="124" font-size="12" text-anchor="middle" font-weight="bold">催產素作用於</text><text x="80" y="140" font-size="11" text-anchor="middle">子宮肌（受體多）</text>
+    <path d="M310,46 C370,50 400,70 400,100" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a205)"/>
+    <path d="M400,148 C400,190 360,210 314,214" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a205)"/>
+    <path d="M170,214 C110,210 80,180 80,152" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a205)"/>
+    <path d="M80,104 C80,60 110,40 166,38" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a205)"/>
+    <text x="240" y="118" font-size="14" text-anchor="middle" font-weight="bold" fill="#dc2626">正回饋</text><text x="240" y="138" font-size="11" text-anchor="middle">越收縮 → 越多催產素</text><text x="240" y="154" font-size="11" text-anchor="middle">直到胎兒娩出才停止</text>
+  </svg><figcaption>分娩的正回饋：子宮收縮讓胎頭撐開子宮頸，引起催產素釋放，催產素又使子宮收縮得更強——一路加強，直到胎兒娩出為止。</figcaption></figure>
+  <ul class="dots">
+    <li><b>準備</b>：懷孕末期雌激素相對於黃體素增加（黃體素的「安胎」作用減弱）、子宮肌的<b>催產素受體</b>與<b>間隙接合</b>大量增加；胎盤 CRH 上升可能是啟動分娩的「時鐘」之一。</li>
+    <li><b>正回饋</b>：子宮收縮 → 胎頭壓迫並撐開<b>子宮頸</b> → 感覺神經傳到下視丘 → 腦垂腺後葉釋放<b>催產素</b> → 子宮收縮更強（同時促進子宮產生<b>前列腺素</b>，進一步增強收縮）→ 子宮頸被撐得更開 → 更多催產素……直到胎兒娩出，刺激消失才停止。這是正回饋的經典例子（第 1、11 章）。</li>
+    <li>分娩分三期：<b>子宮頸擴張期</b>、<b>胎兒娩出期</b>、<b>胎盤娩出期</b>。</li>
+    <li>臨床上以合成<b>催產素</b>引產或加強產程，並在產後促進子宮收縮以止血；前列腺素製劑用來使子宮頸成熟。</li>
+  </ul>
+
+  <h3 id="h19">泌乳 Lactation</h3>
+  <p class="core">懷孕時雌激素（導管）與黃體素（腺泡）使乳腺發育，加上泌乳素、hPL、皮質醇、胰島素等；懷孕時高雌激素與黃體素抑制乳汁分泌；產後胎盤娩出 → 雌激素與黃體素驟降 → 泌乳素開始作用 → 乳汁製造（約產後 2–3 天大量分泌；之前為初乳）；吸吮刺激 → ①腦垂腺前葉泌乳素↑（下視丘多巴胺抑制減少）→ 製造下一餐的乳汁 ②腦垂腺後葉催產素↑ → 乳腺腺泡周圍肌上皮細胞收縮 → 噴乳反射（射乳）；噴乳反射可被條件化（聽到嬰兒哭）、被壓力抑制；哺乳時高泌乳素抑制 GnRH → 延後排卵（哺乳性無月經，但不可靠）；催產素也幫助產後子宮收縮。</p>
+  <ul class="dots">
+    <li><b>懷孕期的準備</b>：<b>雌激素</b>促進乳腺導管生長，<b>黃體素</b>促進腺泡發育，泌乳素、hPL、皮質醇、胰島素也參與。但懷孕時高濃度的雌激素與黃體素<b>抑制</b>乳汁的大量分泌。</li>
+    <li><b>產後</b>：胎盤娩出 → 雌激素與黃體素驟降 → <b>泌乳素</b>的作用得以發揮 → 產後約 2–3 天開始大量製造乳汁（之前分泌的是<b>初乳</b>，富含 IgA 與蛋白質）。</li>
+    <li><b>吸吮反射</b>引發兩種激素：
+      <ol class="steps">
+        <li><b>泌乳素</b>（腦垂腺前葉）：吸吮減少下視丘<b>多巴胺</b>（泌乳素抑制激素）的分泌 → 泌乳素上升 → 製造乳汁（為下一餐做準備）——「<b>製造</b>」。</li>
+        <li><b>催產素</b>（腦垂腺後葉）：使乳腺腺泡周圍的<b>肌上皮細胞</b>收縮，把乳汁擠出——<b>噴乳反射</b>（射乳）——「<b>擠出</b>」。這個反射可以被<b>條件化</b>（聽到嬰兒哭就漏奶），也會被<b>壓力</b>、焦慮抑制。</li>
+      </ol></li>
+    <li>哺乳時的高泌乳素抑制 GnRH，延後產後排卵（哺乳性無月經），但作為避孕方法並不可靠。哺乳時的催產素也幫助子宮收縮復原。</li>
+  </ul>
+  <div class="warn"><b class="t">區分：泌乳素 vs 催產素</b>——<b>泌乳素</b>（PRL，前葉）負責<b>製造</b>乳汁；<b>催產素</b>（後葉）負責<b>擠出</b>乳汁（噴乳）並使子宮收縮（第 11 章已更正簡報的混淆）。</div>
+  <div class="nut"><b class="t">營養連結：</b>哺乳期每天需額外約 500 大卡（部分由孕期儲存的脂肪提供）與更多蛋白質、水分、碘、鈣、DHA；母乳中維生素 D 含量低，所以純母乳哺餵的嬰兒建議補充維生素 D。世界衛生組織建議<b>純母乳哺餵至 6 個月</b>，之後添加副食品並持續哺乳至 2 歲或以上。母乳的好處包括 IgA 與其他保護因子（第 15 章）、促進益菌的母乳寡醣（第 18 章），以及降低母親乳癌與第 2 型糖尿病的風險。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>受精（壺腹部）：獲能 → 頂體反應 → 皮質反應防多精 → 完成第二次減數分裂 → 受精卵。</li>
+      <li>卵裂 → 桑椹胚 → 胚囊（滋養層＋內細胞團）→ 約第 6–7 天著床。</li>
+      <li>hCG 維持黃體（驗孕）；約 7–10 週後胎盤接手。</li>
+      <li>胎盤：物質交換（IgG、酒精也能通過）；激素：黃體素（安胎）、雌三醇（胎兒—胎盤單位）、hPL（胰島素阻抗 → 妊娠糖尿病）。</li>
+      <li>母體：血容積↑ 40–50%、心輸出量↑、GFR↑、換氣↑；葉酸（孕前開始）、鐵、碘。</li>
+      <li>分娩：胎頭撐開子宮頸 → 催產素 → 子宮收縮 → 正回饋；前列腺素。</li>
+      <li>泌乳：產後雌激素、黃體素下降；泌乳素製造、催產素噴乳；吸吮反射。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>受精</td><td>fertilization</td><td>頂體反應／皮質反應</td><td>acrosomal / cortical reaction</td></tr>
+      <tr><td>卵裂</td><td>cleavage</td><td>桑椹胚／胚囊</td><td>morula / blastocyst</td></tr>
+      <tr><td>滋養層</td><td>trophoblast</td><td>著床</td><td>implantation</td></tr>
+      <tr><td>人類絨毛膜促性腺激素</td><td>hCG</td><td>胎盤</td><td>placenta</td></tr>
+      <tr><td>人類胎盤催乳素</td><td>hPL (human chorionic somatomammotropin)</td><td>胎兒—胎盤單位</td><td>fetoplacental unit</td></tr>
+      <tr><td>分娩</td><td>parturition</td><td>噴乳反射</td><td>milk-ejection reflex</td></tr>
+      <tr><td>泌乳</td><td>lactation</td><td>神經管缺陷</td><td>neural tube defect</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s7">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>性別分化</td><td>SRY → 睪丸；AMH → 穆勒氏管退化；睪固酮 → 沃爾夫氏管；DHT → 外生殖器；無睪丸 → 女性</td></tr>
+    <tr><td>生殖軸</td><td>GnRH（脈衝）→ FSH、LH → 性類固醇＋抑制素（抑制 FSH）；排卵前正回饋</td></tr>
+    <tr><td>青春期</td><td>GnRH 脈衝↑；瘦體素允許作用；體脂過低 → 停經、骨質流失</td></tr>
+    <tr><td>男性</td><td>LH → 雷氏細胞 → 睪固酮；FSH → 賽托利氏細胞；精子生成約 74 天、1 → 4 個精子；勃起（副交感、NO）、射精（交感）</td></tr>
+    <tr><td>女性濾泡</td><td>初級卵母細胞停在前期 I；出生 100–200 萬 → 一生排約 400；1 → 1 個卵；雙細胞製造雌二醇</td></tr>
+    <tr><td>月經週期</td><td>濾泡期（FSH、雌二醇↑、內膜增生）→ LH 高峰排卵 → 黃體期（黃體素、分泌期，約 14 天）→ 月經</td></tr>
+    <tr><td>國考：各時期內分泌</td><td>兒童低；青春期↑；生育期週期性；懷孕 hCG 後胎盤雌三醇、黃體素；停經 FSH、LH↑↑</td></tr>
+    <tr><td>國考：停經後雌激素</td><td>脂肪組織芳香酶把腎上腺雄性素（雄烯二酮）轉成雌酮</td></tr>
+    <tr><td>避孕</td><td>雌激素＋黃體素持續負回饋 → 無 LH 高峰 → 不排卵</td></tr>
+    <tr><td>懷孕</td><td>壺腹部受精、第 6–7 天著床；hCG 維持黃體；胎盤黃體素、雌三醇、hPL（胰島素阻抗）</td></tr>
+    <tr><td>分娩與泌乳</td><td>催產素正回饋；泌乳素製造、催產素噴乳</td></tr>
+  </table></div>
+  <h3 id="h20">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說明 SRY、AMH、睪固酮、DHT 在性別分化中的角色？</li>
+    <li>□ 畫出下視丘—腦垂腺—性腺軸，標出負回饋與正回饋？</li>
+    <li>□ 比較雷氏細胞與賽托利氏細胞的功能與受哪個激素作用？</li>
+    <li>□ 比較精子生成與卵子生成（數量、時間、產物）？</li>
+    <li>□ 畫出月經週期中 FSH、LH、雌二醇、黃體素的變化，並對應子宮內膜？</li>
+    <li>□ 解釋避孕藥為什麼能抑制排卵？</li>
+    <li>□ 說出女性各時期的內分泌特點與停經後雌激素的來源（國考）？</li>
+    <li>□ 說明 hCG 與胎盤激素的作用，以及妊娠糖尿病的原因？</li>
+    <li>□ 解釋分娩的正回饋，以及泌乳素與催產素在泌乳中的分工？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 20 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+var GL_PAGE={"濾泡":"follicle","顆粒細胞":"granulosa","閉鎖":"atresia","分泌期":"menscycle","增生期":"menscycle"};
+const Q = [
+ {q:"使未分化的原始性腺發育成睪丸的是？",o:["X 染色體上的基因","Y 染色體上的 SRY 基因","睪固酮","雌激素"],a:1,e:"<b>SRY</b>（睪丸決定因子）。"},
+ {q:"使男性胚胎的穆勒氏管退化的激素是？",o:["睪固酮","二氫睪固酮","抗穆勒氏管激素（AMH）","雌激素"],a:2,e:"賽托利氏細胞分泌的 <b>AMH</b>。"},
+ {q:"抑制素（inhibin）主要選擇性抑制？",o:["GnRH","FSH","LH","泌乳素"],a:1,e:"抑制素選擇性抑制 <b>FSH</b>。"},
+ {q:"長效 GnRH 類似物持續給予會造成？",o:["FSH、LH 大增","受體下調使 FSH、LH 受抑制","排卵增加","睪固酮大增"],a:1,e:"GnRH 需<b>脈衝式</b>；持續給予反而抑制（治療前列腺癌、性早熟）。"},
+ {q:"體脂過低的運動員停經，主要與哪一變化有關？",o:["GnRH 脈衝受抑制","泌乳素降低","催產素增加","FSH 過高"],a:0,e:"瘦體素↓、壓力 → <b>GnRH 脈衝受抑制</b> → 下視丘性無月經。"},
+ {q:"睪丸中受 LH 刺激分泌睪固酮的是？",o:["賽托利氏細胞","雷氏細胞","精原細胞","精細胞"],a:1,e:"<b>雷氏細胞</b>（間質細胞）。"},
+ {q:"形成血睪障壁並支持精子生成的是？",o:["雷氏細胞","賽托利氏細胞","肌上皮細胞","顆粒細胞"],a:1,e:"<b>賽托利氏細胞</b>，受 FSH 與睪固酮作用。"},
+ {q:"一個初級精母細胞最後可產生幾個精子？",o:["1","2","4","8"],a:2,e:"<b>4 個</b>；一個初級卵母細胞只產生 1 個卵子。"},
+ {q:"精液中提供精子能量的果糖主要來自？",o:["前列腺","儲精囊","尿道球腺","副睪"],a:1,e:"<b>儲精囊</b>；前列腺分泌弱鹼液與 PSA。"},
+ {q:"陰莖勃起主要由哪種神經與分子引起？",o:["交感神經與 NE","副交感神經與一氧化氮","體神經與 ACh","交感神經與腎上腺素"],a:1,e:"<b>副交感 → NO → cGMP</b>；射精由交感神經控制。"},
+ {q:"女性出生時卵母細胞停在？",o:["第一次減數分裂前期","第一次減數分裂中期","第二次減數分裂中期","有絲分裂"],a:0,e:"初級卵母細胞停在<b>前期 I</b>；排卵時的次級卵母細胞停在中期 II。"},
+ {q:"卵巢中把雄性素轉成雌激素的酵素位於哪種細胞、受哪個激素誘導？",o:["鞘膜細胞，LH","顆粒細胞，FSH","黃體細胞，hCG","雷氏細胞，LH"],a:1,e:"雙細胞模式：LH → 鞘膜細胞製造雄性素；<b>FSH 誘導顆粒細胞的芳香酶</b>。"},
+ {q:"引起排卵的直接原因是？",o:["黃體素高峰","FSH 下降","雌二醇正回饋引起的 LH 高峰","hCG 分泌"],a:2,e:"<b>LH 高峰</b>（雌二醇正回饋）。"},
+ {q:"黃體期（分泌期）主要的卵巢激素是？",o:["雌三醇","黃體素（與雌激素）","睪固酮","抑制素 B"],a:1,e:"黃體分泌大量<b>黃體素</b>，使內膜進入分泌期。"},
+ {q:"月經週期中長度較固定、約 14 天的是？",o:["濾泡期","黃體期","月經期","增生期"],a:1,e:"<b>黃體期</b>較固定；週期長短差異主要在濾泡期。"},
+ {q:"口服避孕藥（雌激素＋黃體素）避孕的主要機制是？",o:["殺死精子","持續負回饋，無 LH 高峰而不排卵","使子宮收縮","破壞卵子"],a:1,e:"持續<b>負回饋</b> → 濾泡不成熟、<b>無 LH 高峰</b>。"},
+ {q:"停經後婦女血中明顯升高的激素是？（國考）",o:["雌二醇","黃體素","FSH 與 LH","抑制素"],a:2,e:"卵巢激素↓ → 負回饋消失 → <b>FSH、LH↑↑</b>。"},
+ {q:"停經後婦女體內雌激素主要來源是？（國考）",o:["卵巢的顆粒細胞","黃體","脂肪組織芳香酶把腎上腺雄性素轉成雌酮","胎盤"],a:2,e:"<b>脂肪組織芳香酶</b>：雄烯二酮 → <b>雌酮</b>。"},
+ {q:"受精通常發生在？",o:["子宮腔","卵巢表面","輸卵管壺腹部","子宮頸"],a:2,e:"<b>輸卵管壺腹部</b>；約第 6–7 天在子宮著床。"},
+ {q:"懷孕早期維持黃體、也是驗孕檢測對象的是？",o:["hPL","hCG","黃體素","泌乳素"],a:1,e:"滋養層分泌的 <b>hCG</b>。"},
+ {q:"使母體產生胰島素阻抗、與妊娠糖尿病有關的胎盤激素是？",o:["hCG","hPL","鬆弛素","雌三醇"],a:1,e:"<b>hPL</b>（人類胎盤催乳素）把葡萄糖留給胎兒。"},
+ {q:"分娩時「子宮收縮 → 催產素 → 更強收縮」屬於？",o:["負回饋","正回饋","前饋","允許作用"],a:1,e:"典型的<b>正回饋</b>。"},
+ {q:"哺乳時負責「擠出」乳汁（噴乳反射）的激素是？",o:["泌乳素","催產素","雌激素","黃體素"],a:1,e:"<b>催產素</b>使肌上皮細胞收縮；泌乳素負責製造乳汁。"},
+ {q:"預防胎兒神經管缺陷，建議在何時開始補充葉酸？",o:["懷孕第 20 週","確定懷孕後第 12 週","計畫懷孕的孕前至少 1 個月","分娩後"],a:2,e:"神經管在受孕後 3–4 週閉合，故<b>孕前</b>就要開始。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

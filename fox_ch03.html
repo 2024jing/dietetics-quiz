@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 3 章 細胞結構與基因調控</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="3">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 3 章　細胞結構與基因調控</h1>
+  <div class="en">Chapter 3 Cell Structure and Genetic Control（課本 p.53–92）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">3.1 細胞膜與相關構造</a>
+  <a class="sub" href="#h1">細胞膜的構造 Structure of the Plasma Membrane</a>
+  <a class="sub" href="#h2">吞噬作用 Phagocytosis</a>
+  <a class="sub" href="#h3">胞吞作用 Endocytosis</a>
+  <a class="sub" href="#h4">胞吐作用 Exocytosis</a>
+  <a class="sub" href="#h5">纖毛、鞭毛與微絨毛 Cilia, Flagella, and Microvilli</a>
+  <a href="#s2">3.2 細胞質與胞器</a>
+  <a class="sub" href="#h6">細胞質與細胞骨架 Cytoplasm and Cytoskeleton</a>
+  <a class="sub" href="#h7">溶體 Lysosomes</a>
+  <a class="sub" href="#h8">過氧化體 Peroxisomes</a>
+  <a class="sub" href="#h9">粒線體 Mitochondria</a>
+  <a class="sub" href="#h10">核糖體 Ribosomes</a>
+  <a class="sub" href="#h11">內質網 Endoplasmic Reticulum</a>
+  <a class="sub" href="#h12">高基氏體 Golgi Complex</a>
+  <a href="#s3">3.3 細胞核與基因表現</a>
+  <a class="sub" href="#h13">細胞核的構造</a>
+  <a class="sub" href="#h14">基因組與蛋白質體 Genome and Proteome</a>
+  <a class="sub" href="#h15">染色質 Chromatin</a>
+  <a class="sub" href="#h16">RNA 的合成（轉錄）RNA Synthesis</a>
+  <a class="sub" href="#h17">RNA 干擾 RNA Interference</a>
+  <a href="#s4">3.4 蛋白質的合成與分泌</a>
+  <a class="sub" href="#h18">遺傳密碼 Genetic Code</a>
+  <a class="sub" href="#h19">轉運 RNA Transfer RNA</a>
+  <a class="sub" href="#h20">多胜肽的形成（轉譯）Formation of a Polypeptide</a>
+  <a class="sub" href="#h21">內質網與高基氏體的功能 Functions of the ER and Golgi Complex</a>
+  <a class="sub" href="#h22">蛋白質的降解 Protein Degradation</a>
+  <a href="#s5">3.5 DNA 合成與細胞分裂</a>
+  <a class="sub" href="#h23">DNA 複製 DNA Replication</a>
+  <a class="sub" href="#h24">細胞週期 The Cell Cycle</a>
+  <a class="sub" href="#h25">有絲分裂 Mitosis</a>
+  <a class="sub" href="#h26">減數分裂 Meiosis</a>
+  <a class="sub" href="#h27">表觀遺傳 Epigenetic Inheritance</a>
+  <a href="#s6">本章重點整理</a>
+  <a class="sub" href="#h28">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 2 章認識了分子；這一章看這些分子怎麼組成<b>細胞</b>這座「工廠」：<span class="key">細胞膜是工廠的圍牆與大門，細胞質裡的胞器是各個部門，細胞核裡的 DNA 是設計圖。</span>細胞依設計圖做出蛋白質，再分裂成兩個細胞把設計圖傳下去。</div>
+  <div class="path">
+    <div class="step"><span class="sn">3.1</span><div><b>細胞膜與相關構造</b><br><span class="sq">工廠的圍牆：膜的構造、怎麼把大東西吞進來（胞吞）和送出去（胞吐）、細胞表面的纖毛與微絨毛。</span></div></div>
+    <div class="arr">↓ 走進圍牆裡面</div>
+    <div class="step"><span class="sn">3.2</span><div><b>細胞質與胞器</b><br><span class="sq">各部門的分工：粒線體發電、核糖體做蛋白質、內質網與高基氏體加工運送、溶體回收。</span></div></div>
+    <div class="arr">↓ 各部門聽誰指揮？</div>
+    <div class="step"><span class="sn">3.3</span><div><b>細胞核與基因表現</b><br><span class="sq">DNA 怎麼收納（染色質），基因怎麼被抄寫成 RNA（轉錄），以及怎麼被開關。</span></div></div>
+    <div class="arr">↓ 抄好的 RNA 送到哪裡、怎麼變成蛋白質？</div>
+    <div class="step"><span class="sn">3.4</span><div><b>蛋白質的合成與分泌</b><br><span class="sq">核糖體依 mRNA 把胺基酸接起來（轉譯），再經內質網、高基氏體送出細胞；用壞的蛋白質怎麼分解。</span></div></div>
+    <div class="arr">↓ 細胞要長大、更新，就要把設計圖完整複製一份</div>
+    <div class="step"><span class="sn">3.5</span><div><b>DNA 合成與細胞分裂</b><br><span class="sq">DNA 複製、細胞週期、有絲分裂與減數分裂，以及不改變 DNA 序列的表觀遺傳。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 3.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">3.1</span>細胞膜與相關構造</h2>
+  <div class="en">Plasma Membrane and Associated Structures</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞膜的<b>流體鑲嵌</b>構造、細胞怎麼用<b>胞吞與胞吐</b>運送大型物質，以及表面的<b>纖毛、鞭毛、微絨毛</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>細胞膜決定什麼能進出細胞，是細胞和「內在環境」的交界。第 2 章學的磷脂雙層，在這裡變成真正的細胞膜；第 6 章的膜運輸、膜電位都以這節為基礎。</div></div>
+  <div class="oneline">細胞膜是嵌著蛋白質的磷脂雙層（流體鑲嵌模型）；大分子靠胞吞進入、胞吐送出；纖毛會擺動、微絨毛增加表面積。</div>
+  <div class="think">白血球怎麼把一整隻細菌「吃」進去？細胞膜不會破掉嗎？</div>
+
+  <figure class="pic"><svg viewBox="0 0 480 400" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <ellipse cx="240" cy="200" rx="225" ry="185" fill="#fef9c3" stroke="#ca8a04" stroke-width="4"/>
+    <circle cx="240" cy="190" r="62" fill="#ede9fe" stroke="#7c3aed" stroke-width="3"/><circle cx="252" cy="182" r="18" fill="#c4b5fd"/>
+    <text x="240" y="232" font-size="14" text-anchor="middle" fill="#5b21b6">細胞核</text><text x="252" y="187" font-size="11" text-anchor="middle" fill="#4c1d95">核仁</text>
+    <g fill="none" stroke="#2563eb" stroke-width="3"><path d="M310,140 q30,-10 40,10 q-30,5 -38,20 q30,-5 42,14 q-30,6 -40,22"/></g>
+    <g fill="#1d4ed8"><circle cx="330" cy="140" r="2.5"/><circle cx="342" cy="158" r="2.5"/><circle cx="335" cy="176" r="2.5"/><circle cx="347" cy="192" r="2.5"/></g>
+    <text x="400" y="150" font-size="13" fill="#1d4ed8">粗糙內質網</text>
+    <path d="M300,250 q25,8 45,-6 M300,262 q25,8 45,-6" fill="none" stroke="#0891b2" stroke-width="3"/><text x="355" y="262" font-size="13" fill="#0e7490">平滑內質網</text>
+    <g fill="none" stroke="#db2777" stroke-width="4"><path d="M120,250 q40,-14 80,0"/><path d="M124,262 q36,-12 72,0"/><path d="M130,274 q30,-10 60,0"/></g>
+    <circle cx="212" cy="244" r="5" fill="#f9a8d4"/><circle cx="110" cy="236" r="5" fill="#f9a8d4"/>
+    <text x="150" y="300" font-size="13" text-anchor="middle" fill="#be185d">高基氏體</text>
+    <g><ellipse cx="120" cy="140" rx="36" ry="18" fill="#fed7aa" stroke="#ea580c" stroke-width="2.5"/>
+      <path d="M92,140 q6,-12 12,0 q6,12 12,0 q6,-12 12,0 q6,12 12,0 q6,-12 12,0" fill="none" stroke="#ea580c" stroke-width="2"/></g>
+    <text x="120" y="118" font-size="13" text-anchor="middle" fill="#c2410c">粒線體</text>
+    <circle cx="330" cy="315" r="16" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="330" y="345" font-size="13" text-anchor="middle" fill="#15803d">溶體</text>
+    <circle cx="200" cy="335" r="11" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="200" y="362" font-size="12" text-anchor="middle" fill="#0369a1">過氧化體</text>
+    <g fill="#64748b"><circle cx="90" cy="200" r="2.5"/><circle cx="100" cy="190" r="2.5"/><circle cx="380" cy="210" r="2.5"/><circle cx="395" cy="225" r="2.5"/></g>
+    <text x="70" y="222" font-size="12" fill="#475569">游離核糖體</text>
+    <g stroke="#9ca3af" stroke-width="1.2"><line x1="40" y1="300" x2="440" y2="110"/><line x1="60" y1="90" x2="420" y2="320"/></g>
+    <text x="400" y="80" font-size="12" fill="#6b7280">細胞骨架</text>
+    <text x="240" y="30" font-size="14" text-anchor="middle" fill="#a16207" font-weight="bold">細胞膜</text>
+  </svg><figcaption>細胞像一座工廠：細胞核是放設計圖的辦公室，核糖體與內質網是生產線，高基氏體是包裝出貨部，粒線體是發電廠，溶體是回收站。</figcaption></figure>
+
+  <h3 id="h1">細胞膜的構造 Structure of the Plasma Membrane</h3>
+  <p class="core">流體鑲嵌模型：磷脂雙層＋膽固醇＋鑲嵌的蛋白質（嵌入型、周邊型），外側有醣鏈形成醣萼；膜是半透性的。</p>
+  <p><b>細胞膜（質膜）</b> <i class="en-term">plasma membrane / cell membrane</i> 把細胞內和細胞外隔開。它是<b>選擇性通透</b>（半透性） <i class="en-term">selectively permeable</i>：有些物質能通過、有些不能。目前公認的模型是<b>流體鑲嵌模型</b> <i class="en-term">fluid-mosaic model</i>：</p>
+  <ul class="dots">
+    <li><b>磷脂雙層</b>：磷脂質的親水頭朝向兩側的水（細胞外液、細胞質），疏水尾朝內。磷脂分子可在同一層內左右移動，膜像一層油膜般有流動性——這是「流體」的意思。</li>
+    <li><b>膽固醇</b>：插在磷脂之間，調節流動性、增加穩定（動物細胞才有）。</li>
+    <li><b>蛋白質</b>像馬賽克一樣鑲嵌在膜上——這是「鑲嵌」的意思：
+      <ul>
+        <li><b>嵌入型（整合）蛋白</b> <i class="en-term">integral proteins</i>：部分或全部埋在膜中，許多<b>貫穿</b>整層膜，當作通道、載體、受體。</li>
+        <li><b>周邊蛋白</b> <i class="en-term">peripheral proteins</i>：附著在膜的內側或外側表面，常和細胞骨架或訊息傳遞有關。</li>
+      </ul>
+    </li>
+    <li><b>醣類</b>：接在膜外側的蛋白質（醣蛋白）或脂質（醣脂）上，形成細胞表面的「糖衣」，稱為<b>醣萼</b> <i class="en-term">glycocalyx</i>，用於<b>細胞辨識</b>，例如血型抗原、免疫系統辨認「自己」與「非自己」（第 15 章）。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th>膜蛋白的功能</th><th>例子</th></tr>
+    <tr><td>運輸（通道、載體）</td><td>Na⁺ 通道、葡萄糖載體 GLUT、鈉鉀幫浦（第 6 章）</td></tr>
+    <tr><td>受體</td><td>胰島素受體、神經傳遞物質受體（第 6、7、11 章）</td></tr>
+    <tr><td>酵素</td><td>小腸刷狀緣的雙醣酶（第 18 章）</td></tr>
+    <tr><td>細胞辨識</td><td>醣蛋白抗原（第 15 章）</td></tr>
+    <tr><td>附著與連結</td><td>細胞連結蛋白、與細胞外基質相連的整合素</td></tr>
+  </table></div>
+
+  <h3 id="h2">吞噬作用 Phagocytosis</h3>
+  <p class="core">吞噬＝細胞「吃」大顆粒：伸出偽足包住細菌或碎片 → 形成食泡 → 與溶體融合消化。</p>
+  <p><b>吞噬作用</b> <i class="en-term">phagocytosis</i> 是細胞把<b>大型顆粒</b>（細菌、壞死細胞碎片）整個吞進來。細胞膜伸出像手臂一樣的<b>偽足</b> <i class="en-term">pseudopods</i> 包住顆粒，膜融合後顆粒被包在一個膜泡（食泡）中進入細胞，再和溶體融合，由溶體的酵素消化。執行吞噬的主要是<b>嗜中性球</b>和<b>巨噬細胞</b>（第 15 章）。</p>
+
+  <h3 id="h3">胞吞作用 Endocytosis</h3>
+  <p class="core">胞吞＝膜凹陷包入細胞外物質：胞飲（喝液體）、受體媒介胞吞（專一、如 LDL 膽固醇）。</p>
+  <p><b>胞吞作用</b> <i class="en-term">endocytosis</i> 是細胞膜向內凹陷、把細胞外的物質包成膜泡帶進細胞，比吞噬小，也不需要偽足：</p>
+  <ul class="dots">
+    <li><b>胞飲作用</b> <i class="en-term">pinocytosis</i>：「細胞喝水」，非專一地把一小口細胞外液連同溶質包進來。</li>
+    <li><b>受體媒介胞吞作用</b> <i class="en-term">receptor-mediated endocytosis</i>：物質先和膜上的<b>專一受體</b>結合，聚集在膜上一個凹陷處（外覆網格蛋白 clathrin 的<b>被覆小窩</b>），再被包進來。專一性高、效率高。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>血中的 <b>LDL</b>（低密度脂蛋白，攜帶膽固醇）就是靠細胞的 LDL 受體，以受體媒介胞吞進入細胞。家族性高膽固醇血症的病人 LDL 受體有缺陷，膽固醇無法被細胞回收，血中濃度很高，容易早發動脈粥狀硬化（第 13 章）。鐵與運鐵蛋白也是這樣進入細胞。</div>
+
+  <h3 id="h4">胞吐作用 Exocytosis</h3>
+  <p class="core">胞吐＝細胞內的分泌囊泡與細胞膜融合，把內容物釋出（激素、神經傳遞物質、消化酶）。</p>
+  <p><b>胞吐作用</b> <i class="en-term">exocytosis</i> 是反向的過程：細胞內裝著產物的<b>分泌囊泡</b>移到細胞膜，與膜融合，把內容物倒到細胞外。這是蛋白質類激素、神經傳遞物質、消化酶、黏液被分泌的方式，通常需要 Ca²⁺ 觸發（第 7、11 章）。胞吐也把囊泡的膜加進細胞膜，補回胞吞用掉的膜。</p>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a31" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="240" y="30" font-size="14" text-anchor="middle" fill="#1d4ed8">細胞外</text><text x="240" y="222" font-size="14" text-anchor="middle" fill="#a16207">細胞內</text>
+    <path d="M10,60 L60,60 Q80,60 80,85 Q80,120 110,120 Q140,120 140,85 Q140,60 160,60 L320,60 Q340,60 340,85 Q340,118 370,118 Q400,118 400,85 Q400,60 420,60 L470,60" fill="none" stroke="#ca8a04" stroke-width="6"/>
+    <circle cx="110" cy="92" r="9" fill="#ef4444"/><circle cx="96" cy="78" r="5" fill="#ef4444"/>
+    <circle cx="110" cy="175" r="26" fill="none" stroke="#ca8a04" stroke-width="5"/><circle cx="110" cy="175" r="9" fill="#ef4444"/>
+    <path d="M110,132 L110,144" stroke="#374151" stroke-width="2.5" marker-end="url(#a31)"/>
+    <text x="110" y="30" font-size="16" text-anchor="middle" fill="#1d4ed8" font-weight="bold">胞吞</text><text x="110" y="48" font-size="13" text-anchor="middle" fill="#1d4ed8">向內凹、包進來</text>
+    <circle cx="370" cy="180" r="26" fill="none" stroke="#ca8a04" stroke-width="5"/>
+    <g fill="#8b5cf6"><circle cx="362" cy="175" r="5"/><circle cx="377" cy="184" r="5"/><circle cx="370" cy="170" r="4"/></g>
+    <path d="M370,150 L370,128" stroke="#374151" stroke-width="2.5" marker-end="url(#a31)"/>
+    <g fill="#8b5cf6"><circle cx="362" cy="48" r="5"/><circle cx="380" cy="40" r="5"/><circle cx="372" cy="30" r="4"/></g>
+    <text x="440" y="30" font-size="16" text-anchor="middle" fill="#6d28d9" font-weight="bold">胞吐</text><text x="440" y="48" font-size="13" text-anchor="middle" fill="#6d28d9">融合、倒出去</text>
+  </svg><figcaption>胞吞與胞吐方向相反：一個把細胞外的東西包進來，一個把囊泡裡的東西送出去。兩者都靠膜的流動性，膜不會破。</figcaption></figure>
+
+  <h3 id="h5">纖毛、鞭毛與微絨毛 Cilia, Flagella, and Microvilli</h3>
+  <p class="core">纖毛（多、短、能擺動推動表面物質）；鞭毛（單一、長，精子）；微絨毛（不會動，增加吸收面積）。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>纖毛 cilia</th><th>鞭毛 flagellum</th><th>微絨毛 microvilli</th></tr>
+    <tr><td>內部構造</td><td colspan="2"><b>微管</b>排成「9＋2」（外圈 9 對、中央 2 條），由基體長出</td><td>肌動蛋白微絲撐起</td></tr>
+    <tr><td>會動嗎</td><td>會，像划槳一樣協調擺動</td><td>會，像尾巴鞭動</td><td><b>不會</b>擺動</td></tr>
+    <tr><td>數量與位置</td><td>很多；呼吸道、輸卵管上皮</td><td>人類只有<b>精子</b>有</td><td>很多；小腸、腎小管上皮（刷狀緣）</td></tr>
+    <tr><td>功能</td><td>推動表面的黏液或卵子</td><td>推動細胞自己前進</td><td><b>增加吸收表面積</b></td></tr>
+  </table></div>
+  <div class="eg"><b class="t">例子：</b>呼吸道的纖毛把黏住灰塵的黏液往喉嚨推（黏液纖毛電梯）。吸菸會使纖毛麻痺，痰只能靠咳嗽排出，所以吸菸者常有慢性咳嗽（第 16 章）。另外，<b>初級纖毛</b>（不會動的單一纖毛）存在於許多細胞上，作為感測器。</div>
+
+  <details class="stop"><summary>回到開頭：白血球吞細菌時，細胞膜為什麼不會破？</summary>
+    <div>因為細胞膜是「流體」：磷脂分子可以流動、重新排列，伸出偽足包住細菌後，膜的兩端會自然融合，把細菌包成食泡，細胞膜本身仍然完整。胞吞、胞吐也是同樣原理。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>流體鑲嵌模型：磷脂雙層（可流動）＋膽固醇＋嵌入型與周邊蛋白；外側醣鏈形成醣萼，用於細胞辨識。</li>
+      <li>膜蛋白功能：通道、載體、受體、酵素、辨識、附著。</li>
+      <li>吞噬（偽足吞大顆粒，嗜中性球、巨噬細胞）；胞飲（非專一喝液體）；受體媒介胞吞（專一，LDL、鐵）。</li>
+      <li>胞吐：分泌囊泡與膜融合釋出產物（激素、神經傳遞物質、消化酶），常需 Ca²⁺。</li>
+      <li>纖毛、鞭毛：9＋2 微管、會動；微絨毛：肌動蛋白、不會動、增加吸收面積。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>細胞膜</td><td>plasma membrane</td><td>選擇性通透</td><td>selectively permeable</td></tr>
+      <tr><td>流體鑲嵌模型</td><td>fluid-mosaic model</td><td>嵌入型／周邊蛋白</td><td>integral / peripheral protein</td></tr>
+      <tr><td>醣萼</td><td>glycocalyx</td><td>吞噬作用</td><td>phagocytosis</td></tr>
+      <tr><td>偽足</td><td>pseudopod</td><td>胞吞作用</td><td>endocytosis</td></tr>
+      <tr><td>胞飲作用</td><td>pinocytosis</td><td>受體媒介胞吞</td><td>receptor-mediated endocytosis</td></tr>
+      <tr><td>胞吐作用</td><td>exocytosis</td><td>纖毛／鞭毛</td><td>cilia / flagellum</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 3.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">3.2</span>細胞質與胞器</h2>
+  <div class="en">Cytoplasm and Its Organelles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞質裡各種<b>胞器</b>的構造與分工：細胞骨架、溶體、過氧化體、粒線體、核糖體、內質網、高基氏體。</div><div><span class="lt lt2">為什麼接在 3.1 後面？</span>穿過細胞膜後，就進入細胞質。了解每個「部門」做什麼，3.4 講蛋白質從製造到分泌的流程時，才知道它經過哪些地方；第 5 章的能量代謝則發生在細胞質與粒線體。</div></div>
+  <div class="oneline">胞器各有分工：粒線體產生 ATP；核糖體合成蛋白質；粗糙內質網做要送出的蛋白質，平滑內質網做脂質與解毒；高基氏體加工包裝；溶體分解；過氧化體處理過氧化氫。</div>
+  <div class="think">肝細胞要解毒、胰臟腺泡細胞要分泌大量消化酶，你猜它們各自哪一種胞器特別多？</div>
+
+  <h3 id="h6">細胞質與細胞骨架 Cytoplasm and Cytoskeleton</h3>
+  <p class="core">細胞質＝細胞質液（胞液）＋胞器＋內含物；細胞骨架由微絲、中間絲、微管組成，維持形狀、運輸、分裂。</p>
+  <p><b>細胞質</b> <i class="en-term">cytoplasm</i> 是細胞膜以內、細胞核以外的部分，包括膠狀的<b>細胞質液（胞液）</b> <i class="en-term">cytosol</i>、各種<b>胞器</b> <i class="en-term">organelles</i>，以及不具膜的<b>內含物</b>（如肝醣顆粒、脂肪滴、色素）。糖解作用等許多代謝反應就在胞液中進行（第 5 章）。</p>
+  <p><b>細胞骨架</b> <i class="en-term">cytoskeleton</i> 是細胞內的蛋白質纖維網，像鋼筋和軌道：</p>
+  <div class="tblwrap"><table>
+    <tr><th>種類</th><th>組成</th><th>功能</th></tr>
+    <tr><td><b>微絲</b> microfilaments</td><td>肌動蛋白 actin（最細）</td><td>細胞形狀改變、偽足、微絨毛的支撐、肌肉收縮</td></tr>
+    <tr><td><b>中間絲</b> intermediate filaments</td><td>依細胞不同（如角蛋白）</td><td>抗拉扯、固定胞器，與胞橋小體相連</td></tr>
+    <tr><td><b>微管</b> microtubules</td><td>微管蛋白 tubulin（最粗、中空）</td><td>胞器與囊泡移動的<b>軌道</b>、纖毛與鞭毛的骨架、分裂時的<b>紡錘絲</b>；由中心體的中心粒組織</td></tr>
+  </table></div>
+
+  <h3 id="h7">溶體 Lysosomes</h3>
+  <p class="core">溶體＝含消化酶的膜囊（內部酸性）：消化吞進來的東西、回收老舊胞器（自噬作用）；酵素缺陷造成溶體儲積症。</p>
+  <p><b>溶體</b> <i class="en-term">lysosomes</i> 是由膜包住的小囊，內含多種<b>水解酵素</b>，內部是<b>酸性</b>（pH 約 5），是細胞的「消化與回收站」：</p>
+  <ul class="dots">
+    <li>和食泡或胞吞泡融合，消化吞進來的細菌或物質（<b>異噬</b> heterophagy）。</li>
+    <li>包住並分解老舊、受損的胞器，回收原料，稱為<b>自噬作用</b> <i class="en-term">autophagy</i>。飢餓時自噬增加，讓細胞分解自己的成分取得養分。</li>
+    <li>細胞計畫性死亡（<b>細胞凋亡</b> <i class="en-term">apoptosis</i>）時，細胞有秩序地被分解、由吞噬細胞清除，不引起發炎。</li>
+  </ul>
+  <div class="eg"><b class="t">例子：</b>溶體缺少某種酵素時，該酵素要分解的物質就會堆積在溶體中，稱為<b>溶體儲積症</b>，例如戴薩克斯症（Tay-Sachs disease）的神經節苷脂堆積在神經細胞，造成神經退化。</div>
+
+  <h3 id="h8">過氧化體 Peroxisomes</h3>
+  <p class="core">過氧化體：氧化分子時產生 H₂O₂，再由過氧化氫酶分解成水和氧；肝臟多，參與解毒與極長鏈脂肪酸分解。</p>
+  <p><b>過氧化體</b> <i class="en-term">peroxisomes</i> 是含氧化酵素的膜囊。它們把某些分子（如極長鏈脂肪酸、酒精等毒物）氧化，過程中產生<b>過氧化氫</b>（H₂O₂）；H₂O₂ 有毒，過氧化體內的<b>過氧化氫酶</b> <i class="en-term">catalase</i> 立刻把它分解成水和氧。肝臟和腎臟細胞的過氧化體特別多，參與解毒；部分酒精也在肝細胞的過氧化體中被氧化。</p>
+
+  <h3 id="h9">粒線體 Mitochondria</h3>
+  <p class="core">粒線體＝雙層膜，內膜摺成嵴；有氧呼吸產生大部分 ATP（發電廠）；有自己的 DNA，母系遺傳。</p>
+  <p><b>粒線體</b> <i class="en-term">mitochondria</i> 是細胞的「發電廠」，用氧把養分完全氧化，產生細胞大部分的 <b>ATP</b>（第 5 章）。構造特點：</p>
+  <ul class="dots">
+    <li><b>雙層膜</b>：外膜平滑；內膜向內摺成許多<b>嵴</b> <i class="en-term">cristae</i>，增加面積，上面有電子傳遞鏈與 ATP 合成酶。內膜包住的空間叫<b>基質</b> <i class="en-term">matrix</i>，是克氏循環進行的地方。</li>
+    <li>有<b>自己的 DNA</b>（粒線體 DNA）和核糖體，能自行分裂增生。受精時精子的粒線體不會留下，所以粒線體 DNA 是<b>母系遺傳</b>。</li>
+    <li>耗能多的細胞粒線體多：心肌、骨骼肌的慢縮肌纖維、肝細胞、腎小管細胞。耐力訓練能增加肌肉的粒線體數量。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>粒線體的有氧代謝需要許多維生素 B 群做成的輔酶（B1、B2、菸鹼酸、泛酸）以及鐵（細胞色素）——這是為什麼缺乏這些營養素會使人疲倦（第 5 章）。</div>
+
+  <h3 id="h10">核糖體 Ribosomes</h3>
+  <p class="core">核糖體＝rRNA＋蛋白質，由大小兩個次單元組成，是合成蛋白質的地方；游離的做細胞內用的蛋白質，附在內質網上的做要送出或放在膜上的蛋白質。</p>
+  <p><b>核糖體</b> <i class="en-term">ribosomes</i> 不是由膜包住的胞器，由 rRNA 和蛋白質組成，分為<b>大、小兩個次單元</b>（人類細胞質中為 60S 與 40S，合起來 80S；細菌是 50S＋30S＝70S，這是部分抗生素能選擇性抑制細菌的原因）。次單元在細胞核的<b>核仁</b>中組裝。</p>
+  <ul class="dots">
+    <li><b>游離核糖體</b>：浮在胞液中，合成留在細胞質內使用的蛋白質（如糖解酵素）。</li>
+    <li><b>附著核糖體</b>：附在內質網上，合成要<b>分泌出細胞</b>、放到<b>細胞膜</b>上或送到<b>溶體</b>的蛋白質。</li>
+  </ul>
+  <div class="warn"><b class="t">易錯：</b>人體細胞質核糖體是 <b>40S＋60S＝80S</b>，不是 30S、50S（那是細菌）。S 是沉降係數，不能直接相加，所以 40＋60 不等於 100。</div>
+
+  <h3 id="h11">內質網 Endoplasmic Reticulum</h3>
+  <p class="core">粗糙內質網（有核糖體）：合成分泌與膜蛋白；平滑內質網（無核糖體）：合成脂質與類固醇、肝臟解毒、肌肉儲存 Ca²⁺（肌漿網）。</p>
+  <p><b>內質網</b> <i class="en-term">endoplasmic reticulum, ER</i> 是由膜構成的扁囊和管道網路，和核膜相連。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>粗糙內質網 rough ER</th><th>平滑內質網 smooth ER</th></tr>
+    <tr><td>外觀</td><td>表面附著<b>核糖體</b>，看起來粗糙；多為扁平囊</td><td>沒有核糖體；多為管狀</td></tr>
+    <tr><td>功能</td><td>合成<b>要分泌或放在膜上</b>的蛋白質；新做好的蛋白質進入內腔摺疊、開始加醣</td><td>合成<b>磷脂質與類固醇</b>；肝臟中參與藥物與毒物的<b>解毒</b>（加上官能基讓物質變得較易排出）；儲存 Ca²⁺</td></tr>
+    <tr><td>特別多的細胞</td><td>胰臟腺泡細胞（分泌消化酶）、漿細胞（分泌抗體）</td><td>肝細胞；腎上腺皮質與性腺（做類固醇激素）；肌肉細胞的<b>肌漿網</b>（儲存並釋放 Ca²⁺，第 12 章）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">例子：</b>長期喝酒或服用某些藥物（如巴比妥類）的人，肝細胞的平滑內質網會增生、解毒酵素增加，因此需要更大劑量藥物才有效（藥物耐受性）。</div>
+
+  <h3 id="h12">高基氏體 Golgi Complex</h3>
+  <p class="core">高基氏體＝一疊扁囊：接收內質網送來的蛋白質，修飾（加醣）、分類、包裝成分泌囊泡或溶體。</p>
+  <p><b>高基氏體</b> <i class="en-term">Golgi complex / Golgi apparatus</i> 是一疊彎曲的扁平膜囊，像郵局的包裹處理中心：</p>
+  <ol class="steps">
+    <li>接收面（cis 面，靠近內質網）收到內質網送來的運輸囊泡。</li>
+    <li>在扁囊之間傳遞時，蛋白質被<b>修飾</b>：加上或修剪醣鏈（形成醣蛋白）、切割等。</li>
+    <li>在送出面（trans 面）依「地址標籤」<b>分類、包裝</b>成不同的囊泡：送到細胞膜分泌（胞吐）、嵌入細胞膜，或成為溶體。</li>
+  </ol>
+  <p>分泌細胞（如胰臟、唾液腺、杯狀細胞）的高基氏體特別發達。</p>
+  <div class="tblwrap"><table>
+    <tr><th>胞器</th><th>一句話</th><th>工廠比喻</th></tr>
+    <tr><td>細胞核</td><td>存放 DNA，控制細胞活動</td><td>總經理辦公室與設計圖庫</td></tr>
+    <tr><td>核糖體</td><td>合成蛋白質</td><td>組裝工人</td></tr>
+    <tr><td>粗糙內質網</td><td>合成並初步加工外送蛋白質</td><td>生產線</td></tr>
+    <tr><td>平滑內質網</td><td>做脂質、解毒、存 Ca²⁺</td><td>化工與廢水處理部</td></tr>
+    <tr><td>高基氏體</td><td>修飾、分類、包裝</td><td>包裝與出貨部</td></tr>
+    <tr><td>粒線體</td><td>產生 ATP</td><td>發電廠</td></tr>
+    <tr><td>溶體</td><td>分解與回收</td><td>資源回收站</td></tr>
+    <tr><td>過氧化體</td><td>氧化毒物、分解 H₂O₂</td><td>危險物品處理室</td></tr>
+    <tr><td>細胞骨架</td><td>支撐、運輸軌道</td><td>鋼骨與輸送帶</td></tr>
+  </table></div>
+
+  <details class="stop"><summary>回到開頭：肝細胞與胰臟腺泡細胞，各自哪種胞器特別多？</summary>
+    <div>肝細胞要解毒、合成脂質，所以<b>平滑內質網</b>（和過氧化體、粒線體）特別多；胰臟腺泡細胞要大量製造並分泌消化酶，所以<b>粗糙內質網</b>和<b>高基氏體</b>特別發達。這就是「構造反映功能」。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>細胞質＝胞液＋胞器＋內含物；細胞骨架：微絲（肌動蛋白）、中間絲、微管（軌道、纖毛、紡錘絲）。</li>
+      <li>溶體：酸性、含水解酵素；異噬、自噬、凋亡；酵素缺陷 → 溶體儲積症。</li>
+      <li>過氧化體：氧化反應產生 H₂O₂，以過氧化氫酶分解；肝臟多，參與解毒。</li>
+      <li>粒線體：雙層膜、嵴、基質；產生大部分 ATP；有自己的 DNA，母系遺傳。</li>
+      <li>核糖體：rRNA＋蛋白質；人類 40S＋60S＝80S；游離（胞內蛋白）vs 附著內質網（分泌、膜蛋白）。</li>
+      <li>粗糙內質網：分泌與膜蛋白；平滑內質網：脂質、類固醇、解毒、儲 Ca²⁺（肌漿網）。</li>
+      <li>高基氏體：修飾（加醣）、分類、包裝 → 分泌囊泡、膜、溶體。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>細胞質／胞液</td><td>cytoplasm / cytosol</td><td>胞器</td><td>organelle</td></tr>
+      <tr><td>細胞骨架</td><td>cytoskeleton</td><td>微絲／中間絲／微管</td><td>microfilament / intermediate filament / microtubule</td></tr>
+      <tr><td>溶體</td><td>lysosome</td><td>自噬作用／細胞凋亡</td><td>autophagy / apoptosis</td></tr>
+      <tr><td>過氧化體</td><td>peroxisome</td><td>過氧化氫酶</td><td>catalase</td></tr>
+      <tr><td>粒線體</td><td>mitochondrion</td><td>嵴／基質</td><td>cristae / matrix</td></tr>
+      <tr><td>核糖體</td><td>ribosome</td><td>內質網（粗糙／平滑）</td><td>rough / smooth ER</td></tr>
+      <tr><td>肌漿網</td><td>sarcoplasmic reticulum</td><td>高基氏體</td><td>Golgi complex</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 3.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">3.3</span>細胞核與基因表現</h2>
+  <div class="en">Cell Nucleus and Gene Expression</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞核的構造、DNA 怎麼和組蛋白收納成<b>染色質</b>、基因怎麼被<b>轉錄</b>成 RNA，以及基因怎麼被開啟或關閉。</div><div><span class="lt lt2">為什麼接在 3.2 後面？</span>3.2 的核糖體、內質網要做蛋白質，但「做哪一種」由細胞核裡的基因決定。這節講指令怎麼從 DNA 發出；3.4 再講工廠怎麼依指令生產。</div></div>
+  <div class="oneline">DNA 纏繞組蛋白成為染色質；基因被 RNA 聚合酶轉錄成前驅 mRNA，剪接掉內含子、保留外顯子後送出細胞核；細胞只表現自己需要的基因。</div>
+  <div class="think">你的肝細胞和神經細胞有完全相同的 DNA，為什麼長得和做的事完全不同？</div>
+
+  <h3 id="h13">細胞核的構造</h3>
+  <p class="core">細胞核：雙層核膜＋核孔（RNA、蛋白質進出）；核仁製造核糖體次單元。</p>
+  <p>大部分細胞有一個<b>細胞核</b> <i class="en-term">nucleus</i>（成熟紅血球沒有；骨骼肌纖維有很多個）。細胞核由兩層膜構成的<b>核膜</b> <i class="en-term">nuclear envelope</i> 包住，核膜上有<b>核孔</b> <i class="en-term">nuclear pores</i>，讓 mRNA 等分子出去、蛋白質（如調控基因的轉錄因子）進來。核內深色的區域叫<b>核仁</b> <i class="en-term">nucleolus</i>，是製造 rRNA 並組裝核糖體次單元的地方。</p>
+
+  <h3 id="h14">基因組與蛋白質體 Genome and Proteome</h3>
+  <p class="core">基因組＝一個細胞的全部 DNA（人約 2 萬多個編碼蛋白質的基因）；蛋白質體＝細胞實際做出的所有蛋白質，比基因數多。</p>
+  <p><b>基因</b> <i class="en-term">gene</i> 是 DNA 上一段能被轉錄成 RNA 的序列，通常編碼一種多胜肽。一個人的全部 DNA 叫<b>基因組</b> <i class="en-term">genome</i>；人類基因組約 30 億個鹼基對，但只有約 2 萬多個基因編碼蛋白質，只占 DNA 的一小部分（約 1–2%）。</p>
+  <p>細胞實際做出來的全部蛋白質叫<b>蛋白質體</b> <i class="en-term">proteome</i>。蛋白質種類遠多於基因數，因為：①同一基因的 RNA 可以用不同方式剪接（選擇性剪接，見下方）；②蛋白質做好後還會被修飾（加醣、加磷酸、切割）。研究基因組的學問叫基因體學，研究蛋白質體的叫蛋白質體學。</p>
+
+  <h3 id="h15">染色質 Chromatin</h3>
+  <p class="core">DNA 纏在組蛋白上形成核小體 → 染色質；鬆散的（真染色質）基因可以表現，緊縮的（異染色質）基因關閉；組蛋白乙醯化使染色質變鬆。</p>
+  <p>每個細胞核裡的 DNA 拉直約有 2 公尺長，要收進直徑只有幾微米的細胞核，靠的是捲繞：DNA 纏在一組帶正電的蛋白質——<b>組蛋白</b> <i class="en-term">histones</i>——上，形成像串珠般的<b>核小體</b> <i class="en-term">nucleosomes</i>，再進一步摺疊。DNA 加上蛋白質的複合物叫<b>染色質</b> <i class="en-term">chromatin</i>。</p>
+  <ul class="dots">
+    <li><b>真染色質</b> <i class="en-term">euchromatin</i>：較鬆散，轉錄機器能接觸 DNA，<b>基因可以表現</b>。</li>
+    <li><b>異染色質</b> <i class="en-term">heterochromatin</i>：緊密壓縮，基因<b>通常不表現</b>。</li>
+  </ul>
+  <p>染色質的鬆緊受化學修飾調控：組蛋白被<b>乙醯化</b> <i class="en-term">acetylation</i> 會使染色質變鬆、促進基因表現；DNA 的胞嘧啶被<b>甲基化</b> <i class="en-term">methylation</i> 則通常使基因關閉。這些是<b>表觀遺傳</b>的主要機制（3.5）。細胞分裂時染色質會高度濃縮成看得見的<b>染色體</b> <i class="en-term">chromosomes</i>。</p>
+  <div class="eg"><b class="t">回答開頭問題的關鍵：</b>每個細胞都有全套基因，但不同細胞讓<b>不同的基因</b>處於可表現的狀態。肝細胞開啟製造白蛋白、解毒酵素的基因；神經細胞開啟製造神經傳遞物質、離子通道的基因。這叫<b>細胞分化</b>。</div>
+
+  <h3 id="h16">RNA 的合成（轉錄）RNA Synthesis</h3>
+  <p class="core">轉錄：RNA 聚合酶結合啟動子，以 DNA 一股為模板合成前驅 mRNA；轉錄因子決定哪些基因被轉錄；剪接去除內含子、接起外顯子。</p>
+  <figure class="pic"><svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a33" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="6" y="6" width="300" height="250" rx="16" fill="#f5f3ff" stroke="#7c3aed" stroke-dasharray="6 4"/>
+    <text x="20" y="28" font-size="14" fill="#6d28d9" font-weight="bold">細胞核</text>
+    <rect x="30" y="44" width="250" height="14" fill="#93c5fd"/><rect x="30" y="62" width="250" height="14" fill="#93c5fd"/>
+    <rect x="30" y="44" width="40" height="32" fill="#fde68a"/><text x="50" y="92" font-size="12" text-anchor="middle" fill="#92400e">啟動子</text>
+    <text x="175" y="40" font-size="13" text-anchor="middle" fill="#1d4ed8">DNA（基因）</text>
+    <ellipse cx="120" cy="70" rx="26" ry="20" fill="#c4b5fd" opacity=".85"/><text x="120" y="75" font-size="11" text-anchor="middle">RNA聚合酶</text>
+    <path d="M150,82 L150,108" stroke="#374151" stroke-width="2.5" marker-end="url(#a33)"/><text x="160" y="100" font-size="13">① 轉錄</text>
+    <g><rect x="40" y="118" width="44" height="16" fill="#f87171"/><rect x="84" y="118" width="40" height="16" fill="#d1d5db"/><rect x="124" y="118" width="50" height="16" fill="#f87171"/><rect x="174" y="118" width="36" height="16" fill="#d1d5db"/><rect x="210" y="118" width="50" height="16" fill="#f87171"/></g>
+    <text x="150" y="152" font-size="13" text-anchor="middle">前驅 mRNA：紅＝外顯子、灰＝內含子</text>
+    <path d="M150,158 L150,182" stroke="#374151" stroke-width="2.5" marker-end="url(#a33)"/><text x="160" y="176" font-size="13">② 剪接</text>
+    <g><rect x="70" y="192" width="44" height="16" fill="#f87171"/><rect x="114" y="192" width="50" height="16" fill="#f87171"/><rect x="164" y="192" width="50" height="16" fill="#f87171"/></g>
+    <text x="150" y="228" font-size="13" text-anchor="middle">成熟 mRNA（只留外顯子）</text>
+    <path d="M220,200 Q300,200 330,240" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a33)"/><text x="268" y="190" font-size="12">經核孔出去</text>
+    <text x="400" y="230" font-size="14" fill="#a16207" font-weight="bold" text-anchor="middle">細胞質</text>
+    <rect x="320" y="262" width="150" height="14" fill="#f87171"/>
+    <ellipse cx="370" cy="256" rx="26" ry="13" fill="#86efac" stroke="#16a34a"/><ellipse cx="370" cy="282" rx="22" ry="11" fill="#bbf7d0" stroke="#16a34a"/>
+    <g fill="#fde047" stroke="#ca8a04"><circle cx="330" cy="300" r="7"/><circle cx="345" cy="308" r="7"/><circle cx="361" cy="312" r="7"/></g>
+    <text x="395" y="318" font-size="13" fill="#15803d">③ 轉譯（3.4）</text>
+    <text x="240" y="326" font-size="13" text-anchor="middle" fill="#374151">DNA →（轉錄）→ RNA →（轉譯）→ 蛋白質</text>
+  </svg><figcaption>從基因到蛋白質。在細胞核裡轉錄並剪接，成熟 mRNA 經核孔出去，到細胞質的核糖體轉譯成多胜肽。</figcaption></figure>
+  <p>把 DNA 上一個基因的資訊抄成 RNA，叫<b>轉錄</b> <i class="en-term">transcription</i>，在細胞核中進行：</p>
+  <ol class="steps">
+    <li><b>起始</b>：<b>RNA 聚合酶</b> <i class="en-term">RNA polymerase</i> 結合在基因前方的<b>啟動子</b> <i class="en-term">promoter</i> 區域。能否結合、結合多頻繁，受<b>轉錄因子</b> <i class="en-term">transcription factors</i> 調控——它們是結合在 DNA 特定序列上的蛋白質，像「開關」。例如類固醇激素和甲狀腺素進入細胞後，與受體結合成轉錄因子，開啟特定基因（第 11 章）。</li>
+    <li><b>延長</b>：DNA 雙股在這一段局部解開，RNA 聚合酶以其中<b>一股</b>（模板股）為模板，依互補配對（DNA 的 A 對 RNA 的 U、T 對 A、G 對 C、C 對 G）接上核苷酸。</li>
+    <li><b>終止</b>：遇到終止序列，RNA 放開。</li>
+  </ol>
+  <p>RNA 有三種主要類型被轉錄：<b>mRNA</b>（攜帶蛋白質的資訊）、<b>tRNA</b>、<b>rRNA</b>；另外還有許多不編碼蛋白質、具調控功能的小 RNA（如 microRNA）。</p>
+  <h4>前驅 mRNA 的剪接 Splicing</h4>
+  <p>真核細胞的基因是「斷開」的：剛轉錄好的<b>前驅 mRNA</b> <i class="en-term">pre-mRNA</i> 包含會被表現的片段<b>外顯子</b> <i class="en-term">exons</i>，和夾在中間、不被表現的<b>內含子</b> <i class="en-term">introns</i>。由<b>剪接體</b> <i class="en-term">spliceosome</i>（含小 RNA 與蛋白質）把內含子剪掉、外顯子接起來，成為<b>成熟 mRNA</b>，並加上 5' 端帽和 3' 端多腺苷酸尾巴（保護與幫助轉譯），才經核孔送出。</p>
+  <p><b>選擇性剪接</b> <i class="en-term">alternative splicing</i>：同一個前驅 mRNA 可以保留不同的外顯子組合，做出不同的蛋白質——這是 2 萬多個基因能做出更多種蛋白質的主要原因。</p>
+  <div class="warn"><b class="t">易混淆：</b><b>外</b>顯子＝出去（被表現，留在成熟 mRNA）；<b>內</b>含子＝留在裡面（被剪掉）。記法：ex<b>on</b> ＝ expressed，intr<b>on</b> ＝ intervening。</div>
+
+  <h3 id="h17">RNA 干擾 RNA Interference</h3>
+  <p class="core">microRNA 等小 RNA 會和特定 mRNA 結合，使它被分解或無法轉譯 → 降低該基因的表現。</p>
+  <p>細胞中有一類不編碼蛋白質的小 RNA，如 <b>microRNA（miRNA）</b> 與<b>小干擾 RNA（siRNA）</b>，能和互補的 mRNA 結合，導致 mRNA 被切斷分解或無法被轉譯，這叫 <b>RNA 干擾</b> <i class="en-term">RNA interference, RNAi</i>。這是轉錄之後再「調低音量」的機制；一種 miRNA 可同時調控許多基因。科學家也利用這個原理開發藥物，例如治療某些遺傳性疾病。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>細胞核：雙層核膜＋核孔；核仁製造核糖體次單元。</li>
+      <li>基因組（全部 DNA，約 2 萬多個蛋白質編碼基因）vs 蛋白質體（細胞實際做出的蛋白質，種類更多）。</li>
+      <li>DNA＋組蛋白 → 核小體 → 染色質；真染色質鬆、可表現；異染色質緊、關閉；乙醯化變鬆、DNA 甲基化關閉。</li>
+      <li>不同細胞表現不同基因 → 細胞分化。</li>
+      <li>轉錄：RNA 聚合酶結合啟動子，以一股 DNA 為模板（A→U）；轉錄因子決定開關；類固醇與甲狀腺素可作為轉錄因子。</li>
+      <li>剪接：去除內含子、接起外顯子；選擇性剪接增加蛋白質種類。</li>
+      <li>RNA 干擾：miRNA、siRNA 使特定 mRNA 分解或不轉譯。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>核膜／核孔</td><td>nuclear envelope / pore</td><td>核仁</td><td>nucleolus</td></tr>
+      <tr><td>基因／基因組</td><td>gene / genome</td><td>蛋白質體</td><td>proteome</td></tr>
+      <tr><td>組蛋白／核小體</td><td>histone / nucleosome</td><td>染色質／染色體</td><td>chromatin / chromosome</td></tr>
+      <tr><td>真染色質／異染色質</td><td>euchromatin / heterochromatin</td><td>乙醯化／甲基化</td><td>acetylation / methylation</td></tr>
+      <tr><td>轉錄</td><td>transcription</td><td>RNA 聚合酶</td><td>RNA polymerase</td></tr>
+      <tr><td>啟動子</td><td>promoter</td><td>轉錄因子</td><td>transcription factor</td></tr>
+      <tr><td>外顯子／內含子</td><td>exon / intron</td><td>選擇性剪接</td><td>alternative splicing</td></tr>
+      <tr><td>RNA 干擾</td><td>RNA interference</td><td>微小 RNA</td><td>microRNA</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 3.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">3.4</span>蛋白質的合成與分泌</h2>
+  <div class="en">Protein Synthesis and Secretion</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>mRNA 怎麼在核糖體上被<b>轉譯</b>成多胜肽（密碼子、tRNA 反密碼子），分泌性蛋白質怎麼經<b>內質網→高基氏體→胞吐</b>送出，以及蛋白質怎麼被分解（泛素—蛋白酶體）。</div><div><span class="lt lt2">為什麼接在 3.3 後面？</span>3.3 把指令（mRNA）送出了細胞核；這節接著講工廠怎麼照指令生產、包裝、出貨，把 3.2 的胞器串成一條生產線。</div></div>
+  <div class="oneline">mRNA 上每三個鹼基（密碼子）指定一個胺基酸；tRNA 用反密碼子把對應的胺基酸帶到核糖體接成多胜肽；分泌蛋白經粗糙內質網、高基氏體、分泌囊泡胞吐出去。</div>
+  <div class="think">胰島素是在胰臟 β 細胞的哪裡做出來、又怎麼離開細胞的？</div>
+
+  <h3 id="h18">遺傳密碼 Genetic Code</h3>
+  <p class="core">密碼子＝mRNA 上 3 個鹼基，對應一個胺基酸；AUG＝起始（甲硫胺酸）；UAA、UAG、UGA＝終止；64 個密碼子對應 20 種胺基酸。</p>
+  <p>mRNA 的資訊以每 <b>3 個鹼基</b>為一組來讀，稱為<b>密碼子</b> <i class="en-term">codon</i>。4 種鹼基組成 3 個一組，共有 4³＝64 種密碼子：</p>
+  <ul class="dots">
+    <li>61 個對應 20 種胺基酸——所以多數胺基酸有不只一個密碼子（密碼的<b>簡併性</b>）。</li>
+    <li><b>AUG</b>：起始密碼子，同時代表甲硫胺酸，所以新做出的多胜肽第一個都是甲硫胺酸（之後可能被切掉）。</li>
+    <li><b>UAA、UAG、UGA</b>：終止密碼子，不代表胺基酸，告訴核糖體「到此結束」。</li>
+  </ul>
+
+  <h3 id="h19">轉運 RNA Transfer RNA</h3>
+  <p class="core">tRNA 一端接胺基酸、另一端有反密碼子與 mRNA 密碼子配對；由專一的酵素把正確胺基酸接到 tRNA 上（需 ATP）。</p>
+  <p><b>轉運 RNA</b>（tRNA）是摺成類似三葉草形狀的小 RNA，像「翻譯員」：</p>
+  <ul class="dots">
+    <li>一端有 3 個鹼基的<b>反密碼子</b> <i class="en-term">anticodon</i>，可和 mRNA 上的密碼子互補配對（例如密碼子 AUG 配反密碼子 UAC）。</li>
+    <li>另一端接著<b>對應的胺基酸</b>。把正確胺基酸接到 tRNA 上的是專一的<b>胺醯-tRNA 合成酶</b>，每種胺基酸有自己的酵素，這一步耗 ATP。</li>
+  </ul>
+
+  <h3 id="h20">多胜肽的形成（轉譯）Formation of a Polypeptide</h3>
+  <p class="core">轉譯：小次單元結合 mRNA、找到 AUG → 大次單元加入 → tRNA 依密碼子帶入胺基酸，以胜肽鍵連接 → 移動一個密碼子 → 遇終止密碼子釋出多胜肽。</p>
+  <p>依 mRNA 的密碼把胺基酸接成多胜肽的過程叫<b>轉譯</b> <i class="en-term">translation</i>，在核糖體上進行：</p>
+  <ol class="steps">
+    <li><b>起始</b>：核糖體小次單元結合到 mRNA，沿著找到起始密碼子 AUG；攜帶甲硫胺酸的 tRNA 配對上去，大次單元再加入。</li>
+    <li><b>延長</b>：下一個帶著胺基酸的 tRNA 依密碼子進入核糖體；核糖體催化兩個胺基酸之間形成<b>胜肽鍵</b>；核糖體沿 mRNA 移動一個密碼子，空的 tRNA 離開。如此反覆，多胜肽一個胺基酸一個胺基酸地變長。</li>
+    <li><b>終止</b>：遇到終止密碼子，沒有 tRNA 能配對，釋放因子使完成的多胜肽脫離，核糖體拆成兩個次單元。</li>
+  </ol>
+  <p>一條 mRNA 可以同時被好幾個核糖體轉譯，形成<b>多核糖體</b> <i class="en-term">polyribosome</i>，提高生產效率。</p>
+  <div class="eg"><b class="t">例子：</b>DNA 模板股 TAC → mRNA AUG → tRNA 反密碼子 UAC → 甲硫胺酸。若 DNA 一個鹼基改變（點突變），密碼子可能變成另一個胺基酸，如鐮刀型貧血的 GAG → GUG（麩胺酸 → 纈胺酸）。</div>
+
+  <h3 id="h21">內質網與高基氏體的功能 Functions of the ER and Golgi Complex</h3>
+  <p class="core">分泌蛋白的路線：訊號胜肽引導核糖體附到粗糙內質網 → 進入內腔、摺疊、加醣 → 運輸囊泡到高基氏體修飾分類 → 分泌囊泡 → 胞吐。</p>
+  <figure class="pic"><svg viewBox="0 0 480 262" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a34" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="460" y="10" width="14" height="230" fill="#fde68a" stroke="#ca8a04"/><text x="452" y="22" font-size="12" text-anchor="end" fill="#a16207">細胞膜</text>
+    <circle cx="40" cy="80" r="34" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="40" y="85" font-size="13" text-anchor="middle">細胞核</text>
+    <path d="M78,60 q40,-12 70,4 M78,80 q40,-12 70,4 M78,100 q40,-12 70,4" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <g fill="#16a34a"><circle cx="92" cy="54" r="3"/><circle cx="110" cy="50" r="3"/><circle cx="130" cy="52" r="3"/><circle cx="92" cy="74" r="3"/><circle cx="112" cy="70" r="3"/><circle cx="132" cy="72" r="3"/></g>
+    <text x="113" y="130" font-size="13" text-anchor="middle" fill="#1d4ed8">① 粗糙內質網</text><text x="113" y="146" font-size="12" text-anchor="middle">合成、摺疊、加醣</text>
+    <circle cx="178" cy="80" r="9" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M156,80 L166,80" stroke="#374151" stroke-width="2" marker-end="url(#a34)"/><path d="M190,80 L210,80" stroke="#374151" stroke-width="2" marker-end="url(#a34)"/>
+    <path d="M220,55 q30,-10 60,0 M224,72 q26,-9 52,0 M224,89 q26,-9 52,0 M220,106 q30,-10 60,0" fill="none" stroke="#db2777" stroke-width="4"/>
+    <text x="250" y="130" font-size="13" text-anchor="middle" fill="#be185d">② 高基氏體</text><text x="250" y="146" font-size="12" text-anchor="middle">修飾、分類、包裝</text>
+    <path d="M290,80 L330,80" stroke="#374151" stroke-width="2" marker-end="url(#a34)"/>
+    <circle cx="350" cy="80" r="14" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><g fill="#8b5cf6"><circle cx="346" cy="77" r="3"/><circle cx="354" cy="84" r="3"/></g>
+    <path d="M366,80 L440,80" stroke="#374151" stroke-width="2" marker-end="url(#a34)"/>
+    <text x="355" y="130" font-size="13" text-anchor="middle" fill="#6d28d9">③ 分泌囊泡</text><text x="410" y="70" font-size="12" text-anchor="middle">④ 胞吐</text>
+    <path d="M250,152 L250,190 L328,204" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#a34)" stroke-dasharray="5 4"/>
+    <circle cx="346" cy="204" r="14" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="375" y="208" font-size="13" fill="#15803d">→ 溶體</text>
+    <path d="M250,190 L250,232 L456,232" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#a34)" stroke-dasharray="5 4"/><text x="300" y="252" font-size="12" fill="#374151">嵌入細胞膜（膜蛋白）</text>
+  </svg><figcaption>分泌蛋白的生產線：粗糙內質網製造 → 運輸囊泡 → 高基氏體加工分類 → 分泌囊泡 → 胞吐。高基氏體也把部分產物送到溶體或細胞膜。</figcaption></figure>
+  <p>要分泌出去的蛋白質（如胰島素、消化酶、抗體），開頭有一段<b>訊號胜肽</b> <i class="en-term">signal peptide</i>（前導序列）。核糖體一做出這段，就被引導附著到<b>粗糙內質網</b>上，新做出的多胜肽一邊被合成、一邊穿進內質網的<b>內腔</b> <i class="en-term">cisterna</i>，訊號胜肽隨後被切掉。在內腔中，蛋白質摺疊、形成雙硫鍵、開始加上醣鏈。</p>
+  <p>接著內質網長出<b>運輸囊泡</b>，把蛋白質送到<b>高基氏體</b>修飾與分類，最後包成<b>分泌囊泡</b>，等待訊號（常是 Ca²⁺ 增加）時以<b>胞吐作用</b>釋出。</p>
+  <div class="nut"><b class="t">例子：胰島素的誕生</b>——β 細胞先做出「前胰島素原」（preproinsulin），在內質網切掉訊號胜肽成為「胰島素原」（proinsulin）；在高基氏體與分泌囊泡中再切掉中間的 <b>C 胜肽</b>，成為由 A、B 兩鏈以雙硫鍵相連的胰島素。分泌時胰島素與 C 胜肽等量釋出，所以臨床上測血中 C 胜肽，可估計病人自己的 β 細胞還能分泌多少胰島素（第 11、19 章）。</div>
+
+  <h3 id="h22">蛋白質的降解 Protein Degradation</h3>
+  <p class="core">要分解的蛋白質被接上泛素作標記 → 送進蛋白酶體切碎；溶體則分解胞吞物與胞器。</p>
+  <p>蛋白質也有壽命：用舊的、摺錯的、或需要快速調降的調控蛋白，會被分解。細胞質中主要的方式是<b>泛素—蛋白酶體系統</b>：</p>
+  <ol class="steps">
+    <li>要被丟棄的蛋白質被接上一串小蛋白質<b>泛素</b> <i class="en-term">ubiquitin</i>，像貼上「回收」標籤（需 ATP）。</li>
+    <li>被標記的蛋白質送進<b>蛋白酶體</b> <i class="en-term">proteasome</i>——一個桶狀的蛋白酶複合體，把它切成小胜肽，胺基酸可再利用。</li>
+  </ol>
+  <p>另外，溶體透過自噬作用分解大塊物質與整個胞器。蛋白質分解失調與某些神經退化疾病有關（摺錯的蛋白質堆積）。</p>
+  <div class="nut"><b class="t">營養連結：</b>長期飢餓、癌症惡病質、嚴重感染時，肌肉蛋白經泛素—蛋白酶體系統大量分解，提供胺基酸做糖質新生，造成肌肉流失（第 19 章）。</div>
+
+  <details class="stop"><summary>回到開頭：胰島素在 β 細胞的哪裡做出來、怎麼離開細胞？</summary>
+    <div>胰島素基因在細胞核轉錄 → mRNA 出核 → 在<b>粗糙內質網</b>上的核糖體轉譯（訊號胜肽引導）→ 內腔摺疊 → 運輸囊泡到<b>高基氏體</b> → 包成<b>分泌囊泡</b>（同時切成成熟胰島素）→ 血糖升高時 Ca²⁺ 進入細胞，觸發<b>胞吐作用</b>釋入血液。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>密碼子＝mRNA 上 3 個鹼基；64 個密碼子、20 種胺基酸；AUG 起始（甲硫胺酸）；UAA、UAG、UGA 終止。</li>
+      <li>tRNA：反密碼子配對密碼子，另一端攜帶對應胺基酸（胺醯-tRNA 合成酶、耗 ATP）。</li>
+      <li>轉譯：起始（小次單元找 AUG）→ 延長（形成胜肽鍵、移位）→ 終止；多核糖體同時轉譯。</li>
+      <li>分泌蛋白：訊號胜肽 → 粗糙內質網（摺疊、加醣）→ 高基氏體（修飾、分類）→ 分泌囊泡 → 胞吐。</li>
+      <li>胰島素：前胰島素原 → 胰島素原 → 切掉 C 胜肽成胰島素；C 胜肽可估計內生性胰島素。</li>
+      <li>蛋白質分解：泛素標記 → 蛋白酶體；溶體自噬分解胞器。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>轉譯</td><td>translation</td><td>密碼子／反密碼子</td><td>codon / anticodon</td></tr>
+      <tr><td>起始／終止密碼子</td><td>start / stop codon</td><td>轉運 RNA</td><td>transfer RNA</td></tr>
+      <tr><td>多核糖體</td><td>polyribosome</td><td>訊號胜肽</td><td>signal peptide</td></tr>
+      <tr><td>胰島素原</td><td>proinsulin</td><td>C 胜肽</td><td>C-peptide</td></tr>
+      <tr><td>泛素</td><td>ubiquitin</td><td>蛋白酶體</td><td>proteasome</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 3.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">3.5</span>DNA 合成與細胞分裂</h2>
+  <div class="en">DNA Synthesis and Cell Division</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>DNA 怎麼<b>半保留複製</b>、細胞週期的各階段與調控、<b>有絲分裂</b>與<b>減數分裂</b>的差異，以及<b>表觀遺傳</b>。</div><div><span class="lt lt2">為什麼放最後？</span>前面講細胞平常怎麼運作；最後講細胞怎麼變成兩個——身體成長、上皮更新、傷口修復都靠它；生殖細胞則用減數分裂把染色體減半（第 20 章）。</div></div>
+  <div class="oneline">DNA 以半保留方式複製；細胞週期包括 G1、S（複製 DNA）、G2 和 M（有絲分裂）；有絲分裂產生兩個相同的雙套細胞，減數分裂產生四個單套配子。</div>
+  <div class="think">為什麼癌細胞會「失控」地分裂？正常細胞有哪些「煞車」？</div>
+
+  <h3 id="h23">DNA 複製 DNA Replication</h3>
+  <p class="core">半保留複製：解旋酶打開雙股 → DNA 聚合酶依互補配對接上新股 → 每個新 DNA 含一條舊股、一條新股。</p>
+  <ol class="steps">
+    <li><b>解旋酶</b> <i class="en-term">helicase</i> 打斷鹼基間的氫鍵，把雙股拉開成複製叉。</li>
+    <li><b>DNA 聚合酶</b> <i class="en-term">DNA polymerase</i> 以每一股為模板，依互補配對（A–T、G–C）接上新的核苷酸，只能朝一個方向（5'→3'）延長；一股連續合成，另一股則一小段一小段合成，再由 <b>DNA 連接酶</b>接起來。</li>
+    <li>結果得到兩個 DNA 分子，各含<b>一條原本的舊股</b>和<b>一條新合成的股</b>，稱為<b>半保留複製</b> <i class="en-term">semiconservative replication</i>。</li>
+  </ol>
+  <p>DNA 聚合酶有<b>校對</b>功能，錯誤率極低；仍有的錯誤或損傷由修復酵素修正，修復失敗就是<b>突變</b>。</p>
+
+  <h3 id="h24">細胞週期 The Cell Cycle</h3>
+  <p class="core">間期（G1 生長 → S 複製 DNA → G2 準備分裂）＋ M 期（有絲分裂＋細胞質分裂）；G0＝停止分裂；檢查點與 p53 等抑癌基因是煞車。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a35" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g transform="translate(160,150)">
+      <path d="M0,-120 A120,120 0 0 1 116,31 L0,0 Z" fill="#bfdbfe" stroke="#fff" stroke-width="3"/>
+      <path d="M116,31 A120,120 0 0 1 -60,104 L0,0 Z" fill="#fde68a" stroke="#fff" stroke-width="3"/>
+      <path d="M-60,104 A120,120 0 0 1 -115,-34 L0,0 Z" fill="#bbf7d0" stroke="#fff" stroke-width="3"/>
+      <path d="M-115,-34 A120,120 0 0 1 0,-120 L0,0 Z" fill="#fecaca" stroke="#fff" stroke-width="3"/>
+      <circle r="40" fill="#fff"/>
+      <text x="60" y="-40" font-size="18" text-anchor="middle" font-weight="bold" fill="#1d4ed8">G1</text><text x="60" y="-20" font-size="12" text-anchor="middle">長大、正常工作</text>
+      <text x="40" y="72" font-size="18" text-anchor="middle" font-weight="bold" fill="#92400e">S</text><text x="40" y="90" font-size="12" text-anchor="middle">複製 DNA</text>
+      <text x="-72" y="30" font-size="18" text-anchor="middle" font-weight="bold" fill="#15803d">G2</text><text x="-72" y="48" font-size="12" text-anchor="middle">準備分裂</text>
+      <text x="-50" y="-70" font-size="18" text-anchor="middle" font-weight="bold" fill="#b91c1c">M</text><text x="-50" y="-52" font-size="12" text-anchor="middle">有絲分裂</text>
+      <text x="0" y="5" font-size="13" text-anchor="middle">細胞週期</text>
+    </g>
+    <path d="M300,90 Q340,60 370,80" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#a35)"/>
+    <rect x="372" y="62" width="100" height="56" rx="10" fill="#f3f4f6" stroke="#9ca3af"/><text x="422" y="86" font-size="16" text-anchor="middle" font-weight="bold">G0</text><text x="422" y="106" font-size="12" text-anchor="middle">休止、不再分裂</text>
+    
+    <text x="350" y="180" font-size="13" font-weight="bold">G1＋S＋G2＝間期</text>
+    <text x="350" y="210" font-size="13" fill="#b91c1c">檢查點：DNA 有損傷</text>
+    <text x="350" y="228" font-size="13" fill="#b91c1c">→ p53 讓週期停下</text>
+    <text x="350" y="246" font-size="13" fill="#b91c1c">修不好 → 凋亡</text>
+  </svg><figcaption>細胞週期像一個時鐘：大部分時間在間期（G1、S、G2），有絲分裂（M）只占一小段。成熟神經細胞、多數心肌細胞停在 G0。</figcaption></figure>
+  <p>細胞從一次分裂到下一次分裂的過程叫<b>細胞週期</b> <i class="en-term">cell cycle</i>：</p>
+  <ul class="dots">
+    <li><b>間期</b> <i class="en-term">interphase</i>：
+      <ul>
+        <li><b>G1 期</b>（gap 1）：細胞長大、合成蛋白質、執行正常功能。</li>
+        <li><b>S 期</b>（synthesis）：<b>複製 DNA</b>，每條染色體變成兩條相同的<b>姊妹染色分體</b> <i class="en-term">sister chromatids</i>，由<b>中節（著絲點）</b> <i class="en-term">centromere</i> 相連。</li>
+        <li><b>G2 期</b>：繼續生長、合成分裂需要的蛋白質（如微管蛋白）。</li>
+      </ul>
+    </li>
+    <li><b>M 期</b>：<b>有絲分裂</b>（細胞核分裂）＋<b>細胞質分裂</b>。</li>
+    <li><b>G0 期</b>：離開週期、不再分裂的狀態。成熟神經元、大部分心肌細胞屬此類，所以受損後很難再生。</li>
+  </ul>
+  <h4>細胞週期的調控</h4>
+  <p class="core">週期素／CDK 推動、檢查點把關；致癌基因＝油門卡住、抑癌基因（p53）＝煞車；凋亡不發炎、壞死會發炎；端粒每分裂一次變短。</p>
+  <p>細胞週期由<b>週期素</b> <i class="en-term">cyclins</i> 與<b>週期素依賴性激酶</b>（CDKs）推動，並在 G1/S、G2/M 等<b>檢查點</b>確認狀況。</p>
+  <ul class="dots">
+    <li><b>致癌基因</b> <i class="en-term">oncogenes</i>：原本促進細胞分裂的基因（原致癌基因）發生突變而過度活化，像「油門卡住」。</li>
+    <li><b>抑癌基因</b> <i class="en-term">tumor suppressor genes</i>：抑制分裂的「煞車」，例如 <b>p53</b>：偵測到 DNA 損傷時讓細胞週期停下來修復，修不好就啟動<b>細胞凋亡</b>。p53 突變見於約一半的人類癌症。</li>
+  </ul>
+  <p><b>細胞凋亡</b> <i class="en-term">apoptosis</i> 是計畫性的細胞死亡：細胞有秩序地縮小、DNA 斷裂，被吞噬細胞清除，<b>不引起發炎</b>；不同於因受傷而腫脹破裂、引起發炎的<b>壞死</b> <i class="en-term">necrosis</i>。凋亡讓胚胎手指間的蹼消失、清除受損或被病毒感染的細胞。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>癌症是多個基因突變累積的結果——油門卡住（致癌基因活化）加上煞車失靈（抑癌基因如 p53 失去功能），細胞就會不受檢查點控制、也不凋亡，持續分裂。</div>
+  <p>此外，染色體末端的<b>端粒</b> <i class="en-term">telomeres</i> 是重複序列，每次分裂會變短一點，短到一定程度細胞就停止分裂（老化）。幹細胞、生殖細胞和多數癌細胞有<b>端粒酶</b>能把端粒補長。</p>
+
+  <h3 id="h25">有絲分裂 Mitosis</h3>
+  <p class="core">前期（染色體濃縮、紡錘絲形成）→ 中期（排在中央）→ 後期（姊妹染色分體分開）→ 末期（形成兩個核）＋細胞質分裂 → 兩個相同的雙套細胞。</p>
+  <figure class="pic"><svg viewBox="0 0 480 190" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <g font-size="14" text-anchor="middle" font-weight="bold">
+      <text x="60" y="20" fill="#1d4ed8">前期</text><text x="180" y="20" fill="#7c3aed">中期</text><text x="300" y="20" fill="#be123c">後期</text><text x="420" y="20" fill="#15803d">末期</text></g>
+    <g fill="none" stroke="#9ca3af" stroke-width="2"><circle cx="60" cy="95" r="52"/><circle cx="180" cy="95" r="52"/><ellipse cx="300" cy="95" rx="58" ry="48"/><path d="M370,95 Q370,43 420,43 Q470,43 470,95 Q470,147 420,147 Q370,147 370,95 M375,95 L465,95"/></g>
+    <g stroke="#2563eb" stroke-width="5" stroke-linecap="round"><path d="M45,80 l10,22 M50,78 l10,22"/><path d="M70,85 l-6,24 M75,86 l-6,24"/></g>
+    <g stroke="#dc2626" stroke-width="5" stroke-linecap="round"><path d="M40,105 l18,8 M41,111 l18,8"/></g>
+    <g stroke="#c4b5fd" stroke-width="1.2"><path d="M130,95 L180,75 M130,95 L180,95 M130,95 L180,115 M230,95 L180,75 M230,95 L180,95 M230,95 L180,115"/></g>
+    <g stroke="#2563eb" stroke-width="5" stroke-linecap="round"><path d="M176,68 l0,14 M184,68 l0,14"/><path d="M176,108 l0,14 M184,108 l0,14"/></g>
+    <g stroke="#dc2626" stroke-width="5" stroke-linecap="round"><path d="M176,88 l0,14 M184,88 l0,14"/></g>
+    <g stroke="#2563eb" stroke-width="5" stroke-linecap="round"><path d="M262,70 l0,14 M338,70 l0,14 M262,104 l0,14 M338,104 l0,14"/></g>
+    <g stroke="#dc2626" stroke-width="5" stroke-linecap="round"><path d="M270,88 l0,14 M330,88 l0,14"/></g>
+    <circle cx="420" cy="68" r="17" fill="#ede9fe" stroke="#7c3aed"/><circle cx="420" cy="122" r="17" fill="#ede9fe" stroke="#7c3aed"/>
+    <g font-size="12" text-anchor="middle" fill="#374151">
+      <text x="60" y="166">染色體濃縮、</text><text x="60" y="182">核膜消失</text>
+      <text x="180" y="166">排成一列在</text><text x="180" y="182">中央（赤道板）</text>
+      <text x="300" y="166">姊妹染色分體</text><text x="300" y="182">被拉向兩極</text>
+      <text x="420" y="166">形成兩個核，</text><text x="420" y="182">細胞質分開</text></g>
+  </svg><figcaption>有絲分裂四期。每條染色體複製成兩條姊妹染色分體，最後平均分到兩個子細胞，所以兩個子細胞的 DNA 和母細胞完全相同。</figcaption></figure>
+  <p><b>有絲分裂</b> <i class="en-term">mitosis</i> 是體細胞的分裂方式，把複製好的染色體平均分給兩個子細胞，結果兩個子細胞和母細胞一樣，都是<b>雙套</b> <i class="en-term">diploid, 2n</i>（人類 46 條染色體＝23 對）。過程分為：</p>
+  <div class="tblwrap"><table>
+    <tr><th>時期</th><th>發生什麼</th></tr>
+    <tr><td><b>前期</b> prophase</td><td>染色質濃縮成看得見的染色體（每條含兩條姊妹染色分體）；核膜與核仁消失；兩個<b>中心粒</b> <i class="en-term">centrioles</i> 移向兩極，長出微管形成<b>紡錘體</b> <i class="en-term">spindle</i></td></tr>
+    <tr><td><b>中期</b> metaphase</td><td>紡錘絲接上每條染色體的中節，染色體<b>排成一列</b>在細胞中央（赤道板）</td></tr>
+    <tr><td><b>後期</b> anaphase</td><td>中節分開，<b>姊妹染色分體分離</b>，被紡錘絲拉向兩極</td></tr>
+    <tr><td><b>末期</b> telophase</td><td>染色體到達兩極、解開成染色質；核膜重新形成；同時進行<b>細胞質分裂</b> <i class="en-term">cytokinesis</i>，細胞膜向內收縮把細胞分成兩個</td></tr>
+  </table></div>
+  <p>身體部分組織能經由增加細胞數量（<b>增生</b> hyperplasia）或增大細胞（<b>肥大</b> hypertrophy）來適應：例如肌力訓練主要使肌纖維肥大（第 12 章）。</p>
+
+  <h3 id="h26">減數分裂 Meiosis</h3>
+  <p class="core">減數分裂只發生在生殖細胞：DNA 複製一次、分裂兩次 → 四個單套（23 條）配子；第一次分裂同源染色體分開並互換片段，增加遺傳多樣性。</p>
+  <p><b>減數分裂</b> <i class="en-term">meiosis</i> 只在睪丸與卵巢中製造配子（精子、卵子）時發生，目的是把染色體數目<b>減半</b>成<b>單套</b> <i class="en-term">haploid, n＝23</i>，使受精後恢復 46 條。</p>
+  <ul class="dots">
+    <li>DNA 複製<b>一次</b>，但連續分裂<b>兩次</b>。</li>
+    <li><b>第一次減數分裂</b>：成對的<b>同源染色體</b> <i class="en-term">homologous chromosomes</i>（一條來自父親、一條來自母親）配對，並在相同位置交換片段，稱為<b>互換（交換）</b> <i class="en-term">crossing-over</i>；接著同源染色體分開到兩個細胞 → 染色體數減半。</li>
+    <li><b>第二次減數分裂</b>：類似有絲分裂，姊妹染色分體分開。</li>
+    <li>最後得到<b>四個單套細胞</b>，彼此遺傳組合都不同（互換＋同源染色體隨機分配）。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>有絲分裂</th><th>減數分裂</th></tr>
+    <tr><td>發生在</td><td>體細胞</td><td>生殖細胞（睪丸、卵巢）</td></tr>
+    <tr><td>分裂次數</td><td>1 次</td><td>2 次</td></tr>
+    <tr><td>子細胞數</td><td>2 個</td><td>4 個（女性只有 1 個成為卵子，其餘成為極體）</td></tr>
+    <tr><td>染色體數</td><td>雙套 2n＝46（和母細胞同）</td><td>單套 n＝23（減半）</td></tr>
+    <tr><td>遺傳組成</td><td>和母細胞相同</td><td>各不相同（互換、隨機分配）</td></tr>
+    <tr><td>目的</td><td>生長、更新、修復</td><td>產生配子、有性生殖</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">易考：</b>同源染色體分開在<b>第一次</b>減數分裂；姊妹染色分體分開在<b>第二次</b>減數分裂（和有絲分裂的後期）。分離失敗（不分離）會造成染色體數目異常，如唐氏症（21 號染色體三條）。</div>
+
+  <h3 id="h27">表觀遺傳 Epigenetic Inheritance</h3>
+  <p class="core">表觀遺傳＝不改變 DNA 序列、而改變基因開關的可遺傳變化（DNA 甲基化、組蛋白修飾、microRNA）；會受營養與環境影響。</p>
+  <p><b>表觀遺傳</b> <i class="en-term">epigenetics</i> 指<b>不改變 DNA 序列</b>，卻能改變基因是否表現、而且可以在細胞分裂時傳給子細胞（有時甚至傳給下一代）的變化。主要機制：</p>
+  <ul class="dots">
+    <li><b>DNA 甲基化</b>：在胞嘧啶上加甲基，通常使基因關閉。</li>
+    <li><b>組蛋白修飾</b>：乙醯化使染色質鬆開、基因可表現；去乙醯化則關閉。</li>
+    <li><b>非編碼 RNA</b>：如 microRNA。</li>
+  </ul>
+  <p>例如<b>基因銘印</b> <i class="en-term">genomic imprinting</i>：某些基因只表現來自父親或母親的那一份，另一份被甲基化關閉。表觀遺傳也解釋了同卵雙胞胎隨年齡出現差異的部分原因。</p>
+  <div class="nut"><b class="t">營養連結：</b>DNA 甲基化需要的甲基來自飲食中的<b>葉酸、維生素 B12、膽鹼、甲硫胺酸</b>。研究顯示懷孕期間母親的營養狀態（如飢荒）會改變胎兒的表觀遺傳標記，影響成年後罹患肥胖、糖尿病、心血管疾病的風險，這是「健康與疾病的發育起源（DOHaD）」的概念。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>DNA 複製：解旋酶打開、DNA 聚合酶依互補配對合成（5'→3'）、連接酶接合；半保留複製；有校對功能。</li>
+      <li>細胞週期：G1（生長）→ S（複製 DNA）→ G2 → M（有絲分裂＋細胞質分裂）；G0 休止（神經元、心肌）。</li>
+      <li>調控：週期素／CDK、檢查點；致癌基因（油門）、抑癌基因 p53（煞車）；凋亡（有秩序、不發炎）vs 壞死（發炎）；端粒每次分裂變短。</li>
+      <li>有絲分裂：前、中、後、末期 → 2 個相同的雙套細胞。</li>
+      <li>減數分裂：複製一次、分裂兩次 → 4 個單套配子；第一次分裂同源染色體配對、互換、分離。</li>
+      <li>表觀遺傳：DNA 甲基化、組蛋白修飾、miRNA；不改變序列；受營養（葉酸、B12）影響。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>半保留複製</td><td>semiconservative replication</td><td>DNA 聚合酶</td><td>DNA polymerase</td></tr>
+      <tr><td>解旋酶</td><td>helicase</td><td>細胞週期／間期</td><td>cell cycle / interphase</td></tr>
+      <tr><td>姊妹染色分體</td><td>sister chromatids</td><td>中節</td><td>centromere</td></tr>
+      <tr><td>週期素</td><td>cyclin</td><td>致癌基因／抑癌基因</td><td>oncogene / tumor suppressor gene</td></tr>
+      <tr><td>細胞凋亡／壞死</td><td>apoptosis / necrosis</td><td>端粒</td><td>telomere</td></tr>
+      <tr><td>有絲分裂</td><td>mitosis</td><td>前／中／後／末期</td><td>prophase / metaphase / anaphase / telophase</td></tr>
+      <tr><td>紡錘體／中心粒</td><td>spindle / centriole</td><td>細胞質分裂</td><td>cytokinesis</td></tr>
+      <tr><td>減數分裂</td><td>meiosis</td><td>雙套／單套</td><td>diploid / haploid</td></tr>
+      <tr><td>同源染色體</td><td>homologous chromosomes</td><td>互換</td><td>crossing-over</td></tr>
+      <tr><td>表觀遺傳</td><td>epigenetics</td><td>基因銘印</td><td>genomic imprinting</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s6">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>細胞膜</td><td>流體鑲嵌模型：磷脂雙層＋膽固醇＋蛋白質＋醣萼</td></tr>
+    <tr><td>進出細胞</td><td>吞噬（偽足）、胞飲、受體媒介胞吞（LDL）、胞吐（分泌）</td></tr>
+    <tr><td>表面構造</td><td>纖毛（9＋2、擺動）、鞭毛（精子）、微絨毛（不動、增加面積）</td></tr>
+    <tr><td>胞器</td><td>粒線體＝ATP；核糖體 40S＋60S＝80S；粗糙 ER＝分泌蛋白；平滑 ER＝脂質、解毒、Ca²⁺；高基氏體＝修飾包裝；溶體＝分解；過氧化體＝H₂O₂</td></tr>
+    <tr><td>染色質</td><td>DNA＋組蛋白；真染色質可表現、異染色質關閉</td></tr>
+    <tr><td>轉錄</td><td>RNA 聚合酶＋啟動子＋轉錄因子；剪接去內含子留外顯子</td></tr>
+    <tr><td>轉譯</td><td>密碼子 3 鹼基；AUG 起始；UAA/UAG/UGA 終止；tRNA 反密碼子</td></tr>
+    <tr><td>分泌路線</td><td>訊號胜肽 → 粗糙 ER → 高基氏體 → 分泌囊泡 → 胞吐</td></tr>
+    <tr><td>蛋白質分解</td><td>泛素 → 蛋白酶體</td></tr>
+    <tr><td>細胞週期</td><td>G1 → S（DNA 複製）→ G2 → M；G0；p53</td></tr>
+    <tr><td>分裂</td><td>有絲：2 個 2n 相同；減數：4 個 n 不同（同源染色體互換）</td></tr>
+    <tr><td>表觀遺傳</td><td>DNA 甲基化、組蛋白乙醯化；不改變序列</td></tr>
+  </table></div>
+  <h3 id="h28">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 畫出流體鑲嵌模型並說出膜蛋白的四種功能？</li>
+    <li>□ 比較吞噬、胞飲、受體媒介胞吞與胞吐？</li>
+    <li>□ 說出每個胞器的一句話功能？</li>
+    <li>□ 用「胰島素」說明從基因到分泌的全部步驟？</li>
+    <li>□ 解釋外顯子與內含子、密碼子與反密碼子？</li>
+    <li>□ 畫出細胞週期並說出 S 期做什麼？</li>
+    <li>□ 比較有絲分裂與減數分裂的五個差異？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 3 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"細胞膜的「流體鑲嵌模型」中，「鑲嵌」指的是？",o:["膽固醇嵌在膜外","蛋白質像馬賽克一樣鑲嵌在磷脂雙層中","醣類嵌在膜內側","DNA 嵌在膜上"],a:1,
+  e:"「流體」＝磷脂可流動；「<b>鑲嵌</b>」＝各種蛋白質鑲嵌在磷脂雙層中，像馬賽克。"},
+ {q:"血中 LDL 膽固醇進入細胞的方式是？",o:["簡單擴散","吞噬作用","受體媒介胞吞作用","胞吐作用"],a:2,
+  e:"LDL 先與細胞膜上的 <b>LDL 受體</b>結合，再被包入細胞，屬於受體媒介胞吞。受體缺陷造成家族性高膽固醇血症。"},
+ {q:"下列何者不會擺動，主要功能是增加吸收表面積？",o:["纖毛","鞭毛","微絨毛","偽足"],a:2,
+  e:"<b>微絨毛</b>由肌動蛋白支撐、不會擺動，在小腸形成刷狀緣增加吸收面積；纖毛和鞭毛有 9＋2 微管、會動。"},
+ {q:"負責合成類固醇激素、並在肝臟參與解毒的胞器是？",o:["粗糙內質網","平滑內質網","高基氏體","溶體"],a:1,
+  e:"<b>平滑內質網</b>：合成脂質與類固醇、肝臟解毒、儲存 Ca²⁺（肌肉的肌漿網）。粗糙內質網做分泌蛋白。"},
+ {q:"人類細胞質中的核糖體由哪兩個次單元組成？",o:["30S 與 50S","40S 與 60S","50S 與 70S","40S 與 80S"],a:1,
+  e:"人類（真核）細胞質核糖體＝<b>40S＋60S＝80S</b>；細菌是 30S＋50S＝70S。"},
+ {q:"內部為酸性、含水解酵素，負責分解老舊胞器（自噬作用）的是？",o:["過氧化體","粒線體","溶體","核仁"],a:2,
+  e:"<b>溶體</b>是細胞的回收站；過氧化體則以過氧化氫酶分解 H₂O₂。"},
+ {q:"關於粒線體，下列敘述何者錯誤？",o:["有雙層膜，內膜摺成嵴","含有自己的 DNA","粒線體 DNA 主要由父親遺傳","是產生 ATP 的主要場所"],a:2,
+  e:"受精時精子的粒線體不保留，粒線體 DNA 是<b>母系遺傳</b>。"},
+ {q:"前驅 mRNA 加工時，被剪除的片段是？",o:["外顯子","內含子","啟動子","密碼子"],a:1,
+  e:"剪接去除<b>內含子</b>、接起外顯子；同一前驅 mRNA 可選擇性剪接成不同蛋白質。"},
+ {q:"mRNA 上的密碼子 AUG 代表什麼？",o:["終止","起始並代表甲硫胺酸","代表色胺酸","不代表任何胺基酸"],a:1,
+  e:"<b>AUG＝起始密碼子＝甲硫胺酸</b>；UAA、UAG、UGA 是終止密碼子。"},
+ {q:"一個要分泌到細胞外的蛋白質，正確的運送順序是？",o:["高基氏體 → 粗糙內質網 → 分泌囊泡","粗糙內質網 → 高基氏體 → 分泌囊泡 → 胞吐","平滑內質網 → 溶體 → 胞吐","游離核糖體 → 細胞核 → 胞吐"],a:1,
+  e:"訊號胜肽引導至<b>粗糙內質網</b> → 運輸囊泡 → <b>高基氏體</b>修飾分類 → <b>分泌囊泡</b> → 胞吐。"},
+ {q:"臨床上測血中 C 胜肽（C-peptide）可用來評估？",o:["肝功能","病人自己 β 細胞分泌胰島素的能力","腎絲球過濾率","甲狀腺功能"],a:1,
+  e:"胰島素原切成胰島素時等量釋出 <b>C 胜肽</b>，注射的胰島素不含 C 胜肽，所以可估計內生性胰島素分泌。"},
+ {q:"細胞週期中進行 DNA 複製的是哪一期？",o:["G1 期","S 期","G2 期","M 期"],a:1,
+  e:"<b>S（synthesis）期</b>複製 DNA，每條染色體成為兩條姊妹染色分體。"},
+ {q:"有絲分裂中，姊妹染色分體分開並移向兩極是在？",o:["前期","中期","後期","末期"],a:2,
+  e:"<b>後期</b>：中節分開，姊妹染色分體被紡錘絲拉向兩極。中期是排在中央。"},
+ {q:"下列關於減數分裂的敘述，何者正確？",o:["發生在所有體細胞","產生兩個雙套細胞","同源染色體在第一次減數分裂配對並互換","子細胞與母細胞遺傳組成完全相同"],a:2,
+  e:"減數分裂只在生殖細胞，產生 4 個單套細胞；<b>第一次分裂</b>同源染色體配對、互換、分離，增加遺傳多樣性。"},
+ {q:"「表觀遺傳」的特點是？",o:["改變 DNA 鹼基序列","不改變 DNA 序列，卻改變基因表現且可遺傳","只發生在粒線體","與營養無關"],a:1,
+  e:"表觀遺傳靠 DNA 甲基化、組蛋白修飾、miRNA，<b>不改變序列</b>；甲基來源需葉酸、B12 等營養素。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

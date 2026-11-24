@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 8 章 中樞神經系統</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="8">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 8 章　中樞神經系統</h1>
+  <div class="en">Chapter 8 The Central Nervous System（課本 p.217–256）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">8.1 腦的結構組織</a>
+  <a class="sub" href="#h1">中樞神經系統的功能</a>
+  <a class="sub" href="#h2">胚胎發育 Embryonic Development</a>
+  <a class="sub" href="#h3">腦室與腦脊髓液 Ventricles and Cerebrospinal Fluid</a>
+  <a class="sub" href="#h4">灰質與白質 Gray and White Matter</a>
+  <a class="sub" href="#h5">神經新生 Neurogenesis</a>
+  <a href="#s2">8.2 大腦</a>
+  <a class="sub" href="#h6">大腦皮質 Cerebral Cortex</a>
+  <a class="sub" href="#h7">基底核 Basal Nuclei</a>
+  <a class="sub" href="#h8">大腦側化 Cerebral Lateralization</a>
+  <a class="sub" href="#h9">語言 Language</a>
+  <a class="sub" href="#h10">情緒與動機 Emotion and Motivation</a>
+  <a class="sub" href="#h11">記憶 Memory</a>
+  <a href="#s3">8.3 間腦</a>
+  <a class="sub" href="#h12">視丘與上視丘 Thalamus and Epithalamus</a>
+  <a class="sub" href="#h13">下視丘與腦垂腺 Hypothalamus and Pituitary Gland</a>
+  <a href="#s4">8.4 中腦與後腦</a>
+  <a class="sub" href="#h14">中腦 Midbrain</a>
+  <a class="sub" href="#h15">後腦 Hindbrain</a>
+  <a class="sub" href="#h16">網狀活化系統 Reticular Activating System</a>
+  <a href="#s5">8.5 脊髓神經徑</a>
+  <a class="sub" href="#h17">脊髓的構造</a>
+  <a class="sub" href="#h18">上行徑 Ascending Tracts</a>
+  <a class="sub" href="#h19">下行徑 Descending Tracts</a>
+  <a href="#s6">8.6 腦神經與脊神經</a>
+  <a class="sub" href="#h20">腦神經 Cranial Nerves</a>
+  <a class="sub" href="#h21">脊神經 Spinal Nerves</a>
+  <a class="sub" href="#h22">反射弧 Reflex Arc</a>
+  <a href="#s7">本章重點整理</a>
+  <a class="sub" href="#h23">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 7 章講單一神經元與突觸；這一章把它們組成<b>腦與脊髓</b>：<span class="key">中樞神經系統各區分別負責什麼（思考、語言、記憶、情緒、恆定、運動協調、維生），訊息怎麼沿脊髓上下傳遞，以及最簡單的神經迴路——反射。</span>章節從上（大腦）往下（脊髓、周邊神經）排列。</div>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <path d="M60,170 C40,90 110,30 220,30 C330,30 410,70 420,140 C430,190 400,210 360,215 L330,215 C320,230 300,240 280,232 L200,232 C150,240 90,225 60,170 Z" fill="#fde68a" stroke="#b45309" stroke-width="2.5"/>
+    <path d="M200,30 C205,80 220,120 230,150" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="4 3"/>
+    <path d="M120,150 C170,140 230,150 300,170" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="4 3"/>
+    <path d="M330,60 C320,120 330,180 340,215" fill="none" stroke="#b45309" stroke-width="2" stroke-dasharray="4 3"/>
+    <text x="120" y="100" font-size="15" text-anchor="middle" font-weight="bold" fill="#1d4ed8">額葉</text><text x="120" y="118" font-size="11" text-anchor="middle">運動・計畫・人格</text>
+    <text x="265" y="80" font-size="15" text-anchor="middle" font-weight="bold" fill="#15803d">頂葉</text><text x="265" y="98" font-size="11" text-anchor="middle">體感覺</text>
+    <text x="380" y="130" font-size="15" text-anchor="middle" font-weight="bold" fill="#be123c">枕葉</text><text x="380" y="148" font-size="11" text-anchor="middle">視覺</text>
+    <text x="220" y="195" font-size="15" text-anchor="middle" font-weight="bold" fill="#7c3aed">顳葉</text><text x="220" y="213" font-size="11" text-anchor="middle">聽覺・記憶・語言理解</text>
+    <ellipse cx="350" cy="248" rx="58" ry="28" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/>
+    <g stroke="#e11d48" stroke-width="1"><path d="M300,240 q50,-10 100,0 M298,252 q52,-10 104,0 M305,262 q45,-8 90,0"/></g>
+    <text x="440" y="214" font-size="14" font-weight="bold" fill="#be123c" text-anchor="middle">小腦</text><text x="440" y="230" font-size="11" fill="#be123c" text-anchor="middle">協調・平衡</text>
+    <path d="M250,232 L262,295 L285,295 L282,232 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/>
+    <text x="232" y="270" font-size="14" font-weight="bold" fill="#6d28d9" text-anchor="end">腦幹</text><text x="232" y="286" font-size="11" fill="#6d28d9" text-anchor="end">呼吸・心跳・意識</text>
+    <text x="215" y="22" font-size="11" fill="#92400e">中央溝</text><text x="70" y="150" font-size="11" fill="#92400e">外側溝</text>
+  </svg><figcaption>大腦四個葉與小腦、腦幹的位置（左側面觀）。中央溝前面是額葉（運動）、後面是頂葉（感覺）。</figcaption></figure>
+  <div class="path">
+    <div class="step"><span class="sn">8.1</span><div><b>腦的結構組織</b><br><span class="sq">腦怎麼從胚胎神經管發育出五個區域；腦室與腦脊髓液；灰質與白質。</span></div></div>
+    <div class="arr">↓ 由最大、最高級的部分開始</div>
+    <div class="step"><span class="sn">8.2</span><div><b>大腦</b><br><span class="sq">大腦皮質分區、基底核、左右半球側化、語言區、邊緣系統（情緒）、記憶。</span></div></div>
+    <div class="arr">↓ 往下一層：大腦深處的轉運站與恆定總部</div>
+    <div class="step"><span class="sn">8.3</span><div><b>間腦</b><br><span class="sq">視丘（感覺轉運站）、上視丘（松果腺）、下視丘（恆定中樞、控制腦垂腺）。</span></div></div>
+    <div class="arr">↓ 再往下：維持生命的基本功能</div>
+    <div class="step"><span class="sn">8.4</span><div><b>中腦與後腦</b><br><span class="sq">中腦、橋腦、延腦（呼吸、心血管中樞）、小腦；網狀活化系統（清醒）。</span></div></div>
+    <div class="arr">↓ 腦和身體之間的高速公路</div>
+    <div class="step"><span class="sn">8.5</span><div><b>脊髓神經徑</b><br><span class="sq">上行徑（感覺）與下行徑（運動：錐體徑、錐體外徑），以及在哪裡交叉。</span></div></div>
+    <div class="arr">↓ 從中樞延伸到全身的「電線」</div>
+    <div class="step"><span class="sn">8.6</span><div><b>腦神經與脊神經</b><br><span class="sq">12 對腦神經、31 對脊神經、反射弧。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 8.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">8.1</span>腦的結構組織</h2>
+  <div class="en">Structural Organization of the Brain</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>中樞神經系統的功能、腦從胚胎<b>神經管</b>發育成<b>五個區域</b>、<b>腦室與腦脊髓液</b>、灰質白質，以及成人的<b>神經新生</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>腦的分區名稱（端腦、間腦、中腦、後腦、髓腦）就是後面各節的架構；腦脊髓液則是理解腦部保護與腦部疾病的基礎。</div></div>
+  <div class="oneline">神經管前端發育成前腦、中腦、後腦三個囊，再分成端腦（大腦）、間腦（視丘、下視丘）、中腦、後腦（橋腦、小腦）、髓腦（延腦）五區；腦室內的腦脊髓液由脈絡叢產生，保護並滋養腦。</div>
+
+  <h3 id="h1">中樞神經系統的功能</h3>
+  <p class="core">CNS＝腦＋脊髓：接收感覺輸入、指揮運動輸出、聯絡神經元整合；維持恆定；高階功能（學習、記憶、情緒、自我意識）。</p>
+  <p>CNS 接收感覺神經元的輸入，經大量<b>聯絡神經元</b>整合後，指揮運動神經元的活動，以維持內在環境的恆定並因應外界環境。此外，腦還負責<b>學習、記憶、情感、知覺、自我意識</b>等高階功能。成人腦約 <b>1.5 公斤</b>，含約 <b>1000 億</b>個神經元，卻用掉心輸出量約 <b>15%</b> 的血流、全身約 20% 的耗氧（老師強調）。</p>
+
+  <h3 id="h2">胚胎發育 Embryonic Development</h3>
+  <p class="core">外胚層 → 神經管（CNS）＋神經嵴（PNS 神經節等）；第 4 週三個囊（前腦、中腦、菱腦）；第 5 週五個區域。</p>
+  <p>胚胎<b>外胚層</b>形成<b>神經管</b> <i class="en-term">neural tube</i>（將來成為 CNS）與<b>神經嵴</b> <i class="en-term">neural crest</i>（成為周邊神經節、腎上腺髓質等）。神經管前端膨大成腦，中空的管腔成為<b>腦室</b>與脊髓的<b>中央管</b>。</p>
+  <div class="tblwrap"><table>
+    <tr><th>第 4 週（三個囊）</th><th>第 5 週（五個區域）</th><th>成人的構造</th></tr>
+    <tr><td rowspan="2"><b>前腦</b> prosencephalon</td><td><b>端腦</b> telencephalon</td><td>大腦半球（皮質、基底核）</td></tr>
+    <tr><td><b>間腦</b> diencephalon</td><td>視丘、下視丘、上視丘</td></tr>
+    <tr><td><b>中腦</b> mesencephalon</td><td><b>中腦</b> mesencephalon</td><td>中腦（維持不變）</td></tr>
+    <tr><td rowspan="2"><b>菱腦（後腦）</b> rhombencephalon</td><td><b>後腦</b> metencephalon</td><td>橋腦、小腦</td></tr>
+    <tr><td><b>髓腦</b> myelencephalon</td><td>延腦</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>神經管在懷孕第 3–4 週閉合，那時很多人還不知道自己懷孕。<b>葉酸</b>不足會增加<b>神經管缺陷</b>（脊柱裂、無腦症）的風險，所以建議準備懷孕的婦女在孕前就開始每日補充葉酸。</div>
+
+  <h3 id="h3">腦室與腦脊髓液 Ventricles and Cerebrospinal Fluid</h3>
+  <p class="core">腦脊髓液（CSF）由腦室的脈絡叢產生 → 腦室 → 蛛網膜下腔 → 蛛網膜絨毛回收入靜脈；約 140–200 mL，每天更新 3–5 次；保護、緩衝、運送養分與廢物。</p>
+  <p>腦內有四個相連的<b>腦室</b> <i class="en-term">ventricles</i>（兩個側腦室、第三腦室、第四腦室），與脊髓中央管相通，裡面充滿<b>腦脊髓液</b> <i class="en-term">cerebrospinal fluid, CSF</i>。</p>
+  <ul class="dots">
+    <li><b>生成</b>：腦室中的<b>脈絡叢</b> <i class="en-term">choroid plexus</i>（微血管＋室管膜細胞）由血漿經過濾與主動運輸產生。</li>
+    <li><b>循環</b>：腦室 → 第四腦室的孔 → 包圍腦與脊髓的<b>蛛網膜下腔</b> → 經<b>蛛網膜絨毛</b>回收進入靜脈竇。</li>
+    <li><b>量</b>：約 140–200 mL，每天更新 3–5 次，維持顱內壓約 5–15 mmHg。</li>
+    <li><b>功能</b>：讓腦「浮」在液體中，緩衝撞擊、減輕重量；運送養分、清除代謝廢物。</li>
+  </ul>
+  <p>CSF 回流受阻時，腦室擴大、壓迫腦組織，稱為<b>水腦症</b>。臨床上可做<b>腰椎穿刺</b>抽取 CSF 檢查感染（如腦膜炎）。</p>
+
+  <h3 id="h4">灰質與白質 Gray and White Matter</h3>
+  <p class="core">灰質＝神經元細胞本體＋樹突（大腦皮質、深部神經核）；白質＝有髓鞘的軸突（在皮質下方）。</p>
+  <p><b>灰質</b>由神經元細胞本體、樹突與無髓鞘軸突組成，位於大腦表面的<b>皮質</b>與腦深處的<b>神經核</b>；<b>白質</b>由有髓鞘的軸突組成，位在皮質下方，負責連接各區。脊髓則相反：<b>灰質在內、白質在外</b>（8.5）。</p>
+
+  <h3 id="h5">神經新生 Neurogenesis</h3>
+  <p class="core">成人腦仍有神經幹細胞，主要在側腦室旁的腦室下區與海馬迴的齒狀回，能生成新的神經元。</p>
+  <p>過去認為成人腦不會產生新的神經元，現在知道仍有少量<b>神經幹細胞</b>，主要在：①<b>腦室下區</b>（側腦室旁；人類的新神經元移至紋狀體）；②<b>海馬迴的齒狀回</b>（與學習記憶有關）。運動、學習與豐富環境能促進神經新生，壓力則會抑制。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>腦約 1.5 kg、1000 億神經元、用掉約 15% 心輸出量。</li>
+      <li>外胚層 → 神經管（CNS）＋神經嵴（PNS 神經節）；葉酸預防神經管缺陷。</li>
+      <li>五區：端腦（大腦）、間腦（視丘、下視丘）、中腦、後腦（橋腦、小腦）、髓腦（延腦）。</li>
+      <li>CSF：脈絡叢產生 → 腦室 → 蛛網膜下腔 → 蛛網膜絨毛回收；140–200 mL、每天更新 3–5 次。</li>
+      <li>灰質（細胞本體）在皮質與神經核；白質（髓鞘軸突）在下方；脊髓相反。</li>
+      <li>成人神經新生：腦室下區、海馬迴齒狀回。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>神經管／神經嵴</td><td>neural tube / neural crest</td><td>端腦／間腦</td><td>telencephalon / diencephalon</td></tr>
+      <tr><td>中腦</td><td>mesencephalon</td><td>後腦／髓腦</td><td>metencephalon / myelencephalon</td></tr>
+      <tr><td>腦室</td><td>ventricle</td><td>腦脊髓液</td><td>cerebrospinal fluid (CSF)</td></tr>
+      <tr><td>脈絡叢</td><td>choroid plexus</td><td>蛛網膜下腔</td><td>subarachnoid space</td></tr>
+      <tr><td>水腦症</td><td>hydrocephalus</td><td>神經新生</td><td>neurogenesis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 8.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">8.2</span>大腦</h2>
+  <div class="en">Cerebrum</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>大腦皮質的分葉與功能區（<b>中央前迴</b>運動、<b>中央後迴</b>體感覺）、<b>基底核</b>、左右<b>半球側化</b>、<b>語言區</b>（布洛卡區、威尼克區）、<b>邊緣系統</b>與情緒動機、<b>記憶</b>的種類與形成。</div><div><span class="lt lt2">為什麼接在 8.1 後面？</span>大腦是腦最大的部分（約占腦重 80%），負責我們最熟悉的心智功能。先懂它的分工，後面的下視丘、小腦才知道是在「幫誰」做事。</div></div>
+  <div class="oneline">大腦皮質分四葉：額葉（運動、計畫）、頂葉（體感覺）、顳葉（聽覺、記憶）、枕葉（視覺）；左右半球功能不完全相同（多數人左腦主導語言）；邊緣系統負責情緒與動機；海馬迴把短期記憶轉成長期記憶。</div>
+  <div class="think">中風的病人如果右手右腳癱瘓，還常常出現說話困難，為什麼？</div>
+
+  <h3 id="h6">大腦皮質 Cerebral Cortex</h3>
+  <p class="core">左右兩半球以胼胝體相連；皮質有腦迴與腦溝；中央前迴＝初級運動區、中央後迴＝初級體感覺區（身體各部依比例對應，臉與手特別大）；每側半球控制對側身體。</p>
+  <p><b>大腦</b> <i class="en-term">cerebrum</i> 分為左右兩個<b>大腦半球</b>，由一大束白質<b>胼胝體</b> <i class="en-term">corpus callosum</i> 連接。表面的灰質叫<b>大腦皮質</b> <i class="en-term">cerebral cortex</i>，厚 2–4 mm，有許多隆起（<b>腦迴</b> gyri）與凹溝（<b>腦溝</b> sulci），增加表面積。</p>
+  <div class="tblwrap"><table>
+    <tr><th>腦葉</th><th>主要功能</th></tr>
+    <tr><td><b>額葉</b> frontal lobe</td><td><b>中央前迴</b>＝初級<b>運動</b>區；前額葉：計畫、判斷、決策、人格、工作記憶；左側有<b>布洛卡區</b>（說話）</td></tr>
+    <tr><td><b>頂葉</b> parietal lobe</td><td><b>中央後迴</b>＝初級<b>體感覺</b>區（觸、壓、溫、痛、本體感覺）；空間感</td></tr>
+    <tr><td><b>顳葉</b> temporal lobe</td><td><b>聽覺</b>、嗅覺；語言理解（<b>威尼克區</b>）；記憶（內側有海馬迴）</td></tr>
+    <tr><td><b>枕葉</b> occipital lobe</td><td><b>視覺</b></td></tr>
+    <tr><td>腦島 insula</td><td>藏在外側溝深處；內臟感覺、味覺、情緒的身體感受</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#1d4ed8">中央前迴：運動</text>
+    <text x="360" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#15803d">中央後迴：體感覺</text>
+    <path d="M20,190 A100,100 0 0 1 220,190" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M260,190 A100,100 0 0 1 460,190" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+    <g font-size="12" text-anchor="middle">
+      <text x="45" y="170">臉</text><text x="62" y="128" font-size="18" font-weight="bold">手</text><text x="100" y="105">手臂</text><text x="140" y="100">軀幹</text><text x="175" y="118">腿</text><text x="198" y="155">腳</text>
+      <text x="285" y="168" font-size="17" font-weight="bold">臉唇</text><text x="302" y="126" font-size="18" font-weight="bold">手</text><text x="340" y="104">手臂</text><text x="380" y="100">軀幹</text><text x="415" y="118">腿</text><text x="440" y="155">腳</text></g>
+    <text x="240" y="212" font-size="12" text-anchor="middle">臉與手占的面積特別大 → 控制與感覺特別精細（小矮人圖 homunculus）</text>
+  </svg><figcaption>運動與體感覺皮質上，身體各部位按順序排列，但面積和精細程度成正比，不是和身體大小成正比。左半球管右側身體，右半球管左側。</figcaption></figure>
+  <p>皮質上身體各部位的排列像一個比例扭曲的「小矮人」（<b>homunculus</b>）：<b>手、臉、嘴唇</b>占的區域特別大，因為那裡需要精細的運動控制與敏銳的感覺。由於運動與感覺神經徑在腦幹或脊髓<b>交叉</b>，<span class="key">每側大腦半球控制並感覺對側的身體</span>。</p>
+  <p>皮質還有大面積的<b>聯合區</b>，負責整合資訊、產生知覺與複雜行為。研究腦功能的方法包括<b>腦電圖</b>（EEG，記錄皮質的電活動，用於睡眠研究與癲癇）、功能性磁振造影（fMRI）與正子斷層掃描（PET），後兩者是看活化區域的血流或葡萄糖代謝增加。</p>
+
+  <h3 id="h7">基底核 Basal Nuclei</h3>
+  <p class="core">基底核（基底神經節）＝大腦深部的灰質團（尾核、殼核、蒼白球；尾核＋殼核＝紋狀體）；參與動作的啟動與調控；帕金森氏症、杭丁頓氏舞蹈症。</p>
+  <p><b>基底核</b> <i class="en-term">basal nuclei（basal ganglia）</i> 是埋在大腦白質深處的灰質團，包括<b>尾核</b>、<b>殼核</b>（兩者合稱<b>紋狀體</b>）與<b>蒼白球</b>，與中腦的黑質相連。它們和皮質、視丘形成迴路，負責<b>啟動動作、抑制不需要的動作</b>、調節肌肉張力。</p>
+  <ul class="dots">
+    <li><b>帕金森氏症</b>：黑質到紋狀體的多巴胺不足 → 動作遲緩、僵硬、靜止型顫抖（第 7 章）。</li>
+    <li><b>杭丁頓氏舞蹈症</b>：huntingtin 基因的 CAG 重複過多（簡報中寫「缺少基因」，已更正），紋狀體神經元退化 → 不自主的舞蹈樣動作、失智。</li>
+  </ul>
+
+  <h3 id="h8">大腦側化 Cerebral Lateralization</h3>
+  <p class="core">左右半球功能不對稱：多數人左半球主導語言、分析、數學、邏輯；右半球主導空間感、臉部辨識、音樂、情緒與非語言溝通；以胼胝體交流（裂腦研究）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <path d="M235,20 C150,20 70,50 60,110 C50,170 130,195 235,195 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <path d="M245,20 C330,20 410,50 420,110 C430,170 350,195 245,195 Z" fill="#fce7f3" stroke="#db2777" stroke-width="2.5"/>
+    <rect x="232" y="60" width="16" height="96" rx="6" fill="#fde68a" stroke="#b45309"/><text x="240" y="176" font-size="11" text-anchor="middle" fill="#92400e">胼胝體</text>
+    <text x="145" y="50" font-size="16" text-anchor="middle" font-weight="bold" fill="#1d4ed8">左半球</text>
+    <g font-size="13" text-anchor="middle"><text x="145" y="78">語言（說、讀、寫）</text><text x="145" y="98">分析、邏輯</text><text x="145" y="118">數學、計算</text><text x="145" y="138">控制右側身體</text></g>
+    <text x="335" y="50" font-size="16" text-anchor="middle" font-weight="bold" fill="#be185d">右半球</text>
+    <g font-size="13" text-anchor="middle"><text x="335" y="78">空間、方向感</text><text x="335" y="98">臉孔辨識</text><text x="335" y="118">音樂、藝術</text><text x="335" y="138">情緒、語調</text><text x="335" y="158">控制左側身體</text></g>
+  </svg><figcaption>大腦側化：兩個半球分工但經胼胝體密切合作。這是大致的傾向，不代表有人是「左腦人」或「右腦人」。</figcaption></figure>
+  <p>左右半球的構造相似，但功能並不完全相同，稱為<b>大腦側化</b> <i class="en-term">cerebral lateralization</i>。這來自<b>裂腦研究</b>（為治療嚴重癲癇切斷胼胝體的病人）：</p>
+  <ul class="dots">
+    <li><b>左半球</b>（約 95% 右撇子、多數左撇子）：<b>語言</b>能力、分析、邏輯、數學。</li>
+    <li><b>右半球</b>：<b>空間與視覺—空間</b>能力、<b>臉孔辨識</b>、音樂、藝術，以及理解與表達<b>情緒</b>、語調等非語言訊息。</li>
+  </ul>
+  <p>正常人兩半球透過胼胝體持續交流、互相合作。</p>
+  <div class="warn"><b class="t">國考考過：</b>大腦半球側化。記：<b>左＝語言、邏輯、數學；右＝空間、臉孔、音樂、情緒</b>。</div>
+
+  <h3 id="h9">語言 Language</h3>
+  <p class="core">布洛卡區（左額葉）＝說話產出，受損 → 表達性失語（理解正常、說話困難）；威尼克區（左顳葉）＝語言理解，受損 → 接受性失語（說得流利但無意義、不理解）；兩者以弓狀束相連。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>布洛卡區 Broca's area</th><th>威尼克區 Wernicke's area</th></tr>
+    <tr><td>位置</td><td>左側<b>額葉</b>下部，靠近控制嘴與喉的運動區</td><td>左側<b>顳葉</b>上部，靠近聽覺區</td></tr>
+    <tr><td>功能</td><td>計畫說話的動作、組織語句</td><td>理解語言（聽與讀）</td></tr>
+    <tr><td>受損</td><td><b>布洛卡失語症</b>（表達性）：說話緩慢費力、字句簡短，但<b>理解大致正常</b></td><td><b>威尼克失語症</b>（接受性）：說話<b>流利但內容空洞</b>、用錯字，且<b>無法理解</b>別人說的話</td></tr>
+  </table></div>
+  <p>兩區之間以<b>弓狀束</b> <i class="en-term">arcuate fasciculus</i> 相連；角迴整合視覺與聽覺訊息，與閱讀有關。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>右手右腳癱瘓表示<b>左半球</b>的運動區或其下行徑受損（對側控制）。多數人的語言區在<b>左半球</b>，所以左腦中風常同時造成<b>失語症</b>。</div>
+
+  <h3 id="h10">情緒與動機 Emotion and Motivation</h3>
+  <p class="core">邊緣系統（扣帶迴、海馬迴、杏仁核、下視丘、穹窿等）＝情緒與動機中樞；杏仁核＝恐懼；伏隔核＝獎賞（多巴胺）。</p>
+  <p><b>邊緣系統</b> <i class="en-term">limbic system</i> 是圍繞腦幹上方的一圈構造（包括<b>扣帶迴、海馬迴、杏仁核</b>、穹窿、部分下視丘與視丘），和情緒、動機、記憶密切相關，又被稱為「情緒腦」。</p>
+  <ul class="dots">
+    <li><b>杏仁核</b> <i class="en-term">amygdala</i>：處理<b>恐懼</b>與威脅，產生戰或逃反應；與情緒記憶有關。</li>
+    <li><b>獎賞系統</b>：中腦邊緣的多巴胺路徑投射到<b>伏隔核</b>，與愉悅、動機、成癮有關（第 7 章）。</li>
+    <li>邊緣系統與<b>下視丘</b>相連，所以情緒會影響自主神經與內分泌（緊張時心跳加快、壓力影響食慾）。</li>
+  </ul>
+
+  <h3 id="h11">記憶 Memory</h3>
+  <p class="core">短期記憶（秒～分）vs 長期記憶（鞏固後）；陳述性（事實、事件；需海馬迴）vs 非陳述性（技能、習慣；基底核、小腦）；海馬迴把短期轉成長期；前額葉＝工作記憶。</p>
+  <div class="tblwrap"><table>
+    <tr><th>分類</th><th>內容</th><th>相關腦區</th></tr>
+    <tr><td><b>短期記憶</b>（含工作記憶）</td><td>暫時保存數秒到數分鐘，例如記住一個電話號碼撥號</td><td><b>前額葉</b>皮質</td></tr>
+    <tr><td><b>長期記憶</b>：陳述性（外顯）</td><td>可以「說出來」的事實與事件</td><td><b>海馬迴</b>與內側顳葉負責<b>鞏固</b>；最終儲存在皮質各處</td></tr>
+    <tr><td><b>長期記憶</b>：非陳述性（內隱）</td><td>技能、習慣、條件反射（騎腳踏車、打字）</td><td>基底核、小腦</td></tr>
+  </table></div>
+  <p>把短期記憶轉成長期記憶的過程叫<b>記憶鞏固</b> <i class="en-term">consolidation</i>，需要<b>海馬迴</b>與新的蛋白質合成，睡眠對它很重要。著名病人 H.M. 為治療癲癇切除兩側內側顳葉（含海馬迴）後，<b>無法形成新的陳述性記憶</b>，但舊記憶與學習新技能的能力保留，證明海馬迴負責鞏固、而非儲存。突觸層次的機制是<b>長期增益（LTP）</b>（第 7 章）。</p>
+  <div class="nut"><b class="t">臨床連結：</b><b>阿茲海默症</b>的早期常先影響海馬迴與內側顳葉，所以最先出現的是「記不住新的事情」。<b>韋尼克-高沙可夫症候群</b>（長期酗酒造成維生素 B1 缺乏）也會損害記憶相關構造，造成嚴重健忘與虛構。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>兩半球經胼胝體相連；皮質四葉：額（運動、計畫、布洛卡）、頂（體感覺）、顳（聽覺、記憶、威尼克）、枕（視覺）。</li>
+      <li>中央前迴＝初級運動區、中央後迴＝初級體感覺區；手與臉占比大；每側半球管對側身體。</li>
+      <li>基底核（尾核、殼核、蒼白球；紋狀體）：啟動與調控動作；帕金森氏症、杭丁頓氏舞蹈症（CAG 重複過多）。</li>
+      <li>側化（國考）：左＝語言、邏輯、數學；右＝空間、臉孔、音樂、情緒。</li>
+      <li>布洛卡區受損：說不出但聽得懂；威尼克區受損：說得流利但無意義、聽不懂。</li>
+      <li>邊緣系統（杏仁核恐懼、伏隔核獎賞）；記憶：短期（前額葉）、長期陳述性（海馬迴鞏固）、非陳述性（基底核、小腦）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>大腦／大腦皮質</td><td>cerebrum / cerebral cortex</td><td>胼胝體</td><td>corpus callosum</td></tr>
+      <tr><td>腦迴／腦溝</td><td>gyrus / sulcus</td><td>中央前迴／中央後迴</td><td>precentral / postcentral gyrus</td></tr>
+      <tr><td>額／頂／顳／枕葉</td><td>frontal / parietal / temporal / occipital lobe</td><td>腦電圖</td><td>electroencephalogram (EEG)</td></tr>
+      <tr><td>基底核</td><td>basal nuclei</td><td>紋狀體</td><td>striatum</td></tr>
+      <tr><td>大腦側化</td><td>cerebral lateralization</td><td>布洛卡區／威尼克區</td><td>Broca's / Wernicke's area</td></tr>
+      <tr><td>失語症</td><td>aphasia</td><td>邊緣系統</td><td>limbic system</td></tr>
+      <tr><td>杏仁核</td><td>amygdala</td><td>記憶鞏固</td><td>memory consolidation</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 8.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">8.3</span>間腦</h2>
+  <div class="en">Diencephalon</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>大腦深處的三個構造：<b>視丘</b>（感覺轉運站）、<b>上視丘</b>（松果腺、褪黑激素）、<b>下視丘</b>（恆定總指揮：體溫、飢餓、口渴、生理時鐘、控制腦垂腺）。</div><div><span class="lt lt2">為什麼接在 8.2 後面？</span>大腦皮質要得到感覺訊息，幾乎都要經過視丘轉送；而維持第 1 章所說的恆定，總部就在下視丘。它也是神經系統與內分泌系統（第 11 章）的橋樑。</div></div>
+  <div class="oneline">視丘把（嗅覺以外的）感覺訊息轉送到大腦皮質；松果腺在黑暗時分泌褪黑激素；下視丘調節體溫、食慾（外側區＝攝食中樞、腹內側核＝飽食中樞）、口渴與 ADH、生理時鐘（視交叉上核），並控制腦垂腺。</div>
+  <div class="think">為什麼下視丘受傷的人可能會一直吃、停不下來，或完全不想吃？</div>
+
+  <h3 id="h12">視丘與上視丘 Thalamus and Epithalamus</h3>
+  <p class="core">視丘：除嗅覺外所有感覺傳到皮質前的轉運與過濾站，也參與運動迴路與清醒；上視丘：松果腺分泌褪黑激素（黑暗時多），調節晝夜節律。</p>
+  <ul class="dots">
+    <li><b>視丘</b> <i class="en-term">thalamus</i>：間腦最大的部分，位於第三腦室兩側。<b>除了嗅覺</b>，所有感覺訊息（視、聽、味、體感覺）都先到視丘的特定神經核，再被<b>轉送</b>到大腦皮質相應區域；它也會過濾訊息、決定哪些要送上去。視丘也參與基底核與小腦的運動迴路，以及清醒與注意力。</li>
+    <li><b>上視丘</b> <i class="en-term">epithalamus</i>：含<b>松果腺</b> <i class="en-term">pineal gland</i>，在<b>黑暗</b>時分泌<b>褪黑激素</b> <i class="en-term">melatonin</i>（由血清素轉成），光線會抑制它的分泌；參與<b>晝夜節律</b>與睡眠。</li>
+  </ul>
+
+  <h3 id="h13">下視丘與腦垂腺 Hypothalamus and Pituitary Gland</h3>
+  <p class="core">下視丘：體溫、飢餓與飽足、口渴與 ADH、自主神經控制、情緒反應、生理時鐘（視交叉上核）、控制腦垂腺前葉（釋放／抑制激素）與後葉（ADH、催產素）。</p>
+  <p><b>下視丘</b> <i class="en-term">hypothalamus</i> 只有約 4 克，位在視丘下方、第三腦室底部，卻是<b>維持恆定的總指揮</b>：</p>
+  <div class="tblwrap"><table>
+    <tr><th>功能</th><th>說明</th><th>相關章節</th></tr>
+    <tr><td><b>體溫調節</b></td><td>前下視丘偵測血液溫度，啟動散熱或產熱；發燒時設定點上調</td><td>1、19</td></tr>
+    <tr><td><b>飢餓與飽足</b></td><td><b>外側下視丘區＝攝食（飢餓）中樞</b>；<b>腹內側核＝飽食中樞</b>；弓狀核接收瘦體素、飢餓素等訊號</td><td>19</td></tr>
+    <tr><td><b>口渴與水分</b></td><td>滲透壓感受器 → 口渴＋ADH 分泌</td><td>6、17</td></tr>
+    <tr><td><b>自主神經控制</b></td><td>經腦幹調節心跳、血壓、消化等</td><td>9</td></tr>
+    <tr><td><b>情緒與行為</b></td><td>與邊緣系統合作：憤怒、恐懼、性行為的生理反應</td><td>8.2</td></tr>
+    <tr><td><b>生理時鐘</b></td><td><b>視交叉上核</b>接收視網膜的光訊號，設定約 24 小時的晝夜節律</td><td>11</td></tr>
+    <tr><td><b>控制腦垂腺</b></td><td>前葉：分泌<b>釋放激素與抑制激素</b>經門脈系統調控；後葉：製造 <b>ADH 與催產素</b>，由軸突送到後葉釋放</td><td>11</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">更正與易混淆：</b>老師簡報寫「腹外核是飢餓中樞」——正確是：<b>攝食中樞在外側下視丘區</b>（lateral hypothalamic area），<b>飽食中樞在腹內側核</b>（ventromedial nucleus）。動物實驗中，破壞<b>腹內側核</b> → 吃個不停、肥胖；破壞<b>外側區</b> → 不吃、消瘦。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>下視丘有攝食與飽食中樞，並接收脂肪組織的<b>瘦體素</b>、胃的<b>飢餓素</b>等訊號整合食慾。若腹內側（飽食）受損就停不下來，外側（攝食）受損就不想吃（第 19 章）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>視丘：嗅覺以外感覺訊息的轉運與過濾站；參與運動迴路與清醒。</li>
+      <li>上視丘：松果腺，黑暗時分泌褪黑激素（光抑制），調節晝夜節律。</li>
+      <li>下視丘：體溫、攝食（外側區）與飽食（腹內側核）、口渴與 ADH、自主神經、情緒反應、生理時鐘（視交叉上核）、控制腦垂腺前後葉。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>視丘</td><td>thalamus</td><td>上視丘</td><td>epithalamus</td></tr>
+      <tr><td>松果腺</td><td>pineal gland</td><td>褪黑激素</td><td>melatonin</td></tr>
+      <tr><td>下視丘</td><td>hypothalamus</td><td>視交叉上核</td><td>suprachiasmatic nucleus</td></tr>
+      <tr><td>外側下視丘區</td><td>lateral hypothalamic area</td><td>腹內側核</td><td>ventromedial nucleus</td></tr>
+      <tr><td>晝夜節律</td><td>circadian rhythm</td><td>腦垂腺</td><td>pituitary gland</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 8.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">8.4</span>中腦與後腦</h2>
+  <div class="en">Midbrain and Hindbrain</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>腦幹</b>的三個部分（中腦、橋腦、延腦）各負責什麼、<b>小腦</b>的協調功能，以及讓我們保持清醒的<b>網狀活化系統</b>。</div><div><span class="lt lt2">為什麼接在 8.3 後面？</span>從腦的高處往下走，到了維持生命最基本功能的區域：呼吸、心跳、血壓都由這裡控制，所以腦幹損傷特別危險。</div></div>
+  <div class="oneline">中腦有視覺與聽覺反射中樞、黑質；橋腦協助調節呼吸節律；延腦有呼吸中樞與心血管中樞（維生中樞）；小腦協調動作、維持平衡、參與運動學習；網狀活化系統維持清醒。</div>
+  <div class="think">喝醉的人為什麼走路搖晃、說話含糊？</div>
+
+  <h3 id="h14">中腦 Midbrain</h3>
+  <p class="core">中腦：上丘（視覺反射）、下丘（聽覺反射）、黑質（多巴胺 → 紋狀體）、紅核（運動協調）；大腦腳（下行運動徑通過）。</p>
+  <ul class="dots">
+    <li><b>四疊體</b>：<b>上丘</b>負責<b>視覺反射</b>（如眼睛追蹤移動物體、轉頭看突然出現的東西）；<b>下丘</b>是<b>聽覺</b>的轉運與反射中樞（聽到巨響轉頭）。</li>
+    <li><b>黑質</b> <i class="en-term">substantia nigra</i>：多巴胺神經元，投射到紋狀體，參與動作控制（帕金森氏症時退化）。</li>
+    <li><b>紅核</b>：與小腦、基底核連結，參與運動協調。</li>
+    <li><b>大腦腳</b>：下行運動徑通過的白質束。</li>
+  </ul>
+
+  <h3 id="h15">後腦 Hindbrain</h3>
+  <p class="core">橋腦：連接小腦、含呼吸調節中樞（呼吸調節中樞、長吸中樞）；延腦：呼吸節律中樞、心血管中樞（心跳、血管收縮）、嘔吐、吞嚥、咳嗽中樞；錐體徑在延腦交叉。</p>
+  <h4>橋腦 Pons</h4>
+  <p class="core">連接延腦、中腦與小腦；含部分腦神經核與呼吸調節中樞。</p>
+  <p><b>橋腦</b> <i class="en-term">pons</i> 像一座「橋」連接延腦、中腦與小腦。內有幾對腦神經核，以及和延腦一起調節<b>呼吸</b>節律的中樞（<b>呼吸調節中樞</b> pneumotaxic 與<b>長吸中樞</b> apneustic，第 16 章）。</p>
+  <h4>延腦 Medulla Oblongata</h4>
+  <p class="core">維生中樞：呼吸、心血管（心跳、血壓）、嘔吐、吞嚥、咳嗽；錐體徑在此交叉。</p>
+  <p><b>延腦</b> <i class="en-term">medulla oblongata</i> 連接脊髓，所有上下行神經徑都經過它；<b>下行運動徑（錐體徑）在延腦的錐體交叉</b>到對側。延腦有許多<b>維生中樞</b>：</p>
+  <ul class="dots">
+    <li><b>呼吸中樞</b>：產生基本呼吸節律（第 16 章）。</li>
+    <li><b>心血管中樞</b>：調節心跳速率與收縮力、血管收縮程度，從而控制血壓（第 14 章）。</li>
+    <li>其他反射中樞：<b>嘔吐、吞嚥、咳嗽、打噴嚏</b>。</li>
+  </ul>
+  <p>所以延腦受損（如頭部撞擊、某些藥物過量）會直接危及生命。</p>
+  <h4>小腦 Cerebellum</h4>
+  <p class="core">小腦：比較「想做的動作」與「實際的動作」並即時修正 → 協調、平衡、姿勢、運動學習；受損 → 運動失調（走路不穩、意向性顫抖）。酒精先影響小腦。</p>
+  <p><b>小腦</b> <i class="en-term">cerebellum</i> 是腦中第二大的部分，神經元數量卻比大腦還多。它接收來自大腦運動皮質的「動作計畫」，以及肌肉、關節、內耳平衡器官傳來的「實際狀況」，<b>比較兩者並即時修正</b>，讓動作平順準確。功能：</p>
+  <ul class="dots">
+    <li><b>協調</b>動作的時機、力量與方向。</li>
+    <li>維持<b>平衡與姿勢</b>。</li>
+    <li><b>運動學習</b>（如學騎腳踏車、打字），屬於非陳述性記憶。</li>
+  </ul>
+  <p>小腦受損會造成<b>運動失調</b> <i class="en-term">ataxia</i>：走路不穩、步伐寬、動作過頭或不足、伸手拿東西時越接近目標越抖（<b>意向性顫抖</b>，和帕金森氏症的靜止型顫抖不同）、說話含糊。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>酒精很早就影響<b>小腦</b>，使協調與平衡變差，所以醉酒者走路搖晃、說話含糊。警察的「酒測」中走直線、手指碰鼻子，就是在檢查小腦功能。</div>
+
+  <h3 id="h16">網狀活化系統 Reticular Activating System</h3>
+  <p class="core">網狀結構貫穿腦幹，網狀活化系統（RAS）把訊號送到視丘與皮質，維持清醒與注意力；受損 → 昏迷；安眠藥、麻醉劑抑制它。</p>
+  <p><b>網狀結構</b> <i class="en-term">reticular formation</i> 是貫穿整個腦幹的神經元網路。其中向上投射到視丘與大腦皮質的部分叫<b>網狀活化系統</b> <i class="en-term">reticular activating system, RAS</i>，負責<b>維持清醒與注意力</b>（例如被鬧鐘吵醒）。RAS 嚴重受損會造成昏迷；全身麻醉劑與安眠藥會抑制它；它也參與睡眠—清醒週期。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>腦幹＝中腦＋橋腦＋延腦。</li>
+      <li>中腦：上丘（視覺反射）、下丘（聽覺反射）、黑質（多巴胺）、紅核。</li>
+      <li>橋腦：連接小腦；呼吸調節中樞。延腦：呼吸中樞、心血管中樞、嘔吐吞嚥咳嗽中樞；錐體徑在此交叉。</li>
+      <li>小腦：比較計畫與實際 → 協調、平衡、運動學習；受損 → 運動失調、意向性顫抖；酒精先影響小腦。</li>
+      <li>網狀活化系統：維持清醒與注意力；受損 → 昏迷。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>腦幹</td><td>brain stem</td><td>中腦</td><td>midbrain</td></tr>
+      <tr><td>上丘／下丘</td><td>superior / inferior colliculus</td><td>黑質</td><td>substantia nigra</td></tr>
+      <tr><td>橋腦</td><td>pons</td><td>延腦</td><td>medulla oblongata</td></tr>
+      <tr><td>小腦</td><td>cerebellum</td><td>運動失調</td><td>ataxia</td></tr>
+      <tr><td>網狀結構</td><td>reticular formation</td><td>網狀活化系統</td><td>reticular activating system</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 8.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">8.5</span>脊髓神經徑</h2>
+  <div class="en">Spinal Cord Tracts</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>脊髓的構造（灰質在內、白質在外），<b>上行徑</b>（感覺）與<b>下行徑</b>（運動：錐體徑、錐體外徑），以及各神經徑<b>在哪裡交叉</b>。</div><div><span class="lt lt2">為什麼接在 8.4 後面？</span>腦的命令要經脊髓才能到身體，身體的感覺也要經脊髓才能到腦。知道神經徑在哪裡交叉，就能理解為什麼左腦中風是右邊癱瘓、脊髓受傷後哪裡失去感覺。</div></div>
+  <div class="oneline">脊髓灰質在內（H 形）、白質在外（神經徑）；上行徑把感覺送上腦（如脊髓視丘徑傳痛溫覺），下行徑把運動命令送下來（錐體徑＝皮質脊髓徑，負責精細隨意動作，多數在延腦錐體交叉）；所以一側腦管對側身體。</div>
+
+  <h3 id="h17">脊髓的構造</h3>
+  <p class="core">灰質（H 形）：背角＝感覺、腹角＝運動神經元；白質＝上行與下行神經徑；背根＝感覺、腹根＝運動。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a81" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <ellipse cx="240" cy="135" rx="120" ry="95" fill="#f8fafc" stroke="#6b7280" stroke-width="2.5"/>
+    <path d="M200,60 C195,90 215,110 235,125 L245,125 C265,110 285,90 280,60 L268,60 C262,90 250,105 240,112 C230,105 218,90 212,60 Z" fill="#c4b5fd" stroke="#6d28d9"/>
+    <path d="M190,210 C185,180 215,155 235,145 L245,145 C265,155 295,180 290,210 C280,215 270,212 268,200 C265,180 250,160 240,155 C230,160 215,180 212,200 C210,212 200,215 190,210 Z" fill="#c4b5fd" stroke="#6d28d9"/>
+    <rect x="225" y="118" width="30" height="34" fill="#c4b5fd"/><circle cx="240" cy="135" r="5" fill="#fff" stroke="#6d28d9"/>
+    <text x="240" y="40" font-size="13" text-anchor="middle" font-weight="bold">背側（後）</text><text x="240" y="250" font-size="13" text-anchor="middle" font-weight="bold">腹側（前）</text>
+    <text x="300" y="90" font-size="12" fill="#6d28d9">背角：感覺</text><text x="300" y="200" font-size="12" fill="#6d28d9">腹角：運動神經元</text>
+    <text x="150" y="135" font-size="12" text-anchor="middle" fill="#374151">白質</text><text x="150" y="150" font-size="11" text-anchor="middle" fill="#374151">（神經徑）</text>
+    <circle cx="95" cy="60" r="12" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="95" y="36" font-size="11" text-anchor="middle">背根神經節</text>
+    <path d="M30,80 L83,62" stroke="#2563eb" stroke-width="3" marker-end="url(#a81)"/><path d="M107,62 L205,75" stroke="#2563eb" stroke-width="3" marker-end="url(#a81)"/>
+    <text x="20" y="100" font-size="12" fill="#1d4ed8">背根（感覺進入）</text>
+    <path d="M230,195 L120,215 L40,215" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#a81)"/>
+    <text x="20" y="240" font-size="12" fill="#b91c1c">腹根（運動送出）</text>
+    <text x="400" y="140" font-size="11" fill="#6b7280">中央管</text><path d="M396,136 L250,135" stroke="#9ca3af"/>
+  </svg><figcaption>脊髓橫切面：中間像蝴蝶（H 形）的是灰質，外圍是白質。感覺從背根進來，運動命令從腹根出去。</figcaption></figure>
+  <p>脊髓的灰質在中央呈 H 形（蝴蝶形）：<b>背角</b>接收感覺神經的訊息，<b>腹角</b>有支配骨骼肌的運動神經元（胸腰段還有側角，含交感神經節前神經元）。外圍的<b>白質</b>由上下行的神經徑組成。脊神經以<b>背根</b>（感覺，含背根神經節）與<b>腹根</b>（運動）連到脊髓。</p>
+
+  <h3 id="h18">上行徑 Ascending Tracts</h3>
+  <p class="core">脊髓視丘徑：痛覺、溫度、粗略觸覺；在脊髓同節段交叉（經前白連合）→ 視丘 → 體感覺皮質；背柱—內側蹄系：精細觸覺、震動、本體感覺；在延腦交叉。</p>
+  <p>上行徑把感覺訊息送到腦，通常經過三個神經元（第一個在背根神經節，第二個交叉到對側，第三個在視丘），最後到達對側的體感覺皮質：</p>
+  <div class="tblwrap"><table>
+    <tr><th>上行徑</th><th>傳送的感覺</th><th>在哪裡交叉</th></tr>
+    <tr><td><b>脊髓視丘徑</b> spinothalamic tract</td><td><b>痛覺、溫度</b>、粗略觸覺與壓覺</td><td>進入脊髓後很快在<b>同一節段</b>經<b>前白連合</b>交叉到對側（簡報寫「在前角交叉」，已更正）</td></tr>
+    <tr><td><b>背柱—內側蹄系</b> dorsal column–medial lemniscus</td><td><b>精細觸覺</b>、震動、<b>本體感覺</b>（肢體位置）</td><td>先在同側上行，到<b>延腦</b>才交叉</td></tr>
+    <tr><td>脊髓小腦徑</td><td>肌肉與關節的位置資訊送到小腦（不進入意識）</td><td>多不交叉（同側）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">例子：</b>脊髓一側受傷（半切）時，受傷那一側以下失去<b>精細觸覺與本體感覺</b>（背柱還沒交叉）及運動，<b>對側</b>以下失去<b>痛溫覺</b>（脊髓視丘徑已交叉）——稱為布朗-塞卡症候群，正好用來驗證交叉位置。</div>
+
+  <h3 id="h19">下行徑 Descending Tracts</h3>
+  <p class="core">錐體徑（皮質脊髓徑）：從運動皮質直達脊髓，控制精細隨意動作，約 85% 在延腦錐體交叉（外側皮質脊髓徑）；錐體外徑：來自腦幹（紅核、網狀結構、前庭核），調節姿勢、平衡與肌肉張力。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>錐體徑（皮質脊髓徑）pyramidal tracts</th><th>錐體外徑 extrapyramidal tracts</th></tr>
+    <tr><td>起點</td><td>大腦<b>運動皮質</b>（中央前迴）</td><td>腦幹：紅核、網狀結構、前庭核、上丘等（受基底核、小腦影響）</td></tr>
+    <tr><td>交叉</td><td>約 85% 在<b>延腦錐體</b>交叉（外側皮質脊髓徑），其餘在脊髓才交叉</td><td>依神經徑不同</td></tr>
+    <tr><td>功能</td><td><b>精細、隨意的動作</b>（尤其手指）</td><td><b>姿勢、平衡、肌肉張力</b>、粗大動作的協調</td></tr>
+    <tr><td>受損</td><td>對側癱瘓、精細動作喪失</td><td>張力異常、不自主動作（如基底核疾病）</td></tr>
+  </table></div>
+  <p>「錐體」是因為皮質脊髓徑在延腦腹側形成像金字塔的隆起而得名。中風時常損傷內囊處的皮質脊髓徑，造成<b>對側</b>偏癱。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>脊髓：灰質 H 形在內（背角感覺、腹角運動），白質在外（神經徑）；背根感覺、腹根運動。</li>
+      <li>脊髓視丘徑：痛溫覺、粗觸覺；在同節段經前白連合交叉。</li>
+      <li>背柱—內側蹄系：精細觸覺、震動、本體感覺；在延腦交叉。</li>
+      <li>錐體徑（皮質脊髓徑）：運動皮質 → 精細隨意動作；約 85% 在延腦錐體交叉。錐體外徑：腦幹發出，管姿勢、平衡、張力。</li>
+      <li>交叉 → 一側大腦管對側身體。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>背角／腹角</td><td>dorsal / ventral horn</td><td>背根／腹根</td><td>dorsal / ventral root</td></tr>
+      <tr><td>上行徑／下行徑</td><td>ascending / descending tract</td><td>脊髓視丘徑</td><td>spinothalamic tract</td></tr>
+      <tr><td>背柱—內側蹄系</td><td>dorsal column–medial lemniscus</td><td>本體感覺</td><td>proprioception</td></tr>
+      <tr><td>錐體徑／皮質脊髓徑</td><td>pyramidal / corticospinal tract</td><td>錐體外徑</td><td>extrapyramidal tract</td></tr>
+      <tr><td>交叉</td><td>decussation</td><td>前白連合</td><td>anterior white commissure</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 8.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">8.6</span>腦神經與脊神經</h2>
+  <div class="en">Cranial and Spinal Nerves</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>12 對腦神經</b>的名稱與功能、<b>31 對脊神經</b>的分布（皮節、神經叢），以及最簡單的神經迴路——<b>反射弧</b>。</div><div><span class="lt lt2">為什麼放最後？</span>前面講中樞內部；最後講中樞怎麼經由周邊神經連到全身。反射弧則把感受器、整合中心、動器串起來，正好是第 1 章回饋迴路在神經系統的具體例子。</div></div>
+  <div class="oneline">12 對腦神經從腦發出（迷走神經最長，支配胸腹內臟）；31 對脊神經都是混合神經，背根感覺、腹根運動；反射弧＝感受器 → 感覺神經元 → 中樞（聯絡神經元）→ 運動神經元 → 動器，不需經過大腦意識。</div>
+  <div class="think">醫生用小槌子敲膝蓋下方，小腿就自己踢出去，這過程大腦有參與嗎？</div>
+
+  <h3 id="h20">腦神經 Cranial Nerves</h3>
+  <p class="core">12 對腦神經：感覺（I 嗅、II 視、VIII 前庭耳蝸）、運動（III、IV、VI 動眼相關，XI 副、XII 舌下）、混合（V 三叉、VII 顏面、IX 舌咽、X 迷走）；III、VII、IX、X 含副交感纖維。</p>
+  <div class="tblwrap"><table>
+    <tr><th>編號</th><th>名稱</th><th>類型</th><th>主要功能</th></tr>
+    <tr><td>I</td><td>嗅神經 olfactory</td><td>感覺</td><td>嗅覺</td></tr>
+    <tr><td>II</td><td>視神經 optic</td><td>感覺</td><td>視覺</td></tr>
+    <tr><td>III</td><td>動眼神經 oculomotor</td><td>運動（含副交感）</td><td>多數眼外肌、上眼瞼；瞳孔縮小、水晶體調節</td></tr>
+    <tr><td>IV</td><td>滑車神經 trochlear</td><td>運動</td><td>上斜肌（眼球轉動）</td></tr>
+    <tr><td>V</td><td>三叉神經 trigeminal</td><td>混合</td><td>臉部感覺；咀嚼肌</td></tr>
+    <tr><td>VI</td><td>外旋神經 abducens</td><td>運動</td><td>外直肌（眼球外轉）</td></tr>
+    <tr><td>VII</td><td>顏面神經 facial</td><td>混合（含副交感）</td><td>表情肌；舌前 2/3 味覺；淚腺、頜下腺與舌下腺分泌</td></tr>
+    <tr><td>VIII</td><td>前庭耳蝸神經 vestibulocochlear</td><td>感覺</td><td>聽覺、平衡</td></tr>
+    <tr><td>IX</td><td>舌咽神經 glossopharyngeal</td><td>混合（含副交感）</td><td>舌後 1/3 味覺、咽部感覺、吞嚥；腮腺分泌；頸動脈竇與頸動脈體的訊號</td></tr>
+    <tr><td>X</td><td><b>迷走神經</b> vagus</td><td>混合（含副交感）</td><td>咽喉肌（吞嚥、發聲）；<b>胸腹內臟</b>的感覺與副交感控制（心、肺、消化道）；主動脈體與主動脈弓訊號</td></tr>
+    <tr><td>XI</td><td>副神經 accessory</td><td>運動</td><td>胸鎖乳突肌、斜方肌</td></tr>
+    <tr><td>XII</td><td>舌下神經 hypoglossal</td><td>運動</td><td>舌的運動（說話、吞嚥）</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>吞嚥牽涉 V、VII、IX、X、XII 對腦神經。中風或神經疾病影響這些神經時會出現<b>吞嚥困難</b>，需要調整食物質地（如軟質、泥狀、增稠液體）以避免嗆咳與吸入性肺炎——這是膳食療養的重要課題。<b>迷走神經</b>則把腸胃的飽足訊號傳回腦，並控制胃酸分泌與腸道蠕動（第 18 章）。</div>
+
+  <h3 id="h21">脊神經 Spinal Nerves</h3>
+  <p class="core">31 對脊神經（頸 8、胸 12、腰 5、薦 5、尾 1）；都是混合神經；每條脊神經負責一片皮膚區域＝皮節；頸、臂、腰、薦神經叢。</p>
+  <p><b>31 對脊神經</b>依脊髓節段命名：<b>頸神經 8 對、胸神經 12 對、腰神經 5 對、薦神經 5 對、尾神經 1 對</b>。每一條都是由背根（感覺）與腹根（運動）合成的<b>混合神經</b>。</p>
+  <ul class="dots">
+    <li><b>皮節</b> <i class="en-term">dermatome</i>：每對脊神經的感覺纖維分布到一片固定的皮膚區域。例如帶狀皰疹病毒潛伏在背根神經節，發作時疹子沿著該神經的皮節呈帶狀分布。</li>
+    <li><b>神經叢</b> <i class="en-term">plexus</i>：頸、臂、腰、薦部的脊神經前支互相交織，再分出支配四肢的周邊神經（如臂神經叢分出正中神經、尺神經；薦神經叢分出最大的坐骨神經）。</li>
+  </ul>
+
+  <h3 id="h22">反射弧 Reflex Arc</h3>
+  <p class="core">反射弧＝感受器 → 感覺神經元 → 中樞整合（脊髓或腦幹；可有聯絡神經元）→ 運動神經元 → 動器；膝跳反射是單突觸反射；縮回反射是多突觸反射，常伴隨對側伸肌反射。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a82" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <ellipse cx="370" cy="110" rx="70" ry="62" fill="#f8fafc" stroke="#6b7280" stroke-width="2"/>
+    <path d="M345,70 C340,95 355,105 365,112 L375,112 C385,105 400,95 395,70 Z" fill="#c4b5fd"/><path d="M340,155 C338,130 355,120 365,118 L375,118 C385,120 402,130 400,155 Z" fill="#c4b5fd"/>
+    <text x="370" y="196" font-size="13" text-anchor="middle" font-weight="bold">③ 脊髓（整合中心）</text>
+    <circle cx="280" cy="62" r="10" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <path d="M60,200 C120,150 200,80 270,64" fill="none" stroke="#2563eb" stroke-width="3.5" marker-end="url(#a82)"/>
+    <path d="M290,62 L360,90" stroke="#2563eb" stroke-width="3.5" marker-end="url(#a82)"/>
+    <path d="M370,95 L370,138" stroke="#7c3aed" stroke-width="3" marker-end="url(#a82)"/>
+    <path d="M365,145 C300,180 220,215 130,228" fill="none" stroke="#dc2626" stroke-width="3.5" marker-end="url(#a82)"/>
+    <rect x="30" y="196" width="60" height="24" rx="8" fill="#dbeafe" stroke="#2563eb"/><text x="60" y="213" font-size="12" text-anchor="middle">感受器</text>
+    <text x="10" y="186" font-size="13" font-weight="bold" fill="#1d4ed8">① 感受器（肌梭）</text>
+    <text x="150" y="108" font-size="13" fill="#1d4ed8" font-weight="bold">② 感覺神經元</text>
+    <text x="470" y="40" font-size="12" fill="#6d28d9" text-anchor="end">紫＝聯絡神經元</text><text x="470" y="56" font-size="11" fill="#6b7280" text-anchor="end">（多突觸反射才有）</text>
+    <rect x="70" y="220" width="60" height="30" rx="14" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><text x="100" y="240" font-size="12" text-anchor="middle">肌肉</text>
+    <text x="150" y="262" font-size="13" fill="#b91c1c" font-weight="bold">④ 運動神經元 → ⑤ 動器（肌肉）</text>
+    <text x="10" y="22" font-size="13" fill="#374151">訊號不必到大腦就能完成反應 → 快</text>
+  </svg><figcaption>反射弧的五個部分，正好對應第 1 章回饋迴路的感受器、整合中心、動器。大腦會「事後」知道，但反應已先完成。</figcaption></figure>
+  <p><b>反射</b> <i class="en-term">reflex</i> 是對刺激自動、快速、不經意識決定的反應。傳遞反射的路徑叫<b>反射弧</b> <i class="en-term">reflex arc</i>：</p>
+  <ol class="steps">
+    <li><b>感受器</b>偵測刺激。</li>
+    <li><b>感覺神經元</b>把訊號經背根送入脊髓（或腦幹）。</li>
+    <li><b>整合中心</b>：在脊髓內直接或經<b>聯絡神經元</b>連到運動神經元。</li>
+    <li><b>運動神經元</b>經腹根送出命令。</li>
+    <li><b>動器</b>（肌肉或腺體）產生反應。</li>
+  </ol>
+  <ul class="dots">
+    <li><b>單突觸反射</b>：感覺神經元直接接運動神經元，只有一個突觸，最快。例：<b>膝跳反射</b>（牽張反射）——敲膝蓋下方的韌帶，股四頭肌被拉長，肌肉中的<b>肌梭</b>偵測到後，訊號直接使同一塊肌肉收縮，小腿踢出（第 12 章）。</li>
+    <li><b>多突觸反射</b>：中間有聯絡神經元。例：<b>縮回反射</b>——踩到釘子，同側腿的屈肌收縮、把腳縮回；同時經交叉的聯絡神經元使<b>對側</b>腿的伸肌收縮以支撐體重（對側伸肌反射）。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>膝跳反射在<b>脊髓</b>就完成，不需要大腦決定，所以很快；大腦會在稍後「知道」發生了什麼。醫師用它檢查該段脊髓與周邊神經是否正常，反射過強可能表示上方運動神經元（腦或脊髓上段）受損。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>12 對腦神經：純感覺 I、II、VIII；含副交感 III、VII、IX、X；迷走神經（X）支配胸腹內臟。</li>
+      <li>吞嚥相關腦神經：V、VII、IX、X、XII（吞嚥困難需調整食物質地）。</li>
+      <li>31 對脊神經（8 頸、12 胸、5 腰、5 薦、1 尾），皆為混合神經；皮節；神經叢。</li>
+      <li>反射弧：感受器 → 感覺神經元 → 整合中心 → 運動神經元 → 動器。</li>
+      <li>膝跳反射＝單突觸牽張反射（肌梭）；縮回反射＝多突觸，伴隨對側伸肌反射。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>腦神經</td><td>cranial nerves</td><td>迷走神經</td><td>vagus nerve</td></tr>
+      <tr><td>三叉／顏面神經</td><td>trigeminal / facial nerve</td><td>舌咽／舌下神經</td><td>glossopharyngeal / hypoglossal nerve</td></tr>
+      <tr><td>脊神經</td><td>spinal nerves</td><td>混合神經</td><td>mixed nerve</td></tr>
+      <tr><td>皮節</td><td>dermatome</td><td>神經叢</td><td>plexus</td></tr>
+      <tr><td>反射弧</td><td>reflex arc</td><td>單突觸／多突觸反射</td><td>monosynaptic / polysynaptic reflex</td></tr>
+      <tr><td>膝跳反射</td><td>knee-jerk reflex</td><td>縮回反射</td><td>withdrawal reflex</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s7">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>腦分區</td><td>端腦（大腦）、間腦、中腦、後腦（橋腦、小腦）、髓腦（延腦）</td></tr>
+    <tr><td>CSF</td><td>脈絡叢產生 → 腦室 → 蛛網膜下腔 → 蛛網膜絨毛回收</td></tr>
+    <tr><td>大腦四葉</td><td>額（運動、計畫）、頂（體感覺）、顳（聽、記憶）、枕（視）</td></tr>
+    <tr><td>側化（國考）</td><td>左：語言、邏輯、數學；右：空間、臉孔、音樂、情緒</td></tr>
+    <tr><td>語言</td><td>布洛卡（額，說）→ 表達性失語；威尼克（顳，理解）→ 接受性失語</td></tr>
+    <tr><td>記憶</td><td>海馬迴鞏固陳述性記憶；前額葉工作記憶；小腦與基底核技能</td></tr>
+    <tr><td>間腦</td><td>視丘（感覺轉運，嗅覺除外）；松果腺（褪黑激素）；下視丘（恆定總部）</td></tr>
+    <tr><td>食慾中樞</td><td>外側下視丘＝攝食；腹內側核＝飽食</td></tr>
+    <tr><td>腦幹</td><td>中腦（上丘視、下丘聽、黑質）；橋腦、延腦（呼吸、心血管中樞）</td></tr>
+    <tr><td>小腦</td><td>協調、平衡、運動學習；受損 → 運動失調</td></tr>
+    <tr><td>神經徑</td><td>脊髓視丘徑（痛溫，脊髓交叉）；背柱（精細觸覺，延腦交叉）；錐體徑（隨意運動，延腦錐體交叉）</td></tr>
+    <tr><td>腦神經</td><td>12 對；迷走神經管胸腹內臟；吞嚥：V、VII、IX、X、XII</td></tr>
+    <tr><td>反射弧</td><td>感受器 → 感覺神經元 → 整合 → 運動神經元 → 動器；膝跳＝單突觸</td></tr>
+  </table></div>
+  <h3 id="h23">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說出腦的五個胚胎分區各成為哪些構造？</li>
+    <li>□ 描述腦脊髓液的生成與回收路徑？</li>
+    <li>□ 說出大腦四葉的功能，並解釋「對側控制」？</li>
+    <li>□ 比較左右半球的功能（國考）？</li>
+    <li>□ 比較布洛卡失語與威尼克失語？</li>
+    <li>□ 說出下視丘的七項功能與攝食、飽食中樞的位置？</li>
+    <li>□ 說出延腦的維生中樞，以及小腦受損的表現？</li>
+    <li>□ 說出脊髓視丘徑、背柱、錐體徑各在哪裡交叉？</li>
+    <li>□ 畫出膝跳反射的反射弧？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 8 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"胚胎的間腦（diencephalon）發育成下列何者？",o:["大腦皮質","視丘與下視丘","橋腦與小腦","延腦"],a:1,
+  e:"端腦＝大腦；<b>間腦＝視丘、下視丘、上視丘</b>；後腦＝橋腦、小腦；髓腦＝延腦。"},
+ {q:"腦脊髓液主要由何處產生？",o:["蛛網膜絨毛","脈絡叢","硬腦膜","星狀膠細胞"],a:1,
+  e:"由腦室中的<b>脈絡叢</b>產生，經蛛網膜下腔後由蛛網膜絨毛回收入靜脈。"},
+ {q:"初級體感覺區位於？",o:["中央前迴（額葉）","中央後迴（頂葉）","顳葉上部","枕葉"],a:1,
+  e:"<b>中央後迴</b>＝初級體感覺區；中央前迴＝初級運動區。"},
+ {q:"關於大腦側化，多數人的左半球主要負責？",o:["空間方向感","臉孔辨識","語言與分析","音樂欣賞"],a:2,
+  e:"左半球：<b>語言、邏輯、數學</b>；右半球：空間、臉孔、音樂、情緒（國考考過）。"},
+ {q:"病人說話流利但內容空洞、也聽不懂別人說話，最可能受損的是？",o:["布洛卡區","威尼克區","小腦","中央前迴"],a:1,
+  e:"<b>威尼克區</b>（左顳葉）負責理解；受損 → 接受性失語。布洛卡區受損是說不出但聽得懂。"},
+ {q:"將短期記憶鞏固成長期陳述性記憶的關鍵構造是？",o:["小腦","海馬迴","基底核","延腦"],a:1,
+  e:"<b>海馬迴</b>負責鞏固陳述性記憶（H.M. 病例）；技能記憶與小腦、基底核有關。"},
+ {q:"處理恐懼與威脅的邊緣系統構造是？",o:["海馬迴","杏仁核","視丘","松果腺"],a:1,
+  e:"<b>杏仁核</b>處理恐懼並引發戰或逃反應。"},
+ {q:"除了哪一種感覺外，其餘感覺都要先經過視丘轉送到大腦皮質？",o:["視覺","聽覺","嗅覺","痛覺"],a:2,
+  e:"<b>嗅覺</b>可直接送到嗅覺皮質與邊緣系統，不必先經視丘。"},
+ {q:"下視丘的飽食中樞位於？",o:["外側下視丘區","腹內側核","視交叉上核","室旁核"],a:1,
+  e:"<b>腹內側核＝飽食中樞</b>；外側下視丘區＝攝食（飢餓）中樞；視交叉上核＝生理時鐘。"},
+ {q:"在黑暗時分泌褪黑激素、調節晝夜節律的是？",o:["腦垂腺","松果腺","甲狀腺","下視丘"],a:1,
+  e:"上視丘的<b>松果腺</b>在黑暗時分泌褪黑激素，光線抑制其分泌。"},
+ {q:"呼吸與心血管的維生中樞主要位於？",o:["小腦","延腦","中腦","大腦皮質"],a:1,
+  e:"<b>延腦</b>有呼吸中樞、心血管中樞，以及嘔吐、吞嚥、咳嗽中樞。"},
+ {q:"小腦受損最可能出現的症狀是？",o:["失語症","靜止型顫抖","運動失調、意向性顫抖、平衡不良","失去痛覺"],a:2,
+  e:"小腦負責協調與平衡；受損 → <b>運動失調</b>、意向性顫抖。靜止型顫抖是帕金森氏症。"},
+ {q:"維持清醒與注意力的是？",o:["邊緣系統","網狀活化系統","基底核","胼胝體"],a:1,
+  e:"腦幹的<b>網狀活化系統</b>投射到視丘與皮質維持清醒；受損可致昏迷。"},
+ {q:"傳送痛覺與溫度覺的脊髓視丘徑在何處交叉？",o:["延腦錐體","進入脊髓後同節段經前白連合","中腦","不交叉"],a:1,
+  e:"脊髓視丘徑在<b>脊髓同節段</b>經前白連合交叉；背柱（精細觸覺）在延腦交叉。"},
+ {q:"負責精細隨意動作的錐體徑（皮質脊髓徑）大部分在何處交叉？",o:["中腦","延腦錐體","脊髓腹角","視丘"],a:1,
+  e:"約 85% 在<b>延腦錐體</b>交叉，所以左腦中風造成右側癱瘓。"},
+ {q:"支配胸腹腔內臟、提供大部分副交感神經的腦神經是？",o:["三叉神經（V）","顏面神經（VII）","迷走神經（X）","舌下神經（XII）"],a:2,
+  e:"<b>迷走神經</b>支配心、肺、消化道等胸腹內臟。"},
+ {q:"膝跳反射屬於哪一類反射？",o:["多突觸反射","單突觸牽張反射","需大腦參與的反射","自主神經反射"],a:1,
+  e:"肌梭偵測牽張 → 感覺神經元直接接運動神經元 → <b>單突觸</b>；在脊髓完成。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 16 章 呼吸生理學</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="16">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 16 章　呼吸生理學</h1>
+  <div class="en">Chapter 16 Respiratory Physiology（課本 p.569–620）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">16.1 呼吸系統</a>
+  <a class="sub" href="#h1">呼吸的意義與肺泡 Respiration and the Alveoli</a>
+  <a class="sub" href="#h2">傳導區與呼吸區 Conducting and Respiratory Zones</a>
+  <a class="sub" href="#h3">胸腔與胸膜 Thoracic Cavity</a>
+  <a href="#s2">16.2 換氣的物理特性</a>
+  <a class="sub" href="#h4">肺內壓與胸膜內壓 Intrapulmonary and Intrapleural Pressures</a>
+  <a class="sub" href="#h5">肺的物理性質 Physical Properties of the Lungs</a>
+  <a href="#s3">16.3 呼吸的力學</a>
+  <a class="sub" href="#h6">吸氣與呼氣 Inspiration and Expiration</a>
+  <a class="sub" href="#h7">肺功能測試 Pulmonary Function Tests</a>
+  <a class="sub" href="#h8">限制性與阻塞性疾病 Restrictive and Obstructive Disorders</a>
+  <a href="#s4">16.4 肺的氣體交換</a>
+  <a class="sub" href="#h9">分壓與溶解 Partial Pressures and Gas Solubility</a>
+  <a class="sub" href="#h10">血氣測量 Blood PO₂ and PCO₂ Measurements</a>
+  <a class="sub" href="#h11">肺循環與通氣—灌流配合 Pulmonary Circulation and Ventilation/Perfusion Ratios</a>
+  <a href="#s5">16.5 呼吸的調節</a>
+  <a class="sub" href="#h12">腦幹呼吸中樞 Brain Stem Respiratory Centers</a>
+  <a class="sub" href="#h13">化學感受器 Chemoreceptors</a>
+  <a class="sub" href="#h14">肺部受器的影響 Effects of Pulmonary Receptors</a>
+  <a href="#s6">16.6 血紅素與氧氣運送</a>
+  <a class="sub" href="#h15">血紅素 Hemoglobin</a>
+  <a class="sub" href="#h16">氧合血紅素解離曲線 The Oxyhemoglobin Dissociation Curve</a>
+  <a class="sub" href="#h17">pH、溫度與 2,3-BPG 的影響 Effects of pH, Temperature, and 2,3-BPG</a>
+  <a class="sub" href="#h18">血紅素的異常型式 Inherited Defects in Hemoglobin</a>
+  <a class="sub" href="#h19">肌紅素 Muscle Myoglobin</a>
+  <a href="#s7">16.7 二氧化碳的運送</a>
+  <a class="sub" href="#h20">碳酸酐酶與氯轉移 Carbonic Anhydrase and the Chloride Shift</a>
+  <a href="#s8">16.8 血液的酸鹼平衡</a>
+  <a class="sub" href="#h21">酸與緩衝 Acids and Buffers</a>
+  <a class="sub" href="#h22">酸鹼失衡與代償 Acid-Base Disturbances</a>
+  <a href="#s9">16.9 運動與高海拔對呼吸功能的影響</a>
+  <a class="sub" href="#h23">運動時的換氣 Ventilation During Exercise</a>
+  <a class="sub" href="#h24">高海拔的適應 Acclimatization to High Altitude</a>
+  <a href="#s10">本章重點整理</a>
+  <a class="sub" href="#h25">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 5 章說細胞要 O₂ 才能有效率地產生 ATP，並產生 CO₂；第 13 章說血液負責運送。這一章回答<span class="key">氣體怎麼「進出身體」並「搭上血液」：空氣怎麼被吸進肺（換氣的力學）、O₂ 與 CO₂ 怎麼在肺泡與血液間交換（分壓與擴散）、腦怎麼調控呼吸、血紅素怎麼運 O₂、CO₂ 怎麼變成碳酸氫根運送，以及呼吸怎麼幫助維持血液的酸鹼平衡。</span>最後看運動與高海拔時呼吸系統怎麼適應。</div>
+  <div class="path">
+    <div class="step"><span class="sn">16.1</span><div><b>呼吸系統</b><br><span class="sq">傳導區與呼吸區、肺泡構造、胸腔與胸膜。</span></div></div>
+    <div class="arr">↓ 空氣要流進肺，靠的是壓力差</div>
+    <div class="step"><span class="sn">16.2</span><div><b>換氣的物理特性</b><br><span class="sq">肺內壓與胸膜內壓、順應性與彈性、表面張力與表面活性劑。</span></div></div>
+    <div class="arr">↓ 誰製造這個壓力差？</div>
+    <div class="step"><span class="sn">16.3</span><div><b>呼吸的力學</b><br><span class="sq">吸氣與呼氣肌、肺功能測試、肺容積與容量、肺部疾病。</span></div></div>
+    <div class="arr">↓ 空氣到了肺泡，氣體怎麼進出血液</div>
+    <div class="step"><span class="sn">16.4</span><div><b>肺的氣體交換</b><br><span class="sq">分壓（道耳吞定律）、血氣、肺循環與通氣—灌流配合。</span></div></div>
+    <div class="arr">↓ 呼吸快慢由誰決定</div>
+    <div class="step"><span class="sn">16.5</span><div><b>呼吸的調節</b><br><span class="sq">腦幹呼吸中樞、中樞與周邊化學感受器、肺部受器。</span></div></div>
+    <div class="arr">↓ 進入血液的 O₂ 怎麼運送</div>
+    <div class="step"><span class="sn">16.6</span><div><b>血紅素與氧氣運送</b><br><span class="sq">氧合血紅素解離曲線、pH 與溫度、2,3-BPG、異常血紅素。</span></div></div>
+    <div class="arr">↓ 反方向的 CO₂</div>
+    <div class="step"><span class="sn">16.7</span><div><b>二氧化碳的運送</b><br><span class="sq">碳酸酐酶、碳酸氫根、氯轉移。</span></div></div>
+    <div class="arr">↓ CO₂ 就是酸，所以呼吸影響酸鹼</div>
+    <div class="step"><span class="sn">16.8</span><div><b>血液的酸鹼平衡</b><br><span class="sq">緩衝系統、呼吸性與代謝性酸中毒、鹼中毒。</span></div></div>
+    <div class="arr">↓ 實際應用</div>
+    <div class="step"><span class="sn">16.9</span><div><b>運動與高海拔</b><br><span class="sq">運動時的換氣、高海拔的適應。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 16.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">16.1</span>呼吸系統</h2>
+  <div class="en">The Respiratory System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>「呼吸」的三層意思；呼吸道分成只負責送氣的<b>傳導區</b>與實際交換氣體的<b>呼吸區</b>；<b>肺泡</b>的構造（第一型、第二型肺泡細胞）；以及肺在<b>胸腔</b>內被<b>胸膜</b>包住的關係。</div><div><span class="lt lt2">為什麼放第一節？</span>先認識構造：肺泡為什麼適合氣體交換、肺為什麼會跟著胸壁一起擴張，是 16.2、16.3 換氣力學的基礎。</div></div>
+  <div class="oneline">呼吸包括換氣（空氣進出肺）、氣體交換（肺泡與血液、血液與組織之間）、細胞呼吸；空氣從鼻、咽、喉、氣管、支氣管到終末細支氣管是傳導區（加溫、加濕、過濾，不交換氣體），呼吸性細支氣管到肺泡是呼吸區；約 3 億個肺泡提供約 60–80 m² 的表面積，第一型肺泡細胞極薄利於擴散，第二型分泌表面活性劑；肺被臟層與壁層胸膜包住，中間的胸膜腔只有一層液體。</div>
+
+  <h3 id="h1">呼吸的意義與肺泡 Respiration and the Alveoli</h3>
+  <p class="core">呼吸＝①換氣（ventilation，呼吸動作）②氣體交換（肺泡↔血液、血液↔組織，靠擴散）③細胞呼吸（粒線體用 O₂）；肺泡約 3 億個、總面積約 60–80 m²；肺泡壁：第一型肺泡細胞（占表面 95%，極薄，與微血管內皮共同構成約 0.3 µm 的呼吸膜）、第二型肺泡細胞（分泌表面活性劑）、肺泡巨噬細胞。</p>
+  <p><b>呼吸</b> <i class="en-term">respiration</i> 包含三件事：①<b>換氣</b> <i class="en-term">ventilation</i>——把空氣吸進、呼出肺；②<b>氣體交換</b>——O₂ 與 CO₂ 在肺泡與血液之間、血液與組織之間以<b>擴散</b>移動；③<b>細胞呼吸</b>——粒線體用 O₂ 產生 ATP（第 5 章）。</p>
+  <p>氣體交換發生在<b>肺泡</b> <i class="en-term">alveoli</i>：約 3 億個直徑約 0.25 mm 的小囊，總面積約 <b>60–80 m²</b>（約半個網球場）。肺泡壁有：</p>
+  <ul class="dots">
+    <li><b>第一型肺泡細胞</b>：占肺泡表面約 95%，非常扁平，與微血管內皮貼在一起，兩者合起來的厚度只有約 <b>0.3 µm</b>，氣體擴散距離極短。</li>
+    <li><b>第二型肺泡細胞</b>：較圓，分泌<b>表面活性劑</b>（16.2）。</li>
+    <li><b>肺泡巨噬細胞</b>：清除進入肺泡的灰塵與微生物。</li>
+  </ul>
+
+  <h3 id="h2">傳導區與呼吸區 Conducting and Respiratory Zones</h3>
+  <p class="core">傳導區：鼻腔、咽、喉、氣管、支氣管、細支氣管、終末細支氣管——不交換氣體，負責送氣、加溫、加濕、過濾（黏液＋纖毛＝黏液纖毛電扶梯）；呼吸區：呼吸性細支氣管、肺泡管、肺泡囊——進行氣體交換；氣管有 C 形軟骨環，細支氣管沒有軟骨，靠平滑肌調整口徑（氣喘時收縮）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <path d="M150,20 L150,100" stroke="#0891b2" stroke-width="18" stroke-linecap="round"/>
+    <g stroke="#e0f2fe" stroke-width="3"><line x1="141" y1="35" x2="159" y2="35"/><line x1="141" y1="50" x2="159" y2="50"/><line x1="141" y1="65" x2="159" y2="65"/><line x1="141" y1="80" x2="159" y2="80"/></g>
+    <path d="M150,100 C130,120 100,130 80,150 M150,100 C170,120 200,130 220,150" fill="none" stroke="#0891b2" stroke-width="12" stroke-linecap="round"/>
+    <path d="M80,150 C70,170 60,180 50,195 M80,150 C90,170 100,180 108,195 M220,150 C210,170 200,180 192,195 M220,150 C230,170 240,180 250,195" fill="none" stroke="#0891b2" stroke-width="6" stroke-linecap="round"/>
+    <g fill="#fecaca" stroke="#dc2626" stroke-width="1.5"><circle cx="46" cy="206" r="10"/><circle cx="58" cy="214" r="9"/><circle cx="104" cy="206" r="10"/><circle cx="114" cy="214" r="9"/><circle cx="188" cy="206" r="10"/><circle cx="198" cy="214" r="9"/><circle cx="248" cy="206" r="10"/><circle cx="258" cy="214" r="9"/></g>
+    <text x="170" y="40" font-size="12">氣管（C 形軟骨）</text><text x="230" y="120" font-size="12">支氣管</text><text x="256" y="172" font-size="12">細支氣管</text><text x="20" y="244" font-size="11" fill="#6b7280">細支氣管：無軟骨、有平滑肌</text><text x="270" y="216" font-size="12" fill="#b91c1c">肺泡</text>
+    <rect x="330" y="20" width="140" height="150" rx="10" fill="#e0f2fe" stroke="#0891b2"/><text x="400" y="44" font-size="13" text-anchor="middle" font-weight="bold" fill="#0e7490">傳導區</text>
+    <text x="400" y="66" font-size="11" text-anchor="middle">鼻 → 咽 → 喉 → 氣管</text><text x="400" y="84" font-size="11" text-anchor="middle">→ 支氣管 → 細支氣管</text><text x="400" y="102" font-size="11" text-anchor="middle">→ 終末細支氣管</text><text x="400" y="128" font-size="11" text-anchor="middle" fill="#6b7280">送氣、加溫、加濕、過濾</text><text x="400" y="146" font-size="11" text-anchor="middle" fill="#6b7280">不交換氣體（死腔）</text>
+    <rect x="330" y="182" width="140" height="80" rx="10" fill="#fee2e2" stroke="#dc2626"/><text x="400" y="206" font-size="13" text-anchor="middle" font-weight="bold" fill="#b91c1c">呼吸區</text><text x="400" y="226" font-size="11" text-anchor="middle">呼吸性細支氣管</text><text x="400" y="244" font-size="11" text-anchor="middle">→ 肺泡管 → 肺泡</text>
+    <text x="150" y="280" font-size="12" text-anchor="middle" fill="#374151">分支約 23 代，越分越細、數量越多</text>
+  </svg><figcaption>呼吸道像一棵倒長的樹：樹幹到細枝（傳導區）只負責送氣，最末端的葉子（肺泡，呼吸區）才交換氣體。</figcaption></figure>
+  <ul class="dots">
+    <li><b>傳導區</b> <i class="en-term">conducting zone</i>：鼻腔、咽、喉、氣管、支氣管、細支氣管到<b>終末細支氣管</b>。不交換氣體，負責把空氣<b>加溫</b>到體溫、<b>加濕</b>到水分飽和、<b>過濾</b>：上皮的杯狀細胞分泌黏液黏住微粒，纖毛把黏液往上推到咽部吞下或咳出（<b>黏液纖毛電扶梯</b>）。抽菸會破壞纖毛。</li>
+    <li><b>呼吸區</b> <i class="en-term">respiratory zone</i>：<b>呼吸性細支氣管</b>（壁上開始有肺泡）、<b>肺泡管</b>、<b>肺泡囊</b>，實際進行氣體交換。</li>
+    <li>氣管有 <b>C 形軟骨環</b>撐開管腔；越往下軟骨越少，<b>細支氣管沒有軟骨</b>，靠<b>平滑肌</b>調整口徑——交感（β₂）使其擴張，副交感與組織胺、白三烯素使其收縮（氣喘）。</li>
+  </ul>
+
+  <h3 id="h3">胸腔與胸膜 Thoracic Cavity</h3>
+  <p class="core">胸腔由胸壁與橫膈圍成；肺表面覆蓋臟層胸膜，胸壁內面覆蓋壁層胸膜，兩者之間的胸膜腔只有薄薄一層液體，使肺貼著胸壁、跟著胸壁擴張；氣胸＝空氣進入胸膜腔 → 肺塌陷。</p>
+  <p>肺位於胸腔內，下方是<b>橫膈</b>。肺的表面覆蓋<b>臟層胸膜</b>，胸壁內面覆蓋<b>壁層胸膜</b>，兩層之間的<b>胸膜腔</b>只有一層薄薄的液體——像兩片濕玻璃黏在一起，可以滑動卻不容易分開，所以胸壁擴張時肺也被拉著擴張。若胸壁受傷使空氣進入胸膜腔（<b>氣胸</b>），這種「吸住」的力量消失，肺就因自身彈性而<b>塌陷</b>。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>呼吸＝換氣＋氣體交換＋細胞呼吸。</li>
+      <li>肺泡約 3 億個、60–80 m²；第一型肺泡細胞薄（呼吸膜約 0.3 µm）；第二型分泌表面活性劑；肺泡巨噬細胞。</li>
+      <li>傳導區（到終末細支氣管）：送氣、加溫、加濕、過濾（黏液纖毛電扶梯）；呼吸區（呼吸性細支氣管以下）：交換。</li>
+      <li>細支氣管無軟骨、靠平滑肌調口徑；β₂ 擴張。</li>
+      <li>臟層與壁層胸膜之間的液體使肺跟著胸壁擴張；氣胸 → 肺塌陷。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>換氣</td><td>ventilation</td><td>肺泡</td><td>alveolus (alveoli)</td></tr>
+      <tr><td>第一型／第二型肺泡細胞</td><td>type I / type II alveolar cell</td><td>傳導區／呼吸區</td><td>conducting / respiratory zone</td></tr>
+      <tr><td>終末細支氣管</td><td>terminal bronchiole</td><td>呼吸性細支氣管</td><td>respiratory bronchiole</td></tr>
+      <tr><td>臟層／壁層胸膜</td><td>visceral / parietal pleura</td><td>氣胸</td><td>pneumothorax</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">16.2</span>換氣的物理特性</h2>
+  <div class="en">Physical Aspects of Ventilation</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>空氣流動靠<b>壓力差</b>：<b>肺內壓</b>與<b>胸膜內壓</b>的變化；肺的三個物理性質——<b>順應性</b>（好不好撐開）、<b>彈性</b>（會不會彈回）、<b>表面張力</b>（肺泡的液體使它想縮小），以及降低表面張力的<b>表面活性劑</b>。</div><div><span class="lt lt2">為什麼接在 16.1 後面？</span>知道構造後，看讓空氣進出的物理原理；16.3 的呼吸肌就是在利用這些原理。</div></div>
+  <div class="oneline">空氣從高壓流向低壓：吸氣時胸腔擴大，肺內壓降到低於大氣壓，空氣流入；呼氣時相反；胸膜內壓一直低於肺內壓（負壓），把肺撐開；肺要容易撐開（順應性高）也要能彈回（彈性），肺泡內的液體表面張力會讓肺泡塌陷，第二型肺泡細胞分泌的表面活性劑降低表面張力，早產兒缺乏時造成呼吸窘迫症候群。</div>
+  <div class="think">為什麼早產兒常需要呼吸器？</div>
+
+  <h3 id="h4">肺內壓與胸膜內壓 Intrapulmonary and Intrapleural Pressures</h3>
+  <p class="core">波以耳定律：氣體壓力與體積成反比；吸氣：胸腔擴大 → 肺容積↑ → 肺內壓降到約 −3 mmHg（低於大氣壓）→ 空氣流入；呼氣：肺內壓升到約 +3 mmHg → 流出；胸膜內壓始終低於肺內壓（吸氣時約 −6、呼氣時約 −3 mmHg），兩者之差（跨肺壓）把肺撐開。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a161" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="120" y="20" font-size="14" text-anchor="middle" font-weight="bold">吸氣</text><text x="360" y="20" font-size="14" text-anchor="middle" font-weight="bold">呼氣</text>
+    <path d="M40,60 L200,60 L215,200 L25,200 z" fill="#fff7ed" stroke="#b45309" stroke-width="2"/>
+    <ellipse cx="120" cy="130" rx="72" ry="58" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+    <path d="M25,206 C70,222 170,222 215,206" fill="none" stroke="#7c3aed" stroke-width="4"/><path d="M120,206 L120,232" stroke="#7c3aed" stroke-width="2" marker-end="url(#a161)"/>
+    <path d="M120,30 L120,64" stroke="#2563eb" stroke-width="3" marker-end="url(#a161)"/>
+    <text x="120" y="128" font-size="12" text-anchor="middle">肺內壓 −3</text><text x="120" y="146" font-size="11" text-anchor="middle" fill="#6b7280">（比大氣低）</text>
+    <text x="10" y="244" font-size="11" fill="#6d28d9">橫膈收縮下降</text><text x="132" y="48" font-size="11" fill="#1d4ed8">空氣流入</text>
+    <path d="M290,70 L430,70 L440,190 L280,190 z" fill="#fff7ed" stroke="#b45309" stroke-width="2"/>
+    <ellipse cx="360" cy="130" rx="56" ry="46" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+    <path d="M280,190 C320,160 400,160 440,190" fill="none" stroke="#7c3aed" stroke-width="4"/>
+    <path d="M360,74 L360,36" stroke="#2563eb" stroke-width="3" marker-end="url(#a161)"/>
+    <text x="360" y="128" font-size="12" text-anchor="middle">肺內壓 +3</text><text x="360" y="146" font-size="11" text-anchor="middle" fill="#6b7280">（比大氣高）</text>
+    <text x="370" y="48" font-size="11" fill="#1d4ed8">空氣流出</text><text x="300" y="214" font-size="11" fill="#6d28d9">橫膈放鬆上升（被動）</text>
+    <text x="240" y="244" font-size="11" text-anchor="middle" fill="#6b7280">數值為相對於大氣壓（760）的 mmHg</text>
+  </svg><figcaption>換氣靠壓力差：吸氣時胸腔變大、肺內壓降到比大氣低，空氣流進來；呼氣時胸腔變小、肺內壓高於大氣，空氣流出去。</figcaption></figure>
+  <p>依<b>波以耳定律</b> <i class="en-term">Boyle's law</i>，在溫度不變時，氣體的壓力與體積成反比。以大氣壓（760 mmHg）為 0：</p>
+  <ul class="dots">
+    <li><b>吸氣</b>：胸腔擴大 → 肺被拉大 → <b>肺內壓</b> <i class="en-term">intrapulmonary pressure</i> 降到約 −3 mmHg（低於大氣壓）→ 空氣流入，直到壓力相等。</li>
+    <li><b>呼氣</b>：胸腔縮小 → 肺內壓升到約 +3 mmHg → 空氣流出。</li>
+    <li><b>胸膜內壓</b> <i class="en-term">intrapleural pressure</i>（胸膜腔內的壓力）<b>始終低於肺內壓</b>（平靜呼吸時呼氣約 −3、吸氣約 −6 mmHg），因為肺想往內縮、胸壁想往外彈，把胸膜腔「拉」成負壓。肺內壓與胸膜內壓的差（<b>跨肺壓</b>）把肺撐開。</li>
+  </ul>
+
+  <h3 id="h5">肺的物理性質 Physical Properties of the Lungs</h3>
+  <p class="core">順應性＝肺容易被撐開的程度（容積變化 ÷ 跨肺壓變化），肺纖維化時下降；彈性＝被撐開後彈回的能力（來自彈性蛋白纖維與表面張力），肺氣腫時彈性纖維被破壞，彈性下降、順應性反而增加，呼氣困難；表面張力：肺泡內表面的水分子互相吸引使肺泡想縮小，依拉普拉斯定律 P＝2T/r，小肺泡壓力較大而易塌陷。</p>
+  <ul class="dots">
+    <li><b>順應性</b> <i class="en-term">compliance</i>：肺容易被撐開的程度。肺<b>纖維化</b>（結締組織增加）使順應性下降，吸氣變得很費力。</li>
+    <li><b>彈性</b> <i class="en-term">elasticity</i>：被撐開後彈回的傾向，來自彈性蛋白纖維與表面張力。平靜<b>呼氣是被動的</b>，就是靠肺的彈性回縮。<b>肺氣腫</b>時彈性纖維被破壞，肺雖然更容易撐開（順應性上升），卻無法有效彈回，呼氣困難、空氣滯留。</li>
+    <li><b>表面張力</b> <i class="en-term">surface tension</i>：肺泡內面有一層薄水膜，水分子互相吸引，使肺泡傾向縮小、塌陷。依<b>拉普拉斯定律</b>（P＝2T/r），半徑越小的肺泡，向內的壓力越大，小肺泡容易把空氣擠到大肺泡而塌陷。</li>
+  </ul>
+  <h4>表面活性劑與呼吸窘迫症候群 Surfactant and Respiratory Distress Syndrome</h4>
+  <p class="core">表面活性劑：第二型肺泡細胞分泌的磷脂質（主要是二棕櫚醯磷脂醯膽鹼 DPPC）與蛋白質，插入水分子之間降低表面張力，且肺泡越小濃度越高、降得越多，防止小肺泡塌陷、減少吸氣做功；胎兒約 28–32 週開始足量分泌；早產兒缺乏 → 新生兒呼吸窘迫症候群（透明膜疾病），可用產前類固醇促進成熟、出生後補充表面活性劑與呼吸器。</p>
+  <p><b>表面活性劑</b> <i class="en-term">surfactant</i> 是<b>第二型肺泡細胞</b>分泌的脂蛋白混合物，主要成分是一種磷脂質（<b>二棕櫚醯磷脂醯膽鹼</b>，DPPC）。它插在水分子之間，<b>降低表面張力</b>；而且肺泡縮小時表面活性劑被擠得更密，降低張力的效果更強，所以小肺泡不會塌陷，吸氣也比較省力。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>胎兒大約在懷孕 <b>28–32 週</b>以後才開始分泌足量的表面活性劑。早產兒缺乏表面活性劑，肺泡在每次呼氣時塌陷，每次吸氣都要重新費力撐開，很快就累了，稱為<b>新生兒呼吸窘迫症候群</b>（又稱透明膜疾病）。治療是給予人工表面活性劑與呼吸器；預期早產時，產前給母親<b>類固醇</b>可促進胎兒肺成熟。</div>
+  <p>成人在嚴重肺損傷時也可能因表面活性劑受損，發生<b>急性呼吸窘迫症候群</b>（ARDS）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>波以耳定律：容積↑ → 壓力↓；吸氣時肺內壓約 −3、呼氣約 +3 mmHg。</li>
+      <li>胸膜內壓始終低於肺內壓（負壓），跨肺壓撐開肺。</li>
+      <li>順應性（易撐開，纖維化↓）、彈性（彈回，肺氣腫↓）、表面張力（使肺泡塌陷，拉普拉斯定律）。</li>
+      <li>平靜呼氣是被動的（彈性回縮）。</li>
+      <li>表面活性劑（第二型肺泡細胞、DPPC）降低表面張力；早產兒缺乏 → 呼吸窘迫症候群。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>波以耳定律</td><td>Boyle's law</td><td>肺內壓</td><td>intrapulmonary pressure</td></tr>
+      <tr><td>胸膜內壓</td><td>intrapleural pressure</td><td>跨肺壓</td><td>transpulmonary pressure</td></tr>
+      <tr><td>順應性</td><td>compliance</td><td>彈性</td><td>elasticity</td></tr>
+      <tr><td>表面張力</td><td>surface tension</td><td>拉普拉斯定律</td><td>law of Laplace</td></tr>
+      <tr><td>表面活性劑</td><td>surfactant</td><td>呼吸窘迫症候群</td><td>respiratory distress syndrome</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">16.3</span>呼吸的力學</h2>
+  <div class="en">Mechanics of Breathing</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>吸氣與呼氣</b>由哪些肌肉完成；用<b>肺量計</b>測得的<b>肺容積與肺容量</b>（潮氣容積、肺活量、殘氣容積等）；<b>每分鐘換氣量</b>與<b>死腔</b>；以及<b>限制性</b>與<b>阻塞性</b>肺病怎麼從肺功能分辨，常見的<b>氣喘、肺氣腫、慢性阻塞性肺病、肺纖維化</b>。</div><div><span class="lt lt2">為什麼接在 16.2 後面？</span>16.2 說明壓力差的原理；這一節看是誰製造壓力差，並學會用數字評估換氣功能。</div></div>
+  <div class="oneline">平靜吸氣靠橫膈與外肋間肌收縮擴大胸腔（主動），平靜呼氣靠肺的彈性回縮（被動），用力時才動用輔助肌與腹肌；一次平靜呼吸約 500 mL（潮氣容積），盡力吸到盡力吐的量是肺活量，吐不完的是殘氣容積；限制性肺病（纖維化）使肺活量下降、一秒率正常，阻塞性肺病（氣喘、肺氣腫、慢性支氣管炎）使第一秒用力呼氣量下降、一秒率下降。</div>
+  <div class="think">為什麼一樣是每分鐘吸 6 公升空氣，「慢而深」的呼吸比「快而淺」更有效率？</div>
+
+  <h3 id="h6">吸氣與呼氣 Inspiration and Expiration</h3>
+  <p class="core">平靜吸氣（主動）：橫膈收縮下降（最主要）＋外肋間肌收縮使肋骨上提外移 → 胸腔擴大；用力吸氣加上胸鎖乳突肌、斜角肌、胸小肌；平靜呼氣（被動）：肌肉放鬆、肺與胸壁彈性回縮；用力呼氣（主動）：內肋間肌與腹肌收縮（腹壓推橫膈上升）。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>平靜時</th><th>用力時</th></tr>
+    <tr><td><b>吸氣</b>（主動）</td><td><b>橫膈</b>收縮下降（最主要，負責約 2/3）＋<b>外肋間肌</b>收縮使肋骨上提、胸腔前後左右變大</td><td>再加上<b>胸鎖乳突肌、斜角肌</b>、胸小肌（輔助呼吸肌）</td></tr>
+    <tr><td><b>呼氣</b></td><td><b>被動</b>：肌肉放鬆，肺與胸壁<b>彈性回縮</b></td><td><b>主動</b>：<b>內肋間肌</b>使肋骨下降、<b>腹肌</b>收縮使腹壓升高把橫膈往上推</td></tr>
+  </table></div>
+  <p>橫膈由頸部發出的<b>膈神經</b>（C3–C5）支配，所以高位頸椎損傷可能使人無法自行呼吸。</p>
+
+  <h3 id="h7">肺功能測試 Pulmonary Function Tests</h3>
+  <p class="core">肺量計測量：潮氣容積（TV，約 500 mL）、吸氣儲備容積（IRV，約 3,000）、呼氣儲備容積（ERV，約 1,200）、殘氣容積（RV，約 1,200，肺量計測不到）；容量＝容積相加：肺活量 VC＝IRV＋TV＋ERV（約 4,700），總肺容量 TLC＝VC＋RV，功能肋餘容量 FRC＝ERV＋RV，吸氣容量 IC＝TV＋IRV；數值隨性別、身高、年齡而異。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="30" y1="260" x2="300" y2="260" stroke="#374151" stroke-width="1.5"/>
+    <path d="M30,170 C40,160 50,160 60,170 C70,180 80,180 90,170 C100,160 110,160 120,170 C130,180 140,180 150,170 L165,40 L180,230 L195,170 C205,160 215,160 225,170 C235,180 245,180 255,170 C265,160 275,160 290,170" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+    <g stroke="#9ca3af" stroke-dasharray="3 3"><line x1="30" y1="40" x2="470" y2="40"/><line x1="30" y1="160" x2="470" y2="160"/><line x1="30" y1="180" x2="470" y2="180"/><line x1="30" y1="230" x2="470" y2="230"/></g>
+    <rect x="320" y="40" width="34" height="120" fill="#dbeafe"/><text x="337" y="104" font-size="10" text-anchor="middle">IRV</text>
+    <rect x="320" y="160" width="34" height="20" fill="#fde68a"/><text x="337" y="174" font-size="10" text-anchor="middle">TV</text>
+    <rect x="320" y="180" width="34" height="50" fill="#dcfce7"/><text x="337" y="209" font-size="10" text-anchor="middle">ERV</text>
+    <rect x="320" y="230" width="34" height="30" fill="#e5e7eb"/><text x="337" y="249" font-size="10" text-anchor="middle">RV</text>
+    <path d="M364,40 L364,230" stroke="#7c3aed" stroke-width="3"/><text x="370" y="140" font-size="11" fill="#6d28d9">肺活量 VC</text>
+    <path d="M440,40 L440,260" stroke="#111827" stroke-width="3"/><text x="446" y="120" font-size="11" fill="#111827">總肺</text><text x="446" y="136" font-size="11" fill="#111827">容量</text>
+    <path d="M404,180 L404,260" stroke="#16a34a" stroke-width="3"/><text x="370" y="276" font-size="10" fill="#15803d">功能肋餘容量 FRC</text>
+    <g font-size="11" fill="#374151"><text x="40" y="150">平靜呼吸</text><text x="150" y="30">最大吸氣</text><text x="168" y="248">最大呼氣</text></g>
+    <text x="150" y="294" font-size="11" text-anchor="middle" fill="#6b7280">殘氣容積吐不出來，肺量計量不到</text>
+  </svg><figcaption>肺量圖：一般呼吸時上下起伏的是潮氣容積；盡力吸到盡力吐的範圍是肺活量；吐完仍留在肺裡的是殘氣容積。</figcaption></figure>
+  <p>用<b>肺量計</b> <i class="en-term">spirometer</i> 記錄呼吸時的氣量變化。四種基本<b>容積</b>：</p>
+  <div class="tblwrap"><table>
+    <tr><th>容積</th><th>意義</th><th>約值（成年男性）</th></tr>
+    <tr><td><b>潮氣容積</b> TV</td><td>平靜時一次吸入或呼出的量</td><td>500 mL</td></tr>
+    <tr><td><b>吸氣儲備容積</b> IRV</td><td>平靜吸氣後還能再吸入的最大量</td><td>3,000 mL</td></tr>
+    <tr><td><b>呼氣儲備容積</b> ERV</td><td>平靜呼氣後還能再呼出的最大量</td><td>1,200 mL</td></tr>
+    <tr><td><b>殘氣容積</b> RV</td><td>盡力呼氣後仍留在肺內的量（肺量計<b>量不到</b>）</td><td>1,200 mL</td></tr>
+  </table></div>
+  <p>兩個以上容積相加稱為<b>容量</b>：</p>
+  <ul class="dots">
+    <li><b>肺活量</b> <i class="en-term">vital capacity, VC</i>＝IRV＋TV＋ERV（盡力吸氣後盡力呼出的量，約 4,700 mL）。</li>
+    <li><b>總肺容量</b> TLC＝VC＋RV（約 5,900 mL）。</li>
+    <li><b>功能肋餘容量</b> FRC＝ERV＋RV（平靜呼氣後留在肺內的量，約 2,400 mL），使肺泡氣體成分保持穩定。</li>
+    <li><b>吸氣容量</b> IC＝TV＋IRV。</li>
+  </ul>
+  <h4>每分鐘換氣量與死腔 Minute Volume and Dead Space</h4>
+  <p class="core">每分鐘總換氣量＝潮氣容積 × 呼吸頻率（500 × 12 ≈ 6 L/分）；解剖死腔＝傳導區的容量（約 150 mL，約等於以磅計的體重），不參與交換；肺泡換氣量＝（潮氣容積－死腔）× 頻率，才是真正有效的換氣，所以慢而深的呼吸比快而淺有效率。</p>
+  <ul class="dots">
+    <li><b>每分鐘總換氣量</b>＝潮氣容積 × 呼吸頻率，例：500 mL × 12 次/分＝6 L/分。</li>
+    <li>每次吸入的空氣中，最後約 <b>150 mL</b> 停留在傳導區，沒有到達肺泡，這段空間叫<b>解剖死腔</b> <i class="en-term">anatomical dead space</i>。</li>
+    <li><b>肺泡換氣量</b>＝（潮氣容積－死腔）× 頻率，才是真正參與交換的量。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>同樣 6 L/分：慢而深（1,000 mL × 6 次）→ 肺泡換氣量＝(1,000－150) × 6＝<b>5,100 mL</b>；快而淺（250 mL × 24 次）→ (250－150) × 24＝<b>2,400 mL</b>。每次都要先「浪費」150 mL 在死腔，所以淺快呼吸效率差很多。</div>
+
+  <h3 id="h8">限制性與阻塞性疾病 Restrictive and Obstructive Disorders</h3>
+  <p class="core">用力呼氣測驗：第一秒用力呼氣量（FEV₁）與用力肺活量（FVC），一秒率 FEV₁/FVC 正常 ≥ 約 80%；限制性（肺纖維化、肺組織損傷、胸壁或神經肌肉疾病）：肺無法充分擴張，VC 下降、FEV₁/FVC 正常；阻塞性（氣喘、慢性支氣管炎、肺氣腫）：呼氣氣流受阻，FEV₁ 與 FEV₁/FVC 下降、VC 可能正常；慢性阻塞性肺病（COPD）＝慢性支氣管炎＋肺氣腫，抽菸為主因。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="40" y1="200" x2="460" y2="200" stroke="#374151" stroke-width="2"/><line x1="40" y1="200" x2="40" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="250" y="226" font-size="12" text-anchor="middle">時間（秒）→</text><text x="24" y="110" font-size="12" text-anchor="middle" transform="rotate(-90 24 110)">呼出量</text>
+    <line x1="120" y1="20" x2="120" y2="206" stroke="#9ca3af" stroke-dasharray="4 3"/><text x="120" y="218" font-size="11" text-anchor="middle">1 秒</text>
+    <path d="M40,200 C60,80 90,50 120,44 C200,38 300,36 440,36" fill="none" stroke="#2563eb" stroke-width="3"/>
+    <path d="M40,200 C60,120 90,104 120,100 C200,96 300,94 440,94" fill="none" stroke="#16a34a" stroke-width="3" stroke-dasharray="6 4"/>
+    <path d="M40,200 C70,160 90,150 120,144 C200,110 300,70 440,60" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <text x="300" y="30" font-size="12" fill="#1d4ed8" font-weight="bold">正常：FEV₁/FVC ≈ 80%</text>
+    <text x="250" y="110" font-size="12" fill="#15803d" font-weight="bold">限制性：總量少，比率正常</text>
+    <text x="250" y="140" font-size="12" fill="#b91c1c" font-weight="bold">阻塞性：吐得慢，比率下降</text>
+  </svg><figcaption>用力呼氣曲線：限制性肺病「吸不飽」，總量變少但吐得一樣快；阻塞性肺病「吐不出」，第一秒吐出的比率明顯下降。</figcaption></figure>
+  <p>做<b>用力呼氣</b>測驗：盡力吸飽後盡快盡力吐出，量<b>第一秒用力呼氣量</b>（FEV₁）與<b>用力肺活量</b>（FVC）。正常人第一秒能吐出約 80% 以上，即 <b>FEV₁/FVC ≥ 約 0.8</b>。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>限制性疾病 restrictive</th><th>阻塞性疾病 obstructive</th></tr>
+    <tr><td>問題</td><td>肺<b>無法充分擴張</b>（吸不飽）</td><td>呼吸道<b>阻力增加</b>，呼氣氣流受阻（吐不出）</td></tr>
+    <tr><td>肺活量</td><td><b>下降</b></td><td>可能正常（嚴重時下降）</td></tr>
+    <tr><td>FEV₁/FVC</td><td><b>正常</b>（甚至偏高）</td><td><b>下降</b></td></tr>
+    <tr><td>例子</td><td><b>肺纖維化</b>、肺組織損傷、胸廓變形、神經肌肉疾病、肥胖</td><td><b>氣喘</b>、<b>慢性支氣管炎</b>、<b>肺氣腫</b></td></tr>
+  </table></div>
+  <div class="warn"><b class="t">更正：</b>講義版簡報把限制性肺病的例子寫成「肺纖維化和肺氣腫」；<b>肺氣腫屬於阻塞性</b>肺病，限制性的典型例子是肺纖維化。</div>
+  <h4>肺部疾病 Pulmonary Disorders</h4>
+  <p class="core">氣喘：呼吸道慢性發炎，支氣管平滑肌對刺激過度反應而收縮（白三烯素、組織胺），可逆，以 β₂ 致效劑擴張、吸入型類固醇抗發炎；肺氣腫：肺泡壁被破壞（抽菸使發炎細胞釋放蛋白酶；α₁-抗胰蛋白酶缺乏），氣體交換面積減少，細支氣管失去支撐而呼氣時塌陷，空氣滯留（桶狀胸）；慢性支氣管炎：黏液過多、纖毛受損、慢性咳痰；COPD 合稱後兩者；肺纖維化：結締組織增生，順應性下降（如石綿、矽肺）。</p>
+  <ul class="dots">
+    <li><b>氣喘</b> <i class="en-term">asthma</i>：呼吸道<b>慢性發炎</b>，對過敏原、冷空氣、運動等刺激過度反應，支氣管平滑肌收縮、黏液增加（白三烯素、組織胺），出現喘鳴、呼吸困難；通常<b>可逆</b>。治療用 <b>β₂ 致效劑</b>（如沙丁胺醇）擴張支氣管，吸入型<b>類固醇</b>與白三烯素拮抗劑控制發炎。</li>
+    <li><b>肺氣腫</b> <i class="en-term">emphysema</i>：<b>肺泡壁被破壞</b>，小肺泡融合成大氣囊，氣體交換面積減少；細支氣管失去周圍組織的牽拉支撐，呼氣時容易塌陷，空氣滯留（<b>桶狀胸</b>）。主因是<b>抽菸</b>：刺激發炎細胞釋放分解彈性蛋白的蛋白酶；遺傳性的 <b>α₁-抗胰蛋白酶缺乏</b>也會造成。</li>
+    <li><b>慢性支氣管炎</b>：長期刺激使黏液分泌過多、纖毛受損，慢性咳嗽咳痰，呼吸道變窄。</li>
+    <li><b>慢性阻塞性肺病</b>（<b>COPD</b>）：慢性支氣管炎與肺氣腫的合稱，不完全可逆，台灣十大死因之一。</li>
+    <li><b>肺纖維化</b> <i class="en-term">pulmonary fibrosis</i>：肺組織被結締組織取代，順應性下降（限制性），可因吸入石綿、矽塵（矽肺症）、煤塵或原因不明。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>COPD 病人呼吸做功大、能量消耗高，又常因喘而吃不下，容易<b>體重減輕與肌肉流失</b>，而營養不良會削弱呼吸肌。飲食建議少量多餐、足夠熱量與蛋白質；過去建議以較多脂肪取代部分醣類，以減少 CO₂ 產生（醣類的呼吸商 RQ＝1.0，脂肪約 0.7），但現在認為最重要的是<b>避免熱量過量</b>（過多熱量才會明顯增加 CO₂ 產生）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>平靜吸氣：橫膈（膈神經）＋外肋間肌；平靜呼氣：被動彈性回縮；用力呼氣：內肋間肌＋腹肌。</li>
+      <li>TV 500、IRV 3,000、ERV 1,200、RV 1,200（量不到）；VC＝IRV＋TV＋ERV；TLC＝VC＋RV；FRC＝ERV＋RV。</li>
+      <li>每分鐘換氣＝TV × 頻率；死腔約 150 mL；肺泡換氣＝（TV－死腔）× 頻率 → 慢深較有效。</li>
+      <li>限制性（纖維化）：VC↓、FEV₁/FVC 正常；阻塞性（氣喘、肺氣腫、慢支）：FEV₁/FVC↓。肺氣腫屬阻塞性（更正）。</li>
+      <li>氣喘可逆（β₂ 致效劑、類固醇）；肺氣腫肺泡壁破壞（抽菸、α₁-抗胰蛋白酶缺乏）；COPD。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>橫膈／膈神經</td><td>diaphragm / phrenic nerve</td><td>外／內肋間肌</td><td>external / internal intercostals</td></tr>
+      <tr><td>肺量計</td><td>spirometer</td><td>潮氣容積</td><td>tidal volume</td></tr>
+      <tr><td>肺活量</td><td>vital capacity</td><td>殘氣容積</td><td>residual volume</td></tr>
+      <tr><td>功能肋餘容量</td><td>functional residual capacity</td><td>解剖死腔</td><td>anatomical dead space</td></tr>
+      <tr><td>第一秒用力呼氣量</td><td>FEV₁</td><td>限制性／阻塞性</td><td>restrictive / obstructive</td></tr>
+      <tr><td>氣喘</td><td>asthma</td><td>肺氣腫</td><td>emphysema</td></tr>
+      <tr><td>慢性阻塞性肺病</td><td>COPD</td><td>肺纖維化</td><td>pulmonary fibrosis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">16.4</span>肺的氣體交換</h2>
+  <div class="en">Gas Exchange in the Lungs</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>氣體的<b>分壓</b>（道耳吞定律）、氣體在液體中的溶解（亨利定律）；肺泡、動脈血、靜脈血中 O₂ 與 CO₂ 的分壓；<b>血氣</b>測量；以及<b>肺循環</b>的特性與<b>通氣—灌流配合</b>。</div><div><span class="lt lt2">為什麼接在 16.3 後面？</span>空氣送到肺泡後，真正的目的是讓 O₂ 進入血液、CO₂ 離開血液。這一節用「分壓差」解釋氣體為什麼會往那個方向擴散。</div></div>
+  <div class="oneline">混合氣體中每種氣體的壓力叫分壓，空氣中 O₂ 約 21%，所以 PO₂ ≈ 760 × 0.21 ≈ 159 mmHg；加濕並混入肺內舊氣後，肺泡 PO₂ 約 105、PCO₂ 約 40；回到肺的靜脈血 PO₂ 約 40、PCO₂ 約 46，所以 O₂ 擴散進血液、CO₂ 擴散出來，動脈血 PO₂ 約 100、PCO₂ 約 40；肺循環壓力低、阻力小，缺氧時肺小動脈收縮，把血導向通氣好的區域。</div>
+  <div class="think">為什麼爬到高山上，即使空氣中的 O₂ 仍是 21%，還是會覺得缺氧？</div>
+
+  <h3 id="h9">分壓與溶解 Partial Pressures and Gas Solubility</h3>
+  <p class="core">道耳吞定律：混合氣體總壓＝各氣體分壓之和，分壓＝總壓 × 該氣體百分比；海平面大氣壓 760 mmHg，O₂ 約 21% → PO₂ ≈ 159 mmHg（乾燥空氣）；吸入後加濕（水蒸氣 47 mmHg）並與肺內殘氣混合 → 肺泡 PO₂ 約 105、PCO₂ 約 40；亨利定律：溶解在液體中的氣體量與分壓（及溶解度）成正比，CO₂ 溶解度約為 O₂ 的 20 倍；氣體由高分壓向低分壓擴散。</p>
+  <ul class="dots">
+    <li><b>道耳吞定律</b> <i class="en-term">Dalton's law</i>：混合氣體的總壓力等於各成分氣體<b>分壓</b>的總和；分壓＝總壓 × 該氣體所占百分比。</li>
+    <li>海平面大氣壓 760 mmHg；乾燥空氣中氮約 78%、<b>O₂ 約 21%</b>、CO₂ 約 0.04%。所以 <b>PO₂ ≈ 760 × 0.21 ≈ 159 mmHg</b>。</li>
+    <li>吸入的空氣在呼吸道被加濕（體溫下水蒸氣壓 47 mmHg），又和留在肺裡的舊空氣（功能肋餘容量）混合，所以<b>肺泡 PO₂ 約 105 mmHg、PCO₂ 約 40 mmHg</b>。</li>
+    <li><b>亨利定律</b> <i class="en-term">Henry's law</i>：溶解在液體中的氣體量與該氣體的分壓及其溶解度成正比。CO₂ 的溶解度約為 O₂ 的 20 倍，所以即使分壓差小也能快速擴散。</li>
+    <li>氣體總是從<b>分壓高</b>的地方擴散到<b>分壓低</b>的地方。</li>
+  </ul>
+  <div class="warn"><b class="t">更正：</b>講義版簡報寫「760 × 20% = 159」，大氣中 O₂ 約占 <b>21%</b>（760 × 0.21 ≈ 159 mmHg）。</div>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a162" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="150" y="10" width="180" height="56" rx="14" fill="#e0f2fe" stroke="#0891b2" stroke-width="2"/><text x="240" y="32" font-size="13" text-anchor="middle" font-weight="bold">肺泡</text><text x="240" y="52" font-size="12" text-anchor="middle">PO₂ 105　PCO₂ 40</text>
+    <rect x="10" y="100" width="150" height="56" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="85" y="122" font-size="12" text-anchor="middle" font-weight="bold">肺動脈（靜脈血）</text><text x="85" y="142" font-size="12" text-anchor="middle">PO₂ 40　PCO₂ 46</text>
+    <rect x="320" y="100" width="150" height="56" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="395" y="122" font-size="12" text-anchor="middle" font-weight="bold">肺靜脈（動脈血）</text><text x="395" y="142" font-size="12" text-anchor="middle">PO₂ 100　PCO₂ 40</text>
+    <path d="M160,128 L316,128" stroke="#9333ea" stroke-width="10"/><text x="240" y="160" font-size="11" text-anchor="middle">肺微血管</text>
+    <path d="M220,68 L220,118" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a162)"/><text x="176" y="90" font-size="11" fill="#b91c1c">O₂ 進入</text>
+    <path d="M260,118 L260,70" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a162)"/><text x="268" y="90" font-size="11" fill="#1d4ed8">CO₂ 出來</text>
+    <path d="M395,156 L395,216" stroke="#dc2626" stroke-width="3" marker-end="url(#a162)"/><path d="M85,216 L85,160" stroke="#2563eb" stroke-width="3" marker-end="url(#a162)"/>
+    <rect x="120" y="220" width="240" height="60" rx="14" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="244" font-size="13" text-anchor="middle" font-weight="bold">組織細胞</text><text x="240" y="264" font-size="12" text-anchor="middle">PO₂ ≤ 40　PCO₂ ≥ 46</text>
+    <path d="M360,240 L396,226" stroke="#dc2626" stroke-width="2" marker-start="url(#a162)"/><text x="410" y="260" font-size="11" fill="#b91c1c">O₂ 進組織</text>
+    <path d="M120,240 L84,226" stroke="#2563eb" stroke-width="2" marker-end="url(#a162)"/><text x="10" y="260" font-size="11" fill="#1d4ed8">CO₂ 進血液</text>
+  </svg><figcaption>氣體交換靠分壓差（單位 mmHg）：O₂ 從肺泡（105）往血液（40）擴散，再從血液（100）往組織（≤ 40）擴散；CO₂ 則反方向。</figcaption></figure>
+  <div class="eg"><b class="t">回答開頭問題：</b>高山上 O₂ 的比例仍是 21%，但<b>大氣壓變低</b>了：例如海拔約 3,000 公尺時大氣壓約 526 mmHg，PO₂ ≈ 526 × 0.21 ≈ 110 mmHg（海平面約 159），肺泡與動脈血的 PO₂ 也隨之下降，擴散進血液的驅動力變小，所以會缺氧（16.9）。</div>
+
+  <h3 id="h10">血氣測量 Blood PO₂ and PCO₂ Measurements</h3>
+  <p class="core">動脈血氣（ABG）：PO₂ 約 100 mmHg、PCO₂ 約 40 mmHg、pH 7.40；動脈血 PO₂ 反映肺的換氣與交換功能；血中 O₂ 絕大部分與血紅素結合（約 197 mL/L），溶解的很少（約 3 mL/L）；PO₂ 只反映溶解的 O₂，不等於含氧量。</p>
+  <p>以電極測量<b>動脈血氣</b>：正常動脈血 <b>PO₂ 約 100 mmHg、PCO₂ 約 40 mmHg、pH 約 7.40</b>；混合靜脈血 PO₂ 約 40、PCO₂ 約 46。注意 <b>PO₂ 只代表溶解在血漿中的 O₂</b>（每公升約 3 mL），而與血紅素結合的 O₂（每公升約 197 mL）才是大部分的含氧量（16.6）。臨床上常以指夾式<b>脈搏血氧計</b>測量血紅素的氧飽和度（SpO₂，正常約 95–100%）。</p>
+
+  <h3 id="h11">肺循環與通氣—灌流配合 Pulmonary Circulation and Ventilation/Perfusion Ratios</h3>
+  <p class="core">肺循環：血流量等於體循環（全部心輸出量），但壓力低（肺動脈約 25/10 mmHg）、阻力小；缺氧時肺小動脈收縮（與體循環相反），把血導向通氣良好的肺泡，使通氣與灌流配合（V/Q ≈ 0.8）；直立時肺尖通氣與灌流都較少、V/Q 偏高，肺底 V/Q 偏低；肺循環壓力低也使肺泡不易積水。</p>
+  <ul class="dots">
+    <li>肺接收<b>全部的心輸出量</b>，但肺循環的血管短而寬、<b>壓力低</b>（肺動脈約 25/10 mmHg）、阻力小；低的微血管靜水壓讓肺泡不容易積水（左心衰竭使壓力升高時就會肺水腫，第 14 章）。</li>
+    <li><b>缺氧時肺小動脈收縮</b>——與體循環（缺氧時擴張）<b>相反</b>。這樣可把血液從通氣不良的肺泡導向通氣良好的肺泡，使<b>通氣</b>（V）與<b>灌流</b>（Q）配合，整體比值約 0.8。</li>
+    <li>站立時重力使肺底的血流較多，肺尖較少，各區的 V/Q 比值不完全相同。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>道耳吞定律：分壓＝總壓 × 百分比；O₂ 21% → PO₂ ≈ 159（更正 20% 的寫法）。</li>
+      <li>肺泡 PO₂ 105、PCO₂ 40；靜脈血 40/46；動脈血 100/40；氣體由高分壓擴散到低分壓。</li>
+      <li>亨利定律：溶解量與分壓、溶解度成正比；CO₂ 溶解度約 O₂ 的 20 倍。</li>
+      <li>PO₂ 只代表溶解的 O₂；大部分 O₂ 與血紅素結合；SpO₂ 約 95–100%。</li>
+      <li>肺循環低壓低阻；缺氧使肺小動脈收縮（與體循環相反），配合 V/Q。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>分壓</td><td>partial pressure</td><td>道耳吞定律</td><td>Dalton's law</td></tr>
+      <tr><td>亨利定律</td><td>Henry's law</td><td>動脈血氣</td><td>arterial blood gas</td></tr>
+      <tr><td>脈搏血氧計</td><td>pulse oximeter</td><td>通氣—灌流比</td><td>ventilation/perfusion ratio</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">16.5</span>呼吸的調節</h2>
+  <div class="en">Regulation of Breathing</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>產生呼吸節律的<b>腦幹呼吸中樞</b>（延腦與橋腦）；調整呼吸深度與頻率的<b>化學感受器</b>——<b>中樞化學感受器</b>（感測腦脊髓液 H⁺）與<b>周邊化學感受器</b>（頸動脈體與主動脈體）；以及<b>肺部的受器</b>（赫鮑二氏反射）。</div><div><span class="lt lt2">為什麼接在 16.4 後面？</span>血液中的 PO₂、PCO₂ 與 pH 要維持穩定，就需要一套偵測與回饋：偵測血液氣體的變化，調整換氣量。這是第 1 章負回饋的又一個例子。</div></div>
+  <div class="oneline">延腦的呼吸中樞自動產生吸氣與呼氣的節律，橋腦的中樞加以修飾；平常調控呼吸的最主要因素是 CO₂：血中 CO₂ 進入腦脊髓液生成 H⁺，刺激延腦的中樞化學感受器；頸動脈體與主動脈體的周邊化學感受器感測血中 PO₂（低於約 60 mmHg 才明顯刺激）、PCO₂ 與 H⁺；肺被撐開時的伸張受器抑制吸氣。</div>
+  <div class="think">為什麼憋氣憋到極限時忍不住要吸氣？是缺 O₂ 還是 CO₂ 太多？</div>
+
+  <h3 id="h12">腦幹呼吸中樞 Brain Stem Respiratory Centers</h3>
+  <p class="core">延腦呼吸中樞產生自動節律：背側呼吸群（主要負責吸氣）、腹側呼吸群（含節律產生的前包欽格複合體，用力呼吸時也驅動呼氣）；橋腦呼吸中樞（呼吸調節中樞、長吸中樞）修飾節律、使吸氣與呼氣平順轉換；大腦皮質可隨意控制（說話、憋氣），但有限度。</p>
+  <ul class="dots">
+    <li><b>延腦</b>：自動產生呼吸節律。<b>背側呼吸群</b>主要負責吸氣（驅動膈神經與肋間神經）；<b>腹側呼吸群</b>中有產生節律的神經元（前包欽格複合體），用力呼吸時也驅動呼氣肌。</li>
+    <li><b>橋腦</b>：<b>呼吸調節中樞</b>（pneumotaxic）與<b>長吸中樞</b>（apneustic）互相調節，使吸氣與呼氣之間平順切換。</li>
+    <li><b>大腦皮質</b>：可以暫時<b>隨意</b>控制呼吸（說話、唱歌、憋氣），但無法無限憋氣——血中 CO₂ 累積到一定程度，腦幹就會強迫吸氣。</li>
+  </ul>
+  <p>延腦呼吸中樞受到損傷（例如鴉片類藥物過量抑制）會使呼吸變慢甚至停止。</p>
+
+  <h3 id="h13">化學感受器 Chemoreceptors</h3>
+  <p class="core">中樞化學感受器（延腦腹側表面）：血中 CO₂ 擴散通過血腦障壁進入腦脊髓液 → 與水生成碳酸 → 解離出 H⁺ → 刺激感受器（H⁺ 本身不易通過血腦障壁）→ 換氣增加；平常最主要的調控；周邊化學感受器（國考）：頸動脈體（頸總動脈分叉處，經舌咽神經）與主動脈體（主動脈弓，經迷走神經）→ 感測動脈血 PO₂ 下降（低於約 60 mmHg 才明顯）、PCO₂ 上升與 H⁺ 增加（代謝性酸中毒）；注意與壓力感受器（頸動脈竇、主動脈弓）區分。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a163" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="10" width="220" height="140" rx="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="120" y="32" font-size="13" text-anchor="middle" font-weight="bold">中樞化學感受器（延腦）</text>
+    <rect x="24" y="44" width="80" height="34" rx="8" fill="#fee2e2"/><text x="64" y="66" font-size="12" text-anchor="middle">血中 CO₂</text>
+    <line x1="114" y1="40" x2="114" y2="146" stroke="#6b7280" stroke-width="3" stroke-dasharray="6 3"/><text x="118" y="140" font-size="10" fill="#6b7280">血腦障壁</text>
+    <path d="M104,61 L132,61" stroke="#374151" stroke-width="2" marker-end="url(#a163)"/>
+    <text x="140" y="58" font-size="11">CO₂＋H₂O</text><text x="140" y="74" font-size="11">→ H₂CO₃ → H⁺</text>
+    <text x="140" y="98" font-size="11" fill="#6d28d9" font-weight="bold">H⁺ 刺激感受器</text>
+    <text x="24" y="102" font-size="10" fill="#6b7280">血中 H⁺ 不易</text><text x="24" y="116" font-size="10" fill="#6b7280">直接通過</text>
+    <rect x="250" y="10" width="220" height="140" rx="14" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="360" y="32" font-size="13" text-anchor="middle" font-weight="bold">周邊化學感受器</text>
+    <text x="360" y="56" font-size="12" text-anchor="middle">頸動脈體（舌咽神經）</text><text x="360" y="76" font-size="12" text-anchor="middle">主動脈體（迷走神經）</text>
+    <text x="360" y="104" font-size="11" text-anchor="middle">感測：PO₂↓（&lt; 約 60）</text><text x="360" y="122" font-size="11" text-anchor="middle">PCO₂↑、H⁺↑</text>
+    <path d="M120,150 L210,196" stroke="#374151" stroke-width="2.5" marker-end="url(#a163)"/><path d="M360,150 L270,196" stroke="#374151" stroke-width="2.5" marker-end="url(#a163)"/>
+    <rect x="150" y="200" width="180" height="40" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="240" y="225" font-size="13" text-anchor="middle" font-weight="bold">延腦呼吸中樞</text>
+    <path d="M240,240 L240,262" stroke="#374151" stroke-width="2.5" marker-end="url(#a163)"/>
+    <text x="240" y="282" font-size="13" text-anchor="middle" font-weight="bold" fill="#15803d">換氣增加 → 排出 CO₂、補充 O₂</text>
+  </svg><figcaption>兩組化學感受器：延腦的中樞感受器看的是腦脊髓液的 H⁺（來自 CO₂），是平時最主要的調控；頸動脈體與主動脈體的周邊感受器還能察覺血中 O₂ 明顯下降。</figcaption></figure>
+  <ul class="dots">
+    <li><b>中樞化學感受器</b> <i class="en-term">central chemoreceptors</i>：位於<b>延腦</b>腹側表面。血中的 CO₂ 很容易穿過<b>血腦障壁</b>，在<b>腦脊髓液</b>中與水形成碳酸，解離出 <b>H⁺</b>，H⁺ 刺激感受器 → 換氣增加。血液中的 H⁺ 本身不易通過血腦障壁，所以中樞感受器主要反映的是<b>血中 PCO₂</b>。這是平常調控呼吸<b>最主要</b>的機制（約占 CO₂ 反應的 2/3 以上）。</li>
+    <li><b>周邊化學感受器</b> <i class="en-term">peripheral chemoreceptors</i>：
+      <ul class="dots">
+        <li><b>頸動脈體</b> <i class="en-term">carotid bodies</i>：位於<b>頸總動脈分叉處</b>，訊號經<b>舌咽神經</b>傳到延腦；最重要。</li>
+        <li><b>主動脈體</b> <i class="en-term">aortic bodies</i>：位於<b>主動脈弓</b>附近，經<b>迷走神經</b>。</li>
+        <li>它們感測動脈血的 <b>PO₂ 下降</b>、PCO₂ 上升與 <b>H⁺ 增加</b>。PO₂ 要降到約 <b>60 mmHg 以下</b>才會明顯刺激換氣；它們也是對<b>代謝性酸中毒</b>（血中 H⁺ 增加）反應的主要感受器。</li>
+      </ul></li>
+  </ul>
+  <div class="warn"><b class="t">更正：</b>講義版簡報寫「化學受器感測到的是 CO₂，而非無法通過血腦障壁的 H⁺」，較精確的說法是：<b>中樞化學感受器感測的是 CO₂ 進入腦脊髓液後產生的 H⁺</b>。</div>
+  <div class="warn"><b class="t">國考考過：周邊化學感受器的位置</b>——<b>頸動脈體</b>（頸總動脈分叉處，舌咽神經）與<b>主動脈體</b>（主動脈弓，迷走神經）。小心不要和第 14 章的<b>壓力感受器</b>（頸動脈<b>竇</b>、主動脈<b>弓</b>）混淆：「體」偵測化學，「竇」偵測壓力。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>憋氣時 O₂ 下降得比較慢，而 <b>CO₂ 累積</b>使腦脊髓液 H⁺ 增加，強烈刺激中樞化學感受器，所以忍不住要吸氣的主要原因是 <b>CO₂ 太多</b>。這也是為什麼潛水前刻意過度換氣（把 CO₂ 呼掉）很危險：CO₂ 降低後憋氣的衝動來得晚，可能在 O₂ 已經嚴重不足時才想換氣而昏迷溺水。</div>
+  <div class="nut"><b class="t">臨床連結：</b>長期 CO₂ 滯留的嚴重 COPD 病人，中樞化學感受器對 CO₂ 逐漸不敏感，呼吸驅動較依賴<b>低 PO₂</b> 刺激周邊感受器；給予過高濃度的氧氣，可能使換氣減少、CO₂ 進一步上升，所以這類病人的給氧要依醫囑控制。</div>
+
+  <h3 id="h14">肺部受器的影響 Effects of Pulmonary Receptors</h3>
+  <p class="core">肺的伸張受器（在支氣管與細支氣管平滑肌中）在肺過度膨脹時經迷走神經抑制吸氣（赫鮑二氏反射），在成人平靜呼吸時作用小，主要防止過度膨脹；刺激性受器引起咳嗽與支氣管收縮；肺微血管旁的 J 受器在肺水腫時引起淺快呼吸。</p>
+  <ul class="dots">
+    <li><b>伸張受器</b>：在呼吸道平滑肌中，肺過度膨脹時經迷走神經抑制吸氣，稱為<b>赫鮑二氏反射</b>（Hering-Breuer reflex），在成人平靜呼吸時作用不大，主要防止過度膨脹。</li>
+    <li><b>刺激性受器</b>：呼吸道受到灰塵、煙霧刺激時引起<b>咳嗽</b>、打噴嚏與支氣管收縮。</li>
+    <li><b>J 受器</b>（近微血管受器）：肺水腫或肺栓塞時引起淺快呼吸與呼吸困難的感覺。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>延腦（背側、腹側呼吸群）產生節律；橋腦修飾；皮質可暫時隨意控制。</li>
+      <li>中樞化學感受器（延腦）：CO₂ 進入腦脊髓液生成 H⁺ → 刺激；平時最主要（更正簡報寫法）。</li>
+      <li>周邊化學感受器（國考）：頸動脈體（舌咽）、主動脈體（迷走）；PO₂ &lt; 約 60、PCO₂↑、H⁺↑。</li>
+      <li>「體」＝化學感受器；「竇／弓」＝壓力感受器。</li>
+      <li>憋氣忍不住主要因 CO₂↑；潛水前過度換氣危險。</li>
+      <li>赫鮑二氏反射（防過度膨脹）、刺激性受器（咳嗽）、J 受器。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>呼吸中樞</td><td>respiratory center</td><td>背側／腹側呼吸群</td><td>dorsal / ventral respiratory group</td></tr>
+      <tr><td>呼吸調節中樞</td><td>pneumotaxic center</td><td>長吸中樞</td><td>apneustic center</td></tr>
+      <tr><td>中樞化學感受器</td><td>central chemoreceptor</td><td>周邊化學感受器</td><td>peripheral chemoreceptor</td></tr>
+      <tr><td>頸動脈體</td><td>carotid body</td><td>主動脈體</td><td>aortic body</td></tr>
+      <tr><td>赫鮑二氏反射</td><td>Hering-Breuer reflex</td><td>過度換氣</td><td>hyperventilation</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">16.6</span>血紅素與氧氣運送</h2>
+  <div class="en">Hemoglobin and Oxygen Transport</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>血紅素</b>的構造與 O₂ 的結合；<b>氧合血紅素解離曲線</b>為什麼是 S 形、它的意義；<b>pH、溫度、2,3-BPG</b> 怎麼使曲線移動（波爾效應）；<b>一氧化碳</b>中毒；<b>胎兒血紅素</b>與異常血紅素（鐮刀型、地中海型貧血）；以及<b>肌紅素</b>。</div><div><span class="lt lt2">為什麼接在 16.5 後面？</span>呼吸調節確保肺泡有足夠的 O₂；但 O₂ 在血漿中溶解得很少，必須靠血紅素才能大量運送。這一節是 O₂ 運送的核心。</div></div>
+  <div class="oneline">每個血紅素有四個血基質，每個 Fe²⁺ 能結合一個 O₂；血中的 O₂ 約 98% 與血紅素結合；解離曲線是 S 形：在肺（PO₂ 100）幾乎全部飽和（約 97%），在靜止組織（PO₂ 40）只放出約 22%，活動的組織 PO₂ 更低時曲線陡峭處能大量釋放；酸性、高溫、2,3-BPG 增加使曲線右移，血紅素更容易放出 O₂；一氧化碳與血紅素的親和力是 O₂ 的 200 倍以上。</div>
+  <div class="think">為什麼一氧化碳中毒的人皮膚反而是鮮紅色，脈搏血氧計可能顯示正常？</div>
+
+  <h3 id="h15">血紅素 Hemoglobin</h3>
+  <p class="core">血紅素＝4 條多肽鏈（成人 HbA：2α＋2β）＋4 個血基質，每個血基質的 Fe²⁺ 結合 1 個 O₂；氧合血紅素（鮮紅）、去氧血紅素（暗紅）；變性血紅素（Fe³⁺，不能帶 O₂）；碳氧血紅素（CO 結合，親和力約 O₂ 的 210 倍）；血紅素濃度男約 13–18、女約 12–16 g/dL；每克血紅素可帶 1.34 mL O₂，動脈血含氧約 20 mL/dL。</p>
+  <ul class="dots">
+    <li>成人血紅素（HbA）由 <b>2 條 α 鏈與 2 條 β 鏈</b>組成，每條鏈帶一個<b>血基質</b>，中心的 <b>Fe²⁺</b> 可結合一個 O₂，所以一個血紅素最多帶 <b>4 個 O₂</b>。</li>
+    <li><b>氧合血紅素</b>（鮮紅）↔ <b>去氧血紅素</b>（暗紅）。</li>
+    <li><b>變性血紅素</b>（methemoglobin）：鐵被氧化成 Fe³⁺，不能結合 O₂；某些藥物或亞硝酸鹽過多（例如嬰兒喝了高硝酸鹽的井水）可能引起。</li>
+    <li><b>碳氧血紅素</b>：<b>一氧化碳</b>與血紅素的親和力約為 O₂ 的 <b>210 倍</b>，搶走 O₂ 的結合位，並使剩下的 O₂ 不易釋放。</li>
+    <li>血紅素濃度：男性約 13–18 g/dL、女性約 12–16 g/dL。每克血紅素最多攜帶約 1.34 mL O₂，所以動脈血約含 <b>20 mL O₂/dL</b>，其中 98% 以上與血紅素結合。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>碳氧血紅素是<b>鮮紅色</b>，所以中毒者皮膚可能呈櫻桃紅，而不是缺氧時的發紺；而且一般脈搏血氧計分不出碳氧血紅素和氧合血紅素，可能顯示正常的飽和度。事實上血液的攜氧能力已大幅下降、組織嚴重缺氧。治療是離開現場、給予高濃度或高壓氧，加速 CO 排出。冬天在密閉浴室使用瓦斯熱水器是常見的中毒原因。</div>
+
+  <h3 id="h16">氧合血紅素解離曲線 The Oxyhemoglobin Dissociation Curve</h3>
+  <p class="core">S 形曲線：PO₂ 100（肺）→ 飽和約 97%；PO₂ 40（靜止組織、靜脈血）→ 約 75%，放出約 22%；PO₂ 20（運動中肌肉）→ 約 35%，放出更多；上方平坦區：PO₂ 稍降（如輕度高海拔）仍能維持高飽和度（安全）；下方陡峭區：PO₂ 小幅下降即大量釋放 O₂（組織需要時）；S 形來自協同結合（一個 O₂ 結合後使其他位置更容易結合）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="50" y1="250" x2="460" y2="250" stroke="#374151" stroke-width="2"/><line x1="50" y1="250" x2="50" y2="20" stroke="#374151" stroke-width="2"/>
+    <g font-size="11" text-anchor="middle" fill="#6b7280"><text x="50" y="266">0</text><text x="130" y="266">20</text><text x="210" y="266">40</text><text x="290" y="266">60</text><text x="370" y="266">80</text><text x="450" y="266">100</text></g>
+    <text x="250" y="290" font-size="12" text-anchor="middle">PO₂（mmHg）</text>
+    <g font-size="11" text-anchor="end" fill="#6b7280"><text x="46" y="254">0</text><text x="46" y="139">50</text><text x="46" y="34">100%</text></g>
+    <text x="16" y="140" font-size="12" text-anchor="middle" transform="rotate(-90 16 140)">血紅素飽和度</text>
+    <path d="M50,250 C90,245 110,200 140,160 C170,110 200,80 240,62 C300,44 380,38 450,36" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+    <path d="M50,250 C100,248 130,220 160,180 C190,130 220,100 260,78 C320,56 390,46 450,42" fill="none" stroke="#2563eb" stroke-width="2.5" stroke-dasharray="6 4"/>
+    <circle cx="450" cy="36" r="6" fill="#dc2626"/><text x="440" y="26" font-size="11" text-anchor="end">肺 PO₂ 100 → 97%</text>
+    <circle cx="210" cy="78" r="6" fill="#dc2626"/><text x="200" y="66" font-size="11" text-anchor="end">靜止組織 PO₂ 40 → 75%</text>
+    <circle cx="130" cy="178" r="6" fill="#dc2626"/><text x="140" y="196" font-size="11">運動肌肉 PO₂ 20 → 約 35%</text>
+    <text x="300" y="140" font-size="12" fill="#1d4ed8" font-weight="bold">右移（虛線）：</text><text x="300" y="158" font-size="11" fill="#1d4ed8">酸、熱、CO₂、2,3-BPG↑</text><text x="300" y="176" font-size="11" fill="#1d4ed8">→ 更容易放出 O₂</text>
+    <text x="320" y="116" font-size="11" fill="#6b7280">平坦區：安全餘裕</text><text x="64" y="120" font-size="11" fill="#6b7280">陡峭區：</text><text x="64" y="136" font-size="11" fill="#6b7280">大量釋放</text>
+  </svg><figcaption>氧合血紅素解離曲線：上半部平坦，PO₂ 小幅下降時血紅素仍幾乎飽和；下半部陡峭，組織 PO₂ 一降，血紅素就大量放出 O₂。右移使它更願意放手。</figcaption></figure>
+  <p>以 PO₂ 為橫軸、血紅素的<b>氧飽和度</b>為縱軸，得到 <b>S 形</b>的<b>氧合血紅素解離曲線</b> <i class="en-term">oxyhemoglobin dissociation curve</i>：</p>
+  <ul class="dots">
+    <li>在<b>肺</b>（PO₂ 約 100）：飽和度約 <b>97%</b>。</li>
+    <li>在<b>靜止的組織</b>（靜脈血 PO₂ 約 40）：飽和度約 <b>75%</b>，只放出約 22% 的 O₂，其餘是「儲備」。</li>
+    <li>在<b>運動中的肌肉</b>（PO₂ 可降到 20 左右）：飽和度約 35%，放出 60% 以上。</li>
+  </ul>
+  <p>曲線的形狀有重要意義：<b>上方平坦區</b>讓肺泡 PO₂ 即使稍微下降（輕度高海拔、輕度肺病），血紅素仍幾乎飽和；<b>下方陡峭區</b>讓組織 PO₂ 稍微下降，就能放出大量 O₂。S 形來自<b>協同結合</b>：一個 O₂ 結合後，血紅素結構改變，使其他位置更容易結合（反之亦然）。</p>
+
+  <h3 id="h17">pH、溫度與 2,3-BPG 的影響 Effects of pH, Temperature, and 2,3-BPG</h3>
+  <p class="core">右移（親和力↓、更易釋放 O₂）：pH 下降（H⁺↑）與 PCO₂ 上升（波爾效應）、溫度上升、2,3-BPG 增加——正好是活動組織的狀態；左移（親和力↑、不易釋放）：鹼、低溫、2,3-BPG 減少、CO、胎兒血紅素；2,3-BPG 由紅血球的糖解作用產生，貧血、高海拔、缺氧時增加，與去氧血紅素的 β 鏈結合而降低親和力；儲存過久的庫存血 2,3-BPG 下降。</p>
+  <div class="tblwrap"><table>
+    <tr><th>右移（更容易放出 O₂）</th><th>左移（更緊抓 O₂）</th></tr>
+    <tr><td><b>pH 下降</b>（H⁺↑）、<b>PCO₂ 上升</b>——<b>波爾效應</b> Bohr effect</td><td>pH 上升（鹼中毒）、PCO₂ 下降</td></tr>
+    <tr><td><b>溫度上升</b></td><td>溫度下降</td></tr>
+    <tr><td><b>2,3-BPG 增加</b>（貧血、高海拔、慢性缺氧）</td><td>2,3-BPG 減少（如庫存血）</td></tr>
+    <tr><td></td><td><b>一氧化碳</b>、<b>胎兒血紅素</b></td></tr>
+  </table></div>
+  <p>右移的條件（酸、CO₂ 多、溫度高）正好就是<b>活動旺盛的組織</b>的狀態，所以血紅素會自動在最需要的地方釋放更多 O₂。</p>
+  <p><b>2,3-雙磷酸甘油酸</b>（<b>2,3-BPG</b>，又稱 2,3-DPG）是紅血球在<b>糖解作用</b>中產生的中間產物（紅血球沒有粒線體，第 5 章），它與<b>去氧血紅素</b>的 β 鏈結合，降低對 O₂ 的親和力。<b>貧血、高海拔、慢性肺病</b>等缺氧狀態使 2,3-BPG 增加，幫助組織得到 O₂。</p>
+  <div class="nut"><b class="t">營養連結：</b><b>缺鐵性貧血</b>時血紅素減少，但紅血球內的 2,3-BPG 代償性增加，使每個血紅素更容易把 O₂ 交給組織——這是輕度貧血的人平常不一定感覺不適，但運動時容易喘、疲倦的原因之一。磷缺乏（如再餵食症候群時血磷驟降）會使 2,3-BPG 與 ATP 生成不足，影響供氧。</div>
+
+  <h3 id="h18">血紅素的異常型式 Inherited Defects in Hemoglobin</h3>
+  <p class="core">胎兒血紅素 HbF（2α＋2γ）：與 2,3-BPG 結合較弱 → 親和力較高（左移），能從母體血液奪取 O₂；鐮刀型貧血：β 鏈第 6 個胺基酸麩胺酸換成纈胺酸（HbS），去氧時聚合使紅血球變鐮刀形、阻塞微血管、易溶血；地中海型貧血：α 或 β 鏈合成不足（台灣常見，婚前或產前篩檢）。</p>
+  <ul class="dots">
+    <li><b>胎兒血紅素</b>（HbF）：由 2 條 α 與 2 條 <b>γ 鏈</b>組成，與 2,3-BPG 結合較弱，所以對 O₂ 的<b>親和力較高</b>（曲線左移），能在胎盤從母親的血液中「搶」到 O₂。出生後數月逐漸被 HbA 取代。</li>
+    <li><b>鐮刀型貧血</b> <i class="en-term">sickle-cell anemia</i>：β 鏈第 6 個胺基酸由<b>麩胺酸</b>換成<b>纈胺酸</b>（單一鹼基突變），形成 HbS，去氧時互相聚合使紅血球變成<b>鐮刀形</b>，阻塞微血管造成疼痛、器官損傷，並容易溶血。帶因者對瘧疾有部分抵抗力，所以在瘧疾流行地區較常見。</li>
+    <li><b>地中海型貧血</b> <i class="en-term">thalassemia</i>：α 或 β 鏈的<b>合成量不足</b>，造成小球性貧血；在台灣相當常見（帶因率約 6%），夫妻都帶因時胎兒可能是重型，所以建議婚前或產前篩檢。輕型帶因者常被誤認為缺鐵，不應盲目補鐵。</li>
+  </ul>
+
+  <h3 id="h19">肌紅素 Muscle Myoglobin</h3>
+  <p class="core">肌紅素：肌肉中只有一條多肽鏈、一個血基質的含鐵蛋白，對 O₂ 親和力比血紅素高（曲線為雙曲線、在左邊），只有 PO₂ 很低時才放出 O₂；作用是儲存 O₂（肌肉收縮血流受阻時）並幫助 O₂ 從細胞膜擴散到粒線體；慢縮紅肌含量多。</p>
+  <p><b>肌紅素</b> <i class="en-term">myoglobin</i> 是肌肉中的含鐵蛋白，只有<b>一條</b>多肽鏈與一個血基質，所以沒有協同作用，解離曲線是雙曲線，而且位於血紅素曲線的<b>左邊</b>（親和力更高）。它從血紅素接過 O₂，只有在 PO₂ 很低時才放出，作用是<b>儲存 O₂</b>（例如肌肉強力收縮壓迫血管時）並幫助 O₂ 擴散到粒線體。慢縮紅肌含量多（第 12 章）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>血紅素：2α＋2β、4 個血基質（Fe²⁺）、最多帶 4 個 O₂；動脈血約 20 mL O₂/dL，98% 結合在血紅素。</li>
+      <li>變性血紅素（Fe³⁺）不能帶 O₂；CO 親和力約 O₂ 的 210 倍（鮮紅、血氧計可能誤判）。</li>
+      <li>S 形解離曲線：肺 100 → 97%；組織 40 → 75%；平坦區安全、陡峭區大量釋放；協同結合。</li>
+      <li>右移：酸、CO₂（波爾效應）、熱、2,3-BPG↑；左移：鹼、冷、CO、HbF。</li>
+      <li>2,3-BPG 來自紅血球糖解，貧血與高海拔時增加。</li>
+      <li>HbF（2α2γ）親和力高；鐮刀型（β6 Glu→Val）；地中海型（鏈合成不足，台灣常見）。</li>
+      <li>肌紅素：一條鏈、親和力更高（曲線在左），儲存 O₂。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>氧合血紅素</td><td>oxyhemoglobin</td><td>去氧血紅素</td><td>deoxyhemoglobin</td></tr>
+      <tr><td>變性血紅素</td><td>methemoglobin</td><td>碳氧血紅素</td><td>carboxyhemoglobin</td></tr>
+      <tr><td>氧合血紅素解離曲線</td><td>oxyhemoglobin dissociation curve</td><td>飽和度</td><td>percent saturation</td></tr>
+      <tr><td>波爾效應</td><td>Bohr effect</td><td>2,3-雙磷酸甘油酸</td><td>2,3-BPG (2,3-DPG)</td></tr>
+      <tr><td>胎兒血紅素</td><td>fetal hemoglobin (HbF)</td><td>鐮刀型貧血</td><td>sickle-cell anemia</td></tr>
+      <tr><td>地中海型貧血</td><td>thalassemia</td><td>肌紅素</td><td>myoglobin</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.7 ============ -->
+<section class="sec det" id="s7">
+  <h2><span class="no">16.7</span>二氧化碳的運送</h2>
+  <div class="en">Carbon Dioxide Transport</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>組織產生的 CO₂ 在血液中以三種形式運送：溶解、與血紅素結合（<b>胺甲醯血紅素</b>）、以及最主要的<b>碳酸氫根</b>；紅血球中的<b>碳酸酐酶</b>與<b>氯轉移</b>；到了肺再反向進行。</div><div><span class="lt lt2">為什麼接在 16.6 後面？</span>O₂ 往組織送，CO₂ 往肺送，兩者都在紅血球中處理，而且會互相影響（波爾效應與何登效應）。也為 16.8 的酸鹼平衡鋪路——因為 CO₂ 就是酸。</div></div>
+  <div class="oneline">CO₂ 約 10% 溶解在血漿、約 20% 與血紅素的胺基結合、約 70% 變成碳酸氫根：CO₂ 進入紅血球，碳酸酐酶迅速把它與水轉成碳酸，解離成 H⁺ 與 HCO₃⁻；H⁺ 被血紅素緩衝，HCO₃⁻ 移出紅血球到血漿，Cl⁻ 移入補位（氯轉移）；在肺則全部反過來，CO₂ 被呼出。</div>
+
+  <h3 id="h20">碳酸酐酶與氯轉移 Carbonic Anhydrase and the Chloride Shift</h3>
+  <p class="core">CO₂ 運送：溶解約 10%、胺甲醯血紅素約 20%、碳酸氫根約 70%；紅血球中碳酸酐酶（含鋅）：CO₂＋H₂O ⇌ H₂CO₃ ⇌ H⁺＋HCO₃⁻；H⁺ 與去氧血紅素結合（緩衝）；HCO₃⁻ 經 Cl⁻–HCO₃⁻ 交換器出到血漿，Cl⁻ 進入紅血球（氯轉移）；在肺中反向（逆氯轉移）；何登效應：去氧血紅素較能攜帶 CO₂ 與 H⁺，所以組織放出 O₂ 時 CO₂ 更易被帶走。</p>
+  <figure class="pic"><svg viewBox="0 0 480 292" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a164" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="20" width="90" height="240" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="55" y="44" font-size="13" text-anchor="middle" font-weight="bold">組織</text><text x="55" y="140" font-size="14" text-anchor="middle" font-weight="bold">CO₂</text>
+    <ellipse cx="300" cy="140" rx="150" ry="110" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="300" y="46" font-size="13" text-anchor="middle" font-weight="bold">紅血球</text>
+    <path d="M100,140 L172,140" stroke="#374151" stroke-width="2.5" marker-end="url(#a164)"/>
+    <text x="176" y="136" font-size="13" font-weight="bold">CO₂＋H₂O</text>
+    <path d="M250,132 L290,132" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a164)"/><text x="270" y="122" font-size="10" text-anchor="middle" fill="#6d28d9">碳酸酐酶</text>
+    <text x="296" y="136" font-size="13" font-weight="bold">H₂CO₃</text>
+    <path d="M350,132 L366,132" stroke="#374151" stroke-width="2" marker-end="url(#a164)"/>
+    <text x="370" y="120" font-size="13" font-weight="bold" fill="#b91c1c">H⁺</text><text x="370" y="152" font-size="13" font-weight="bold" fill="#1d4ed8">HCO₃⁻</text>
+    <path d="M384,114 C384,80 330,76 310,90" fill="none" stroke="#b91c1c" stroke-width="2" marker-end="url(#a164)"/><text x="250" y="86" font-size="11" fill="#b91c1c">被血紅素緩衝</text>
+    <path d="M400,160 C420,200 440,220 462,224" fill="none" stroke="#1d4ed8" stroke-width="2.5" marker-end="url(#a164)"/><text x="472" y="262" font-size="11" fill="#1d4ed8" text-anchor="end">HCO₃⁻ 到血漿（約 70%）</text>
+    <path d="M462,196 C440,190 420,184 404,176" fill="none" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a164)"/><text x="424" y="172" font-size="11" fill="#15803d">Cl⁻ 進入</text>
+    <text x="190" y="200" font-size="11" fill="#374151">部分 CO₂ 結合血紅素（約 20%）</text><text x="120" y="270" font-size="11" fill="#374151">溶解在血漿約 10%</text>
+    <text x="472" y="282" font-size="12" text-anchor="end" font-weight="bold" fill="#15803d">＝氯轉移</text>
+  </svg><figcaption>CO₂ 在紅血球中的轉換：碳酸酐酶把 CO₂ 變成碳酸，再解離成 H⁺（被血紅素接住）與 HCO₃⁻（出到血漿運送），Cl⁻ 進入紅血球維持電荷平衡。</figcaption></figure>
+  <p>組織產生的 CO₂ 擴散進入血液，以三種形式運送：</p>
+  <ol class="steps">
+    <li><b>溶解</b>在血漿中：約 10%。</li>
+    <li>與血紅素的胺基結合成<b>胺甲醯血紅素</b>（carbaminohemoglobin）：約 20%（結合在蛋白質部分，不是 O₂ 的位置）。</li>
+    <li>變成<b>碳酸氫根</b>（HCO₃⁻）：約 <b>70%</b>，最主要。</li>
+  </ol>
+  <p>第 3 種的過程在<b>紅血球</b>中進行：</p>
+  <ul class="dots">
+    <li>紅血球含大量<b>碳酸酐酶</b> <i class="en-term">carbonic anhydrase</i>（含<b>鋅</b>的酵素），使 <b>CO₂＋H₂O ⇌ H₂CO₃</b> 的反應加快數千倍；碳酸隨即解離成 <b>H⁺＋HCO₃⁻</b>。</li>
+    <li><b>H⁺</b> 與<b>去氧血紅素</b>結合而被緩衝（去氧血紅素是比氧合血紅素更好的緩衝劑），血液 pH 不會大幅下降。</li>
+    <li><b>HCO₃⁻</b> 經紅血球膜上的交換器移到血漿中運送，同時血漿中的 <b>Cl⁻ 進入</b>紅血球以維持電荷平衡——稱為<b>氯轉移</b> <i class="en-term">chloride shift</i>。所以靜脈血紅血球內的 Cl⁻ 較多。</li>
+  </ul>
+  <p>組織放出 O₂ 後形成的去氧血紅素更能攜帶 CO₂ 與 H⁺（<b>何登效應</b>）；而 H⁺ 與 CO₂ 又使血紅素放出 O₂（波爾效應）——兩者互相幫助。</p>
+  <h4>在肺中反向進行 Reverse Chloride Shift</h4>
+  <p class="core">在肺：O₂ 與血紅素結合 → 血紅素放出 H⁺；HCO₃⁻ 回到紅血球、Cl⁻ 移出（逆氯轉移）；H⁺＋HCO₃⁻ → H₂CO₃ → 碳酸酐酶 → CO₂＋H₂O → CO₂ 擴散到肺泡呼出。</p>
+  <p>到了肺，血漿 PCO₂ 高於肺泡，CO₂ 擴散出去；同時 O₂ 與血紅素結合，使血紅素放出 H⁺。HCO₃⁻ 從血漿回到紅血球，Cl⁻ 移出（<b>逆氯轉移</b>），H⁺ 與 HCO₃⁻ 結合成碳酸，碳酸酐酶再把它分解成 CO₂ 與水，CO₂ 擴散到肺泡被呼出。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>CO₂ 運送：溶解 10%、胺甲醯血紅素 20%、碳酸氫根 70%。</li>
+      <li>碳酸酐酶（含鋅）：CO₂＋H₂O ⇌ H₂CO₃ ⇌ H⁺＋HCO₃⁻。</li>
+      <li>H⁺ 被去氧血紅素緩衝；HCO₃⁻ 出、Cl⁻ 入＝氯轉移；在肺反向。</li>
+      <li>何登效應（去氧血紅素多帶 CO₂）與波爾效應互相幫助。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>碳酸酐酶</td><td>carbonic anhydrase</td><td>碳酸氫根</td><td>bicarbonate (HCO₃⁻)</td></tr>
+      <tr><td>胺甲醯血紅素</td><td>carbaminohemoglobin</td><td>氯轉移</td><td>chloride shift</td></tr>
+      <tr><td>何登效應</td><td>Haldane effect</td><td>逆氯轉移</td><td>reverse chloride shift</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.8 ============ -->
+<section class="sec det" id="s8">
+  <h2><span class="no">16.8</span>血液的酸鹼平衡</h2>
+  <div class="en">Acid-Base Balance of the Blood</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>血液 pH 的正常範圍（7.35–7.45）；身體的酸從哪裡來（<b>揮發性酸</b>與<b>非揮發性酸</b>）；<b>碳酸氫根緩衝系統</b>；肺與腎兩大調節器官；以及<b>呼吸性</b>與<b>代謝性</b>的<b>酸中毒、鹼中毒</b>和代償。</div><div><span class="lt lt2">為什麼接在 16.7 後面？</span>16.7 看到 CO₂ 在血中變成 H⁺ 與 HCO₃⁻——呼吸的快慢直接改變血液的酸度。所以酸鹼平衡放在呼吸生理學中學，再於第 17 章補充腎臟的部分。</div></div>
+  <div class="oneline">血液 pH 維持在 7.35–7.45；CO₂ 是可經肺排出的揮發性酸，乳酸、酮體、硫酸等是要靠腎臟排出的非揮發性酸；碳酸氫根是血漿最重要的緩衝劑，pH 取決於 HCO₃⁻ 與 CO₂ 的比值（約 20：1）；換氣不足 → CO₂ 累積 → 呼吸性酸中毒，過度換氣 → 呼吸性鹼中毒；腎臟或代謝問題使 HCO₃⁻ 改變 → 代謝性酸中毒（糖尿病酮酸、腹瀉）或鹼中毒（嘔吐）；肺和腎會互相代償。</div>
+  <div class="think">嚴重腹瀉和嚴重嘔吐，對血液酸鹼的影響為什麼剛好相反？</div>
+
+  <h3 id="h21">酸與緩衝 Acids and Buffers</h3>
+  <p class="core">動脈血 pH 7.35–7.45（&lt; 7.35 酸中毒、&gt; 7.45 鹼中毒）；揮發性酸＝碳酸（可轉成 CO₂ 由肺排出）；非揮發性酸＝乳酸、酮體、蛋白質代謝產生的硫酸與磷酸等（由腎臟排出）；緩衝：碳酸氫根（血漿主要）、血紅素、血漿蛋白、磷酸鹽；韓德森—哈索巴赫方程：pH＝6.1＋log（[HCO₃⁻]／0.03×PCO₂），正常 HCO₃⁻ 24 mEq/L、PCO₂ 40 → 比值 20：1 → pH 7.4。</p>
+  <ul class="dots">
+    <li>正常動脈血 <b>pH 7.35–7.45</b>（平均 7.40）。低於 7.35 為<b>酸中毒</b> <i class="en-term">acidosis</i>，高於 7.45 為<b>鹼中毒</b> <i class="en-term">alkalosis</i>。</li>
+    <li><b>揮發性酸</b>：<b>碳酸</b>，可轉回 CO₂ 由<b>肺</b>呼出，每天量極大。</li>
+    <li><b>非揮發性酸</b>（固定酸）：<b>乳酸</b>、<b>酮體</b>、含硫胺基酸代謝產生的<b>硫酸</b>、磷酸等，必須由<b>腎臟</b>排出。</li>
+    <li><b>緩衝系統</b>：血漿中最重要的是<b>碳酸氫根</b>（HCO₃⁻ 結合多出的 H⁺ 成為碳酸，再變成 CO₂ 呼出）；紅血球中是<b>血紅素</b>；另有血漿蛋白與磷酸鹽。</li>
+  </ul>
+  <p>血液 pH 由 HCO₃⁻ 與 CO₂ 的比值決定（韓德森—哈索巴赫方程）：正常 HCO₃⁻ 約 24 mEq/L、PCO₂ 約 40 mmHg，比值約 <b>20：1</b>，pH 就是 7.40。所以：<span class="key">肺調節分母（CO₂），腎調節分子（HCO₃⁻）。</span></p>
+
+  <h3 id="h22">酸鹼失衡與代償 Acid-Base Disturbances</h3>
+  <p class="core">呼吸性酸中毒：換氣不足 → PCO₂↑（COPD、呼吸抑制、氣道阻塞），腎臟代償增加 HCO₃⁻ 再吸收；呼吸性鹼中毒：過度換氣 → PCO₂↓（焦慮、高海拔、阿斯匹靈中毒早期）；代謝性酸中毒：HCO₃⁻↓（糖尿病酮酸中毒、乳酸中毒、腹瀉流失 HCO₃⁻、腎衰竭），代償為過度換氣（庫斯毛耳呼吸）；代謝性鹼中毒：HCO₃⁻↑（嘔吐流失胃酸、制酸劑過量、部分利尿劑），代償為換氣減少。</p>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>原發改變</th><th>常見原因</th><th>代償</th></tr>
+    <tr><td><b>呼吸性酸中毒</b></td><td><b>PCO₂↑</b>（換氣不足）</td><td>COPD、肺炎、呼吸中樞抑制（鴉片、麻醉）、呼吸肌無力、氣道阻塞</td><td>腎臟多保留 HCO₃⁻、多排 H⁺（需數天）</td></tr>
+    <tr><td><b>呼吸性鹼中毒</b></td><td><b>PCO₂↓</b>（過度換氣）</td><td>焦慮、疼痛、發燒、<b>高海拔</b>、阿斯匹靈中毒早期</td><td>腎臟多排 HCO₃⁻</td></tr>
+    <tr><td><b>代謝性酸中毒</b></td><td><b>HCO₃⁻↓</b>（非揮發性酸增加或鹼流失）</td><td><b>糖尿病酮酸中毒</b>、<b>乳酸中毒</b>、嚴重<b>腹瀉</b>（流失 HCO₃⁻）、<b>腎衰竭</b>、飢餓酮症</td><td>周邊化學感受器 → <b>過度換氣</b>（深而快的庫斯毛耳呼吸）把 CO₂ 呼掉</td></tr>
+    <tr><td><b>代謝性鹼中毒</b></td><td><b>HCO₃⁻↑</b>（酸流失或鹼增加）</td><td>嚴重<b>嘔吐</b>（流失胃酸 HCl）、鼻胃管抽吸、制酸劑過量、部分利尿劑（低血鉀）</td><td><b>換氣減少</b>，保留 CO₂</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>胃液含大量<b>胃酸（HCl）</b>，嚴重<b>嘔吐</b>流失的是酸 → 血中 HCO₃⁻ 相對增加 → <b>代謝性鹼中毒</b>。腸液（胰液、膽汁）含大量<b>碳酸氫根</b>，嚴重<b>腹瀉</b>流失的是鹼 → <b>代謝性酸中毒</b>。兩者都會流失鉀與水，造成脫水與低血鉀（第 17、18 章）。</div>
+  <div class="nut"><b class="t">營養連結：</b>①第 1 型糖尿病控制不良時大量酮體堆積 → <b>糖尿病酮酸中毒</b>，病人呼吸深快（庫斯毛耳呼吸），口氣有丙酮味。②極低醣飲食或長期飢餓也會產生酮體，但健康人通常只是輕度酮症。③高蛋白（含硫胺基酸）飲食增加酸的產生，蔬果含較多有機酸鹽，代謝後偏鹼；慢性腎臟病病人常有代謝性酸中毒，會加速肌肉分解與骨質流失，必要時醫師會給予碳酸氫鈉。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>pH 7.35–7.45；揮發性酸（碳酸 → CO₂，肺）與非揮發性酸（乳酸、酮體、硫酸，腎）。</li>
+      <li>緩衝：碳酸氫根（血漿主要）、血紅素、蛋白質、磷酸鹽；HCO₃⁻ : CO₂ ≈ 20 : 1 → pH 7.4。</li>
+      <li>肺調 CO₂（快）、腎調 HCO₃⁻（慢）。</li>
+      <li>呼吸性酸中毒（換氣不足，PCO₂↑）、呼吸性鹼中毒（過度換氣，PCO₂↓）。</li>
+      <li>代謝性酸中毒（酮酸、乳酸、腹瀉、腎衰竭；庫斯毛耳呼吸代償）；代謝性鹼中毒（嘔吐、制酸劑）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>酸中毒／鹼中毒</td><td>acidosis / alkalosis</td><td>揮發性／非揮發性酸</td><td>volatile / nonvolatile acid</td></tr>
+      <tr><td>緩衝劑</td><td>buffer</td><td>韓德森—哈索巴赫方程</td><td>Henderson-Hasselbalch equation</td></tr>
+      <tr><td>呼吸性／代謝性</td><td>respiratory / metabolic</td><td>代償</td><td>compensation</td></tr>
+      <tr><td>糖尿病酮酸中毒</td><td>diabetic ketoacidosis</td><td>庫斯毛耳呼吸</td><td>Kussmaul breathing</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 16.9 ============ -->
+<section class="sec det" id="s9">
+  <h2><span class="no">16.9</span>運動與高海拔對呼吸功能的影響</h2>
+  <div class="en">Effect of Exercise and High Altitude on Respiratory Function</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>運動時</b>換氣怎麼增加（而動脈血氣幾乎不變）、<b>乳酸閾值</b>與換氣的關係、<b>耐力訓練</b>的影響；以及<b>高海拔</b>時身體的立即反應與長期<b>適應</b>（換氣、2,3-BPG、紅血球增加）和<b>高山症</b>。</div><div><span class="lt lt2">為什麼放最後？</span>把整章的原理（換氣、交換、調節、運送、酸鹼）用到兩個實際情境，檢驗自己是否真正理解。</div></div>
+  <div class="oneline">運動時換氣量隨代謝等比例增加（運動換氣過度），使動脈 PO₂、PCO₂ 與 pH 幾乎不變，推測與運動皮質的前饋訊號、肌肉與關節的感覺回饋有關；超過乳酸閾值後乳酸的 H⁺ 刺激換氣更快增加；運動能力通常受心輸出量限制而非肺；到高海拔時 PO₂ 低刺激周邊化學感受器使換氣增加（造成呼吸性鹼中毒），之後 2,3-BPG 增加、腎臟分泌 EPO 使紅血球增加，數週後完成適應。</div>
+  <div class="think">為什麼運動選手會去高海拔地區做「高地訓練」？</div>
+
+  <h3 id="h23">運動時的換氣 Ventilation During Exercise</h3>
+  <p class="core">運動時換氣量增加（運動換氣過度 hyperpnea），使動脈 PO₂、PCO₂、pH 在中等強度時幾乎維持正常；機制推測：大腦運動皮質同時驅動呼吸中樞（前饋）＋肌肉與關節的本體感受器回饋；超過乳酸閾值（一般人約 V̇O₂max 的 50–60%）→ 乳酸的 H⁺ 刺激周邊化學感受器 → 換氣不成比例增加；健康人的運動能力主要受心輸出量與肌肉攝氧限制，不是肺；耐力訓練提高乳酸閾值與 V̇O₂max。</p>
+  <ul class="dots">
+    <li>運動時換氣量大幅增加，稱為<b>運動換氣增加</b>（hyperpnea），與過度換氣不同：中等強度運動時，<b>動脈 PO₂、PCO₂ 與 pH 幾乎維持不變</b>——換氣正好配合代謝的需要。</li>
+    <li>它不是由血氣改變引起的；推測來自<b>前饋</b>：大腦運動皮質在指揮肌肉的同時也驅動呼吸中樞，加上運動中肌肉與關節的<b>本體感受器</b>回饋。</li>
+    <li>強度超過<b>乳酸閾值</b>（一般人約 V̇O₂max 的 50–60%）後，乳酸的 H⁺ 刺激周邊化學感受器，換氣增加得更快（第 12 章）。</li>
+    <li>健康人的最大運動能力主要受<b>心輸出量</b>與肌肉攝氧能力限制，而不是肺的換氣能力。耐力訓練提高 V̇O₂max 與乳酸閾值。</li>
+  </ul>
+
+  <h3 id="h24">高海拔的適應 Acclimatization to High Altitude</h3>
+  <p class="core">立即反應：PO₂ 低 → 周邊化學感受器 → 換氣增加 → CO₂ 呼出過多 → 呼吸性鹼中毒（反而抑制換氣，腎臟數天內排出 HCO₃⁻ 代償後換氣才能進一步增加）；適應（數天到數週）：2,3-BPG 增加（曲線右移，利於組織取 O₂）、腎臟分泌 EPO → 紅血球與血紅素增加（需足夠的鐵）、微血管與粒線體增加；高山症：頭痛、失眠、噁心，嚴重時高海拔肺水腫或腦水腫，處置為下降高度；預防：緩慢上升、乙醯唑胺（碳酸酐酶抑制劑）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a165" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <path d="M10,240 L120,90 L170,140 L250,40 L340,150 L400,110 L470,240 z" fill="#e0e7ff" stroke="#6366f1" stroke-width="2"/>
+    <path d="M232,64 L250,40 L268,64 z" fill="#fff"/>
+    <rect x="10" y="10" width="200" height="66" rx="10" fill="#fff" stroke="#2563eb" stroke-width="2"/>
+    <text x="110" y="30" font-size="12" text-anchor="middle" font-weight="bold" fill="#1d4ed8">立即（數小時）</text><text x="110" y="48" font-size="11" text-anchor="middle">PO₂↓ → 頸動脈體 → 換氣↑</text><text x="110" y="64" font-size="11" text-anchor="middle">→ 呼吸性鹼中毒</text>
+    <rect x="270" y="10" width="200" height="84" rx="10" fill="#fff" stroke="#dc2626" stroke-width="2"/>
+    <text x="370" y="30" font-size="12" text-anchor="middle" font-weight="bold" fill="#b91c1c">適應（數天～數週）</text><text x="370" y="48" font-size="11" text-anchor="middle">腎排 HCO₃⁻ → 換氣再增加</text><text x="370" y="64" font-size="11" text-anchor="middle">2,3-BPG↑（曲線右移）</text><text x="370" y="80" font-size="11" text-anchor="middle">EPO → 紅血球↑（需要鐵）</text>
+    <text x="250" y="200" font-size="12" text-anchor="middle" font-weight="bold">3,000 公尺：大氣壓約 526 mmHg、PO₂ 約 110</text>
+    <text x="250" y="222" font-size="11" text-anchor="middle">（海平面 760、PO₂ 約 159）</text>
+  </svg><figcaption>高海拔的適應：一到山上先靠換氣增加（但會造成呼吸性鹼中毒），接著數天到數週內 2,3-BPG 與紅血球增加，攜氧與釋氧能力提升。</figcaption></figure>
+  <ol class="steps">
+    <li><b>立即反應</b>：動脈 PO₂ 下降刺激<b>周邊化學感受器</b>（頸動脈體）→ 換氣增加。但多呼出的 CO₂ 造成<b>呼吸性鹼中毒</b>，又會抑制中樞化學感受器，限制換氣的增加。</li>
+    <li><b>數天內</b>：腎臟排出 HCO₃⁻ 代償鹼中毒，換氣才能進一步增加；紅血球內 <b>2,3-BPG 增加</b>，使解離曲線右移，組織較易取得 O₂。</li>
+    <li><b>數週內</b>：缺氧使腎臟分泌 <b>EPO</b> → 骨髓製造更多<b>紅血球</b>，血紅素與血比容上升，攜氧量增加（需要足夠的<b>鐵</b>）；肌肉的微血管與粒線體也增加。長期住在高海拔的居民血比容較高。</li>
+  </ol>
+  <p><b>高山症</b>：快速上升到約 2,500 公尺以上，可能出現頭痛、失眠、噁心、疲倦；嚴重時發生<b>高海拔肺水腫</b>（缺氧使肺小動脈廣泛收縮、肺動脈壓升高）或<b>高海拔腦水腫</b>，最重要的處置是<b>下降高度</b>。預防：緩慢上升；藥物如<b>乙醯唑胺</b>（碳酸酐酶抑制劑，使腎臟排出 HCO₃⁻，造成輕度代謝性酸中毒以刺激換氣）。台灣登玉山、雪山等高山也需留意。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>在高海拔訓練一段時間，缺氧刺激 <b>EPO</b> 分泌使紅血球與血紅素增加、2,3-BPG 增加，回到平地比賽時血液攜氧能力較好，有助於耐力表現。由於在高地很難維持高強度訓練，常採「住高地、練平地」的策略。違法注射 EPO 則是禁藥。</div>
+  <div class="nut"><b class="t">營養連結：</b>高海拔適應時紅血球大量生成，需要足夠的<b>鐵</b>（以及葉酸、B12、蛋白質）；鐵儲存不足的人適應較差。高海拔也使食慾下降、水分從呼吸流失增加，要注意補充水分與熱量（以醣類為主較易消化，也較省氧）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>運動：換氣隨代謝增加，動脈血氣幾乎不變（前饋＋本體感受器）；超過乳酸閾值後換氣更快增加；運動能力多受心輸出量限制。</li>
+      <li>高海拔立即：PO₂↓ → 頸動脈體 → 換氣↑ → 呼吸性鹼中毒。</li>
+      <li>適應：腎排 HCO₃⁻、2,3-BPG↑（右移）、EPO → 紅血球↑（需鐵）。</li>
+      <li>高山症：頭痛、肺水腫、腦水腫 → 下降高度；乙醯唑胺（碳酸酐酶抑制劑）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>運動換氣增加</td><td>exercise hyperpnea</td><td>前饋</td><td>feedforward</td></tr>
+      <tr><td>高海拔適應</td><td>acclimatization</td><td>高山症</td><td>acute mountain sickness</td></tr>
+      <tr><td>高海拔肺水腫</td><td>high-altitude pulmonary edema</td><td>乙醯唑胺</td><td>acetazolamide</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s10">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>構造</td><td>傳導區（到終末細支氣管）vs 呼吸區；第一型肺泡細胞（交換）、第二型（表面活性劑）</td></tr>
+    <tr><td>壓力</td><td>吸氣肺內壓 −3、呼氣 +3；胸膜內壓始終負；氣胸 → 肺塌陷</td></tr>
+    <tr><td>物理性質</td><td>順應性（纖維化↓）、彈性（肺氣腫↓）、表面張力；表面活性劑 → 早產兒呼吸窘迫</td></tr>
+    <tr><td>呼吸肌</td><td>吸氣：橫膈＋外肋間肌；平靜呼氣被動；用力呼氣：內肋間肌＋腹肌</td></tr>
+    <tr><td>肺容積</td><td>TV 500、VC＝IRV＋TV＋ERV、RV 量不到；死腔 150 mL；肺泡換氣＝(TV－死腔)×頻率</td></tr>
+    <tr><td>限制 vs 阻塞</td><td>限制性（纖維化）：VC↓、FEV₁/FVC 正常；阻塞性（氣喘、肺氣腫、慢支）：FEV₁/FVC↓</td></tr>
+    <tr><td>分壓</td><td>O₂ 21% → 159；肺泡 105/40；動脈 100/40；靜脈 40/46</td></tr>
+    <tr><td>呼吸調節</td><td>延腦節律；中樞化學感受器：CO₂ → 腦脊髓液 H⁺（最主要）</td></tr>
+    <tr><td>國考：周邊化學感受器</td><td>頸動脈體（舌咽）、主動脈體（迷走）；PO₂ &lt; 60、PCO₂↑、H⁺↑；「體」≠「竇」</td></tr>
+    <tr><td>O₂ 運送</td><td>S 形曲線；右移：酸、CO₂、熱、2,3-BPG；左移：CO、HbF；CO 親和力約 210 倍</td></tr>
+    <tr><td>CO₂ 運送</td><td>HCO₃⁻ 70%、胺甲醯血紅素 20%、溶解 10%；碳酸酐酶（鋅）；氯轉移</td></tr>
+    <tr><td>酸鹼</td><td>pH 7.35–7.45；HCO₃⁻：CO₂＝20：1；嘔吐 → 代謝性鹼中毒、腹瀉 → 代謝性酸中毒</td></tr>
+    <tr><td>高海拔</td><td>換氣↑ → 呼吸性鹼中毒；2,3-BPG↑、EPO → 紅血球↑</td></tr>
+  </table></div>
+  <h3 id="h25">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說明吸氣與呼氣時肺內壓、胸膜內壓的變化與參與的肌肉？</li>
+    <li>□ 解釋表面活性劑的功能，以及早產兒為何會呼吸窘迫？</li>
+    <li>□ 畫出肺量圖，寫出肺活量與功能肋餘容量的組成？</li>
+    <li>□ 比較限制性與阻塞性肺病的肺功能，並各舉例（肺氣腫屬哪一類）？</li>
+    <li>□ 用分壓解釋 O₂ 與 CO₂ 在肺與組織的擴散方向？</li>
+    <li>□ 說出中樞與周邊化學感受器的位置與感測對象（國考）？</li>
+    <li>□ 畫出氧合血紅素解離曲線，說出右移的四個因素？</li>
+    <li>□ 寫出碳酸酐酶的反應並說明氯轉移？</li>
+    <li>□ 判斷嘔吐、腹瀉、COPD、過度換氣各造成哪一種酸鹼失衡？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 16 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+var GL_PAGE={"彈性":"lungelastic","限制性":"restrictive","阻塞性":"restrictive"};
+const Q = [
+ {q:"下列何者屬於呼吸區（可進行氣體交換）？",o:["氣管","主支氣管","終末細支氣管","呼吸性細支氣管"],a:3,e:"從<b>呼吸性細支氣管</b>開始有肺泡；終末細支氣管以上屬傳導區。"},
+ {q:"分泌表面活性劑的細胞是？",o:["第一型肺泡細胞","第二型肺泡細胞","肺泡巨噬細胞","杯狀細胞"],a:1,e:"<b>第二型肺泡細胞</b>；第一型負責氣體交換。"},
+ {q:"平靜吸氣時，下列何者正確？",o:["肺內壓高於大氣壓","肺內壓低於大氣壓","胸膜內壓變為正值","腹肌收縮"],a:1,e:"胸腔擴大 → <b>肺內壓約 −3 mmHg</b> → 空氣流入；胸膜內壓始終為負。"},
+ {q:"早產兒呼吸窘迫症候群的主要原因是？",o:["表面活性劑不足","肺泡巨噬細胞不足","橫膈無力","血紅素不足"],a:0,e:"<b>表面活性劑不足</b> → 表面張力大 → 肺泡塌陷。"},
+ {q:"平靜呼氣主要依靠？",o:["內肋間肌收縮","腹肌收縮","肺與胸壁的彈性回縮","橫膈收縮"],a:2,e:"平靜呼氣是<b>被動</b>的彈性回縮；用力呼氣才用內肋間肌與腹肌。"},
+ {q:"肺活量等於？",o:["TV＋IRV","TV＋IRV＋ERV","ERV＋RV","TV＋IRV＋ERV＋RV"],a:1,e:"<b>VC＝IRV＋TV＋ERV</b>；加上 RV 才是總肺容量。"},
+ {q:"潮氣容積 500 mL、死腔 150 mL、呼吸 12 次/分，肺泡換氣量為？",o:["6.0 L/分","4.2 L/分","1.8 L/分","7.8 L/分"],a:1,e:"(500－150) × 12＝<b>4,200 mL/分</b>。"},
+ {q:"下列何者屬於阻塞性肺病？",o:["肺纖維化","肺氣腫","矽肺症","胸廓變形"],a:1,e:"<b>肺氣腫</b>、氣喘、慢性支氣管炎屬阻塞性；肺纖維化屬限制性。"},
+ {q:"阻塞性肺病最典型的肺功能變化是？",o:["FEV₁/FVC 下降","肺活量下降而 FEV₁/FVC 正常","殘氣容積減少","順應性下降"],a:0,e:"呼氣受阻 → <b>FEV₁/FVC 下降</b>。"},
+ {q:"海平面乾燥空氣中的 O₂ 分壓約為？",o:["100 mmHg","105 mmHg","159 mmHg","760 mmHg"],a:2,e:"760 × <b>0.21</b> ≈ 159 mmHg。"},
+ {q:"正常動脈血的 PO₂ 與 PCO₂ 約為？",o:["40 與 46","100 與 40","105 與 40","159 與 0.3"],a:1,e:"動脈血 <b>PO₂ 100、PCO₂ 40</b>；混合靜脈血 40 與 46。"},
+ {q:"平常調控呼吸最主要的刺激是？",o:["動脈 PO₂ 下降","血中 CO₂ 使腦脊髓液 H⁺ 增加","血壓下降","體溫上升"],a:1,e:"CO₂ 進入腦脊髓液生成 <b>H⁺</b> → 中樞化學感受器。"},
+ {q:"周邊化學感受器位於？（國考）",o:["頸動脈竇與主動脈弓","頸動脈體與主動脈體","延腦腹側表面","肺泡壁"],a:1,e:"<b>頸動脈體（舌咽神經）與主動脈體（迷走神經）</b>；頸動脈竇、主動脈弓是壓力感受器。"},
+ {q:"周邊化學感受器明顯被低氧刺激時，動脈 PO₂ 大約要低於？",o:["100 mmHg","90 mmHg","60 mmHg","20 mmHg"],a:2,e:"PO₂ 約 <b>60 mmHg 以下</b>才明顯增加換氣。"},
+ {q:"下列何者使氧合血紅素解離曲線右移？",o:["pH 上升","體溫下降","2,3-BPG 增加","一氧化碳"],a:2,e:"右移：<b>酸、CO₂、熱、2,3-BPG↑</b>。"},
+ {q:"胎兒血紅素對 O₂ 親和力較高的原因是？",o:["含 γ 鏈，與 2,3-BPG 結合較弱","含較多鐵","沒有血基質","只有一條鏈"],a:0,e:"HbF（2α2γ）與 <b>2,3-BPG</b> 結合弱 → 曲線左移。"},
+ {q:"一氧化碳中毒造成組織缺氧，主要因為？",o:["CO 與血紅素的親和力約為 O₂ 的 200 倍以上","CO 破壞紅血球","CO 使肺泡塌陷","CO 刺激呼吸中樞"],a:0,e:"CO 搶走結合位，且使剩下的 O₂ 不易釋放。"},
+ {q:"血液中 CO₂ 最主要的運送形式是？",o:["溶解在血漿","胺甲醯血紅素","碳酸氫根","與白蛋白結合"],a:2,e:"約 <b>70% 為 HCO₃⁻</b>。"},
+ {q:"紅血球中 HCO₃⁻ 移到血漿、Cl⁻ 移入，稱為？",o:["波爾效應","何登效應","氯轉移","鈉鉀幫浦"],a:2,e:"<b>氯轉移</b>維持電荷平衡。"},
+ {q:"嚴重嘔吐最可能造成？",o:["呼吸性酸中毒","代謝性酸中毒","代謝性鹼中毒","呼吸性鹼中毒"],a:2,e:"流失胃酸 → <b>代謝性鹼中毒</b>；腹瀉流失 HCO₃⁻ → 代謝性酸中毒。"},
+ {q:"糖尿病酮酸中毒時呼吸深而快，目的是？",o:["增加 O₂ 攝取","呼出 CO₂ 以代償代謝性酸中毒","排出酮體","降低體溫"],a:1,e:"<b>庫斯毛耳呼吸</b>：呼吸性代償。"},
+ {q:"剛到高海拔時，換氣增加會造成？",o:["呼吸性酸中毒","呼吸性鹼中毒","代謝性酸中毒","代謝性鹼中毒"],a:1,e:"過度換氣呼出 CO₂ → <b>呼吸性鹼中毒</b>。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

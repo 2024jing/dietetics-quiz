@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 15 章 免疫系統</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="15">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 15 章　免疫系統</h1>
+  <div class="en">Chapter 15 The Immune System（課本 p.525–568）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">15.1 防禦機制</a>
+  <a class="sub" href="#h1">先天（非專一性）免疫 Innate (Nonspecific) Immunity</a>
+  <a class="sub" href="#h2">後天（適應性）免疫 Adaptive (Specific) Immunity</a>
+  <a class="sub" href="#h3">淋巴球與淋巴器官 Lymphocytes and Lymphoid Organs</a>
+  <a href="#s2">15.2 B 淋巴球的功能</a>
+  <a class="sub" href="#h4">抗體 Antibodies</a>
+  <a class="sub" href="#h5">抗體的構造 Antibody Structure</a>
+  <a class="sub" href="#h6">補體系統 The Complement System</a>
+  <a class="sub" href="#h7">局部發炎 Local Inflammation</a>
+  <a href="#s3">15.3 T 淋巴球的功能</a>
+  <a class="sub" href="#h8">T 淋巴球的種類 Types of T Lymphocytes</a>
+  <a class="sub" href="#h9">抗原呈現與主要組織相容複合體 Antigen Presentation and MHC</a>
+  <a class="sub" href="#h10">T 細胞對病毒的反應 T Cell Response to a Virus</a>
+  <a href="#s4">15.4 主動與被動免疫</a>
+  <a class="sub" href="#h11">主動免疫與株落選擇理論 Active Immunity and the Clonal Selection Theory</a>
+  <a class="sub" href="#h12">免疫耐受性 Immunological Tolerance</a>
+  <a class="sub" href="#h13">被動免疫 Passive Immunity</a>
+  <a href="#s5">15.5 腫瘤免疫學</a>
+  <a class="sub" href="#h14">腫瘤與腫瘤抗原 Tumors and Tumor Antigens</a>
+  <a class="sub" href="#h15">免疫監督與自然殺手細胞 Immune Surveillance and Natural Killer Cells</a>
+  <a class="sub" href="#h16">癌症的免疫療法 Immunotherapy for Cancer</a>
+  <a class="sub" href="#h17">老化與壓力的影響 Effects of Aging and Stress</a>
+  <a href="#s6">15.6 免疫系統引起的疾病</a>
+  <a class="sub" href="#h18">自體免疫 Autoimmunity</a>
+  <a class="sub" href="#h19">免疫複合體疾病 Immune Complex Diseases</a>
+  <a class="sub" href="#h20">過敏 Allergy</a>
+  <a href="#s7">本章重點整理</a>
+  <a class="sub" href="#h21">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 13 章提到循環系統的第三個功能是「保護」，白血球與淋巴系統就是負責保護的部隊。這一章回答：<span class="key">身體怎麼分辨「自己」和「外來的」，怎麼用不需學習、立刻上陣的<b>先天免疫</b>擋住大部分入侵者，又怎麼用會學習、有記憶的<b>後天（適應性）免疫</b>——B 細胞的抗體與 T 細胞的細胞免疫——精準消滅特定敵人；疫苗為什麼有效；以及免疫系統失誤時造成的疾病（自體免疫、過敏）。</span></div>
+  <div class="path">
+    <div class="step"><span class="sn">15.1</span><div><b>防禦機制</b><br><span class="sq">先天免疫（屏障、吞噬、發炎、發燒、干擾素）與後天免疫的基本概念；抗原；淋巴球與淋巴器官。</span></div></div>
+    <div class="arr">↓ 後天免疫的第一支部隊：會發射「飛彈」的</div>
+    <div class="step"><span class="sn">15.2</span><div><b>B 淋巴球的功能</b><br><span class="sq">抗體的構造與五種類型、抗體怎麼消滅抗原、補體系統、局部發炎。</span></div></div>
+    <div class="arr">↓ 第二支部隊：近身作戰的</div>
+    <div class="step"><span class="sn">15.3</span><div><b>T 淋巴球的功能</b><br><span class="sq">胞毒型、輔助型、調節型 T 細胞；MHC 與抗原呈現；T 細胞怎麼指揮全局。</span></div></div>
+    <div class="arr">↓ 免疫會「記住」敵人：這就是疫苗的原理</div>
+    <div class="step"><span class="sn">15.4</span><div><b>主動與被動免疫</b><br><span class="sq">初級與次級反應、株落選擇理論、疫苗、免疫耐受性、被動免疫與單株抗體。</span></div></div>
+    <div class="arr">↓ 敵人也可能來自自己的細胞</div>
+    <div class="step"><span class="sn">15.5</span><div><b>腫瘤免疫學</b><br><span class="sq">腫瘤抗原、免疫監督、自然殺手細胞、癌症免疫療法、老化與壓力。</span></div></div>
+    <div class="arr">↓ 免疫系統打錯對象或反應過度時</div>
+    <div class="step"><span class="sn">15.6</span><div><b>免疫系統引起的疾病</b><br><span class="sq">自體免疫疾病、免疫複合體疾病、立即型與遲發型過敏。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 15.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">15.1</span>防禦機制</h2>
+  <div class="en">Defense Mechanisms</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>免疫的兩大類：<b>先天（非專一性）免疫</b>——外在屏障、辨識病原分子樣式的<b>鐸樣受體</b>、<b>吞噬作用</b>、<b>發炎</b>、<b>發燒</b>、<b>干擾素</b>、<b>補體</b>；與<b>後天（適應性、專一性）免疫</b>——<b>抗原</b>、<b>半抗原</b>、<b>淋巴球</b>（T 與 B）與<b>淋巴器官</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>先看全貌：哪些防線是天生就有、立刻作用的，哪些是要「學習」後才有的。後面幾節再逐一深入 B 細胞、T 細胞。</div></div>
+  <div class="oneline">先天免疫是第一道防線，天生就有、反應快但不專一：皮膚黏膜屏障、胃酸、吞噬細胞（嗜中性球、巨噬細胞）、發炎、發燒、干擾素、自然殺手細胞與補體；免疫細胞用鐸樣受體辨認病原體共有的分子樣式（PAMPs）；後天免疫要接觸過才會產生，專一且有記憶：B 細胞產生抗體（體液免疫），T 細胞直接攻擊受感染細胞（細胞媒介免疫）。</div>
+  <div class="think">為什麼得過一次水痘的人，通常一輩子不會再得？</div>
+
+  <h3 id="h1">先天（非專一性）免疫 Innate (Nonspecific) Immunity</h3>
+  <p class="core">先天免疫：天生、反應快、不專一、無記憶；外在防禦：皮膚角質、黏膜與黏液、纖毛、胃酸、溶菌酶、正常菌叢；內在防禦：吞噬細胞、自然殺手細胞、發炎、發燒、干擾素、補體；免疫細胞以鐸樣受體（TLR）辨識病原體相關分子樣式（PAMPs，如細菌的脂多醣、鞭毛蛋白、病毒 RNA），分泌細胞激素與趨化因子召集更多細胞並活化後天免疫。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="10" y="10" width="220" height="250" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+    <text x="120" y="34" font-size="15" text-anchor="middle" font-weight="bold" fill="#c2410c">先天免疫</text>
+    <text x="120" y="52" font-size="11" text-anchor="middle" fill="#6b7280">天生・快・不專一・無記憶</text>
+    <g font-size="12"><text x="24" y="80">・皮膚、黏膜、黏液、胃酸</text><text x="24" y="104">・吞噬細胞（嗜中性球、巨噬細胞）</text><text x="24" y="128">・自然殺手細胞</text><text x="24" y="152">・發炎、發燒</text><text x="24" y="176">・干擾素、補體</text></g>
+    <text x="120" y="210" font-size="12" text-anchor="middle" fill="#9a3412">用鐸樣受體辨認</text><text x="120" y="228" font-size="12" text-anchor="middle" fill="#9a3412">「病原體都有的樣式」</text>
+    <rect x="250" y="10" width="220" height="250" rx="14" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+    <text x="360" y="34" font-size="15" text-anchor="middle" font-weight="bold" fill="#1d4ed8">後天（適應性）免疫</text>
+    <text x="360" y="52" font-size="11" text-anchor="middle" fill="#6b7280">接觸後才有・較慢・專一・有記憶</text>
+    <rect x="266" y="70" width="188" height="70" rx="10" fill="#dbeafe"/><text x="360" y="94" font-size="13" text-anchor="middle" font-weight="bold">B 淋巴球</text><text x="360" y="112" font-size="11" text-anchor="middle">→ 漿細胞 → 抗體</text><text x="360" y="128" font-size="11" text-anchor="middle">體液免疫</text>
+    <rect x="266" y="150" width="188" height="70" rx="10" fill="#ede9fe"/><text x="360" y="174" font-size="13" text-anchor="middle" font-weight="bold">T 淋巴球</text><text x="360" y="192" font-size="11" text-anchor="middle">直接殺死受感染細胞、指揮</text><text x="360" y="208" font-size="11" text-anchor="middle">細胞媒介免疫</text>
+    <text x="360" y="246" font-size="12" text-anchor="middle" fill="#1e40af">辨認「特定」抗原</text>
+  </svg><figcaption>兩套防禦：先天免疫像隨時待命的警衛，見到可疑的就攔；後天免疫像受過訓練的特勤，專門對付認得的敵人，而且下次來得更快。</figcaption></figure>
+  <p>免疫可分成兩大類。<b>先天免疫</b> <i class="en-term">innate immunity</i>（非專一性）是生來就有的第一道防線，對各種病原體都用同樣的方式反應，速度快，但沒有記憶。</p>
+  <ul class="dots">
+    <li><b>外在防禦</b>：皮膚角質層與黏膜形成屏障；黏液與呼吸道<b>纖毛</b>把異物掃出；淚液、唾液中的<b>溶菌酶</b>分解細菌細胞壁；<b>胃酸</b>殺死吃進的微生物；皮膚與腸道的<b>正常菌叢</b>與病原菌競爭。</li>
+    <li><b>內在防禦</b>：吞噬作用、自然殺手細胞、發炎、發燒、干擾素、補體。</li>
+  </ul>
+  <h4>先天免疫的活化 Activation of Innate Immunity</h4>
+  <p class="core">巨噬細胞、樹突細胞等以病原體辨識受體（如 10 種鐸樣受體 TLR）偵測 PAMPs；受損或壞死的自身細胞釋放 DAMPs（傷害相關分子樣式）也會引起先天反應與發炎；活化後分泌細胞激素與趨化因子召集更多免疫細胞，並活化後天免疫。</p>
+  <p>先天免疫細胞怎麼知道「這是外來的」？病原體身上有一些人體細胞沒有的共同分子，稱為<b>病原體相關分子樣式</b> <i class="en-term">pathogen-associated molecular patterns, PAMPs</i>，例如細菌細胞壁的脂多醣（內毒素）、肽聚醣、鞭毛蛋白，病毒的雙股 RNA。巨噬細胞、樹突細胞等以<b>鐸樣受體</b> <i class="en-term">toll-like receptors, TLRs</i>（人類目前發現約 10 種）辨識它們。此外，組織受損壞死時釋放的<b>傷害相關分子樣式</b>（DAMPs）也會啟動先天免疫與發炎。被活化的細胞分泌<b>細胞激素</b>與<b>趨化因子</b> <i class="en-term">chemokines</i>，召集更多免疫細胞，並活化後天免疫的淋巴球。</p>
+  <h4>吞噬作用 Phagocytosis</h4>
+  <p class="core">三類吞噬細胞：嗜中性球（最先到）、單核吞噬細胞（血中單核球、組織中的巨噬細胞與樹突細胞，稍後到）、器官專一性的固著型吞噬細胞（肝的庫佛氏細胞、肺泡巨噬細胞、腦的微膠細胞等）；白血球經血球滲出（外滲）穿過微血管後小靜脈壁，受趨化因子吸引（趨化作用）到感染處，以偽足吞入病原體，吞噬小泡與溶體融合後分解。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a151" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="20" width="460" height="40" fill="#fee2e2"/><text x="20" y="16" font-size="12" fill="#991b1b">微血管後小靜脈</text>
+    <line x1="10" y1="60" x2="470" y2="60" stroke="#f43f5e" stroke-width="4"/>
+    <circle cx="60" cy="40" r="14" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="60" y="80" font-size="11" text-anchor="middle">① 滾動、黏附</text>
+    <ellipse cx="160" cy="60" rx="12" ry="22" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="160" y="96" font-size="11" text-anchor="middle">② 擠出血管壁</text><text x="160" y="110" font-size="11" text-anchor="middle">（血球滲出）</text>
+    <path d="M190,120 C230,140 260,150 300,150" fill="none" stroke="#16a34a" stroke-width="2" stroke-dasharray="5 3" marker-end="url(#a151)"/><text x="190" y="160" font-size="11" fill="#15803d">③ 趨化作用</text>
+    <path d="M320,128 C350,110 400,110 420,140 C440,170 410,200 370,200 C330,200 300,170 320,128 z" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <path d="M330,140 C340,120 360,118 365,135" fill="none" stroke="#7c3aed" stroke-width="3"/>
+    <g fill="#16a34a"><ellipse cx="350" cy="140" rx="7" ry="4"/></g>
+    <circle cx="390" cy="170" r="12" fill="#fde68a" stroke="#b45309"/><ellipse cx="390" cy="170" rx="5" ry="3" fill="#16a34a"/>
+    <text x="370" y="104" font-size="11" text-anchor="middle">④ 偽足包住細菌</text><text x="390" y="216" font-size="11" text-anchor="middle">⑤ 與溶體融合 → 分解</text>
+  </svg><figcaption>白血球到感染處的路線：在血管壁上滾動、黏住、擠出去，順著趨化因子的「氣味」找到細菌，再用偽足把它吞掉。</figcaption></figure>
+  <ul class="dots">
+    <li><b>嗜中性球</b>：最多、<b>最先抵達</b>感染處。</li>
+    <li><b>單核吞噬細胞系統</b>：血中的<b>單核球</b>，進入組織後成為<b>巨噬細胞</b>與<b>樹突細胞</b>，稍後抵達，存活較久，也負責<b>呈現抗原</b>給淋巴球。</li>
+    <li><b>器官專一性的吞噬細胞</b>：肝臟（庫佛氏細胞）、脾臟、淋巴結、肺（肺泡巨噬細胞）、腦（微膠細胞）中有長駐的吞噬細胞，有些固定在器官的管壁上，稱為<b>固著型吞噬細胞</b>。</li>
+  </ul>
+  <p>過程：嗜中性球與單核球在<b>微血管後小靜脈</b>的管壁上滾動、黏住，然後從內皮細胞間擠出到組織——稱為<b>外滲</b>或<b>血球滲出</b> <i class="en-term">extravasation / diapedesis</i>；它們順著<b>趨化因子</b>的濃度梯度移向感染處（<b>趨化作用</b> chemotaxis）；以<b>偽足</b>包住病原體形成吞噬小泡，與<b>溶體</b>融合後，以酵素和活性氧把它消化分解。</p>
+  <h4>發燒 Fever</h4>
+  <p class="core">發燒由下視丘體溫調節中樞調整：細菌內毒素等刺激白血球（巨噬細胞）分泌細胞激素（內生性致熱原，如 IL-1、IL-6、TNF-α）→ 下視丘產生前列腺素 E₂ → 體溫設定點上移；同時引起嗜睡與血漿鐵濃度下降（限制細菌生長）；阿斯匹靈等抑制前列腺素合成而退燒。</p>
+  <p>細菌的內毒素等刺激巨噬細胞分泌<b>細胞激素</b>，稱為<b>內生性致熱原</b> <i class="en-term">endogenous pyrogens</i>（如介白素-1、介白素-6、腫瘤壞死因子），它們使下視丘產生<b>前列腺素 E₂</b>，把<b>體溫設定點往上調</b>，於是身體收縮皮膚血管、打寒顫，直到體溫升到新的設定值。這些細胞激素同時引起嗜睡、食慾下降，並使<b>血漿鐵濃度下降</b>（經鐵調素讓巨噬細胞留住鐵），減少細菌可用的鐵。阿斯匹靈、布洛芬等 NSAIDs 抑制前列腺素合成而退燒（第 11 章）。</p>
+  <h4>干擾素 Interferons</h4>
+  <p class="core">干擾素：受病毒感染的細胞分泌的抗病毒多肽，使鄰近細胞進入抗病毒狀態；α、β 干擾素抑制病毒複製與組裝；γ 干擾素由 T 細胞與 NK 細胞分泌，活化巨噬細胞、幫助對抗感染與癌症。</p>
+  <p><b>干擾素</b> <i class="en-term">interferons</i> 是被病毒感染的細胞分泌的多肽，本身不直接殺病毒，而是警告<b>鄰近的細胞</b>，使它們製造抑制病毒複製的蛋白質，進入「抗病毒狀態」。</p>
+  <ul class="dots">
+    <li><b>α 與 β 干擾素</b>：多數受感染的細胞分泌，抑制病毒的複製與組裝。</li>
+    <li><b>γ 干擾素</b>：由 T 淋巴球與自然殺手細胞分泌，活化巨噬細胞，幫助對抗感染與癌症。</li>
+  </ul>
+  <p>干擾素已用於治療 B、C 型肝炎與某些癌症。</p>
+
+  <h3 id="h2">後天（適應性）免疫 Adaptive (Specific) Immunity</h3>
+  <p class="core">後天免疫：接觸病原體後學習而來、專一、有記憶；由抗原引起；抗原＝能刺激產生專一抗體或 T 細胞反應並與之結合的分子（多為蛋白質、多醣），大分子上有多個抗原決定位（表位）；半抗原＝小分子本身不具抗原性，與蛋白質結合後才有（如盤尼西林過敏）；免疫分析：用專一抗體偵測抗原，如凝集反應判斷血型、驗孕。</p>
+  <p><b>後天免疫</b> <i class="en-term">adaptive immunity</i>（專一性免疫）是接觸過某種病原體後，經由「學習」而獲得的、專門對付該病原體的能力。它有兩個特點：<b>專一性</b>（只對特定的抗原）與<b>記憶</b>（第二次反應更快更強）。</p>
+  <ul class="dots">
+    <li><b>抗原</b> <i class="en-term">antigen</i>：能刺激產生專一性抗體（或 T 細胞反應）並與之結合的分子，多為外來的蛋白質或多醣。免疫系統能區分「自我」與「非我」，正常只對外來抗原反應。一個大分子表面常有好幾個可被抗體辨認的小區域，稱為<b>抗原決定位</b>或<b>表位</b> <i class="en-term">epitopes</i>。</li>
+    <li><b>半抗原</b> <i class="en-term">haptens</i>：分子太小，本身不能引起免疫反應，但與身體的蛋白質結合後就變成抗原。例如<b>盤尼西林</b>與血漿蛋白結合，可能使某些人過敏。研究上也利用半抗原接到蛋白質上來製造抗體。</li>
+    <li><b>免疫分析</b> <i class="en-term">immunoassays</i>：利用專一性抗體偵測特定抗原，例如抗體與紅血球上抗原結合而<b>凝集</b>，用來判斷<b>血型</b>；驗孕試劑用抗體偵測尿中的 hCG。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>第一次得水痘時，後天免疫「學會」了水痘病毒的抗原，並留下大量<b>記憶細胞</b>。之後再接觸到病毒，記憶細胞迅速大量產生抗體與殺手 T 細胞，在病毒造成症狀前就把它清除（15.4 次級反應）。不過水痘病毒會潛伏在神經節，老年或免疫力下降時可能再活化成<b>帶狀皰疹</b>。</div>
+
+  <h3 id="h3">淋巴球與淋巴器官 Lymphocytes and Lymphoid Organs</h3>
+  <p class="core">淋巴球源自骨髓幹細胞；初級淋巴器官＝骨髓（B 細胞成熟）與胸腺（T 細胞成熟，胸腺在成年後退化）；次級淋巴器官＝淋巴結、脾臟、扁桃腺、腸道的派亞氏斑（培氏斑），捕捉抗原並容納淋巴球；T 細胞→細胞媒介免疫（攻擊被病毒或真菌感染的細胞、移植細胞、癌細胞，必須靠近目標），B 細胞→體液免疫（分泌抗體，可遠距作用，主要對抗細菌與部分病毒）。</p>
+  <ul class="dots">
+    <li>淋巴球都源自<b>骨髓</b>的造血幹細胞。</li>
+    <li><b>初級淋巴器官</b>（淋巴球在這裡「受訓」成熟）：<b>骨髓</b>（B 細胞）與<b>胸腺</b>（T 細胞）。胸腺在兒童期最大，成年後逐漸萎縮成脂肪，之後新的 T 細胞主要靠在次級淋巴器官中分裂而來。</li>
+    <li><b>次級淋巴器官</b>（淋巴球在這裡「駐紮、遇敵」）：<b>淋巴結、脾臟、扁桃腺</b>與腸道黏膜中的<b>派亞氏斑</b>（Peyer's patches）。它們捕捉抗原、呈現給淋巴球；淋巴球在血液、淋巴與各淋巴器官之間不斷巡迴。<b>脾臟</b>過濾血液，其他淋巴器官過濾淋巴。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>T 淋巴球</th><th>B 淋巴球</th></tr>
+    <tr><td>成熟處</td><td><b>胸腺</b>（T＝thymus）</td><td><b>骨髓</b>（B＝bone marrow；最早在鳥類的法氏囊 bursa 發現）</td></tr>
+    <tr><td>免疫型式</td><td><b>細胞媒介免疫</b>：必須<b>靠近</b>目標細胞才能殺死它</td><td><b>體液免疫</b>（抗體媒介）：分泌<b>抗體</b>到血液與淋巴，可在遠處作用</td></tr>
+    <tr><td>主要對抗</td><td>被<b>病毒、真菌</b>感染的細胞、<b>移植</b>的組織、<b>癌細胞</b></td><td><b>細菌</b>、細菌毒素與部分病毒（在細胞外的）</td></tr>
+    <tr><td>會不會製造抗體</td><td>不會</td><td>會（分化成漿細胞後）</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>腸道是人體最大的免疫器官：派亞氏斑等腸道淋巴組織與<b>腸道菌</b>不斷互動。<b>蛋白質—熱量營養不良</b>使胸腺萎縮、T 細胞減少，感染風險大增；<b>鋅、維生素 A、維生素 D</b>、鐵、硒等缺乏也會削弱免疫功能。但補充超過需要量並不會讓免疫「更強」，過量反而有害。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>先天免疫：天生、快、不專一、無記憶——屏障、吞噬、NK、發炎、發燒、干擾素、補體；TLR 辨識 PAMPs，DAMPs 也能啟動。</li>
+      <li>吞噬細胞：嗜中性球先到、單核吞噬細胞（巨噬、樹突細胞）後到、器官固著型；血球滲出 → 趨化作用 → 吞噬 → 溶體分解。</li>
+      <li>發燒：內生性致熱原（IL-1 等）→ 下視丘 PGE₂ → 設定點上移；血漿鐵下降。</li>
+      <li>干擾素：α、β 抗病毒；γ 活化巨噬細胞。</li>
+      <li>後天免疫：專一、有記憶；抗原與表位；半抗原（盤尼西林）；免疫分析（血型、驗孕）。</li>
+      <li>初級淋巴器官：骨髓（B）、胸腺（T）；次級：淋巴結、脾、扁桃腺、派亞氏斑。</li>
+      <li>T 細胞＝細胞媒介（病毒、真菌、移植、癌）；B 細胞＝體液免疫（抗體，細菌）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>先天免疫</td><td>innate immunity</td><td>後天（適應性）免疫</td><td>adaptive immunity</td></tr>
+      <tr><td>病原體相關分子樣式</td><td>PAMPs</td><td>鐸樣受體</td><td>toll-like receptor (TLR)</td></tr>
+      <tr><td>趨化因子／趨化作用</td><td>chemokine / chemotaxis</td><td>血球滲出</td><td>diapedesis (extravasation)</td></tr>
+      <tr><td>吞噬作用</td><td>phagocytosis</td><td>樹突細胞</td><td>dendritic cell</td></tr>
+      <tr><td>內生性致熱原</td><td>endogenous pyrogen</td><td>干擾素</td><td>interferon</td></tr>
+      <tr><td>抗原／表位</td><td>antigen / epitope</td><td>半抗原</td><td>hapten</td></tr>
+      <tr><td>初級／次級淋巴器官</td><td>primary / secondary lymphoid organ</td><td>派亞氏斑</td><td>Peyer's patches</td></tr>
+      <tr><td>細胞媒介免疫</td><td>cell-mediated immunity</td><td>體液免疫</td><td>humoral immunity</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 15.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">15.2</span>B 淋巴球的功能</h2>
+  <div class="en">Functions of B Lymphocytes</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>B 細胞怎麼變成<b>漿細胞</b>與<b>記憶細胞</b>；<b>抗體</b>（免疫球蛋白）的 Y 字形構造、五種類型（IgG、IgA、IgM、IgD、IgE）與它們消滅抗原的方式；<b>補體系統</b>怎麼被抗體啟動並在細菌膜上打洞；以及<b>局部發炎反應</b>的全貌。</div><div><span class="lt lt2">為什麼接在 15.1 後面？</span>15.1 介紹了後天免疫的兩支部隊；先看 B 細胞和它發射的「飛彈」——抗體，因為抗體也是補體系統與發炎反應的關鍵。</div></div>
+  <div class="oneline">B 細胞表面的抗體當受體，遇到相符的抗原後（多半還需要輔助型 T 細胞幫忙）分裂，分化成分泌大量抗體的漿細胞與記憶細胞；抗體是 Y 字形的蛋白，兩隻手臂（可變區）抓抗原，尾巴（恆定區）決定類型與功能；抗體本身不殺死病原，而是中和、凝集、標記讓吞噬細胞吞（調理作用）並啟動補體；補體在細菌膜上形成膜攻擊複合物打洞使它溶解。</div>
+  <div class="think">為什麼新生兒在出生後幾個月內很少得某些傳染病？母乳又提供了什麼？</div>
+
+  <h3 id="h4">抗體 Antibodies</h3>
+  <p class="core">B 細胞表面有抗體當受體；抗原結合（加上輔助型 T 細胞的協助）→ B 細胞分裂 → 漿細胞（每秒分泌約 2,000 個抗體）＋記憶 B 細胞；抗體＝免疫球蛋白（γ 球蛋白），五類：IgG（最多、唯一能通過胎盤、次級反應主力）、IgA（黏膜分泌物、乳汁、唾液、淚液）、IgM（初級反應最早出現、五聚體、ABO 抗體）、IgD（B 細胞表面受體）、IgE（過敏、寄生蟲，結合肥大細胞與嗜鹼性球）。</p>
+  <p>每個 B 細胞表面都有數萬個同一種<b>抗體</b>當作抗原受體。當抗原與它結合（多數情況下還需要輔助型 T 細胞提供訊號，15.3），B 細胞就快速分裂，產生一群相同的細胞，分化成：</p>
+  <ul class="dots">
+    <li><b>漿細胞</b> <i class="en-term">plasma cells</i>：粗糙內質網非常發達的抗體工廠，每秒可分泌約 2,000 個抗體分子，壽命短。</li>
+    <li><b>記憶細胞</b> <i class="en-term">memory cells</i>：長壽，再次遇到同樣抗原時能迅速反應（15.4）。</li>
+  </ul>
+  <p>抗體又叫<b>免疫球蛋白</b> <i class="en-term">immunoglobulins, Ig</i>，在血漿電泳中屬於 <b>γ 球蛋白</b>（第 13 章）。依「尾巴」（重鏈恆定區）的不同分成五類：</p>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>特點</th><th>功能</th></tr>
+    <tr><td><b>IgG</b></td><td>血中<b>最多</b>（約 75–80%）；單體；<b>唯一能通過胎盤</b></td><td>次級反應的主力；調理作用、啟動補體、中和毒素；給胎兒與新生兒被動免疫</td></tr>
+    <tr><td><b>IgA</b></td><td>多為雙體，存在於<b>黏膜分泌物</b>：唾液、淚液、腸道與呼吸道黏液、<b>乳汁（初乳）</b></td><td>在黏膜表面阻止病原附著（第一線）</td></tr>
+    <tr><td><b>IgM</b></td><td>五聚體，最大；<b>初級反應最早出現</b></td><td>強力凝集與啟動補體；ABO 血型的天然抗體多屬 IgM</td></tr>
+    <tr><td><b>IgD</b></td><td>血中很少</td><td>主要在 B 細胞表面當作<b>抗原受體</b></td></tr>
+    <tr><td><b>IgE</b></td><td>血中最少；尾巴結合在<b>肥大細胞</b>與<b>嗜鹼性球</b>上</td><td>對抗<b>寄生蟲</b>；引起<b>立即型過敏</b>（15.6）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>懷孕期間母親的 <b>IgG</b> 能穿過胎盤進入胎兒，出生後提供數個月的被動保護；母乳（特別是產後最初幾天的<b>初乳</b>）富含 <b>IgA</b>，在嬰兒的腸道黏膜表面阻擋病原。隨著母親的抗體逐漸分解，嬰兒要靠自己的免疫與疫苗接種。</div>
+  <div class="nut"><b class="t">營養連結：</b>母乳中除了 <b>IgA</b>，還有乳鐵蛋白、溶菌酶、母乳寡醣（促進益菌生長）與白血球，這是哺餵母乳可減少嬰兒腸胃道與呼吸道感染的原因之一。<b>初乳</b>顏色較黃，含有豐富的 IgA 與蛋白質。</div>
+
+  <h3 id="h5">抗體的構造 Antibody Structure</h3>
+  <p class="core">抗體是 Y 字形：兩條相同的重鏈＋兩條相同的輕鏈，以雙硫鍵相連；兩隻手臂末端的可變區（Fab）是抗原結合位，每個抗體有兩個相同的結合位；尾巴（Fc）是恆定區，決定類型並與吞噬細胞或補體結合；抗體的多樣性來自 B 細胞成熟時 V、D、J 基因片段的重組（加上突變），可產生上億種不同抗體。</p>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <path d="M232,260 L232,140 L150,40" fill="none" stroke="#2563eb" stroke-width="16" stroke-linecap="round"/>
+    <path d="M248,260 L248,140 L330,40" fill="none" stroke="#2563eb" stroke-width="16" stroke-linecap="round"/>
+    <path d="M206,126 L130,52" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round"/>
+    <path d="M274,126 L350,52" fill="none" stroke="#f59e0b" stroke-width="14" stroke-linecap="round"/>
+    <g fill="#dc2626"><circle cx="138" cy="34" r="12"/><circle cx="342" cy="34" r="12"/></g>
+    <line x1="232" y1="160" x2="248" y2="160" stroke="#111827" stroke-width="3"/><line x1="232" y1="172" x2="248" y2="172" stroke="#111827" stroke-width="3"/>
+    <text x="60" y="30" font-size="12" fill="#b91c1c" font-weight="bold">抗原結合位</text><text x="360" y="30" font-size="12" fill="#b91c1c" font-weight="bold">抗原結合位</text>
+    <text x="40" y="100" font-size="12" fill="#b45309">輕鏈（黃）</text><text x="360" y="110" font-size="12" fill="#1d4ed8">重鏈（藍）</text>
+    <text x="100" y="140" font-size="12">可變區（Fab）</text><text x="100" y="156" font-size="11" fill="#6b7280">每種抗體都不同</text>
+    <text x="270" y="230" font-size="12">恆定區（Fc，尾巴）</text><text x="270" y="246" font-size="11" fill="#6b7280">決定 IgG、IgA…類型</text><text x="270" y="262" font-size="11" fill="#6b7280">與吞噬細胞、補體結合</text>
+    <text x="256" y="168" font-size="11" fill="#374151">雙硫鍵</text>
+  </svg><figcaption>抗體的 Y 字形構造：兩條重鏈加兩條輕鏈。手臂末端的可變區像各種形狀的鑰匙孔，只套得住特定的抗原；尾巴則像「插頭」，接上吞噬細胞或補體。</figcaption></figure>
+  <ul class="dots">
+    <li>一個抗體由<b>兩條相同的重鏈</b>與<b>兩條相同的輕鏈</b>以雙硫鍵連成 <b>Y 字形</b>。</li>
+    <li>兩隻手臂末端是<b>可變區</b>（Fab），胺基酸序列各抗體都不同，形成專一的<b>抗原結合位</b>；每個抗體有兩個相同的結合位，所以能把兩個抗原連在一起（造成凝集）。</li>
+    <li>尾巴是<b>恆定區</b>（Fc），決定抗體的類型，並能與吞噬細胞上的受體或補體結合。</li>
+    <li><b>多樣性</b>：人體可產生上億種抗體，但抗體相關的基因只有幾百個片段。B 細胞成熟時，把 <b>V、D、J</b> 等基因片段<b>隨機重組</b>，再加上接合處的變異與之後的突變，就能產生極多種組合（與分子生物學課程的基因重組相關）。</li>
+  </ul>
+  <p>抗體本身並不會殺死病原體，而是：<b>中和</b>（蓋住毒素或病毒附著的部位）、<b>凝集</b>（把病原體黏成團）、<b>調理作用</b>（opsonization，標記病原體讓吞噬細胞更容易吞），以及<b>啟動補體</b>。</p>
+
+  <h3 id="h6">補體系統 The Complement System</h3>
+  <p class="core">補體＝約 20 種血漿蛋白（C1–C9 等），平時不活化；古典路徑：抗體（IgG、IgM）結合抗原後活化 C1，引發連鎖反應；也可由病原表面直接活化（替代路徑、凝集素路徑，屬先天免疫）；結果：①C5–C9 組成膜攻擊複合物在細菌膜上打洞 → 細胞溶解；②C3b 調理作用；③C3a、C5a 吸引吞噬細胞、使肥大細胞釋放組織胺 → 發炎；整合先天與後天免疫。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a152" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="150" width="460" height="22" fill="#bbf7d0" stroke="#16a34a"/><text x="20" y="196" font-size="12" fill="#15803d">細菌細胞膜</text>
+    <path d="M70,150 L70,110 L50,86 M70,110 L90,86" fill="none" stroke="#2563eb" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="100" cy="70" r="16" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="100" y="75" font-size="12" text-anchor="middle">C1</text>
+    <text x="40" y="40" font-size="11">① 抗體抓住細菌，C1 被活化</text>
+    <path d="M120,70 L190,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a152)"/><text x="130" y="60" font-size="11">連鎖活化</text>
+    <circle cx="210" cy="70" r="14" fill="#fecaca" stroke="#dc2626"/><text x="210" y="75" font-size="11" text-anchor="middle">C3b</text>
+    <circle cx="250" cy="100" r="14" fill="#fecaca" stroke="#dc2626"/><text x="250" y="105" font-size="11" text-anchor="middle">C3a</text>
+    <text x="196" y="40" font-size="11" fill="#b91c1c">② C3b 黏上細菌＝調理作用</text><text x="196" y="138" font-size="11" fill="#b91c1c">C3a、C5a → 發炎</text>
+    <path d="M360,90 L360,140" stroke="#374151" stroke-width="2.5" marker-end="url(#a152)"/>
+    <rect x="335" y="140" width="50" height="40" rx="6" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="352" y="140" width="16" height="40" fill="#fff"/>
+    <text x="400" y="80" font-size="11" text-anchor="middle" fill="#6d28d9">③ C5–C9 組成</text><text x="400" y="96" font-size="11" text-anchor="middle" fill="#6d28d9">膜攻擊複合物</text>
+    <text x="360" y="214" font-size="12" text-anchor="middle" fill="#6d28d9" font-weight="bold">在膜上打洞 → 水湧入 → 細菌溶解</text>
+  </svg><figcaption>補體連鎖反應：抗體標記細菌後，補體一個接一個活化，最後在細菌膜上「打一個洞」；中間產生的片段還負責調理與發炎。</figcaption></figure>
+  <p><b>補體</b> <i class="en-term">complement</i> 是血漿中約 20 種蛋白質（C1–C9 等），平時不活化，被觸發後像凝血因子一樣依序連鎖活化。它<b>整合了先天與後天免疫</b>：</p>
+  <ul class="dots">
+    <li><b>古典路徑</b>：抗體（IgG 或 IgM）與細菌表面的抗原結合後，尾巴活化 <b>C1</b>，引發連鎖反應——由後天免疫啟動。</li>
+    <li><b>替代路徑與凝集素路徑</b>：補體直接被病原體表面的多醣等活化，不需要抗體——屬於先天免疫。</li>
+  </ul>
+  <p>補體活化的結果：</p>
+  <ol class="steps">
+    <li><b>細胞溶解</b>：C5–C9 組成<b>膜攻擊複合物</b> <i class="en-term">membrane attack complex</i>，插入細菌細胞膜形成孔洞，水與離子湧入，細菌腫脹破裂。</li>
+    <li><b>調理作用</b>：<b>C3b</b> 黏附在細菌表面，吞噬細胞上有 C3b 受體，更容易吞噬。</li>
+    <li><b>發炎</b>：<b>C3a、C5a</b> 吸引吞噬細胞（趨化），並使<b>肥大細胞</b>釋放組織胺，增加血管通透性。</li>
+  </ol>
+
+  <h3 id="h7">局部發炎 Local Inflammation</h3>
+  <p class="core">細菌進入傷口 → 巨噬細胞（TLR）與肥大細胞分泌細胞激素、趨化因子；肥大細胞去顆粒化釋放組織胺、肝素、前列腺素、白三烯素、TNF-α → 血管擴張、通透性↑ → 紅、熱、腫、痛；補體被活化；嗜中性球先到吞噬，接著單核球變巨噬細胞清除；最後淋巴球（T 細胞）抵達；抗體與補體加強；死亡的嗜中性球與組織碎片形成膿。</p>
+  <p>以細菌進入皮膚傷口為例，<b>局部發炎</b> <i class="en-term">local inflammation</i> 結合了先天與後天免疫：</p>
+  <ol class="steps">
+    <li>組織中的<b>巨噬細胞</b>以鐸樣受體辨認細菌，與<b>肥大細胞</b> <i class="en-term">mast cells</i> 一起分泌細胞激素與趨化因子。</li>
+    <li>肥大細胞<b>去顆粒</b>，釋放<b>組織胺</b>、肝素、前列腺素、白三烯素、腫瘤壞死因子（TNF-α）→ 小動脈擴張（<b>紅、熱</b>）、微血管通透性增加，血漿與蛋白質滲到組織（<b>腫</b>），刺激痛覺神經（<b>痛</b>）——這就是發炎的<b>四大徵象</b>，嚴重時還有功能喪失。</li>
+    <li>補體被活化，加強吸引吞噬細胞。</li>
+    <li><b>嗜中性球</b>經血球滲出最先抵達，吞噬細菌（死亡後與細菌、組織碎片形成<b>膿</b>）；接著<b>單核球</b>進入組織成為巨噬細胞，清除殘骸。</li>
+    <li>若感染持續，<b>淋巴球</b>（T 細胞）最後抵達；B 細胞產生的抗體結合細菌，加強調理與補體作用。</li>
+  </ol>
+  <div class="warn"><b class="t">更正：</b>講義版簡報寫「T 淋巴球是最後抵達的吞噬細胞」，T 淋巴球<b>不是吞噬細胞</b>；正確說法是「T 淋巴球是最後抵達發炎處的白血球」。</div>
+  <div class="nut"><b class="t">營養連結：</b>短暫的急性發炎是修復所必需；但<b>慢性低度發炎</b>（如肥胖時脂肪組織中的巨噬細胞分泌 TNF-α、IL-6）與胰島素阻抗、動脈粥狀硬化有關。飲食中的 <b>ω-3 脂肪酸</b>（EPA、DHA）產生的類二十碳酸發炎性較低，且是消炎物質（resolvins）的前驅物；ω-6 的花生四烯酸則產生較強的發炎物質（第 11 章）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>B 細胞遇抗原（＋輔助 T）→ 漿細胞（分泌抗體）＋記憶細胞。</li>
+      <li>IgG 最多、通過胎盤；IgA 在黏膜與乳汁；IgM 初級反應最早；IgD 在 B 細胞表面；IgE 過敏與寄生蟲。</li>
+      <li>抗體：兩重鏈＋兩輕鏈，Y 字形；可變區（Fab）結合抗原、恆定區（Fc）決定類型；V(D)J 重組造成多樣性。</li>
+      <li>抗體作用：中和、凝集、調理、啟動補體。</li>
+      <li>補體：古典（抗體）與替代路徑；膜攻擊複合物（C5–C9）溶菌、C3b 調理、C3a／C5a 發炎。</li>
+      <li>局部發炎：肥大細胞組織胺 → 紅熱腫痛；嗜中性球先到 → 巨噬細胞 → T 細胞最後到。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>漿細胞</td><td>plasma cell</td><td>記憶細胞</td><td>memory cell</td></tr>
+      <tr><td>免疫球蛋白</td><td>immunoglobulin (Ig)</td><td>初乳</td><td>colostrum</td></tr>
+      <tr><td>重鏈／輕鏈</td><td>heavy / light chain</td><td>可變區／恆定區</td><td>variable / constant region</td></tr>
+      <tr><td>調理作用</td><td>opsonization</td><td>中和作用</td><td>neutralization</td></tr>
+      <tr><td>補體</td><td>complement</td><td>膜攻擊複合物</td><td>membrane attack complex</td></tr>
+      <tr><td>肥大細胞</td><td>mast cell</td><td>腫瘤壞死因子</td><td>tumor necrosis factor (TNF)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 15.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">15.3</span>T 淋巴球的功能</h2>
+  <div class="en">Functions of T Lymphocytes</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>T 細胞的三種類型（<b>胞毒型、輔助型、調節型</b>）與它們的分工；T 細胞怎麼「看見」抗原——必須由其他細胞以 <b>MHC 分子</b>「呈現」；<b>輔助型 T 細胞</b>怎麼指揮巨噬細胞、胞毒型 T 細胞與 B 細胞；以及感染結束後活化的 T 細胞怎麼被清除。</div><div><span class="lt lt2">為什麼接在 15.2 後面？</span>B 細胞的抗體只能對付細胞外的敵人；藏在細胞裡的病毒要靠 T 細胞。而且 B 細胞多半需要輔助型 T 細胞的幫忙才能完全活化——T 細胞其實是整個後天免疫的指揮官。</div></div>
+  <div class="oneline">T 細胞的受體只能辨認被 MHC 分子「端出來」的抗原片段：每個有核細胞都用第一型 MHC 呈現自己體內的蛋白片段，被病毒感染時就被胞毒型（CD8）T 細胞發現而殺死；巨噬細胞、樹突細胞、B 細胞等抗原呈現細胞用第二型 MHC 呈現吞進來的抗原給輔助型（CD4）T 細胞，輔助型 T 細胞再分泌介白素等細胞激素，活化 B 細胞、胞毒型 T 細胞與巨噬細胞；調節型 T 細胞則踩煞車。</div>
+  <div class="think">愛滋病毒（HIV）主要感染的是哪一種細胞？為什麼會使整個免疫系統崩潰？</div>
+
+  <h3 id="h8">T 淋巴球的種類 Types of T Lymphocytes</h3>
+  <p class="core">胞毒型 T 細胞（殺手 T，CD8⁺）：辨認第一型 MHC＋抗原，釋放穿孔素與顆粒酶殺死被病毒感染的細胞、癌細胞、移植細胞；輔助型 T 細胞（CD4⁺）：辨認第二型 MHC＋抗原，分泌細胞激素協助 B 細胞與胞毒型 T 細胞，並活化巨噬細胞（Th1 主細胞免疫、Th2 主體液免疫與過敏、Th17 主發炎）；調節型 T 細胞（CD4⁺、CD25⁺，FOXP3）：抑制免疫反應，維持對自我的耐受性；HIV 感染 CD4⁺ T 細胞。</p>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>表面標記</th><th>辨認</th><th>功能</th></tr>
+    <tr><td><b>胞毒型 T 細胞</b>（殺手 T）cytotoxic (killer) T</td><td><b>CD8</b></td><td>第一型 MHC＋抗原</td><td>直接<b>殺死</b>被病毒感染的細胞、癌細胞、移植細胞：分泌<b>穿孔素</b>在目標細胞膜上打洞，送入<b>顆粒酶</b>引發細胞凋亡</td></tr>
+    <tr><td><b>輔助型 T 細胞</b> helper T</td><td><b>CD4</b></td><td>第二型 MHC＋抗原</td><td>分泌<b>細胞激素</b>（介白素等）幫助 B 細胞產生抗體、幫助胞毒型 T 細胞增生、活化巨噬細胞——<b>指揮官</b></td></tr>
+    <tr><td><b>調節型 T 細胞</b> regulatory T</td><td>CD4、CD25（轉錄因子 FOXP3）</td><td></td><td><b>抑制</b>免疫反應，防止攻擊自身組織與反應過度</td></tr>
+  </table></div>
+  <p>輔助型 T 細胞又依分泌的細胞激素分成幾個亞群：<b>Th1</b>（分泌 γ 干擾素、IL-2，促進細胞媒介免疫與巨噬細胞）、<b>Th2</b>（分泌 IL-4、IL-5、IL-13，促進 B 細胞與抗體、與過敏和寄生蟲有關）、<b>Th17</b>（促進嗜中性球與發炎，與部分自體免疫疾病有關）。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>HIV 主要感染<b>輔助型 T 細胞</b>（以 CD4 為受體）。輔助型 T 細胞是指揮官，數量下降後，B 細胞與胞毒型 T 細胞都無法被好好活化，整個後天免疫就崩潰，病人死於平常不太會致病的伺機性感染或癌症——稱為後天免疫缺乏症候群（AIDS）。以抗反轉錄病毒藥物治療可長期控制。</div>
+
+  <h3 id="h9">抗原呈現與主要組織相容複合體 Antigen Presentation and MHC</h3>
+  <p class="core">T 細胞受體只能辨認與 MHC（人類稱 HLA）結合後呈現在細胞表面的抗原片段；第一型 MHC：所有有核細胞都有，呈現細胞內製造的蛋白片段（含病毒蛋白）→ 給 CD8⁺ 胞毒型 T；第二型 MHC：只有抗原呈現細胞（巨噬細胞、樹突細胞、B 細胞）有，呈現吞進來的外來抗原片段 → 給 CD4⁺ 輔助型 T；MHC 每人不同，是器官移植排斥的原因（組織配對）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="18" font-size="13" text-anchor="middle" font-weight="bold">第一型 MHC</text><text x="360" y="18" font-size="13" text-anchor="middle" font-weight="bold">第二型 MHC</text>
+    <ellipse cx="120" cy="200" rx="90" ry="70" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="120" y="210" font-size="12" text-anchor="middle">任何有核細胞</text><text x="120" y="228" font-size="11" text-anchor="middle">（被病毒感染）</text>
+    <g fill="#dc2626"><circle cx="100" cy="180" r="4"/><circle cx="130" cy="186" r="4"/><circle cx="115" cy="166" r="4"/></g><text x="120" y="252" font-size="11" text-anchor="middle" fill="#b91c1c">細胞內的病毒蛋白</text>
+    <path d="M110,132 L110,112 L104,104 M130,132 L130,112 L136,104" fill="none" stroke="#b45309" stroke-width="5"/><circle cx="120" cy="100" r="6" fill="#dc2626"/>
+    <rect x="80" y="40" width="80" height="40" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="120" y="58" font-size="12" text-anchor="middle" font-weight="bold">CD8 殺手 T</text><text x="120" y="74" font-size="10" text-anchor="middle">→ 殺死這個細胞</text>
+    <ellipse cx="360" cy="200" rx="90" ry="70" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="360" y="210" font-size="12" text-anchor="middle">抗原呈現細胞</text><text x="360" y="228" font-size="11" text-anchor="middle">巨噬・樹突・B 細胞</text>
+    <circle cx="345" cy="174" r="14" fill="#fff" stroke="#7c3aed"/><g fill="#16a34a"><circle cx="340" cy="172" r="3"/><circle cx="350" cy="176" r="3"/></g><text x="360" y="252" font-size="11" text-anchor="middle" fill="#15803d">吞進來的外來抗原</text>
+    <path d="M350,132 L350,112 L344,104 M370,132 L370,112 L376,104" fill="none" stroke="#7c3aed" stroke-width="5"/><circle cx="360" cy="100" r="6" fill="#16a34a"/>
+    <rect x="310" y="40" width="100" height="40" rx="12" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="360" y="58" font-size="12" text-anchor="middle" font-weight="bold">CD4 輔助 T</text><text x="360" y="74" font-size="10" text-anchor="middle">→ 被活化、去指揮</text>
+    <text x="240" y="292" font-size="12" text-anchor="middle" fill="#374151">MHC 像一個「托盤」，把抗原片段端到細胞表面給 T 細胞看</text>
+  </svg><figcaption>兩種 MHC：第一型 MHC 是每個細胞的「自我檢查報告」，被病毒感染時就被殺手 T 細胞發現；第二型 MHC 只在抗原呈現細胞上，把吞進來的敵人片段展示給輔助型 T 細胞。</figcaption></figure>
+  <p>B 細胞的抗體可以直接抓住完整的抗原；但 <b>T 細胞受體</b>只能辨認被<b>主要組織相容複合體</b> <i class="en-term">major histocompatibility complex, MHC</i> 分子「放在托盤上」端到細胞表面的<b>抗原片段</b>。人類的 MHC 又叫<b>人類白血球抗原</b>（HLA）。</p>
+  <ul class="dots">
+    <li><b>第一型 MHC</b>：<b>所有有核細胞</b>都有（紅血球沒有核，所以沒有）。它把細胞<b>內部</b>製造的蛋白質片段呈現出來；細胞被病毒感染時，病毒蛋白的片段也會被呈現 → <b>CD8 胞毒型 T 細胞</b>辨認後殺死這個細胞。</li>
+    <li><b>第二型 MHC</b>：只有<b>抗原呈現細胞</b> <i class="en-term">antigen-presenting cells</i>——<b>巨噬細胞、樹突細胞、B 細胞</b>——才有。它們把<b>吞進來</b>的外來抗原分解後，與第二型 MHC 一起呈現 → 給 <b>CD4 輔助型 T 細胞</b>辨認。</li>
+  </ul>
+  <p>每個人的 MHC 分子組合幾乎都不同（同卵雙胞胎除外），所以移植別人的器官時，受者的 T 細胞會把供者的 MHC 當作外來而<b>排斥</b>。器官移植前要做<b>組織配對</b>（HLA），並長期使用免疫抑制劑。</p>
+
+  <h3 id="h10">T 細胞對病毒的反應 T Cell Response to a Virus</h3>
+  <p class="core">樹突細胞或巨噬細胞吞噬病毒 → 抗原片段＋第二型 MHC 呈現 → 分泌 IL-1 → 輔助型 T 細胞被活化、分裂 → 輔助型 T 分泌：γ 干擾素與巨噬細胞群落刺激因子（活化巨噬細胞）、IL-2（使輔助型與胞毒型 T 細胞增生、促進巨噬細胞產生 TNF）、其他介白素（使 B 細胞分裂、變成漿細胞產生抗體）；胞毒型 T 細胞辨認呈現病毒抗原＋第一型 MHC 的受感染細胞 → 殺死它。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a153" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="20" width="160" height="56" rx="12" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="90" y="44" font-size="13" text-anchor="middle" font-weight="bold">樹突細胞／巨噬細胞</text><text x="90" y="62" font-size="11" text-anchor="middle">吞病毒、第二型 MHC 呈現</text>
+    <path d="M170,48 L222,48" stroke="#374151" stroke-width="2.5" marker-end="url(#a153)"/><text x="196" y="40" font-size="10" text-anchor="middle">IL-1</text>
+    <circle cx="270" cy="48" r="40" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/><text x="270" y="44" font-size="13" text-anchor="middle" font-weight="bold">輔助型 T</text><text x="270" y="62" font-size="11" text-anchor="middle">（CD4）</text>
+    <path d="M300,80 L390,150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a153)"/><path d="M270,88 L270,150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a153)"/><path d="M240,80 L130,150" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a153)"/>
+    <path d="M232,40 C190,90 140,90 120,80" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="4 3" marker-end="url(#a153)"/><text x="14" y="104" font-size="10" fill="#1d4ed8">γ 干擾素：活化巨噬細胞</text>
+    <text x="350" y="112" font-size="10" fill="#1d4ed8">介白素</text><text x="276" y="128" font-size="10" fill="#1d4ed8">IL-2</text><text x="160" y="140" font-size="10" fill="#1d4ed8">IL-2</text>
+    <rect x="340" y="154" width="130" height="56" rx="12" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="405" y="178" font-size="13" text-anchor="middle" font-weight="bold">B 細胞</text><text x="405" y="196" font-size="11" text-anchor="middle">→ 漿細胞 → 抗體</text>
+    <rect x="200" y="154" width="130" height="56" rx="12" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="265" y="178" font-size="13" text-anchor="middle" font-weight="bold">胞毒型 T</text><text x="265" y="196" font-size="11" text-anchor="middle">（CD8）增生</text>
+    <rect x="40" y="154" width="140" height="56" rx="12" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="110" y="178" font-size="13" text-anchor="middle" font-weight="bold">其他輔助型 T</text><text x="110" y="196" font-size="11" text-anchor="middle">增生、擴大反應</text>
+    <path d="M265,210 L265,240" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a153)"/>
+    <ellipse cx="265" cy="266" rx="104" ry="26" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="265" y="264" font-size="12" text-anchor="middle">受感染細胞（第一型 MHC）</text><text x="265" y="280" font-size="11" text-anchor="middle" fill="#b91c1c">穿孔素＋顆粒酶 → 凋亡</text>
+  </svg><figcaption>輔助型 T 細胞是指揮官：被抗原呈現細胞活化後，分泌細胞激素同時動員巨噬細胞、胞毒型 T 細胞與 B 細胞。</figcaption></figure>
+  <ol class="steps">
+    <li>病毒被<b>樹突細胞</b>或<b>巨噬細胞</b>吞噬，病毒抗原的片段與<b>第二型 MHC</b> 結合後移到細胞表面。</li>
+    <li>輔助型 T 細胞的受體辨認這個複合物；抗原呈現細胞並分泌<b>介白素-1</b>（IL-1），刺激輔助型 T 細胞分裂增生。</li>
+    <li>活化的輔助型 T 細胞分泌：
+      <ul class="dots">
+        <li><b>γ 干擾素</b>與<b>巨噬細胞群落刺激因子</b> → 增強巨噬細胞的活性；</li>
+        <li><b>介白素-2</b>（IL-2）→ 使更多輔助型 T 與<b>胞毒型 T 細胞</b>增生，也使巨噬細胞製造對抗癌細胞的<b>腫瘤壞死因子</b>；</li>
+        <li>其他介白素並直接與 B 細胞接觸（辨認 B 細胞以第二型 MHC 呈現的同一種抗原）→ 使 <b>B 細胞</b>分裂、成為漿細胞並產生抗體。</li>
+      </ul></li>
+    <li><b>胞毒型 T 細胞</b>辨認以<b>第一型 MHC</b> 呈現病毒抗原的受感染細胞，釋放<b>穿孔素</b>與<b>顆粒酶</b>，使它凋亡，病毒失去複製的地方。</li>
+  </ol>
+  <h4>T 細胞的清除與免疫特權部位 Destruction of T Cells</h4>
+  <p class="core">感染結束後，活化的 T 細胞表現 FAS 受體與 FAS 配體，彼此結合引發細胞凋亡，避免反應無止境；某些部位（眼睛前房、睪丸的細精管）細胞表現 FAS 配體，使進入的 T 細胞凋亡，成為免疫特權部位。</p>
+  <p>感染結束後，大量活化的 T 細胞必須被移除：它們表現 <b>FAS</b> 受體與 <b>FAS 配體</b>，兩者結合就觸發<b>細胞凋亡</b>。眼睛（前房）、睪丸的細精管等部位的細胞也表現 FAS 配體，使進入的 T 細胞凋亡，保護這些平常免疫系統接觸不到、可能被當成外來的組織，稱為<b>免疫特權部位</b> <i class="en-term">immunologically privileged sites</i>。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>胞毒型 T（CD8，第一型 MHC）殺細胞（穿孔素、顆粒酶）；輔助型 T（CD4，第二型 MHC）分泌細胞激素指揮；調節型 T 抑制、維持耐受。</li>
+      <li>Th1（細胞免疫）、Th2（抗體、過敏、寄生蟲）、Th17（發炎）。</li>
+      <li>T 細胞只能辨認 MHC 呈現的抗原片段；第一型 MHC 在所有有核細胞；第二型只在抗原呈現細胞（巨噬、樹突、B）。</li>
+      <li>MHC（HLA）個人差異 → 移植排斥、需組織配對。</li>
+      <li>病毒反應：呈現 → IL-1 → 輔助 T → γ 干擾素（巨噬）、IL-2（T 細胞增生）、介白素（B 細胞）→ 胞毒型 T 殺受感染細胞。</li>
+      <li>HIV 感染 CD4 輔助 T → AIDS；FAS／FAS 配體使 T 細胞凋亡；免疫特權部位（眼、睪丸）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>胞毒型 T 細胞</td><td>cytotoxic (killer) T cell</td><td>輔助型 T 細胞</td><td>helper T cell</td></tr>
+      <tr><td>調節型 T 細胞</td><td>regulatory T cell</td><td>穿孔素／顆粒酶</td><td>perforin / granzyme</td></tr>
+      <tr><td>主要組織相容複合體</td><td>MHC (HLA)</td><td>抗原呈現細胞</td><td>antigen-presenting cell</td></tr>
+      <tr><td>介白素</td><td>interleukin (IL)</td><td>細胞激素</td><td>cytokine</td></tr>
+      <tr><td>免疫特權部位</td><td>immunologically privileged site</td><td>後天免疫缺乏症候群</td><td>AIDS</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 15.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">15.4</span>主動與被動免疫</h2>
+  <div class="en">Active and Passive Immunity</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>第一次與第二次接觸抗原時的<b>初級反應</b>與<b>次級反應</b>、解釋記憶的<b>株落選擇理論</b>、<b>主動免疫</b>與<b>疫苗</b>的種類、身體怎麼不攻擊自己（<b>免疫耐受性</b>），以及直接給抗體的<b>被動免疫</b>與<b>單株抗體</b>。</div><div><span class="lt lt2">為什麼接在 15.3 後面？</span>知道 B 細胞與 T 細胞怎麼作戰後，這一節回答「為什麼第二次會更快」——也就是免疫記憶，以及人類怎麼利用它來預防疾病。</div></div>
+  <div class="oneline">第一次接觸抗原時，要 5–10 天才測得到抗體（以 IgM 為主），人會生病；第二次接觸時，記憶細胞讓抗體在數小時內就開始上升、幾天內達到很高的量（以 IgG 為主），通常不再發病；株落選擇理論說明：只有認得該抗原的那幾個淋巴球被「選中」大量複製；疫苗讓人產生初級反應與記憶卻不生病（主動免疫）；直接輸入現成抗體則是暫時的被動免疫。</div>
+  <div class="think">被毒蛇咬到時，醫院打的是疫苗還是抗蛇毒血清？兩者有什麼不同？</div>
+
+  <h3 id="h11">主動免疫與株落選擇理論 Active Immunity and the Clonal Selection Theory</h3>
+  <p class="core">初級反應：首次接觸，潛伏期 5–10 天才測得到抗體（先 IgM），量少，人通常會生病；次級反應：再次接觸，記憶細胞使抗體在數小時內開始上升、數天內達到遠高於初級的量（以 IgG 為主），持續久，通常不再發病；株落選擇理論：每種淋巴球專門對一種抗原，數量很少，抗原「選中」相符的淋巴球使其大量分裂成株落（在淋巴器官的生發中心），產生效應細胞與記憶細胞，所以第二次反應更快更強。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="50" y1="200" x2="470" y2="200" stroke="#374151" stroke-width="2"/><line x1="50" y1="200" x2="50" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="30" y="110" font-size="12" text-anchor="middle" transform="rotate(-90 30 110)">血中抗體量</text>
+    <text x="260" y="226" font-size="12" text-anchor="middle">時間（週）→</text>
+    <path d="M70,200 L110,198 C130,190 150,170 170,166 C190,166 210,185 250,196" fill="none" stroke="#2563eb" stroke-width="3"/>
+    <path d="M270,198 C285,160 300,50 330,42 C370,40 420,60 470,80" fill="none" stroke="#dc2626" stroke-width="3.5"/>
+    <path d="M70,192 L70,206 M270,192 L270,206" stroke="#111827" stroke-width="3"/>
+    <text x="70" y="186" font-size="11" text-anchor="middle">第一次接觸</text><text x="270" y="186" font-size="11" text-anchor="end">第二次接觸</text>
+    <text x="140" y="150" font-size="12" fill="#1d4ed8" font-weight="bold">初級反應</text><text x="110" y="216" font-size="10" fill="#6b7280">潛伏期 5–10 天</text>
+    <text x="340" y="34" font-size="12" fill="#b91c1c" font-weight="bold">次級反應：快、多、久</text>
+  </svg><figcaption>初級與次級反應：第一次慢又少；第二次因為有記憶細胞，抗體又快又多又持久。</figcaption></figure>
+  <ul class="dots">
+    <li><b>初級反應</b> <i class="en-term">primary response</i>：第一次接觸某抗原，要經過約 <b>5–10 天</b>才能在血中測到抗體（先出現 IgM，量少），這段期間人通常會<b>生病</b>。</li>
+    <li><b>次級反應</b> <i class="en-term">secondary response</i>：之後再接觸同一抗原，抗體在<b>數小時內</b>就開始上升，幾天內就達到遠高於初級反應的量（以 <b>IgG</b> 為主），而且維持很久，人<b>通常不會再發病</b>。</li>
+  </ul>
+  <div class="warn"><b class="t">更正：</b>講義版簡報寫次級反應「抗體產量在兩小時內就可達到最高峰」，較精確的說法是<b>數小時內就開始上升、數天內達到高峰</b>，重點是比初級反應快得多、量也多得多。</div>
+  <p><b>株落選擇理論</b> <i class="en-term">clonal selection theory</i> 解釋了記憶：</p>
+  <ol class="steps">
+    <li>身體在接觸抗原<b>之前</b>，就已經有能辨認幾乎每一種抗原的淋巴球，但每一種都只有<b>很少</b>幾個。</li>
+    <li>抗原進入時，只「選中」表面受體與它相符的淋巴球。</li>
+    <li>被選中的淋巴球在次級淋巴器官的<b>生發中心</b>大量分裂，形成一群完全相同的細胞——<b>株落</b>（clone，殖株）：一部分成為作戰的效應細胞（漿細胞、胞毒型 T），一部分成為<b>記憶細胞</b>。</li>
+    <li>下次再遇到同一抗原時，能反應的細胞已經多了很多倍，所以反應又快又強。</li>
+  </ol>
+  <p>這種由自己的免疫系統產生抗體與記憶的保護，稱為<b>主動免疫</b> <i class="en-term">active immunity</i>，可來自自然感染或疫苗。</p>
+  <h4>疫苗 Vaccinations</h4>
+  <p class="core">疫苗刺激初級反應與記憶而不致病：①不活化（死）疫苗（沙克小兒麻痺疫苗）；②減毒活疫苗（沙賓口服小兒麻痺疫苗、MMR 麻疹腮腺炎德國麻疹）；③重組蛋白或次單位疫苗（B 型肝炎疫苗）；④類毒素（破傷風、白喉）；⑤mRNA 與病毒載體疫苗（COVID-19）；佐劑增強反應（多為 PAMPs 類似物）；常需多劑追加以產生強次級反應。</p>
+  <ul class="dots">
+    <li><b>不活化疫苗</b>：用被殺死的病原，如沙克（Salk）小兒麻痺注射疫苗、流感疫苗。</li>
+    <li><b>減毒活疫苗</b>：病原仍活著但毒性減弱，無法造成疾病，如沙賓（Sabin）口服小兒麻痺疫苗、<b>MMR</b>（麻疹、腮腺炎、德國麻疹）、卡介苗；免疫力低下者與孕婦通常不宜接種。</li>
+    <li><b>重組蛋白（次單位）疫苗</b>：以基因工程製造病原的某個蛋白，如 <b>B 型肝炎疫苗</b>（台灣自 1984 年起新生兒全面接種，大幅降低肝癌）、HPV 疫苗。</li>
+    <li><b>類毒素</b>：去除毒性的細菌毒素，如破傷風、白喉。</li>
+    <li><b>mRNA 疫苗與病毒載體疫苗</b>：讓自己的細胞製造病毒蛋白（例如 COVID-19 疫苗）。</li>
+  </ul>
+  <p>疫苗常加入<b>佐劑</b> <i class="en-term">adjuvants</i>，它們多半模仿 PAMPs 活化先天免疫，增強反應；並常需要<b>追加劑</b>，誘發強而持久的次級反應。</p>
+
+  <h3 id="h12">免疫耐受性 Immunological Tolerance</h3>
+  <p class="core">免疫勝任性在出生後不久發展；免疫耐受性＝對自身抗原不反應；中央耐受性：胸腺（T）與骨髓（B）中認得自我抗原的淋巴球被刪除（株落刪除，凋亡）；周邊耐受性：在其他地方使自我反應淋巴球無反應（株落無能）或由調節型 T 細胞抑制；耐受失敗 → 自體免疫疾病。</p>
+  <p>因為淋巴球受體是隨機產生的，難免有些會認得自己的分子。身體在出生前後發展出區分「自我」與「非我」的能力（<b>免疫勝任性</b>），並對自身抗原保持<b>免疫耐受性</b> <i class="en-term">immunological tolerance</i>：</p>
+  <ul class="dots">
+    <li><b>中央耐受性</b>：在<b>胸腺</b>（T 細胞）與<b>骨髓</b>（B 細胞）中，強烈辨認自我抗原的淋巴球被誘導凋亡而移除——<b>株落刪除</b>（clonal deletion）。</li>
+    <li><b>周邊耐受性</b>：在胸腺與骨髓以外，逃過篩選的自我反應淋巴球被抑制而無法活化——<b>株落無能</b>（clonal anergy），<b>調節型 T 細胞</b>在其中扮演重要角色。</li>
+  </ul>
+  <p>耐受性失敗時，就會發生自體免疫疾病（15.6）。</p>
+
+  <h3 id="h13">被動免疫 Passive Immunity</h3>
+  <p class="core">被動免疫：直接從其他個體獲得現成抗體，自己不製造，立即有效但只持續數週到數月、沒有記憶；自然：母親 IgG 經胎盤、初乳與母乳的 IgA；人工：抗蛇毒血清、破傷風免疫球蛋白、B 型肝炎免疫球蛋白（給 B 肝帶原母親的新生兒）、狂犬病免疫球蛋白。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>主動免疫</th><th>被動免疫</th></tr>
+    <tr><td>抗體來源</td><td>自己產生</td><td>別人（或動物）產生的現成抗體</td></tr>
+    <tr><td>生效速度</td><td>慢（初級反應需數天到數週）</td><td><b>立即</b></td></tr>
+    <tr><td>持續時間</td><td>長，有記憶細胞</td><td>短（數週到數月），無記憶</td></tr>
+    <tr><td>自然來源</td><td>感染後</td><td>母親 IgG 經<b>胎盤</b>；<b>初乳</b>、母乳的 IgA</td></tr>
+    <tr><td>人工來源</td><td>疫苗</td><td><b>抗蛇毒血清</b>、破傷風或狂犬病免疫球蛋白、B 肝免疫球蛋白</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>被毒蛇咬到時，毒素數小時內就會造成傷害，沒有時間等自己產生抗體，所以打的是<b>抗蛇毒血清</b>——由馬等動物產生的<b>現成抗體</b>，屬於<b>被動免疫</b>，立即中和毒素，但幾週後就分解、沒有記憶。疫苗則是主動免疫，需事先接種。B 型肝炎帶原母親生的嬰兒，出生時同時打 <b>B 肝免疫球蛋白</b>（被動，立即保護）與<b>B 肝疫苗</b>（主動，長期保護）。</div>
+  <h4>單株抗體 Monoclonal Antibodies</h4>
+  <p class="core">單株抗體：把產生特定抗體的 B 細胞與能無限分裂的骨髓瘤細胞融合成融合瘤，培養出大量只針對單一表位的相同抗體；用於驗孕與診斷試劑、癌症與自體免疫疾病治療（名稱多以 -mab 結尾）。</p>
+  <p>將動物注射某抗原後，取出能製造所需抗體的 B 細胞，與能無限分裂的癌化<b>骨髓瘤細胞</b>融合，成為<b>融合瘤</b> <i class="en-term">hybridoma</i>。融合瘤的後代是同一個細胞的株落，大量分泌<b>只針對單一表位</b>的抗體，稱為<b>單株抗體</b> <i class="en-term">monoclonal antibodies</i>。它們用於驗孕、許多診斷試劑，以及治療癌症、類風濕性關節炎等疾病（藥名多以 <b>-mab</b> 結尾）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>初級反應：5–10 天、IgM 先、量少、會生病；次級反應：數小時開始上升、數天達高峰、IgG 為主、量多持久。</li>
+      <li>株落選擇：抗原選中相符的少數淋巴球 → 大量分裂成株落（效應＋記憶細胞）。</li>
+      <li>疫苗：不活化、減毒活、重組次單位、類毒素、mRNA／載體；佐劑；追加劑。</li>
+      <li>耐受性：中央（胸腺、骨髓，株落刪除）、周邊（株落無能、調節型 T）。</li>
+      <li>被動免疫：現成抗體，立即、短暫、無記憶——胎盤 IgG、初乳 IgA、抗蛇毒血清、免疫球蛋白。</li>
+      <li>單株抗體：B 細胞＋骨髓瘤 → 融合瘤；診斷與治療（-mab）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>初級／次級反應</td><td>primary / secondary response</td><td>株落選擇理論</td><td>clonal selection theory</td></tr>
+      <tr><td>主動／被動免疫</td><td>active / passive immunity</td><td>疫苗</td><td>vaccine</td></tr>
+      <tr><td>減毒</td><td>attenuated</td><td>佐劑</td><td>adjuvant</td></tr>
+      <tr><td>免疫耐受性</td><td>immunological tolerance</td><td>株落刪除／無能</td><td>clonal deletion / anergy</td></tr>
+      <tr><td>抗毒血清</td><td>antiserum (antivenom)</td><td>單株抗體</td><td>monoclonal antibody</td></tr>
+      <tr><td>融合瘤</td><td>hybridoma</td><td>生發中心</td><td>germinal center</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 15.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">15.5</span>腫瘤免疫學</h2>
+  <div class="en">Tumor Immunology</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>腫瘤細胞為什麼能被免疫系統辨認（<b>腫瘤抗原</b>）、免疫系統怎麼<b>監督</b>並消滅它們（胞毒型 T 細胞與<b>自然殺手細胞</b>）、腫瘤怎麼逃脫，以及<b>癌症的免疫療法</b>與<b>老化、壓力</b>對免疫的影響。</div><div><span class="lt lt2">為什麼接在 15.4 後面？</span>前幾節的敵人來自外面；這一節的「敵人」是自己的細胞變成的。它考驗的是免疫系統能否辨認「變了樣的自己」。</div></div>
+  <div class="oneline">腫瘤是失控分裂、去分化成類似胚胎細胞的異常株落；良性腫瘤生長慢、局限，惡性腫瘤生長快且會轉移；腫瘤細胞表現胚胎抗原、突變蛋白或病毒抗原，可被胞毒型 T 細胞與先天的自然殺手細胞監督消滅；腫瘤會分泌 FAS 配體、TGF-β 等逃避免疫；免疫療法包括單株抗體、細胞激素與免疫檢查點抑制劑；老化與長期壓力（皮質醇）降低免疫監督。</div>
+
+  <h3 id="h14">腫瘤與腫瘤抗原 Tumors and Tumor Antigens</h3>
+  <p class="core">腫瘤＝失控分裂、去分化的異常株落；良性：生長慢、局限；惡性（癌）：生長快、侵犯並轉移；由致癌基因、抑癌基因或 microRNA 基因表現改變造成；腫瘤抗原：去分化表現的胚胎抗原（如 CEA、甲型胎兒蛋白 AFP，可作血液檢驗）、致癌物造成的突變蛋白、致癌病毒的抗原（如 HPV）、過度表現的正常蛋白。</p>
+  <ul class="dots">
+    <li><b>腫瘤</b>是分裂失控、<b>去分化</b>（失去成熟細胞的特徵，變得像胚胎細胞）的異常細胞株落，由<b>致癌基因</b>、<b>抑癌基因</b>或 microRNA 基因的表現改變造成（分子生物學課程）。</li>
+    <li><b>良性腫瘤</b>：生長慢、局限在一處、有包膜。<b>惡性腫瘤（癌）</b>：生長快、侵犯周圍組織並<b>轉移</b>（metastasis）到身體其他部位。</li>
+    <li><b>腫瘤抗原</b>：①去分化後重新表現的<b>胚胎抗原</b>，有些可作為血液檢驗的腫瘤標記，例如大腸癌的 <b>CEA</b>（癌胚抗原）、肝癌的<b>甲型胎兒蛋白</b>（AFP）；②致癌物造成的<b>突變蛋白</b>；③致癌病毒的<b>病毒抗原</b>（例如子宮頸癌的人類乳突病毒 HPV）；④<b>過度表現</b>的正常蛋白。</li>
+  </ul>
+
+  <h3 id="h15">免疫監督與自然殺手細胞 Immune Surveillance and Natural Killer Cells</h3>
+  <p class="core">免疫監督：胞毒型 T 細胞辨認呈現腫瘤抗原的細胞並殺死；自然殺手（NK）細胞：屬先天免疫的淋巴球，不需辨認專一抗原，殺死缺少第一型 MHC 或表現壓力分子的腫瘤細胞與病毒感染細胞，方式同胞毒型 T（穿孔素、顆粒酶），需樹突細胞的細胞激素活化，並分泌 γ 干擾素；腫瘤逃脫：減少 MHC 表現、分泌 FAS 配體使淋巴球凋亡、分泌 TGF-β、IL-10 抑制免疫、活化免疫檢查點（PD-L1）。</p>
+  <ul class="dots">
+    <li><b>胞毒型 T 細胞</b>：辨認以第一型 MHC 呈現腫瘤抗原的細胞並殺死。</li>
+    <li><b>自然殺手細胞</b> <i class="en-term">natural killer (NK) cells</i>：與 T 細胞相近的淋巴球，但屬於<b>先天免疫</b>，不需辨認專一抗原。它們專門攻擊<b>第一型 MHC 減少</b>（腫瘤或病毒常藉此躲避殺手 T）或表現「壓力」分子的細胞，用與胞毒型 T 相同的方式（穿孔素、顆粒酶）殺死。NK 細胞需要樹突細胞分泌的發炎性細胞激素活化，本身也分泌細胞激素活化其他免疫細胞。</li>
+    <li><b>腫瘤的逃脫</b>：減少 MHC 與抗原的表現；分泌 <b>FAS 配體</b>使攻擊它的淋巴球凋亡；分泌 <b>TGF-β</b>（轉型生長因子 β）、IL-10 等抑制免疫；表現「免疫檢查點」分子（如 <b>PD-L1</b>）讓 T 細胞「關機」。當免疫監督失敗時，癌症就發展出來。</li>
+  </ul>
+
+  <h3 id="h16">癌症的免疫療法 Immunotherapy for Cancer</h3>
+  <p class="core">治療性單株抗體（如針對 HER2 的乳癌藥）、干擾素、介白素-2 已用於治療某些癌症；免疫檢查點抑制劑（抗 PD-1、PD-L1、CTLA-4 單株抗體）解除 T 細胞的煞車；CAR-T 細胞療法改造病人自己的 T 細胞；不一定能治癒，但對部分病人有明顯效果。</p>
+  <ul class="dots">
+    <li><b>治療性單株抗體</b>：如針對乳癌細胞 HER2 蛋白的抗體，標記癌細胞讓免疫系統攻擊或阻斷生長訊號。</li>
+    <li><b>細胞激素</b>：干擾素、介白素-2。</li>
+    <li><b>免疫檢查點抑制劑</b>：抗 PD-1、PD-L1、CTLA-4 的單株抗體，解除腫瘤加在 T 細胞上的「煞車」，對黑色素瘤、肺癌等有明顯療效（2018 年諾貝爾生理醫學獎）。副作用是可能引起自體免疫反應。</li>
+    <li><b>CAR-T 細胞療法</b>：取出病人自己的 T 細胞，以基因工程裝上辨認癌細胞的受體，再輸回體內，用於某些血液癌症。</li>
+  </ul>
+  <p>這些療法無法「治癒」所有癌症，但已讓部分病人長期存活。</p>
+
+  <h3 id="h17">老化與壓力的影響 Effects of Aging and Stress</h3>
+  <p class="core">罹癌風險隨年齡增加，可能與淋巴球累積突變、胸腺退化使細胞媒介免疫降低有關；壓力使皮質醇（與可體松等糖皮質素）分泌增加，抑制免疫系統，動物實驗中腫瘤生長較快；長期壓力也使人較易感染。</p>
+  <ul class="dots">
+    <li><b>老化</b>：罹癌風險隨年齡增加，可能與<b>胸腺退化</b>使細胞媒介免疫降低、淋巴球功能下降與累積突變有關。</li>
+    <li><b>壓力</b>：長期壓力使<b>皮質醇</b>（糖皮質素）分泌增加，抑制淋巴球與發炎反應（第 11 章）；動物實驗中壓力使腫瘤生長較快，人在長期壓力下也較容易感染。類固醇藥物（如 prednisolone）就是利用這種免疫抑制作用治療自體免疫與過敏，長期使用則增加感染風險。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>腫瘤病人常見<b>惡病質</b>（cachexia）：腫瘤與免疫細胞分泌的細胞激素（TNF-α、IL-6）使食慾下降、肌肉與脂肪大量分解，單靠增加熱量難以逆轉，營養師需及早介入。<b>營養不良</b>本身也會降低免疫力，影響治療成效。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>腫瘤：去分化的失控株落；良性局限、惡性轉移。</li>
+      <li>腫瘤抗原：胚胎抗原（CEA、AFP）、突變蛋白、病毒抗原（HPV）、過度表現。</li>
+      <li>免疫監督：胞毒型 T；NK 細胞（先天，殺 MHC-I 減少的細胞）。</li>
+      <li>逃脫：MHC↓、FAS 配體、TGF-β、PD-L1。</li>
+      <li>免疫療法：單株抗體、干擾素、IL-2、檢查點抑制劑、CAR-T。</li>
+      <li>老化（胸腺退化）與壓力（皮質醇）降低免疫。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>腫瘤學</td><td>oncology</td><td>良性／惡性</td><td>benign / malignant</td></tr>
+      <tr><td>轉移</td><td>metastasis</td><td>去分化</td><td>dedifferentiation</td></tr>
+      <tr><td>癌胚抗原</td><td>carcinoembryonic antigen (CEA)</td><td>甲型胎兒蛋白</td><td>α-fetoprotein (AFP)</td></tr>
+      <tr><td>免疫監督</td><td>immunological surveillance</td><td>自然殺手細胞</td><td>natural killer (NK) cell</td></tr>
+      <tr><td>免疫檢查點抑制劑</td><td>immune checkpoint inhibitor</td><td>惡病質</td><td>cachexia</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 15.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">15.6</span>免疫系統引起的疾病</h2>
+  <div class="en">Diseases Caused by the Immune System</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>免疫系統失誤造成的三類疾病：<b>自體免疫疾病</b>（攻擊自己）、<b>免疫複合體疾病</b>（抗原抗體複合物沉積引起發炎）、<b>過敏</b>（對無害物質反應過度）——立即型（IgE、肥大細胞、組織胺）與遲發型（T 細胞）。</div><div><span class="lt lt2">為什麼放最後？</span>學完正常的防禦機制後，才能理解它「打錯對象」或「反應過度」時發生什麼。這裡也是營養師最常遇到的：第 1 型糖尿病、乳糜瀉、食物過敏。</div></div>
+  <div class="oneline">自體免疫是對自我耐受失敗，自體反應的 T 細胞與自體抗體攻擊自身組織（第 1 型糖尿病、葛瑞夫茲、橋本氏、類風濕性關節炎、紅斑性狼瘡、多發性硬化、惡性貧血）；免疫複合體疾病是抗原抗體複合物沉積在血管、腎、關節引起發炎；立即型過敏是過敏原引起 IgE 產生並附在肥大細胞上，再次接觸時肥大細胞釋放組織胺，數分鐘內出現症狀，嚴重時過敏性休克；遲發型過敏由 T 細胞造成，一兩天後才出現（如接觸性皮膚炎、結核菌素測驗）。</div>
+  <div class="think">吃蝦過敏和喝牛奶會脹氣拉肚子（乳糖不耐），是同一回事嗎？</div>
+
+  <h3 id="h18">自體免疫 Autoimmunity</h3>
+  <p class="core">自體免疫：免疫系統不能辨認並容忍自我抗原，產生自體反應性 T 細胞與自體抗體，造成發炎與器官損傷；常見：類風濕性關節炎、第 1 型糖尿病、葛瑞夫茲病、橋本氏甲狀腺炎、多發性硬化、惡性貧血、乾癬、全身性紅斑性狼瘡、乳糜瀉；原因：平常不接觸免疫系統的抗原暴露、半抗原與自身蛋白結合（藥物使血小板減少）、抗體對抗其他抗體（類風濕因子）、交叉反應（鏈球菌感染後的風濕熱、腎絲球腎炎）、自身抗原被第二型 MHC 異常呈現（第 1 型糖尿病）、調節型 T 細胞不足。</p>
+  <div class="tblwrap"><table>
+    <tr><th>疾病</th><th>被攻擊的目標</th></tr>
+    <tr><td><b>第 1 型糖尿病</b></td><td>胰島 <b>β 細胞</b>（T 細胞破壞）→ 胰島素缺乏</td></tr>
+    <tr><td><b>葛瑞夫茲病</b></td><td>抗體刺激 TSH 受體 → 甲狀腺亢進（第 11 章）</td></tr>
+    <tr><td><b>橋本氏甲狀腺炎</b></td><td>甲狀腺 → 甲狀腺功能低下</td></tr>
+    <tr><td><b>類風濕性關節炎</b></td><td>關節滑膜（類風濕因子＝對抗自身抗體的抗體）</td></tr>
+    <tr><td><b>全身性紅斑性狼瘡</b>（SLE）</td><td>細胞核成分（抗核抗體）→ 多器官、腎臟</td></tr>
+    <tr><td><b>多發性硬化症</b></td><td>中樞神經的髓鞘（第 7 章）</td></tr>
+    <tr><td><b>惡性貧血</b></td><td>胃壁細胞或內在因子 → 維生素 B12 吸收不良</td></tr>
+    <tr><td><b>重症肌無力</b></td><td>神經肌肉接合處的乙醯膽鹼受體</td></tr>
+    <tr><td><b>乳糜瀉</b>（麩質過敏性腸病）</td><td>對麥類<b>麩質</b>（麥膠蛋白）的免疫反應破壞小腸絨毛</td></tr>
+  </table></div>
+  <p>耐受失敗的可能原因：</p>
+  <ul class="dots">
+    <li>平常與免疫系統隔離的抗原因受傷或感染而暴露（如<b>橋本氏甲狀腺炎</b>中的甲狀腺抗原）。</li>
+    <li>正常的自身蛋白與外來的<b>半抗原</b>結合，例如某些藥物與血小板結合，使血小板被破壞（<b>血小板減少症</b>）。</li>
+    <li>產生對抗其他抗體的抗體（類風濕因子），引起<b>類風濕性關節炎</b>的發炎。</li>
+    <li><b>交叉反應</b>：對抗外來抗原的抗體也能與相似的自身抗原結合，例如 A 群<b>鏈球菌</b>感染後攻擊心臟瓣膜（<b>風濕熱</b>，日後可能造成僧帽瓣狹窄，第 13 章）或腎臟（<b>腎絲球腎炎</b>）。</li>
+    <li>自身抗原被第二型 MHC 異常地呈現給輔助型 T 細胞（可能在病毒感染後發生），如<b>第 1 型糖尿病</b>、葛瑞夫茲病。</li>
+    <li><b>調節型 T 細胞</b>活性不足。</li>
+  </ul>
+  <p>自體免疫疾病在女性較常見，常以類固醇、免疫抑制劑或單株抗體治療。</p>
+  <div class="nut"><b class="t">營養連結：</b><b>乳糜瀉</b>（celiac disease）是對小麥、大麥、黑麥中的<b>麩質</b>產生自體免疫反應，使小腸絨毛萎縮，造成吸收不良（鐵、葉酸、鈣、脂溶性維生素缺乏）；治療是<b>終身無麩質飲食</b>（燕麥要選無污染的）。它在歐美較常見，與單純的小麥過敏（IgE）或非乳糜瀉麩質敏感不同。</div>
+
+  <h3 id="h19">免疫複合體疾病 Immune Complex Diseases</h3>
+  <p class="core">游離的抗原—抗體複合體平常被吞噬清除；若產生太多或持續太久，會沉積在血管壁、腎絲球、關節，活化補體與發炎，造成長期損傷；原因：感染（如 B 型肝炎病毒抗原與抗體的複合體造成血管炎）、自身抗原與自體抗體（類風濕性關節炎、紅斑性狼瘡的腎炎）。</p>
+  <p>抗原與抗體結合形成的<b>免疫複合體</b>平常會被吞噬細胞清除。但如果產生的量太多或持續很久，複合體就會<b>沉積</b>在小血管壁、<b>腎絲球</b>、關節等處，活化補體並引起發炎，造成長期組織損傷。可能來自<b>感染</b>（例如 B 型肝炎病毒的抗原與抗體形成的複合體造成動脈發炎），或<b>自身抗原與自體抗體</b>（類風濕性關節炎、<b>紅斑性狼瘡</b>的狼瘡腎炎）。</p>
+
+  <h3 id="h20">過敏 Allergy</h3>
+  <p class="core">過敏（過度敏感）＝對無害的過敏原產生異常免疫反應；立即型（第 I 型）：首次接觸過敏原 → Th2 → B 細胞產生 IgE → IgE 尾巴附著在肥大細胞與嗜鹼性球上（致敏）；再次接觸 → 過敏原交聯 IgE → 肥大細胞去顆粒釋放組織胺、白三烯素、前列腺素 → 數秒到數分鐘內：蕁麻疹、鼻炎、氣喘（支氣管收縮）、腸胃症狀，嚴重時過敏性休克（腎上腺素急救）；治療：抗組織胺（H₁ 阻斷劑）、類固醇、減敏治療；遲發型（第 IV 型）：T 細胞媒介，接觸後 24–72 小時才發生，如接觸性皮膚炎（毒漆藤、鎳）、結核菌素皮膚測驗。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a154" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="110" y="18" font-size="13" text-anchor="middle" font-weight="bold">第一次接觸：致敏</text><text x="350" y="18" font-size="13" text-anchor="middle" font-weight="bold">第二次接觸：發作</text>
+    <g fill="#16a34a"><path d="M30,50 l8,-8 l8,8 l-8,8 z"/></g><text x="50" y="54" font-size="11">過敏原</text>
+    <path d="M40,64 L60,90" stroke="#374151" stroke-width="2" marker-end="url(#a154)"/>
+    <circle cx="80" cy="110" r="20" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="80" y="114" font-size="11" text-anchor="middle">B 細胞</text>
+    <text x="110" y="100" font-size="11">（Th2 幫忙）</text>
+    <path d="M100,110 L140,110" stroke="#374151" stroke-width="2" marker-end="url(#a154)"/><text x="160" y="114" font-size="12" font-weight="bold" fill="#b45309">IgE</text>
+    <ellipse cx="110" cy="200" rx="70" ry="44" fill="#fde68a" stroke="#b45309" stroke-width="2"/><text x="110" y="208" font-size="12" text-anchor="middle">肥大細胞</text>
+    <g stroke="#b45309" stroke-width="3" fill="none"><path d="M60,166 l0,-12 l-6,-8 M60,154 l6,-8"/><path d="M110,156 l0,-12 l-6,-8 M110,144 l6,-8"/><path d="M160,166 l0,-12 l-6,-8 M160,154 l6,-8"/></g>
+    <text x="110" y="262" font-size="11" text-anchor="middle">IgE 尾巴插在肥大細胞上（沒有症狀）</text>
+    <line x1="230" y1="30" x2="230" y2="255" stroke="#e5e7eb"/>
+    <ellipse cx="350" cy="130" rx="70" ry="44" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <g stroke="#b45309" stroke-width="3" fill="none"><path d="M320,96 l0,-12 l-6,-8 M320,84 l6,-8"/><path d="M340,92 l0,-12 l-6,-8 M340,80 l6,-8"/></g>
+    <g fill="#16a34a"><path d="M330,62 l8,-8 l8,8 l-8,8 z"/></g><text x="352" y="64" font-size="11">過敏原把兩個 IgE 連起來</text>
+    <g fill="#dc2626"><circle cx="300" cy="190" r="4"/><circle cx="320" cy="200" r="4"/><circle cx="380" cy="194" r="4"/><circle cx="400" cy="184" r="4"/><circle cx="350" cy="204" r="4"/></g>
+    <text x="350" y="134" font-size="12" text-anchor="middle">去顆粒</text>
+    <text x="350" y="228" font-size="12" text-anchor="middle" fill="#b91c1c" font-weight="bold">組織胺、白三烯素</text>
+    <text x="350" y="248" font-size="11" text-anchor="middle">數分鐘內：癢、紅腫、流鼻水、氣喘</text>
+    <text x="350" y="264" font-size="11" text-anchor="middle">嚴重 → 過敏性休克</text>
+  </svg><figcaption>立即型過敏：第一次接觸只是讓 IgE「上膛」插在肥大細胞上；第二次接觸時，過敏原把 IgE 連起來，肥大細胞一下子釋放組織胺等物質。</figcaption></figure>
+  <p><b>過敏</b> <i class="en-term">allergy</i>（過度敏感 hypersensitivity）是對原本無害的<b>過敏原</b> <i class="en-term">allergen</i> 產生異常的免疫反應。分兩大類：</p>
+  <h4>立即型過敏 Immediate Hypersensitivity</h4>
+  <p class="core">首次接觸過敏原 → Th2 → B 細胞產生 IgE → IgE 附著在肥大細胞與嗜鹼性球上（致敏，無症狀）；再次接觸 → 過敏原交聯 IgE → 肥大細胞去顆粒（組織胺、白三烯素、前列腺素）→ 數秒到數分鐘發作；常見：花粉症、蕁麻疹、氣喘、食物過敏（蝦蟹、花生、牛奶、蛋），嚴重時過敏性休克；治療：避免過敏原、抗組織胺、腎上腺素急救、減敏療法。</p>
+  <ol class="steps">
+    <li><b>致敏</b>：第一次接觸過敏原（花粉、塵蟎、蝦、花生、牛奶蛋白、蜂毒、藥物等），在 <b>Th2</b> 細胞協助下，B 細胞產生大量 <b>IgE</b>；IgE 的尾巴附著在組織中的<b>肥大細胞</b>與血中的<b>嗜鹼性球</b>上。此時沒有症狀。</li>
+    <li><b>發作</b>：再次接觸時，過敏原同時與兩個相鄰的 IgE 結合（交聯），使肥大細胞<b>去顆粒</b>，釋放<b>組織胺</b>、<b>白三烯素</b>、前列腺素等，在<b>數秒到數分鐘</b>內出現症狀：
+      <ul class="dots">
+        <li>皮膚：紅、癢、<b>蕁麻疹</b>；鼻、眼：打噴嚏、流鼻水、眼睛癢（<b>花粉症</b>、過敏性鼻炎）；</li>
+        <li>呼吸道：支氣管收縮、黏液分泌（<b>氣喘</b>，白三烯素作用強）；</li>
+        <li>腸胃：嘔吐、腹瀉、腹痛（食物過敏）；</li>
+        <li>全身：血管廣泛擴張與漏液 → <b>過敏性休克</b>（第 14 章），須立即注射<b>腎上腺素</b>。</li>
+      </ul></li>
+  </ol>
+  <p>治療：避免接觸過敏原；<b>抗組織胺</b>（H₁ 受體阻斷劑）緩解鼻炎與蕁麻疹；類固醇減少發炎；嚴重者隨身攜帶腎上腺素注射筆；<b>減敏療法</b>（逐漸增加過敏原劑量）可使身體產生較多 IgG 與調節型 T 細胞。</p>
+  <h4>遲發型過敏 Delayed Hypersensitivity</h4>
+  <p class="core">遲發型過敏由 T 細胞（不是抗體）媒介，接觸後 24–72 小時才出現：接觸性皮膚炎（毒漆藤、鎳飾品、某些化妝品）、結核菌素皮膚測驗（曾感染或接種卡介苗者局部紅腫硬結）。</p>
+  <p><b>遲發型過敏</b> <i class="en-term">delayed hypersensitivity</i> 由 <b>T 細胞</b>（不是抗體）媒介，接觸後約 <b>24–72 小時</b>才出現反應：</p>
+  <ul class="dots">
+    <li><b>接觸性皮膚炎</b>：如毒漆藤（毒常春藤）、<b>鎳</b>飾品、某些化妝品或染髮劑。這些小分子是半抗原，與皮膚蛋白結合後被呈現給 T 細胞。</li>
+    <li><b>結核菌素皮膚測驗</b>：在皮內注射結核菌的蛋白，曾感染結核菌或接種卡介苗者，記憶 T 細胞聚集使局部在 48–72 小時後紅腫變硬。</li>
+  </ul>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>立即型過敏</th><th>遲發型過敏</th></tr>
+    <tr><td>媒介</td><td><b>IgE 抗體</b>（B 細胞）、肥大細胞</td><td><b>T 細胞</b></td></tr>
+    <tr><td>發作時間</td><td>數秒到數分鐘</td><td>24–72 小時</td></tr>
+    <tr><td>主要物質</td><td>組織胺、白三烯素</td><td>細胞激素</td></tr>
+    <tr><td>例子</td><td>花粉症、氣喘、蕁麻疹、食物過敏、過敏性休克</td><td>接觸性皮膚炎、結核菌素測驗</td></tr>
+    <tr><td>治療</td><td>抗組織胺有效</td><td>抗組織胺無效，用類固醇</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>不是。吃蝦過敏是<b>食物過敏</b>，屬於<b>免疫反應</b>（多為 IgE 媒介的立即型過敏），極少量就可能引起蕁麻疹、嘴唇腫、甚至過敏性休克。<b>乳糖不耐</b>則是<b>食物不耐</b>，是腸道<b>乳糖酶</b>不足、乳糖在大腸被細菌發酵造成脹氣腹瀉，與免疫無關，症狀和攝取量有關，少量常可耐受（第 18 章）。牛奶「過敏」則是對牛奶<b>蛋白質</b>（酪蛋白、乳清蛋白）的免疫反應，又是另一回事。</div>
+  <div class="nut"><b class="t">營養連結：</b>台灣食品標示規定須標示容易造成過敏的原料，如甲殼類、芒果、花生、牛奶羊奶、蛋、堅果、芝麻、含麩質穀物、大豆、魚類及亞硫酸鹽等。供應團膳時要建立<b>過敏原管理</b>（標示、避免交叉污染）。現行嬰兒過敏預防建議已不再主張延後添加副食品，花生、蛋等可在嬰兒約 4–6 個月起、在醫療人員指導下適時引入；高風險嬰兒應先諮詢醫師。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>自體免疫：耐受失敗；第 1 型糖尿病、葛瑞夫茲、橋本氏、類風濕、狼瘡、多發性硬化、惡性貧血、重症肌無力、乳糜瀉。</li>
+      <li>原因：隔離抗原暴露、半抗原、抗抗體、交叉反應（鏈球菌 → 風濕熱、腎絲球腎炎）、異常呈現、調節 T 不足。</li>
+      <li>免疫複合體疾病：複合物沉積於血管、腎、關節 → 補體與發炎（B 肝、狼瘡）。</li>
+      <li>立即型過敏：IgE 致敏肥大細胞 → 再接觸 → 組織胺、白三烯素 → 數分鐘發作；過敏性休克用腎上腺素。</li>
+      <li>遲發型過敏：T 細胞媒介，24–72 小時（接觸性皮膚炎、結核菌素測驗）。</li>
+      <li>食物過敏（免疫）≠ 食物不耐（如乳糖酶不足）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>自體免疫疾病</td><td>autoimmune disease</td><td>自體抗體</td><td>autoantibody</td></tr>
+      <tr><td>類風濕性關節炎</td><td>rheumatoid arthritis</td><td>全身性紅斑性狼瘡</td><td>systemic lupus erythematosus</td></tr>
+      <tr><td>風濕熱</td><td>rheumatic fever</td><td>腎絲球腎炎</td><td>glomerulonephritis</td></tr>
+      <tr><td>乳糜瀉</td><td>celiac disease</td><td>免疫複合體疾病</td><td>immune complex disease</td></tr>
+      <tr><td>過敏原</td><td>allergen</td><td>立即型／遲發型過敏</td><td>immediate / delayed hypersensitivity</td></tr>
+      <tr><td>抗組織胺</td><td>antihistamine</td><td>接觸性皮膚炎</td><td>contact dermatitis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s7">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>先天 vs 後天</td><td>先天：天生、快、不專一、無記憶；後天：學習而來、專一、有記憶</td></tr>
+    <tr><td>先天免疫</td><td>屏障、TLR 辨識 PAMPs、吞噬（嗜中性球先到）、NK、發炎、發燒（IL-1 → PGE₂）、干擾素、補體</td></tr>
+    <tr><td>淋巴器官</td><td>初級：骨髓（B）、胸腺（T）；次級：淋巴結、脾、扁桃腺、派亞氏斑</td></tr>
+    <tr><td>T vs B</td><td>T：細胞媒介，殺病毒感染細胞、癌、移植；B：體液免疫，抗體，細菌</td></tr>
+    <tr><td>抗體</td><td>Y 字形，2 重鏈＋2 輕鏈；IgG（最多、過胎盤）、IgA（黏膜、母乳）、IgM（初級最早）、IgD（B 細胞受體）、IgE（過敏、寄生蟲）</td></tr>
+    <tr><td>補體</td><td>古典路徑由抗體啟動；膜攻擊複合物溶菌、C3b 調理、C3a/C5a 發炎</td></tr>
+    <tr><td>T 細胞與 MHC</td><td>CD8 胞毒型＋MHC-I（所有有核細胞）；CD4 輔助型＋MHC-II（抗原呈現細胞）；調節型抑制；HIV 攻擊 CD4</td></tr>
+    <tr><td>免疫記憶</td><td>初級 5–10 天、IgM；次級快、多、IgG；株落選擇理論</td></tr>
+    <tr><td>主動 vs 被動</td><td>主動：感染、疫苗，慢、持久；被動：胎盤 IgG、初乳 IgA、抗蛇毒血清，立即、短暫</td></tr>
+    <tr><td>腫瘤免疫</td><td>腫瘤抗原（CEA、AFP、HPV）；胞毒型 T、NK；檢查點抑制劑</td></tr>
+    <tr><td>疾病</td><td>自體免疫（第 1 型 DM、乳糜瀉…）；免疫複合體；立即型（IgE、組織胺）與遲發型（T 細胞）過敏</td></tr>
+  </table></div>
+  <h3 id="h21">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 比較先天與後天免疫，並舉出先天免疫的五種機制？</li>
+    <li>□ 說出 T 細胞與 B 細胞的成熟處與作戰方式？</li>
+    <li>□ 畫出抗體構造，說出五種抗體的特點（哪一種能過胎盤、哪一種在母乳）？</li>
+    <li>□ 說明補體活化的三個結果？</li>
+    <li>□ 比較第一型與第二型 MHC，以及它們分別呈現給哪一種 T 細胞？</li>
+    <li>□ 用株落選擇理論解釋初級與次級反應的差別？</li>
+    <li>□ 比較主動與被動免疫，各舉兩個例子？</li>
+    <li>□ 說明立即型過敏的發生過程，並區分食物過敏與食物不耐？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 15 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+var GL_PAGE={"轉移":"metastasis"};
+const Q = [
+ {q:"下列何者屬於先天（非專一性）免疫？",o:["抗體","胞毒型 T 細胞","干擾素與吞噬作用","記憶 B 細胞"],a:2,e:"<b>干擾素、吞噬、發炎、發燒、補體、NK</b> 屬先天免疫；抗體與 T、B 細胞屬後天。"},
+ {q:"巨噬細胞辨識細菌脂多醣等病原體共有分子的受體是？",o:["T 細胞受體","鐸樣受體（TLR）","第二型 MHC","Fc 受體"],a:1,e:"<b>鐸樣受體</b>辨識 PAMPs，啟動先天免疫。"},
+ {q:"最先抵達感染處的吞噬細胞是？",o:["巨噬細胞","嗜中性球","淋巴球","嗜酸性球"],a:1,e:"<b>嗜中性球</b>最先到；單核球（巨噬細胞）稍後。"},
+ {q:"發燒時，使下視丘體溫設定點上移的直接物質是？",o:["組織胺","前列腺素 E₂","干擾素 γ","補體 C3a"],a:1,e:"內生性致熱原（IL-1 等）→ 下視丘產生 <b>PGE₂</b>；阿斯匹靈因此能退燒。"},
+ {q:"T 淋巴球在哪裡成熟？",o:["骨髓","胸腺","脾臟","淋巴結"],a:1,e:"T＝<b>胸腺</b>；B 細胞在骨髓成熟。"},
+ {q:"主要負責對抗被病毒感染的細胞、癌細胞與移植組織的是？",o:["B 細胞（體液免疫）","T 細胞（細胞媒介免疫）","嗜鹼性球","紅血球"],a:1,e:"<b>細胞媒介免疫</b>（T 細胞）必須靠近目標細胞。"},
+ {q:"唯一能通過胎盤的抗體是？",o:["IgA","IgM","IgG","IgE"],a:2,e:"<b>IgG</b> 通過胎盤提供胎兒被動免疫。"},
+ {q:"母乳（尤其初乳）中含量豐富、保護嬰兒腸道黏膜的抗體是？",o:["IgA","IgD","IgE","IgM"],a:0,e:"分泌型 <b>IgA</b> 存在於乳汁、唾液、淚液與黏液。"},
+ {q:"初級免疫反應最早出現的抗體是？",o:["IgG","IgM","IgA","IgE"],a:1,e:"初級反應先產生 <b>IgM</b>；次級反應以 IgG 為主。"},
+ {q:"補體系統中在細菌細胞膜上打洞的是？",o:["C1","C3b","膜攻擊複合物（C5–C9）","C3a"],a:2,e:"<b>膜攻擊複合物</b>使細菌溶解；C3b 負責調理、C3a/C5a 引起發炎。"},
+ {q:"胞毒型（CD8）T 細胞辨認的是？",o:["第一型 MHC＋抗原片段","第二型 MHC＋抗原片段","游離的完整抗原","IgE"],a:0,e:"CD8 ↔ <b>第一型 MHC</b>（所有有核細胞）；CD4 ↔ 第二型 MHC（抗原呈現細胞）。"},
+ {q:"HIV 主要感染並破壞哪一種細胞？",o:["B 細胞","CD8 胞毒型 T 細胞","CD4 輔助型 T 細胞","嗜中性球"],a:2,e:"<b>輔助型 T 細胞</b>是指揮官，減少後整個後天免疫崩潰。"},
+ {q:"第二次接觸同一抗原時反應又快又強，最能用哪個理論解釋？",o:["株落選擇理論","滑動肌絲理論","化學滲透理論","泊肅葉定律"],a:0,e:"<b>株落選擇</b>：被選中的淋巴球大量增殖並留下記憶細胞。"},
+ {q:"被毒蛇咬傷時注射抗蛇毒血清，屬於？",o:["自然主動免疫","人工主動免疫","人工被動免疫","自然被動免疫"],a:2,e:"注射現成抗體＝<b>人工被動免疫</b>：立即有效但短暫。"},
+ {q:"沙賓口服小兒麻痺疫苗與 MMR 屬於哪一類疫苗？",o:["不活化疫苗","減毒活疫苗","類毒素","被動免疫"],a:1,e:"<b>減毒活疫苗</b>；沙克疫苗為不活化，B 肝疫苗為重組蛋白。"},
+ {q:"不需辨認專一抗原、可殺死第一型 MHC 減少的腫瘤細胞的是？",o:["自然殺手細胞","漿細胞","輔助型 T 細胞","嗜酸性球"],a:0,e:"<b>NK 細胞</b>屬先天免疫。"},
+ {q:"下列何者屬於自體免疫疾病？",o:["乳糖不耐","第 1 型糖尿病","缺鐵性貧血","痛風"],a:1,e:"<b>第 1 型糖尿病</b>：T 細胞破壞胰島 β 細胞。"},
+ {q:"立即型過敏中附著在肥大細胞上的抗體是？",o:["IgG","IgA","IgM","IgE"],a:3,e:"<b>IgE</b>；再接觸時肥大細胞去顆粒釋放組織胺。"},
+ {q:"接觸性皮膚炎（如鎳飾品）屬於？",o:["IgE 媒介的立即型過敏","T 細胞媒介的遲發型過敏","免疫複合體疾病","被動免疫"],a:1,e:"<b>遲發型過敏</b>：T 細胞媒介，24–72 小時才出現。"},
+ {q:"喝牛奶後脹氣、腹瀉，因乳糖酶不足造成，屬於？",o:["食物過敏","食物不耐","自體免疫","免疫複合體疾病"],a:1,e:"乳糖不耐是<b>食物不耐</b>，與免疫無關。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

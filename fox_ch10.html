@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 10 章 感覺生理學</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="10">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 10 章　感覺生理學</h1>
+  <div class="en">Chapter 10 Sensory Physiology（課本 p.281–334）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">10.1 感受器的特性</a>
+  <a class="sub" href="#h1">感受器的分類 Categories of Sensory Receptors</a>
+  <a class="sub" href="#h2">特定神經能量定律 Law of Specific Nerve Energies</a>
+  <a class="sub" href="#h3">發生器（感受器）電位 Generator (Receptor) Potential</a>
+  <a href="#s2">10.2 皮膚感覺</a>
+  <a class="sub" href="#h4">皮膚的感受器</a>
+  <a class="sub" href="#h5">神經路徑 Neural Pathways for Somatesthetic Sensations</a>
+  <a class="sub" href="#h6">感受野與感覺敏銳度 Receptive Fields and Sensory Acuity</a>
+  <a class="sub" href="#h7">側抑制 Lateral Inhibition</a>
+  <a class="sub" href="#h8">轉移痛 Referred Pain</a>
+  <a href="#s3">10.3 味覺與嗅覺</a>
+  <a class="sub" href="#h9">味覺 Taste</a>
+  <a class="sub" href="#h10">嗅覺 Smell</a>
+  <a href="#s4">10.4 前庭器與平衡</a>
+  <a class="sub" href="#h11">前庭器的構造與毛細胞</a>
+  <a class="sub" href="#h12">橢圓囊與球囊 Utricle and Saccule</a>
+  <a class="sub" href="#h13">半規管 Semicircular Canals</a>
+  <a href="#s5">10.5 耳與聽覺</a>
+  <a class="sub" href="#h14">外耳與中耳 Outer and Middle Ear</a>
+  <a class="sub" href="#h15">耳蝸 Cochlea</a>
+  <a class="sub" href="#h16">柯蒂氏器與音高 Spiral Organ (Organ of Corti) and Pitch</a>
+  <a class="sub" href="#h17">耳聾 Hearing Impairments</a>
+  <a href="#s6">10.6 眼與視覺</a>
+  <a class="sub" href="#h18">眼的構造</a>
+  <a class="sub" href="#h19">折射 Refraction</a>
+  <a class="sub" href="#h20">調節作用 Accommodation</a>
+  <a class="sub" href="#h21">視力與屈光異常 Visual Acuity</a>
+  <a href="#s7">10.7 視網膜</a>
+  <a class="sub" href="#h22">視網膜的層次</a>
+  <a class="sub" href="#h23">桿細胞與錐細胞</a>
+  <a class="sub" href="#h24">光化學反應：視紫質與維生素 A Effect of Light on the Rods</a>
+  <a class="sub" href="#h25">暗適應 Dark Adaptation</a>
+  <a class="sub" href="#h26">中央小窩與視覺敏銳度 Visual Acuity and Sensitivity</a>
+  <a class="sub" href="#h27">色覺 Color Vision</a>
+  <a href="#s8">10.8 視覺訊息的神經處理</a>
+  <a class="sub" href="#h28">視覺路徑 Neural Pathways from the Retina</a>
+  <a class="sub" href="#h29">神經節細胞的感受野 Ganglion Cell Receptive Fields</a>
+  <a class="sub" href="#h30">視覺皮質的處理 Visual Cortex</a>
+  <a href="#s9">本章重點整理</a>
+  <a class="sub" href="#h31">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章說回饋迴路的第一步是「感受器偵測」。這一章專門講感受器：<span class="key">身體怎麼把光、聲音、壓力、化學分子等不同形式的能量，轉換成神經能懂的動作電位，再送到腦的特定區域成為「感覺」？</span>先講所有感受器的共同原則，再由簡單到複雜依序介紹皮膚、味嗅、平衡、聽覺、視覺。</div>
+  <div class="path">
+    <div class="step"><span class="sn">10.1</span><div><b>感受器的特性</b><br><span class="sq">感受器的分類、特定神經能量定律、發生器電位、適應。</span></div></div>
+    <div class="arr">↓ 從最簡單、分布最廣的感覺開始</div>
+    <div class="step"><span class="sn">10.2</span><div><b>皮膚感覺</b><br><span class="sq">觸、壓、溫、痛的感受器與傳導路徑；感受野、兩點辨別、側抑制。</span></div></div>
+    <div class="arr">↓ 化學感覺：和吃最有關係</div>
+    <div class="step"><span class="sn">10.3</span><div><b>味覺與嗅覺</b><br><span class="sq">五種基本味道的轉導機制；嗅覺受體與嗅覺路徑。</span></div></div>
+    <div class="arr">↓ 內耳的兩種機械感覺：先講平衡</div>
+    <div class="step"><span class="sn">10.4</span><div><b>前庭器與平衡</b><br><span class="sq">毛細胞、橢圓囊與球囊（直線加速）、半規管（旋轉）。</span></div></div>
+    <div class="arr">↓ 同樣用毛細胞，換成偵測聲音</div>
+    <div class="step"><span class="sn">10.5</span><div><b>耳與聽覺</b><br><span class="sq">外耳、中耳的傳導與放大；耳蝸、基底膜與音高；耳聾的種類。</span></div></div>
+    <div class="arr">↓ 最複雜的感覺：視覺（三節）</div>
+    <div class="step"><span class="sn">10.6～10.8</span><div><b>眼與視覺、視網膜、視覺訊息處理</b><br><span class="sq">眼的構造與折射、調節；桿細胞與錐細胞、視紫質與維生素 A、暗適應、色覺；視覺路徑與皮質處理。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 10.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">10.1</span>感受器的特性</h2>
+  <div class="en">Characteristics of Sensory Receptors</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>感受器的<b>分類</b>（依刺激種類、依構造）、<b>特定神經能量定律</b>、<b>發生器電位</b>的形成，以及<b>緊張性與相位性</b>感受器（適應）。</div><div><span class="lt lt2">為什麼放第一節？</span>不管是眼睛還是皮膚，所有感受器都遵守同樣的原則：把刺激轉成分級電位、再轉成動作電位頻率。先學共同原則，後面各種感覺就是同一套規則的變化。</div></div>
+  <div class="oneline">感受器把刺激能量轉換（轉導）成發生器電位，強度越大電位越大、動作電位頻率越高；「感覺到什麼」取決於訊號送到腦的哪個區域（特定神經能量定律）；有的感受器持續反應（緊張性），有的很快適應（相位性）。</div>
+  <div class="think">為什麼戴上手錶一陣子後就感覺不到它，但腳一直踩著地的疼痛卻不會消失？</div>
+
+  <h3 id="h1">感受器的分類 Categories of Sensory Receptors</h3>
+  <p class="core">依刺激：化學、光、溫度、機械、痛覺（傷害）感受器；依構造：游離神經末梢、有被囊的末梢、特化的感受細胞；依來源：外感受、內感受、本體感受；一般感覺 vs 特殊感覺。</p>
+  <div class="tblwrap"><table>
+    <tr><th>依刺激種類</th><th>偵測什麼</th><th>例子</th></tr>
+    <tr><td><b>化學感受器</b> chemoreceptors</td><td>化學物質</td><td>味蕾、嗅覺、頸動脈體（血中 O₂、CO₂、pH）</td></tr>
+    <tr><td><b>光感受器</b> photoreceptors</td><td>光</td><td>視網膜的桿細胞、錐細胞</td></tr>
+    <tr><td><b>溫度感受器</b> thermoreceptors</td><td>冷、熱</td><td>皮膚的游離神經末梢、下視丘</td></tr>
+    <tr><td><b>機械感受器</b> mechanoreceptors</td><td>觸、壓、牽張、振動、聲音、重力</td><td>皮膚觸覺小體、毛細胞、肌梭、壓力感受器</td></tr>
+    <tr><td><b>痛覺（傷害）感受器</b> nociceptors</td><td>組織損傷、極端溫度、化學刺激</td><td>游離神經末梢</td></tr>
+  </table></div>
+  <ul class="dots">
+    <li>依來源：<b>外感受器</b>（感受外界，如皮膚、眼、耳）、<b>內感受器</b>（感受體內，如血壓、血液化學）、<b>本體感受器</b>（肌肉、肌腱、關節的位置與張力）。</li>
+    <li><b>一般感覺</b>（體感覺：觸、壓、溫、痛、本體感覺）vs <b>特殊感覺</b>（視、聽、平衡、味、嗅——有專門的感覺器官）。</li>
+  </ul>
+
+  <h3 id="h2">特定神經能量定律 Law of Specific Nerve Energies</h3>
+  <p class="core">感受器對某種刺激最敏感（適當刺激）；不論怎麼被刺激，同一條感覺神經傳到腦都只會被解讀成同一種感覺。</p>
+  <p>每種感受器對某一種刺激特別敏感，叫<b>適當刺激</b> <i class="en-term">adequate stimulus</i>（例如視網膜對光）。但<b>不論用什麼方式刺激</b>，同一條感覺路徑傳到腦，都只會被感覺成同一種感覺。這叫<b>特定神經能量定律</b> <i class="en-term">law of specific nerve energies</i>。</p>
+  <div class="eg"><b class="t">例子：</b>揉眼睛或頭部被撞時會「看到星星」——壓力刺激了視網膜，但訊號經視神經送到視覺皮質，所以腦解讀成「光」。截肢後的<b>幻肢痛</b>也是：被切斷的神經末端受刺激，腦仍把它解讀成來自已經不存在的肢體。</div>
+
+  <h3 id="h3">發生器（感受器）電位 Generator (Receptor) Potential</h3>
+  <p class="core">刺激 → 感受器膜去極化（分級的發生器電位，越強越大）→ 達閾值時在感覺神經上產生動作電位，頻率與刺激強度成正比；緊張性感受器持續放電，相位性感受器快速適應。</p>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#b45309">緊張性：持續回報</text>
+    <text x="360" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#1d4ed8">相位性：只報「改變」</text>
+    <rect x="20" y="40" width="200" height="14" fill="#fde68a"/><text x="120" y="51" font-size="11" text-anchor="middle">持續刺激</text>
+    <rect x="260" y="40" width="200" height="14" fill="#bfdbfe"/><text x="360" y="51" font-size="11" text-anchor="middle">持續刺激</text>
+    <g stroke="#b45309" stroke-width="2.5"><line x1="30" y1="120" x2="30" y2="80"/><line x1="45" y1="120" x2="45" y2="80"/><line x1="60" y1="120" x2="60" y2="80"/><line x1="78" y1="120" x2="78" y2="80"/><line x1="98" y1="120" x2="98" y2="80"/><line x1="120" y1="120" x2="120" y2="80"/><line x1="142" y1="120" x2="142" y2="80"/><line x1="164" y1="120" x2="164" y2="80"/><line x1="188" y1="120" x2="188" y2="80"/><line x1="212" y1="120" x2="212" y2="80"/></g>
+    <line x1="20" y1="120" x2="220" y2="120" stroke="#374151"/>
+    <g stroke="#2563eb" stroke-width="2.5"><line x1="266" y1="120" x2="266" y2="80"/><line x1="276" y1="120" x2="276" y2="80"/><line x1="290" y1="120" x2="290" y2="80"/><line x1="456" y1="120" x2="456" y2="80"/></g>
+    <line x1="260" y1="120" x2="460" y2="120" stroke="#374151"/>
+    <text x="360" y="104" font-size="12" text-anchor="middle" fill="#6b7280">（不放電）</text>
+    <g font-size="12" text-anchor="middle"><text x="120" y="150">痛覺、肌梭、溫度、</text><text x="120" y="168">頸動脈壓力感受器</text><text x="120" y="194" fill="#92400e">痛不會「習慣」→ 提醒受傷</text>
+      <text x="360" y="150">皮膚觸覺、壓覺、嗅覺</text><text x="360" y="168">（開始與結束時放電）</text><text x="360" y="194" fill="#1e3a8a">戴錶一陣子就感覺不到</text></g>
+  </svg><figcaption>同樣持續的刺激，兩種感受器的回報方式不同。適應讓我們忽略不變的背景，專注於新的變化。</figcaption></figure>
+  <p>感受器把刺激能量轉成電訊號的過程叫<b>轉導</b> <i class="en-term">transduction</i>。刺激使感受器的膜去極化，產生<b>發生器電位</b> <i class="en-term">generator potential</i>（又稱感受器電位）。它是<b>分級電位</b>：刺激越強，去極化越大。當它在感覺神經末梢附近達到閾值，就產生動作電位；發生器電位越大，<b>動作電位頻率越高</b>——腦就是靠頻率知道刺激的強弱（第 7 章）。</p>
+  <p>持續刺激時，感受器的反應方式不同：</p>
+  <ul class="dots">
+    <li><b>緊張性感受器</b> <i class="en-term">tonic receptors</i>：只要刺激還在就<b>持續放電</b>（緩慢適應）。例：痛覺感受器、肌梭、頸動脈的壓力感受器——這些資訊需要一直被監控。</li>
+    <li><b>相位性感受器</b> <i class="en-term">phasic receptors</i>：刺激開始時放電，之後很快<b>適應</b>停止，刺激移除時可能再放一次。例：皮膚的觸覺、壓覺感受器、嗅覺——它們回報的是「改變」。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>皮膚的觸壓覺感受器是<b>相位性</b>，很快適應，所以戴久了感覺不到手錶；<b>痛覺</b>感受器是緊張性、幾乎不適應，持續提醒你組織受傷了，這有保護作用。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>感受器依刺激：化學、光、溫度、機械、痛覺；依來源：外感受、內感受、本體感受；一般 vs 特殊感覺。</li>
+      <li>特定神經能量定律：感覺種類取決於訊號送到哪個腦區，而非刺激方式（揉眼看到光、幻肢痛）。</li>
+      <li>轉導 → 發生器電位（分級）→ 動作電位頻率代表強度。</li>
+      <li>緊張性（持續放電：痛覺、肌梭）vs 相位性（快速適應：觸壓覺、嗅覺）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>化學／光／溫度感受器</td><td>chemo- / photo- / thermoreceptor</td><td>機械感受器</td><td>mechanoreceptor</td></tr>
+      <tr><td>痛覺感受器</td><td>nociceptor</td><td>本體感受器</td><td>proprioceptor</td></tr>
+      <tr><td>適當刺激</td><td>adequate stimulus</td><td>特定神經能量定律</td><td>law of specific nerve energies</td></tr>
+      <tr><td>轉導</td><td>transduction</td><td>發生器電位</td><td>generator potential</td></tr>
+      <tr><td>緊張性／相位性感受器</td><td>tonic / phasic receptor</td><td>適應</td><td>adaptation</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">10.2</span>皮膚感覺</h2>
+  <div class="en">Cutaneous Sensations</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>皮膚的各種<b>感受器</b>（游離神經末梢、梅斯納小體、巴齊尼小體等）、感覺的<b>神經路徑</b>、<b>感受野</b>與<b>兩點辨別</b>、<b>側抑制</b>，以及<b>痛覺</b>與<b>轉移痛</b>。</div><div><span class="lt lt2">為什麼接在 10.1 後面？</span>皮膚感覺是最直接的一般感覺，用它可以清楚看到感受器分布、傳導路徑（第 8 章的脊髓視丘徑、背柱）與大腦怎麼提高解析度。</div></div>
+  <div class="oneline">痛與溫度由游離神經末梢偵測（經脊髓視丘徑），細膩觸覺與振動由有被囊的感受器偵測（經背柱）；感受野越小、密度越高，兩點辨別越精細（指尖、嘴唇）；側抑制讓邊界更清楚；內臟痛常轉移到同節段的皮膚。</div>
+  <div class="think">心臟病發作時，為什麼常常是左手臂或左肩痛？</div>
+
+  <h3 id="h4">皮膚的感受器</h3>
+  <p class="core">游離神經末梢：痛、溫度（冷、熱）、癢；梅斯納小體：輕觸（相位性，無毛皮膚）；巴齊尼小體：深壓與振動（相位性）；梅克爾盤：持續觸壓（緊張性）；魯斐尼小體：皮膚牽張（緊張性）；毛囊感受器：毛被移動。</p>
+  <div class="tblwrap"><table>
+    <tr><th>感受器</th><th>偵測</th><th>適應</th></tr>
+    <tr><td><b>游離神經末梢</b> free nerve endings</td><td><b>痛</b>、<b>溫度</b>（冷、熱）、癢</td><td>痛：緊張性</td></tr>
+    <tr><td><b>梅斯納小體</b> Meissner's corpuscles</td><td>輕觸、低頻振動（指尖、嘴唇等無毛皮膚）</td><td>相位性（快）</td></tr>
+    <tr><td><b>巴齊尼小體</b> Pacinian corpuscles</td><td>深壓、高頻振動；洋蔥狀多層被囊</td><td>相位性（很快）</td></tr>
+    <tr><td><b>梅克爾盤</b> Merkel's discs</td><td>持續的觸壓、物體的形狀與紋理</td><td>緊張性（慢）</td></tr>
+    <tr><td><b>魯斐尼小體</b> Ruffini endings</td><td>皮膚牽張、持續壓力</td><td>緊張性</td></tr>
+    <tr><td>毛囊感受器</td><td>毛髮被移動</td><td>相位性</td></tr>
+  </table></div>
+  <p>溫度感受器分為<b>冷</b>與<b>熱</b>兩種，經由 <b>TRP 通道</b>家族偵測：例如 TRPV1 被熱（＞43°C）與辣椒中的<b>辣椒素</b>活化——所以吃辣會覺得「熱」；TRPM8 被冷與<b>薄荷醇</b>活化——所以薄荷有「涼」感。</p>
+
+  <h3 id="h5">神經路徑 Neural Pathways for Somatesthetic Sensations</h3>
+  <p class="core">痛、溫、粗觸覺 → 脊髓視丘徑（脊髓交叉）；精細觸覺、振動、本體感覺 → 背柱—內側蹄系（延腦交叉）；都經視丘 → 對側中央後迴。</p>
+  <p>皮膚感覺沿第 8 章的兩條主要上行徑到達<b>對側</b>的中央後迴（體感覺皮質）：痛溫覺與粗略觸覺走<b>脊髓視丘徑</b>；精細觸覺、振動、本體感覺走<b>背柱—內側蹄系</b>。痛覺纖維又分兩種：</p>
+  <ul class="dots">
+    <li><b>Aδ 纖維</b>（細、有髓鞘）：傳遞<b>快速、尖銳、定位清楚</b>的刺痛。</li>
+    <li><b>C 纖維</b>（無髓鞘）：傳遞<b>緩慢、鈍、灼熱、定位模糊</b>的痛，持續較久。</li>
+  </ul>
+  <p>痛覺傳到脊髓時，感覺神經釋放麩胺酸與 <b>P 物質</b>；腦幹下行的路徑與內生性鴉片可在脊髓抑制痛覺傳遞（第 7 章）。</p>
+
+  <h3 id="h6">感受野與感覺敏銳度 Receptive Fields and Sensory Acuity</h3>
+  <p class="core">感受野＝一個感覺神經元負責的皮膚範圍；感受野小、感受器密度高 → 兩點辨別距離小、敏銳度高（指尖約 2–3 mm，背部可達 60 mm 以上）。</p>
+  <p>一個感覺神經元所負責的皮膚範圍叫它的<b>感受野</b> <i class="en-term">receptive field</i>。測量<b>兩點辨別閾</b> <i class="en-term">two-point touch threshold</i>（兩點同時碰觸皮膚時，最短可分辨出是兩點的距離），可以知道感覺的精細程度：</p>
+  <ul class="dots">
+    <li><b>指尖、嘴唇、舌尖</b>：感受野小、感受器密集 → 兩點辨別約 2–3 mm，非常敏銳（這也是它們在體感覺皮質占大面積的原因）。</li>
+    <li><b>背部、大腿</b>：感受野大 → 可能要相距數公分才分得出兩點。</li>
+  </ul>
+
+  <h3 id="h7">側抑制 Lateral Inhibition</h3>
+  <p class="core">側抑制：受刺激最強的神經元抑制周圍神經元 → 增強對比、讓刺激的位置與邊緣更清楚；也見於視網膜與聽覺。</p>
+  <p>用筆尖壓皮膚時，正下方的感受器被刺激最強，周圍也被輕微刺激。中樞的路徑中，受刺激最強的神經元會<b>抑制旁邊</b>神經元的訊號，稱為<b>側抑制</b> <i class="en-term">lateral inhibition</i>，結果中心與周圍的對比變大，我們感覺到的位置更準確、邊界更清楚。同樣的機制也讓視覺邊緣更銳利、聽覺音高更精準。</p>
+
+  <h3 id="h8">轉移痛 Referred Pain</h3>
+  <p class="core">內臟痛常被感覺成來自同一脊髓節段所支配的體表（心臟 → 左肩與左臂內側；膽囊 → 右肩胛）；因內臟與皮膚的感覺纖維會聚到同一群脊髓神經元。</p>
+  <p>內臟的痛覺纖維和某些皮膚區域的感覺纖維，進入<b>同一節段</b>脊髓並<b>會聚</b>到相同的上行神經元上。因為腦平常幾乎只收到皮膚來的訊號，所以會把內臟痛誤認為來自那片皮膚，這叫<b>轉移痛</b> <i class="en-term">referred pain</i>。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>心臟的痛覺纖維進入胸髓 T1–T5，和左肩、左臂內側的皮膚感覺纖維會聚，所以心肌缺血（心絞痛、心肌梗塞）常感覺成<b>左胸、左肩、左臂內側</b>痛。膽囊發炎則常轉移到<b>右肩胛</b>。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>游離神經末梢：痛、溫度；梅斯納（輕觸）、巴齊尼（深壓振動）為相位性；梅克爾、魯斐尼為緊張性。</li>
+      <li>TRPV1：熱與辣椒素；TRPM8：冷與薄荷醇。</li>
+      <li>痛溫 → 脊髓視丘徑；精細觸覺 → 背柱；Aδ 快痛、C 慢痛。</li>
+      <li>感受野小、密度高 → 兩點辨別精細（指尖、嘴唇）。</li>
+      <li>側抑制增強對比；轉移痛：心 → 左肩左臂，膽囊 → 右肩胛。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>游離神經末梢</td><td>free nerve ending</td><td>梅斯納／巴齊尼小體</td><td>Meissner's / Pacinian corpuscle</td></tr>
+      <tr><td>梅克爾盤／魯斐尼小體</td><td>Merkel's disc / Ruffini ending</td><td>辣椒素</td><td>capsaicin</td></tr>
+      <tr><td>感受野</td><td>receptive field</td><td>兩點辨別閾</td><td>two-point threshold</td></tr>
+      <tr><td>側抑制</td><td>lateral inhibition</td><td>轉移痛</td><td>referred pain</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">10.3</span>味覺與嗅覺</h2>
+  <div class="en">Taste and Smell</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>味蕾</b>的構造與<b>五種基本味道</b>（鹹、酸、甜、苦、鮮）各自的轉導機制；<b>嗅覺</b>受體、嗅覺訊號的特殊路徑，以及風味是味覺加嗅覺。</div><div><span class="lt lt2">為什麼接在 10.2 後面？</span>從機械與溫度感覺，轉到化學感覺。味覺與嗅覺直接影響食慾、食物選擇與營養攝取，對營養師特別重要。</div></div>
+  <div class="oneline">味覺：鹹（Na⁺ 經通道進入）、酸（H⁺）兩種靠離子通道；甜、苦、鮮靠 G 蛋白偶聯受體（甜：T1R2+T1R3；鮮：T1R1+T1R3；苦：T2R 家族）；嗅覺受體約 350 多種，經嗅球直接送到嗅覺皮質與邊緣系統，不經視丘；食物的「風味」大多來自嗅覺。</div>
+  <div class="think">感冒鼻塞時，為什麼吃什麼都覺得沒味道？</div>
+
+  <h3 id="h9">味覺 Taste</h3>
+  <p class="core">味蕾在舌乳頭上，由味覺細胞（特化上皮細胞）組成，經味孔接觸唾液中的分子；訊號經 VII（舌前 2/3）、IX（舌後 1/3）、X 腦神經到延腦孤束核 → 視丘 → 味覺皮質（腦島）。</p>
+  <p><b>味蕾</b> <i class="en-term">taste buds</i> 主要位在舌頭的<b>乳頭</b>上，也分布在軟顎、咽部。每個味蕾約有 50–100 個<b>味覺細胞</b>（特化的上皮細胞，約 10 天更新一次），頂端的微絨毛伸入<b>味孔</b>，接觸溶在<b>唾液</b>中的分子——所以食物必須先溶解才嘗得到。味覺細胞本身不是神經元，它們與感覺神經形成突觸（用 ATP 等傳遞）。</p>
+  <p>訊號經<b>顏面神經（VII，舌前 2/3）</b>、<b>舌咽神經（IX，舌後 1/3）</b>與<b>迷走神經（X，咽喉）</b>傳到延腦，再經視丘到<b>味覺皮質</b>（腦島與額葉蓋）。舌頭各區域其實都能感受五種味道，傳統的「味覺地圖」是錯誤的。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <g font-size="14" text-anchor="middle" font-weight="bold">
+      <rect x="10" y="20" width="88" height="40" rx="10" fill="#e0f2fe" stroke="#0284c7"/><text x="54" y="46">鹹</text>
+      <rect x="104" y="20" width="88" height="40" rx="10" fill="#fef9c3" stroke="#ca8a04"/><text x="148" y="46">酸</text>
+      <rect x="198" y="20" width="88" height="40" rx="10" fill="#fce7f3" stroke="#db2777"/><text x="242" y="46">甜</text>
+      <rect x="292" y="20" width="88" height="40" rx="10" fill="#dcfce7" stroke="#16a34a"/><text x="336" y="46">苦</text>
+      <rect x="386" y="20" width="88" height="40" rx="10" fill="#ffedd5" stroke="#ea580c"/><text x="430" y="46">鮮</text></g>
+    <g font-size="12" text-anchor="middle">
+      <text x="54" y="82">Na⁺</text><text x="54" y="98">經 ENaC 通道</text><text x="54" y="114">直接流入</text>
+      <text x="148" y="82">H⁺</text><text x="148" y="98">經質子通道</text><text x="148" y="114">流入</text>
+      <text x="242" y="82">糖、甜味劑</text><text x="242" y="98">T1R2＋T1R3</text>
+      <text x="336" y="82">生物鹼等</text><text x="336" y="98">T2R（約 25 種）</text>
+      <text x="430" y="82">麩胺酸</text><text x="430" y="98">T1R1＋T1R3</text></g>
+    <path d="M10,130 L190,130" stroke="#0284c7" stroke-width="3"/><text x="100" y="150" font-size="13" text-anchor="middle" fill="#0369a1" font-weight="bold">離子通道型</text>
+    <path d="M198,130 L474,130" stroke="#16a34a" stroke-width="3"/><text x="336" y="150" font-size="13" text-anchor="middle" fill="#15803d" font-weight="bold">G 蛋白偶聯受體（味導素 gustducin）</text>
+    <g font-size="12" text-anchor="middle" fill="#374151">
+      <text x="54" y="180">電解質</text><text x="148" y="180">酸敗、未熟</text><text x="242" y="180">能量（醣）</text><text x="336" y="180">可能有毒</text><text x="430" y="180">蛋白質</text></g>
+    <text x="240" y="214" font-size="13" text-anchor="middle">每一種味道都告訴我們食物的某種「營養訊息」</text>
+    <text x="240" y="236" font-size="12" text-anchor="middle" fill="#6b7280">另有研究認為「脂肪味」（CD36、GPR120 受體）可能是第六種味道</text>
+  </svg><figcaption>五種基本味道的受體與意義。鹹、酸靠離子直接進入；甜、苦、鮮靠 G 蛋白偶聯受體。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>味道</th><th>刺激物</th><th>轉導機制</th></tr>
+    <tr><td><b>鹹</b> salty</td><td>Na⁺</td><td>Na⁺ 經上皮鈉通道（ENaC）<b>直接流入</b> → 去極化</td></tr>
+    <tr><td><b>酸</b> sour</td><td>H⁺（酸）</td><td>H⁺ 經質子通道（OTOP1）流入 → 去極化</td></tr>
+    <tr><td><b>甜</b> sweet</td><td>糖、人工甜味劑</td><td>T1R2＋T1R3 受體 → G 蛋白（<b>味導素</b> gustducin）→ 第二傳訊者</td></tr>
+    <tr><td><b>苦</b> bitter</td><td>奎寧、咖啡因、許多植物生物鹼</td><td>T2R 家族（約 25 種）→ 味導素 → IP₃、Ca²⁺</td></tr>
+    <tr><td><b>鮮</b> umami</td><td><b>麩胺酸</b>（味精）、核苷酸（IMP、GMP）</td><td>T1R1＋T1R3 → G 蛋白</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>五味各自帶有營養意義：甜＝能量、鹹＝電解質、鮮＝蛋白質、苦與酸＝可能有毒或酸敗，具保護作用。<b>老年人</b>味蕾減少、嗅覺退化，加上藥物與<b>鋅缺乏</b>（味覺減退）影響，常覺得食物沒味道而加鹽加糖或食慾下降，增加營養不良風險。癌症治療、藥物也常引起味覺改變。低鈉飲食時可用酸（檸檬）、香料、鮮味提升風味。</div>
+
+  <h3 id="h10">嗅覺 Smell</h3>
+  <p class="core">嗅覺上皮的嗅覺受體神經元（雙極、可更新）；約 350–400 種嗅覺受體，每個神經元只表現一種；G 蛋白（Golf）→ cAMP → 開陽離子通道；經嗅神經 → 嗅球 → 直接到嗅覺皮質與邊緣系統（不經視丘）→ 與情緒、記憶緊密相連。</p>
+  <ul class="dots">
+    <li><b>嗅覺上皮</b>在鼻腔頂部，含<b>嗅覺受體神經元</b>（雙極神經元，是少數能由幹細胞更新的神經元，約 1–2 個月）。它們的纖毛浸在黏液中，氣味分子要先溶入黏液。</li>
+    <li>人類有約 <b>350–400 種</b>功能性<b>嗅覺受體</b>（G 蛋白偶聯受體，全身最大的基因家族之一）；<b>每個神經元只表現一種</b>受體。氣味分子活化受體 → G 蛋白（G<sub>olf</sub>）→ 腺苷酸環化酶 → <b>cAMP</b> → 打開陽離子通道 → 去極化。</li>
+    <li>不同氣味活化不同受體的<b>組合</b>，所以幾百種受體能分辨上萬種氣味。</li>
+    <li>訊號經<b>嗅神經</b>（I）到<b>嗅球</b>，表現同一種受體的神經元匯集到同一個「小球」；再<b>直接</b>送到顳葉的嗅覺皮質與<b>邊緣系統</b>（杏仁核、海馬迴），<b>不先經過視丘</b>（唯一例外的感覺）。所以氣味特別容易勾起<b>情緒與回憶</b>。</li>
+    <li>嗅覺是相位性、會快速適應：進到有味道的房間，不久就聞不到了。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>我們以為的「味道」大部分其實是<b>風味</b>（flavor）＝味覺＋嗅覺（咀嚼時氣味從口腔後方進入鼻腔，稱鼻後嗅覺）。鼻塞時嗅覺受體接觸不到氣味分子，只剩舌頭的五種基本味道，所以食物變得平淡；捏著鼻子吃蘋果和洋蔥甚至很難分辨。</div>
+  <div class="nut"><b class="t">營養連結：</b>嗅覺喪失（新冠肺炎後遺症、老化、頭部外傷）會降低食慾與進食樂趣，也可能聞不到食物腐敗或瓦斯外洩。菜單設計時，香氣（香料、烹調方式）能增進病人的食慾。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>味蕾＝味覺細胞（上皮細胞，約 10 天更新）；分子須溶於唾液；VII（前 2/3）、IX（後 1/3）、X 傳入；味覺皮質在腦島。</li>
+      <li>鹹（Na⁺ 經 ENaC）、酸（H⁺）＝離子通道；甜（T1R2+T1R3）、鮮（T1R1+T1R3，麩胺酸）、苦（T2R）＝G 蛋白（味導素）。</li>
+      <li>鋅缺乏、老化、藥物 → 味覺減退 → 影響營養。</li>
+      <li>嗅覺：約 350–400 種受體、一神經元一受體、G<sub>olf</sub> → cAMP；嗅球 → 嗅覺皮質與邊緣系統，不經視丘 → 連結情緒記憶。</li>
+      <li>風味＝味覺＋嗅覺；鼻塞時食之無味。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>味蕾</td><td>taste bud</td><td>乳頭</td><td>papillae</td></tr>
+      <tr><td>鹹／酸／甜／苦／鮮</td><td>salty / sour / sweet / bitter / umami</td><td>味導素</td><td>gustducin</td></tr>
+      <tr><td>嗅覺上皮</td><td>olfactory epithelium</td><td>嗅球</td><td>olfactory bulb</td></tr>
+      <tr><td>嗅覺受體</td><td>olfactory receptor</td><td>風味</td><td>flavor</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">10.4</span>前庭器與平衡</h2>
+  <div class="en">Vestibular Apparatus and Equilibrium</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>內耳的<b>前庭器</b>：<b>毛細胞</b>怎麼偵測彎曲、<b>橢圓囊與球囊</b>偵測頭部傾斜與直線加速、<b>半規管</b>偵測旋轉，以及暈車與眩暈。</div><div><span class="lt lt2">為什麼接在 10.3 後面？</span>從化學感覺轉到內耳的機械感覺。先講平衡，因為它的毛細胞原理比聽覺簡單，10.5 的耳蝸會用到同樣的毛細胞。</div></div>
+  <div class="oneline">毛細胞的靜纖毛往動纖毛方向彎 → 去極化，反方向 → 過極化；橢圓囊（水平）與球囊（垂直）內的耳石膜偵測頭的傾斜與直線加速；三個互相垂直的半規管內的內淋巴在旋轉時推動壺腹頂，偵測旋轉加速。</div>
+  <div class="think">原地轉很多圈後突然停下來，為什麼會覺得天旋地轉？</div>
+
+  <h3 id="h11">前庭器的構造與毛細胞</h3>
+  <p class="core">內耳骨迷路內有膜迷路，充滿內淋巴（K⁺ 高）；前庭器＝橢圓囊＋球囊（耳石器）＋三個半規管；毛細胞頂端有靜纖毛與一根動纖毛，彎向動纖毛 → K⁺ 流入去極化。</p>
+  <p>內耳是顳骨中的一套管道（<b>骨迷路</b>），裡面有<b>膜迷路</b>，膜迷路內充滿 K⁺ 濃度很高的<b>內淋巴</b> <i class="en-term">endolymph</i>，外面是類似細胞外液的<b>外淋巴</b>。內耳分為負責平衡的<b>前庭器</b> <i class="en-term">vestibular apparatus</i> 與負責聽覺的<b>耳蝸</b>。</p>
+  <p>平衡與聽覺的感受細胞都是<b>毛細胞</b> <i class="en-term">hair cells</i>：頂端有一排高矮排列的<b>靜纖毛</b> <i class="en-term">stereocilia</i>，最高處旁邊有一根<b>動纖毛</b> <i class="en-term">kinocilium</i>（耳蝸的成熟毛細胞沒有動纖毛）。</p>
+  <ul class="dots">
+    <li>靜纖毛<b>朝動纖毛方向</b>彎曲 → 拉開頂端的通道 → <b>K⁺</b>（來自內淋巴）流入 → <b>去極化</b> → 釋放更多神經傳遞物質 → 感覺神經放電增加。</li>
+    <li>朝<b>反方向</b>彎曲 → 通道關閉 → 過極化 → 放電減少。</li>
+  </ul>
+  <p>所以毛細胞能同時表示方向與程度。</p>
+
+  <h3 id="h12">橢圓囊與球囊 Utricle and Saccule</h3>
+  <p class="core">耳石器：毛細胞的纖毛埋在含碳酸鈣耳石的膠質膜中；頭部傾斜或直線加速時耳石膜因慣性滑動 → 纖毛彎曲；橢圓囊管水平方向（如汽車加速）、球囊管垂直方向（如電梯）。</p>
+  <p><b>橢圓囊</b> <i class="en-term">utricle</i> 與<b>球囊</b> <i class="en-term">saccule</i> 合稱<b>耳石器</b>。毛細胞的纖毛埋在一層膠質膜中，膜上有含碳酸鈣的小晶體——<b>耳石</b> <i class="en-term">otoliths</i>，讓膜比較重。當頭部<b>傾斜</b>或做<b>直線加速</b>時，較重的耳石膜因重力或慣性而滑動，使纖毛彎曲。</p>
+  <ul class="dots">
+    <li><b>橢圓囊</b>：感覺區大致水平 → 偵測<b>水平方向</b>的加速（汽車起步、煞車）與頭部傾斜。</li>
+    <li><b>球囊</b>：感覺區大致垂直 → 偵測<b>垂直方向</b>的加速（電梯上下）。</li>
+  </ul>
+
+  <h3 id="h13">半規管 Semicircular Canals</h3>
+  <p class="core">三個互相垂直的半規管；壺腹內的壺腹嵴，毛細胞纖毛埋在膠質的壺腹頂；頭部旋轉時內淋巴因慣性落後 → 推動壺腹頂 → 偵測旋轉加速；持續等速旋轉後內淋巴跟上 → 停止時反向推動 → 眩暈與眼球震顫。</p>
+  <p>三個<b>半規管</b> <i class="en-term">semicircular canals</i> 彼此<b>互相垂直</b>，分別對應三個平面的旋轉（點頭、搖頭、側傾）。每個管的基部膨大成<b>壺腹</b>，內有毛細胞組成的<b>壺腹嵴</b>，纖毛埋在一個膠質帽——<b>壺腹頂</b> <i class="en-term">cupula</i> 中。</p>
+  <ol class="steps">
+    <li>頭部開始旋轉時，半規管跟著轉，但管內的<b>內淋巴因慣性落後</b>，相對地往反方向流，推彎壺腹頂與纖毛 → 偵測到旋轉。</li>
+    <li>持續等速旋轉一段時間後，內淋巴跟上，壺腹頂回到原位 → 感覺不到旋轉了。</li>
+    <li>突然停止時，內淋巴因慣性繼續流動，把壺腹頂往<b>另一個方向</b>推 → 腦以為正在往反方向旋轉 → <b>眩暈</b>，眼睛也出現不自主的來回擺動（<b>眼球震顫</b>）。</li>
+  </ol>
+  <div class="eg"><b class="t">回答開頭問題：</b>停下來時半規管內的內淋巴還在流，告訴腦「正在轉」，但眼睛看到的世界是靜止的，訊息衝突 → 天旋地轉。<b>暈車暈船</b>也是前庭感覺與視覺訊號不一致所致；前庭訊號經腦幹與嘔吐中樞相連，所以會噁心嘔吐。前庭訊號也送到小腦與控制眼球的神經核，讓你頭轉動時眼睛仍能盯住目標（前庭眼反射）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>內耳：膜迷路內為 K⁺ 高的內淋巴；前庭器＝橢圓囊＋球囊＋三個半規管。</li>
+      <li>毛細胞：靜纖毛彎向動纖毛 → K⁺ 流入去極化；反向 → 過極化。</li>
+      <li>耳石器（耳石膜）：橢圓囊偵測水平直線加速、球囊偵測垂直加速與傾斜。</li>
+      <li>半規管（互相垂直）：壺腹頂被內淋巴推動 → 偵測旋轉加速；停止後反向推動 → 眩暈、眼球震顫。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>前庭器</td><td>vestibular apparatus</td><td>內淋巴／外淋巴</td><td>endolymph / perilymph</td></tr>
+      <tr><td>毛細胞</td><td>hair cell</td><td>靜纖毛／動纖毛</td><td>stereocilia / kinocilium</td></tr>
+      <tr><td>橢圓囊／球囊</td><td>utricle / saccule</td><td>耳石</td><td>otolith</td></tr>
+      <tr><td>半規管</td><td>semicircular canal</td><td>壺腹頂</td><td>cupula</td></tr>
+      <tr><td>眩暈</td><td>vertigo</td><td>眼球震顫</td><td>nystagmus</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">10.5</span>耳與聽覺</h2>
+  <div class="en">The Ears and Hearing</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>聲波怎麼從<b>外耳</b>經<b>中耳</b>（鼓膜、聽小骨）放大，傳到<b>耳蝸</b>；<b>柯蒂氏器</b>的毛細胞怎麼轉導聲音；<b>基底膜</b>怎麼分辨音高；以及<b>傳導性與感音神經性</b>耳聾。</div><div><span class="lt lt2">為什麼接在 10.4 後面？</span>聽覺和平衡共用內耳與毛細胞的原理，只是耳蝸被特化成偵測空氣中的振動。</div></div>
+  <div class="oneline">聲波 → 外耳道 → 鼓膜振動 → 聽小骨（槌、砧、鐙）把振動放大傳到卵圓窗 → 耳蝸內的外淋巴產生壓力波 → 基底膜振動 → 柯蒂氏器毛細胞彎曲 → 聽神經；高音在耳蝸底部、低音在頂部；響度靠振幅與放電頻率。</div>
+  <div class="think">搭飛機下降時耳朵悶痛，吞口水或打哈欠為什麼會好一點？</div>
+
+  <h3 id="h14">外耳與中耳 Outer and Middle Ear</h3>
+  <p class="core">外耳（耳廓、外耳道）收集聲波 → 鼓膜振動；中耳三塊聽小骨（槌骨、砧骨、鐙骨）把振動傳到卵圓窗並放大約 20 倍（面積差＋槓桿）；耳咽管平衡中耳壓力；中耳肌在巨響時減弱傳導。</p>
+  <p><b>聲音</b>是空氣分子的振動波：<b>頻率</b>（每秒振動次數，赫茲 Hz）決定<b>音高</b>，人耳可聽到約 20–20,000 Hz；<b>振幅</b>決定<b>響度</b>（分貝 dB）。</p>
+  <ul class="dots">
+    <li><b>外耳</b>：<b>耳廓</b>收集聲波、幫助定位，經<b>外耳道</b>傳到<b>鼓膜</b> <i class="en-term">tympanic membrane</i>，使它振動。</li>
+    <li><b>中耳</b>：充滿空氣的腔室，有三塊<b>聽小骨</b> <i class="en-term">ossicles</i>——<b>槌骨</b>（連鼓膜）→ <b>砧骨</b> → <b>鐙骨</b>（踩在內耳的<b>卵圓窗</b>上）。因為鼓膜面積比卵圓窗大約 17 倍，加上骨頭的槓桿作用，振動被<b>放大約 20 倍</b>，才能推動內耳的液體（空氣中的聲波要進入液體會大量反射損失）。</li>
+    <li><b>耳咽管</b> <i class="en-term">auditory (Eustachian) tube</i>：連接中耳與咽部，吞嚥或打哈欠時打開，使中耳氣壓與外界平衡。</li>
+    <li>兩條中耳肌（鐙骨肌、鼓膜張肌）在巨大聲響時反射性收縮，減弱傳導，保護內耳。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>飛機下降時外界氣壓升高，中耳壓力較低，鼓膜被往內推而悶痛。吞口水、打哈欠會打開<b>耳咽管</b>，讓空氣進入中耳平衡壓力。小孩的耳咽管較短而平，感冒時細菌容易上行，所以容易得中耳炎。</div>
+
+  <h3 id="h15">耳蝸 Cochlea</h3>
+  <p class="core">耳蝸三個管腔：前庭階與鼓室階（外淋巴，在頂端相通）夾著蝸管（內淋巴）；鐙骨推卵圓窗 → 外淋巴壓力波 → 前庭膜與基底膜振動 → 能量最後經圓窗釋放。</p>
+  <p><b>耳蝸</b> <i class="en-term">cochlea</i> 像蝸牛殼一樣盤繞約 2¾ 圈，內部被兩片膜分成三個管道：</p>
+  <ul class="dots">
+    <li>上方的<b>前庭階</b>與下方的<b>鼓室階</b>：充滿外淋巴，在耳蝸頂端相通。</li>
+    <li>中間的<b>蝸管</b>（中階）：充滿內淋巴，它的底部是<b>基底膜</b> <i class="en-term">basilar membrane</i>，上面坐著聽覺感受器——<b>柯蒂氏器</b>。</li>
+  </ul>
+  <p>鐙骨推動<b>卵圓窗</b>，在前庭階的外淋巴中產生壓力波，波動使蝸管與基底膜上下振動，最後能量經鼓室階末端的<b>圓窗</b>向中耳釋放（液體不能壓縮，所以需要這個「出口」）。</p>
+
+  <h3 id="h16">柯蒂氏器與音高 Spiral Organ (Organ of Corti) and Pitch</h3>
+  <p class="core">柯蒂氏器：內毛細胞（約 3,500 個，負責傳送聽覺訊號）＋外毛細胞（放大與調音）；纖毛頂到上方的覆膜；基底膜振動 → 纖毛彎曲 → 毛細胞去極化 → 聽神經；位置理論：基底膜底部窄而硬 → 高音，頂部寬而軟 → 低音。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="240" y="20" font-size="14" text-anchor="middle" font-weight="bold">把耳蝸拉直來看：基底膜</text>
+    <path d="M40,90 L440,70 L440,130 L40,110 Z" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <text x="40" y="84" font-size="12" fill="#92400e">底部（靠卵圓窗）</text><text x="440" y="62" font-size="12" text-anchor="end" fill="#92400e">頂部</text>
+    <text x="70" y="150" font-size="13" text-anchor="middle" fill="#be123c" font-weight="bold">窄、硬</text><text x="70" y="168" font-size="13" text-anchor="middle" fill="#be123c">→ 高音</text><text x="70" y="186" font-size="11" text-anchor="middle">20,000 Hz</text>
+    <text x="410" y="150" font-size="13" text-anchor="middle" fill="#1d4ed8" font-weight="bold">寬、軟</text><text x="410" y="168" font-size="13" text-anchor="middle" fill="#1d4ed8">→ 低音</text><text x="410" y="186" font-size="11" text-anchor="middle">20 Hz</text>
+    <path d="M60,100 q10,-14 20,0 t20,0 t20,0" fill="none" stroke="#dc2626" stroke-width="2.5"/>
+    <path d="M330,100 q25,-24 50,0 t50,0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+    <text x="240" y="150" font-size="12" text-anchor="middle">中音在中間</text>
+    <text x="240" y="212" font-size="12" text-anchor="middle" fill="#374151">每個音高讓基底膜某一段振動最大 → 那一段的毛細胞最興奮 → 腦依「位置」判斷音高</text>
+  </svg><figcaption>基底膜像一架鋼琴的琴鍵排列：靠近卵圓窗的底部對高音敏感，越往頂端越對低音敏感。噪音或老化最先損害底部，所以先聽不到高音。</figcaption></figure>
+  <p><b>柯蒂氏器</b> <i class="en-term">spiral organ（organ of Corti）</i> 由毛細胞與支持細胞組成，毛細胞的纖毛接觸上方固定的<b>覆膜</b> <i class="en-term">tectorial membrane</i>：</p>
+  <ul class="dots">
+    <li><b>內毛細胞</b>（一排，約 3,500 個）：真正把聲音訊號傳給聽神經的主要感受器。</li>
+    <li><b>外毛細胞</b>（三排，約 12,000 個）：能改變長度，<b>放大</b>基底膜的振動、提高敏感度與音高辨別力。</li>
+  </ul>
+  <p>基底膜振動時，毛細胞相對於覆膜移動，纖毛被彎曲 → 內淋巴的 K⁺ 流入 → 去極化 → 釋放麩胺酸 → <b>耳蝸神經</b>（VIII）放電 → 腦幹 → 視丘 → <b>顳葉的聽覺皮質</b>。</p>
+  <ul class="dots">
+    <li><b>音高</b>：依<b>位置理論</b>——基底膜<b>底部</b>（靠卵圓窗）窄而硬，對<b>高頻</b>振動最大；<b>頂部</b>寬而軟，對<b>低頻</b>振動最大。哪一段的毛細胞被活化，腦就判斷是哪個音高。</li>
+    <li><b>響度</b>：聲音越大，基底膜振動幅度越大，活化的毛細胞越多、放電頻率越高。</li>
+    <li><b>聲音定位</b>：比較兩耳收到聲音的時間差與強度差。</li>
+  </ul>
+
+  <h3 id="h17">耳聾 Hearing Impairments</h3>
+  <p class="core">傳導性耳聾：外耳或中耳傳導受阻（耳垢、中耳炎、耳硬化症），助聽器有效；感音神經性耳聾：毛細胞或聽神經受損（噪音、老化、藥物），可用人工耳蝸。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>傳導性耳聾 conductive</th><th>感音神經性耳聾 sensorineural</th></tr>
+    <tr><td>受損位置</td><td>外耳、中耳（聲音傳不進內耳）</td><td>耳蝸毛細胞、聽神經、聽覺路徑</td></tr>
+    <tr><td>原因</td><td>耳垢阻塞、鼓膜破裂、中耳炎積液、<b>耳硬化症</b>（鐙骨固定）</td><td>長期<b>噪音</b>、<b>老年性聽力喪失</b>（高頻先受影響）、某些抗生素（耳毒性）、感染</td></tr>
+    <tr><td>處理</td><td>治療病因；<b>助聽器</b>（放大聲音）</td><td>毛細胞在人類<b>無法再生</b>；重度時可用<b>人工耳蝸</b>（直接電刺激聽神經）</td></tr>
+  </table></div>
+  <p>醫師可用音叉測試區分：骨傳導（直接振動頭骨傳到耳蝸）比空氣傳導好，多為傳導性耳聾。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>頻率 → 音高（人耳約 20–20,000 Hz）；振幅 → 響度（dB）。</li>
+      <li>外耳收集 → 鼓膜 → 槌、砧、鐙骨 → 卵圓窗；放大約 20 倍；耳咽管平衡中耳壓力。</li>
+      <li>耳蝸：前庭階、鼓室階（外淋巴）夾蝸管（內淋巴）；基底膜上有柯蒂氏器；能量經圓窗釋放。</li>
+      <li>內毛細胞傳訊、外毛細胞放大；纖毛抵覆膜彎曲 → K⁺ 流入 → 聽神經 → 顳葉聽覺皮質。</li>
+      <li>位置理論：底部窄硬 → 高音、頂部寬軟 → 低音；噪音與老化先損高頻。</li>
+      <li>傳導性（外中耳，助聽器）vs 感音神經性（毛細胞、神經，人工耳蝸）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>鼓膜</td><td>tympanic membrane</td><td>聽小骨</td><td>ossicles</td></tr>
+      <tr><td>槌骨／砧骨／鐙骨</td><td>malleus / incus / stapes</td><td>卵圓窗／圓窗</td><td>oval / round window</td></tr>
+      <tr><td>耳咽管</td><td>auditory (Eustachian) tube</td><td>耳蝸</td><td>cochlea</td></tr>
+      <tr><td>基底膜</td><td>basilar membrane</td><td>柯蒂氏器</td><td>organ of Corti</td></tr>
+      <tr><td>覆膜</td><td>tectorial membrane</td><td>傳導性／感音神經性耳聾</td><td>conductive / sensorineural deafness</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">10.6</span>眼與視覺</h2>
+  <div class="en">The Eyes and Vision</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>眼球的構造、光線怎麼被<b>角膜與水晶體折射</b>成像在視網膜上、<b>調節作用</b>（看近看遠）、<b>瞳孔反射</b>，以及近視、遠視、老花、散光。</div><div><span class="lt lt2">為什麼接在 10.5 後面？</span>視覺是最複雜的感覺，分三節講：先講「相機」（光學部分），10.7 講「底片」（視網膜），10.8 講「影像處理」（腦）。</div></div>
+  <div class="oneline">光線經角膜（折射最多）、房水、水晶體、玻璃體，在視網膜上成倒立的像；看近時睫狀肌收縮、懸韌帶放鬆、水晶體變圓（調節）；虹膜控制瞳孔大小；近視成像在視網膜前（凹透鏡矯正），遠視在後（凸透鏡），老花是水晶體失去彈性。</div>
+  <div class="think">為什麼年紀大了看手機要拿遠一點？</div>
+
+  <h3 id="h18">眼的構造</h3>
+  <p class="core">三層：外層（鞏膜、角膜）、中層（脈絡膜、睫狀體、虹膜）、內層（視網膜）；前房與後房充滿房水（青光眼＝房水排出受阻、眼壓升高），水晶體後方是玻璃體。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <circle cx="270" cy="130" r="105" fill="#f8fafc" stroke="#9ca3af" stroke-width="5"/>
+    <path d="M270,25 A105,105 0 0 1 270,235" fill="none" stroke="#e11d48" stroke-width="5"/>
+    <path d="M170,95 Q140,130 170,165" fill="#e0f2fe" stroke="#0284c7" stroke-width="3"/>
+    <ellipse cx="200" cy="130" rx="18" ry="34" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <path d="M188,90 L178,96 M188,170 L178,164" stroke="#7c3aed" stroke-width="5"/>
+    <g stroke="#a16207" stroke-width="1.2"><line x1="200" y1="96" x2="185" y2="80"/><line x1="200" y1="164" x2="185" y2="180"/></g>
+    <rect x="183" y="76" width="12" height="10" fill="#7c3aed"/><rect x="183" y="174" width="12" height="10" fill="#7c3aed"/>
+    <circle cx="372" cy="130" r="6" fill="#facc15" stroke="#ca8a04"/>
+    <path d="M372,145 L440,190 L460,180 L385,128" fill="#fde68a" stroke="#b45309"/>
+    <g stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4 3"><line x1="40" y1="90" x2="372" y2="140"/><line x1="40" y1="170" x2="372" y2="120"/></g>
+    <g font-size="12">
+      <text x="150" y="70" text-anchor="end">角膜（折射最多）</text><text x="140" y="200" text-anchor="end">虹膜（瞳孔大小）</text>
+      <text x="220" y="54" fill="#6d28d9">睫狀體＋懸韌帶</text><text x="226" y="132">水晶體</text>
+      <text x="290" y="100" fill="#374151">玻璃體</text>
+      <text x="380" y="40" fill="#be123c">視網膜</text><text x="380" y="118" fill="#92400e">中央小窩</text>
+      <text x="468" y="236" fill="#92400e" text-anchor="end">視神經（盲點）</text>
+      <text x="40" y="116" fill="#b45309">光線</text></g>
+    <text x="240" y="254" font-size="12" text-anchor="middle">影像在視網膜上是上下左右顛倒的，由大腦「轉正」</text>
+  </svg><figcaption>眼球像一台相機：角膜與水晶體是鏡頭、虹膜是光圈、視網膜是底片。中央小窩是視覺最清楚的地方；視神經離開處沒有感光細胞，是盲點。</figcaption></figure>
+  <ul class="dots">
+    <li><b>外層</b>：白色堅韌的<b>鞏膜</b>，前方延續為透明的<b>角膜</b> <i class="en-term">cornea</i>（沒有血管，養分來自房水與淚液）。</li>
+    <li><b>中層</b>（葡萄膜）：富含血管的<b>脈絡膜</b>（提供視網膜養分、吸收散射光）；<b>睫狀體</b>（含睫狀肌，經<b>懸韌帶</b>連到水晶體，並分泌房水）；<b>虹膜</b>（有顏色的部分，中間的孔是<b>瞳孔</b>）。</li>
+    <li><b>內層</b>：<b>視網膜</b>（10.7）。</li>
+    <li>角膜與水晶體之間充滿<b>房水</b> <i class="en-term">aqueous humor</i>，由睫狀體分泌、經前房角的許萊姆氏管排出；排出受阻使眼壓升高、壓迫視神經 → <b>青光眼</b>。水晶體後方是膠狀的<b>玻璃體</b>。</li>
+  </ul>
+  <p><b>瞳孔大小</b>由虹膜的兩種平滑肌控制：<b>環狀肌</b>（副交感，動眼神經）收縮 → 瞳孔<b>縮小</b>；<b>輻射狀肌</b>（交感，α1）收縮 → 瞳孔<b>放大</b>。光照一眼，兩眼瞳孔都會縮小（<b>瞳孔光反射</b>），醫師用它評估腦幹功能。</p>
+
+  <h3 id="h19">折射 Refraction</h3>
+  <p class="core">光線進入密度不同的介質會彎折（折射）；角膜提供約 2/3 的折射力（固定），水晶體提供約 1/3（可調整）；在視網膜上成倒立實像。</p>
+  <p>光從空氣進入角膜時速度改變而彎折，稱為<b>折射</b> <i class="en-term">refraction</i>。<b>角膜</b>的折射力最大（約 2/3），但是固定的；<b>水晶體</b>雙凸，提供約 1/3，而且<b>可以調整</b>。光線經聚焦後，在視網膜上形成<b>上下左右顛倒</b>的實像，再由腦解讀成正確的方向。</p>
+
+  <h3 id="h20">調節作用 Accommodation</h3>
+  <p class="core">看遠：睫狀肌放鬆 → 懸韌帶拉緊 → 水晶體變扁；看近：睫狀肌收縮（副交感）→ 懸韌帶放鬆 → 水晶體因彈性變圓、折射力增加；同時瞳孔縮小、兩眼內聚。</p>
+  <figure class="pic"><svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="22" font-size="14" text-anchor="middle" font-weight="bold" fill="#1d4ed8">看遠</text><text x="360" y="22" font-size="14" text-anchor="middle" font-weight="bold" fill="#be123c">看近</text>
+    <ellipse cx="120" cy="100" rx="14" ry="44" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <g stroke="#a16207" stroke-width="2"><line x1="120" y1="56" x2="120" y2="36"/><line x1="120" y1="144" x2="120" y2="164"/></g>
+    <rect x="100" y="26" width="40" height="12" rx="4" fill="#c4b5fd"/><rect x="100" y="162" width="40" height="12" rx="4" fill="#c4b5fd"/>
+    <ellipse cx="360" cy="100" rx="26" ry="36" fill="#fef9c3" stroke="#ca8a04" stroke-width="2.5"/>
+    <g stroke="#a16207" stroke-width="2" stroke-dasharray="3 3"><line x1="360" y1="64" x2="360" y2="48"/><line x1="360" y1="136" x2="360" y2="152"/></g>
+    <rect x="346" y="38" width="28" height="12" rx="4" fill="#7c3aed"/><rect x="346" y="150" width="28" height="12" rx="4" fill="#7c3aed"/>
+    <g font-size="12" text-anchor="middle"><text x="120" y="190">睫狀肌放鬆、懸韌帶拉緊 → 水晶體扁</text><text x="360" y="190">睫狀肌收縮、懸韌帶鬆 → 水晶體圓</text></g>
+    <text x="200" y="100" font-size="12" fill="#6d28d9">紫＝睫狀肌</text><text x="200" y="118" font-size="12" fill="#a16207">細線＝懸韌帶</text>
+  </svg><figcaption>調節作用：看近的東西時，睫狀肌收縮反而讓懸韌帶「放鬆」，水晶體靠自己的彈性變圓、折射力變強。</figcaption></figure>
+  <p>為了讓遠近不同的物體都清楚成像在視網膜上，水晶體會改變形狀，稱為<b>調節作用</b> <i class="en-term">accommodation</i>：</p>
+  <ul class="dots">
+    <li><b>看遠</b>：<b>睫狀肌放鬆</b> → 睫狀體環變大 → <b>懸韌帶拉緊</b> → 水晶體被拉<b>扁</b>、折射力小。</li>
+    <li><b>看近</b>：<b>睫狀肌收縮</b>（副交感神經）→ 睫狀體環縮小 → 懸韌帶<b>放鬆</b> → 水晶體因自身彈性變<b>圓</b>、折射力增加。同時瞳孔縮小、兩眼內聚（近反射）。</li>
+  </ul>
+  <p>能看清楚的最近距離叫<b>近點</b>，會隨年齡增加：水晶體逐漸變硬失去彈性，看近時無法變圓。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>約 40–45 歲後水晶體失去彈性，看近時無法變圓，近點變遠，所以要把手機拿遠一點才看得清，這是<b>老花眼</b>（presbyopia），需要凸透鏡（老花眼鏡）幫忙。</div>
+
+  <h3 id="h21">視力與屈光異常 Visual Acuity</h3>
+  <p class="core">近視：眼球太長或折射太強 → 成像在視網膜前 → 凹透鏡；遠視：眼球太短 → 成像在後 → 凸透鏡；散光：角膜或水晶體曲度不均 → 柱狀透鏡；老花：水晶體失去彈性 → 凸透鏡看近。</p>
+  <div class="tblwrap"><table>
+    <tr><th>屈光異常</th><th>原因</th><th>成像位置</th><th>矯正</th></tr>
+    <tr><td><b>近視</b> myopia</td><td>眼球前後太長，或折射力太強</td><td>視網膜<b>前方</b>（看遠模糊）</td><td><b>凹透鏡</b>（發散）</td></tr>
+    <tr><td><b>遠視</b> hyperopia</td><td>眼球太短，或折射力太弱</td><td>視網膜<b>後方</b>（看近更吃力）</td><td><b>凸透鏡</b>（會聚）</td></tr>
+    <tr><td><b>散光</b> astigmatism</td><td>角膜或水晶體不同方向的曲度不同</td><td>某些方向的線條模糊</td><td>柱狀透鏡</td></tr>
+    <tr><td><b>老花</b> presbyopia</td><td>水晶體隨年齡失去彈性</td><td>看近無法調節</td><td>凸透鏡（看近時）</td></tr>
+  </table></div>
+  <p><b>白內障</b>是水晶體變混濁（老化、糖尿病、紫外線），以手術置換人工水晶體治療；抗氧化營養素（葉黃素、玉米黃素、維生素 C、E）與延緩老年眼疾的關係常被研究。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>外層鞏膜、角膜；中層脈絡膜、睫狀體、虹膜；內層視網膜；房水（排出受阻 → 青光眼）、玻璃體。</li>
+      <li>瞳孔：環狀肌（副交感）縮小、輻射狀肌（交感 α1）放大；瞳孔光反射。</li>
+      <li>折射：角膜約 2/3（固定）、水晶體約 1/3（可調）；成像倒立。</li>
+      <li>調節：看近 → 睫狀肌收縮、懸韌帶鬆、水晶體變圓；老花＝水晶體失去彈性。</li>
+      <li>近視（成像在前，凹透鏡）、遠視（在後，凸透鏡）、散光（柱狀）、白內障（混濁）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>鞏膜／角膜</td><td>sclera / cornea</td><td>脈絡膜</td><td>choroid</td></tr>
+      <tr><td>睫狀體／懸韌帶</td><td>ciliary body / suspensory ligament</td><td>虹膜／瞳孔</td><td>iris / pupil</td></tr>
+      <tr><td>水晶體</td><td>lens</td><td>房水／玻璃體</td><td>aqueous humor / vitreous body</td></tr>
+      <tr><td>折射</td><td>refraction</td><td>調節作用</td><td>accommodation</td></tr>
+      <tr><td>近視／遠視</td><td>myopia / hyperopia</td><td>散光／老花</td><td>astigmatism / presbyopia</td></tr>
+      <tr><td>青光眼</td><td>glaucoma</td><td>白內障</td><td>cataract</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.7 ============ -->
+<section class="sec det" id="s7">
+  <h2><span class="no">10.7</span>視網膜</h2>
+  <div class="en">Retina</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>視網膜的細胞層次、<b>桿細胞</b>與<b>錐細胞</b>的差異、<b>視紫質</b>的光化學反應（<b>維生素 A</b>）、<b>暗適應</b>、<b>中央小窩</b>的高解析度，以及<b>色覺</b>。</div><div><span class="lt lt2">為什麼接在 10.6 後面？</span>影像聚焦到視網膜後，要由感光細胞把光轉成神經訊號。這一節和營養學直接相關：維生素 A 缺乏會造成夜盲症。</div></div>
+  <div class="oneline">光要穿過神經節細胞與雙極細胞才到最深層的感光細胞；桿細胞對光很敏感、負責暗處的黑白視覺（視紫質＝視蛋白＋視網醛，來自維生素 A）；錐細胞負責亮處的色覺與精細視覺，集中在中央小窩；暗處感光細胞反而去極化，光使其過極化。</div>
+  <div class="think">缺乏維生素 A 為什麼會先造成「夜盲」，而不是白天看不見？</div>
+
+  <h3 id="h22">視網膜的層次</h3>
+  <p class="core">由外（靠脈絡膜）到內：色素上皮 → 感光細胞（桿、錐）→ 雙極細胞 → 神經節細胞（軸突形成視神經）；光線由內往外穿過神經層才到感光細胞；視神經離開處為盲點。</p>
+  <p>視網膜的排列看起來「反過來」：光線要先穿過<b>神經節細胞</b>與<b>雙極細胞</b>，才到達最深層的<b>感光細胞</b>；感光細胞後面是<b>色素上皮</b>，吸收多餘的光並回收感光細胞的物質。訊號則由感光細胞 → 雙極細胞 → 神經節細胞，神經節細胞的軸突匯集成<b>視神經</b>，在<b>視神經盤</b>離開眼球；這裡沒有感光細胞，形成<b>盲點</b>。</p>
+
+  <h3 id="h23">桿細胞與錐細胞</h3>
+  <p class="core">桿細胞：約 1.2 億、在周邊、極敏感（暗處）、黑白、許多會聚到一個神經節細胞 → 敏感但解析度低；錐細胞：約 600 萬、集中在中央小窩、需強光、色覺、一對一 → 解析度高。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>桿細胞 rods</th><th>錐細胞 cones</th></tr>
+    <tr><td>數量</td><td>約 1.2 億</td><td>約 600 萬</td></tr>
+    <tr><td>分布</td><td>視網膜<b>周邊</b></td><td>集中在<b>中央小窩</b></td></tr>
+    <tr><td>敏感度</td><td><b>極高</b>，暗處（夜間）視覺</td><td>較低，需要較強的光</td></tr>
+    <tr><td>顏色</td><td>只有黑白灰</td><td><b>色覺</b>（三種）</td></tr>
+    <tr><td>色素</td><td><b>視紫質</b> rhodopsin</td><td>三種視錐色素（光視素）</td></tr>
+    <tr><td>會聚</td><td><b>多</b>個桿細胞 → 一個神經節細胞（加總微弱光線，但解析度低）</td><td>中央小窩約<b>一對一</b>（解析度高）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">例子：</b>夜裡看星星，直視反而看不到微弱的星星，用「眼角餘光」看卻看得到——因為中央小窩只有錐細胞，而對弱光敏感的桿細胞在周邊。</div>
+
+  <h3 id="h24">光化學反應：視紫質與維生素 A Effect of Light on the Rods</h3>
+  <p class="core">視紫質＝視蛋白＋11-順式視網醛（來自維生素 A）；光使 11-順式變成全反式（漂白）→ 活化轉導素（G 蛋白）→ 磷酸二酯酶分解 cGMP → 鈉通道關閉 → 感光細胞過極化 → 減少釋放麩胺酸；暗處 cGMP 高、Na⁺ 流入（暗電流）、去極化。</p>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a101" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="160" y="20" width="160" height="44" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/><text x="240" y="40" font-size="14" text-anchor="middle" font-weight="bold">視紫質</text><text x="240" y="56" font-size="11" text-anchor="middle">視蛋白＋11-順式視網醛</text>
+    <path d="M320,42 L380,42 L380,110" fill="none" stroke="#f59e0b" stroke-width="3" marker-end="url(#a101)"/><text x="350" y="34" font-size="13" fill="#b45309" font-weight="bold">光</text>
+    <rect x="310" y="114" width="160" height="44" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/><text x="390" y="134" font-size="13" text-anchor="middle" font-weight="bold">漂白：視蛋白＋</text><text x="390" y="150" font-size="11" text-anchor="middle">全反式視網醛</text>
+    <path d="M310,158 L240,190" stroke="#374151" stroke-width="2.5" marker-end="url(#a101)"/>
+    <rect x="140" y="190" width="200" height="40" rx="12" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/><text x="240" y="208" font-size="12" text-anchor="middle">在色素上皮轉回 11-順式</text><text x="240" y="224" font-size="11" text-anchor="middle">（需要維生素 A 補充）</text>
+    <path d="M140,210 L70,210 L70,60 L156,48" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#a101)"/><text x="10" y="130" font-size="12">再生</text>
+    <rect x="10" y="20" width="120" height="30" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="70" y="40" font-size="12" text-anchor="middle">維生素 A（視網醇）</text>
+    <text x="430" y="190" font-size="12" text-anchor="middle" fill="#1d4ed8">→ 轉導素 → cGMP↓</text><text x="430" y="206" font-size="12" text-anchor="middle" fill="#1d4ed8">→ Na⁺ 通道關</text><text x="430" y="222" font-size="12" text-anchor="middle" fill="#1d4ed8">→ 過極化</text>
+  </svg><figcaption>視紫質循環：光把它「漂白」並產生視覺訊號；之後要在色素上皮重新做回來，原料是維生素 A。維生素 A 不足 → 視紫質再生慢 → 暗處看不清楚。</figcaption></figure>
+  <p>桿細胞外節的膜盤上有大量<b>視紫質</b> <i class="en-term">rhodopsin</i>，由蛋白質<b>視蛋白</b> <i class="en-term">opsin</i> 和來自<b>維生素 A</b> 的色素 <b>11-順式視網醛</b> <i class="en-term">11-cis-retinal</i> 組成。</p>
+  <ol class="steps">
+    <li><b>黑暗中</b>：感光細胞內 <b>cGMP</b> 濃度高，使外節的 Na⁺ 通道打開，Na⁺ 持續流入（<b>暗電流</b>），細胞處於<b>去極化</b>狀態（約 −40 mV），<b>持續釋放</b>神經傳遞物質（麩胺酸）。</li>
+    <li><b>照光</b>：光使 11-順式視網醛轉成<b>全反式視網醛</b>，視紫質改變形狀並分解（<b>漂白</b>）。活化的視紫質活化 G 蛋白<b>轉導素</b> <i class="en-term">transducin</i>，再活化<b>磷酸二酯酶</b>分解 cGMP。</li>
+    <li>cGMP 下降 → Na⁺ 通道<b>關閉</b> → 感光細胞<b>過極化</b> → 麩胺酸釋放<b>減少</b> → 雙極細胞的活動改變 → 神經節細胞產生動作電位。</li>
+    <li><b>再生</b>：全反式視網醛在色素上皮轉回 11-順式，再與視蛋白結合成視紫質；這需要持續供應維生素 A。</li>
+  </ol>
+  <div class="warn"><b class="t">特別注意：</b>感光細胞是「反過來」的——<b>黑暗中去極化、照光時過極化</b>，和大多數感受器相反。光訊號是「減少」傳遞物質的釋放。</div>
+
+  <h3 id="h25">暗適應 Dark Adaptation</h3>
+  <p class="core">從亮處進入暗處：視紫質逐漸再生（約 20–30 分鐘），桿細胞敏感度增加約 10 萬倍以上＝暗適應；從暗處到亮處：大量視紫質漂白、敏感度下降＝光適應（較快）。</p>
+  <p>在強光下，大部分視紫質被漂白，桿細胞幾乎失去作用，主要靠錐細胞。剛走進黑暗的電影院時什麼都看不到，之後視紫質<b>逐漸再生</b>，約 20–30 分鐘後桿細胞的敏感度增加約 <b>10 萬倍以上</b>，就能看到周圍——這叫<b>暗適應</b> <i class="en-term">dark adaptation</i>（簡報中誤寫成光適應，已更正）。反之從暗處走到亮處會一時刺眼，視紫質快速漂白、瞳孔縮小，幾分鐘內就適應，稱為<b>光適應</b>。</p>
+  <div class="nut"><b class="t">回答開頭問題：</b>維生素 A 是視網醛的來源。缺乏時視紫質<b>再生不足</b>，最先影響依賴視紫質、需要高敏感度的<b>暗處視覺</b>（桿細胞），表現為<b>夜盲症</b>（暗適應變慢、黃昏看不清）。持續缺乏則造成結膜與角膜乾燥、角質化（<b>乾眼症</b>、畢托氏斑），嚴重時角膜軟化穿孔而失明——維生素 A 缺乏是開發中國家兒童可預防性失明的主要原因。富含維生素 A 的食物：肝臟、蛋黃、乳製品；β-胡蘿蔔素（深綠、橘黃色蔬果）可在體內轉成維生素 A。</div>
+
+  <h3 id="h26">中央小窩與視覺敏銳度 Visual Acuity and Sensitivity</h3>
+  <p class="core">中央小窩：只有錐細胞、上方的神經細胞被推到兩側、一對一連接 → 視覺最清晰（黃斑部的中心）；黃斑部病變影響中央視力。</p>
+  <p><b>中央小窩</b> <i class="en-term">fovea centralis</i> 位在<b>黃斑部</b>的中心，正對著視軸。這裡：①<b>只有錐細胞</b>，而且排列最密；②上方的雙極細胞與神經節細胞被推到旁邊，光線直接照到錐細胞；③錐細胞與神經節細胞大致<b>一對一</b>連接。所以中央小窩的視覺<b>最清晰</b>，看東西時我們會轉動眼球讓影像落在這裡。<b>老年性黃斑部病變</b>會使中央視力模糊、扭曲；黃斑部富含<b>葉黃素與玉米黃素</b>，能過濾藍光。</p>
+
+  <h3 id="h27">色覺 Color Vision</h3>
+  <p class="core">三色理論：三種錐細胞分別對藍（短波）、綠（中波）、紅（長波）最敏感；顏色由三者被活化的比例決定；紅綠色盲多為 X 染色體隱性遺傳，男性較多。</p>
+  <p>依據<b>三色理論</b> <i class="en-term">trichromatic theory</i>，人有三種錐細胞，各含一種光視素，分別對<b>藍（短波，約 420 nm）、綠（中波，約 530 nm）、紅（長波，約 560 nm）</b>光最敏感。腦根據三種錐細胞被活化的<b>比例</b>判斷顏色，例如紅與綠錐細胞同時被活化就看到黃色。</p>
+  <p><b>色盲</b>是缺少某種錐細胞或其光視素異常。最常見的<b>紅綠色盲</b>，因紅、綠光視素基因在 <b>X 染色體</b>上，屬<b>性聯隱性遺傳</b>，男性（只有一條 X）發生率約 8%，遠高於女性（約 0.5%）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>視網膜：光穿過神經節細胞、雙極細胞到感光細胞；色素上皮在最外；視神經盤＝盲點。</li>
+      <li>桿細胞：多、周邊、極敏感、黑白、高度會聚；錐細胞：少、中央小窩、色覺、一對一。</li>
+      <li>視紫質＝視蛋白＋11-順式視網醛（維生素 A）；光 → 全反式（漂白）→ 轉導素 → cGMP↓ → Na⁺ 通道關 → 過極化；暗處去極化（暗電流）。</li>
+      <li>暗適應：視紫質再生，敏感度增加約 10 萬倍以上（20–30 分鐘）。</li>
+      <li>維生素 A 缺乏 → 夜盲症 → 乾眼症、角膜軟化。</li>
+      <li>中央小窩：只有錐細胞、最清晰；黃斑部含葉黃素。三色理論；紅綠色盲為 X 性聯隱性。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>視網膜</td><td>retina</td><td>色素上皮</td><td>pigment epithelium</td></tr>
+      <tr><td>桿細胞／錐細胞</td><td>rod / cone</td><td>雙極細胞／神經節細胞</td><td>bipolar / ganglion cell</td></tr>
+      <tr><td>視紫質</td><td>rhodopsin</td><td>視蛋白／視網醛</td><td>opsin / retinal</td></tr>
+      <tr><td>轉導素</td><td>transducin</td><td>暗電流</td><td>dark current</td></tr>
+      <tr><td>暗適應</td><td>dark adaptation</td><td>夜盲症</td><td>night blindness</td></tr>
+      <tr><td>中央小窩／黃斑部</td><td>fovea centralis / macula lutea</td><td>三色理論</td><td>trichromatic theory</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 10.8 ============ -->
+<section class="sec det" id="s8">
+  <h2><span class="no">10.8</span>視覺訊息的神經處理</h2>
+  <div class="en">Neural Processing of Visual Information</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>視覺訊號怎麼從視網膜經<b>視交叉</b>、<b>外側膝狀核</b>到<b>枕葉視覺皮質</b>；神經節細胞的<b>中心—周圍感受野</b>；以及視覺皮質怎麼分析形狀、顏色與運動。</div><div><span class="lt lt2">為什麼放最後？</span>影像「拍」下來之後，要經過一連串處理才成為我們「看到」的世界。這一節把第 8 章的腦區與本章的感受器連起來。</div></div>
+  <div class="oneline">兩眼鼻側半邊視網膜的纖維在視交叉交叉到對側，所以左視野的影像都送到右腦；路徑：視神經 → 視交叉 → 視徑 → 視丘外側膝狀核 → 視放射 → 枕葉初級視覺皮質；部分纖維到上丘（反射）與下視丘（生理時鐘）。</div>
+
+  <h3 id="h28">視覺路徑 Neural Pathways from the Retina</h3>
+  <p class="core">視神經 → 視交叉（鼻側纖維交叉）→ 視徑 → 外側膝狀核（視丘）→ 視放射 → 初級視覺皮質（枕葉）；右視野 → 左腦；另有纖維到上丘（眼球運動反射）、視交叉上核（晝夜節律）、瞳孔反射中樞。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="130" y="20" font-size="13" text-anchor="middle" fill="#1d4ed8" font-weight="bold">左視野</text><text x="350" y="20" font-size="13" text-anchor="middle" fill="#be123c" font-weight="bold">右視野</text>
+    <circle cx="170" cy="70" r="28" fill="#fff" stroke="#374151" stroke-width="2"/><circle cx="310" cy="70" r="28" fill="#fff" stroke="#374151" stroke-width="2"/>
+    <text x="170" y="75" font-size="11" text-anchor="middle">左眼</text><text x="310" y="75" font-size="11" text-anchor="middle">右眼</text>
+    <path d="M160,96 L190,150 L210,190 L150,250" fill="none" stroke="#be123c" stroke-width="4"/>
+    <path d="M182,96 L240,150 L270,190 L330,250" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-dasharray="7 4"/>
+    <path d="M298,96 L240,150 L210,190 L150,250" fill="none" stroke="#be123c" stroke-width="4" stroke-dasharray="7 4"/>
+    <path d="M320,96 L290,150 L270,190 L330,250" fill="none" stroke="#1d4ed8" stroke-width="4"/>
+    <circle cx="240" cy="150" r="8" fill="#fde68a" stroke="#b45309"/><text x="252" y="146" font-size="12" fill="#92400e">視交叉</text>
+    <ellipse cx="150" cy="250" rx="26" ry="14" fill="#f5f3ff" stroke="#7c3aed"/><ellipse cx="330" cy="250" rx="26" ry="14" fill="#f5f3ff" stroke="#7c3aed"/>
+    <text x="150" y="282" font-size="12" text-anchor="middle">左腦：外側膝狀核</text><text x="150" y="296" font-size="12" text-anchor="middle">→ 枕葉（看右視野）</text>
+    <text x="330" y="282" font-size="12" text-anchor="middle">右腦：外側膝狀核</text><text x="330" y="296" font-size="12" text-anchor="middle">→ 枕葉（看左視野）</text>
+    <text x="40" y="120" font-size="12">紅＝看右視野的纖維</text><text x="40" y="136" font-size="12">藍＝看左視野的纖維</text><text x="40" y="152" font-size="12">虛線＝交叉的鼻側纖維</text>
+  </svg><figcaption>視交叉讓「同一邊視野」的訊息集中到同一側腦：左視野 → 右腦、右視野 → 左腦，和運動感覺的對側控制一致。</figcaption></figure>
+  <p>神經節細胞的軸突形成<b>視神經</b>（II）。兩條視神經在腦下方會合成<b>視交叉</b> <i class="en-term">optic chiasma</i>：來自兩眼<b>鼻側</b>半邊視網膜（看外側視野）的纖維<b>交叉</b>到對側，顳側的纖維不交叉。結果<b>左視野</b>的影像全部送到<b>右腦</b>、右視野送到左腦。之後經<b>視徑</b>到視丘的<b>外側膝狀核</b> <i class="en-term">lateral geniculate nucleus</i>，再經<b>視放射</b>到枕葉的<b>初級視覺皮質</b>。</p>
+  <ul class="dots">
+    <li>部分纖維到<b>上丘</b>：控制眼球與頭部朝向刺激的反射。</li>
+    <li>到<b>頂蓋前區</b>：瞳孔光反射。</li>
+    <li>到下視丘的<b>視交叉上核</b>：由含黑視素的特殊神經節細胞傳遞光照資訊，調節晝夜節律與褪黑激素（第 8 章）。</li>
+  </ul>
+  <div class="eg"><b class="t">例子：</b>腦垂腺腫瘤向上長會壓迫<b>視交叉</b>中央的交叉纖維（鼻側纖維），使兩眼的<b>外側視野</b>看不見（雙顳側偏盲），這是腦垂腺腫瘤的典型症狀（第 11 章）。</div>
+
+  <h3 id="h29">神經節細胞的感受野 Ganglion Cell Receptive Fields</h3>
+  <p class="core">中心—周圍拮抗的圓形感受野：中心給光興奮、周圍給光抑制（或相反）→ 對邊緣與對比最敏感（側抑制）。</p>
+  <p>每個神經節細胞的感受野是視網膜上一個圓形區域，分為<b>中心</b>與<b>周圍</b>，兩者作用相反：例如「給光中心」的細胞，光照中心時放電增加、光照周圍時放電減少。所以均勻照光時反應不大，<b>邊緣與明暗對比</b>處反應最強——這是視網膜層次的<b>側抑制</b>，讓我們特別容易看出物體的輪廓。</p>
+
+  <h3 id="h30">視覺皮質的處理 Visual Cortex</h3>
+  <p class="core">初級視覺皮質的神經元對特定方向的線條與邊緣反應；之後分兩條路：腹側（往顳葉）＝「是什麼」（形狀、顏色、臉孔）；背側（往頂葉）＝「在哪裡、怎麼動」（位置、運動）。</p>
+  <p>初級視覺皮質的神經元對特定<b>方向的線條、邊緣</b>反應（簡單細胞、複雜細胞），把影像拆成基本元素。之後資訊分兩條路處理：</p>
+  <ul class="dots">
+    <li><b>腹側路徑</b>（往顳葉）：辨認「<b>是什麼</b>」——形狀、顏色、物體、臉孔。</li>
+    <li><b>背側路徑</b>（往頂葉）：判斷「<b>在哪裡、怎麼動</b>」——位置、深度、運動方向，協助伸手抓取。</li>
+  </ul>
+  <p>兩眼看到的影像略有不同，腦比較兩者產生<b>立體感（深度知覺）</b>。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>視神經 → 視交叉（鼻側纖維交叉）→ 視徑 → 外側膝狀核 → 視放射 → 枕葉視覺皮質。</li>
+      <li>左視野 → 右腦；腦垂腺腫瘤壓迫視交叉 → 雙顳側偏盲。</li>
+      <li>其他目標：上丘（眼球反射）、頂蓋前區（瞳孔反射）、視交叉上核（晝夜節律）。</li>
+      <li>神經節細胞中心—周圍感受野 → 對邊緣與對比敏感。</li>
+      <li>視覺皮質：線條方向；腹側「是什麼」、背側「在哪裡」；兩眼視差 → 立體感。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>視神經</td><td>optic nerve</td><td>視交叉</td><td>optic chiasma</td></tr>
+      <tr><td>視徑</td><td>optic tract</td><td>外側膝狀核</td><td>lateral geniculate nucleus</td></tr>
+      <tr><td>視放射</td><td>optic radiation</td><td>初級視覺皮質</td><td>primary visual cortex</td></tr>
+      <tr><td>偏盲</td><td>hemianopia</td><td>深度知覺</td><td>depth perception</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s9">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>原則</td><td>特定神經能量定律；發生器電位（分級）→ 動作電位頻率；緊張性 vs 相位性</td></tr>
+    <tr><td>皮膚</td><td>游離神經末梢（痛、溫）；梅斯納、巴齊尼（相位性）；Aδ 快痛、C 慢痛；轉移痛（心 → 左肩臂）</td></tr>
+    <tr><td>味覺</td><td>鹹（Na⁺）、酸（H⁺）＝離子通道；甜、苦、鮮＝G 蛋白（味導素）；VII、IX、X；鋅缺乏 → 味覺減退</td></tr>
+    <tr><td>嗅覺</td><td>約 350–400 種受體；cAMP；嗅球 → 邊緣系統，不經視丘</td></tr>
+    <tr><td>平衡</td><td>橢圓囊（水平）、球囊（垂直）＝耳石；半規管＝旋轉（壺腹頂）</td></tr>
+    <tr><td>聽覺</td><td>鼓膜 → 槌砧鐙 → 卵圓窗 → 基底膜 → 柯蒂氏器；底部高音、頂部低音；傳導性 vs 感音神經性</td></tr>
+    <tr><td>眼</td><td>角膜折射最多；看近：睫狀肌收縮、水晶體變圓；近視凹透鏡、遠視凸透鏡、老花</td></tr>
+    <tr><td>視網膜</td><td>桿（暗、黑白、周邊）vs 錐（色、中央小窩）；視紫質＝視蛋白＋視網醛（維生素 A）</td></tr>
+    <tr><td>光轉導</td><td>光 → 漂白 → 轉導素 → cGMP↓ → Na⁺ 通道關 → 過極化</td></tr>
+    <tr><td>暗適應</td><td>視紫質再生，敏感度增加約 10 萬倍；缺維生素 A → 夜盲症</td></tr>
+    <tr><td>視覺路徑</td><td>視交叉（鼻側交叉）→ 外側膝狀核 → 枕葉；左視野 → 右腦</td></tr>
+  </table></div>
+  <h3 id="h31">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 用特定神經能量定律解釋揉眼看到光？</li>
+    <li>□ 比較緊張性與相位性感受器並舉例？</li>
+    <li>□ 解釋心肌梗塞的轉移痛？</li>
+    <li>□ 說出五種基本味道的轉導機制，以及鼻塞為何食之無味？</li>
+    <li>□ 說明半規管怎麼偵測旋轉、停下來為何會暈？</li>
+    <li>□ 說明聲音從鼓膜到聽神經的路徑，以及音高怎麼被辨別？</li>
+    <li>□ 解釋看近時水晶體怎麼變化、老花的原因？</li>
+    <li>□ 說明維生素 A 缺乏為何先造成夜盲？</li>
+    <li>□ 說明為什麼左視野的影像送到右腦？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 10 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+var GL_PAGE={"基底膜":"basilar"};
+const Q = [
+ {q:"揉眼睛時會「看到光」，最能用哪一個原則解釋？",o:["全有全無定律","特定神經能量定律","側抑制","適應"],a:1,
+  e:"不論刺激方式，視神經的訊號送到視覺皮質就被解讀成光——<b>特定神經能量定律</b>。"},
+ {q:"下列感受器何者屬於快速適應的相位性感受器？",o:["痛覺感受器","肌梭","巴齊尼小體","頸動脈壓力感受器"],a:2,
+  e:"<b>巴齊尼小體</b>（深壓振動）、梅斯納小體、嗅覺屬相位性；痛覺、肌梭屬緊張性。"},
+ {q:"心肌缺血的疼痛常感覺在左肩與左臂內側，這稱為？",o:["幻肢痛","轉移痛","側抑制","適應"],a:1,
+  e:"內臟與皮膚感覺纖維會聚到同節段脊髓 → <b>轉移痛</b>。"},
+ {q:"下列哪一種味覺的轉導是由 Na⁺ 經離子通道直接流入味覺細胞？",o:["甜","苦","鹹","鮮"],a:2,
+  e:"<b>鹹</b>：Na⁺ 經 ENaC 流入；酸：H⁺；甜、苦、鮮經 G 蛋白（味導素）。"},
+ {q:"鮮味（umami）主要由哪一種物質引起？",o:["葡萄糖","麩胺酸","奎寧","氫離子"],a:1,
+  e:"<b>麩胺酸</b>（及 IMP、GMP 核苷酸）作用於 T1R1＋T1R3。"},
+ {q:"可能造成味覺減退、且與營養有關的礦物質缺乏是？",o:["鐵","鋅","碘","鈣"],a:1,
+  e:"<b>鋅</b>缺乏常與味覺減退有關，老人與慢性病患者應注意。"},
+ {q:"哪一種感覺的訊號不經視丘轉送，而直接到達皮質與邊緣系統？",o:["視覺","聽覺","嗅覺","味覺"],a:2,
+  e:"<b>嗅覺</b>經嗅球直接到嗅覺皮質與邊緣系統，所以氣味特別容易勾起情緒與記憶。"},
+ {q:"偵測頭部旋轉加速度的構造是？",o:["橢圓囊","球囊","半規管","耳蝸"],a:2,
+  e:"<b>半規管</b>內淋巴推動壺腹頂偵測旋轉；橢圓囊、球囊（耳石）偵測直線加速與傾斜。"},
+ {q:"中耳的聽小骨把振動傳到內耳的哪個構造？",o:["圓窗","卵圓窗","鼓膜","耳咽管"],a:1,
+  e:"鐙骨踩在<b>卵圓窗</b>上；能量最後經圓窗釋放。"},
+ {q:"耳蝸基底膜的哪一部分對高頻聲音反應最大？",o:["靠近卵圓窗的底部（窄而硬）","耳蝸頂部（寬而軟）","整條基底膜一樣","中耳"],a:0,
+  e:"<b>底部窄硬 → 高音</b>，頂部寬軟 → 低音；噪音與老化先損害高頻。"},
+ {q:"長期暴露於噪音造成的毛細胞受損屬於？",o:["傳導性耳聾","感音神經性耳聾","耳硬化症","中耳炎"],a:1,
+  e:"毛細胞或聽神經受損＝<b>感音神經性</b>；人類毛細胞不能再生。"},
+ {q:"看近處物體時，下列變化何者正確？",o:["睫狀肌放鬆，水晶體變扁","睫狀肌收縮，懸韌帶放鬆，水晶體變圓","懸韌帶拉緊，水晶體變圓","瞳孔放大"],a:1,
+  e:"看近：<b>睫狀肌收縮 → 懸韌帶鬆 → 水晶體變圓</b>，折射力增加；同時瞳孔縮小。"},
+ {q:"近視的成像位置與矯正鏡片為？",o:["視網膜後方，凸透鏡","視網膜前方，凹透鏡","視網膜前方，凸透鏡","視網膜後方，凹透鏡"],a:1,
+  e:"近視成像在<b>視網膜前方</b>，用<b>凹透鏡</b>發散光線矯正。"},
+ {q:"視紫質中與光作用的色素 11-順式視網醛來自哪一種維生素？",o:["維生素 A","維生素 B2","維生素 D","維生素 E"],a:0,
+  e:"視網醛來自<b>維生素 A</b>；缺乏 → 視紫質再生不足 → 夜盲症。"},
+ {q:"感光細胞照光時的反應是？",o:["去極化，釋放更多麩胺酸","過極化，減少釋放麩胺酸","產生動作電位","Ca²⁺ 大量流入"],a:1,
+  e:"光 → 轉導素 → cGMP↓ → Na⁺ 通道關 → <b>過極化</b> → 麩胺酸釋放減少。"},
+ {q:"進入暗處後敏感度逐漸增加約十萬倍，稱為？其主要原因為？",o:["光適應；視紫質漂白","暗適應；視紫質再生","暗適應；錐細胞增加","光適應；瞳孔縮小"],a:1,
+  e:"<b>暗適應</b>：桿細胞的視紫質逐漸再生（約 20–30 分鐘）。"},
+ {q:"中央小窩視覺最清晰的原因不包括？",o:["只有錐細胞且密度高","錐細胞與神經節細胞約一對一","上方神經細胞被推開","桿細胞最多"],a:3,
+  e:"中央小窩<b>沒有桿細胞</b>；桿細胞在周邊。"},
+ {q:"腦垂腺腫瘤壓迫視交叉，典型的視野缺損是？",o:["單眼全盲","兩眼外側（顳側）視野缺損","兩眼鼻側視野缺損","中央視力喪失"],a:1,
+  e:"視交叉處交叉的是鼻側纖維（看外側視野）→ <b>雙顳側偏盲</b>。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

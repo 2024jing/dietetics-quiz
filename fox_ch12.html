@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 12 章 肌肉：收縮機制與神經控制</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="12">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 12 章　肌肉：收縮機制與神經控制</h1>
+  <div class="en">Chapter 12 Muscle: Mechanisms of Contraction and Neural Control（課本 p.381–428）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">12.1 骨骼肌</a>
+  <a class="sub" href="#h1">骨骼肌的構造 Structure of Skeletal Muscles</a>
+  <a class="sub" href="#h2">運動單位 Motor Units</a>
+  <a href="#s2">12.2 收縮機制</a>
+  <a class="sub" href="#h3">滑動肌絲理論 Sliding Filament Theory</a>
+  <a class="sub" href="#h4">橫橋 Cross Bridges</a>
+  <a class="sub" href="#h5">收縮的調控 Regulation of Contraction</a>
+  <a class="sub" href="#h6">興奮—收縮偶聯 Excitation-Contraction Coupling</a>
+  <a class="sub" href="#h7">肌肉放鬆 Muscle Relaxation</a>
+  <a href="#s3">12.3 骨骼肌的收縮</a>
+  <a class="sub" href="#h8">單一收縮、加成與強直 Twitch, Summation, and Tetanus</a>
+  <a class="sub" href="#h9">收縮的種類 Types of Muscle Contractions</a>
+  <a class="sub" href="#h10">串聯彈性成分與長度—張力關係 Series-Elastic Component and Length-Tension Relationship</a>
+  <a href="#s4">12.4 骨骼肌的能量需求</a>
+  <a class="sub" href="#h11">肌肉的代謝 Metabolism of Skeletal Muscles</a>
+  <a class="sub" href="#h12">慢縮與快縮肌纖維 Slow- and Fast-Twitch Fibers</a>
+  <a class="sub" href="#h13">肌肉疲勞 Muscle Fatigue</a>
+  <a class="sub" href="#h14">訓練的適應 Adaptations of Muscles to Exercise Training</a>
+  <a class="sub" href="#h15">肌肉損傷與修復 Muscle Damage and Repair</a>
+  <a href="#s5">12.5 骨骼肌的神經控制</a>
+  <a class="sub" href="#h16">肌梭與高爾基肌腱器</a>
+  <a class="sub" href="#h17">α 與 γ 運動神經元 Alpha and Gamma Motoneurons</a>
+  <a class="sub" href="#h18">骨骼肌反射 Skeletal Muscle Reflexes</a>
+  <a class="sub" href="#h19">上運動神經元的控制 Upper Motor Neuron Control</a>
+  <a href="#s6">12.6 心肌與平滑肌</a>
+  <a class="sub" href="#h20">心肌 Cardiac Muscle</a>
+  <a class="sub" href="#h21">平滑肌 Smooth Muscle</a>
+  <a href="#s7">本章重點整理</a>
+  <a class="sub" href="#h22">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章說肌肉組織的特性是「會收縮」，它是回饋迴路中最常見的動器。這一章回答：<span class="key">肌肉為什麼能縮短（肌動蛋白與肌凝蛋白滑動）、神經訊號怎麼觸發它（Ca²⁺）、力量怎麼調整、能量從哪裡來，以及心肌與平滑肌有何不同。</span>先講最清楚的骨骼肌，最後比較另外兩種。</div>
+  <div class="path">
+    <div class="step"><span class="sn">12.1</span><div><b>骨骼肌的構造</b><br><span class="sq">肌肉 → 肌束 → 肌纖維 → 肌原纖維 → 肌節；運動單位。</span></div></div>
+    <div class="arr">↓ 有了構造，看它怎麼收縮</div>
+    <div class="step"><span class="sn">12.2</span><div><b>收縮機制</b><br><span class="sq">滑動肌絲理論、橫橋循環與 ATP、旋轉肌球素與 Ca²⁺ 的調控、興奮—收縮偶聯。</span></div></div>
+    <div class="arr">↓ 一次收縮之後，力量怎麼加大、怎麼分類？</div>
+    <div class="step"><span class="sn">12.3</span><div><b>骨骼肌的收縮形式</b><br><span class="sq">單一收縮、加成與強直、等張與等長收縮、長度—張力關係。</span></div></div>
+    <div class="arr">↓ 收縮要用 ATP，從哪裡補？</div>
+    <div class="step"><span class="sn">12.4</span><div><b>能量需求</b><br><span class="sq">磷酸肌酸、無氧與有氧代謝；慢縮與快縮肌纖維；疲勞；訓練的適應。</span></div></div>
+    <div class="arr">↓ 神經怎麼精準控制肌肉？</div>
+    <div class="step"><span class="sn">12.5</span><div><b>骨骼肌的神經控制</b><br><span class="sq">肌梭、高爾基肌腱器、α 與 γ 運動神經元、牽張反射。</span></div></div>
+    <div class="arr">↓ 最後比較另外兩種肌肉</div>
+    <div class="step"><span class="sn">12.6</span><div><b>心肌與平滑肌</b><br><span class="sq">心肌的特性；平滑肌的鈣調蛋白機制、單一單元與多單元平滑肌。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 12.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">12.1</span>骨骼肌</h2>
+  <div class="en">Skeletal Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>骨骼肌由大到小的<b>層次構造</b>（肌肉、肌束、肌纖維、肌原纖維、肌節），肌節內的<b>粗肌絲與細肌絲</b>排列，以及<b>運動單位</b>的概念。</div><div><span class="lt lt2">為什麼放第一節？</span>收縮的秘密就在肌節裡粗細肌絲的排列；先認識「零件」，12.2 才能看懂它們怎麼滑動。</div></div>
+  <div class="oneline">骨骼肌 → 肌束 → 肌纖維（多核長細胞）→ 肌原纖維 → 一節節的肌節；肌節由粗肌絲（肌凝蛋白）與細肌絲（肌動蛋白）交錯排列，形成明暗相間的橫紋；一個運動神經元與它支配的所有肌纖維＝運動單位。</div>
+  <div class="think">為什麼手指的動作可以很細膩，大腿的動作卻比較粗？</div>
+
+  <h3 id="h1">骨骼肌的構造 Structure of Skeletal Muscles</h3>
+  <p class="core">肌肉（肌外膜）→ 肌束（肌束膜）→ 肌纖維（肌內膜、肌漿膜、多核）→ 肌原纖維 → 肌節（Z 線到 Z 線）；A 帶＝粗肌絲全長（暗）、I 帶＝只有細肌絲（亮）、H 帶＝只有粗肌絲、M 線在中央。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="240" y="18" font-size="14" text-anchor="middle" font-weight="bold">一個肌節（sarcomere）</text>
+    <rect x="40" y="40" width="400" height="140" fill="#fff7ed" stroke="#fdba74"/>
+    <line x1="60" y1="36" x2="60" y2="184" stroke="#111827" stroke-width="5"/><line x1="420" y1="36" x2="420" y2="184" stroke="#111827" stroke-width="5"/>
+    <line x1="240" y1="40" x2="240" y2="180" stroke="#7c3aed" stroke-width="2" stroke-dasharray="4 3"/>
+    <g stroke="#2563eb" stroke-width="4"><line x1="60" y1="62" x2="205" y2="62"/><line x1="60" y1="98" x2="205" y2="98"/><line x1="60" y1="134" x2="205" y2="134"/><line x1="60" y1="170" x2="205" y2="170"/>
+      <line x1="275" y1="62" x2="420" y2="62"/><line x1="275" y1="98" x2="420" y2="98"/><line x1="275" y1="134" x2="420" y2="134"/><line x1="275" y1="170" x2="420" y2="170"/></g>
+    <g stroke="#dc2626" stroke-width="9" stroke-linecap="round"><line x1="140" y1="80" x2="340" y2="80"/><line x1="140" y1="116" x2="340" y2="116"/><line x1="140" y1="152" x2="340" y2="152"/></g>
+    <g stroke="#dc2626" stroke-width="2"><path d="M150,80 l-6,-8 M165,80 l-6,-8 M180,80 l-6,-8 M195,80 l-6,-8 M285,80 l6,-8 M300,80 l6,-8 M315,80 l6,-8 M330,80 l6,-8"/></g>
+    <line x1="140" y1="196" x2="340" y2="196" stroke="#374151" stroke-width="1.5"/><text x="240" y="212" font-size="13" text-anchor="middle" font-weight="bold">A 帶（暗）＝粗肌絲全長</text>
+    <line x1="205" y1="228" x2="275" y2="228" stroke="#374151" stroke-width="1.5"/><text x="240" y="244" font-size="12" text-anchor="middle">H 帶（只有粗肌絲）</text>
+    <line x1="60" y1="260" x2="140" y2="260" stroke="#374151" stroke-width="1.5"/><text x="100" y="276" font-size="12" text-anchor="middle">I 帶（亮，只有細肌絲）</text>
+    <text x="60" y="296" font-size="12" text-anchor="middle" font-weight="bold">Z 線</text><text x="420" y="296" font-size="12" text-anchor="middle" font-weight="bold">Z 線</text><text x="250" y="34" font-size="11" fill="#6d28d9">M 線</text>
+    <text x="300" y="266" font-size="12" fill="#1d4ed8">藍＝細肌絲（肌動蛋白）</text><text x="300" y="282" font-size="12" fill="#b91c1c">紅＝粗肌絲（肌凝蛋白）</text>
+  </svg><figcaption>肌節是收縮的最小單位，從一條 Z 線到下一條 Z 線。暗的 A 帶是粗肌絲所在；亮的 I 帶只有細肌絲。</figcaption></figure>
+  <p>骨骼肌由大到小的層次：</p>
+  <ol class="steps">
+    <li><b>肌肉</b>：外包<b>肌外膜</b>，兩端以<b>肌腱</b>附著在骨骼上。</li>
+    <li><b>肌束</b> <i class="en-term">fascicle</i>：一束束的肌纖維，外包肌束膜。</li>
+    <li><b>肌纖維</b> <i class="en-term">muscle fiber</i>：一個肌肉細胞，又長又細（可達數十公分）、<b>多核</b>（胚胎時許多肌母細胞融合而成）。細胞膜叫<b>肌漿膜</b> <i class="en-term">sarcolemma</i>，細胞質叫肌漿。肌纖維外有一層肌內膜；旁邊有<b>衛星細胞</b>（肌肉幹細胞），負責修復。</li>
+    <li><b>肌原纖維</b> <i class="en-term">myofibrils</i>：肌纖維內一條條平行的收縮構造，占細胞大部分體積。</li>
+    <li><b>肌節</b> <i class="en-term">sarcomere</i>：肌原纖維上重複的單位，<b>從一條 Z 線到下一條 Z 線</b>，是收縮的基本單位。</li>
+  </ol>
+  <p>肌節內有兩種<b>肌絲</b>：</p>
+  <ul class="dots">
+    <li><b>粗肌絲</b> <i class="en-term">thick filaments</i>：由<b>肌凝蛋白</b> <i class="en-term">myosin</i> 組成，位於肌節中央，固定在 <b>M 線</b>上；兩端有許多伸出的<b>頭部</b>（橫橋）。</li>
+    <li><b>細肌絲</b> <i class="en-term">thin filaments</i>：主要由<b>肌動蛋白</b> <i class="en-term">actin</i> 組成（加上調節蛋白旋轉肌球素、肌鈣蛋白），一端固定在 <b>Z 線</b>，向中央伸入、與粗肌絲交錯。</li>
+  </ul>
+  <p>在顯微鏡下：粗肌絲所在的區域較暗，叫 <b>A 帶</b>（各向異性）；只有細肌絲的區域較亮，叫 <b>I 帶</b>（各向同性），Z 線在 I 帶中央；A 帶中央只有粗肌絲、沒有細肌絲重疊的部分叫 <b>H 帶</b>。明暗交替就是<b>橫紋</b>。另有巨大的彈性蛋白<b>肌聯蛋白</b>（titin）從 Z 線連到 M 線，提供彈性並固定粗肌絲。</p>
+
+  <h3 id="h2">運動單位 Motor Units</h3>
+  <p class="core">運動單位＝一個運動神經元＋它支配的所有肌纖維；精細動作的肌肉（眼肌、手指）一個神經元只管少數纖維；粗大動作的肌肉（大腿）一個管上千條；力量靠徵召更多、更大的運動單位。</p>
+  <p>一個體運動神經元的軸突分支，支配數條到上千條肌纖維；這個神經元加上它支配的所有肌纖維，稱為<b>運動單位</b> <i class="en-term">motor unit</i>。神經元一放電，該單位內所有肌纖維<b>同時</b>收縮。</p>
+  <ul class="dots">
+    <li><b>精細控制</b>的肌肉（眼外肌、手指）：每個運動單位只有少數肌纖維（神經支配比小，如 1:10）。</li>
+    <li><b>粗大有力</b>的肌肉（大腿、背肌）：每個運動單位有上千條纖維。</li>
+  </ul>
+  <p>要增加收縮力量，神經系統會依序<b>徵召</b>更多運動單位：先徵召小的（慢縮型、不易疲勞），需要更大力量時才徵召大的（快縮型）——稱為<b>大小原則</b>。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>手指肌肉的運動單位很小，每次只增加少量纖維，力量可以一點一點精細調整；大腿肌肉的運動單位很大，一次就動員大量纖維，力量大但較粗略。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>肌肉 → 肌束 → 肌纖維（多核、肌漿膜、衛星細胞）→ 肌原纖維 → 肌節（Z 線到 Z 線）。</li>
+      <li>粗肌絲＝肌凝蛋白（有頭部／橫橋，固定在 M 線）；細肌絲＝肌動蛋白＋旋轉肌球素＋肌鈣蛋白（固定在 Z 線）。</li>
+      <li>A 帶（暗，粗肌絲全長）、I 帶（亮，只有細肌絲）、H 帶（只有粗肌絲）；肌聯蛋白提供彈性。</li>
+      <li>運動單位＝一個運動神經元＋所支配的肌纖維；精細肌肉單位小；徵召（大小原則）增加力量。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>肌束</td><td>fascicle</td><td>肌纖維</td><td>muscle fiber</td></tr>
+      <tr><td>肌漿膜</td><td>sarcolemma</td><td>肌原纖維</td><td>myofibril</td></tr>
+      <tr><td>肌節</td><td>sarcomere</td><td>粗／細肌絲</td><td>thick / thin filament</td></tr>
+      <tr><td>肌凝蛋白／肌動蛋白</td><td>myosin / actin</td><td>A 帶／I 帶／H 帶</td><td>A / I / H band</td></tr>
+      <tr><td>Z 線／M 線</td><td>Z disc / M line</td><td>肌聯蛋白</td><td>titin</td></tr>
+      <tr><td>運動單位</td><td>motor unit</td><td>大小原則</td><td>size principle</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 12.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">12.2</span>收縮機制</h2>
+  <div class="en">Mechanisms of Contraction</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>滑動肌絲理論</b>、肌凝蛋白頭部的<b>橫橋循環</b>與 ATP 的角色、<b>旋轉肌球素與肌鈣蛋白</b>怎麼用 Ca²⁺ 開關收縮、<b>興奮—收縮偶聯</b>（從動作電位到 Ca²⁺ 釋放），以及<b>放鬆</b>。</div><div><span class="lt lt2">為什麼接在 12.1 後面？</span>知道肌節的構造後，看它怎麼「動」。這是第 7 章神經肌肉接合處的接續：ACh 引起的動作電位，最後怎麼變成力量。</div></div>
+  <div class="oneline">收縮時肌絲長度不變，是細肌絲被拉向肌節中央（I 帶、H 帶變短、A 帶不變）；肌凝蛋白頭部結合肌動蛋白、拉動（動力衝程）、靠 ATP 放開，循環不斷；平時旋轉肌球素蓋住結合位，Ca²⁺ 結合肌鈣蛋白後才露出；動作電位沿 T 小管使肌漿網釋放 Ca²⁺。</div>
+  <div class="think">人死後為什麼會出現屍僵（肌肉僵硬）？</div>
+
+  <h3 id="h3">滑動肌絲理論 Sliding Filament Theory</h3>
+  <p class="core">收縮時粗細肌絲本身長度不變；細肌絲往肌節中央滑動 → Z 線靠近、肌節變短；I 帶與 H 帶變窄，A 帶長度不變。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="20" y="20" font-size="13" font-weight="bold">放鬆</text>
+    <line x1="40" y1="30" x2="40" y2="90" stroke="#111827" stroke-width="5"/><line x1="440" y1="30" x2="440" y2="90" stroke="#111827" stroke-width="5"/>
+    <g stroke="#2563eb" stroke-width="4"><line x1="40" y1="46" x2="190" y2="46"/><line x1="40" y1="74" x2="190" y2="74"/><line x1="290" y1="46" x2="440" y2="46"/><line x1="290" y1="74" x2="440" y2="74"/></g>
+    <line x1="140" y1="60" x2="340" y2="60" stroke="#dc2626" stroke-width="9" stroke-linecap="round"/>
+    <text x="20" y="130" font-size="13" font-weight="bold">收縮</text>
+    <line x1="100" y1="140" x2="100" y2="200" stroke="#111827" stroke-width="5"/><line x1="380" y1="140" x2="380" y2="200" stroke="#111827" stroke-width="5"/>
+    <g stroke="#2563eb" stroke-width="4"><line x1="100" y1="156" x2="250" y2="156"/><line x1="100" y1="184" x2="250" y2="184"/><line x1="230" y1="160" x2="380" y2="160"/><line x1="230" y1="180" x2="380" y2="180"/></g>
+    <line x1="140" y1="170" x2="340" y2="170" stroke="#dc2626" stroke-width="9" stroke-linecap="round"/>
+    <g font-size="12" fill="#374151"><text x="250" y="110" text-anchor="middle">肌絲長度都沒變，只是重疊變多 → Z 線靠近</text><text x="240" y="216" text-anchor="middle">A 帶（紅色長度）不變；I 帶、H 帶變短</text></g>
+  </svg><figcaption>滑動肌絲理論：就像兩把梳子的齒互相插得更深，梳子本身並沒有變短。</figcaption></figure>
+  <p>收縮時肌節變短，但<b>粗肌絲與細肌絲本身的長度都不變</b>，而是細肌絲在粗肌絲之間<b>滑向肌節中央</b>，重疊變多，使 Z 線彼此靠近。結果：<b>I 帶與 H 帶變窄</b>（甚至消失），<b>A 帶長度不變</b>（它代表粗肌絲的長度）。這就是<b>滑動肌絲理論</b> <i class="en-term">sliding filament theory</i>。</p>
+
+  <h3 id="h4">橫橋 Cross Bridges</h3>
+  <p class="core">橫橋循環：①肌凝蛋白頭部水解 ATP → ADP＋Pi 留在頭上、頭部翹起（充能）→ ②結合肌動蛋白形成橫橋 → ③釋放 Pi → 動力衝程，把細肌絲拉向中央，放出 ADP → ④新的 ATP 結合 → 頭部脫離肌動蛋白 → 回到①；沒有 ATP → 頭部無法放開（屍僵）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a121" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="12">
+      <rect x="20" y="20" width="200" height="110" rx="12" fill="#fff7ed" stroke="#ea580c"/><text x="30" y="40" font-weight="bold">① 充能</text>
+      <line x1="30" y1="60" x2="210" y2="60" stroke="#2563eb" stroke-width="5"/><line x1="30" y1="112" x2="210" y2="112" stroke="#dc2626" stroke-width="8"/>
+      <path d="M120,112 L140,82" stroke="#dc2626" stroke-width="4"/><circle cx="143" cy="78" r="8" fill="#dc2626"/><text x="160" y="90" font-size="11">ADP+Pi</text>
+      <text x="30" y="128" font-size="11">ATP 被水解，頭部翹起</text>
+      <rect x="260" y="20" width="200" height="110" rx="12" fill="#fff7ed" stroke="#ea580c"/><text x="270" y="40" font-weight="bold">② 結合</text>
+      <line x1="270" y1="60" x2="450" y2="60" stroke="#2563eb" stroke-width="5"/><line x1="270" y1="112" x2="450" y2="112" stroke="#dc2626" stroke-width="8"/>
+      <path d="M360,112 L380,70" stroke="#dc2626" stroke-width="4"/><circle cx="382" cy="64" r="8" fill="#dc2626"/>
+      <text x="270" y="128" font-size="11">頭部抓住肌動蛋白（橫橋）</text>
+      <rect x="260" y="150" width="200" height="110" rx="12" fill="#fff7ed" stroke="#ea580c"/><text x="270" y="170" font-weight="bold">③ 動力衝程</text>
+      <line x1="270" y1="190" x2="450" y2="190" stroke="#2563eb" stroke-width="5"/><line x1="270" y1="242" x2="450" y2="242" stroke="#dc2626" stroke-width="8"/>
+      <path d="M360,242 L340,198" stroke="#dc2626" stroke-width="4"/><circle cx="338" cy="194" r="8" fill="#dc2626"/>
+      <path d="M420,176 L380,176" stroke="#2563eb" stroke-width="2.5" marker-end="url(#a121)"/>
+      <text x="270" y="258" font-size="11">放出 Pi、ADP，把細肌絲往中央拉</text>
+      <rect x="20" y="150" width="200" height="110" rx="12" fill="#fff7ed" stroke="#ea580c"/><text x="30" y="170" font-weight="bold">④ 脫離</text>
+      <line x1="30" y1="190" x2="210" y2="190" stroke="#2563eb" stroke-width="5"/><line x1="30" y1="242" x2="210" y2="242" stroke="#dc2626" stroke-width="8"/>
+      <path d="M120,242 L100,212" stroke="#dc2626" stroke-width="4"/><circle cx="98" cy="208" r="8" fill="#dc2626"/><text x="112" y="212" font-size="11" fill="#b45309">＋ATP</text>
+      <text x="30" y="258" font-size="11">新 ATP 結合，頭部放開</text></g>
+    <path d="M222,75 L256,75" stroke="#374151" stroke-width="2.5" marker-end="url(#a121)"/><path d="M360,132 L360,146" stroke="#374151" stroke-width="2.5" marker-end="url(#a121)"/>
+    <path d="M256,205 L222,205" stroke="#374151" stroke-width="2.5" marker-end="url(#a121)"/><path d="M120,148 L120,134" stroke="#374151" stroke-width="2.5" marker-end="url(#a121)"/>
+  </svg><figcaption>橫橋循環像划船：槳（肌凝蛋白頭部）插入水中（結合肌動蛋白）、划一下（動力衝程）、抬起槳（ATP 結合而脫離）、再往前伸（水解 ATP 充能）。</figcaption></figure>
+  <p>肌凝蛋白的頭部能和肌動蛋白結合，形成<b>橫橋</b> <i class="en-term">cross bridges</i>；頭部本身也是 <b>ATP 水解酶</b>。一次<b>橫橋循環</b>：</p>
+  <ol class="steps">
+    <li><b>充能</b>：頭部水解 ATP，ADP＋Pi 仍結合在頭上，頭部翹起成「上膛」狀態。</li>
+    <li><b>結合</b>：頭部結合到細肌絲上的肌動蛋白，形成橫橋（需要結合位露出，見下段）。</li>
+    <li><b>動力衝程</b> <i class="en-term">power stroke</i>：釋放 Pi 後頭部擺動，把細肌絲<b>拉向肌節中央</b>；接著放出 ADP。</li>
+    <li><b>脫離</b>：一個<b>新的 ATP</b> 結合到頭部，頭部才<b>放開</b>肌動蛋白，回到步驟 1。</li>
+  </ol>
+  <p>許多頭部不同步地反覆循環，使細肌絲持續滑動。所以 <span class="key">ATP 有兩個角色：提供動力衝程的能量（水解），以及讓頭部與肌動蛋白分離（結合）</span>。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>人死後 ATP 無法再生，肌凝蛋白頭部結合在肌動蛋白上卻<b>無法放開</b>，肌肉固定在收縮狀態而僵硬，稱為<b>屍僵</b>（rigor mortis）。約一兩天後蛋白質被分解，僵硬才消失。</div>
+
+  <h3 id="h5">收縮的調控 Regulation of Contraction</h3>
+  <p class="core">細肌絲上的旋轉肌球素平時蓋住肌動蛋白的結合位；Ca²⁺ 結合肌鈣蛋白 → 肌鈣蛋白—旋轉肌球素複合體移開 → 結合位露出 → 橫橋形成；Ca²⁺ 移除 → 再蓋回 → 放鬆。</p>
+  <p>細肌絲上有兩種調節蛋白：</p>
+  <ul class="dots">
+    <li><b>旋轉肌球素</b> <i class="en-term">tropomyosin</i>：細長的蛋白，沿著肌動蛋白螺旋溝排列，放鬆時<b>蓋住</b>肌動蛋白上給肌凝蛋白結合的位置。</li>
+    <li><b>肌鈣蛋白</b> <i class="en-term">troponin</i>：附在旋轉肌球素上的小蛋白複合體，能<b>結合 Ca²⁺</b>。</li>
+  </ul>
+  <p>當細胞質中 <b>Ca²⁺ 增加</b>並結合肌鈣蛋白，肌鈣蛋白改變形狀，把旋轉肌球素拉開，<b>露出結合位</b>，橫橋才能形成、開始收縮。Ca²⁺ 被移走後，旋轉肌球素又蓋回去，肌肉放鬆。所以 <span class="key">Ca²⁺ 是收縮的開關</span>。</p>
+
+  <h3 id="h6">興奮—收縮偶聯 Excitation-Contraction Coupling</h3>
+  <p class="core">ACh → 終板電位 → 肌漿膜動作電位 → 沿橫小管（T 小管）傳入 → 電壓敏感的 DHP 受體 → 打開肌漿網上的 ryanodine 受體（Ca²⁺ 釋放通道）→ Ca²⁺ 湧入細胞質 → 結合肌鈣蛋白 → 收縮。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a122" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="30" width="460" height="16" fill="#fde68a"/><text x="20" y="24" font-size="12" fill="#92400e">肌漿膜</text>
+    <path d="M60,10 L60,28" stroke="#7c3aed" stroke-width="3" marker-end="url(#a122)"/><text x="70" y="20" font-size="12" fill="#6d28d9">① ACh → 動作電位</text>
+    <path d="M150,38 L330,38" stroke="#dc2626" stroke-width="3" marker-end="url(#a122)"/>
+    <rect x="232" y="46" width="16" height="120" fill="#fde68a"/><text x="256" y="110" font-size="12" fill="#92400e">② 橫小管（T 小管）</text>
+    <path d="M240,60 L240,150" stroke="#dc2626" stroke-width="3" marker-end="url(#a122)"/>
+    <rect x="120" y="120" width="108" height="50" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="252" y="120" width="108" height="50" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <text x="174" y="142" font-size="12" text-anchor="middle">肌漿網</text><text x="174" y="160" font-size="11" text-anchor="middle">（儲存 Ca²⁺）</text>
+    <g fill="#7c3aed"><circle cx="150" cy="185" r="5"/><circle cx="170" cy="195" r="5"/><circle cx="190" cy="186" r="5"/><circle cx="300" cy="190" r="5"/><circle cx="320" cy="184" r="5"/></g>
+    <text x="240" y="208" font-size="12" text-anchor="middle" fill="#6d28d9">③ Ca²⁺ 釋放到細胞質</text>
+    <line x1="40" y1="232" x2="440" y2="232" stroke="#2563eb" stroke-width="5"/><line x1="100" y1="246" x2="380" y2="246" stroke="#dc2626" stroke-width="8"/>
+    <text x="240" y="258" font-size="12" text-anchor="middle">④ Ca²⁺ ＋ 肌鈣蛋白 → 結合位露出 → 橫橋循環 → 收縮</text>
+  </svg><figcaption>興奮—收縮偶聯：動作電位沿著 T 小管鑽進肌纖維深處，使旁邊的肌漿網把儲存的 Ca²⁺ 放出來。</figcaption></figure>
+  <p>從神經訊號到收縮的過程叫<b>興奮—收縮偶聯</b> <i class="en-term">excitation-contraction coupling</i>：</p>
+  <ol class="steps">
+    <li>運動神經釋放 <b>ACh</b> → 運動終板的菸鹼型受體 → <b>終板電位</b> → 肌漿膜產生<b>動作電位</b>，沿著細胞表面傳開（第 7 章）。</li>
+    <li>動作電位沿著<b>橫小管（T 小管）</b> <i class="en-term">transverse tubules</i>——肌漿膜向內凹入的管道——深入肌纖維內部。</li>
+    <li>T 小管上的電壓敏感蛋白（<b>DHP 受體</b>，一種 L 型鈣通道）感測到去極化，機械性地打開旁邊<b>肌漿網</b> <i class="en-term">sarcoplasmic reticulum</i> 上的 Ca²⁺ 釋放通道（<b>ryanodine 受體</b>）。</li>
+    <li>肌漿網把儲存的大量 <b>Ca²⁺</b> 釋放到細胞質 → Ca²⁺ 結合肌鈣蛋白 → 收縮。</li>
+  </ol>
+  <p>一條 T 小管和兩側的肌漿網終池合稱<b>三聯體</b>（triad）。</p>
+
+  <h3 id="h7">肌肉放鬆 Muscle Relaxation</h3>
+  <p class="core">神經停止放電 → AChE 分解 ACh → 動作電位停止 → 肌漿網的 Ca²⁺ 幫浦（SERCA，耗 ATP）把 Ca²⁺ 打回 → Ca²⁺ 離開肌鈣蛋白 → 旋轉肌球素蓋回結合位 → 放鬆。</p>
+  <p>運動神經停止放電後，<b>乙醯膽鹼酯酶</b>分解 ACh，動作電位停止；肌漿網膜上的<b>鈣幫浦</b>（SERCA，<b>耗 ATP</b>）把 Ca²⁺ 主動打回肌漿網，細胞質 Ca²⁺ 下降 → Ca²⁺ 離開肌鈣蛋白 → 旋轉肌球素重新蓋住結合位 → 橫橋無法形成 → 肌肉被動回到原長度（靠拮抗肌與彈性）。所以<b>放鬆也需要 ATP</b>。</p>
+  <div class="nut"><b class="t">營養連結：</b>血鈣太低時（如維生素 D 缺乏、副甲狀腺功能低下）神經與肌肉膜變得容易興奮，出現<b>手足抽搐</b>；鎂缺乏也可能引起肌肉痙攣。肌肉收縮與放鬆都靠 ATP，所以能量不足會影響肌肉功能。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>滑動肌絲理論：肌絲長度不變，細肌絲滑向中央；I 帶、H 帶變短，A 帶不變。</li>
+      <li>橫橋循環：ATP 水解充能 → 結合肌動蛋白 → 動力衝程（放 Pi、ADP）→ 新 ATP 結合使頭部脫離；無 ATP → 屍僵。</li>
+      <li>旋轉肌球素蓋住結合位；Ca²⁺ 結合肌鈣蛋白 → 露出結合位 → 收縮。</li>
+      <li>興奮—收縮偶聯：ACh → 肌漿膜動作電位 → T 小管 → DHP 受體 → ryanodine 受體 → 肌漿網釋放 Ca²⁺。</li>
+      <li>放鬆：AChE 分解 ACh；SERCA 鈣幫浦（耗 ATP）把 Ca²⁺ 打回肌漿網。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>滑動肌絲理論</td><td>sliding filament theory</td><td>橫橋</td><td>cross bridge</td></tr>
+      <tr><td>動力衝程</td><td>power stroke</td><td>屍僵</td><td>rigor mortis</td></tr>
+      <tr><td>旋轉肌球素</td><td>tropomyosin</td><td>肌鈣蛋白</td><td>troponin</td></tr>
+      <tr><td>興奮—收縮偶聯</td><td>excitation-contraction coupling</td><td>橫小管</td><td>transverse (T) tubule</td></tr>
+      <tr><td>肌漿網</td><td>sarcoplasmic reticulum</td><td>三聯體</td><td>triad</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 12.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">12.3</span>骨骼肌的收縮</h2>
+  <div class="en">Contractions of Skeletal Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>一次刺激的<b>單一收縮</b>，連續刺激的<b>加成與強直</b>，<b>等張</b>與<b>等長</b>收縮（向心、離心），<b>串聯彈性成分</b>，以及<b>長度—張力關係</b>。</div><div><span class="lt lt2">為什麼接在 12.2 後面？</span>12.2 講分子機制；這一節看整條肌肉在實驗與日常活動中產生的力量模式。</div></div>
+  <div class="oneline">一次動作電位引起一次單一收縮（潛伏期、收縮期、放鬆期）；刺激頻率提高時收縮疊加（加成），頻率夠高時融合成持續最大收縮（強直）；肌肉長度不變的叫等長收縮，長度改變、張力大致不變的叫等張收縮（縮短＝向心、拉長＝離心）；肌節在中等長度時力量最大。</div>
+  <div class="think">為什麼下樓梯或下坡跑步後，隔天大腿特別痠痛？</div>
+
+  <h3 id="h8">單一收縮、加成與強直 Twitch, Summation, and Tetanus</h3>
+  <p class="core">單一收縮：潛伏期 → 收縮期 → 放鬆期；肌肉動作電位很短（不反應期短），所以下一個刺激可在收縮未結束前來到 → 加成；高頻 → 不完全強直 → 完全強直（平順的最大收縮）；日常動作多是不同步的強直收縮。</p>
+  <figure class="pic"><svg viewBox="0 0 480 228" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="30" y1="180" x2="470" y2="180" stroke="#374151" stroke-width="2"/><line x1="30" y1="180" x2="30" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="20" y="100" font-size="12" text-anchor="middle" transform="rotate(-90 20 100)">張力</text>
+    <path d="M40,180 C55,180 60,130 75,128 C90,128 100,175 125,180" fill="none" stroke="#2563eb" stroke-width="3"/>
+    <text x="80" y="204" font-size="12" text-anchor="middle">單一收縮</text>
+    <path d="M150,180 C160,180 165,130 175,128 C180,128 183,140 188,135 C193,120 196,110 205,108 C215,110 220,175 245,180" fill="none" stroke="#7c3aed" stroke-width="3"/>
+    <text x="195" y="204" font-size="12" text-anchor="middle">加成</text>
+    <path d="M265,180 C272,180 275,110 282,100 C286,110 289,95 294,88 C298,98 301,82 306,78 C310,88 313,74 318,72 C322,80 325,70 330,68 C340,70 345,175 360,180" fill="none" stroke="#ea580c" stroke-width="3"/>
+    <text x="300" y="204" font-size="12" text-anchor="middle">不完全強直</text>
+    <path d="M375,180 C380,180 382,60 392,52 L440,52 C448,52 452,175 465,180" fill="none" stroke="#dc2626" stroke-width="3"/>
+    <text x="420" y="204" font-size="12" text-anchor="middle">完全強直</text>
+    <g fill="#111827"><path d="M40,186 l0,8"/></g>
+    <g stroke="#111827" stroke-width="2"><line x1="40" y1="182" x2="40" y2="188"/><line x1="152" y1="182" x2="152" y2="188"/><line x1="185" y1="182" x2="185" y2="188"/>
+      <line x1="267" y1="182" x2="267" y2="188"/><line x1="280" y1="182" x2="280" y2="188"/><line x1="293" y1="182" x2="293" y2="188"/><line x1="306" y1="182" x2="306" y2="188"/><line x1="319" y1="182" x2="319" y2="188"/></g>
+    <text x="250" y="222" font-size="11" text-anchor="middle" fill="#6b7280">下方短線＝刺激；刺激越密，收縮越疊越高，最後融成一條平線</text>
+  </svg><figcaption>刺激頻率與收縮力量：頻率越高，前一次收縮還沒放鬆完就疊上下一次，力量越大。</figcaption></figure>
+  <ul class="dots">
+    <li><b>單一收縮</b> <i class="en-term">twitch</i>：一個動作電位引起一次快速的收縮與放鬆，分為<b>潛伏期</b>（刺激到開始收縮，興奮—收縮偶聯的時間）、<b>收縮期</b>、<b>放鬆期</b>。</li>
+    <li><b>加成</b> <i class="en-term">summation</i>：肌肉的動作電位只有約 1–2 毫秒，但單一收縮要數十毫秒；第二個刺激在第一次收縮還沒放鬆完時來到，張力就疊上去更高。</li>
+    <li><b>強直</b> <i class="en-term">tetanus</i>：刺激頻率夠高時，各次收縮融合：<b>不完全強直</b>（還有小起伏）→ <b>完全強直</b>（平滑的持續最大收縮）。日常的持續用力，就是許多運動單位不同步地處於強直狀態。（注意：這和破傷風 tetanus 的病名相同，但意思不同。）</li>
+    <li><b>階梯現象</b> <i class="en-term">treppe</i>：休息後的肌肉，在同強度反覆刺激下，前幾次收縮會逐漸變強（與 Ca²⁺ 累積、溫度上升有關），類似「暖身」。</li>
+  </ul>
+
+  <h3 id="h9">收縮的種類 Types of Muscle Contractions</h3>
+  <p class="core">等張收縮：肌肉長度改變、張力大致不變——向心（縮短，舉起）與離心（被拉長，放下，煞車）；等長收縮：張力增加但長度不變（推牆、維持姿勢）。</p>
+  <div class="tblwrap"><table>
+    <tr><th>種類</th><th>長度</th><th>例子</th></tr>
+    <tr><td><b>等張收縮</b> isotonic：<b>向心</b> concentric</td><td>肌肉<b>縮短</b></td><td>舉起啞鈴時的二頭肌、上樓梯的股四頭肌</td></tr>
+    <tr><td><b>等張收縮</b>：<b>離心</b> eccentric</td><td>肌肉一邊用力一邊被<b>拉長</b>（當煞車）</td><td>慢慢放下啞鈴、<b>下樓梯、下坡</b>時的股四頭肌</td></tr>
+    <tr><td><b>等長收縮</b> isometric</td><td>張力增加但<b>長度不變</b></td><td>推一面牆、提著重物不動、維持姿勢的肌肉</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>下樓梯、下坡時股四頭肌做<b>離心收縮</b>——一邊用力一邊被拉長，以控制身體下降。離心收縮時每條肌纖維承受的張力較大，較容易造成肌纖維的<b>微小損傷</b>，引起發炎與修復，所以隔天出現<b>延遲性肌肉痠痛</b>（DOMS）。這種痠痛並非乳酸堆積造成。</div>
+  <div class="warn"><b class="t">更正：</b>講義版簡報中第二次出現的「等張收縮（肌肉無法縮短）」應為<b>等長收縮</b>。</div>
+
+  <h3 id="h10">串聯彈性成分與長度—張力關係 Series-Elastic Component and Length-Tension Relationship</h3>
+  <p class="core">串聯彈性成分（肌腱、肌聯蛋白）：收縮時先被拉緊，之後才能拉動骨骼，放鬆時回彈；長度—張力關係：肌節在靜止長度附近（粗細肌絲重疊最適當）張力最大，太短或太長都減弱。</p>
+  <ul class="dots">
+    <li><b>串聯彈性成分</b> <i class="en-term">series-elastic component</i>：肌腱、結締組織與肌聯蛋白像彈簧一樣串在收縮成分之後。收縮時要先把它們拉緊，張力才能傳到骨骼；放鬆時它們的回彈幫助肌肉回到原長度。跳躍時先蹲下（預先拉長）能跳得更高，就是利用彈性能量。</li>
+    <li><b>長度—張力關係</b> <i class="en-term">length-tension relationship</i>：肌節在<b>靜止長度附近</b>時，粗細肌絲的重疊程度讓最多橫橋能形成，張力<b>最大</b>。肌節<b>太長</b>（重疊太少，橫橋少）或<b>太短</b>（細肌絲互相重疊、粗肌絲頂到 Z 線）時，張力都會下降。身體中骨骼肌的長度通常就維持在最適範圍。這個原理在心肌中變成重要的<b>法蘭克—史達林定律</b>（第 14 章）。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>單一收縮：潛伏期、收縮期、放鬆期；加成；不完全與完全強直；階梯現象。</li>
+      <li>等張：向心（縮短）、離心（被拉長，易造成延遲性痠痛）；等長：長度不變、張力增加。</li>
+      <li>串聯彈性成分：先拉緊再傳力、儲存彈性能。</li>
+      <li>長度—張力關係：靜止長度附近張力最大，太長太短都減弱（心臟的法蘭克—史達林定律）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>單一收縮</td><td>twitch</td><td>潛伏期</td><td>latent period</td></tr>
+      <tr><td>加成</td><td>summation</td><td>強直（完全／不完全）</td><td>complete / incomplete tetanus</td></tr>
+      <tr><td>階梯現象</td><td>treppe</td><td>等張／等長收縮</td><td>isotonic / isometric contraction</td></tr>
+      <tr><td>向心／離心收縮</td><td>concentric / eccentric</td><td>串聯彈性成分</td><td>series-elastic component</td></tr>
+      <tr><td>長度—張力關係</td><td>length-tension relationship</td><td>延遲性肌肉痠痛</td><td>DOMS</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 12.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">12.4</span>骨骼肌的能量需求</h2>
+  <div class="en">Energy Requirements of Skeletal Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>肌肉收縮的 ATP 從哪裡來（<b>磷酸肌酸、無氧糖解、有氧呼吸</b>）、<b>最大攝氧量</b>與<b>乳酸閾值</b>、<b>慢縮與快縮肌纖維</b>、<b>肌肉疲勞</b>、<b>訓練的適應</b>，以及肌肉的損傷與修復。</div><div><span class="lt lt2">為什麼接在 12.3 後面？</span>收縮和放鬆都要 ATP；這一節把第 5 章的細胞呼吸用在肌肉上，也是運動營養的基礎。</div></div>
+  <div class="oneline">肌肉只存少量 ATP，靠磷酸肌酸數秒內補充，再靠無氧糖解（快、會產生乳酸）與有氧呼吸（慢、產量大）；慢縮肌纖維（紅肌）粒線體多、耐疲勞，快縮肌纖維（白肌）力量大、肝醣多、易疲勞；耐力訓練增加粒線體與微血管，阻力訓練使肌纖維肥大。</div>
+  <div class="think">為什麼百米衝刺跑者和馬拉松跑者的體型差那麼多？</div>
+
+  <h3 id="h11">肌肉的代謝 Metabolism of Skeletal Muscles</h3>
+  <p class="core">ATP 來源依速度：①肌肉內現存 ATP（約 2–3 秒）→ ②磷酸肌酸＋ADP → ATP（肌酸激酶，約 10 秒）→ ③無氧糖解（肌肝醣 → 乳酸，約 1–2 分鐘）→ ④有氧呼吸（葡萄糖、脂肪酸，長時間）；休息時以脂肪酸為主，運動強度越高越依賴醣類。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="40" y1="210" x2="470" y2="210" stroke="#374151" stroke-width="2"/><line x1="40" y1="210" x2="40" y2="20" stroke="#374151" stroke-width="2"/>
+    <text x="30" y="120" font-size="12" text-anchor="middle" transform="rotate(-90 30 120)">供能比例</text>
+    <g font-size="11" text-anchor="middle"><text x="70" y="226">10 秒</text><text x="160" y="226">1 分</text><text x="280" y="226">5 分</text><text x="420" y="226">1 小時以上</text></g>
+    <path d="M42,40 C70,40 90,190 160,205 L470,208" fill="none" stroke="#dc2626" stroke-width="4"/>
+    <path d="M42,180 C90,40 150,40 200,120 C240,180 300,200 470,205" fill="none" stroke="#f59e0b" stroke-width="4"/>
+    <path d="M42,205 C120,200 200,120 280,60 C320,40 400,36 470,36" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <text x="72" y="36" font-size="13" fill="#b91c1c" font-weight="bold">ATP＋磷酸肌酸</text>
+    <text x="150" y="58" font-size="13" fill="#b45309" font-weight="bold">無氧糖解（→乳酸）</text>
+    <text x="350" y="30" font-size="13" fill="#1d4ed8" font-weight="bold">有氧呼吸</text>
+    <g font-size="11" fill="#374151"><text x="60" y="246">百米、舉重</text><text x="190" y="246">400 公尺</text><text x="472" y="246" text-anchor="end">馬拉松、長時間活動</text></g>
+  </svg><figcaption>不同時間長度的運動，主要的 ATP 來源不同。三個系統其實同時運作，只是比例隨時間改變。</figcaption></figure>
+  <p>肌肉內儲存的 ATP 只夠用 2–3 秒，必須不斷再生：</p>
+  <ol class="steps">
+    <li><b>磷酸肌酸</b> <i class="en-term">creatine phosphate</i>：肌肉儲存量約為 ATP 的 3–5 倍。<b>肌酸激酶</b>（CK）把它的磷酸轉給 ADP，<b>瞬間</b>補回 ATP，支撐約 10 秒的爆發性運動。休息時再由 ATP 把肌酸磷酸化存起來。</li>
+    <li><b>無氧糖解</b>：分解<b>肌肝醣</b>，快速產生 ATP（每個葡萄糖 2–3 個 ATP），但產生<b>乳酸</b>，可支撐約 1–2 分鐘的高強度運動。</li>
+    <li><b>有氧呼吸</b>：在粒線體完全氧化葡萄糖與<b>脂肪酸</b>，產量最大但速度較慢，是長時間運動的主要來源。<b>休息與低強度</b>時以<b>脂肪酸</b>為主；強度越高，越依賴<b>醣類</b>（肝醣、血糖）。</li>
+  </ol>
+  <h4>最大攝氧量與乳酸閾值</h4>
+  <p class="core">V̇O₂max＝有氧能力上限；乳酸閾值＝乳酸開始明顯上升的強度（一般人約 V̇O₂max 50–60%，耐力選手 70–80%）；運動後過耗氧量（EPOC）用來恢復。</p>
+  <ul class="dots">
+    <li><b>最大攝氧量</b> <i class="en-term">maximal oxygen uptake, V̇O₂max</i>：每分鐘能利用的最大氧氣量，代表有氧能力，受心肺功能與肌肉粒線體決定；耐力訓練可提高。</li>
+    <li><b>乳酸閾值</b> <i class="en-term">lactate threshold</i>：運動強度增加到某一點（一般人約 V̇O₂max 的 50–60%，耐力運動員可達 70–80%）時，血中乳酸開始明顯上升。越接近這個強度越難持久。</li>
+    <li>運動後仍維持較高的耗氧，叫<b>運動後過耗氧量</b>（EPOC，舊稱氧債），用來補回磷酸肌酸、肌紅素與血紅素的氧、清除乳酸、恢復體溫與心跳（第 5 章）。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>補充<b>肌酸</b>可增加肌肉磷酸肌酸儲量，對短時間高強度、重複衝刺的運動有幫助（研究證據較充分的運動補充品之一）。耐力運動前的<b>肝醣超補</b>、運動中補充醣類，以及運動後補充醣類與蛋白質以恢復肝醣與修復肌肉，都是根據這些能量系統設計的。</div>
+
+  <h3 id="h12">慢縮與快縮肌纖維 Slow- and Fast-Twitch Fibers</h3>
+  <p class="core">第 I 型（慢縮、紅肌）：收縮慢、粒線體多、肌紅素多、微血管多、有氧、耐疲勞，多見於維持姿勢的肌肉；第 IIx 型（快縮、白肌）：收縮快而有力、粒線體少、肝醣較多、靠無氧糖解、易疲勞；第 IIa 型介於兩者之間。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>第 I 型：慢縮（紅肌）</th><th>第 IIa 型：快縮氧化</th><th>第 IIx 型：快縮糖解（白肌）</th></tr>
+    <tr><td>收縮速度</td><td>慢</td><td>快</td><td>最快</td></tr>
+    <tr><td>力量</td><td>小</td><td>中</td><td>大</td></tr>
+    <tr><td>粒線體、微血管</td><td><b>多</b></td><td>多</td><td>少</td></tr>
+    <tr><td>肌紅素（呈紅色）</td><td><b>多</b></td><td>多</td><td>少（呈白色）</td></tr>
+    <tr><td>肝醣</td><td>較少</td><td>中</td><td><b>較多</b></td></tr>
+    <tr><td>主要能量</td><td>有氧呼吸（脂肪酸）</td><td>有氧＋無氧</td><td>無氧糖解</td></tr>
+    <tr><td>疲勞</td><td><b>耐疲勞</b></td><td>中等</td><td><b>易疲勞</b></td></tr>
+    <tr><td>例子</td><td>維持姿勢的肌肉（背肌、比目魚肌）</td><td>腿部（走路跑步）</td><td>手臂（瞬間用力）</td></tr>
+  </table></div>
+  <p><b>肌紅素</b> <i class="en-term">myoglobin</i> 是肌肉中類似血紅素的含鐵蛋白，能儲存氧氣並幫助氧從微血管擴散進粒線體，使慢縮肌呈紅色。各人肌肉中纖維類型的比例主要由遺傳決定，訓練能使 IIx 與 IIa 型互相轉換。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>頂尖短跑選手腿部肌肉中<b>快縮</b>纖維比例高，加上阻力訓練使肌纖維肥大，所以肌肉發達；馬拉松選手<b>慢縮</b>纖維比例高、粒線體與微血管多，以耐力為主，肌肉較精瘦。</div>
+  <div class="warn"><b class="t">更正：</b>講義版簡報中「慢縮肌纖維存在於姿勢內」應為<b>多見於維持姿勢的肌肉</b>；「快縮肌儲存的肝醣較少」應為<b>快縮肌肝醣較多、粒線體較少</b>。</div>
+
+  <h3 id="h13">肌肉疲勞 Muscle Fatigue</h3>
+  <p class="core">短時間最大用力：Pi 累積（干擾橫橋與 Ca²⁺ 釋放）、K⁺ 累積在 T 小管外使興奮性降低；長時間運動：肌肝醣耗盡、血糖下降（撞牆）；中樞疲勞：腦部降低運動驅動。</p>
+  <ul class="dots">
+    <li><b>高強度短時間</b>：無機磷酸（Pi）累積，干擾橫橋與肌漿網 Ca²⁺ 釋放；反覆動作電位使 K⁺ 累積在 T 小管外，降低興奮性。過去歸咎於乳酸與 H⁺，現在認為它們的角色較小。</li>
+    <li><b>長時間耐力</b>：<b>肌肝醣耗盡</b>與血糖下降是主因（馬拉松約 30 公里處的「撞牆」）。</li>
+    <li><b>中樞疲勞</b>：腦部（受心理、體溫、神經傳遞物質影響）減少對運動神經元的驅動。</li>
+  </ul>
+
+  <h3 id="h14">訓練的適應 Adaptations of Muscles to Exercise Training</h3>
+  <p class="core">耐力訓練：粒線體、微血管、肌紅素、氧化酵素增加，更多使用脂肪、節省肝醣，乳酸閾值與 V̇O₂max 提高；阻力訓練：肌纖維肥大（肌原纖維與收縮蛋白增加，衛星細胞融入），力量增加；不活動 → 萎縮。</p>
+  <ul class="dots">
+    <li><b>耐力訓練</b>：肌纖維的粒線體、微血管、肌紅素、氧化酵素增加；更多利用<b>脂肪酸</b>、節省肝醣；V̇O₂max 與<b>乳酸閾值</b>提高。</li>
+    <li><b>阻力（重量）訓練</b>：肌纖維<b>肥大</b> <i class="en-term">hypertrophy</i>（增加肌原纖維與收縮蛋白，衛星細胞融入提供更多細胞核），力量增加；肌纖維數量的增加（增生）在人類不明顯。</li>
+    <li><b>不使用</b>（臥床、太空、打石膏）：肌肉<b>萎縮</b>，力量與耐力下降。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>老年人的<b>肌少症</b>（sarcopenia）與活動量減少、蛋白質攝取不足、合成反應變差有關，會增加跌倒與失能風險；建議足夠的蛋白質（分散在各餐）、維生素 D 與阻力運動一起進行。</div>
+
+  <h3 id="h15">肌肉損傷與修復 Muscle Damage and Repair</h3>
+  <p class="core">肌纖維受損後由衛星細胞（肌肉幹細胞）增生、融合修復；嚴重損傷時以疤痕組織取代；肌肉失養症（dystrophin 缺陷）造成肌纖維反覆損傷。</p>
+  <p>骨骼肌纖維不能分裂，但旁邊的<b>衛星細胞</b>在受損後會活化、增生，融合進受損的纖維或形成新纖維。嚴重損傷超過修復能力時，以結締組織疤痕取代。<b>杜興氏肌肉失養症</b>是 X 染色體上 <b>dystrophin</b>（連接細胞骨架與細胞膜的蛋白）基因缺陷，肌纖維在收縮中反覆受損，最終被脂肪與結締組織取代；多見於男孩。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>ATP 來源：現存 ATP → 磷酸肌酸（肌酸激酶，約 10 秒）→ 無氧糖解（肌肝醣 → 乳酸）→ 有氧呼吸（脂肪酸、葡萄糖）。</li>
+      <li>休息以脂肪酸為主，強度越高越依賴醣類；V̇O₂max、乳酸閾值、EPOC。</li>
+      <li>第 I 型慢縮紅肌：粒線體、肌紅素、微血管多，耐疲勞，姿勢肌；第 IIx 型快縮白肌：力量大、肝醣多、粒線體少、易疲勞。</li>
+      <li>疲勞：Pi 與 K⁺ 累積（短時）、肝醣耗盡（長時）、中樞疲勞。</li>
+      <li>耐力訓練 → 粒線體、微血管↑；阻力訓練 → 肥大；不用 → 萎縮；肌少症。</li>
+      <li>衛星細胞修復；肌肉失養症（dystrophin）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>磷酸肌酸</td><td>creatine phosphate</td><td>肌酸激酶</td><td>creatine kinase</td></tr>
+      <tr><td>最大攝氧量</td><td>V̇O₂max</td><td>乳酸閾值</td><td>lactate threshold</td></tr>
+      <tr><td>運動後過耗氧量</td><td>EPOC</td><td>肌紅素</td><td>myoglobin</td></tr>
+      <tr><td>慢縮／快縮肌纖維</td><td>slow- / fast-twitch fiber</td><td>肌肉疲勞</td><td>muscle fatigue</td></tr>
+      <tr><td>肥大／萎縮</td><td>hypertrophy / atrophy</td><td>肌少症</td><td>sarcopenia</td></tr>
+      <tr><td>衛星細胞</td><td>satellite cell</td><td>肌肉失養症</td><td>muscular dystrophy</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 12.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">12.5</span>骨骼肌的神經控制</h2>
+  <div class="en">Neural Control of Skeletal Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>肌肉裡的感受器——<b>肌梭</b>（偵測長度）與<b>高爾基肌腱器</b>（偵測張力）；<b>α 與 γ 運動神經元</b>的分工；<b>牽張反射</b>、<b>交互抑制</b>；以及上運動神經元受損的表現。</div><div><span class="lt lt2">為什麼接在 12.4 後面？</span>肌肉能收縮、有能量後，需要神經精準地指揮與即時回饋。這一節把第 8 章的反射弧具體化到肌肉。</div></div>
+  <div class="oneline">肌梭與肌纖維平行，被拉長時經感覺神經引起同一肌肉收縮（牽張反射，如膝跳）；γ 運動神經元調整肌梭的敏感度；高爾基肌腱器在肌腱偵測張力，過大時抑制收縮以保護；牽張反射同時抑制拮抗肌（交互抑制）。</div>
+
+  <h3 id="h16">肌梭與高爾基肌腱器</h3>
+  <p class="core">肌梭：梭內肌纖維（與普通的梭外肌纖維平行），偵測肌肉長度與拉長速度 → 牽張反射；高爾基肌腱器：在肌腱，偵測張力 → 抑制同一肌肉（防止過度用力）。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>肌梭 muscle spindle</th><th>高爾基肌腱器 Golgi tendon organ</th></tr>
+    <tr><td>位置</td><td>肌腹中，與一般肌纖維<b>平行</b></td><td><b>肌腱</b>與肌肉交界處，與肌纖維<b>串聯</b></td></tr>
+    <tr><td>偵測</td><td>肌肉<b>長度</b>與被拉長的速度</td><td>肌肉產生的<b>張力</b></td></tr>
+    <tr><td>反射</td><td><b>牽張反射</b>：同一肌肉<b>收縮</b>（單突觸）</td><td>張力太大時<b>抑制</b>同一肌肉（多突觸），保護肌腱</td></tr>
+  </table></div>
+  <p>肌梭內有特化的<b>梭內肌纖維</b> <i class="en-term">intrafusal fibers</i>，有感覺神經纏繞；一般產生力量的肌纖維叫<b>梭外肌纖維</b> <i class="en-term">extrafusal fibers</i>。</p>
+
+  <h3 id="h17">α 與 γ 運動神經元 Alpha and Gamma Motoneurons</h3>
+  <p class="core">α 運動神經元支配梭外肌纖維（產生力量）；γ 運動神經元支配梭內肌纖維兩端，使肌梭在肌肉縮短時仍保持緊繃與敏感（α–γ 共同活化）。</p>
+  <ul class="dots">
+    <li><b>α 運動神經元</b>：支配梭外肌纖維，負責產生收縮力。</li>
+    <li><b>γ 運動神經元</b>：支配梭內肌纖維的兩端。肌肉收縮變短時，若肌梭鬆弛就無法偵測；γ 神經元同時收縮梭內纖維兩端，使肌梭保持緊繃、維持敏感度。大腦下達運動命令時通常同時活化兩者，稱為 <b>α–γ 共同活化</b>。γ 神經元的活動也決定了<b>肌肉張力</b>（肌張力，靜止時的輕微收縮狀態）。</li>
+  </ul>
+
+  <h3 id="h18">骨骼肌反射 Skeletal Muscle Reflexes</h3>
+  <p class="core">牽張反射（膝跳）：肌梭被拉長 → 感覺神經元 → 直接興奮同一肌肉的 α 運動神經元（單突觸）；同時經抑制性聯絡神經元放鬆拮抗肌（交互抑制）。</p>
+  <ul class="dots">
+    <li><b>牽張反射</b> <i class="en-term">stretch reflex</i>：敲膝蓋下方的髕韌帶 → 股四頭肌被突然拉長 → 肌梭感覺神經元放電 → 在脊髓<b>直接</b>興奮股四頭肌的 α 運動神經元（<b>單突觸</b>）→ 股四頭肌收縮 → 小腿踢出（膝跳反射）。牽張反射幫助維持姿勢與肌肉張力。</li>
+    <li><b>交互抑制</b> <i class="en-term">reciprocal inhibition</i>：同一個感覺訊號也經抑制性聯絡神經元，<b>抑制拮抗肌</b>（膝後的膕旁肌）的運動神經元，讓動作順暢。</li>
+    <li><b>縮回反射與對側伸肌反射</b>：見第 8 章。</li>
+  </ul>
+
+  <h3 id="h19">上運動神經元的控制 Upper Motor Neuron Control</h3>
+  <p class="core">上運動神經元（運動皮質與腦幹）調控脊髓的下運動神經元；上運動神經元受損（中風、脊髓損傷）→ 痙攣性麻痺、反射亢進；下運動神經元受損 → 弛緩性麻痺、萎縮、反射消失。</p>
+  <p>大腦運動皮質、基底核、小腦、腦幹經下行徑（第 8 章）控制脊髓的運動神經元。脊髓與腦幹中直接支配肌肉的是<b>下運動神經元</b>；來自上方的是<b>上運動神經元</b>。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>上運動神經元受損</th><th>下運動神經元受損</th></tr>
+    <tr><td>例子</td><td>中風、脊髓損傷</td><td>小兒麻痺、周邊神經損傷</td></tr>
+    <tr><td>肌肉張力</td><td>增加（<b>痙攣性</b>麻痺）</td><td>降低（<b>弛緩性</b>麻痺）</td></tr>
+    <tr><td>反射</td><td><b>亢進</b>（失去上方的抑制）</td><td>減弱或消失</td></tr>
+    <tr><td>萎縮</td><td>較輕</td><td>明顯</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>肌梭（與肌纖維平行，偵測長度）→ 牽張反射；高爾基肌腱器（在肌腱，偵測張力）→ 抑制保護。</li>
+      <li>α 運動神經元 → 梭外肌纖維（力量）；γ 運動神經元 → 梭內肌纖維（維持肌梭敏感度、肌張力）；α–γ 共同活化。</li>
+      <li>膝跳反射＝單突觸牽張反射；交互抑制放鬆拮抗肌。</li>
+      <li>上運動神經元受損 → 痙攣性麻痺、反射亢進；下運動神經元受損 → 弛緩性麻痺、萎縮、反射消失。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>肌梭</td><td>muscle spindle</td><td>高爾基肌腱器</td><td>Golgi tendon organ</td></tr>
+      <tr><td>梭內／梭外肌纖維</td><td>intrafusal / extrafusal fiber</td><td>α／γ 運動神經元</td><td>alpha / gamma motoneuron</td></tr>
+      <tr><td>牽張反射</td><td>stretch reflex</td><td>交互抑制</td><td>reciprocal inhibition</td></tr>
+      <tr><td>上／下運動神經元</td><td>upper / lower motor neuron</td><td>痙攣性／弛緩性麻痺</td><td>spastic / flaccid paralysis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 12.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">12.6</span>心肌與平滑肌</h2>
+  <div class="en">Cardiac and Smooth Muscles</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>心肌</b>的特性（間盤、自律性、鈣誘發鈣釋放、長不反應期）；<b>平滑肌</b>的構造（沒有肌節、緻密體）、靠<b>鈣調蛋白與肌凝蛋白輕鏈激酶</b>的收縮機制，以及<b>單一單元</b>與<b>多單元</b>平滑肌。</div><div><span class="lt lt2">為什麼放最後？</span>以骨骼肌為基準，比較另外兩種肌肉的異同。心肌是第 13–14 章的主角；平滑肌則存在於血管、消化道、呼吸道、子宮等，與後面許多章節相關。</div></div>
+  <div class="oneline">心肌有橫紋、以間盤（間隙接合）相連成功能合體、能自發節律，Ca²⁺ 主要由細胞外流入再誘發肌漿網釋放；平滑肌沒有肌節、收縮慢而持久，Ca²⁺ 與鈣調蛋白結合後活化肌凝蛋白輕鏈激酶使肌凝蛋白磷酸化；單一單元平滑肌（腸胃、子宮、小血管）以間隙接合同步收縮，多單元平滑肌（大氣道、大動脈、虹膜、豎毛肌）每條纖維由神經個別控制。</div>
+  <div class="think">為什麼瞳孔可以精準地調整大小，而腸胃卻是一整段一起蠕動？</div>
+
+  <h3 id="h20">心肌 Cardiac Muscle</h3>
+  <p class="core">心肌：橫紋、短而分支、單核；間盤（胞橋小體＋間隙接合）→ 整個心房或心室像一個單位收縮；自律性（節律細胞）；鈣誘發鈣釋放；不反應期長 → 不會強直。</p>
+  <ul class="dots">
+    <li>和骨骼肌一樣有<b>肌節與橫紋</b>，收縮機制（肌動蛋白、肌凝蛋白、肌鈣蛋白、Ca²⁺）相同。</li>
+    <li>細胞短、有分支、通常單核，以<b>間盤</b>相連：<b>胞橋小體</b>抗拉扯，<b>間隙接合</b>讓動作電位直接傳過去，所以整個心房或心室像一個<b>功能合體</b>（syncytium）一起收縮。</li>
+    <li>有<b>自律性</b>：心臟的節律細胞能自發產生動作電位，不需要神經刺激；自主神經只調整速率與力量（第 9、13 章）。</li>
+    <li><b>鈣誘發鈣釋放</b>：動作電位時，Ca²⁺ 先從<b>細胞外</b>經 L 型鈣通道流入，再觸發肌漿網釋放更多 Ca²⁺。所以心肌收縮力受細胞外 Ca²⁺ 影響。</li>
+    <li>動作電位有長的<b>平台期</b>，<b>不反應期很長</b>（幾乎等於整個收縮期），所以心肌<b>不會強直</b>，保證每次收縮後都能放鬆、讓心室充血。</li>
+  </ul>
+
+  <h3 id="h21">平滑肌 Smooth Muscle</h3>
+  <p class="core">平滑肌：紡錘形、單核、沒有肌節（無橫紋），細肌絲固定在緻密體上，可大幅伸縮；Ca²⁺ 主要來自細胞外（也有肌漿網）；Ca²⁺＋鈣調蛋白 → 活化肌凝蛋白輕鏈激酶（MLCK）→ 肌凝蛋白磷酸化 → 橫橋循環；收縮慢、耗能少、能長時間維持（門閂狀態）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a123" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="13" text-anchor="middle" font-weight="bold">
+      <rect x="10" y="20" width="110" height="40" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="65" y="45">Ca²⁺ 進入</text>
+      <rect x="140" y="20" width="110" height="40" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="195" y="45">＋鈣調蛋白</text>
+      <rect x="270" y="20" width="200" height="40" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="370" y="45">活化 MLCK（輕鏈激酶）</text>
+      <rect x="140" y="110" width="200" height="40" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="240" y="135">肌凝蛋白頭部磷酸化</text>
+      <rect x="140" y="170" width="200" height="40" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="195">橫橋循環 → 收縮</text></g>
+    <path d="M120,40 L136,40" stroke="#374151" stroke-width="2.5" marker-end="url(#a123)"/><path d="M250,40 L266,40" stroke="#374151" stroke-width="2.5" marker-end="url(#a123)"/>
+    <path d="M370,60 L300,106" stroke="#374151" stroke-width="2.5" marker-end="url(#a123)"/><path d="M240,150 L240,166" stroke="#374151" stroke-width="2.5" marker-end="url(#a123)"/>
+    <text x="360" y="130" font-size="12" fill="#6b7280">放鬆：肌凝蛋白磷酸酶</text><text x="360" y="146" font-size="12" fill="#6b7280">把磷酸拿掉</text>
+    <text x="10" y="100" font-size="12" fill="#6b7280">和骨骼肌不同：</text><text x="10" y="116" font-size="12" fill="#6b7280">沒有肌鈣蛋白</text><text x="10" y="132" font-size="12" fill="#6b7280">開關在肌凝蛋白上</text>
+  </svg><figcaption>平滑肌的收縮開關在「肌凝蛋白」：Ca²⁺ 經鈣調蛋白活化激酶，把肌凝蛋白磷酸化後，它才能與肌動蛋白作用。</figcaption></figure>
+  <ul class="dots">
+    <li><b>構造</b>：紡錘形、單核；肌動蛋白與肌凝蛋白不排成肌節，所以<b>沒有橫紋</b>；細肌絲固定在細胞內的<b>緻密體</b>（相當於 Z 線）上，斜向排列，收縮時細胞像被擰緊的袋子。能在很大的長度範圍內產生力量（如膀胱、胃撐大時仍能收縮）。</li>
+    <li><b>Ca²⁺ 來源</b>：主要從<b>細胞外</b>經鈣通道流入，也有部分來自肌漿網。</li>
+    <li><b>收縮機制</b>：平滑肌<b>沒有肌鈣蛋白</b>。Ca²⁺ 與<b>鈣調蛋白</b> <i class="en-term">calmodulin</i> 結合 → 活化<b>肌凝蛋白輕鏈激酶</b>（MLCK）→ 把肌凝蛋白頭部<b>磷酸化</b> → 肌凝蛋白才能和肌動蛋白形成橫橋。放鬆時<b>肌凝蛋白磷酸酶</b>移除磷酸。</li>
+    <li><b>特性</b>：收縮與放鬆都<b>慢</b>、耗能少，能長時間維持張力而不疲勞（「門閂狀態」latch state），適合維持血管張力與括約肌。</li>
+    <li><b>控制</b>：自主神經、激素、局部因子（伸展、CO₂、NO）都能調節；許多平滑肌也有自發活動。自主神經末梢有許多膨大處（曲張體）沿著平滑肌釋放神經傳遞物質。</li>
+  </ul>
+  <h4>單一單元與多單元平滑肌 Single-Unit and Multiunit Smooth Muscles</h4>
+  <p class="core">單一單元（內臟型）：以間隙接合相連，同步收縮，有自發節律（節律點），可被伸展刺激——腸胃道、子宮、輸尿管、小血管；多單元：細胞間少有間隙接合，每條纖維由自主神經個別支配，可精細分級——大氣道、大動脈、虹膜、睫狀肌、豎毛肌、輸精管。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>單一單元平滑肌 single-unit</th><th>多單元平滑肌 multiunit</th></tr>
+    <tr><td>細胞連接</td><td>大量<b>間隙接合</b> → 電訊號直接傳遞</td><td>少有間隙接合</td></tr>
+    <tr><td>收縮方式</td><td>一大片<b>同步</b>收縮，像一個單位</td><td>每條纖維<b>個別</b>收縮，可精細調整</td></tr>
+    <tr><td>啟動</td><td><b>自發</b>節律（節律點細胞）；被<b>伸展</b>刺激會收縮；神經只調節</td><td>主要由<b>自主神經</b>直接刺激</td></tr>
+    <tr><td>位置</td><td><b>消化道</b>、子宮、輸尿管、膀胱、<b>小動脈</b></td><td>大的呼吸道、大動脈、<b>虹膜（瞳孔）</b>、<b>睫狀肌</b>、<b>豎毛肌</b>、輸精管</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">國考考過：多單元平滑肌</b>——記住它的位置：<b>虹膜、睫狀肌、豎毛肌、大氣道、大血管、輸精管</b>；特點是每條纖維由神經<b>個別</b>支配，能精細控制，細胞間少有間隙接合。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>虹膜與睫狀肌是<b>多單元</b>平滑肌，每條纖維由自主神經個別控制，所以瞳孔大小與水晶體調節能精細分級。腸胃道是<b>單一單元</b>平滑肌，細胞以間隙接合相連，一處興奮就擴散到整片，形成一整段一起收縮的蠕動波（第 18 章）。</div>
+  <div class="tblwrap"><table>
+    <tr><th>比較</th><th>骨骼肌</th><th>心肌</th><th>平滑肌</th></tr>
+    <tr><td>橫紋／肌節</td><td>有</td><td>有</td><td><b>無</b></td></tr>
+    <tr><td>控制</td><td>隨意（體神經）</td><td>不隨意（自律＋自主神經）</td><td>不隨意（自主神經、激素、局部）</td></tr>
+    <tr><td>Ca²⁺ 結合</td><td>肌鈣蛋白</td><td>肌鈣蛋白</td><td><b>鈣調蛋白</b>（→ MLCK）</td></tr>
+    <tr><td>Ca²⁺ 來源</td><td>肌漿網</td><td>細胞外＋肌漿網（鈣誘發鈣釋放）</td><td>主要細胞外＋肌漿網</td></tr>
+    <tr><td>間隙接合</td><td>無</td><td>有（間盤）</td><td>單一單元有、多單元少</td></tr>
+    <tr><td>強直</td><td>可以</td><td><b>不會</b></td><td>可長時間維持張力</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>心肌：橫紋、分支、間盤（間隙接合＋胞橋小體）→ 功能合體；自律性；鈣誘發鈣釋放（細胞外 Ca²⁺ 先進入）；不反應期長 → 不會強直。</li>
+      <li>平滑肌：無肌節、緻密體；Ca²⁺＋鈣調蛋白 → MLCK → 肌凝蛋白磷酸化 → 收縮；肌凝蛋白磷酸酶 → 放鬆；慢、省能、可長時間維持。</li>
+      <li>單一單元（消化道、子宮、小血管）：間隙接合、同步、自發、受伸展刺激。</li>
+      <li>多單元（國考：虹膜、睫狀肌、豎毛肌、大氣道、大動脈、輸精管）：個別由神經支配、精細控制。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>功能合體</td><td>functional syncytium</td><td>自律性</td><td>automaticity</td></tr>
+      <tr><td>鈣誘發鈣釋放</td><td>calcium-induced calcium release</td><td>緻密體</td><td>dense body</td></tr>
+      <tr><td>肌凝蛋白輕鏈激酶</td><td>myosin light-chain kinase (MLCK)</td><td>門閂狀態</td><td>latch state</td></tr>
+      <tr><td>單一單元／多單元平滑肌</td><td>single-unit / multiunit smooth muscle</td><td>曲張體</td><td>varicosities</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s7">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>構造</td><td>肌肉 → 肌束 → 肌纖維 → 肌原纖維 → 肌節（Z 到 Z）；A 帶粗肌絲、I 帶細肌絲</td></tr>
+    <tr><td>運動單位</td><td>一個運動神經元＋其肌纖維；精細肌肉單位小；徵召（大小原則）</td></tr>
+    <tr><td>滑動肌絲</td><td>肌絲不變短；I 帶、H 帶變短，A 帶不變</td></tr>
+    <tr><td>橫橋循環</td><td>ATP 水解充能 → 結合 → 動力衝程 → 新 ATP 使脫離；無 ATP → 屍僵</td></tr>
+    <tr><td>調控</td><td>Ca²⁺ ＋ 肌鈣蛋白 → 旋轉肌球素移開 → 結合位露出</td></tr>
+    <tr><td>E-C 偶聯</td><td>動作電位 → T 小管 → DHP → ryanodine 受體 → 肌漿網釋放 Ca²⁺；SERCA 回收</td></tr>
+    <tr><td>收縮形式</td><td>單一收縮 → 加成 → 強直；等張（向心、離心）、等長；長度—張力關係</td></tr>
+    <tr><td>能量</td><td>ATP → 磷酸肌酸 → 無氧糖解（乳酸）→ 有氧；乳酸閾值；V̇O₂max</td></tr>
+    <tr><td>纖維類型</td><td>慢縮紅肌（粒線體、肌紅素多、耐疲勞、姿勢肌）；快縮白肌（肝醣多、易疲勞）</td></tr>
+    <tr><td>神經控制</td><td>肌梭（長度，牽張反射）、高爾基肌腱器（張力）；α、γ 運動神經元</td></tr>
+    <tr><td>心肌</td><td>間盤、自律、鈣誘發鈣釋放、不會強直</td></tr>
+    <tr><td>平滑肌</td><td>鈣調蛋白 → MLCK；單一單元（腸胃、子宮）vs 多單元（虹膜、豎毛肌，國考）</td></tr>
+  </table></div>
+  <h3 id="h22">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 畫出肌節並標出 A 帶、I 帶、H 帶、Z 線，說明收縮時哪些變短？</li>
+    <li>□ 依序說出橫橋循環四步驟與 ATP 的兩個角色？</li>
+    <li>□ 說明 Ca²⁺ 怎麼開啟收縮，以及興奮—收縮偶聯的路徑？</li>
+    <li>□ 比較等張（向心、離心）與等長收縮，並解釋下坡後痠痛？</li>
+    <li>□ 說出四種 ATP 來源與適用的運動時間？</li>
+    <li>□ 比較慢縮與快縮肌纖維？</li>
+    <li>□ 比較肌梭與高爾基肌腱器？</li>
+    <li>□ 比較三種肌肉的 Ca²⁺ 結合蛋白，並說出多單元平滑肌的位置（國考）？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 12 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+var GL_PAGE={"張力":"mtension","加成":"summation","強直":"tetanus","向心收縮":"eccentric","慢縮":"slowfiber","快縮":"slowfiber","肥大":"hypertrophy","萎縮":"hypertrophy"};
+const Q = [
+ {q:"肌肉收縮時，下列何者長度不變？",o:["I 帶","H 帶","A 帶","肌節"],a:2,e:"<b>A 帶</b>代表粗肌絲全長，收縮時不變；I 帶、H 帶與肌節都變短。"},
+ {q:"肌節的範圍是？",o:["M 線到 M 線","Z 線到 Z 線","A 帶到 A 帶","H 帶到 H 帶"],a:1,e:"肌節為<b>相鄰兩條 Z 線</b>之間。"},
+ {q:"粗肌絲主要由哪種蛋白質組成？",o:["肌動蛋白","肌凝蛋白","旋轉肌球素","肌鈣蛋白"],a:1,e:"粗肌絲＝<b>肌凝蛋白</b>；細肌絲＝肌動蛋白＋旋轉肌球素＋肌鈣蛋白。"},
+ {q:"在橫橋循環中，使肌凝蛋白頭部與肌動蛋白分離的是？",o:["Ca²⁺ 結合","ATP 結合","Pi 釋放","ADP 釋放"],a:1,e:"<b>新的 ATP 結合</b>使頭部放開；沒有 ATP 就無法分離（屍僵）。"},
+ {q:"骨骼肌收縮時 Ca²⁺ 結合的蛋白質是？",o:["鈣調蛋白","肌鈣蛋白","肌凝蛋白輕鏈","肌紅素"],a:1,e:"骨骼肌與心肌：Ca²⁺ 結合<b>肌鈣蛋白</b>；平滑肌：鈣調蛋白。"},
+ {q:"動作電位沿著什麼構造傳入肌纖維深處？",o:["肌漿網","橫小管（T 小管）","間盤","肌原纖維"],a:1,e:"<b>T 小管</b>是肌漿膜內凹的管道；肌漿網負責儲存與釋放 Ca²⁺。"},
+ {q:"骨骼肌放鬆時，把 Ca²⁺ 打回肌漿網需要？",o:["不需能量","ATP（鈣幫浦 SERCA）","乙醯膽鹼","鈣調蛋白"],a:1,e:"肌漿網的<b>鈣幫浦耗 ATP</b>，所以放鬆也需要能量。"},
+ {q:"推一面牆而牆不動時，手臂肌肉進行的是？",o:["向心收縮","離心收縮","等長收縮","單一收縮"],a:2,e:"張力增加但長度不變＝<b>等長收縮</b>。"},
+ {q:"下樓梯時股四頭肌一邊用力一邊被拉長，稱為？",o:["向心收縮","離心收縮","等長收縮","強直"],a:1,e:"<b>離心收縮</b>，易造成延遲性肌肉痠痛。"},
+ {q:"高頻率刺激使各次收縮融合為平滑持續的最大收縮，稱為？",o:["階梯現象","加成","完全強直","單一收縮"],a:2,e:"刺激夠密 → <b>完全強直</b>。"},
+ {q:"短時間（約 10 秒）爆發性運動最快補充 ATP 的來源是？",o:["脂肪酸氧化","磷酸肌酸","有氧呼吸","蛋白質分解"],a:1,e:"<b>磷酸肌酸</b>經肌酸激酶把磷酸轉給 ADP，瞬間補充 ATP。"},
+ {q:"下列何者為慢縮肌纖維（第 I 型）的特徵？",o:["肝醣多、粒線體少","粒線體與肌紅素多、耐疲勞","收縮最快、易疲勞","主要靠無氧糖解"],a:1,e:"慢縮紅肌：<b>粒線體、肌紅素、微血管多，耐疲勞</b>，多見於維持姿勢的肌肉。"},
+ {q:"偵測肌肉被拉長、引起膝跳反射的感受器是？",o:["高爾基肌腱器","肌梭","巴齊尼氏小體","痛覺受器"],a:1,e:"<b>肌梭</b>偵測長度 → 單突觸牽張反射；高爾基肌腱器偵測張力。"},
+ {q:"γ 運動神經元支配的是？",o:["梭外肌纖維","梭內肌纖維","平滑肌","心肌"],a:1,e:"γ 支配<b>梭內肌纖維</b>，維持肌梭敏感度；α 支配梭外肌纖維。"},
+ {q:"心肌不會發生強直收縮的主要原因是？",o:["沒有肌節","不反應期很長","沒有 Ca²⁺","沒有間隙接合"],a:1,e:"心肌動作電位有平台期，<b>不反應期幾乎等於收縮期</b>。"},
+ {q:"平滑肌收縮時，Ca²⁺ 結合鈣調蛋白後活化的酵素是？",o:["肌酸激酶","肌凝蛋白輕鏈激酶（MLCK）","乙醯膽鹼酯酶","ATP 合成酶"],a:1,e:"Ca²⁺–鈣調蛋白 → <b>MLCK</b> → 肌凝蛋白磷酸化 → 橫橋形成。"},
+ {q:"下列何者屬於多單元平滑肌？（國考）",o:["小腸","子宮","虹膜與豎毛肌","輸尿管"],a:2,e:"多單元：<b>虹膜、睫狀肌、豎毛肌</b>、大氣道、大動脈、輸精管；其餘為單一單元。"},
+ {q:"單一單元平滑肌能同步收縮，是因為細胞間有大量？",o:["胞橋小體","間隙接合","緊密接合","T 小管"],a:1,e:"<b>間隙接合</b>讓電訊號直接傳遞，整片像一個單位。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

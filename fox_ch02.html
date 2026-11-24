@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 2 章 人體的化學組成</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="2">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 2 章　人體的化學組成</h1>
+  <div class="en">Chapter 2 Chemical Composition of the Body（課本 p.25–52）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">2.1 原子、離子與化學鍵</a>
+  <a class="sub" href="#h1">原子 Atoms</a>
+  <a class="sub" href="#h2">化學鍵、分子與離子化合物 Chemical Bonds, Molecules, and Ionic Compounds</a>
+  <a class="sub" href="#h3">酸、鹼與 pH Acids, Bases, and the pH Scale</a>
+  <a class="sub" href="#h4">有機分子 Organic Molecules</a>
+  <a href="#s2">2.2 碳水化合物與脂質</a>
+  <a class="sub" href="#h5">碳水化合物 Carbohydrates</a>
+  <a class="sub" href="#h6">脂質 Lipids</a>
+  <a href="#s3">2.3 蛋白質</a>
+  <a class="sub" href="#h7">蛋白質的結構 Structure of Proteins</a>
+  <a class="sub" href="#h8">蛋白質的功能 Functions of Proteins</a>
+  <a href="#s4">2.4 核酸</a>
+  <a class="sub" href="#h9">去氧核糖核酸 Deoxyribonucleic Acid（DNA）</a>
+  <a class="sub" href="#h10">核糖核酸 Ribonucleic Acid（RNA）</a>
+  <a href="#s5">本章重點整理</a>
+  <a class="sub" href="#h11">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章說身體要維持恆定；這一章往下看一層：<span class="key">身體是由哪些「分子」做成的？這些分子為什麼會有那樣的性質？</span>之後讀到「膜運輸」「酵素」「激素」「消化吸收」時，背後都是這一章的化學：分子是<b>親水還是疏水</b>、靠什麼<b>鍵</b>連在一起、<b>形狀</b>怎麼決定功能。</div>
+  <p>四個小節由小到大、由簡單到複雜：</p>
+  <div class="path">
+    <div class="step"><span class="sn">2.1</span><div><b>原子、離子與化學鍵</b><br><span class="sq">先認識最小的零件（原子）和把零件接起來的方式（鍵），再看水、酸鹼與 pH。</span></div></div>
+    <div class="arr">↓ 有了零件和接法，就能組出身體的大分子；先從碳、氫、氧組成的兩類開始</div>
+    <div class="step"><span class="sn">2.2</span><div><b>碳水化合物與脂質</b><br><span class="sq">身體的燃料與儲存（葡萄糖、肝醣、脂肪），以及細胞膜的材料（磷脂質、膽固醇）。</span></div></div>
+    <div class="arr">↓ 燃料和膜有了，誰來「做事」？</div>
+    <div class="step"><span class="sn">2.3</span><div><b>蛋白質</b><br><span class="sq">由胺基酸串成，摺成特定形狀；形狀決定功能（酵素、受體、運輸蛋白、結構）。</span></div></div>
+    <div class="arr">↓ 蛋白質要做成什麼形狀，由誰決定？</div>
+    <div class="step"><span class="sn">2.4</span><div><b>核酸</b><br><span class="sq">DNA 儲存「怎麼做蛋白質」的資訊，RNA 負責把資訊拿去用（第 3 章詳述）。</span></div></div>
+  </div>
+  <div class="nut"><b class="t">和生化課的關係：</b>本章的內容在生化課都學過。這裡的重點不在背結構式，而在「這個化學性質，生理上造成什麼結果」。例如：脂溶性激素可以直接穿過細胞膜（第 11 章）、血液 pH 要靠緩衝系統（第 16、17 章）。</div>
+</section>
+
+<!-- ============ 2.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">2.1</span>原子、離子與化學鍵</h2>
+  <div class="en">Atoms, Ions, and Chemical Bonds</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>原子的構造、原子怎麼用<b>化學鍵</b>接成分子，以及<b>水、酸鹼與 pH</b>——身體所有化學反應都在水溶液中進行。</div><div><span class="lt lt2">為什麼放第一節？</span>要理解大分子，先要懂最小的零件和它們互相吸引的規則。特別是「極性」和「氫鍵」，會一路影響到細胞膜、蛋白質形狀、DNA 雙股。</div></div>
+  <div class="oneline">原子靠電子形成化學鍵；水是極性分子，能溶解離子與極性分子；pH 表示氫離子濃度，血液要維持在 7.35–7.45。</div>
+  <div class="think">為什麼油和水不會混在一起，但鹽和糖可以溶在水裡？</div>
+
+  <h3 id="h1">原子 Atoms</h3>
+  <p class="core">原子＝原子核（質子＋中子）＋外圍電子；原子序＝質子數；同位素＝質子相同、中子不同。</p>
+  <p><b>原子</b>是參與化學反應的最小單位。中心是<b>原子核</b> <i class="en-term">nucleus</i>，裡面有帶正電的<b>質子</b> <i class="en-term">proton</i> 和不帶電的<b>中子</b> <i class="en-term">neutron</i>；外圍是帶負電、質量極小的<b>電子</b> <i class="en-term">electron</i>，在不同能階的<b>電子殼層</b> <i class="en-term">shells / orbitals</i> 上運動。</p>
+  <ul class="dots">
+    <li><b>原子序</b> <i class="en-term">atomic number</i>＝質子數，決定這是哪一種元素（氫 1、碳 6、氮 7、氧 8、鈉 11、氯 17、鉀 19、鈣 20）。不帶電的原子，電子數＝質子數。</li>
+    <li><b>原子量（質量數）</b> <i class="en-term">atomic mass</i>＝質子數＋中子數（電子太輕不計）。</li>
+    <li><b>同位素</b> <i class="en-term">isotopes</i>：質子數相同、中子數不同的原子，化學性質相同但質量不同。不穩定的<b>放射性同位素</b>會放出輻射，醫學上用來追蹤或治療，例如碘-131 用於甲狀腺檢查與治療（第 11 章），氫的同位素氘、氚用於研究。</li>
+  </ul>
+  <p>電子殼層有容量上限：第一層最多 2 個、第二層最多 8 個。最外層的電子叫<b>價電子</b> <i class="en-term">valence electrons</i>，決定這個原子會形成幾個鍵：原子傾向讓最外層「填滿」（通常是 8 個，氫是 2 個）而變得穩定。</p>
+  <div class="tblwrap"><table>
+    <tr><th>元素</th><th>價電子</th><th>通常形成幾個共價鍵</th></tr>
+    <tr><td>氫 H</td><td>1</td><td>1</td></tr>
+    <tr><td>氧 O</td><td>6</td><td>2</td></tr>
+    <tr><td>氮 N</td><td>5</td><td>3</td></tr>
+    <tr><td>碳 C</td><td>4</td><td><b>4</b>（所以碳能接出長鏈、分支、環——生物分子的骨架）</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>人體重量約 96% 來自<b>氧、碳、氫、氮</b>四種元素；其餘包括鈣、磷、鉀、硫、鈉、氯、鎂，以及微量的鐵、碘、鋅等。這些礦物質在營養學分為巨量與微量礦物質。</div>
+
+  <h3 id="h2">化學鍵、分子與離子化合物 Chemical Bonds, Molecules, and Ionic Compounds</h3>
+  <p class="core">共價鍵＝共用電子（極性：共用不平均；非極性：平均）；離子鍵＝正負離子互相吸引；氫鍵＝分子之間或分子內部的弱吸引力。</p>
+
+  <figure class="pic"><svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="22" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">共價鍵：共用電子</text>
+    <circle cx="90" cy="80" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="90" y="86" font-size="17" text-anchor="middle" fill="#1e3a8a">H</text>
+    <circle cx="150" cy="80" r="34" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/><text x="150" y="86" font-size="17" text-anchor="middle" fill="#1e3a8a">H</text>
+    <circle cx="120" cy="68" r="5" fill="#f59e0b"/><circle cx="120" cy="92" r="5" fill="#f59e0b"/>
+    <text x="120" y="136" font-size="14" text-anchor="middle">兩個 H 各出一個電子共用 → H₂</text>
+    <text x="360" y="22" font-size="17" fill="#be123c" text-anchor="middle" font-weight="bold">離子鍵：搶走電子</text>
+    <circle cx="315" cy="80" r="34" fill="#fff1f2" stroke="#e11d48" stroke-width="2"/><text x="315" y="86" font-size="16" text-anchor="middle" fill="#9f1239">Na⁺</text>
+    <circle cx="410" cy="80" r="40" fill="#ecfdf5" stroke="#047857" stroke-width="2"/><text x="410" y="86" font-size="16" text-anchor="middle" fill="#065f46">Cl⁻</text>
+    <path d="M335,52 Q362,28 392,46" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#a2)"/><circle cx="362" cy="34" r="5" fill="#f59e0b"/>
+    <text x="360" y="136" font-size="14" text-anchor="middle">Na 給出電子、Cl 拿走 → 正負相吸</text>
+    <defs><marker id="a2" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <line x1="10" y1="156" x2="470" y2="156" stroke="#e5e7eb"/>
+    <text x="240" y="182" font-size="17" fill="#6d28d9" text-anchor="middle" font-weight="bold">極性共價鍵與氫鍵：水分子</text>
+    <g transform="translate(130,262)">
+      <circle cx="0" cy="0" r="30" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="0" y="6" font-size="17" text-anchor="middle">O</text>
+      <circle cx="-34" cy="30" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="-34" y="36" font-size="15" text-anchor="middle">H</text>
+      <circle cx="34" cy="30" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="34" y="36" font-size="15" text-anchor="middle">H</text>
+      <text x="0" y="-38" font-size="16" fill="#dc2626" text-anchor="middle">δ⁻</text>
+      <text x="-60" y="62" font-size="16" fill="#2563eb" text-anchor="middle">δ⁺</text><text x="60" y="62" font-size="16" fill="#2563eb" text-anchor="middle">δ⁺</text>
+    </g>
+    <g transform="translate(310,232)">
+      <circle cx="0" cy="0" r="30" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="0" y="6" font-size="17" text-anchor="middle">O</text>
+      <circle cx="-34" cy="30" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="-34" y="36" font-size="15" text-anchor="middle">H</text>
+      <circle cx="34" cy="30" r="18" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="34" y="36" font-size="15" text-anchor="middle">H</text>
+    </g>
+    <line x1="182" y1="292" x2="270" y2="250" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6 5"/>
+    <text x="250" y="300" font-size="15" fill="#6d28d9">氫鍵（虛線）</text>
+    <text x="240" y="340" font-size="14" text-anchor="middle">O 搶電子較強 → O 端微負（δ⁻）、H 端微正（δ⁺）</text>
+  </svg><figcaption>三種最重要的「接法」。共價鍵最強（分子內部）；離子鍵是正負離子相吸；氫鍵最弱，是一個分子的 δ⁺ 氫被另一個分子的 δ⁻ 氧或氮吸引。</figcaption></figure>
+
+  <h4>共價鍵 Covalent Bonds</h4>
+  <p class="core">共用電子；<b>非極性</b>＝平均共用（C–H）、<b>極性</b>＝偏向 O 或 N（O–H），使分子一端 δ⁻、一端 δ⁺。</p>
+  <p>兩個原子<b>共用一對電子</b>形成的鍵叫<b>共價鍵</b> <i class="en-term">covalent bond</i>，是生物分子內部最主要、最強的鍵。共用兩對電子就是雙鍵（如 O=O、脂肪酸中的 C=C）。由共價鍵連起來的一群原子就是<b>分子</b> <i class="en-term">molecule</i>。</p>
+  <ul class="dots">
+    <li><b>非極性共價鍵</b> <i class="en-term">nonpolar covalent bond</i>：兩個原子吸電子的力量（<b>電負度</b> <i class="en-term">electronegativity</i>）差不多，電子平均共用。例如 C–C、C–H。以這類鍵為主的分子（如油脂）是<b>非極性</b>的。</li>
+    <li><b>極性共價鍵</b> <i class="en-term">polar covalent bond</i>：一方吸電子較強（O、N 很強），電子偏向它，使它帶<b>部分負電</b>（δ⁻），另一方帶<b>部分正電</b>（δ⁺）。例如 O–H、N–H。水 H₂O 就是極性分子：氧端偏負、氫端偏正。</li>
+  </ul>
+
+  <h4>離子鍵 Ionic Bonds</h4>
+  <p class="core">電子被整個搶走 → 陽離子＋陰離子相吸（NaCl）；在水中被水分子包圍而解離 → 電解質。</p>
+  <p>當兩原子的吸電子能力差很多時，一方會把電子<b>整個搶走</b>：失去電子的變成帶正電的<b>陽離子</b> <i class="en-term">cation</i>，得到電子的變成帶負電的<b>陰離子</b> <i class="en-term">anion</i>。正負離子互相吸引，就是<b>離子鍵</b> <i class="en-term">ionic bond</i>，例如食鹽 NaCl（Na⁺ 與 Cl⁻）。</p>
+  <p>離子鍵在乾燥時很強，但放進水裡會被<b>水分子包圍而分開</b>：水的 δ⁻ 氧朝向 Na⁺、δ⁺ 氫朝向 Cl⁻，每個離子被一層水分子包住（<b>水合殼</b> <i class="en-term">hydration spheres</i>），於是鹽就「溶解」了。溶在水中能導電的離子稱為<b>電解質</b> <i class="en-term">electrolytes</i>，如 Na⁺、K⁺、Cl⁻、Ca²⁺、HCO₃⁻。</p>
+
+  <h4>氫鍵 Hydrogen Bonds</h4>
+  <p class="core">δ⁺ 的 H 被 δ⁻ 的 O/N 吸引，單個很弱、很多個很重要：水的高比熱（流汗散熱）、蛋白質形狀、DNA 配對。</p>
+  <p>極性分子上帶 δ⁺ 的氫，會被另一個分子（或同一分子另一處）帶 δ⁻ 的氧或氮吸引，這種弱吸引力叫<b>氫鍵</b> <i class="en-term">hydrogen bond</i>。單一氫鍵很弱（約共價鍵的 1/20），但數量多時影響很大：</p>
+  <ul class="dots">
+    <li>水分子之間的氫鍵讓水有很高的<b>比熱</b>與<b>蒸發熱</b>——吸很多熱溫度才上升、蒸發時帶走大量熱，所以流汗能有效散熱（第 1 章體溫調節）。</li>
+    <li>氫鍵維持蛋白質摺疊的形狀（2.3）和 DNA 兩股的配對（2.4）。</li>
+  </ul>
+
+  <h4>親水與疏水</h4>
+  <p class="core">親水＝極性與離子（糖、鹽）；疏水＝非極性（油脂）。脂溶性物質可直接穿過細胞膜。</p>
+  <p>能和水形成氫鍵或被水包圍的分子（極性分子、離子）叫<b>親水性</b> <i class="en-term">hydrophilic</i>，容易溶於水，如葡萄糖、胺基酸、鹽。非極性分子無法和水作用，反而被水「擠在一起」，叫<b>疏水性</b> <i class="en-term">hydrophobic</i>，如油脂、膽固醇。這就是「油水不相溶」的原因。</p>
+  <div class="eg"><b class="t">生理上的意義：</b>①細胞膜內部是疏水的，所以離子和葡萄糖<b>不能自己穿過</b>，需要通道或運輸蛋白；脂溶性物質（O₂、CO₂、類固醇激素、酒精）則可以直接穿過（第 6 章）。②疏水的脂質在血液中要搭「脂蛋白」才能運送（第 13、18 章）。</div>
+
+  <h3 id="h3">酸、鹼與 pH Acids, Bases, and the pH Scale</h3>
+  <p class="core">酸＝釋出 H⁺；鹼＝接受 H⁺（或釋出 OH⁻）；pH 越小越酸，差 1 等於 H⁺ 差 10 倍；血液 pH 7.35–7.45，靠碳酸氫根緩衝。</p>
+  <p>水分子會有極少部分解離：H₂O ⇌ H⁺ ＋ OH⁻。純水中 H⁺ 和 OH⁻ 濃度相等，各為 10⁻⁷ M，這就是<b>中性</b>。</p>
+  <ul class="dots">
+    <li><b>酸</b> <i class="en-term">acid</i>：能<b>釋出 H⁺</b>（質子）的分子，使溶液 H⁺ 增加。例：鹽酸 HCl、碳酸 H₂CO₃、乳酸。</li>
+    <li><b>鹼</b> <i class="en-term">base</i>：能<b>接受 H⁺</b>（或釋出 OH⁻ 與 H⁺ 結合）的分子，使溶液 H⁺ 減少。例：碳酸氫根 HCO₃⁻、氫氧化鈉 NaOH。</li>
+    <li><b>pH</b> ＝ −log[H⁺]，也就是氫離子濃度的負對數。所以 <span class="key">pH 越小越酸；pH 差 1，H⁺ 濃度差 10 倍</span>。pH 7 中性、&lt;7 酸性、&gt;7 鹼性。</li>
+  </ul>
+
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><linearGradient id="phg" x1="0" x2="1"><stop offset="0" stop-color="#dc2626"/><stop offset=".35" stop-color="#f59e0b"/><stop offset=".5" stop-color="#22c55e"/><stop offset=".7" stop-color="#3b82f6"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+    <rect x="20" y="70" width="440" height="30" rx="8" fill="url(#phg)"/>
+    <g font-size="13" fill="#374151" text-anchor="middle">
+      <text x="20" y="118">0</text><text x="83" y="118">2</text><text x="146" y="118">4</text><text x="208" y="118">6</text><text x="240" y="118">7</text><text x="271" y="118">8</text><text x="334" y="118">10</text><text x="397" y="118">12</text><text x="460" y="118">14</text></g>
+    <text x="60" y="60" font-size="15" fill="#b91c1c" text-anchor="middle">胃液 1.5–3.5</text><line x1="60" y1="64" x2="60" y2="70" stroke="#b91c1c" stroke-width="2"/>
+    <text x="170" y="40" font-size="14" fill="#92400e" text-anchor="middle">黑咖啡 ≈ 5</text>
+    <rect x="249" y="62" width="4" height="46" fill="#111827"/>
+    <text x="300" y="40" font-size="16" fill="#111827" text-anchor="middle" font-weight="bold">血液 7.35–7.45</text>
+    <line x1="270" y1="44" x2="252" y2="62" stroke="#111827"/>
+    <text x="300" y="150" font-size="14" fill="#1d4ed8" text-anchor="middle">胰液 ≈ 8（含 HCO₃⁻）</text><line x1="290" y1="136" x2="290" y2="100" stroke="#1d4ed8"/>
+    <text x="80" y="160" font-size="16" fill="#b91c1c" font-weight="bold" text-anchor="middle">← 越酸（H⁺ 越多）</text>
+    <text x="400" y="190" font-size="16" fill="#6d28d9" font-weight="bold" text-anchor="middle">越鹼（H⁺ 越少）→</text>
+    <text x="240" y="212" font-size="13" fill="#374151" text-anchor="middle">血液 &lt;7.35＝酸中毒；&gt;7.45＝鹼中毒</text>
+  </svg><figcaption>pH 尺。每差 1 格，H⁺ 濃度差 10 倍：胃液 pH 2 比血液 pH 7.4 的 H⁺ 多了約 25 萬倍。</figcaption></figure>
+
+  <h4>緩衝 Buffers</h4>
+  <p>身體代謝不斷產生酸（例如 CO₂ 溶於水形成碳酸、運動時產生乳酸），但動脈血 pH 必須維持在 <b>7.35–7.45</b>（平均 7.40）。能抵抗 pH 變化的系統叫<b>緩衝</b> <i class="en-term">buffer</i>，通常由一個弱酸和它的鹼形成一對。血液最重要的是<b>碳酸氫根緩衝系統</b>：</p>
+  <div class="tblwrap"><table>
+    <tr><th colspan="2" style="text-align:center">CO₂ ＋ H₂O ⇌ H₂CO₃（碳酸）⇌ H⁺ ＋ HCO₃⁻（碳酸氫根）</th></tr>
+    <tr><td><b>酸太多</b>（H⁺↑）</td><td>HCO₃⁻ 接住 H⁺ → 變成 H₂CO₃ → 分解成 CO₂ 由肺呼出。H⁺ 被「吃掉」，pH 變化很小。</td></tr>
+    <tr><td><b>鹼太多</b>（H⁺↓）</td><td>H₂CO₃ 解離出 H⁺ 補上。</td></tr>
+  </table></div>
+  <p>這也是為什麼<b>肺</b>（調節 CO₂）和<b>腎</b>（調節 HCO₃⁻ 與排出 H⁺）是酸鹼平衡的兩大器官（第 16、17 章）。</p>
+  <ul class="dots">
+    <li><b>酸中毒</b> <i class="en-term">acidosis</i>：血液 pH &lt; 7.35。例：糖尿病酮酸中毒、肺換氣不足使 CO₂ 堆積、嚴重腹瀉流失 HCO₃⁻。</li>
+    <li><b>鹼中毒</b> <i class="en-term">alkalosis</i>：血液 pH &gt; 7.45。例：過度換氣（CO₂ 呼出太多）、大量嘔吐流失胃酸。</li>
+  </ul>
+  <div class="warn"><b class="t">易混淆：</b>腹瀉 → 流失腸道的 HCO₃⁻ → <b>酸</b>中毒；嘔吐 → 流失胃酸 HCl → <b>鹼</b>中毒。國考考過腹瀉與嘔吐的病因與後果。</div>
+
+  <h3 id="h4">有機分子 Organic Molecules</h3>
+  <p class="core">有機分子＝以碳為骨架的分子；官能基決定性質；同樣分子式但形狀不同叫異構物，身體只用 L-胺基酸和 D-醣。</p>
+  <p><b>有機分子</b> <i class="en-term">organic molecules</i> 是含碳（且通常含氫）的分子。碳能形成 4 個共價鍵，可以接成長鏈、分支或環狀，成為各種生物分子的骨架。碳氫骨架本身是非極性的；接上不同的<b>官能基</b> <i class="en-term">functional groups</i>，分子就有不同性質：</p>
+  <div class="tblwrap"><table>
+    <tr><th>官能基</th><th>結構</th><th>性質與例子</th></tr>
+    <tr><td>羥基 hydroxyl</td><td>–OH</td><td>極性、親水；醣類、醇類（如乙醇）</td></tr>
+    <tr><td>羰基 carbonyl</td><td>C=O</td><td>醛、酮；葡萄糖、果糖、酮體</td></tr>
+    <tr><td>羧基 carboxyl</td><td>–COOH</td><td>會釋出 H⁺ → <b>酸性</b>；脂肪酸、胺基酸、乳酸</td></tr>
+    <tr><td>胺基 amino</td><td>–NH₂</td><td>會接受 H⁺ → 鹼性；胺基酸</td></tr>
+    <tr><td>磷酸基 phosphate</td><td>–PO₄</td><td>帶負電；磷脂質、核苷酸、ATP</td></tr>
+  </table></div>
+  <h4>立體異構物 Stereoisomers</h4>
+  <p class="core">互為鏡像的分子（像左右手）；酵素只認一種：人體用 L-胺基酸、D-醣。</p>
+  <p>分子式相同、原子連接方式也相同，但<b>空間排列互為鏡像</b>的分子，叫<b>立體異構物（鏡像異構物）</b> <i class="en-term">stereoisomers / enantiomers</i>，就像左手和右手。它們的化學式一樣，但酵素和受體「認形狀」，只認得其中一種：<span class="key">人體的蛋白質只用 L 型胺基酸，醣類主要是 D 型</span>（如 D-葡萄糖）。</p>
+  <div class="eg"><b class="t">例子：</b>藥物沙利竇邁（thalidomide）的一種鏡像有止吐效果、另一種會造成胎兒畸形，這是「形狀決定作用」的著名例子。</div>
+
+  <details class="stop"><summary>回到開頭：為什麼鹽和糖可以溶在水裡，油不行？</summary>
+    <div>鹽是離子、糖有許多 –OH（極性），都能被水分子的 δ⁺／δ⁻ 吸引包圍，所以親水；油脂主要是 C–C、C–H 非極性鍵，無法和水作用，是疏水的。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>原子＝質子＋中子（原子核）＋電子；原子序＝質子數；同位素＝中子數不同；價電子決定成鍵數（碳 4 個）。</li>
+      <li>共價鍵（共用電子，最強）：非極性（平均共用）與極性（O、N 端帶 δ⁻）；離子鍵（電子轉移、正負相吸，在水中解離成電解質）；氫鍵（δ⁺ H 與 δ⁻ O/N 的弱吸引）。</li>
+      <li>親水＝極性、離子；疏水＝非極性。細胞膜內部疏水，脂溶性物質可直接穿過。</li>
+      <li>酸釋出 H⁺、鹼接受 H⁺；pH＝−log[H⁺]，差 1 等於 10 倍；血液 7.35–7.45。</li>
+      <li>碳酸氫根緩衝：CO₂＋H₂O ⇌ H₂CO₃ ⇌ H⁺＋HCO₃⁻；肺管 CO₂、腎管 HCO₃⁻。</li>
+      <li>有機分子以碳為骨架；官能基決定性質（羧基酸性、胺基鹼性）；人體用 L-胺基酸、D-醣。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>原子／原子核</td><td>atom / nucleus</td><td>質子／中子／電子</td><td>proton / neutron / electron</td></tr>
+      <tr><td>原子序／原子量</td><td>atomic number / atomic mass</td><td>同位素</td><td>isotope</td></tr>
+      <tr><td>價電子</td><td>valence electron</td><td>共價鍵</td><td>covalent bond</td></tr>
+      <tr><td>極性／非極性</td><td>polar / nonpolar</td><td>電負度</td><td>electronegativity</td></tr>
+      <tr><td>離子鍵</td><td>ionic bond</td><td>陽離子／陰離子</td><td>cation / anion</td></tr>
+      <tr><td>電解質</td><td>electrolyte</td><td>氫鍵</td><td>hydrogen bond</td></tr>
+      <tr><td>親水性／疏水性</td><td>hydrophilic / hydrophobic</td><td>酸／鹼</td><td>acid / base</td></tr>
+      <tr><td>緩衝</td><td>buffer</td><td>碳酸氫根</td><td>bicarbonate</td></tr>
+      <tr><td>酸中毒／鹼中毒</td><td>acidosis / alkalosis</td><td>官能基</td><td>functional group</td></tr>
+      <tr><td>有機分子</td><td>organic molecule</td><td>立體異構物</td><td>stereoisomer</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 2.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">2.2</span>碳水化合物與脂質</h2>
+  <div class="en">Carbohydrates and Lipids</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>兩大類由碳、氫、氧組成的分子：<b>碳水化合物</b>（主要燃料、肝醣儲存）與<b>脂質</b>（高效率能量儲存、細胞膜、類固醇激素）。</div><div><span class="lt lt2">為什麼接在 2.1 後面？</span>2.1 學了極性與疏水；這一節馬上用上：醣類多 –OH、親水，所以能溶在血液裡；脂質非極性、疏水，所以能當細胞膜的屏障，在血中卻需要載體。</div></div>
+  <div class="oneline">醣類由單醣接成（脫水合成），消化時水解回單醣；脂質不溶於水，包括三酸甘油酯、磷脂質、類固醇與前列腺素。</div>
+  <div class="think">吃下去的澱粉和你肝臟裡的肝醣，都是由葡萄糖串成的，為什麼一個在植物、一個在動物？身體為什麼不把所有能量都存成肝醣？</div>
+
+  <h3 id="h5">碳水化合物 Carbohydrates</h3>
+  <p class="core">單醣（葡萄糖、果糖、半乳糖）→ 雙醣（蔗糖、乳糖、麥芽糖）→ 多醣（澱粉、肝醣、纖維素）；接起來＝脫水合成，拆開＝水解。</p>
+  <p><b>碳水化合物</b> <i class="en-term">carbohydrates</i> 的組成大致是 (CH₂O)ₙ，即碳與水的比例，所以叫「碳水」。分子上有許多 –OH，<b>親水</b>。依大小分三類：</p>
+  <div class="tblwrap"><table>
+    <tr><th>類別</th><th>例子</th><th>重點</th></tr>
+    <tr><td><b>單醣</b><br>monosaccharides</td><td><b>葡萄糖</b> glucose、<b>果糖</b> fructose、<b>半乳糖</b> galactose（都是 C₆H₁₂O₆ 的六碳醣）；五碳醣有核糖、去氧核糖</td><td>三者分子式相同、結構不同（<b>結構異構物</b>）。葡萄糖是血糖，也是腦的主要燃料</td></tr>
+    <tr><td><b>雙醣</b><br>disaccharides</td><td><b>蔗糖</b>＝葡萄糖＋果糖<br><b>乳糖</b>＝葡萄糖＋半乳糖<br><b>麥芽糖</b>＝葡萄糖＋葡萄糖</td><td>由兩個單醣接成；小腸刷狀緣的雙醣酶把它們切開才能吸收（第 18 章）</td></tr>
+    <tr><td><b>多醣</b><br>polysaccharides</td><td><b>澱粉</b> starch（植物）、<b>肝醣</b> glycogen（動物）、纖維素 cellulose（植物）</td><td>澱粉與肝醣都是葡萄糖以 α 鍵串成；肝醣<b>分支更多</b>，可以從很多末端同時快速切下葡萄糖</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>纖維素的葡萄糖之間是 <b>β 鍵</b>，人體沒有能切 β 鍵的酵素，所以無法消化，成為<b>膳食纖維</b>；部分纖維可被大腸菌發酵成短鏈脂肪酸（第 18 章）。乳糖不耐症則是缺乏乳糖酶，乳糖進入大腸被細菌發酵而脹氣腹瀉。</div>
+
+  <h4>脫水合成與水解 Dehydration Synthesis and Hydrolysis</h4>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a22" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <polygon points="60,40 90,28 115,45 108,75 75,80 52,65" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="84" y="60" font-size="14" text-anchor="middle">葡</text>
+    <text x="122" y="64" font-size="13" fill="#2563eb">OH</text><text x="150" y="58" font-size="20">＋</text>
+    <text x="172" y="64" font-size="13" fill="#2563eb">H</text>
+    <polygon points="200,40 230,28 255,45 248,75 215,80 192,65" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="224" y="60" font-size="14" text-anchor="middle">葡</text>
+    <path d="M268,56 L318,56" stroke="#374151" stroke-width="2.5" marker-end="url(#a22)"/>
+    <polygon points="330,40 360,28 385,45 378,75 345,80 322,65" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="389" y="60" font-size="13">–O–</text>
+    <polygon points="418,40 448,28 473,45 466,75 433,80 410,65" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="293" y="44" font-size="13" text-anchor="middle" fill="#2563eb">放出 H₂O</text>
+    <text x="240" y="112" font-size="16" font-weight="bold" fill="#92400e" text-anchor="middle">脫水合成：接起來，放出一分子水（例：葡萄糖 → 肝醣）</text>
+    <line x1="10" y1="130" x2="470" y2="130" stroke="#e5e7eb"/>
+    <polygon points="40,160 70,148 95,165 88,195 55,200 32,185" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="99" y="180" font-size="13">–O–</text>
+    <polygon points="128,160 158,148 183,165 176,195 143,200 120,185" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="205" y="176" font-size="18">＋ H₂O</text>
+    <path d="M272,176 L322,176" stroke="#374151" stroke-width="2.5" marker-end="url(#a22)"/>
+    <polygon points="340,160 370,148 395,165 388,195 355,200 332,185" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <polygon points="420,160 450,148 475,165 468,195 435,200 412,185" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <text x="240" y="225" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">水解：加入一分子水，切開（例：消化澱粉）</text>
+  </svg><figcaption>醣、脂肪、蛋白質、核酸都用同一套規則：合成時脫水、分解時加水（水解）。</figcaption></figure>
+  <ul class="dots">
+    <li><b>脫水合成</b> <i class="en-term">dehydration synthesis（condensation）</i>：兩個小分子接起來時，一方拿掉 –OH、另一方拿掉 –H，合起來放出一分子 H₂O。身體合成肝醣、三酸甘油酯、蛋白質都用這種方式。</li>
+    <li><b>水解</b> <i class="en-term">hydrolysis</i>：反過來，加入一分子水把鍵切斷。<span class="key">消化就是一連串的水解反應</span>，由消化酶催化（第 18 章）；肝醣分解成葡萄糖也是。</li>
+  </ul>
+
+  <h3 id="h6">脂質 Lipids</h3>
+  <p class="core">脂質＝不溶於水、溶於有機溶劑的分子：三酸甘油酯（儲能）、酮體、磷脂質（細胞膜）、類固醇（膽固醇、類固醇激素）、前列腺素（局部訊號）。</p>
+  <p><b>脂質</b> <i class="en-term">lipids</i> 的共同點不是結構，而是性質：<b>非極性、不溶於水</b>，可溶於有機溶劑（如乙醚、酒精）。主要有以下幾類。</p>
+
+  <h4>三酸甘油酯（脂肪）Triglycerides</h4>
+  <p><b>三酸甘油酯</b> <i class="en-term">triglyceride / triacylglycerol</i> 由一個<b>甘油</b> <i class="en-term">glycerol</i>（三碳醇）以脫水合成接上<b>三個脂肪酸</b> <i class="en-term">fatty acids</i> 而成，是脂肪組織儲存能量的形式。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="20" y="40" width="58" height="150" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="49" y="120" font-size="16" text-anchor="middle" fill="#92400e">甘油</text>
+    <g stroke="#0f766e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M78,62 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l20,-10"/>
+      <path d="M78,115 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l14,16 l20,-4 l20,10 l20,-10" stroke="#dc2626"/>
+      <path d="M78,168 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10 l20,-10 l20,10"/>
+    </g>
+    <text x="330" y="52" font-size="15" fill="#0f766e">飽和：全單鍵</text><text x="330" y="72" font-size="15" fill="#0f766e">→ 直的</text>
+    <text x="345" y="112" font-size="15" fill="#dc2626">不飽和：有 C=C</text>
+    <text x="345" y="132" font-size="15" fill="#dc2626">（順式）→ 彎折</text>
+    <text x="330" y="170" font-size="15" fill="#0f766e">脂肪酸（3 條）</text>
+    <text x="240" y="220" font-size="14" text-anchor="middle">飽和脂肪酸可以排得很緊 → 室溫固態（豬油、奶油）</text>
+    <text x="240" y="242" font-size="14" text-anchor="middle">不飽和有彎折、排不緊 → 室溫液態（植物油）</text>
+  </svg><figcaption>三酸甘油酯：一個甘油＋三條脂肪酸。紅色那條在雙鍵處彎折，是順式不飽和脂肪酸。</figcaption></figure>
+  <ul class="dots">
+    <li><b>飽和脂肪酸</b> <i class="en-term">saturated fatty acid</i>：碳鏈全是單鍵，每個碳都接滿了氫（「被氫飽和」），鏈是直的。</li>
+    <li><b>不飽和脂肪酸</b> <i class="en-term">unsaturated fatty acid</i>：有一個（單元不飽和）或多個（多元不飽和）C=C 雙鍵。天然多為<b>順式</b>（cis），在雙鍵處彎折。</li>
+    <li><b>反式脂肪</b> <i class="en-term">trans fat</i>：油脂部分氫化時產生，雙鍵兩邊的氫在相反側，鏈變直，性質像飽和脂肪，會升高 LDL、降低 HDL，增加心血管疾病風險。</li>
+  </ul>
+  <p>脂肪是<b>最有效率的儲能形式</b>：每克約 9 大卡（醣與蛋白質約 4 大卡），而且不帶水；肝醣則會吸附大量水分，同樣能量要重好幾倍。所以身體只存少量肝醣（約一天的量），大部分能量存成脂肪。</p>
+
+  <h4>酮體 Ketone Bodies</h4>
+  <p class="core">禁食、糖尿病時肝臟由脂肪酸做出乙醯乙酸、β-羥丁酸、丙酮；可當燃料，過多→酮酸中毒。</p>
+  <p>禁食、低醣飲食或未控制的第 1 型糖尿病時，脂肪大量分解，肝臟把脂肪酸轉成<b>酮體</b> <i class="en-term">ketone bodies</i>：乙醯乙酸 acetoacetic acid、β-羥丁酸 β-hydroxybutyric acid、丙酮 acetone。酮體可供腦、心臟、肌肉當燃料；但前兩者是<b>酸</b>，大量堆積會造成<b>酮酸中毒</b> <i class="en-term">ketoacidosis</i>，呼吸有丙酮的水果味（第 19 章）。</p>
+
+  <h4>磷脂質 Phospholipids</h4>
+  <p><b>磷脂質</b> <i class="en-term">phospholipids</i> 的結構像三酸甘油酯，但只有<b>兩條</b>脂肪酸，第三個位置接的是含<b>磷酸</b>的極性基團（例如卵磷脂 lecithin 接的是膽鹼）。於是一個分子同時有：</p>
+  <ul class="dots">
+    <li><b>親水的頭</b>（帶電的磷酸基團），喜歡朝向水。</li>
+    <li><b>疏水的尾</b>（兩條脂肪酸），避開水。</li>
+  </ul>
+  <p>這種一端親水、一端疏水的分子叫<b>雙性分子</b> <i class="en-term">amphipathic</i>。放在水中時，它們會自動排列：</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="130" y="22" font-size="16" fill="#1e3a8a" text-anchor="middle" font-weight="bold">細胞膜：磷脂雙層</text>
+    <rect x="10" y="30" width="240" height="190" fill="#eff6ff"/>
+    <text x="130" y="48" font-size="13" fill="#1d4ed8" text-anchor="middle">細胞外液（水）</text>
+    <text x="130" y="212" font-size="13" fill="#1d4ed8" text-anchor="middle">細胞內液（水）</text>
+    <rect x="20" y="104" width="220" height="44" fill="#fefce8"/>
+<g><circle cx="30" cy="74" r="9" fill="#f87171"/><path d="M27,83 l0,26 M33,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="30" cy="178" r="9" fill="#f87171"/><path d="M27,143 l0,26 M33,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="50" cy="74" r="9" fill="#f87171"/><path d="M47,83 l0,26 M53,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="50" cy="178" r="9" fill="#f87171"/><path d="M47,143 l0,26 M53,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="70" cy="74" r="9" fill="#f87171"/><path d="M67,83 l0,26 M73,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="70" cy="178" r="9" fill="#f87171"/><path d="M67,143 l0,26 M73,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="90" cy="74" r="9" fill="#f87171"/><path d="M87,83 l0,26 M93,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="90" cy="178" r="9" fill="#f87171"/><path d="M87,143 l0,26 M93,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="110" cy="74" r="9" fill="#f87171"/><path d="M107,83 l0,26 M113,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="110" cy="178" r="9" fill="#f87171"/><path d="M107,143 l0,26 M113,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="130" cy="74" r="9" fill="#f87171"/><path d="M127,83 l0,26 M133,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="130" cy="178" r="9" fill="#f87171"/><path d="M127,143 l0,26 M133,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="150" cy="74" r="9" fill="#f87171"/><path d="M147,83 l0,26 M153,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="150" cy="178" r="9" fill="#f87171"/><path d="M147,143 l0,26 M153,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="170" cy="74" r="9" fill="#f87171"/><path d="M167,83 l0,26 M173,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="170" cy="178" r="9" fill="#f87171"/><path d="M167,143 l0,26 M173,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="190" cy="74" r="9" fill="#f87171"/><path d="M187,83 l0,26 M193,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="190" cy="178" r="9" fill="#f87171"/><path d="M187,143 l0,26 M193,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="210" cy="74" r="9" fill="#f87171"/><path d="M207,83 l0,26 M213,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="210" cy="178" r="9" fill="#f87171"/><path d="M207,143 l0,26 M213,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="230" cy="74" r="9" fill="#f87171"/><path d="M227,83 l0,26 M233,83 l0,26" stroke="#ca8a04" stroke-width="2.5"/><circle cx="230" cy="178" r="9" fill="#f87171"/><path d="M227,143 l0,26 M233,143 l0,26" stroke="#ca8a04" stroke-width="2.5"/></g>
+    <text x="300" y="22" font-size="16" fill="#6d28d9" text-anchor="middle" font-weight="bold">微膠粒</text>
+    <circle cx="380" cy="120" r="80" fill="#eff6ff"/>
+    <circle cx="380" cy="120" r="34" fill="#fefce8"/><line x1="436.0" y1="120.0" x2="416.0" y2="120.0" stroke="#ca8a04" stroke-width="2.5"/><circle cx="436.0" cy="120.0" r="9" fill="#f87171"/><line x1="431.7" y1="141.4" x2="413.3" y2="133.8" stroke="#ca8a04" stroke-width="2.5"/><circle cx="431.7" cy="141.4" r="9" fill="#f87171"/><line x1="419.6" y1="159.6" x2="405.5" y2="145.5" stroke="#ca8a04" stroke-width="2.5"/><circle cx="419.6" cy="159.6" r="9" fill="#f87171"/><line x1="401.4" y1="171.7" x2="393.8" y2="153.3" stroke="#ca8a04" stroke-width="2.5"/><circle cx="401.4" cy="171.7" r="9" fill="#f87171"/><line x1="380.0" y1="176.0" x2="380.0" y2="156.0" stroke="#ca8a04" stroke-width="2.5"/><circle cx="380.0" cy="176.0" r="9" fill="#f87171"/><line x1="358.6" y1="171.7" x2="366.2" y2="153.3" stroke="#ca8a04" stroke-width="2.5"/><circle cx="358.6" cy="171.7" r="9" fill="#f87171"/><line x1="340.4" y1="159.6" x2="354.5" y2="145.5" stroke="#ca8a04" stroke-width="2.5"/><circle cx="340.4" cy="159.6" r="9" fill="#f87171"/><line x1="328.3" y1="141.4" x2="346.7" y2="133.8" stroke="#ca8a04" stroke-width="2.5"/><circle cx="328.3" cy="141.4" r="9" fill="#f87171"/><line x1="324.0" y1="120.0" x2="344.0" y2="120.0" stroke="#ca8a04" stroke-width="2.5"/><circle cx="324.0" cy="120.0" r="9" fill="#f87171"/><line x1="328.3" y1="98.6" x2="346.7" y2="106.2" stroke="#ca8a04" stroke-width="2.5"/><circle cx="328.3" cy="98.6" r="9" fill="#f87171"/><line x1="340.4" y1="80.4" x2="354.5" y2="94.5" stroke="#ca8a04" stroke-width="2.5"/><circle cx="340.4" cy="80.4" r="9" fill="#f87171"/><line x1="358.6" y1="68.3" x2="366.2" y2="86.7" stroke="#ca8a04" stroke-width="2.5"/><circle cx="358.6" cy="68.3" r="9" fill="#f87171"/><line x1="380.0" y1="64.0" x2="380.0" y2="84.0" stroke="#ca8a04" stroke-width="2.5"/><circle cx="380.0" cy="64.0" r="9" fill="#f87171"/><line x1="401.4" y1="68.3" x2="393.8" y2="86.7" stroke="#ca8a04" stroke-width="2.5"/><circle cx="401.4" cy="68.3" r="9" fill="#f87171"/><line x1="419.6" y1="80.4" x2="405.5" y2="94.5" stroke="#ca8a04" stroke-width="2.5"/><circle cx="419.6" cy="80.4" r="9" fill="#f87171"/><line x1="431.7" y1="98.6" x2="413.3" y2="106.2" stroke="#ca8a04" stroke-width="2.5"/><circle cx="431.7" cy="98.6" r="9" fill="#f87171"/>
+    <text x="380" y="125" font-size="13" text-anchor="middle" fill="#92400e">疏水核心</text>
+    <text x="380" y="222" font-size="13" text-anchor="middle">小腸中膽鹽包住脂肪成微膠粒</text>
+  </svg><figcaption>磷脂質的親水頭（紅球）朝向水，疏水尾（黃線）互相靠在一起。兩層頭朝外、尾朝內，就是細胞膜的「磷脂雙層」；排成小球就是微膠粒。</figcaption></figure>
+  <ul class="dots">
+    <li>排成<b>兩層</b>，頭朝向兩側的水、尾巴藏在中間 → <b>磷脂雙層</b> <i class="en-term">phospholipid bilayer</i>，就是<b>細胞膜</b>的基本結構（第 3、6 章）。</li>
+    <li>排成小球，頭朝外、尾朝內 → <b>微膠粒</b> <i class="en-term">micelle</i>。小腸中的膽鹽（膽汁酸鹽）也是雙性分子，把脂肪包成微膠粒，才能被消化酶作用並靠近腸細胞吸收（第 18 章）。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>卵磷脂是常見的食品乳化劑（如蛋黃讓美乃滋油水不分離），原理就是雙性分子把油滴包住分散在水中。</div>
+
+  <h4>類固醇 Steroids</h4>
+  <p class="core">四環結構；膽固醇＝膜成分＋類固醇激素、膽汁酸、維生素 D 的原料；類固醇激素可直接穿過細胞膜。</p>
+  <p><b>類固醇</b> <i class="en-term">steroids</i> 的結構和脂肪完全不同：是<b>四個相連的碳環</b>（三個六碳環＋一個五碳環），但同樣非極性，所以歸為脂質。最重要的是<b>膽固醇</b> <i class="en-term">cholesterol</i>：</p>
+  <ul class="dots">
+    <li>是細胞膜的成分，調節膜的流動性。</li>
+    <li>是所有<b>類固醇激素</b>的原料：腎上腺皮質的皮質醇、醛固酮；性腺的睪固酮、雌激素、黃體素（第 11、20 章）。</li>
+    <li>是<b>膽汁酸</b>的原料（肝臟合成，第 18 章），也是<b>維生素 D</b> 的前驅物（皮膚中的 7-脫氫膽固醇）。</li>
+  </ul>
+  <p>因為類固醇激素是脂溶性的，它們能<b>直接穿過細胞膜</b>，和細胞內的受體結合，這和蛋白質類激素的作用方式完全不同（第 11 章）。</p>
+
+  <h4>前列腺素 Prostaglandins</h4>
+  <p class="core">由花生四烯酸生成，局部作用：發炎、發燒、疼痛、血管與子宮、胃黏膜保護；NSAIDs 抑制其合成。</p>
+  <p><b>前列腺素</b> <i class="en-term">prostaglandins</i> 是由 20 碳的<b>花生四烯酸</b> <i class="en-term">arachidonic acid</i>（一種 ω-6 多元不飽和脂肪酸，存在細胞膜磷脂質中）轉變而成的脂肪酸衍生物，屬於<b>類二十碳酸</b> <i class="en-term">eicosanoids</i>。它們幾乎在所有組織生成，作用在<b>附近</b>的細胞（局部調節），功能多樣：引起發炎、發燒與疼痛，影響血管收縮或擴張、血小板凝集、子宮收縮、胃黏膜保護等。</p>
+  <div class="eg"><b class="t">例子：</b>阿斯匹靈和其他非類固醇抗發炎藥（NSAIDs）抑制製造前列腺素的酵素（環氧化酶 COX），所以能退燒、止痛、消炎；但也減少胃黏膜的保護性前列腺素，長期使用可能造成胃潰瘍（第 11、18 章）。</div>
+  <div class="nut"><b class="t">營養連結：</b>ω-3 脂肪酸（如魚油的 EPA）也能做成類二十碳酸，但產物的發炎作用較弱，這是魚油被認為有抗發炎效果的原因之一。</div>
+
+  <details class="stop"><summary>回到開頭：身體為什麼不把所有能量都存成肝醣？</summary>
+    <div>肝醣親水，會帶著大量水分一起存；每克能量又只有脂肪的一半左右。若一個人的能量儲存全部改成肝醣，體重會多出好幾十公斤。脂肪疏水、不帶水、每克約 9 大卡，是最省空間的儲存方式；肝醣則用在需要快速取用葡萄糖的時候。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>單醣：葡萄糖、果糖、半乳糖（C₆H₁₂O₆ 異構物）。雙醣：蔗糖＝葡＋果、乳糖＝葡＋半乳、麥芽糖＝葡＋葡。多醣：澱粉（植物）、肝醣（動物，分支多）、纖維素（β 鍵，人無法消化）。</li>
+      <li>脫水合成＝接起來放出水；水解＝加水切開（消化）。</li>
+      <li>三酸甘油酯＝甘油＋3 脂肪酸；飽和直、不飽和（順式）彎；反式脂肪升 LDL、降 HDL；脂肪每克約 9 大卡，最有效率的儲能。</li>
+      <li>酮體（乙醯乙酸、β-羥丁酸、丙酮）在禁食、糖尿病時增加；過多造成酮酸中毒。</li>
+      <li>磷脂質是雙性分子 → 磷脂雙層（細胞膜）、微膠粒（膽鹽幫助脂肪消化）。</li>
+      <li>類固醇＝四環結構；膽固醇是膜成分、類固醇激素、膽汁酸、維生素 D 的原料；類固醇激素可穿過細胞膜。</li>
+      <li>前列腺素由花生四烯酸生成，局部作用（發炎、發燒、疼痛、胃黏膜保護）；NSAIDs 抑制其合成。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>碳水化合物</td><td>carbohydrate</td><td>單醣／雙醣／多醣</td><td>mono- / di- / polysaccharide</td></tr>
+      <tr><td>葡萄糖／果糖／半乳糖</td><td>glucose / fructose / galactose</td><td>蔗糖／乳糖／麥芽糖</td><td>sucrose / lactose / maltose</td></tr>
+      <tr><td>澱粉／肝醣／纖維素</td><td>starch / glycogen / cellulose</td><td>脫水合成／水解</td><td>dehydration synthesis / hydrolysis</td></tr>
+      <tr><td>脂質</td><td>lipid</td><td>三酸甘油酯</td><td>triglyceride</td></tr>
+      <tr><td>甘油／脂肪酸</td><td>glycerol / fatty acid</td><td>飽和／不飽和</td><td>saturated / unsaturated</td></tr>
+      <tr><td>反式脂肪</td><td>trans fat</td><td>酮體</td><td>ketone bodies</td></tr>
+      <tr><td>磷脂質／卵磷脂</td><td>phospholipid / lecithin</td><td>雙性分子</td><td>amphipathic</td></tr>
+      <tr><td>微膠粒</td><td>micelle</td><td>類固醇／膽固醇</td><td>steroid / cholesterol</td></tr>
+      <tr><td>前列腺素</td><td>prostaglandin</td><td>花生四烯酸</td><td>arachidonic acid</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 2.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">2.3</span>蛋白質</h2>
+  <div class="en">Proteins</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>蛋白質怎麼由<b>胺基酸</b>串成，又怎麼摺成<b>一到四級結構</b>；以及「<b>形狀決定功能</b>」這個貫穿全書的觀念。</div><div><span class="lt lt2">為什麼接在 2.2 後面？</span>醣和脂質主要是燃料與材料；真正「做事」的幾乎都是蛋白質——酵素、受體、通道、運輸蛋白、抗體、肌肉的收縮蛋白、多數激素。後面每一章都會遇到它們。</div></div>
+  <div class="oneline">20 種胺基酸以胜肽鍵串成多胜肽，再摺成一級到四級結構；形狀決定功能，形狀被破壞（變性）就失去功能。</div>
+  <div class="think">煎蛋時，透明的蛋白變白變硬，蛋白質的「成分」改變了嗎？</div>
+
+  <h3 id="h7">蛋白質的結構 Structure of Proteins</h3>
+  <p class="core">胺基酸＝中心碳＋胺基＋羧基＋H＋R 基（R 基決定是哪一種）；胜肽鍵由脫水合成形成。</p>
+  <p>蛋白質由<b>胺基酸</b> <i class="en-term">amino acids</i> 串成。人體蛋白質用到 <b>20 種</b>胺基酸，每一個都有相同的骨架：中心碳原子接著一個<b>胺基</b>（–NH₂）、一個<b>羧基</b>（–COOH）、一個氫，以及一個<b>側鏈（R 基）</b> <i class="en-term">functional group / R group</i>。<span class="key">20 種胺基酸的差別只在 R 基</span>：有的非極性（疏水）、有的極性、有的帶正電或負電，決定蛋白質怎麼摺。</p>
+  <p>一個胺基酸的羧基和下一個的胺基進行<b>脫水合成</b>，形成<b>胜肽鍵</b> <i class="en-term">peptide bond</i>。兩個胺基酸＝雙胜肽，數個＝寡胜肽，很多個＝<b>多胜肽</b> <i class="en-term">polypeptide</i>；一般超過約 100 個胺基酸就稱為蛋白質。</p>
+  <div class="nut"><b class="t">營養連結：</b>其中 9 種人體無法自行合成或合成不足，必須由食物獲得，稱為<b>必需胺基酸</b>（組胺酸、異白胺酸、白胺酸、離胺酸、甲硫胺酸、苯丙胺酸、蘇胺酸、色胺酸、纈胺酸）。蛋白質品質的評估就看必需胺基酸是否齊全。</div>
+
+  <h4>四個結構層次</h4>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="16" font-weight="bold" fill="#9f1239" text-anchor="middle">一級：胺基酸的順序</text>
+    <g>
+      <circle cx="30" cy="50" r="13" fill="#fda4af"/><circle cx="58" cy="50" r="13" fill="#93c5fd"/><circle cx="86" cy="50" r="13" fill="#fde047"/><circle cx="114" cy="50" r="13" fill="#86efac"/><circle cx="142" cy="50" r="13" fill="#fda4af"/><circle cx="170" cy="50" r="13" fill="#c4b5fd"/><circle cx="198" cy="50" r="13" fill="#93c5fd"/>
+    </g>
+    <text x="120" y="82" font-size="13" text-anchor="middle">像一串不同顏色的珠子（胜肽鍵相連）</text>
+    <text x="360" y="20" font-size="16" font-weight="bold" fill="#1d4ed8" text-anchor="middle">二級：局部摺法</text>
+    <path d="M260,55 c10,-30 25,-30 25,0 c0,30 25,30 25,0 c0,-30 25,-30 25,0 c0,30 15,30 15,0" fill="none" stroke="#2563eb" stroke-width="4"/>
+    <text x="300" y="92" font-size="13" text-anchor="middle">α 螺旋</text>
+    <path d="M385,35 l60,0 l0,8 l12,-12 l-12,-12 l0,8 M385,55 l60,0 M385,75 l60,0" fill="none" stroke="#0f766e" stroke-width="5"/>
+    <text x="425" y="92" font-size="13" text-anchor="middle">β 摺板</text>
+    <line x1="10" y1="110" x2="470" y2="110" stroke="#e5e7eb"/>
+    <text x="120" y="135" font-size="16" font-weight="bold" fill="#6d28d9" text-anchor="middle">三級：整條摺成立體形狀</text>
+    <path d="M60,200 c-30,-40 20,-70 50,-40 c30,30 60,-30 80,10 c20,40 -30,70 -60,50 c-20,-15 -40,30 -70,-20" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linecap="round"/>
+    <text x="120" y="268" font-size="13" text-anchor="middle">靠 R 基之間的氫鍵、離子鍵、</text>
+    <text x="120" y="286" font-size="13" text-anchor="middle">雙硫鍵、疏水作用固定</text>
+    <text x="360" y="135" font-size="16" font-weight="bold" fill="#b45309" text-anchor="middle">四級：多條次單元組合</text>
+    <circle cx="330" cy="180" r="28" fill="#fecaca" stroke="#dc2626" stroke-width="2"/><circle cx="390" cy="180" r="28" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <circle cx="330" cy="236" r="28" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><circle cx="390" cy="236" r="28" fill="#fecaca" stroke="#dc2626" stroke-width="2"/>
+    <text x="330" y="185" font-size="13" text-anchor="middle">α</text><text x="390" y="185" font-size="13" text-anchor="middle">β</text><text x="330" y="241" font-size="13" text-anchor="middle">β</text><text x="390" y="241" font-size="13" text-anchor="middle">α</text>
+    <text x="360" y="286" font-size="13" text-anchor="middle">血紅素：2α＋2β 四條鏈</text>
+  </svg><figcaption>蛋白質的四級結構。一級順序決定了它會怎麼摺；最後的立體形狀決定它能做什麼。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>層次</th><th>是什麼</th><th>靠什麼維持</th></tr>
+    <tr><td><b>一級結構</b> primary</td><td>胺基酸的<b>排列順序</b>，由基因（DNA）決定</td><td>胜肽鍵（共價鍵）</td></tr>
+    <tr><td><b>二級結構</b> secondary</td><td>多胜肽骨架局部捲成 <b>α 螺旋</b> α-helix 或排成 <b>β 摺板</b> β-pleated sheet</td><td>骨架上的<b>氫鍵</b></td></tr>
+    <tr><td><b>三級結構</b> tertiary</td><td>整條多胜肽摺成的<b>立體形狀</b></td><td>R 基之間的氫鍵、離子鍵、疏水作用，以及半胱胺酸之間的<b>雙硫鍵</b>（共價）</td></tr>
+    <tr><td><b>四級結構</b> quaternary</td><td>由<b>兩條以上</b>多胜肽（次單元）組合成一個蛋白質</td><td>同上；例：<b>血紅素</b>有 4 條鏈，胰島素由 2 條鏈以雙硫鍵相連</td></tr>
+  </table></div>
+  <p>在水中，蛋白質摺疊時傾向把<b>疏水的 R 基藏在內部</b>、親水的 R 基露在表面；細胞膜上的蛋白質則把疏水部分埋在膜的疏水層中。</p>
+  <div class="warn"><b class="t">易考：</b>一個胺基酸被換掉（一級結構改變），整個形狀與功能就可能改變。<b>鐮刀型貧血</b>就是血紅素 β 鏈的一個麩胺酸被換成纈胺酸，缺氧時血紅素黏在一起，使紅血球變成鐮刀形（第 13 章）。</div>
+
+  <h4>變性 Denaturation</h4>
+  <p class="core">高溫、酸鹼等破壞二到四級結構 → 功能喪失；一級結構通常仍在（煎蛋）。</p>
+  <p>高溫、強酸強鹼、重金屬、酒精等會破壞維持二到四級結構的弱鍵，使蛋白質<b>展開、失去立體形狀</b>，這叫<b>變性</b> <i class="en-term">denaturation</i>。一級結構（胜肽鍵）通常沒被破壞，但功能已經失去，而且大多無法恢復。</p>
+  <div class="eg"><b class="t">例子：</b>煎蛋時蛋白變白變硬；發高燒過高（約 41–42°C 以上）會使酵素失去功能，非常危險。胃酸使食物中的蛋白質變性展開，讓胃蛋白酶比較容易切開（第 18 章）。</div>
+
+  <h3 id="h8">蛋白質的功能 Functions of Proteins</h3>
+  <p class="core">形狀決定功能：酵素、受體、運輸與通道蛋白、結構蛋白、收縮蛋白、抗體、激素、血漿蛋白；醣蛋白＝蛋白質接上醣。</p>
+  <div class="tblwrap"><table>
+    <tr><th>功能</th><th>例子</th><th>本書章節</th></tr>
+    <tr><td>催化（<b>酵素</b>）</td><td>澱粉酶、胃蛋白酶、ATP 合成酶</td><td>4</td></tr>
+    <tr><td>結構</td><td>膠原蛋白、角蛋白、彈性蛋白</td><td>1</td></tr>
+    <tr><td>收縮</td><td>肌動蛋白 actin、肌凝蛋白 myosin</td><td>12</td></tr>
+    <tr><td>運輸</td><td>細胞膜上的載體與<b>通道</b>；血紅素運 O₂；白蛋白、脂蛋白在血中運送</td><td>6、13、16</td></tr>
+    <tr><td>訊號接收</td><td>細胞膜與細胞內的<b>受體</b></td><td>6、11</td></tr>
+    <tr><td>調節</td><td>多數<b>激素</b>是蛋白質或胜肽（胰島素、生長激素、ADH）</td><td>11</td></tr>
+    <tr><td>防禦</td><td><b>抗體</b>（免疫球蛋白）</td><td>15</td></tr>
+  </table></div>
+  <p>這些功能都靠<b>專一的形狀</b>：酵素的活性部位只容得下特定受質、受體只和特定激素結合，就像鎖和鑰匙。所以理解生理時常要想：「這個蛋白質的形狀被改變了嗎？」</p>
+  <p><b>醣蛋白</b> <i class="en-term">glycoproteins</i> 是接上醣鏈的蛋白質，常見於細胞膜外側（細胞辨識、血型抗原）和分泌物（如黏液中的黏蛋白）；許多激素（如 FSH、LH、TSH）也是醣蛋白。</p>
+
+  <details class="stop"><summary>回到開頭：煎蛋時蛋白質的「成分」改變了嗎？</summary>
+    <div>沒有。胺基酸的種類和順序（一級結構）都還在，被破壞的是維持立體形狀的弱鍵，蛋白質展開並互相纏在一起，所以變白變硬，這就是變性。營養價值（胺基酸）不變，而且變性後反而更容易被消化酶分解。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>20 種胺基酸差別在 R 基；胜肽鍵以脫水合成連接；9 種必需胺基酸需由食物獲得。</li>
+      <li>一級＝順序（胜肽鍵）；二級＝α 螺旋、β 摺板（骨架氫鍵）；三級＝立體形狀（R 基間的鍵、雙硫鍵）；四級＝多條次單元（血紅素 4 條）。</li>
+      <li>形狀決定功能；一個胺基酸改變可導致疾病（鐮刀型貧血）。</li>
+      <li>變性：高溫、酸鹼等破壞二到四級結構，功能喪失，一級結構通常不變。</li>
+      <li>功能：酵素、結構、收縮、運輸／通道、受體、激素、抗體；醣蛋白參與細胞辨識。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>胺基酸</td><td>amino acid</td><td>必需胺基酸</td><td>essential amino acid</td></tr>
+      <tr><td>胜肽鍵</td><td>peptide bond</td><td>多胜肽</td><td>polypeptide</td></tr>
+      <tr><td>一／二／三／四級結構</td><td>primary / secondary / tertiary / quaternary structure</td><td>α 螺旋／β 摺板</td><td>α-helix / β-pleated sheet</td></tr>
+      <tr><td>雙硫鍵</td><td>disulfide bond</td><td>次單元</td><td>subunit</td></tr>
+      <tr><td>變性</td><td>denaturation</td><td>醣蛋白</td><td>glycoprotein</td></tr>
+      <tr><td>酵素</td><td>enzyme</td><td>抗體</td><td>antibody</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 2.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">2.4</span>核酸</h2>
+  <div class="en">Nucleic Acids</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>DNA 與 RNA</b> 的組成單位（核苷酸）、DNA 雙股的<b>互補鹼基配對</b>，以及兩者的差異。</div><div><span class="lt lt2">為什麼放最後？</span>2.3 說蛋白質的形狀由胺基酸順序決定；那順序由誰決定？答案是 DNA。這一節介紹它的化學構造，第 3 章再講 DNA 怎麼轉錄、轉譯成蛋白質。</div></div>
+  <div class="oneline">核酸由核苷酸（五碳醣＋磷酸＋含氮鹼基）串成；DNA 是雙股螺旋，A 配 T、G 配 C；RNA 是單股、用核糖和 U。</div>
+  <div class="think">為什麼知道 DNA 一股的序列，就能推出另一股的序列？</div>
+
+  <h3 id="h9">去氧核糖核酸 Deoxyribonucleic Acid（DNA）</h3>
+  <p class="core">核苷酸＝五碳醣＋磷酸＋鹼基；DNA 用去氧核糖、鹼基 A、T、G、C；兩股反向平行，A=T（2 個氫鍵）、G≡C（3 個氫鍵）。</p>
+  <p>核酸的單位是<b>核苷酸</b> <i class="en-term">nucleotide</i>，每個核苷酸由三部分組成：</p>
+  <ol class="steps">
+    <li>一個<b>五碳醣</b>：DNA 是<b>去氧核糖</b> <i class="en-term">deoxyribose</i>（比核糖少一個氧），RNA 是<b>核糖</b> <i class="en-term">ribose</i>。</li>
+    <li>一個<b>磷酸基</b>。</li>
+    <li>一個<b>含氮鹼基</b> <i class="en-term">nitrogenous base</i>：
+      <ul>
+        <li><b>嘌呤</b> <i class="en-term">purines</i>（雙環、較大）：腺嘌呤 <b>A</b>denine、鳥嘌呤 <b>G</b>uanine。</li>
+        <li><b>嘧啶</b> <i class="en-term">pyrimidines</i>（單環、較小）：胞嘧啶 <b>C</b>ytosine、胸腺嘧啶 <b>T</b>hymine（DNA）、尿嘧啶 <b>U</b>racil（RNA）。</li>
+      </ul>
+    </li>
+  </ol>
+  <p>核苷酸之間以「一個的醣接下一個的磷酸」相連，形成<b>醣—磷酸骨架</b>，鹼基則從骨架伸出。DNA 由<b>兩股</b>多核苷酸組成，鹼基朝內兩兩配對，像梯子的橫桿，再扭成<b>雙股螺旋</b> <i class="en-term">double helix</i>（1953 年由華生 Watson 與克里克 Crick 提出）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <rect x="70" y="20" width="22" height="220" rx="6" fill="#e5e7eb" stroke="#6b7280"/><rect x="268" y="20" width="22" height="220" rx="6" fill="#e5e7eb" stroke="#6b7280"/>
+    <text x="81" y="258" font-size="12" text-anchor="middle">醣-磷酸骨架</text><text x="279" y="258" font-size="12" text-anchor="middle">醣-磷酸骨架</text>
+    <g font-size="15" font-weight="bold" text-anchor="middle">
+      <rect x="92" y="36" width="92" height="24" fill="#fca5a5"/><rect x="184" y="36" width="84" height="24" fill="#93c5fd"/><text x="138" y="53">A</text><text x="226" y="53">T</text>
+      <rect x="92" y="84" width="92" height="24" fill="#86efac"/><rect x="184" y="84" width="84" height="24" fill="#fde047"/><text x="138" y="101">G</text><text x="226" y="101">C</text>
+      <rect x="92" y="132" width="84" height="24" fill="#93c5fd"/><rect x="176" y="132" width="92" height="24" fill="#fca5a5"/><text x="134" y="149">T</text><text x="222" y="149">A</text>
+      <rect x="92" y="180" width="84" height="24" fill="#fde047"/><rect x="176" y="180" width="92" height="24" fill="#86efac"/><text x="134" y="197">C</text><text x="222" y="197">G</text>
+    </g>
+    <g stroke="#7c3aed" stroke-width="2" stroke-dasharray="3 3"><line x1="184" y1="42" x2="184" y2="54"/><line x1="180" y1="90" x2="188" y2="102"/></g>
+    <text x="310" y="52" font-size="14" fill="#374151">A＝T：2 個氫鍵</text>
+    <text x="310" y="100" font-size="14" fill="#374151">G≡C：3 個氫鍵</text>
+    <text x="310" y="148" font-size="14" fill="#6b7280">嘌呤（A、G）大</text>
+    <text x="310" y="168" font-size="14" fill="#6b7280">總是配嘧啶（T、C）小</text>
+    <text x="310" y="196" font-size="14" fill="#6b7280">→ 梯子寬度一致</text>
+  </svg><figcaption>DNA 像一把梯子：兩側扶手是醣—磷酸骨架，橫桿是配對的鹼基。A 只配 T、G 只配 C，所以一股決定了另一股。</figcaption></figure>
+  <p><b>互補鹼基配對</b> <i class="en-term">complementary base pairing</i>：<span class="key">A 只和 T 配對（2 個氫鍵），G 只和 C 配對（3 個氫鍵）</span>。一個大的嘌呤總是配一個小的嘧啶，使雙股寬度一致。這條規則讓 DNA 能被精確複製：兩股分開後，各自當模板做出新的一股（第 3 章）。兩股的方向相反，稱為<b>反向平行</b> <i class="en-term">antiparallel</i>。</p>
+  <div class="eg"><b class="t">例子：</b>一股是 5'-ATGCCA-3'，另一股就是 3'-TACGGT-5'。查爾加夫法則（Chargaff's rule）：DNA 中 A 的量＝T，G 的量＝C。</div>
+
+  <h3 id="h10">核糖核酸 Ribonucleic Acid（RNA）</h3>
+  <p class="core">RNA：核糖、U 取代 T、通常單股；mRNA、tRNA、rRNA 三種參與蛋白質合成。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>DNA</th><th>RNA</th></tr>
+    <tr><td>五碳醣</td><td>去氧核糖</td><td>核糖</td></tr>
+    <tr><td>鹼基</td><td>A、T、G、C</td><td>A、<b>U</b>、G、C（U 取代 T，與 A 配對）</td></tr>
+    <tr><td>股數</td><td>雙股螺旋</td><td>通常<b>單股</b></td></tr>
+    <tr><td>位置</td><td>主要在細胞核（粒線體也有少量）</td><td>細胞核中合成，多數到細胞質工作</td></tr>
+    <tr><td>功能</td><td>儲存遺傳資訊</td><td>把資訊用來合成蛋白質</td></tr>
+  </table></div>
+  <p>RNA 主要有三種，都參與蛋白質合成（第 3 章詳述）：</p>
+  <ul class="dots">
+    <li><b>傳訊 RNA</b> <i class="en-term">messenger RNA, mRNA</i>：抄寫 DNA 上一個基因的資訊，帶到核糖體。</li>
+    <li><b>轉運 RNA</b> <i class="en-term">transfer RNA, tRNA</i>：攜帶胺基酸到核糖體，依 mRNA 的密碼放到正確位置。</li>
+    <li><b>核糖體 RNA</b> <i class="en-term">ribosomal RNA, rRNA</i>：和蛋白質組成核糖體，是組裝蛋白質的工廠。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>核苷酸也用來做 <b>ATP</b>（腺嘌呤＋核糖＋三個磷酸），是細胞的能量貨幣（第 4、5 章）；許多輔酶（NAD⁺、FAD）也含核苷酸結構，分別由維生素菸鹼酸、核黃素做成。嘌呤代謝的最終產物是<b>尿酸</b>，過多時造成痛風。</div>
+
+  <details class="stop"><summary>回到開頭：為什麼知道一股就能推出另一股？</summary>
+    <div>因為互補配對規則固定：A 對 T、G 對 C。所以第一股的每一個鹼基，都唯一決定了第二股對應位置的鹼基。這也是 DNA 複製與轉錄的基礎。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>核苷酸＝五碳醣＋磷酸＋含氮鹼基；嘌呤 A、G（雙環），嘧啶 C、T、U（單環）。</li>
+      <li>DNA：去氧核糖、A T G C、雙股反向平行螺旋；A=T 兩個氫鍵、G≡C 三個氫鍵。</li>
+      <li>RNA：核糖、U 取代 T、單股；mRNA 帶資訊、tRNA 帶胺基酸、rRNA 組成核糖體。</li>
+      <li>ATP 也是核苷酸衍生物；嘌呤分解成尿酸。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>核酸</td><td>nucleic acid</td><td>核苷酸</td><td>nucleotide</td></tr>
+      <tr><td>去氧核糖／核糖</td><td>deoxyribose / ribose</td><td>含氮鹼基</td><td>nitrogenous base</td></tr>
+      <tr><td>嘌呤／嘧啶</td><td>purine / pyrimidine</td><td>腺嘌呤／鳥嘌呤</td><td>adenine / guanine</td></tr>
+      <tr><td>胞嘧啶／胸腺嘧啶／尿嘧啶</td><td>cytosine / thymine / uracil</td><td>雙股螺旋</td><td>double helix</td></tr>
+      <tr><td>互補鹼基配對</td><td>complementary base pairing</td><td>反向平行</td><td>antiparallel</td></tr>
+      <tr><td>傳訊／轉運／核糖體 RNA</td><td>mRNA / tRNA / rRNA</td><td>尿酸</td><td>uric acid</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s5">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>原子</td><td>原子序＝質子數；同位素＝中子不同；碳 4 鍵</td></tr>
+    <tr><td>化學鍵</td><td>共價（共用，極性／非極性）＞離子（轉移、相吸）＞氫鍵（弱、δ⁺H 對 δ⁻O/N）</td></tr>
+    <tr><td>水</td><td>極性；溶解離子與極性分子；氫鍵使比熱、蒸發熱高</td></tr>
+    <tr><td>pH</td><td>−log[H⁺]；差 1＝10 倍；血液 7.35–7.45；碳酸氫根緩衝</td></tr>
+    <tr><td>酸鹼異常</td><td>腹瀉→酸中毒；嘔吐→鹼中毒；換氣不足→酸中毒；過度換氣→鹼中毒</td></tr>
+    <tr><td>醣類</td><td>蔗糖＝葡＋果；乳糖＝葡＋半乳；麥芽糖＝葡＋葡；肝醣分支多；纖維素 β 鍵</td></tr>
+    <tr><td>反應</td><td>脫水合成（接）／水解（切，消化）</td></tr>
+    <tr><td>脂質</td><td>三酸甘油酯儲能（9 kcal/g）；磷脂質雙性→細胞膜；膽固醇→類固醇激素、膽汁酸、維生素 D；前列腺素←花生四烯酸</td></tr>
+    <tr><td>酮體</td><td>乙醯乙酸、β-羥丁酸、丙酮；過多→酮酸中毒</td></tr>
+    <tr><td>蛋白質</td><td>20 種胺基酸、胜肽鍵；一到四級結構；形狀決定功能；變性</td></tr>
+    <tr><td>核酸</td><td>核苷酸＝醣＋磷酸＋鹼基；DNA：A=T、G≡C；RNA：核糖、U、單股</td></tr>
+  </table></div>
+  <h3 id="h11">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說出共價鍵、離子鍵、氫鍵的差別，各舉一個身體裡的例子？</li>
+    <li>□ 解釋為什麼脂溶性物質可以直接穿過細胞膜？</li>
+    <li>□ 寫出碳酸氫根緩衝反應式，說明酸太多時怎麼緩衝？</li>
+    <li>□ 說出三種雙醣各由哪兩個單醣組成？</li>
+    <li>□ 畫出磷脂雙層，標出親水頭與疏水尾？</li>
+    <li>□ 說出膽固醇可以變成哪些物質？</li>
+    <li>□ 解釋蛋白質四個結構層次與「變性」？</li>
+    <li>□ 比較 DNA 與 RNA 的三個差異？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 2 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"同一元素的同位素（isotopes），彼此之間哪一項不同？",o:["質子數","電子數","中子數","原子序"],a:2,
+  e:"同位素的<b>質子數（原子序）相同、中子數不同</b>，所以化學性質相同、質量不同。"},
+ {q:"水分子中，氧原子帶部分負電（δ⁻）的原因是？",o:["氧失去電子","氧吸引共用電子的能力較強（電負度較高）","氧和氫形成離子鍵","氫帶負電"],a:1,
+  e:"O–H 是<b>極性共價鍵</b>：氧的電負度較高，共用電子偏向氧，使氧端帶 δ⁻、氫端帶 δ⁺。"},
+ {q:"下列何者可以不經運輸蛋白，直接穿過細胞膜的磷脂雙層？",o:["Na⁺","葡萄糖","類固醇激素","胺基酸"],a:2,
+  e:"細胞膜內部是疏水的；<b>脂溶性（非極性）</b>的類固醇激素、O₂、CO₂ 可以直接穿過。離子與極性分子需要通道或載體。"},
+ {q:"溶液 pH 由 7 降到 5，氫離子濃度變為原來的幾倍？",o:["2 倍","20 倍","100 倍","減少為 1/100"],a:2,
+  e:"pH＝−log[H⁺]，每差 1 等於 10 倍；差 2 就是 <b>100 倍</b>，pH 越小 H⁺ 越多。"},
+ {q:"嚴重腹瀉最可能造成哪一種酸鹼異常？",o:["代謝性酸中毒（流失 HCO₃⁻）","代謝性鹼中毒","呼吸性鹼中毒","不影響酸鹼"],a:0,
+  e:"腸液含大量<b>碳酸氫根</b>，腹瀉流失 HCO₃⁻ → 酸中毒。大量嘔吐流失胃酸則造成鹼中毒。"},
+ {q:"乳糖由哪兩個單醣組成？（Lactose is composed of…）",o:["葡萄糖＋果糖","葡萄糖＋葡萄糖","葡萄糖＋半乳糖","果糖＋半乳糖"],a:2,
+  e:"乳糖＝葡萄糖＋<b>半乳糖</b>；蔗糖＝葡萄糖＋果糖；麥芽糖＝葡萄糖＋葡萄糖。"},
+ {q:"消化道把澱粉分解成葡萄糖的反應類型是？",o:["脫水合成","水解","氧化","磷酸化"],a:1,
+  e:"消化是一連串<b>水解</b>：加入水分子把鍵切開。合成肝醣、蛋白質則是脫水合成。"},
+ {q:"磷脂質能形成細胞膜雙層，最主要是因為它是？",o:["完全疏水的分子","完全親水的分子","雙性分子：親水頭、疏水尾","帶正電的分子"],a:2,
+  e:"磷脂質是<b>雙性分子</b>：磷酸頭親水朝外、脂肪酸尾疏水朝內，自動排成雙層。"},
+ {q:"下列何者<b>不是</b>由膽固醇轉變而成？",o:["皮質醇","膽汁酸","維生素 D","胰島素"],a:3,
+  e:"膽固醇是類固醇激素（皮質醇、醛固酮、性激素）、膽汁酸、維生素 D 的原料。<b>胰島素是胜肽類激素</b>，由胺基酸組成。"},
+ {q:"前列腺素（prostaglandins）是由哪一種物質衍生而來？",o:["膽固醇","花生四烯酸","甘油","酪胺酸"],a:1,
+  e:"前列腺素屬類二十碳酸，由細胞膜磷脂質中的 20 碳 ω-6 脂肪酸<b>花生四烯酸</b>生成；NSAIDs 抑制其合成酵素 COX。"},
+ {q:"維持蛋白質「三級結構」的作用力<b>不包括</b>下列何者？",o:["R 基之間的氫鍵","雙硫鍵","疏水作用","胺基酸的排列順序改變"],a:3,
+  e:"三級結構由 R 基之間的氫鍵、離子鍵、疏水作用與<b>雙硫鍵</b>維持。胺基酸順序是<b>一級結構</b>，不是作用力。"},
+ {q:"蛋白質變性（denaturation）時，通常哪一層結構仍保留？",o:["一級結構","二級結構","三級結構","四級結構"],a:0,
+  e:"變性破壞維持立體形狀的弱鍵（二到四級），<b>胜肽鍵構成的一級結構</b>通常不變，但功能喪失。"},
+ {q:"DNA 中與鳥嘌呤（G）配對的鹼基，以及兩者間的氫鍵數為？",o:["C，3 個","T，2 個","A，2 個","U，3 個"],a:0,
+  e:"<b>G≡C 三個氫鍵</b>；A=T 兩個氫鍵。U 只在 RNA 中，與 A 配對。"},
+ {q:"下列何者是 RNA 與 DNA 的差異？",o:["RNA 含去氧核糖","RNA 用尿嘧啶（U）取代胸腺嘧啶（T）","RNA 是雙股螺旋","RNA 不含磷酸"],a:1,
+  e:"RNA：<b>核糖</b>、<b>U 取代 T</b>、通常<b>單股</b>；兩者都有磷酸骨架。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

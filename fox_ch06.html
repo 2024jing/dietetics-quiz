@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 6 章 細胞與細胞外環境的互動</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="6">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 6 章　細胞與細胞外環境的互動</h1>
+  <div class="en">Chapter 6 Interactions Between Cells and the Extracellular Environment（課本 p.139–170）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">6.1 細胞外環境</a>
+  <a class="sub" href="#h1">體液 Body Fluids</a>
+  <a class="sub" href="#h2">細胞外基質 Extracellular Matrix</a>
+  <a class="sub" href="#h3">運輸的分類 Categories of Transport Across the Plasma Membrane</a>
+  <a href="#s2">6.2 擴散與滲透</a>
+  <a class="sub" href="#h4">擴散 Diffusion</a>
+  <a class="sub" href="#h5">滲透 Osmosis</a>
+  <a class="sub" href="#h6">滲透莫耳濃度與滲透度 Molality and Osmolality</a>
+  <a class="sub" href="#h7">張力 Tonicity</a>
+  <a class="sub" href="#h8">血漿滲透度的調節 Regulation of Blood Osmolality</a>
+  <a href="#s3">6.3 載體媒介運輸</a>
+  <a class="sub" href="#h9">載體的特性</a>
+  <a class="sub" href="#h10">促進性擴散 Facilitated Diffusion</a>
+  <a class="sub" href="#h11">主動運輸 Active Transport</a>
+  <a class="sub" href="#h12">跨上皮運輸 Transport Across Epithelial Membranes</a>
+  <a class="sub" href="#h13">大量運輸 Bulk Transport</a>
+  <a href="#s4">6.4 膜電位</a>
+  <a class="sub" href="#h14">為什麼會有膜電位</a>
+  <a class="sub" href="#h15">平衡電位 Equilibrium Potentials</a>
+  <a class="sub" href="#h16">靜止膜電位 Resting Membrane Potential</a>
+  <a class="sub" href="#h17">鈉鉀幫浦的角色 Role of the Na⁺/K⁺ Pumps</a>
+  <a href="#s5">6.5 細胞傳訊</a>
+  <a class="sub" href="#h18">細胞傳訊的方式</a>
+  <a class="sub" href="#h19">受體蛋白的位置 Receptor Location</a>
+  <a class="sub" href="#h20">第二傳訊者 Second Messengers</a>
+  <a class="sub" href="#h21">G 蛋白 G-Proteins</a>
+  <a href="#s6">本章重點整理</a>
+  <a class="sub" href="#h22">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 3 章認識了細胞膜的構造；這一章回答：<span class="key">細胞怎麼和它周圍的「內在環境」交換東西、傳遞訊息？</span>三個重點：①物質怎麼穿過細胞膜（擴散、滲透、載體、幫浦）；②這些運輸怎麼讓細胞膜兩側帶不同電荷（膜電位）；③激素等訊號怎麼告訴細胞要做事（受體、第二傳訊者）。第 7 章的神經、第 17 章的腎、第 18 章的小腸吸收，都直接用到這一章。</div>
+  <div class="path">
+    <div class="step"><span class="sn">6.1</span><div><b>細胞外環境</b><br><span class="sq">細胞周圍有什麼（體液、細胞外基質），運輸分成哪幾類。</span></div></div>
+    <div class="arr">↓ 先看不用花能量、順著濃度走的運輸</div>
+    <div class="step"><span class="sn">6.2</span><div><b>擴散與滲透</b><br><span class="sq">溶質的擴散、水的滲透，滲透壓與張力，以及身體怎麼調節血液滲透壓。</span></div></div>
+    <div class="arr">↓ 不能自己穿膜的物質，要靠膜上的蛋白質幫忙</div>
+    <div class="step"><span class="sn">6.3</span><div><b>載體媒介運輸</b><br><span class="sq">促進性擴散、初級與次級主動運輸（鈉鉀幫浦、鈉—葡萄糖共同運輸）、上皮的吸收與再吸收、胞吞胞吐。</span></div></div>
+    <div class="arr">↓ 這些運輸讓膜兩側的離子分布不同，產生了電</div>
+    <div class="step"><span class="sn">6.4</span><div><b>膜電位</b><br><span class="sq">平衡電位、靜止膜電位約 −70 mV 怎麼來、鈉鉀幫浦的角色。</span></div></div>
+    <div class="arr">↓ 細胞之間除了交換物質，還要互相「說話」</div>
+    <div class="step"><span class="sn">6.5</span><div><b>細胞傳訊</b><br><span class="sq">旁泌、突觸、內分泌三種傳訊方式；受體在哪裡；第二傳訊者與 G 蛋白。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 6.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">6.1</span>細胞外環境</h2>
+  <div class="en">The Extracellular Environment</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞外有<b>體液</b>（血漿、組織間液）和<b>細胞外基質</b>；物質穿膜運輸的兩大類：<b>不需載體</b>與<b>需要載體</b>，以及<b>被動</b>與<b>主動</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>要談物質怎麼進出細胞，先要知道「外面」是什麼環境，以及運輸方式怎麼分類，後面幾節才有架構。</div></div>
+  <div class="oneline">細胞浸在組織間液中，外面還有細胞外基質；物質穿膜分為被動運輸（順梯度、不耗能）與主動運輸（逆梯度、耗能），又分為不需載體與需載體兩類。</div>
+
+  <h3 id="h1">體液 Body Fluids</h3>
+  <p class="core">體內水分：細胞內液 2/3、細胞外液 1/3（血漿＋組織間液）；組織液由微血管濾出、大部分回流，多餘的成為淋巴。</p>
+  <p>第 1 章學過，體內水分約 <b>2/3 是細胞內液</b>、<b>1/3 是細胞外液</b>；細胞外液又分為血管內的<b>血漿</b>和包圍細胞的<b>組織間液（組織液）</b>。</p>
+  <p>組織液是血漿經<b>微血管</b>壁<b>濾出</b>形成的：微血管動脈端的血壓把水和小分子（葡萄糖、胺基酸、離子）推出血管，送到細胞旁；靜脈端則因血漿蛋白造成的滲透壓，把大部分液體與代謝廢物吸回血管；剩下的由<b>淋巴管</b>回收（第 14 章）。血漿蛋白（主要是白蛋白）通常留在血管內，所以組織液的蛋白質很少。</p>
+
+  <h3 id="h2">細胞外基質 Extracellular Matrix</h3>
+  <p class="core">細胞外基質＝膠原蛋白、彈性蛋白＋蛋白聚醣凝膠；細胞以整合素和基質相連，傳遞訊號。</p>
+  <p>細胞之間不只有液體，還有由細胞分泌的<b>細胞外基質</b>：<b>膠原蛋白</b>、<b>彈性蛋白</b>等纖維，以及能吸水形成凝膠的<b>蛋白聚醣</b>。組織液中的物質要在這層凝膠中擴散才能到達細胞。細胞膜上的<b>整合素</b> <i class="en-term">integrins</i> 一端連到細胞內的骨架、一端抓住基質，讓細胞附著，並把外界的機械與化學訊號傳進細胞（影響細胞移動、分裂、存活）。</p>
+
+  <h3 id="h3">運輸的分類 Categories of Transport Across the Plasma Membrane</h3>
+  <p class="core">被動運輸（順濃度梯度、不耗 ATP）：簡單擴散、滲透、促進性擴散；主動運輸（逆梯度、耗能）：初級、次級；另有大量運輸（胞吞、胞吐）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a61" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="240" y="18" font-size="13" text-anchor="middle" fill="#1d4ed8">細胞外（高濃度）</text>
+    <rect x="0" y="110" width="480" height="40" fill="#fde68a"/>
+    <text x="240" y="278" font-size="13" text-anchor="middle" fill="#a16207">細胞內（低濃度）</text>
+    <g font-size="13" text-anchor="middle" font-weight="bold">
+      <text x="60" y="44">① 簡單擴散</text><text x="180" y="44">② 通道</text><text x="300" y="44">③ 載體</text><text x="420" y="44">④ 幫浦</text></g>
+    <g fill="#ef4444"><circle cx="45" cy="70" r="5"/><circle cx="65" cy="82" r="5"/><circle cx="55" cy="96" r="5"/><circle cx="60" cy="190" r="5"/></g>
+    <path d="M60,100 L60,180" stroke="#374151" stroke-width="2.5" marker-end="url(#a61)"/>
+    <rect x="160" y="106" width="12" height="48" fill="#60a5fa"/><rect x="188" y="106" width="12" height="48" fill="#60a5fa"/>
+    <g fill="#8b5cf6"><circle cx="170" cy="72" r="5"/><circle cx="190" cy="84" r="5"/><circle cx="180" cy="196" r="5"/></g>
+    <path d="M180,90 L180,182" stroke="#374151" stroke-width="2.5" marker-end="url(#a61)"/>
+    <path d="M280,104 Q300,94 320,104 L320,156 Q300,166 280,156 Z" fill="#86efac" stroke="#16a34a" stroke-width="2"/>
+    <g fill="#f59e0b"><polygon points="290,70 298,62 306,70 298,78"/><polygon points="306,86 314,78 322,86 314,94"/><polygon points="300,196 308,188 316,196 308,204"/></g>
+    <path d="M300,92 L300,180" stroke="#374151" stroke-width="2.5" marker-end="url(#a61)"/>
+    <rect x="398" y="102" width="44" height="56" rx="10" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+    <g fill="#ef4444"><circle cx="410" cy="190" r="5"/><circle cx="430" cy="74" r="5"/><circle cx="440" cy="84" r="5"/><circle cx="415" cy="64" r="5"/></g>
+    <path d="M420,182 L420,90" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a61)"/>
+    <text x="460" y="140" font-size="12" fill="#b91c1c" text-anchor="middle">ATP</text>
+    <g font-size="12" text-anchor="middle">
+      <text x="60" y="222">O₂、CO₂、</text><text x="60" y="238">脂溶性分子</text>
+      <text x="180" y="222">離子、水</text><text x="180" y="238">（水通道）</text>
+      <text x="300" y="222">葡萄糖</text><text x="300" y="238">（GLUT）</text>
+      <text x="420" y="222">Na⁺/K⁺ 幫浦</text><text x="420" y="238">逆梯度</text></g>
+    <rect x="10" y="248" width="335" height="20" rx="6" fill="#dbeafe"/><text x="178" y="262" font-size="12" text-anchor="middle" fill="#1e3a8a">被動運輸：順著濃度梯度（高→低），不耗能</text>
+    <rect x="355" y="248" width="115" height="20" rx="6" fill="#fee2e2"/><text x="412" y="262" font-size="12" text-anchor="middle" fill="#991b1b">主動：逆梯度耗能</text>
+  </svg><figcaption>物質穿過細胞膜的四種方式。①②③都是順著濃度「下坡」走，不花能量；④是「上坡」，要花 ATP。②③④都要靠膜蛋白。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>分類</th><th>方式</th><th>需要膜蛋白？</th><th>耗能？</th><th>例子</th></tr>
+    <tr><td rowspan="3"><b>被動運輸</b><br>passive transport<br>（順濃度梯度）</td><td>簡單擴散</td><td>否（或經通道）</td><td>否</td><td>O₂、CO₂、脂溶性分子；離子經通道</td></tr>
+    <tr><td>滲透（水的擴散）</td><td>可經水通道</td><td>否</td><td>水</td></tr>
+    <tr><td>促進性擴散</td><td>載體</td><td>否</td><td>葡萄糖經 GLUT</td></tr>
+    <tr><td rowspan="2"><b>主動運輸</b><br>active transport<br>（逆濃度梯度）</td><td>初級主動運輸</td><td>幫浦（載體）</td><td>直接用 ATP</td><td>Na⁺/K⁺ 幫浦、Ca²⁺ 幫浦</td></tr>
+    <tr><td>次級主動運輸</td><td>載體</td><td>間接（靠 Na⁺ 梯度）</td><td>Na⁺—葡萄糖同向運輸</td></tr>
+    <tr><td><b>大量運輸</b></td><td>胞吞、胞吐</td><td>膜泡</td><td>是</td><td>LDL 進入、激素分泌</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">國考考過：</b>物質通過細胞膜的方式。抓兩個判斷：①順梯度還是逆梯度（被動 vs 主動）；②要不要膜蛋白（簡單擴散 vs 通道／載體）。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>細胞外液＝血漿＋組織間液；組織液由微血管濾出、大部分回流、多餘的經淋巴回收。</li>
+      <li>細胞外基質：膠原、彈性蛋白、蛋白聚醣；整合素連接細胞與基質並傳遞訊號。</li>
+      <li>被動運輸（順梯度、不耗能）：簡單擴散、滲透、促進性擴散；主動運輸（逆梯度、耗能）：初級、次級；大量運輸：胞吞、胞吐。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>細胞外基質</td><td>extracellular matrix</td><td>整合素</td><td>integrin</td></tr>
+      <tr><td>被動運輸</td><td>passive transport</td><td>主動運輸</td><td>active transport</td></tr>
+      <tr><td>濃度梯度</td><td>concentration gradient</td><td>大量運輸</td><td>bulk transport</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 6.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">6.2</span>擴散與滲透</h2>
+  <div class="en">Diffusion and Osmosis</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>溶質的<b>擴散</b>及影響速率的因素；水的<b>滲透</b>、<b>滲透壓</b>、<b>滲透度</b>與<b>張力</b>；以及身體怎麼用下視丘與 ADH 調節血液滲透壓。</div><div><span class="lt lt2">為什麼接在 6.1 後面？</span>先學最基本、不需要能量的運輸。擴散解釋了氧氣怎麼進入組織；滲透解釋了為什麼點滴要用「等張溶液」、為什麼糖尿病會多尿。</div></div>
+  <div class="oneline">擴散＝分子從高濃度往低濃度移動；滲透＝水從溶質少（水多）的一側，穿過半透膜往溶質多的一側移動；滲透濃度決定水往哪裡走，血漿約 300 mOsm。</div>
+  <div class="think">醫院打點滴為什麼用「0.9% 生理食鹽水」，不能直接打純水？</div>
+
+  <h3 id="h4">擴散 Diffusion</h3>
+  <p class="core">擴散靠分子自己的隨機運動，淨移動方向是高 → 低濃度，直到平衡；非極性分子直接穿過磷脂雙層，離子經通道。</p>
+  <p>分子因熱能不斷隨機運動。當某處濃度較高，從高濃度區往低濃度區跑的分子比反方向多，造成<b>淨移動</b>，直到兩邊濃度相等（平衡）為止，這就是<b>擴散</b> <i class="en-term">diffusion</i>。兩區濃度的差異叫<b>濃度梯度</b>；擴散就是「順著梯度往下走」，不需要細胞消耗能量。</p>
+  <h4>穿過細胞膜的擴散</h4>
+  <p class="core">非極性分子（O₂、CO₂、類固醇）直接穿過磷脂雙層；水可經水通道；離子必須經離子通道（漏通道或閘控通道）。</p>
+  <ul class="dots">
+    <li><b>非極性（脂溶性）分子</b>：O₂、CO₂、脂肪酸、類固醇激素、酒精等可以直接溶進磷脂雙層而穿過，稱為<b>簡單擴散</b>。肺泡與微血管間的氣體交換就是這樣（第 16 章）。</li>
+    <li><b>極性小分子與水</b>：水雖然極性，但很小，可以少量直接穿過；大量的水則經<b>水通道蛋白</b> <i class="en-term">aquaporins</i> 通過。</li>
+    <li><b>離子</b>：帶電，無法穿過疏水層，必須經過<b>離子通道</b> <i class="en-term">ion channels</i>。有的通道一直開著（漏通道），有的會開關（<b>閘控通道</b> gated channels，依電壓或化學物質開關），這是神經訊號的基礎（第 7 章）。</li>
+  </ul>
+  <h4>擴散速率 Rate of Diffusion</h4>
+  <p class="core">擴散速率↑：濃度差大、膜通透性高、表面積大、距離短、溫度高。</p>
+  <div class="tblwrap"><table>
+    <tr><th>因素</th><th>效果</th><th>生理例子</th></tr>
+    <tr><td>濃度差</td><td>越大越快</td><td>運動時肌肉耗氧多、O₂ 濃度低 → 氧氣擴散進肌肉更快</td></tr>
+    <tr><td>膜的通透性</td><td>越高越快（如通道數量）</td><td>ADH 增加腎集尿管的水通道數量</td></tr>
+    <tr><td>表面積</td><td>越大越快</td><td>小腸的絨毛、微絨毛；肺泡總面積約一個網球場</td></tr>
+    <tr><td>擴散距離</td><td>越短越快</td><td>肺泡壁與微血管壁都是單層扁平細胞；肺水腫時距離變長，換氣變差</td></tr>
+    <tr><td>溫度</td><td>越高越快</td><td>—</td></tr>
+  </table></div>
+
+  <h3 id="h5">滲透 Osmosis</h3>
+  <p class="core">滲透＝水穿過半透膜，從溶質濃度低（水多）往溶質濃度高（水少）的方向移動；阻止滲透所需的壓力＝滲透壓。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a62" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#2563eb"/></marker></defs>
+    <path d="M40,40 L40,200 L440,200 L440,40" fill="none" stroke="#374151" stroke-width="3"/>
+    <rect x="42" y="100" width="197" height="99" fill="#dbeafe"/><rect x="242" y="70" width="197" height="129" fill="#dbeafe"/>
+    <line x1="240" y1="40" x2="240" y2="200" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="240" y="30" font-size="13" text-anchor="middle" fill="#6d28d9">半透膜（水能過、溶質不能過）</text>
+    <g fill="#f59e0b"><circle cx="100" cy="150" r="6"/><circle cx="170" cy="170" r="6"/></g>
+    <g fill="#f59e0b"><circle cx="270" cy="110" r="6"/><circle cx="300" cy="150" r="6"/><circle cx="340" cy="120" r="6"/><circle cx="380" cy="170" r="6"/><circle cx="410" cy="110" r="6"/><circle cx="320" cy="180" r="6"/><circle cx="400" cy="145" r="6"/></g>
+    <path d="M180,130 L300,130" stroke="#2563eb" stroke-width="4" marker-end="url(#a62)"/>
+    <text x="140" y="90" font-size="14" text-anchor="middle">溶質少＝水多</text><text x="340" y="60" font-size="14" text-anchor="middle">溶質多＝水少</text>
+    <text x="240" y="225" font-size="14" text-anchor="middle" fill="#1d4ed8" font-weight="bold">水往溶質多的那邊跑 → 那邊液面上升</text>
+    <text x="240" y="245" font-size="12" text-anchor="middle">記法：「水往鹹的地方流」（溶質會把水拉過去）</text>
+  </svg><figcaption>滲透：溶質無法通過時，水會往溶質濃度高的一側移動，好像溶質把水「吸」過去。</figcaption></figure>
+  <p><b>滲透</b> <i class="en-term">osmosis</i> 是<b>水</b>的淨擴散。當膜讓水通過、卻擋住某些溶質（<b>半透膜</b>）時，水會從<b>溶質濃度低（水濃度高）</b>的一側，往<b>溶質濃度高（水濃度低）</b>的一側移動。</p>
+  <ul class="dots">
+    <li>必要條件：①膜兩側<b>溶質濃度不同</b>；②膜對該溶質<b>不通透</b>（若溶質也能過，就會自己擴散到兩邊一樣，不會引起水的淨移動）。</li>
+    <li><b>滲透壓</b> <i class="en-term">osmotic pressure</i>：要阻止水滲透進入溶液所需施加的壓力。溶液的溶質越多，滲透壓越高，「吸水」的力量越強。</li>
+  </ul>
+
+  <h3 id="h6">滲透莫耳濃度與滲透度 Molality and Osmolality</h3>
+  <p class="core">滲透壓取決於溶質「顆粒數」而非種類；會解離的物質顆粒加倍（1 NaCl → 2 顆）；血漿滲透度約 300 mOsm（280–295）。</p>
+  <p>滲透壓只看溶液中<b>溶質顆粒的總數</b>，不管顆粒是什麼、多大。</p>
+  <ul class="dots">
+    <li><b>重量莫耳濃度</b> <i class="en-term">molality</i>：每公斤水溶有幾莫耳溶質。</li>
+    <li><b>滲透度（滲透莫耳濃度）</b> <i class="en-term">osmolality, Osm</i>：每公斤水中所有溶質<b>顆粒</b>的總莫耳數。<b>會解離的物質要乘以解離出的顆粒數</b>：1 mol 葡萄糖＝1 Osm；1 mol NaCl 解離成 Na⁺＋Cl⁻ ＝ 2 Osm；1 mol CaCl₂ ＝ 3 Osm。</li>
+    <li><b>血漿滲透度約 300 mOsm</b>（正常約 280–295 mOsm/kg），主要由 Na⁺ 與其伴隨的陰離子貢獻。可估算：血漿滲透度 ≈ 2×[Na⁺] ＋ 葡萄糖/18 ＋ BUN/2.8。</li>
+  </ul>
+
+  <h3 id="h7">張力 Tonicity</h3>
+  <p class="core">張力＝溶液對細胞體積的影響：等張（不變，0.9% NaCl、5% 葡萄糖）、低張（細胞吸水膨脹，可能溶血）、高張（細胞失水皺縮）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a63" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker></defs>
+    <g font-size="15" text-anchor="middle" font-weight="bold"><text x="80" y="22" fill="#15803d">等張</text><text x="240" y="22" fill="#1d4ed8">低張</text><text x="400" y="22" fill="#b91c1c">高張</text></g>
+    <g fill="none" stroke="#9ca3af" stroke-width="2"><rect x="10" y="32" width="140" height="130" rx="12"/><rect x="170" y="32" width="140" height="130" rx="12"/><rect x="330" y="32" width="140" height="130" rx="12"/></g>
+    <ellipse cx="80" cy="97" rx="40" ry="26" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/><ellipse cx="80" cy="97" rx="18" ry="10" fill="#fecaca"/>
+    <path d="M48,60 L60,72 M112,134 L100,122" stroke="#2563eb" stroke-width="2" marker-end="url(#a63)"/><path d="M100,72 L112,60 M60,122 L48,134" stroke="#2563eb" stroke-width="2" marker-end="url(#a63)"/>
+    <circle cx="240" cy="97" r="44" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+    <g stroke="#2563eb" stroke-width="2.5"><path d="M180,50 L205,70" marker-end="url(#a63)"/><path d="M300,50 L275,70" marker-end="url(#a63)"/><path d="M180,150 L205,128" marker-end="url(#a63)"/><path d="M300,150 L275,128" marker-end="url(#a63)"/></g>
+    <path d="M370,97 l8,-16 l10,10 l8,-18 l10,14 l10,-12 l8,16 l-8,10 l8,14 l-12,4 l-6,14 l-12,-8 l-12,8 l-6,-12 l-12,-4 z" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/>
+    <g stroke="#2563eb" stroke-width="2.5"><path d="M375,72 L350,50" marker-end="url(#a63)"/><path d="M425,72 L450,50" marker-end="url(#a63)"/><path d="M380,125 L355,148" marker-end="url(#a63)"/><path d="M425,125 L450,148" marker-end="url(#a63)"/></g>
+    <g font-size="12" text-anchor="middle"><text x="80" y="182">進出相等，形狀不變</text><text x="80" y="200">0.9% NaCl、5% 葡萄糖</text>
+      <text x="240" y="182">水跑進去 → 膨脹</text><text x="240" y="200">太多會破（溶血）</text>
+      <text x="400" y="182">水跑出來 → 皺縮</text><text x="400" y="200">（鋸齒狀）</text></g>
+  </svg><figcaption>紅血球在三種溶液中的樣子。「張力」是看細胞會不會變形，看的是膜無法通過的溶質。</figcaption></figure>
+  <p><b>張力</b> <i class="en-term">tonicity</i> 描述溶液放進細胞後，對<b>細胞體積</b>的影響。它取決於細胞膜<b>無法通過</b>的溶質濃度（能自由穿膜的溶質如尿素，不影響張力）：</p>
+  <div class="tblwrap"><table>
+    <tr><th>溶液</th><th>和細胞內相比</th><th>水的移動</th><th>細胞變化</th></tr>
+    <tr><td><b>等張</b> isotonic</td><td>不能穿膜的溶質濃度相同</td><td>無淨移動</td><td>體積不變</td></tr>
+    <tr><td><b>低張</b> hypotonic</td><td>溶質較少（水較多）</td><td>水<b>進入</b>細胞</td><td>膨脹，紅血球可能破裂（<b>溶血</b>）</td></tr>
+    <tr><td><b>高張</b> hypertonic</td><td>溶質較多</td><td>水<b>離開</b>細胞</td><td><b>皺縮</b>（crenation）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b><b>0.9% 生理食鹽水</b>（約 308 mOsm）和 <b>5% 葡萄糖水</b>（約 278 mOsm）與血漿等張，打進血管不會讓紅血球變形。純水是極度低張，大量打進血管會讓紅血球吸水破裂（溶血）。</div>
+  <div class="nut"><b class="t">營養連結：</b>腸道灌食或口服營養品若滲透度太高（高張），會把水從腸壁拉進腸腔，引起<b>腹瀉</b>與腹脹（傾食症候群也類似）。所以灌食配方常從等張或稀釋濃度開始。</div>
+
+  <h3 id="h8">血漿滲透度的調節 Regulation of Blood Osmolality</h3>
+  <p class="core">血漿滲透度↑（脫水、吃鹹）→ 下視丘滲透壓感受器 → 口渴＋腦垂腺後葉釋放 ADH → 腎臟回收水 → 滲透度回降（負回饋）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 270" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a64" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="150" y="10" width="180" height="40" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="240" y="36" font-size="15" text-anchor="middle" font-weight="bold">血漿滲透度↑（太濃）</text>
+    <path d="M240,50 L240,76" stroke="#374151" stroke-width="2.5" marker-end="url(#a64)"/>
+    <ellipse cx="240" cy="100" rx="110" ry="22" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/><text x="240" y="105" font-size="14" text-anchor="middle">下視丘滲透壓感受器偵測</text>
+    <path d="M180,120 L110,150" stroke="#374151" stroke-width="2.5" marker-end="url(#a64)"/><path d="M300,120 L370,150" stroke="#374151" stroke-width="2.5" marker-end="url(#a64)"/>
+    <rect x="20" y="152" width="170" height="46" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="105" y="172" font-size="14" text-anchor="middle" font-weight="bold">口渴 → 喝水</text><text x="105" y="190" font-size="12" text-anchor="middle">水分增加</text>
+    <rect x="290" y="152" width="170" height="46" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="375" y="172" font-size="14" text-anchor="middle" font-weight="bold">腦垂腺後葉放 ADH</text><text x="375" y="190" font-size="12" text-anchor="middle">腎臟回收更多水、尿變濃</text>
+    <path d="M105,198 L200,232" stroke="#374151" stroke-width="2.5" marker-end="url(#a64)"/><path d="M375,198 L280,232" stroke="#374151" stroke-width="2.5" marker-end="url(#a64)"/>
+    <rect x="150" y="226" width="180" height="38" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="250" font-size="15" text-anchor="middle" font-weight="bold">滲透度回到正常</text>
+  </svg><figcaption>這是一個典型的負回饋：感受器（下視丘）、整合中心（下視丘）、動器（口渴行為、腎臟）。</figcaption></figure>
+  <p>血漿滲透度維持在很窄的範圍內。當脫水、流汗或吃太鹹使滲透度上升（約超過正常 1–2%），下視丘的<b>滲透壓感受器</b> <i class="en-term">osmoreceptors</i> 會因細胞失水皺縮而被活化，引起：</p>
+  <ul class="dots">
+    <li><b>口渴</b>，促使喝水；</li>
+    <li>由<b>腦垂腺後葉</b>釋放<b>抗利尿激素 ADH</b>，使腎臟集尿管插入更多水通道，回收更多水，尿量減少、尿變濃（第 11、17 章）。</li>
+  </ul>
+  <p>反之，大量喝水使滲透度下降時，ADH 分泌減少，排出大量稀尿。</p>
+  <div class="warn"><b class="t">老師強調＋國考考過：糖尿病的滲透性利尿</b>——血糖太高時，腎小管無法把濾出的葡萄糖全部回收，尿中有糖（糖尿）。這些葡萄糖留在腎小管中提高管內滲透壓，把水「留」在尿中，造成<b>多尿</b>，進而<b>脫水、口渴、多喝</b>（三多症狀中的兩個）。另外，某些利尿劑會增加尿中鉀的流失，造成<b>低血鉀</b>，影響心臟的靜止膜電位與心電圖。</div>
+
+  <details class="stop"><summary>想一想：喝海水為什麼會越喝越渴？</summary>
+    <div>海水的鹽分（約 1000 mOsm 以上）遠高於血漿，喝下去會使血漿滲透度上升，水從細胞被拉出來（細胞脫水），下視丘感受器更活化、更渴；而且腎臟要排出這些鹽，需要比喝進去更多的水，造成淨失水。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>擴散：高 → 低濃度、不耗能；非極性分子直接穿膜，離子經通道，水可經水通道。</li>
+      <li>擴散速率：濃度差、通透性、表面積大、距離短、溫度高都較快。</li>
+      <li>滲透：水往溶質多的一側移動（膜須對溶質不通透）；滲透壓取決於顆粒數；NaCl 解離成 2 顆。</li>
+      <li>血漿約 300 mOsm；等張（0.9% NaCl、5% 葡萄糖）、低張（膨脹、溶血）、高張（皺縮）。</li>
+      <li>滲透度↑ → 下視丘滲透壓感受器 → 口渴＋ADH → 腎回收水；糖尿病高血糖 → 滲透性利尿 → 多尿、脫水、口渴。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>擴散</td><td>diffusion</td><td>簡單擴散</td><td>simple diffusion</td></tr>
+      <tr><td>離子通道</td><td>ion channel</td><td>閘控通道</td><td>gated channel</td></tr>
+      <tr><td>水通道蛋白</td><td>aquaporin</td><td>滲透</td><td>osmosis</td></tr>
+      <tr><td>滲透壓</td><td>osmotic pressure</td><td>滲透度</td><td>osmolality</td></tr>
+      <tr><td>張力</td><td>tonicity</td><td>等張／低張／高張</td><td>isotonic / hypotonic / hypertonic</td></tr>
+      <tr><td>溶血</td><td>hemolysis</td><td>滲透壓感受器</td><td>osmoreceptor</td></tr>
+      <tr><td>滲透性利尿</td><td>osmotic diuresis</td><td>半透膜</td><td>semipermeable membrane</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 6.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">6.3</span>載體媒介運輸</h2>
+  <div class="en">Carrier-Mediated Transport</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>靠<b>載體蛋白</b>的運輸：<b>促進性擴散</b>（GLUT）、<b>初級主動運輸</b>（Na⁺/K⁺ 幫浦、Ca²⁺ 幫浦）、<b>次級主動運輸</b>（Na⁺—葡萄糖同向運輸）、<b>跨上皮運輸</b>，以及<b>大量運輸</b>。</div><div><span class="lt lt2">為什麼接在 6.2 後面？</span>葡萄糖、胺基酸、離子等極性物質無法自己擴散穿膜；有些還必須「逆著」濃度運送。這一節說明細胞用哪些蛋白質、花多少能量來完成——小腸吸收、腎臟再吸收、神經訊號都靠它們。</div></div>
+  <div class="oneline">載體有專一性、會飽和、會被競爭；促進性擴散順梯度不耗能（GLUT）；初級主動運輸直接用 ATP（鈉鉀幫浦 3 Na⁺ 出、2 K⁺ 進）；次級主動運輸借用 Na⁺ 梯度把葡萄糖等一起帶進來。</div>
+  <div class="think">霍亂等腹瀉造成脫水時，為什麼口服補液鹽要同時含「鹽」和「糖」？</div>
+
+  <h3 id="h9">載體的特性</h3>
+  <p class="core">載體運輸的三特性：專一性、競爭、飽和（有最大運輸速率 Tm）。</p>
+  <p><b>載體蛋白</b> <i class="en-term">carrier proteins</i> 是貫穿細胞膜的蛋白質，和被運送的分子結合後改變形狀，把分子從膜的一側帶到另一側。所有載體運輸都有三個特性：</p>
+  <ul class="dots">
+    <li><b>專一性</b> <i class="en-term">specificity</i>：只運送特定分子（或結構相似的一類）。</li>
+    <li><b>競爭</b> <i class="en-term">competition</i>：結構相似的分子會搶同一個載體，互相降低運輸量。</li>
+    <li><b>飽和</b> <i class="en-term">saturation</i>：載體數量有限，受質濃度升高到所有載體都在工作時，運輸速率達到<b>最大運輸量</b> <i class="en-term">transport maximum, Tm</i>，不再增加。</li>
+  </ul>
+  <div class="eg"><b class="t">例子：</b>腎小管回收葡萄糖的載體會飽和。血糖超過約 180 mg/dL（<b>腎糖閾</b>）時，濾出的葡萄糖超過載體的最大運輸量，多出來的就出現在尿中——這就是糖尿病「糖尿」的原因（第 17 章）。</div>
+
+  <h3 id="h10">促進性擴散 Facilitated Diffusion</h3>
+  <p class="core">促進性擴散：載體幫忙、順濃度梯度、不耗能；葡萄糖經 GLUT；GLUT4 由胰島素調控插入肌肉與脂肪細胞膜。</p>
+  <p>極性分子順著濃度梯度、但必須靠載體通過細胞膜，叫<b>促進性擴散</b> <i class="en-term">facilitated diffusion</i>。它仍是被動運輸，不耗能。最重要的例子是葡萄糖經<b>葡萄糖轉運蛋白</b> <i class="en-term">glucose transporters, GLUT</i> 進入細胞：</p>
+  <div class="tblwrap"><table>
+    <tr><th>GLUT</th><th>主要位置</th><th>特點</th></tr>
+    <tr><td>GLUT1</td><td>紅血球、血腦障壁</td><td>持續供應腦與紅血球葡萄糖</td></tr>
+    <tr><td>GLUT2</td><td>肝臟、胰島 β 細胞、小腸與腎小管的基底側</td><td>雙向；β 細胞靠它感測血糖</td></tr>
+    <tr><td>GLUT3</td><td>神經元</td><td>親和力高，低血糖時仍能攝取葡萄糖</td></tr>
+    <tr><td><b>GLUT4</b></td><td><b>骨骼肌、心肌、脂肪組織</b></td><td><b>受胰島素調控</b>；運動也能增加</td></tr>
+    <tr><td>GLUT5</td><td>小腸</td><td>運送果糖</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a65" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="50" width="460" height="22" fill="#fde68a"/><text x="200" y="44" font-size="12" text-anchor="middle" fill="#a16207">肌肉／脂肪細胞膜</text>
+    <rect x="40" y="40" width="40" height="42" rx="6" fill="#c4b5fd" stroke="#6d28d9"/><rect x="40" y="40" width="40" height="42" rx="6" fill="none"/>
+    <path d="M60,24 L60,36" stroke="#374151" stroke-width="2"/><text x="60" y="18" font-size="12" text-anchor="middle">胰島素</text>
+    <text x="60" y="100" font-size="12" text-anchor="middle">胰島素受體</text>
+    <path d="M90,90 Q140,130 180,120" fill="none" stroke="#7c3aed" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#a65)"/><text x="130" y="145" font-size="12" text-anchor="middle" fill="#6d28d9">訊號傳入</text>
+    <g fill="#86efac" stroke="#16a34a" stroke-width="2"><circle cx="210" cy="160" r="18"/><circle cx="260" cy="175" r="18"/></g>
+    <text x="235" y="210" font-size="12" text-anchor="middle">平常 GLUT4 藏在細胞內的囊泡中</text>
+    <path d="M235,140 L280,82" stroke="#374151" stroke-width="2.5" marker-end="url(#a65)"/>
+    <rect x="290" y="40" width="30" height="42" rx="6" fill="#86efac" stroke="#16a34a" stroke-width="2"/><rect x="350" y="40" width="30" height="42" rx="6" fill="#86efac" stroke="#16a34a" stroke-width="2"/>
+    <g fill="#fbbf24" stroke="#b45309"><polygon points="305,10 313,18 305,26 297,18"/><polygon points="365,14 373,22 365,30 357,22"/></g>
+    <path d="M305,30 L305,108" stroke="#b45309" stroke-width="2.5" marker-end="url(#a65)"/><path d="M365,34 L365,108" stroke="#b45309" stroke-width="2.5" marker-end="url(#a65)"/>
+    <text x="470" y="140" font-size="13" fill="#15803d" font-weight="bold" text-anchor="end">GLUT4 插到膜上</text><text x="470" y="160" font-size="13" fill="#15803d" font-weight="bold" text-anchor="end">→ 葡萄糖進入細胞</text>
+  </svg><figcaption>胰島素讓肌肉與脂肪細胞把藏在細胞內的 GLUT4「搬到」細胞膜上，葡萄糖才能大量進入。胰島素阻抗時，這一步反應變差。</figcaption></figure>
+  <p>骨骼肌、心肌、脂肪細胞的 <b>GLUT4</b> 平常大多存在細胞內的囊泡中。<b>胰島素</b>與受體結合後，觸發這些囊泡以胞吐方式把 GLUT4 插入細胞膜，葡萄糖進入量大增；胰島素下降時 GLUT4 又被胞吞回去。<b>運動時肌肉收縮</b>也能使 GLUT4 移到膜上，不需要胰島素——這是運動能改善血糖控制的原因之一。</p>
+  <div class="nut"><b class="t">老師強調：胰島素阻抗</b>——肌肉、脂肪、肝臟對胰島素的反應變差：肌肉與脂肪的 GLUT4 移動減少、葡萄糖進不去；肝臟持續輸出葡萄糖；脂肪分解增加使游離脂肪酸上升，又加重阻抗。胰臟只好分泌更多胰島素（高胰島素血症）。原因包括肥胖（特別是內臟脂肪）、缺乏運動、高糖高脂飲食、遺傳、慢性發炎、壓力與睡眠不足；後果是糖尿病前期 → 第 2 型糖尿病、代謝症候群、心血管疾病，以及 β 細胞長期過勞而衰退。</div>
+
+  <h3 id="h11">主動運輸 Active Transport</h3>
+  <p class="core">逆濃度梯度、需要能量。初級：幫浦直接水解 ATP（Na⁺/K⁺ 幫浦：3 Na⁺ 出、2 K⁺ 進；Ca²⁺ 幫浦）；次級：借用 Na⁺ 往內衝的能量（同向、反向運輸）。</p>
+  <p>把物質從<b>低濃度送到高濃度</b>（逆梯度），像把水往山上抽，需要能量，稱為<b>主動運輸</b> <i class="en-term">active transport</i>。</p>
+  <h4>初級主動運輸 Primary Active Transport</h4>
+  <p>載體本身就是會水解 ATP 的酵素（ATPase），直接用 ATP 的能量推動運輸，稱為<b>幫浦</b> <i class="en-term">pump</i>。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a66" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="240" y="20" font-size="14" text-anchor="middle" fill="#1d4ed8">細胞外：Na⁺ 很多（約 145）、K⁺ 很少（約 5）</text>
+    <rect x="0" y="100" width="480" height="50" fill="#fde68a"/>
+    <text x="240" y="240" font-size="14" text-anchor="middle" fill="#a16207">細胞內：Na⁺ 很少（約 12）、K⁺ 很多（約 150）</text>
+    <rect x="200" y="86" width="80" height="78" rx="16" fill="#fca5a5" stroke="#dc2626" stroke-width="3"/><text x="240" y="122" font-size="13" text-anchor="middle" font-weight="bold">Na⁺/K⁺</text><text x="240" y="140" font-size="13" text-anchor="middle" font-weight="bold">幫浦</text>
+    <g fill="#ef4444"><circle cx="150" cy="200" r="9"/><circle cx="130" cy="185" r="9"/><circle cx="170" cy="185" r="9"/></g><text x="150" y="222" font-size="12" text-anchor="middle">3 Na⁺</text>
+    <path d="M160,175 Q200,150 210,100 Q215,60 160,52" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#a66)"/><text x="20" y="56" font-size="13" fill="#b91c1c" font-weight="bold">送出 3 Na⁺</text>
+    <g fill="#8b5cf6"><circle cx="330" cy="50" r="9"/><circle cx="352" cy="62" r="9"/></g><text x="380" y="50" font-size="12">2 K⁺</text>
+    <path d="M330,68 Q270,90 272,140 Q275,180 330,196" fill="none" stroke="#7c3aed" stroke-width="3" marker-end="url(#a66)"/><text x="345" y="200" font-size="13" fill="#6d28d9" font-weight="bold">送入 2 K⁺</text>
+    <circle cx="240" cy="190" r="16" fill="#fef3c7" stroke="#b45309"/><text x="240" y="195" font-size="11" text-anchor="middle">ATP</text>
+  </svg><figcaption>鈉鉀幫浦每用掉 1 個 ATP，就把 3 個 Na⁺ 打出去、2 個 K⁺ 打進來，維持「外面鈉多、裡面鉀多」。</figcaption></figure>
+  <ul class="dots">
+    <li><b>鈉鉀幫浦</b> <i class="en-term">Na⁺/K⁺ pump（Na⁺/K⁺-ATPase）</i>：每水解 1 個 ATP，把 <b>3 個 Na⁺ 送出</b>、<b>2 個 K⁺ 送入</b>細胞。幾乎所有細胞都有，用掉身體相當大比例的 ATP（神經細胞更多）。功能：
+      <ol>
+        <li>維持「細胞外 Na⁺ 高、細胞內 K⁺ 高」的濃度梯度，抵消離子不斷的漏出漏入。</li>
+        <li>Na⁺ 梯度是次級主動運輸的能量來源。</li>
+        <li>產生並維持<b>膜電位</b>；神經與肌肉的動作電位依賴這些梯度（6.4、第 7 章）。</li>
+        <li>維持細胞的滲透平衡，防止細胞腫脹（Na⁺ 被打出去，水不會一直進來）。</li>
+      </ol></li>
+    <li><b>鈣幫浦</b> <i class="en-term">Ca²⁺ pump</i>：把 Ca²⁺ 打出細胞或打進內質網（肌漿網），讓細胞質的 Ca²⁺ 濃度維持極低。這樣當 Ca²⁺ 通道打開、Ca²⁺ 突然湧入時，就能成為強烈的訊號，觸發肌肉收縮、神經傳遞物質釋放（第 7、12 章）。</li>
+    <li>其他：胃壁細胞的 <b>H⁺/K⁺ 幫浦</b>（質子幫浦）分泌胃酸，制酸藥「質子幫浦抑制劑」就是抑制它（第 18 章）。</li>
+  </ul>
+  <div class="eg"><b class="t">例子：</b>強心藥<b>毛地黃</b>（digitalis）抑制心肌的鈉鉀幫浦，使細胞內 Na⁺ 增加，進而減少 Ca²⁺ 被排出，細胞內 Ca²⁺ 增加，心肌收縮力變強（第 13 章）。</div>
+
+  <h4>次級主動運輸 Secondary Active Transport</h4>
+  <p class="core">借用 Na⁺ 順梯度流入的能量帶動另一物質逆梯度：同向（Na⁺＋葡萄糖、Na⁺＋胺基酸）、反向（Na⁺ 進、Ca²⁺ 或 H⁺ 出）。</p>
+  <p>鈉鉀幫浦把 Na⁺ 打出去後，Na⁺ 在細胞外很多、細胞內很少，而且細胞內帶負電，所以 Na⁺ 有很強的「想衝進細胞」的趨勢——就像抽到山上的水。<b>次級主動運輸</b> <i class="en-term">secondary active transport</i> 的載體利用 Na⁺ 順梯度流入的能量，順便把另一個分子<b>逆著它的梯度</b>運送。它不直接用 ATP，但依賴鈉鉀幫浦用 ATP 建立的梯度，所以是「間接」耗能。</p>
+  <ul class="dots">
+    <li><b>同向運輸（共同運輸）</b> <i class="en-term">symport / cotransport</i>：Na⁺ 和另一分子<b>同方向</b>進入細胞。例：小腸與腎小管的 <b>Na⁺—葡萄糖同向運輸蛋白（SGLT1）</b>；Na⁺—胺基酸同向運輸。</li>
+    <li><b>反向運輸（交換）</b> <i class="en-term">antiport / countertransport</i>：Na⁺ 進入、另一分子<b>反方向</b>出去。例：<b>Na⁺/Ca²⁺ 交換器</b>（把 Ca²⁺ 排出心肌細胞）；腎小管的 Na⁺/H⁺ 交換器（排出 H⁺，第 17 章）。</li>
+  </ul>
+  <div class="nut"><b class="t">回答開頭問題：口服補液療法（ORT）</b>——腹瀉時腸道分泌大量水和鹽，但小腸的 Na⁺—葡萄糖同向運輸通常仍正常。口服補液鹽同時含 <b>Na⁺ 和葡萄糖</b>：兩者一起被同向運輸吸收，帶動 Cl⁻ 與<b>水</b>跟著滲透進入身體，有效矯正脫水。這個簡單的方法挽救了全世界無數腹瀉脫水兒童的生命（老師強調）。單喝白開水或只含鹽、不含糖的水，吸收效果都比較差。</div>
+  <div class="eg"><b class="t">藥物連結：</b>新型降血糖藥 <b>SGLT2 抑制劑</b>阻斷腎小管的 Na⁺—葡萄糖同向運輸，讓葡萄糖從尿中排出以降低血糖。</div>
+
+  <h3 id="h12">跨上皮運輸 Transport Across Epithelial Membranes</h3>
+  <p class="core">吸收（腸腔→血液）、再吸收（腎小管→血液）；穿細胞（經頂端膜與基底側膜不同的載體）＋細胞旁（細胞間隙，受緊密連接控制）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a67" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="40" y="128" font-size="14" text-anchor="middle" fill="#1d4ed8" font-weight="bold">腸腔</text>
+    <text x="440" y="128" font-size="14" text-anchor="middle" fill="#be123c" font-weight="bold">血液</text>
+    <rect x="110" y="20" width="250" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="110" y="140" width="250" height="100" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="106" y="116" width="10" height="28" fill="#7c3aed"/><text x="100" y="160" font-size="11" text-anchor="end" fill="#6d28d9">緊密連接</text>
+    <g stroke="#93c5fd" stroke-width="2"><path d="M110,30 l-10,0 M110,45 l-10,0 M110,60 l-10,0 M110,75 l-10,0 M110,90 l-10,0 M110,105 l-10,0"/></g>
+    <text x="235" y="14" font-size="12" text-anchor="middle">頂端膜（刷狀緣）　　　　　　　基底側膜</text>
+    <circle cx="112" cy="70" r="12" fill="#86efac" stroke="#16a34a" stroke-width="2"/><text x="135" y="60" font-size="11">SGLT1</text>
+    <path d="M60,70 L98,70" stroke="#374151" stroke-width="2" marker-end="url(#a67)"/><text x="6" y="58" font-size="11">Na⁺＋葡萄糖</text>
+    <polygon points="220,62 228,70 220,78 212,70" fill="#fbbf24" stroke="#b45309"/>
+    <path d="M232,70 L346,70" stroke="#374151" stroke-width="2" marker-end="url(#a67)"/>
+    <circle cx="360" cy="70" r="12" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/><text x="350" y="100" font-size="11" text-anchor="end">GLUT2</text>
+    <path d="M374,70 L420,70" stroke="#374151" stroke-width="2" marker-end="url(#a67)"/><text x="425" y="62" font-size="11">葡萄糖</text>
+    <rect x="348" y="176" width="24" height="24" rx="5" fill="#fca5a5" stroke="#dc2626" stroke-width="2"/><text x="340" y="220" font-size="11" text-anchor="end">Na⁺/K⁺ 幫浦</text>
+    <path d="M374,188 L420,188" stroke="#dc2626" stroke-width="2" marker-end="url(#a67)"/><text x="425" y="182" font-size="11">Na⁺</text>
+    <text x="235" y="180" font-size="12" text-anchor="middle">① 穿細胞：進、出各用不同載體</text>
+    <path d="M60,130 L410,130" stroke="#0891b2" stroke-width="2.5" stroke-dasharray="7 4" marker-end="url(#a67)"/><text x="235" y="134" font-size="0"> </text>
+    <rect x="120" y="113" width="230" height="16" fill="#fff"/><text x="235" y="125" font-size="12" text-anchor="middle" fill="#0e7490">② 細胞旁：從細胞間隙走（水、部分離子）</text>
+  </svg><figcaption>小腸吸收葡萄糖：頂端膜用 Na⁺—葡萄糖同向運輸（逆梯度）把葡萄糖帶進細胞，基底側膜用 GLUT2（順梯度）送入血液；基底側的鈉鉀幫浦把 Na⁺ 打出去，維持驅動力。</figcaption></figure>
+  <p>小腸與腎小管的上皮細胞要把物質從一側的管腔運到另一側的血液：從腸腔到血液叫<b>吸收</b> <i class="en-term">absorption</i>，從腎小管濾液回到血液叫<b>再吸收</b> <i class="en-term">reabsorption</i>。上皮細胞有方向性，<b>頂端膜</b>（朝管腔）和<b>基底側膜</b>（朝血液）的載體不同，所以能做單向運輸：</p>
+  <ul class="dots">
+    <li><b>穿細胞運輸</b> <i class="en-term">transcellular transport</i>：例如葡萄糖在小腸——頂端膜以 <b>Na⁺—葡萄糖同向運輸</b>進入細胞（次級主動）→ 細胞內葡萄糖濃度升高 → 基底側膜以 <b>GLUT2</b> 促進性擴散進入血液；同時基底側的<b>鈉鉀幫浦</b>把進來的 Na⁺ 打出去，維持細胞內 Na⁺ 低。</li>
+    <li><b>細胞旁運輸</b> <i class="en-term">paracellular transport</i>：經細胞之間的縫隙通過，受<b>緊密連接</b>的鬆緊控制。溶質被吸收後，水常跟著以滲透方式走這條路或經水通道。</li>
+  </ul>
+
+  <h3 id="h13">大量運輸 Bulk Transport</h3>
+  <p class="core">胞吐（分泌激素、神經傳遞物質）、胞吞（受體媒介，如 LDL）；一次搬運大量分子，消耗能量。</p>
+  <p>大分子或大量物質以膜泡的方式運送，稱為<b>大量運輸</b>：<b>胞吐作用</b>把分泌囊泡的內容物釋出（激素、神經傳遞物質、消化酶）；<b>胞吞作用</b>把物質包進細胞（例如受體媒介胞吞攝取 LDL 膽固醇）。進入胞吞小泡的分子仍和細胞質隔著一層膜。詳見第 3 章。</p>
+
+  <div class="tblwrap"><table>
+    <tr><th colspan="5">快速複習（老師簡報）</th></tr>
+    <tr><th>運輸方式</th><th>需載體？</th><th>能量</th><th>方向</th><th>例子</th></tr>
+    <tr><td>簡單擴散</td><td>否</td><td>否</td><td>順梯度</td><td>O₂、CO₂</td></tr>
+    <tr><td>促進性擴散</td><td>是</td><td>否</td><td>順梯度</td><td>葡萄糖（GLUT）</td></tr>
+    <tr><td>初級主動運輸</td><td>是</td><td>ATP</td><td>逆梯度</td><td>Na⁺/K⁺ 幫浦、Ca²⁺ 幫浦</td></tr>
+    <tr><td>次級主動運輸</td><td>是</td><td>間接（Na⁺ 梯度）</td><td>逆梯度</td><td>Na⁺/葡萄糖同向運輸</td></tr>
+    <tr><td>大量運輸</td><td>膜泡</td><td>ATP</td><td>—</td><td>胞吞、胞吐</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>載體三特性：專一性、競爭、飽和（Tm）；腎小管葡萄糖載體飽和 → 糖尿。</li>
+      <li>促進性擴散：順梯度、不耗能；GLUT1 紅血球與血腦障壁、GLUT2 肝與 β 細胞、GLUT4 肌肉脂肪受胰島素調控（運動也可）。</li>
+      <li>胰島素阻抗：GLUT4 移動減少、肝輸出葡萄糖、游離脂肪酸上升 → 高胰島素血症 → 第 2 型糖尿病。</li>
+      <li>初級主動運輸：鈉鉀幫浦（3 Na⁺ 出、2 K⁺ 進、1 ATP）、Ca²⁺ 幫浦、H⁺/K⁺ 幫浦（胃酸）。</li>
+      <li>次級主動運輸：借 Na⁺ 梯度；同向（Na⁺—葡萄糖 SGLT、Na⁺—胺基酸）、反向（Na⁺/Ca²⁺、Na⁺/H⁺）；口服補液鹽＝鈉＋糖帶水吸收。</li>
+      <li>跨上皮：頂端膜 SGLT1 → 基底側 GLUT2；穿細胞與細胞旁路徑。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>載體蛋白</td><td>carrier protein</td><td>最大運輸量</td><td>transport maximum (Tm)</td></tr>
+      <tr><td>促進性擴散</td><td>facilitated diffusion</td><td>葡萄糖轉運蛋白</td><td>glucose transporter (GLUT)</td></tr>
+      <tr><td>胰島素阻抗</td><td>insulin resistance</td><td>幫浦</td><td>pump</td></tr>
+      <tr><td>鈉鉀幫浦</td><td>Na⁺/K⁺ pump (ATPase)</td><td>初級／次級主動運輸</td><td>primary / secondary active transport</td></tr>
+      <tr><td>同向運輸</td><td>symport (cotransport)</td><td>反向運輸</td><td>antiport (countertransport)</td></tr>
+      <tr><td>口服補液療法</td><td>oral rehydration therapy</td><td>吸收／再吸收</td><td>absorption / reabsorption</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 6.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">6.4</span>膜電位</h2>
+  <div class="en">The Membrane Potential</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞膜兩側為什麼有<b>電位差</b>：<b>平衡電位</b>（E<sub>K</sub>、E<sub>Na</sub>）的意義、<b>靜止膜電位</b>約 −70 mV 怎麼來，以及<b>鈉鉀幫浦</b>的角色。</div><div><span class="lt lt2">為什麼接在 6.3 後面？</span>6.3 的鈉鉀幫浦讓離子分布不平均，加上膜對各離子通透性不同，就產生了「電」。這是第 7 章神經衝動、第 12 章肌肉收縮、第 13 章心跳的前提。</div></div>
+  <div class="oneline">細胞內比細胞外負，靜止時約 −70 mV；主要因為膜對 K⁺ 最通透，K⁺ 往外漏、把正電帶走，所以靜止膜電位接近 K⁺ 的平衡電位（−90 mV）；哪一種離子的通道打開，膜電位就往那種離子的平衡電位靠。</div>
+  <div class="think">為什麼血鉀太高會讓心臟停止跳動？</div>
+
+  <h3 id="h14">為什麼會有膜電位</h3>
+  <p class="core">膜電位來自：①細胞內有不能出去的帶負電大分子；②鈉鉀幫浦造成的濃度差；③膜對 K⁺ 通透性遠大於 Na⁺。</p>
+  <p>細胞膜兩側的電荷分布不同，細胞內相對於細胞外帶負電，這個電位差叫<b>膜電位</b> <i class="en-term">membrane potential</i>，單位是毫伏（mV），以細胞內相對於細胞外的值表示。它的成因（老師簡報）：</p>
+  <ol class="steps">
+    <li>細胞內有大量<b>帶負電、不能離開</b>的分子（蛋白質、磷酸根、ATP、核酸等）。</li>
+    <li><b>鈉鉀幫浦</b>維持「外 Na⁺ 高、內 K⁺ 高」的濃度梯度。</li>
+    <li>細胞膜對各離子的<b>通透性不同</b>：靜止時 K⁺ 的漏通道很多，<b>K⁺ 通透性最高</b>，Na⁺ 很低（約 K⁺ > Na⁺ > Cl⁻、Ca²⁺）。</li>
+  </ol>
+  <div class="tblwrap"><table>
+    <tr><th>離子</th><th>細胞內（mM）</th><th>細胞外（mM）</th></tr>
+    <tr><td>K⁺</td><td><b>150</b></td><td>5</td></tr>
+    <tr><td>Na⁺</td><td>12</td><td><b>145</b></td></tr>
+    <tr><td>Cl⁻</td><td>約 9</td><td>約 125</td></tr>
+    <tr><td>Ca²⁺</td><td>極低（約 0.0001）</td><td>約 2.5</td></tr>
+  </table></div>
+  <p style="font-size:14px;color:var(--sub)">※ 數值為常用的代表值（依老師簡報與課本），不同書略有差異。</p>
+
+  <h3 id="h15">平衡電位 Equilibrium Potentials</h3>
+  <p class="core">平衡電位＝某離子的濃度推力與電荷拉力剛好相等時的膜電位；E<sub>K</sub> ≈ −90 mV、E<sub>Na</sub> ≈ +66 mV；用奈斯特方程式計算。</p>
+  <figure class="pic"><svg viewBox="0 0 480 260" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a68" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <line x1="60" y1="20" x2="60" y2="240" stroke="#374151" stroke-width="2"/>
+    <g font-size="13" text-anchor="end"><text x="54" y="40">+66</text><text x="54" y="114">0</text><text x="54" y="196">−70</text><text x="54" y="224">−90</text></g>
+    <line x1="60" y1="110" x2="470" y2="110" stroke="#d1d5db" stroke-dasharray="4 4"/>
+    <line x1="60" y1="36" x2="470" y2="36" stroke="#dc2626" stroke-width="2.5"/><text x="465" y="30" font-size="14" text-anchor="end" fill="#b91c1c" font-weight="bold">E_Na ＝ +66 mV（Na⁺ 想往內衝）</text>
+    <line x1="60" y1="220" x2="470" y2="220" stroke="#7c3aed" stroke-width="2.5"/><text x="465" y="242" font-size="14" text-anchor="end" fill="#6d28d9" font-weight="bold">E_K ＝ −90 mV（K⁺ 想往外跑）</text>
+    <line x1="60" y1="192" x2="470" y2="192" stroke="#111827" stroke-width="3"/><text x="465" y="186" font-size="14" text-anchor="end" font-weight="bold">靜止膜電位 ≈ −70 mV</text>
+    <path d="M150,192 L150,222" stroke="#7c3aed" stroke-width="2"/>
+    <text x="160" y="150" font-size="13">很靠近 E_K（K⁺ 通透性最大），</text><text x="160" y="168" font-size="13">但少量 Na⁺ 滲入，所以稍微正一點</text>
+    <text x="250" y="80" font-size="13" text-anchor="middle" fill="#374151">誰的通道打開，膜電位就靠近誰的平衡電位</text>
+  </svg><figcaption>膜電位的「刻度尺」：兩個極端是 E<sub>K</sub>（−90）與 E<sub>Na</sub>（+66）。靜止時 K⁺ 通道多，膜電位停在靠近 E<sub>K</sub> 的 −70 mV；神經興奮時 Na⁺ 通道大開，膜電位就衝向 E<sub>Na</sub>（第 7 章）。</figcaption></figure>
+  <p>想像一個只讓 <b>K⁺</b> 通過的膜：K⁺ 在細胞內多，會順著濃度梯度往外擴散；但每出去一個 K⁺，就帶走一個正電，細胞內留下負電，這個負電又把 K⁺ 往回拉。當「往外的濃度推力」和「往內的電荷拉力」剛好相等時，K⁺ 就沒有淨移動，這時的膜電位叫 K⁺ 的<b>平衡電位</b> <i class="en-term">equilibrium potential</i>，<b>E<sub>K</sub> ≈ −90 mV</b>。</p>
+  <p>同理，若膜只讓 <b>Na⁺</b> 通過：Na⁺ 在外面多，往內衝，把正電帶進來，直到細胞內正到足以把 Na⁺ 推回去，這時 <b>E<sub>Na</sub> ≈ +66 mV</b>（老師簡報數值；部分書寫 +60 mV）。</p>
+  <p>平衡電位可用<b>奈斯特方程式</b> <i class="en-term">Nernst equation</i> 由細胞內外濃度計算：E<sub>x</sub> ＝ (61/z) log([X]<sub>外</sub>/[X]<sub>內</sub>)（37°C，z 為離子價數）。例如 K⁺：61 × log(5/150) ≈ −90 mV。</p>
+  <div class="warn"><b class="t">老師的超級簡單記法：</b>K⁺：−90 mV → 細胞內太多，要往外跑。Na⁺：+66 mV → 外面多，要往內衝。<b>誰的通道開，膜電位就靠近誰的平衡電位！</b></div>
+
+  <h3 id="h16">靜止膜電位 Resting Membrane Potential</h3>
+  <p class="core">靜止膜電位（RMP）約 −65 ~ −85 mV，神經元約 −70 mV；接近 E<sub>K</sub>，但因少量 Na⁺ 滲入而稍正；血鉀改變會改變 RMP。</p>
+  <p>細胞未受刺激時的穩定膜電位叫<b>靜止膜電位</b> <i class="en-term">resting membrane potential, RMP</i>，約 −65 到 −85 mV，<b>神經元平均約 −70 mV</b>。因為靜止時膜對 K⁺ 的通透性遠高於 Na⁺，RMP 很接近 E<sub>K</sub>（−90 mV）；但仍有少量 Na⁺ 漏進來，把膜電位拉得稍微正一些，所以是 −70 而不是 −90。</p>
+  <div class="eg"><b class="t">回答開頭問題（老師強調的臨床意義）：</b>RMP 主要由 K⁺ 梯度決定。<b>高血鉀</b>時細胞外 K⁺ 增加，K⁺ 往外跑的推力變小，RMP 變得較不負（去極化），心肌的鈉通道會失去活性（無法正常再被激發），導致傳導變慢、心律不整，嚴重時心臟停在舒張期。<b>低血鉀</b>則使 RMP 更負（過極化），細胞較難興奮，造成肌肉無力，心電圖也會異常。所以腎衰竭病人（排鉀困難）要限制高鉀食物，使用排鉀利尿劑的人要注意補鉀。</div>
+
+  <h3 id="h17">鈉鉀幫浦的角色 Role of the Na⁺/K⁺ Pumps</h3>
+  <p class="core">幫浦：①維持 Na⁺、K⁺ 梯度、抵消漏出；②產電效應（3 正出、2 正進）直接貢獻約 −3 mV。</p>
+  <p>K⁺ 一直漏出去、Na⁺ 一直漏進來，若沒有補救，梯度最終會消失、膜電位歸零。<b>鈉鉀幫浦</b>不斷把漏進來的 Na⁺ 打出去、把漏出去的 K⁺ 打回來，維持梯度——<span class="key">梯度是膜電位的根本，而幫浦是維持梯度的引擎</span>。</p>
+  <p>此外，每次打出 3 個正電、只帶回 2 個正電，等於每次淨移出一個正電，使細胞內更負一點，稱為<b>產電效應</b> <i class="en-term">electrogenic effect</i>，直接貢獻約 −3 mV。</p>
+
+  <details class="stop"><summary>想一想：若用藥物讓鈉鉀幫浦停止，膜電位會立刻消失嗎？</summary>
+    <div>不會立刻消失。幫浦停止後，產電效應的那幾 mV 會立即少掉，但 Na⁺、K⁺ 梯度要經過一段時間才會因漏出漏入而慢慢消失，膜電位也隨之逐漸趨近 0。這說明膜電位主要來自「梯度＋K⁺ 通透性」，幫浦的作用是長期維持梯度。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>膜電位＝細胞內相對於細胞外的電位差；成因：內部固定負電分子、鈉鉀幫浦造成的濃度差、膜對 K⁺ 通透性最高。</li>
+      <li>細胞內 K⁺ 約 150、Na⁺ 約 12；細胞外 K⁺ 約 5、Na⁺ 約 145（mM）。</li>
+      <li>平衡電位：濃度推力＝電荷拉力；E<sub>K</sub> ≈ −90 mV、E<sub>Na</sub> ≈ +66 mV；奈斯特方程式計算。</li>
+      <li>靜止膜電位約 −70 mV（接近 E<sub>K</sub>，少量 Na⁺ 滲入使其稍正）；誰的通道開，膜電位就靠近誰的平衡電位。</li>
+      <li>高血鉀 → RMP 去極化 → 心律不整；低血鉀 → 過極化 → 無力、ECG 異常。</li>
+      <li>鈉鉀幫浦維持梯度、抵消漏出，並有產電效應（約 −3 mV）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>膜電位</td><td>membrane potential</td><td>靜止膜電位</td><td>resting membrane potential (RMP)</td></tr>
+      <tr><td>平衡電位</td><td>equilibrium potential</td><td>奈斯特方程式</td><td>Nernst equation</td></tr>
+      <tr><td>去極化／過極化</td><td>depolarization / hyperpolarization</td><td>產電效應</td><td>electrogenic effect</td></tr>
+      <tr><td>高血鉀／低血鉀</td><td>hyperkalemia / hypokalemia</td><td>漏通道</td><td>leak channel</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 6.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">6.5</span>細胞傳訊</h2>
+  <div class="en">Cell Signaling</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>細胞之間的三種溝通方式（<b>旁泌、突觸、內分泌</b>）、<b>受體</b>在細胞膜上還是細胞內，以及膜受體怎麼透過 <b>G 蛋白與第二傳訊者</b>（cAMP、Ca²⁺）把訊號傳進細胞。</div><div><span class="lt lt2">為什麼放最後？</span>前四節講物質與電的流動；最後講「訊息」的流動。這是第 7 章（神經傳遞物質）、第 9 章（自主神經受體）、第 11 章（激素作用機制）的共同基礎。</div></div>
+  <div class="oneline">細胞靠化學訊號溝通；脂溶性訊號（類固醇、甲狀腺素）進入細胞與細胞內受體結合，水溶性訊號（胜肽激素、腎上腺素）結合膜受體，再經 G 蛋白產生 cAMP 或 Ca²⁺ 等第二傳訊者，把訊號放大傳進細胞。</div>
+  <div class="think">腎上腺素無法進入肝細胞，為什麼還能讓肝細胞分解肝醣？</div>
+
+  <h3 id="h18">細胞傳訊的方式</h3>
+  <p class="core">旁泌（局部、鄰近細胞）、突觸（神經傳遞物質跨突觸間隙）、內分泌（激素經血液到全身有受體的細胞）；另有自泌（作用在自己）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a69" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+    <g font-size="14" text-anchor="middle" font-weight="bold"><text x="80" y="20" fill="#0f766e">旁泌</text><text x="240" y="20" fill="#b45309">突觸</text><text x="400" y="20" fill="#be123c">內分泌</text></g>
+    <circle cx="50" cy="80" r="22" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/><circle cx="115" cy="70" r="18" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><circle cx="110" cy="120" r="18" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+    <g fill="#14b8a6"><circle cx="78" cy="78" r="3"/><circle cx="86" cy="90" r="3"/><circle cx="84" cy="70" r="3"/></g>
+    <path d="M205,70 L245,70" stroke="#b45309" stroke-width="4"/><circle cx="252" cy="70" r="9" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+    <rect x="266" y="56" width="30" height="34" rx="6" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+    <g fill="#f59e0b"><circle cx="262" cy="64" r="2.5"/><circle cx="262" cy="74" r="2.5"/><circle cx="262" cy="84" r="2.5"/></g>
+    <text x="240" y="115" font-size="12" text-anchor="middle">極短距離（突觸間隙）</text>
+    <circle cx="350" cy="70" r="20" fill="#fecdd3" stroke="#be123c" stroke-width="2"/>
+    <rect x="340" y="96" width="120" height="18" rx="9" fill="#fee2e2" stroke="#dc2626"/>
+    <g fill="#e11d48"><circle cx="360" cy="105" r="3"/><circle cx="390" cy="105" r="3"/><circle cx="420" cy="105" r="3"/></g>
+    <path d="M455,114 L455,140" stroke="#374151" stroke-width="2" marker-end="url(#a69)"/>
+    <circle cx="455" cy="160" r="16" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/><text x="436" y="198" font-size="12" text-anchor="end">遠處有受體的細胞</text>
+    <g font-size="12" text-anchor="middle"><text x="80" y="160">作用在附近細胞</text><text x="80" y="178">生長因子、前列腺素</text>
+      <text x="240" y="160">神經 → 標的細胞</text><text x="240" y="178">乙醯膽鹼、正腎上腺素</text>
+      <text x="350" y="160">經血液</text><text x="388" y="215">例：胰島素、腎上腺素</text></g>
+  </svg><figcaption>三種傳訊方式的差別在「距離」：旁泌是隔壁、突觸是一條縫、內分泌是全身。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>特點</th><th>例子</th></tr>
+    <tr><td><b>旁泌</b> paracrine</td><td>釋放到組織液，影響<b>鄰近</b>細胞，局部作用</td><td>生長因子、前列腺素、組織胺、一氧化氮</td></tr>
+    <tr><td><b>自泌</b> autocrine</td><td>作用在分泌它的<b>細胞自己</b></td><td>部分生長因子、免疫細胞的細胞激素</td></tr>
+    <tr><td><b>突觸</b> synaptic</td><td>神經元釋放<b>神經傳遞物質</b>跨過極窄的突觸間隙，作用在標的細胞</td><td>乙醯膽鹼、正腎上腺素</td></tr>
+    <tr><td><b>內分泌</b> endocrine</td><td><b>激素</b>經<b>血液</b>送到全身，但只有具該激素受體的細胞會反應</td><td>胰島素、腎上腺素、甲狀腺素</td></tr>
+  </table></div>
+
+  <h3 id="h19">受體蛋白的位置 Receptor Location</h3>
+  <p class="core">非極性（脂溶性）訊號 → 細胞內受體（類固醇、甲狀腺素、NO）；極性或大分子 → 細胞膜受體（胜肽激素、兒茶酚胺、神經傳遞物質）。</p>
+  <p>訊號分子要作用，必須和標的細胞的<b>受體</b>結合。受體在哪裡，取決於訊號分子能不能穿過細胞膜：</p>
+  <ul class="dots">
+    <li><b>細胞內受體</b>（細胞質或細胞核）：<b>非極性、脂溶性</b>的分子可以直接穿膜進入細胞，例如<b>類固醇激素、甲狀腺激素</b>、一氧化氮（NO，氣體）。類固醇與甲狀腺素的受體結合後成為<b>轉錄因子</b>，改變基因表現，所以作用較慢但持久（第 3、11 章）。</li>
+    <li><b>細胞膜受體</b>：<b>極性或大分子</b>不能穿膜，例如<b>胜肽與蛋白質激素</b>（胰島素、升糖素）、<b>胺類激素</b>（腎上腺素）、神經傳遞物質（乙醯膽鹼）。它們結合膜外的受體，再由受體把訊號傳進細胞。</li>
+  </ul>
+  <p>膜受體依傳訊方式分為：①本身就是<b>離子通道</b>（配體閘控通道，如骨骼肌的乙醯膽鹼菸鹼型受體）；②<b>與 G 蛋白偶聯的受體</b>；③本身帶有<b>酵素活性</b>的受體（如胰島素受體是酪胺酸激酶）。</p>
+
+  <h3 id="h20">第二傳訊者 Second Messengers</h3>
+  <p class="core">第一傳訊者（激素）在膜外 → 活化膜上酵素 → 細胞內產生第二傳訊者（cAMP、Ca²⁺、IP₃、DAG）→ 活化蛋白質激酶 → 改變細胞活動；過程中訊號被放大。</p>
+  <p>不能進入細胞的激素是「<b>第一傳訊者</b>」；它和膜受體結合後，在細胞內產生的小分子訊號稱為<b>第二傳訊者</b> <i class="en-term">second messengers</i>，由它把命令傳到細胞內部。最典型的是 <b>cAMP</b>（環腺苷單磷酸）：</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a6a" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="0" y="60" width="480" height="36" fill="#fde68a"/>
+    <polygon points="60,18 72,30 60,42 48,30" fill="#e11d48"/><text x="80" y="35" font-size="13">① 腎上腺素（第一傳訊者）</text>
+    <rect x="44" y="50" width="32" height="56" rx="8" fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"/><text x="60" y="124" font-size="12" text-anchor="middle">受體</text>
+    <g><circle cx="120" cy="108" r="12" fill="#fbcfe8" stroke="#db2777"/><circle cx="140" cy="112" r="9" fill="#fbcfe8" stroke="#db2777"/><text x="130" y="140" font-size="12" text-anchor="middle">② G 蛋白</text></g>
+    <path d="M80,100 L106,104" stroke="#374151" stroke-width="2" marker-end="url(#a6a)"/>
+    <rect x="210" y="50" width="56" height="56" rx="10" fill="#86efac" stroke="#16a34a" stroke-width="2"/><text x="238" y="124" font-size="12" text-anchor="middle">③ 腺苷酸環化酶</text>
+    <path d="M152,106 L206,94" stroke="#374151" stroke-width="2" marker-end="url(#a6a)"/>
+    <text x="238" y="160" font-size="13" text-anchor="middle">ATP → <tspan font-weight="bold" fill="#7c3aed">cAMP</tspan></text>
+    <path d="M238,166 L238,190" stroke="#374151" stroke-width="2" marker-end="url(#a6a)"/>
+    <rect x="178" y="194" width="120" height="34" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="238" y="216" font-size="13" text-anchor="middle">④ 蛋白質激酶 A</text>
+    <path d="M238,228 L238,252" stroke="#374151" stroke-width="2" marker-end="url(#a6a)"/>
+    <rect x="128" y="256" width="220" height="36" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="238" y="279" font-size="13" text-anchor="middle">⑤ 酵素磷酸化 → 肝醣分解</text>
+    <text x="320" y="150" font-size="12" fill="#6d28d9">cAMP＝第二傳訊者</text>
+    <text x="320" y="168" font-size="12" fill="#6b7280">之後被磷酸二酯酶分解</text>
+    <text x="320" y="186" font-size="12" fill="#6b7280">（咖啡因抑制此酶）</text>
+    <text x="330" y="225" font-size="12" fill="#b91c1c">每一步都把訊號放大</text>
+    <text x="330" y="242" font-size="12" fill="#b91c1c">少量激素 → 大量產物</text>
+  </svg><figcaption>腎上腺素—cAMP 路徑。激素不必進入細胞，就像按門鈴：門鈴（受體）一響，屋內的人（第二傳訊者）就開始行動。</figcaption></figure>
+  <ol class="steps">
+    <li>激素（如腎上腺素、升糖素）結合膜受體。</li>
+    <li>受體活化 <b>G 蛋白</b>。</li>
+    <li>G 蛋白活化膜上的酵素<b>腺苷酸環化酶</b> <i class="en-term">adenylate cyclase</i>，把 ATP 轉成 <b>cAMP</b>。</li>
+    <li>cAMP 活化細胞質中的<b>蛋白質激酶 A</b>。</li>
+    <li>蛋白質激酶把特定酵素<b>磷酸化</b>，開啟或關閉它們，改變細胞活動（例如肝細胞的肝醣分解）。</li>
+  </ol>
+  <p>cAMP 之後被<b>磷酸二酯酶</b> <i class="en-term">phosphodiesterase</i> 分解，訊號結束。咖啡因、茶鹼抑制這個酶，延長 cAMP 的作用；威而鋼則是抑制另一種分解 cGMP 的磷酸二酯酶。</p>
+  <p>除了 cAMP，常見的第二傳訊者還有 <b>Ca²⁺</b>（與鈣調蛋白 calmodulin 結合發揮作用）、<b>IP₃</b> 與 <b>DAG</b>（由膜上的磷脂酶 C 分解磷脂質產生，IP₃ 使內質網釋放 Ca²⁺）、<b>cGMP</b>（一氧化氮使血管平滑肌放鬆即經由 cGMP）。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>腎上腺素不進入肝細胞，而是結合肝細胞膜上的受體，經 G 蛋白 → 腺苷酸環化酶 → <b>cAMP</b> → 蛋白質激酶 A → 活化肝醣磷酸化酶，肝醣就被分解成葡萄糖釋入血液。而且一層層酵素反應把訊號<b>放大</b>，少量激素就能產生很大的效果。</div>
+
+  <h3 id="h21">G 蛋白 G-Proteins</h3>
+  <p class="core">G 蛋白＝α、β、γ 三個次單元；受體活化時 α 的 GDP 換成 GTP 並分離 → 活化（或抑制）酵素或離子通道 → α 把 GTP 水解成 GDP 後重新組合，訊號關閉。</p>
+  <p><b>G 蛋白</b> <i class="en-term">G-proteins</i> 是受體與作用蛋白（酵素或離子通道）之間的<b>中介</b>，因能結合鳥苷酸（GTP/GDP）而得名，由 <b>α、β、γ</b> 三個次單元組成：</p>
+  <ol class="steps">
+    <li>靜止時三個次單元結合在一起，α 上接著 <b>GDP</b>。</li>
+    <li>訊號分子結合受體 → α 放掉 GDP、換上 <b>GTP</b>，並與 βγ <b>分離</b>。</li>
+    <li>α（或 βγ）去活化或抑制目標：腺苷酸環化酶（增加或減少 cAMP）、磷脂酶 C，或直接打開離子通道。</li>
+    <li>α 自己把 GTP 水解成 GDP（像內建計時器），再和 βγ 結合，回到靜止狀態。</li>
+  </ol>
+  <div class="eg"><b class="t">例子（老師簡報）：</b>副交感神經釋放的<b>乙醯膽鹼</b>作用在心臟的毒蕈鹼型受體，其 G 蛋白的 βγ 次單元直接打開 K⁺ 通道，K⁺ 流出使心肌細胞過極化，<b>心跳變慢</b>（第 9、13 章）。人體約有上千種 G 蛋白偶聯受體，是最大宗的藥物標的（如 β 阻斷劑、抗組織胺）。</div>
+  <div class="nut"><b class="t">例子：</b>霍亂毒素使腸細胞的 G 蛋白無法關閉，cAMP 持續升高，打開 Cl⁻ 通道，大量 Cl⁻ 與水分泌到腸腔，造成嚴重水瀉——這時就需要 6.3 的口服補液療法。</div>
+
+  <details class="stop"><summary>想一想：為什麼類固醇激素的作用比腎上腺素慢、但比較持久？</summary>
+    <div>類固醇進入細胞與細胞內受體結合，要經過「轉錄 → 轉譯 → 做出新蛋白質」才產生作用，需要數小時，但新蛋白質會持續作用一段時間。腎上腺素經 cAMP 直接把現有的酵素磷酸化，幾秒到幾分鐘就生效，但 cAMP 很快被分解，作用也短。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>傳訊方式：旁泌（鄰近）、自泌（自己）、突觸（神經傳遞物質）、內分泌（激素經血液、只作用於有受體的細胞）。</li>
+      <li>脂溶性訊號（類固醇、甲狀腺素、NO）→ 細胞內受體（轉錄因子）；極性訊號（胜肽、胺類、神經傳遞物質）→ 膜受體。</li>
+      <li>膜受體三型：離子通道型、G 蛋白偶聯型、酵素型（胰島素受體＝酪胺酸激酶）。</li>
+      <li>cAMP 路徑：激素 → 受體 → G 蛋白 → 腺苷酸環化酶 → cAMP → 蛋白質激酶 A → 磷酸化；磷酸二酯酶分解 cAMP（咖啡因抑制）；訊號放大。</li>
+      <li>其他第二傳訊者：Ca²⁺（鈣調蛋白）、IP₃、DAG、cGMP。</li>
+      <li>G 蛋白 α、β、γ：GDP 換 GTP → 分離 → 作用 → GTP 水解 → 重組；乙醯膽鹼經 G 蛋白開 K⁺ 通道使心跳變慢。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>旁泌／自泌</td><td>paracrine / autocrine</td><td>突觸傳訊</td><td>synaptic signaling</td></tr>
+      <tr><td>內分泌</td><td>endocrine</td><td>第二傳訊者</td><td>second messenger</td></tr>
+      <tr><td>環腺苷單磷酸</td><td>cyclic AMP (cAMP)</td><td>腺苷酸環化酶</td><td>adenylate cyclase</td></tr>
+      <tr><td>蛋白質激酶</td><td>protein kinase</td><td>磷酸二酯酶</td><td>phosphodiesterase</td></tr>
+      <tr><td>G 蛋白</td><td>G-protein</td><td>鈣調蛋白</td><td>calmodulin</td></tr>
+      <tr><td>磷脂酶 C</td><td>phospholipase C</td><td>三磷酸肌醇</td><td>inositol trisphosphate (IP₃)</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s6">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>運輸分類</td><td>被動（順梯度）：簡單擴散、滲透、促進性擴散；主動（逆梯度）：初級、次級；大量：胞吞胞吐</td></tr>
+    <tr><td>擴散速率</td><td>濃度差、通透性、表面積↑、距離↓、溫度↑ → 快</td></tr>
+    <tr><td>滲透</td><td>水往溶質多處；看顆粒數（NaCl＝2）；血漿約 300 mOsm</td></tr>
+    <tr><td>張力</td><td>等張 0.9% NaCl、5% 葡萄糖；低張 → 溶血；高張 → 皺縮</td></tr>
+    <tr><td>滲透度調節</td><td>下視丘滲透壓感受器 → 口渴＋ADH；糖尿病滲透性利尿</td></tr>
+    <tr><td>載體</td><td>專一、競爭、飽和（Tm）；腎糖閾約 180 mg/dL</td></tr>
+    <tr><td>GLUT</td><td>GLUT4 肌肉脂肪、胰島素與運動使其上膜；胰島素阻抗</td></tr>
+    <tr><td>幫浦</td><td>Na⁺/K⁺：3 Na⁺ 出、2 K⁺ 進、1 ATP；Ca²⁺ 幫浦；H⁺/K⁺ 幫浦</td></tr>
+    <tr><td>次級主動</td><td>Na⁺—葡萄糖同向（SGLT）；Na⁺/Ca²⁺ 反向；口服補液鹽＝鈉＋糖</td></tr>
+    <tr><td>膜電位</td><td>E<sub>K</sub> −90、E<sub>Na</sub> +66、RMP −70 mV；誰的通道開就靠近誰</td></tr>
+    <tr><td>血鉀</td><td>高血鉀 → 去極化 → 心律不整；低血鉀 → 過極化 → 無力</td></tr>
+    <tr><td>傳訊</td><td>脂溶性 → 細胞內受體；水溶性 → 膜受體 → G 蛋白 → cAMP → 蛋白質激酶</td></tr>
+  </table></div>
+  <h3 id="h22">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 用「順／逆梯度」「需不需要膜蛋白」把五種運輸方式分類？</li>
+    <li>□ 計算 0.15 M NaCl 的滲透度，並判斷它對紅血球是否等張？</li>
+    <li>□ 說明糖尿病為什麼會多尿、口渴？</li>
+    <li>□ 解釋口服補液鹽為什麼要同時含鈉和葡萄糖？</li>
+    <li>□ 畫出小腸上皮吸收葡萄糖用到的三種膜蛋白？</li>
+    <li>□ 說出 E<sub>K</sub>、E<sub>Na</sub>、靜止膜電位的數值，並解釋 RMP 為何接近 E<sub>K</sub>？</li>
+    <li>□ 用 cAMP 路徑說明腎上腺素怎麼使肝臟分解肝醣？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 6 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"下列何者可以不靠膜蛋白、以簡單擴散直接穿過細胞膜？",o:["葡萄糖","Na⁺","O₂","胺基酸"],a:2,
+  e:"<b>O₂、CO₂</b> 等非極性小分子可直接溶入磷脂雙層；葡萄糖、離子、胺基酸需通道或載體。"},
+ {q:"葡萄糖經 GLUT 順濃度梯度進入細胞，屬於？",o:["簡單擴散","促進性擴散","初級主動運輸","次級主動運輸"],a:1,
+  e:"需載體、<b>順梯度、不耗能</b> → 促進性擴散。"},
+ {q:"1 mol 的 NaCl 溶於 1 kg 水中，其滲透度約為？",o:["0.5 Osm","1 Osm","2 Osm","3 Osm"],a:2,
+  e:"NaCl 解離成 Na⁺ 與 Cl⁻ 兩個顆粒，滲透度看<b>顆粒數</b> → 2 Osm。"},
+ {q:"把紅血球放入純水中，最可能發生？",o:["皺縮","體積不變","吸水膨脹甚至溶血","變成鐮刀形"],a:2,
+  e:"純水是<b>低張</b>溶液，水進入紅血球使其膨脹，嚴重時破裂（溶血）。"},
+ {q:"下列何者與血漿等張？",o:["0.45% NaCl","0.9% NaCl","3% NaCl","純水"],a:1,
+  e:"<b>0.9% 生理食鹽水</b>與 5% 葡萄糖水約與血漿等張。"},
+ {q:"血漿滲透度升高時，下列反應何者正確？",o:["ADH 分泌減少","尿量增加","下視丘滲透壓感受器引起口渴與 ADH 分泌","腎臟排出更多水"],a:2,
+  e:"滲透度↑ → <b>下視丘滲透壓感受器</b> → 口渴＋腦垂腺後葉釋放 ADH → 腎回收水、尿量減少。"},
+ {q:"糖尿病病人多尿的主要原因是？",o:["ADH 分泌過多","尿中葡萄糖造成滲透性利尿","腎絲球過濾率降低","膀胱容量變小"],a:1,
+  e:"血糖超過腎糖閾，尿中的葡萄糖把水留在腎小管中 → <b>滲透性利尿</b>（國考考過）。"},
+ {q:"載體媒介運輸「飽和」的意思是？",o:["載體被變性","所有載體都已在工作，速率達最大運輸量","載體只能運送一種分子","運輸需要 ATP"],a:1,
+  e:"載體數量有限，全部被占用時達到<b>最大運輸量（Tm）</b>；腎小管葡萄糖載體飽和造成糖尿。"},
+ {q:"胰島素使肌肉與脂肪細胞攝取葡萄糖增加，主要是讓哪一種轉運蛋白移到細胞膜上？",o:["GLUT1","GLUT2","GLUT3","GLUT4"],a:3,
+  e:"<b>GLUT4</b> 受胰島素調控（運動也可使其上膜）；胰島素阻抗時此反應變差。"},
+ {q:"鈉鉀幫浦每水解一個 ATP，運送的離子為？",o:["3 Na⁺ 入、2 K⁺ 出","3 Na⁺ 出、2 K⁺ 入","2 Na⁺ 出、3 K⁺ 入","1 Na⁺ 出、1 K⁺ 入"],a:1,
+  e:"<b>3 Na⁺ 送出、2 K⁺ 送入</b>，維持外鈉內鉀，並有產電效應。"},
+ {q:"小腸上皮以 Na⁺—葡萄糖同向運輸吸收葡萄糖，屬於？",o:["簡單擴散","促進性擴散","初級主動運輸","次級主動運輸"],a:3,
+  e:"葡萄糖逆梯度進入，能量來自 Na⁺ 梯度（由鈉鉀幫浦建立）→ <b>次級主動運輸</b>。"},
+ {q:"口服補液鹽同時含鈉與葡萄糖，主要原理是？",o:["葡萄糖提供熱量","鈉與葡萄糖經同向運輸一起吸收，帶動水的吸收","鈉抑制腹瀉","葡萄糖殺菌"],a:1,
+  e:"Na⁺ 與葡萄糖經<b>同向運輸</b>共同吸收，溶質進入後水跟著滲透吸收，矯正脫水。"},
+ {q:"靜止膜電位（約 −70 mV）最接近哪一種離子的平衡電位？為什麼？",o:["Na⁺，因為細胞外 Na⁺ 多","K⁺，因為靜止時膜對 K⁺ 通透性最大","Cl⁻，因為 Cl⁻ 帶負電","Ca²⁺，因為鈣幫浦"],a:1,
+  e:"靜止時 K⁺ 漏通道最多，膜電位接近 <b>E<sub>K</sub>（−90 mV）</b>；少量 Na⁺ 滲入使其稍正。"},
+ {q:"高血鉀對心肌細胞靜止膜電位的影響是？",o:["變得更負（過極化）","變得較不負（去極化）","不受影響","變成 +66 mV"],a:1,
+  e:"細胞外 K⁺ 增加 → K⁺ 往外推力變小 → RMP <b>去極化</b>，可導致心律不整。"},
+ {q:"下列激素何者與「細胞內受體」結合？",o:["胰島素","腎上腺素","升糖素","皮質醇（類固醇）"],a:3,
+  e:"<b>類固醇</b>與甲狀腺素為脂溶性，可穿膜與細胞內受體結合；其餘為膜受體。"},
+ {q:"在腎上腺素—cAMP 路徑中，直接把 ATP 轉成 cAMP 的酵素是？",o:["蛋白質激酶 A","磷酸二酯酶","腺苷酸環化酶","磷脂酶 C"],a:2,
+  e:"G 蛋白活化<b>腺苷酸環化酶</b>產生 cAMP；cAMP 再活化蛋白質激酶 A；磷酸二酯酶分解 cAMP。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

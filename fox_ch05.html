@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 5 章 細胞呼吸與代謝</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="5">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 5 章　細胞呼吸與代謝</h1>
+  <div class="en">Chapter 5 Cell Respiration and Metabolism（課本 p.113–138）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">5.1 糖解與乳酸路徑</a>
+  <a class="sub" href="#h1">細胞呼吸總論</a>
+  <a class="sub" href="#h2">糖解作用 Glycolysis</a>
+  <a class="sub" href="#h3">乳酸路徑 Lactic Acid Pathway</a>
+  <a class="sub" href="#h4">肝醣的合成與分解 Glycogenesis and Glycogenolysis</a>
+  <a class="sub" href="#h5">柯氏循環 Cori Cycle</a>
+  <a href="#s2">5.2 有氧呼吸</a>
+  <a class="sub" href="#h6">克氏循環 Krebs Cycle</a>
+  <a class="sub" href="#h7">電子傳遞與氧化磷酸化 Electron Transport and Oxidative Phosphorylation</a>
+  <a class="sub" href="#h8">電子傳遞與 ATP 生成的偶聯（化學滲透）Coupling of Electron Transport to ATP Production</a>
+  <a class="sub" href="#h9">ATP 總帳 ATP Balance Sheet</a>
+  <a href="#s3">5.3 脂質與蛋白質的代謝</a>
+  <a class="sub" href="#h10">脂質代謝 Lipid Metabolism</a>
+  <a class="sub" href="#h11">胺基酸代謝 Amino Acid Metabolism</a>
+  <a class="sub" href="#h12">不同能量來源的利用 Uses of Different Energy Sources</a>
+  <a href="#s4">本章重點整理</a>
+  <a class="sub" href="#h13">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 4 章學了兩個工具：酵素和 ATP／NADH。這一章把它們用起來，回答：<span class="key">細胞怎麼把吃進來的醣、脂肪、蛋白質變成 ATP？沒有氧的時候怎麼辦？吃太多時多出來的又怎麼存起來？</span>這是營養學與第 19 章「代謝的調節」的基礎。</div>
+  <figure class="pic"><svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a50" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="8" y="8" width="464" height="140" rx="14" fill="#fefce8" stroke="#ca8a04" stroke-dasharray="6 4"/><text x="20" y="28" font-size="13" fill="#a16207" font-weight="bold">細胞質（不需要氧）</text>
+    <rect x="160" y="300" width="0" height="0"/>
+    <rect x="8" y="160" width="464" height="162" rx="14" fill="#fff7ed" stroke="#ea580c" stroke-dasharray="6 4"/><text x="20" y="180" font-size="13" fill="#c2410c" font-weight="bold">粒線體（需要氧）</text>
+    <rect x="180" y="36" width="120" height="34" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="58" font-size="15" text-anchor="middle" font-weight="bold">葡萄糖</text>
+    <path d="M240,70 L240,98" stroke="#374151" stroke-width="2.5" marker-end="url(#a50)"/><text x="250" y="90" font-size="13" fill="#b45309">① 糖解：2 ATP</text>
+    <rect x="180" y="102" width="120" height="34" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="240" y="124" font-size="15" text-anchor="middle" font-weight="bold">2 丙酮酸</text>
+    <path d="M180,119 L110,119" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a50)"/><text x="145" y="110" font-size="12" text-anchor="middle" fill="#b91c1c">缺氧</text>
+    <rect x="20" y="102" width="88" height="34" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="64" y="124" font-size="15" text-anchor="middle" font-weight="bold">乳酸</text>
+    <path d="M240,136 L240,196" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a50)"/><text x="250" y="170" font-size="12" fill="#15803d">有氧</text>
+    <rect x="170" y="200" width="140" height="34" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="222" font-size="15" text-anchor="middle" font-weight="bold">乙醯輔酶 A</text>
+    <path d="M240,234 L240,256" stroke="#374151" stroke-width="2.5" marker-end="url(#a50)"/>
+    <circle cx="240" cy="284" r="28" fill="#fff" stroke="#ea580c" stroke-width="3"/><text x="240" y="282" font-size="12" text-anchor="middle">② 克氏</text><text x="240" y="297" font-size="12" text-anchor="middle">循環</text>
+    <path d="M270,284 L340,284" stroke="#374151" stroke-width="2.5" marker-end="url(#a50)"/><text x="305" y="276" font-size="12" text-anchor="middle">NADH</text>
+    <rect x="344" y="262" width="120" height="44" rx="10" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/><text x="404" y="282" font-size="13" text-anchor="middle" font-weight="bold">③ 電子傳遞鏈</text><text x="404" y="299" font-size="12" text-anchor="middle">約 26–28 ATP</text>
+    <rect x="344" y="196" width="120" height="44" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="404" y="216" font-size="13" text-anchor="middle">脂肪酸</text><text x="404" y="232" font-size="12" text-anchor="middle">β 氧化 →</text>
+    <path d="M344,218 L312,218" stroke="#0284c7" stroke-width="2.5" marker-end="url(#a50)"/>
+    <rect x="16" y="196" width="130" height="44" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/><text x="81" y="216" font-size="13" text-anchor="middle">胺基酸</text><text x="81" y="232" font-size="12" text-anchor="middle">去胺基 →</text>
+    <path d="M146,218 L168,218" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#a50)"/>
+    <text x="81" y="270" font-size="12" text-anchor="middle" fill="#6d28d9">（也可進入</text><text x="81" y="286" font-size="12" text-anchor="middle" fill="#6d28d9">克氏循環各處）</text>
+  </svg><figcaption>本章全貌：三大營養素最後都會變成乙醯輔酶 A，進入粒線體的克氏循環與電子傳遞鏈產生大量 ATP。缺氧時，葡萄糖只能走糖解、變成乳酸。</figcaption></figure>
+  <div class="path">
+    <div class="step"><span class="sn">5.1</span><div><b>糖解與乳酸路徑</b><br><span class="sq">葡萄糖在細胞質中切成丙酮酸，缺氧時變成乳酸；肝醣的合成與分解；柯氏循環。</span></div></div>
+    <div class="arr">↓ 有氧時，丙酮酸進入粒線體，才是真正的大量產能</div>
+    <div class="step"><span class="sn">5.2</span><div><b>有氧呼吸</b><br><span class="sq">克氏循環、電子傳遞鏈與氧化磷酸化（化學滲透），以及一個葡萄糖總共產生多少 ATP。</span></div></div>
+    <div class="arr">↓ 除了葡萄糖，脂肪和蛋白質也能當燃料，而且三者可以互相轉換</div>
+    <div class="step"><span class="sn">5.3</span><div><b>脂質與蛋白質的代謝</b><br><span class="sq">脂肪分解（β 氧化、酮體）、脂肪合成、胺基酸的轉胺與去胺、尿素循環、糖質新生，以及各器官偏好的燃料。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 5.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">5.1</span>糖解與乳酸路徑</h2>
+  <div class="en">Glycolysis and the Lactic Acid Pathway</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>葡萄糖分解的第一階段<b>糖解作用</b>、缺氧時的<b>乳酸路徑</b>、<b>肝醣</b>的合成與分解，以及肌肉產生的乳酸怎麼在肝臟變回葡萄糖（<b>柯氏循環</b>）。</div><div><span class="lt lt2">為什麼放第一節？</span>糖解是所有細胞都有、而且不需要氧的路徑，是細胞呼吸的「入口」。先懂它，才知道有氧呼吸從哪裡接手。</div></div>
+  <div class="oneline">糖解在細胞質把 1 個葡萄糖切成 2 個丙酮酸，淨得 2 ATP 和 2 NADH；缺氧時丙酮酸還原成乳酸，讓 NAD⁺ 再生、糖解能繼續。</div>
+  <div class="think">衝刺跑完會喘、肌肉痠，這時肌肉在做什麼？為什麼休息後還要繼續喘一陣子？</div>
+
+  <h3 id="h1">細胞呼吸總論</h3>
+  <p class="core">細胞呼吸＝把養分氧化、產生 ATP 的反應；有氧呼吸（需 O₂、在粒線體、ATP 多）vs 無氧代謝（不需 O₂、ATP 少、產生乳酸）。</p>
+  <p><b>細胞呼吸</b> <i class="en-term">cell respiration</i> 是細胞用氧化還原反應把養分（葡萄糖、脂肪酸、胺基酸）分解，取出能量合成 ATP 的過程。和肺的「呼吸」不同，這是發生在每個細胞裡的化學反應。</p>
+  <ul class="dots">
+    <li><b>有氧呼吸</b> <i class="en-term">aerobic respiration</i>：需要氧，養分最後被完全氧化成 CO₂ 和 H₂O，主要在粒線體，產生大量 ATP。</li>
+    <li><b>無氧代謝</b> <i class="en-term">anaerobic metabolism</i>：不用氧，只能走糖解，葡萄糖變成乳酸，產生的 ATP 很少。</li>
+  </ul>
+
+  <h3 id="h2">糖解作用 Glycolysis</h3>
+  <p class="core">葡萄糖（6C）→ 2 丙酮酸（3C）；在細胞質；先投資 2 ATP、後回收 4 ATP → 淨得 2 ATP ＋ 2 NADH；不需氧。</p>
+  <p><b>糖解作用</b> <i class="en-term">glycolysis</i> 在<b>細胞質</b>進行，由十個酵素步驟把一個<b>葡萄糖</b>（6 個碳）切成兩個<b>丙酮酸</b> <i class="en-term">pyruvic acid / pyruvate</i>（各 3 個碳）。可以分成兩個階段來理解：</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a51" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="13" text-anchor="middle">
+    <g fill="#fde68a" stroke="#b45309" stroke-width="2"><circle cx="150" cy="40" r="10"/><circle cx="172" cy="40" r="10"/><circle cx="194" cy="40" r="10"/><circle cx="216" cy="40" r="10"/><circle cx="238" cy="40" r="10"/><circle cx="260" cy="40" r="10"/></g>
+    <text x="330" y="45" font-size="14">葡萄糖（6 碳）</text>
+    <path d="M205,56 L205,92" stroke="#374151" stroke-width="2.5" marker-end="url(#a51)"/>
+    <rect x="20" y="58" width="150" height="40" rx="10" fill="#fee2e2" stroke="#dc2626"/><text x="95" y="76" fill="#b91c1c" font-weight="bold">① 投資期</text><text x="95" y="92">花掉 2 ATP（加磷酸）</text>
+    <g fill="#fde68a" stroke="#b45309" stroke-width="2"><circle cx="150" cy="112" r="10"/><circle cx="172" cy="112" r="10"/><circle cx="194" cy="112" r="10"/><circle cx="216" cy="112" r="10"/><circle cx="238" cy="112" r="10"/><circle cx="260" cy="112" r="10"/></g>
+    <circle cx="138" cy="100" r="6" fill="#f59e0b"/><circle cx="272" cy="100" r="6" fill="#f59e0b"/>
+    <text x="350" y="116" font-size="13">果糖-1,6-雙磷酸</text>
+    <path d="M205,128 L150,160 M205,128 L262,160" stroke="#374151" stroke-width="2.5" fill="none"/><text x="290" y="150" font-size="13" fill="#6d28d9">切成兩半</text>
+    <g fill="#fde68a" stroke="#b45309" stroke-width="2"><circle cx="126" cy="176" r="10"/><circle cx="148" cy="176" r="10"/><circle cx="170" cy="176" r="10"/><circle cx="240" cy="176" r="10"/><circle cx="262" cy="176" r="10"/><circle cx="284" cy="176" r="10"/></g>
+    <path d="M205,192 L205,232" stroke="#374151" stroke-width="2.5" marker-end="url(#a51)"/>
+    <rect x="296" y="196" width="170" height="40" rx="10" fill="#dcfce7" stroke="#16a34a"/><text x="381" y="214" fill="#15803d" font-weight="bold">② 回收期</text><text x="381" y="230">產生 4 ATP ＋ 2 NADH</text>
+    <g fill="#bbf7d0" stroke="#16a34a" stroke-width="2"><circle cx="126" cy="252" r="10"/><circle cx="148" cy="252" r="10"/><circle cx="170" cy="252" r="10"/><circle cx="240" cy="252" r="10"/><circle cx="262" cy="252" r="10"/><circle cx="284" cy="252" r="10"/></g>
+    <text x="205" y="284" font-size="14" font-weight="bold">2 丙酮酸（各 3 碳）</text>
+    <text x="60" y="200" font-size="14" font-weight="bold" fill="#92400e">淨得</text><text x="60" y="220" font-size="14" fill="#92400e">2 ATP</text><text x="60" y="240" font-size="14" fill="#92400e">2 NADH</text>
+    </g>
+  </svg><figcaption>糖解像做生意：先「投資」2 個 ATP 把葡萄糖活化，切成兩半後再「回收」4 個 ATP，淨賺 2 個 ATP 和 2 個 NADH。</figcaption></figure>
+  <ol class="steps">
+    <li><b>投資期</b>：葡萄糖進入細胞後先被<b>己糖激酶</b> <i class="en-term">hexokinase</i>（肝臟為葡萄糖激酶）加上磷酸，變成<b>葡萄糖-6-磷酸</b>。帶磷酸的葡萄糖帶負電，無法經由葡萄糖載體離開細胞，被「關」在細胞內。之後再加上第二個磷酸，形成果糖-1,6-雙磷酸，共<b>花掉 2 個 ATP</b>。這一步由<b>磷酸果糖激酶</b> <i class="en-term">phosphofructokinase, PFK</i> 催化，是糖解的<b>速率限制步驟</b>，ATP 多時被抑制。</li>
+    <li><b>切開</b>：6 碳分子切成兩個 3 碳分子。</li>
+    <li><b>回收期</b>：每個 3 碳分子被氧化（電子交給 NAD⁺ 成 NADH），並把磷酸轉給 ADP。兩個 3 碳分子共產生 <b>4 個 ATP</b> 和 <b>2 個 NADH</b>，最後成為 2 個丙酮酸。</li>
+  </ol>
+  <div class="tblwrap"><table>
+    <tr><th colspan="2">糖解的總結（每 1 個葡萄糖）</th></tr>
+    <tr><td>反應物</td><td>葡萄糖＋2 NAD⁺＋2 ADP＋2 Pi</td></tr>
+    <tr><td>產物</td><td><b>2 丙酮酸＋2 NADH＋淨 2 ATP</b></td></tr>
+    <tr><td>位置／氧</td><td>細胞質；<b>不需要氧</b></td></tr>
+    <tr><td>產生 ATP 的方式</td><td><b>受質層次磷酸化</b>：直接把受質上的磷酸轉給 ADP</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">易考：</b>糖解「總共」產生 4 ATP、「淨得」2 ATP（扣掉投資的 2 個）。問淨產量要答 2。</div>
+
+  <h3 id="h3">乳酸路徑 Lactic Acid Pathway</h3>
+  <p class="core">缺氧時丙酮酸接受 NADH 的電子還原成乳酸 → NAD⁺ 再生 → 糖解才能繼續；紅血球沒有粒線體，只能走這條路。</p>
+  <p>糖解每次都要用掉 NAD⁺（變成 NADH）。細胞裡的 NAD⁺ 數量有限，若 NADH 無法把電子交出去，NAD⁺ 很快就會用完，糖解就會停止。</p>
+  <ul class="dots">
+    <li><b>有氧時</b>：NADH 把電子送到粒線體的電子傳遞鏈，NAD⁺ 再生。</li>
+    <li><b>缺氧時</b>：電子傳遞鏈無法運作（沒有氧接收電子），於是由<b>乳酸脫氫酶</b>（LDH）催化，<b>丙酮酸接受 NADH 的電子，被還原成乳酸</b> <i class="en-term">lactic acid / lactate</i>，NADH 變回 NAD⁺。這樣糖解就能繼續，持續產生少量 ATP。</li>
+  </ul>
+  <p>這條路徑叫<b>乳酸路徑</b>，也稱<b>無氧代謝</b>或乳酸發酵。每個葡萄糖只淨得 2 ATP，效率很低，但速度快，在短時間高強度運動時很重要。</p>
+  <div class="tblwrap"><table>
+    <tr><th>什麼時候走乳酸路徑？</th><th>說明</th></tr>
+    <tr><td>劇烈運動的骨骼肌</td><td>氧氣供應跟不上需求，快縮肌纖維特別依賴（第 12 章）</td></tr>
+    <tr><td><b>紅血球</b></td><td>沒有粒線體，<b>只能</b>靠糖解＋乳酸路徑取得能量，完全依賴葡萄糖</td></tr>
+    <tr><td>缺血的心肌</td><td>冠狀動脈阻塞時心肌缺氧，乳酸堆積引起胸痛（心絞痛）</td></tr>
+    <tr><td>休克、嚴重缺氧</td><td>全身組織缺氧 → 乳酸中毒</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>衝刺時肌肉需要 ATP 的速度遠超過氧氣供應，於是大量走乳酸路徑。運動後繼續喘，是為了償還<b>氧債</b>（運動後過耗氧量 EPOC）：補充肌肉的磷酸肌酸與肌紅素的氧、處理乳酸、降低升高的體溫與心跳等（第 12 章）。以前認為肌肉痠痛是乳酸造成的，但現在知道乳酸在運動後一小時內就會被清除，延遲性痠痛主要與肌肉微小損傷和發炎有關。</div>
+
+  <h3 id="h4">肝醣的合成與分解 Glycogenesis and Glycogenolysis</h3>
+  <p class="core">肝醣合成（飯後，胰島素促進）；肝醣分解（空腹，升糖素、腎上腺素促進）；只有肝臟有葡萄糖-6-磷酸酶，能把葡萄糖釋放到血液。</p>
+  <p>細胞把暫時用不到的葡萄糖以<b>肝醣</b>的形式儲存，主要在<b>肝臟</b>（約 100 克）和<b>骨骼肌</b>（約 300–400 克）。</p>
+  <ul class="dots">
+    <li><b>肝醣合成</b> <i class="en-term">glycogenesis</i>：葡萄糖 → 葡萄糖-6-磷酸 → 葡萄糖-1-磷酸 → 接到肝醣鏈上（由<b>肝醣合成酶</b>催化）。飯後血糖高、<b>胰島素</b>多時進行。</li>
+    <li><b>肝醣分解</b> <i class="en-term">glycogenolysis</i>：由<b>肝醣磷酸化酶</b>把葡萄糖一個個切下來，成為葡萄糖-1-磷酸 → 葡萄糖-6-磷酸。空腹或運動時，<b>升糖素</b>（肝臟）與<b>腎上腺素</b>（肝臟與肌肉）促進。</li>
+  </ul>
+  <figure class="pic"><svg viewBox="0 0 480 240" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a52" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <text x="120" y="22" font-size="16" text-anchor="middle" font-weight="bold" fill="#92400e">肝臟</text>
+    <path d="M30,80 Q40,40 120,45 Q210,50 205,95 Q190,150 100,145 Q30,138 30,80 Z" fill="#e7c9a9" stroke="#92400e" stroke-width="2"/>
+    <text x="118" y="80" font-size="13" text-anchor="middle">肝醣</text><text x="118" y="100" font-size="13" text-anchor="middle">↓</text><text x="118" y="120" font-size="12" text-anchor="middle">葡萄糖-6-磷酸</text>
+    <rect x="70" y="160" width="100" height="30" rx="8" fill="#dcfce7" stroke="#16a34a"/><text x="120" y="180" font-size="12" text-anchor="middle">葡萄糖-6-磷酸酶 ✓</text>
+    <path d="M120,192 L120,222" stroke="#16a34a" stroke-width="3" marker-end="url(#a52)"/>
+    <text x="120" y="236" font-size="13" text-anchor="middle" fill="#15803d" font-weight="bold">葡萄糖進入血液 → 維持血糖</text>
+    <text x="360" y="22" font-size="16" text-anchor="middle" font-weight="bold" fill="#be123c">骨骼肌</text>
+    <rect x="270" y="40" width="180" height="100" rx="40" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/>
+    <text x="360" y="80" font-size="13" text-anchor="middle">肝醣</text><text x="360" y="100" font-size="13" text-anchor="middle">↓</text><text x="360" y="120" font-size="12" text-anchor="middle">葡萄糖-6-磷酸</text>
+    <rect x="300" y="160" width="120" height="30" rx="8" fill="#fee2e2" stroke="#dc2626"/><text x="360" y="180" font-size="12" text-anchor="middle">沒有此酵素 ✕</text>
+    <text x="360" y="215" font-size="13" text-anchor="middle" fill="#be123c" font-weight="bold">只能留在肌肉自己用</text><text x="360" y="234" font-size="12" text-anchor="middle">（進入糖解產生 ATP）</text>
+  </svg><figcaption>同樣是肝醣，用途不同：肝臟能把葡萄糖放回血液供全身（特別是腦）使用；肌肉的肝醣只給自己收縮用。</figcaption></figure>
+  <p>關鍵差別在<b>葡萄糖-6-磷酸酶</b> <i class="en-term">glucose-6-phosphatase</i>：它能把葡萄糖-6-磷酸的磷酸拿掉，變回可以離開細胞的葡萄糖。<span class="key">只有肝臟（以及腎臟）有這個酵素，所以只有肝臟能分泌葡萄糖到血液、維持血糖；肌肉沒有，肌肝醣只能自己用。</span></p>
+  <div class="nut"><b class="t">營養連結：</b>耐力運動員賽前「肝醣超補法」（carbohydrate loading）就是利用肌肉肝醣儲量可被訓練與飲食提高的特性。第 1 型肝醣儲積症（von Gierke disease）就是缺乏葡萄糖-6-磷酸酶，病人空腹時會嚴重低血糖。</div>
+
+  <h3 id="h5">柯氏循環 Cori Cycle</h3>
+  <p class="core">肌肉產生的乳酸 → 經血液到肝臟 → 轉回丙酮酸 → 糖質新生成葡萄糖 → 送回肌肉使用。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a53" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="20" y="50" width="140" height="120" rx="45" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><text x="90" y="40" font-size="15" text-anchor="middle" font-weight="bold" fill="#be123c">骨骼肌</text>
+    <text x="90" y="85" font-size="13" text-anchor="middle">葡萄糖</text><text x="90" y="105" font-size="13" text-anchor="middle">↓ 糖解（2 ATP）</text><text x="90" y="125" font-size="13" text-anchor="middle">丙酮酸</text><text x="90" y="145" font-size="13" text-anchor="middle">↓</text><text x="90" y="162" font-size="13" text-anchor="middle" font-weight="bold">乳酸</text>
+    <path d="M320,85 Q315,95 320,105 Q340,170 380,170 Q430,170 440,110 Q445,60 400,50 Q350,40 320,85 Z" fill="#e7c9a9" stroke="#92400e" stroke-width="2"/><text x="385" y="40" font-size="15" text-anchor="middle" font-weight="bold" fill="#92400e">肝臟</text>
+    <text x="385" y="90" font-size="13" text-anchor="middle" font-weight="bold">乳酸</text><text x="385" y="110" font-size="13" text-anchor="middle">↓ 糖質新生</text><text x="385" y="128" font-size="12" text-anchor="middle">（耗 6 ATP）</text><text x="385" y="150" font-size="13" text-anchor="middle" font-weight="bold">葡萄糖</text>
+    <path d="M160,160 Q240,200 325,110" fill="none" stroke="#dc2626" stroke-width="3" marker-end="url(#a53)"/><text x="235" y="200" font-size="13" text-anchor="middle" fill="#b91c1c">乳酸經血液 →</text>
+    <path d="M345,150 Q240,30 160,80" fill="none" stroke="#16a34a" stroke-width="3" marker-end="url(#a53)"/><text x="245" y="52" font-size="13" text-anchor="middle" fill="#15803d">← 葡萄糖經血液</text>
+  </svg><figcaption>柯氏循環：肌肉把乳酸「外包」給肝臟回收。肝臟花能量把乳酸做回葡萄糖，再送回肌肉。</figcaption></figure>
+  <p>運動時肌肉產生的乳酸進入血液，被<b>肝臟</b>攝取，轉回丙酮酸，再以<b>糖質新生</b>（5.3）做成葡萄糖釋回血液，供肌肉再使用。這個肌肉與肝臟之間的循環叫<b>柯氏循環</b> <i class="en-term">Cori cycle</i>（以發現者 Carl 與 Gerty Cori 夫婦命名，他們因此獲得 1947 年諾貝爾獎）。心肌與慢縮肌纖維也能直接把乳酸轉回丙酮酸，送入粒線體當燃料。</p>
+
+  <details class="stop"><summary>想一想：為什麼紅血球對低血糖特別敏感？</summary>
+    <div>紅血球沒有粒線體，不能利用脂肪酸或酮體，只能用糖解把葡萄糖變成乳酸取得 ATP。所以它和腦一樣，必須持續有血糖供應（第 19 章）。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>細胞呼吸＝氧化養分產生 ATP；有氧（粒線體、ATP 多）vs 無氧（細胞質、ATP 少）。</li>
+      <li>糖解（細胞質、不需氧）：葡萄糖 → 2 丙酮酸；投資 2 ATP、回收 4 ATP → 淨 2 ATP＋2 NADH；PFK 是速率限制酶；受質層次磷酸化。</li>
+      <li>乳酸路徑：缺氧時丙酮酸＋NADH → 乳酸＋NAD⁺，讓糖解繼續；紅血球只能走這條路。</li>
+      <li>肝醣合成（胰島素）／肝醣分解（升糖素、腎上腺素）；葡萄糖-6-磷酸酶只在肝（腎），所以只有肝臟能把葡萄糖送回血液。</li>
+      <li>柯氏循環：肌肉乳酸 → 肝臟糖質新生 → 葡萄糖 → 回肌肉。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>細胞呼吸</td><td>cell respiration</td><td>有氧呼吸／無氧代謝</td><td>aerobic respiration / anaerobic metabolism</td></tr>
+      <tr><td>糖解作用</td><td>glycolysis</td><td>丙酮酸</td><td>pyruvic acid (pyruvate)</td></tr>
+      <tr><td>己糖激酶</td><td>hexokinase</td><td>磷酸果糖激酶</td><td>phosphofructokinase</td></tr>
+      <tr><td>受質層次磷酸化</td><td>substrate-level phosphorylation</td><td>乳酸</td><td>lactic acid</td></tr>
+      <tr><td>乳酸脫氫酶</td><td>lactate dehydrogenase (LDH)</td><td>氧債</td><td>oxygen debt</td></tr>
+      <tr><td>肝醣合成／分解</td><td>glycogenesis / glycogenolysis</td><td>葡萄糖-6-磷酸酶</td><td>glucose-6-phosphatase</td></tr>
+      <tr><td>柯氏循環</td><td>Cori cycle</td><td>肝醣磷酸化酶</td><td>glycogen phosphorylase</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 5.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">5.2</span>有氧呼吸</h2>
+  <div class="en">Aerobic Respiration</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>丙酮酸進入粒線體後的三個步驟：轉成<b>乙醯輔酶 A</b>、<b>克氏循環</b>、<b>電子傳遞鏈與氧化磷酸化</b>；ATP 如何靠<b>化學滲透</b>產生，以及一個葡萄糖的 <b>ATP 總帳</b>。</div><div><span class="lt lt2">為什麼接在 5.1 後面？</span>糖解只拿出葡萄糖能量的一小部分，大部分還留在丙酮酸和 NADH 裡。這一節講有氧時，粒線體怎麼把剩下的能量全部取出——產量是糖解的十幾倍。</div></div>
+  <div class="oneline">丙酮酸在粒線體變成乙醯輔酶 A 進入克氏循環，碳變成 CO₂、電子交給 NADH 與 FADH₂；電子傳遞鏈把電子交給氧，同時把 H⁺ 打到膜間腔，H⁺ 流回時推動 ATP 合成酶做出 ATP。</div>
+  <div class="think">我們呼出的 CO₂ 是從哪裡來的？吸進的 O₂ 又跑去哪裡了？</div>
+
+  <h3 id="h6">克氏循環 Krebs Cycle</h3>
+  <p class="core">丙酮酸 → 乙醯輔酶 A（放出 CO₂、產生 NADH）；乙醯輔酶 A＋草醯乙酸 → 檸檬酸 → … → 草醯乙酸；每轉一圈：2 CO₂、3 NADH、1 FADH₂、1 ATP（GTP）。</p>
+  <p><b>第一步：丙酮酸 → 乙醯輔酶 A</b>。丙酮酸進入粒線體基質，脫去一個碳成為 <b>CO₂</b>（這是呼出的 CO₂ 的來源之一），同時產生一個 NADH，剩下的 2 碳乙醯基接到<b>輔酶 A</b> 上，成為<b>乙醯輔酶 A</b> <i class="en-term">acetyl coenzyme A, acetyl CoA</i>。這一步需要維生素 B1（TPP）、B2、菸鹼酸、泛酸、硫辛酸。</p>
+  <p><b>第二步：克氏循環</b> <i class="en-term">Krebs cycle</i>（又稱<b>檸檬酸循環</b> citric acid cycle、TCA 循環），在粒線體<b>基質</b>中進行：</p>
+  <figure class="pic"><svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a54" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="170" y="10" width="140" height="34" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="32" font-size="15" text-anchor="middle" font-weight="bold">乙醯輔酶 A（2C）</text>
+    <path d="M240,44 L240,70" stroke="#374151" stroke-width="2.5" marker-end="url(#a54)"/>
+    <circle cx="240" cy="190" r="105" fill="none" stroke="#ea580c" stroke-width="5"/>
+    <path d="M330,140 L338,128 L344,148 z" fill="#ea580c"/><path d="M150,240 L142,252 L136,232 z" fill="#ea580c"/>
+    <g font-size="13" text-anchor="middle">
+      <rect x="196" y="74" width="88" height="26" rx="8" fill="#fff" stroke="#ea580c"/><text x="240" y="92">檸檬酸 6C</text>
+      <rect x="318" y="160" width="100" height="26" rx="8" fill="#fff" stroke="#ea580c"/><text x="368" y="178">α-酮戊二酸 5C</text>
+      <rect x="250" y="268" width="96" height="26" rx="8" fill="#fff" stroke="#ea580c"/><text x="298" y="286">琥珀酸 4C</text>
+      <rect x="64" y="160" width="96" height="26" rx="8" fill="#fff" stroke="#ea580c"/><text x="112" y="178">草醯乙酸 4C</text>
+    </g>
+    <g font-size="13" font-weight="bold">
+      <text x="400" y="120" fill="#6b7280">CO₂ ↗</text><text x="400" y="138" fill="#2563eb">NADH</text>
+      <text x="390" y="236" fill="#6b7280">CO₂ ↗</text><text x="390" y="254" fill="#2563eb">NADH</text>
+      <text x="350" y="318" fill="#b45309">ATP（GTP）</text>
+      <text x="150" y="300" fill="#0891b2">FADH₂</text>
+      <text x="30" y="240" fill="#2563eb">NADH</text>
+    </g>
+    <text x="240" y="186" font-size="15" text-anchor="middle" font-weight="bold" fill="#c2410c">克氏循環</text>
+    <text x="240" y="206" font-size="12" text-anchor="middle">（粒線體基質）</text>
+    <text x="240" y="228" font-size="12" text-anchor="middle">每圈：2 CO₂、3 NADH、</text><text x="240" y="244" font-size="12" text-anchor="middle">1 FADH₂、1 ATP</text>
+    <text x="70" y="140" font-size="12" text-anchor="middle" fill="#6d28d9">草醯乙酸回到起點</text><text x="70" y="156" font-size="12" text-anchor="middle" fill="#6d28d9">接下一個乙醯基</text>
+  </svg><figcaption>克氏循環的重點不是背中間物，而是「產出」：碳被拆成 CO₂ 呼出，電子被裝上 NADH、FADH₂ 送去電子傳遞鏈。一個葡萄糖有 2 個乙醯輔酶 A，所以循環要轉 2 圈。</figcaption></figure>
+  <ol class="steps">
+    <li>2 碳的乙醯基和 4 碳的<b>草醯乙酸</b> <i class="en-term">oxaloacetic acid</i> 結合成 6 碳的<b>檸檬酸</b> <i class="en-term">citric acid</i>。</li>
+    <li>檸檬酸經一連串反應，先後脫去兩個碳成為 <b>2 個 CO₂</b>，最後又變回 4 碳的草醯乙酸，可以再接下一個乙醯基——所以是一個「循環」。</li>
+    <li>過程中有 4 次氧化（脫氫）反應，電子被交給 <b>3 個 NAD⁺</b> 和 <b>1 個 FAD</b>；另外以受質層次磷酸化產生 <b>1 個 ATP</b>（實際上是 GTP）。</li>
+  </ol>
+  <div class="tblwrap"><table>
+    <tr><th>每 1 個葡萄糖（＝2 丙酮酸＝2 乙醯輔酶 A）</th><th>CO₂</th><th>NADH</th><th>FADH₂</th><th>ATP</th></tr>
+    <tr><td>丙酮酸 → 乙醯輔酶 A（×2）</td><td>2</td><td>2</td><td>0</td><td>0</td></tr>
+    <tr><td>克氏循環（×2 圈）</td><td>4</td><td>6</td><td>2</td><td>2</td></tr>
+    <tr><td><b>合計</b></td><td><b>6</b>（葡萄糖 6 個碳全部變 CO₂）</td><td><b>8</b></td><td><b>2</b></td><td><b>2</b></td></tr>
+  </table></div>
+  <p>克氏循環本身產生的 ATP 很少；它最重要的貢獻是產生大量的 <b>NADH 和 FADH₂</b>，交給下一步。另外，克氏循環的中間物也是合成胺基酸、脂肪酸等的原料，所以它是<b>代謝的樞紐</b>。</p>
+  <div class="eg"><b class="t">回答開頭問題（前半）：</b>我們呼出的 CO₂，就是葡萄糖（和脂肪酸、胺基酸）的碳原子在<b>丙酮酸轉乙醯輔酶 A</b> 與<b>克氏循環</b>中被脫下來的。</div>
+
+  <h3 id="h7">電子傳遞與氧化磷酸化 Electron Transport and Oxidative Phosphorylation</h3>
+  <p class="core">粒線體內膜上的電子傳遞鏈（含細胞色素）把 NADH、FADH₂ 的電子一站站傳下去，最後交給 O₂ 與 H⁺ 形成水；傳遞時把 H⁺ 打到膜間腔；這種用氧化能量合成 ATP 的方式叫氧化磷酸化。</p>
+  <p>粒線體<b>內膜</b>（嵴）上排列著一串蛋白質複合體與輔酶，稱為<b>電子傳遞鏈</b>，包括含鐵的<b>細胞色素</b> <i class="en-term">cytochromes</i> 與輔酶 Q（CoQ）。</p>
+  <ol class="steps">
+    <li>NADH 把電子交給鏈的第一站，FADH₂ 從稍後的位置交給鏈。NAD⁺、FAD 被釋回，可以回去載電子。</li>
+    <li>電子從一站傳到下一站，每一站都比前一站更「喜歡」電子，電子一路往下走，每一步放出一點能量。</li>
+    <li>傳到最後，電子交給<b>氧</b>。氧接受電子和溶液中的 H⁺ 結合成<b>水</b>。<span class="key">氧是電子的最終接受者</span>——沒有氧，電子在鏈上「塞車」，整條鏈停擺，NADH 也無法再生成 NAD⁺。</li>
+  </ol>
+  <p>利用電子傳遞放出的能量合成 ATP，稱為<b>氧化磷酸化</b> <i class="en-term">oxidative phosphorylation</i>，和糖解、克氏循環中直接把磷酸轉給 ADP 的「受質層次磷酸化」不同。</p>
+  <div class="eg"><b class="t">回答開頭問題（後半）：</b>我們吸進的 O₂，在電子傳遞鏈的最後接收電子，變成了<b>水</b>（代謝水）。所以缺氧幾分鐘就會致命：腦細胞的 ATP 幾乎全靠這條鏈。氰化物、一氧化碳能阻斷細胞色素氧化酶（鏈的最後一站），使細胞無法用氧，因此劇毒。</div>
+
+  <h3 id="h8">電子傳遞與 ATP 生成的偶聯（化學滲透）Coupling of Electron Transport to ATP Production</h3>
+  <p class="core">化學滲透理論：電子傳遞的能量把 H⁺ 從基質打到膜間腔 → 形成 H⁺ 濃度梯度 → H⁺ 經 ATP 合成酶流回基質 → 推動 ADP＋Pi → ATP。</p>
+  <figure class="pic"><svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a55" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="0" y="0" width="480" height="110" fill="#fff7ed"/><text x="12" y="22" font-size="13" fill="#c2410c" font-weight="bold">膜間腔：H⁺ 很多</text>
+    <rect x="0" y="150" width="480" height="140" fill="#fefce8"/><text x="12" y="278" font-size="13" fill="#a16207" font-weight="bold">基質：H⁺ 較少</text>
+    <rect x="0" y="110" width="480" height="40" fill="#fde68a"/><text x="470" y="134" font-size="12" text-anchor="end" fill="#92400e">內膜</text>
+    <g fill="#c4b5fd" stroke="#6d28d9" stroke-width="2"><rect x="40" y="96" width="50" height="68" rx="12"/><rect x="120" y="96" width="50" height="68" rx="12"/><rect x="200" y="96" width="50" height="68" rx="12"/></g>
+    <g font-size="12" text-anchor="middle"><text x="65" y="134">Ⅰ</text><text x="145" y="134">Ⅲ</text><text x="225" y="134">Ⅳ</text></g>
+    <path d="M60,170 Q105,190 140,170 Q180,190 220,170" fill="none" stroke="#f59e0b" stroke-width="3" stroke-dasharray="5 4" marker-end="url(#a55)"/>
+    <text x="40" y="200" font-size="12" fill="#b45309">NADH → NAD⁺</text><text x="40" y="216" font-size="12" fill="#b45309">電子 e⁻ 一站站傳</text>
+    <text x="150" y="240" font-size="12" fill="#b91c1c">最後：e⁻＋O₂＋H⁺ → H₂O</text>
+    <g stroke="#2563eb" stroke-width="2.5" fill="none"><path d="M65,92 L65,50" marker-end="url(#a55)"/><path d="M145,92 L145,50" marker-end="url(#a55)"/><path d="M225,92 L225,50" marker-end="url(#a55)"/></g>
+    <g font-size="14" fill="#1d4ed8" font-weight="bold"><text x="72" y="45">H⁺</text><text x="152" y="45">H⁺</text><text x="232" y="45">H⁺</text><text x="100" y="75">H⁺</text><text x="190" y="70">H⁺</text><text x="280" y="60">H⁺</text><text x="320" y="30">H⁺</text></g>
+    <text x="150" y="20" font-size="12" fill="#1d4ed8">① 把 H⁺ 打上去</text>
+    <path d="M330,86 L330,110 M372,86 L372,110" stroke="#16a34a" stroke-width="3"/>
+    <rect x="320" y="110" width="62" height="40" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+    <circle cx="351" cy="190" r="30" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/><text x="351" y="195" font-size="12" text-anchor="middle">ATP 合成酶</text>
+    <path d="M351,60 L351,150" stroke="#2563eb" stroke-width="3" marker-end="url(#a55)"/>
+    <text x="392" y="90" font-size="12" fill="#1d4ed8">② H⁺ 順著</text><text x="392" y="106" font-size="12" fill="#1d4ed8">梯度流回</text>
+    <text x="400" y="200" font-size="13" fill="#b45309" font-weight="bold">③ ADP＋Pi</text><text x="410" y="220" font-size="13" fill="#b45309" font-weight="bold">→ ATP</text>
+  </svg><figcaption>化學滲透像水壩發電：電子傳遞鏈把 H⁺「抽水」到上游（膜間腔），H⁺ 從 ATP 合成酶這個「水車」流回，帶動它轉動做出 ATP。</figcaption></figure>
+  <p>電子傳遞怎麼變成 ATP？答案是英國學者米契爾（Peter Mitchell）提出的<b>化學滲透理論</b> <i class="en-term">chemiosmotic theory</i>（1978 年諾貝爾獎）：</p>
+  <ol class="steps">
+    <li>電子在傳遞鏈上流動時，其中三個複合體利用放出的能量，把 <b>H⁺（質子）從基質打到膜間腔</b>（內膜與外膜之間的空間）。</li>
+    <li>膜間腔的 H⁺ 越來越多，內膜兩側形成 <b>H⁺ 濃度梯度</b>與電位差（像水壩把水蓄在高處）。內膜本身不讓 H⁺ 自由通過。</li>
+    <li>H⁺ 只能經由內膜上的 <b>ATP 合成酶</b> <i class="en-term">ATP synthase</i> 流回基質。H⁺ 流過時帶動酵素的一部分旋轉，把 ADP＋Pi 合成 ATP。</li>
+  </ol>
+  <p>若有物質讓 H⁺ 不經 ATP 合成酶就漏回基質，梯度的能量就會變成<b>熱</b>而不是 ATP，這叫「<b>解偶聯</b>」。<b>棕色脂肪</b>中的<b>解偶聯蛋白</b>（UCP1，thermogenin）就是這樣產熱，嬰兒與冬眠動物特別依賴（5.3）。</p>
+
+  <h3 id="h9">ATP 總帳 ATP Balance Sheet</h3>
+  <p class="core">每個 NADH 約產 2.5 ATP、每個 FADH₂ 約 1.5 ATP；一個葡萄糖完全氧化約產 30–32 ATP（舊教科書寫 36–38）；無氧只得 2 ATP。</p>
+  <div class="tblwrap"><table>
+    <tr><th>來源（每 1 個葡萄糖）</th><th>直接產生</th><th>經電子傳遞鏈換算</th><th>ATP</th></tr>
+    <tr><td>糖解</td><td>2 ATP（淨）＋2 NADH</td><td>2 NADH × 約 1.5–2.5*</td><td>2 ＋ 3–5</td></tr>
+    <tr><td>丙酮酸 → 乙醯輔酶 A</td><td>2 NADH</td><td>× 2.5</td><td>5</td></tr>
+    <tr><td>克氏循環</td><td>2 ATP＋6 NADH＋2 FADH₂</td><td>6×2.5＋2×1.5</td><td>2 ＋ 15 ＋ 3</td></tr>
+    <tr><td colspan="3"><b>總計</b></td><td><b>約 30–32 ATP</b></td></tr>
+  </table></div>
+  <p style="font-size:14px;color:var(--sub)">* 糖解的 NADH 在細胞質，要靠「穿梭系統」把電子送進粒線體；走甘油磷酸穿梭（骨骼肌、腦）每個約 1.5 ATP，走蘋果酸—天門冬胺酸穿梭（肝、心）約 2.5 ATP，所以總數有 30 與 32 兩種。</p>
+  <div class="warn"><b class="t">數字提醒：</b>Fox 第 16 版等新版教科書用「每 NADH 約 2.5、FADH₂ 約 1.5」的實測值，得到<b>約 30–32 ATP</b>；較舊的書用 3 和 2 計算，寫成 36–38 ATP。考試以課本與老師講義的數字為準。無論哪個版本，<b>有氧產量約是無氧（2 ATP）的 15 倍以上</b>。</div>
+
+  <details class="stop"><summary>想一想：為什麼神經細胞比肌肉細胞更怕缺氧？</summary>
+    <div>腦細胞幾乎完全依賴葡萄糖的有氧呼吸，肝醣儲存極少、也很少走乳酸路徑；缺氧時電子傳遞鏈停擺，ATP 迅速耗盡，鈉鉀幫浦停止，細胞腫脹死亡。骨骼肌則有肝醣、磷酸肌酸，還能靠乳酸路徑撐一陣子。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>丙酮酸進入粒線體 → 乙醯輔酶 A（放出 CO₂、產生 NADH；需 B1 等維生素）。</li>
+      <li>克氏循環（基質）：乙醯輔酶 A＋草醯乙酸 → 檸檬酸 →…→ 草醯乙酸；每圈 2 CO₂、3 NADH、1 FADH₂、1 ATP；每葡萄糖轉 2 圈。</li>
+      <li>電子傳遞鏈（內膜、細胞色素）：電子最終交給 O₂ 形成水；缺氧或氰化物使鏈停擺。</li>
+      <li>化學滲透：電子傳遞把 H⁺ 打到膜間腔 → H⁺ 經 ATP 合成酶流回 → 合成 ATP（氧化磷酸化）；解偶聯蛋白使能量變成熱（棕色脂肪）。</li>
+      <li>NADH ≈ 2.5 ATP、FADH₂ ≈ 1.5 ATP；1 葡萄糖約 30–32 ATP（舊數字 36–38）；無氧 2 ATP。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>乙醯輔酶 A</td><td>acetyl coenzyme A</td><td>克氏循環／檸檬酸循環</td><td>Krebs cycle / citric acid cycle</td></tr>
+      <tr><td>草醯乙酸</td><td>oxaloacetic acid</td><td>檸檬酸</td><td>citric acid</td></tr>
+      <tr><td>細胞色素</td><td>cytochrome</td><td>輔酶 Q</td><td>coenzyme Q</td></tr>
+      <tr><td>氧化磷酸化</td><td>oxidative phosphorylation</td><td>化學滲透理論</td><td>chemiosmotic theory</td></tr>
+      <tr><td>ATP 合成酶</td><td>ATP synthase</td><td>膜間腔</td><td>intermembrane space</td></tr>
+      <tr><td>解偶聯蛋白</td><td>uncoupling protein</td><td>最終電子接受者</td><td>final electron acceptor</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 5.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">5.3</span>脂質與蛋白質的代謝</h2>
+  <div class="en">Metabolism of Lipids and Proteins</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>脂肪怎麼合成與分解（<b>脂肪生成、脂肪分解、β 氧化、酮體、棕色脂肪</b>），胺基酸怎麼被利用（<b>轉胺、氧化去胺、尿素循環、糖質新生</b>），以及不同器官偏好用哪種燃料。</div><div><span class="lt lt2">為什麼放最後？</span>前兩節只講葡萄糖；但身體的燃料還有脂肪與蛋白質。這一節說明三者怎麼在「乙醯輔酶 A 與克氏循環」這個樞紐交會、互相轉換——為第 19 章飽食與飢餓時的代謝調節打基礎。</div></div>
+  <div class="oneline">多餘的醣會在肝臟變成脂肪；脂肪分解成甘油與脂肪酸，脂肪酸經 β 氧化變成乙醯輔酶 A；胺基酸要先去胺基（胺變成尿素），碳骨架可產能或做成葡萄糖；脂肪酸不能做成葡萄糖。</div>
+  <div class="think">為什麼吃太多飯和甜食也會變胖？反過來，脂肪能不能變回葡萄糖給腦用？</div>
+
+  <h3 id="h10">脂質代謝 Lipid Metabolism</h3>
+  <p class="core">脂肪生成：多餘葡萄糖 → 乙醯輔酶 A → 脂肪酸 → 三酸甘油酯（肝、脂肪組織）；脂肪分解：三酸甘油酯 → 甘油＋脂肪酸（激素敏感性脂解酶）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a56" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="14" text-anchor="middle" font-weight="bold">
+      <rect x="20" y="20" width="110" height="36" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="75" y="43">葡萄糖</text>
+      <rect x="185" y="120" width="110" height="36" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="240" y="143">乙醯輔酶 A</text>
+      <rect x="350" y="20" width="110" height="36" rx="10" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/><text x="405" y="43">脂肪酸</text>
+      <rect x="350" y="230" width="110" height="36" rx="10" fill="#ffedd5" stroke="#ea580c" stroke-width="2"/><text x="405" y="253">酮體</text>
+      <rect x="185" y="230" width="110" height="36" rx="10" fill="#fff" stroke="#ea580c" stroke-width="2"/><text x="240" y="253">克氏循環</text>
+      <rect x="20" y="230" width="110" height="36" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="75" y="253">甘油</text></g>
+    <path d="M75,56 L190,120" stroke="#374151" stroke-width="2.5" marker-end="url(#a56)"/>
+    <path d="M285,120 L360,58" stroke="#16a34a" stroke-width="2.5" marker-end="url(#a56)"/><text x="312" y="80" font-size="12" fill="#15803d" text-anchor="end">脂肪生成</text>
+    <path d="M410,58 L298,132" stroke="#0284c7" stroke-width="2.5" marker-end="url(#a56)" stroke-dasharray="6 4"/><text x="370" y="112" font-size="12" fill="#0369a1">β 氧化</text>
+    <path d="M240,156 L240,226" stroke="#374151" stroke-width="2.5" marker-end="url(#a56)"/>
+    <path d="M295,148 L360,232" stroke="#ea580c" stroke-width="2.5" marker-end="url(#a56)"/><text x="345" y="200" font-size="12" fill="#c2410c">肝臟：過多時</text>
+    <path d="M75,230 L75,62" stroke="#b45309" stroke-width="2.5" marker-end="url(#a56)"/><text x="30" y="150" font-size="12" fill="#92400e" text-anchor="middle" transform="rotate(-90 30 150)">糖質新生</text>
+    <path d="M190,130 L120,60" stroke="#dc2626" stroke-width="2" stroke-dasharray="4 4"/><text x="152" y="102" font-size="20" fill="#dc2626" font-weight="bold" text-anchor="middle">✕</text><text x="140" y="190" font-size="12" fill="#b91c1c" text-anchor="middle">乙醯輔酶 A</text><text x="140" y="206" font-size="12" fill="#b91c1c" text-anchor="middle">不能變回葡萄糖</text>
+    <text x="240" y="290" font-size="13" text-anchor="middle">三酸甘油酯 ＝ 甘油 ＋ 3 脂肪酸</text>
+  </svg><figcaption>醣能變成脂肪（實線綠），但脂肪酸分解成乙醯輔酶 A 後無法變回葡萄糖（紅叉）；只有脂肪中的「甘油」部分能做成葡萄糖。</figcaption></figure>
+  <h4>脂肪生成 Lipogenesis</h4>
+  <p class="core">多餘葡萄糖 → 乙醯輔酶 A → 脂肪酸 → 三酸甘油酯（肝、脂肪組織；胰島素促進；肝臟以 VLDL 送出）。</p>
+  <p>吃進的醣超過肝醣能儲存的量時，多餘的葡萄糖經糖解成丙酮酸 → 乙醯輔酶 A，在細胞質中以乙醯輔酶 A 為原料<b>合成脂肪酸</b>（需 NADPH），再和甘油（來自糖解中間物）組成<b>三酸甘油酯</b>，這叫<b>脂肪生成</b> <i class="en-term">lipogenesis</i>，主要在<b>肝臟</b>與脂肪組織進行，受<b>胰島素</b>促進。肝臟做好的三酸甘油酯以<b>極低密度脂蛋白（VLDL）</b>送到脂肪組織儲存。乙醯輔酶 A 也是合成<b>膽固醇</b>的原料。</p>
+  <div class="eg"><b class="t">回答開頭問題（前半）：</b>多吃飯和甜食，超過能量需求與肝醣儲存上限的部分，會在肝臟經乙醯輔酶 A 轉成脂肪酸、三酸甘油酯，再存到脂肪組織，所以也會變胖。高糖飲食還會提高血中三酸甘油酯。</div>
+  <h4>脂肪分解 Lipolysis</h4>
+  <p class="core">激素敏感性脂解酶：三酸甘油酯 → 甘油（可做成葡萄糖）＋游離脂肪酸（白蛋白攜帶）；腎上腺素、升糖素促進，胰島素抑制。</p>
+  <p>空腹、運動、壓力時，脂肪組織中的三酸甘油酯被<b>激素敏感性脂解酶</b> <i class="en-term">hormone-sensitive lipase</i> 水解成<b>甘油</b>和<b>游離脂肪酸</b>，釋放到血液，這叫<b>脂肪分解</b> <i class="en-term">lipolysis</i>。腎上腺素、正腎上腺素、升糖素、生長激素、皮質醇會促進；<b>胰島素抑制</b>。</p>
+  <ul class="dots">
+    <li><b>甘油</b>送到肝臟，可進入糖解路徑或經<b>糖質新生</b>變成葡萄糖。</li>
+    <li><b>游離脂肪酸</b>由血中的<b>白蛋白</b>攜帶，被肌肉、心臟、肝臟等攝取當燃料。</li>
+  </ul>
+
+  <h4>β 氧化 Beta-Oxidation</h4>
+  <p class="core">脂肪酸在粒線體每次切下 2 碳成為乙醯輔酶 A，同時產生 NADH、FADH₂；一個 16 碳的棕櫚酸可產約 106 ATP；脂肪每克約 9 大卡。</p>
+  <p>脂肪酸先在細胞質被活化（接上輔酶 A，耗 ATP），再靠<b>肉鹼</b> <i class="en-term">carnitine</i> 協助送進粒線體。在基質中，脂肪酸從羧基端開始，<b>每次切下 2 個碳</b>成為一個乙醯輔酶 A，同時產生 1 個 NADH 和 1 個 FADH₂，這叫 <b>β 氧化</b> <i class="en-term">β-oxidation</i>。反覆進行直到整條鏈切完。</p>
+  <div class="eg"><b class="t">算算看：</b>16 碳的棕櫚酸 → 7 次 β 氧化 → 8 個乙醯輔酶 A＋7 NADH＋7 FADH₂。8 個乙醯輔酶 A 進克氏循環，總計約產 <b>106 ATP</b>（扣除活化耗用），比一個葡萄糖（約 30–32）多三倍以上。這就是脂肪每克熱量（約 9 大卡）高於醣（約 4 大卡）的原因：脂肪酸的碳更「還原」，可取出的電子更多。</div>
+  <div class="nut"><b class="t">營養連結：</b>肉鹼可由離胺酸、甲硫胺酸在體內合成，健康人不需額外補充。脂肪酸氧化要在<b>有氧</b>下進行，所以低強度、長時間的有氧運動是燃燒脂肪的主要方式。</div>
+
+  <h4>酮體 Ketone Bodies</h4>
+  <p class="core">乙醯輔酶 A 過多時肝臟做成酮體 → 供心、肌、腎、禁食時的腦使用；肝臟自己不用；過多→酮酸中毒。</p>
+  <p>長時間禁食、極低醣飲食或未控制的第 1 型糖尿病時，脂肪大量分解，肝臟產生的乙醯輔酶 A 多到克氏循環消化不了（加上草醯乙酸被拿去做糖質新生而不足），肝臟就把乙醯輔酶 A 轉成<b>酮體</b>：乙醯乙酸、β-羥丁酸、丙酮。這叫<b>生酮作用</b> <i class="en-term">ketogenesis</i>。</p>
+  <ul class="dots">
+    <li>酮體是水溶性的，可經血液送到<b>心臟、骨骼肌、腎臟</b>，以及禁食數天後的<b>腦</b>，轉回乙醯輔酶 A 當燃料，減少腦對葡萄糖的需求，進而減少肌肉蛋白分解。</li>
+    <li>肝臟自己<b>不能</b>使用酮體（缺少轉換酵素）。</li>
+    <li>過多時：<b>酮症</b> ketosis；酮體是酸，大量堆積造成<b>酮酸中毒</b> ketoacidosis（第 2、19 章）。</li>
+  </ul>
+
+  <h4>棕色脂肪 Brown Fat</h4>
+  <p class="core">粒線體多、UCP1 讓 H⁺ 漏回 → 能量變成熱（非顫抖性產熱），新生兒較多。</p>
+  <p><b>白色脂肪</b>以一個大油滴儲存能量；<b>棕色脂肪</b> <i class="en-term">brown adipose tissue</i> 有許多小油滴和大量<b>粒線體</b>（含鐵的細胞色素使它呈棕色），粒線體內膜有<b>解偶聯蛋白 UCP1</b>，讓 H⁺ 不經 ATP 合成酶直接漏回基質，電子傳遞的能量於是變成<b>熱</b>——稱為<b>非顫抖性產熱</b>。新生兒的頸部、肩胛間有較多棕色脂肪，幫助維持體溫；成人在頸部與鎖骨上方也有少量，受寒冷與交感神經刺激活化。</p>
+
+  <h3 id="h11">胺基酸代謝 Amino Acid Metabolism</h3>
+  <p class="core">胺基酸庫：來自飲食與蛋白質分解，用於合成蛋白質；多餘的不能儲存，要先去除胺基（轉胺、氧化去胺），氨在肝臟變成尿素由腎排出，碳骨架產能、做成葡萄糖或脂肪。</p>
+  <p>身體沒有專門儲存胺基酸的地方。飲食吸收與組織蛋白質分解的胺基酸，形成<b>胺基酸庫</b> <i class="en-term">amino acid pool</i>，優先用來合成蛋白質、激素、神經傳遞物質等；多出來的部分則被分解。</p>
+  <div class="nut"><b class="t">營養連結：氮平衡</b>——攝取的氮＝排出的氮稱為氮平衡（健康成人）；攝取＞排出為<b>正氮平衡</b>（生長期、懷孕、傷口癒合、肌力訓練）；攝取＜排出為<b>負氮平衡</b>（飢餓、燒燙傷、重大手術、感染）。營養評估常用。</div>
+
+  <h4>轉胺作用 Transamination</h4>
+  <p class="core">胺基酸的胺基轉給酮酸 → 新胺基酸＋新酮酸；需 B6；用來製造非必需胺基酸；ALT、AST 是轉胺酶。</p>
+  <p><b>轉胺作用</b> <i class="en-term">transamination</i> 是把一個胺基酸的<b>胺基轉移</b>給一個<b>酮酸</b>（如 α-酮戊二酸、丙酮酸），結果原本的胺基酸變成酮酸，原本的酮酸變成新的胺基酸。催化的<b>轉胺酶</b>需要<b>維生素 B6</b>（PLP）。</p>
+  <ul class="dots">
+    <li>身體用這種方式製造<b>非必需胺基酸</b>：只要有對應的酮酸骨架（來自醣代謝），就能接上胺基。必需胺基酸的碳骨架人體做不出來，所以必須從食物攝取。</li>
+    <li>兩個臨床常見的轉胺酶：<b>ALT（GPT）</b>把丙胺酸的胺基轉給 α-酮戊二酸；<b>AST（GOT）</b>把天門冬胺酸的胺基轉給 α-酮戊二酸。肝細胞受損時漏入血中（第 4 章）。</li>
+  </ul>
+
+  <h4>氧化去胺作用與尿素循環 Oxidative Deamination and the Urea Cycle</h4>
+  <p>轉胺作用把各種胺基酸的胺基集中到<b>麩胺酸</b>身上。麩胺酸在肝臟經<b>氧化去胺作用</b> <i class="en-term">oxidative deamination</i>（麩胺酸脫氫酶）把胺基以<b>氨</b>（NH₃）的形式移除，自己變回 α-酮戊二酸，同時產生 NADH。</p>
+  <p>氨對神經系統有毒，肝臟立刻用<b>尿素循環</b> <i class="en-term">urea cycle</i>（鳥胺酸循環）把氨和 CO₂ 合成<b>尿素</b> <i class="en-term">urea</i>（耗 ATP），尿素無毒、水溶性，經血液到<b>腎臟</b>隨尿排出。</p>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a57" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <rect x="10" y="20" width="120" height="50" rx="10" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2"/><text x="70" y="42" font-size="14" text-anchor="middle" font-weight="bold">胺基酸</text><text x="70" y="60" font-size="12" text-anchor="middle">胺基＋碳骨架</text>
+    <path d="M130,45 L178,45" stroke="#374151" stroke-width="2.5" marker-end="url(#a57)"/><text x="154" y="36" font-size="11" text-anchor="middle">轉胺（B6）</text>
+    <rect x="180" y="20" width="110" height="50" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><text x="235" y="42" font-size="14" text-anchor="middle" font-weight="bold">麩胺酸</text><text x="235" y="60" font-size="12" text-anchor="middle">（集中胺基）</text>
+    <path d="M290,45 L338,45" stroke="#374151" stroke-width="2.5" marker-end="url(#a57)"/><text x="314" y="36" font-size="11" text-anchor="middle">去胺</text>
+    <rect x="340" y="20" width="60" height="50" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="370" y="50" font-size="15" text-anchor="middle" font-weight="bold" fill="#b91c1c">NH₃</text>
+    <path d="M370,70 L370,108" stroke="#374151" stroke-width="2.5" marker-end="url(#a57)"/>
+    <circle cx="370" cy="140" r="30" fill="#fff" stroke="#92400e" stroke-width="3"/><text x="370" y="137" font-size="11" text-anchor="middle">肝臟</text><text x="370" y="152" font-size="11" text-anchor="middle">尿素循環</text>
+    <path d="M400,140 L440,140" stroke="#374151" stroke-width="2.5" marker-end="url(#a57)"/><text x="455" y="135" font-size="14" text-anchor="middle" font-weight="bold">尿素</text><text x="455" y="155" font-size="11" text-anchor="middle">→ 腎排出</text>
+    <path d="M70,70 L70,120" stroke="#374151" stroke-width="2.5" marker-end="url(#a57)"/>
+    <rect x="10" y="122" width="200" height="46" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="110" y="142" font-size="13" text-anchor="middle" font-weight="bold">碳骨架（酮酸）</text><text x="110" y="160" font-size="12" text-anchor="middle">進入克氏循環、丙酮酸等</text>
+    <g font-size="12" text-anchor="middle"><text x="40" y="200">產生 ATP</text><text x="125" y="200">糖質新生 → 葡萄糖</text><text x="220" y="200">→ 脂肪</text></g>
+    <path d="M60,168 L45,186 M110,168 L120,186 M170,168 L210,186" stroke="#374151" stroke-width="1.5"/>
+    <text x="240" y="225" font-size="12" text-anchor="middle" fill="#374151">胺基變成尿素排出；碳骨架當燃料或原料</text>
+  </svg><figcaption>胺基酸分解的兩條路：含氮的胺基在肝臟變成尿素由尿排出；不含氮的碳骨架則依種類進入不同代謝路徑。</figcaption></figure>
+  <div class="warn"><b class="t">臨床連結：</b>嚴重肝病時尿素循環能力下降，血氨升高，可造成意識混亂、昏迷（<b>肝昏迷</b>）。腎衰竭時尿素無法排出，血中尿素氮（BUN）升高。所以 BUN、血氨是評估肝腎功能的指標（第 17 章）。</div>
+
+  <h4>胺基酸碳骨架的去向與糖質新生 Gluconeogenesis</h4>
+  <p class="core">糖質新生＝由非醣原料（乳酸、甘油、生糖胺基酸如丙胺酸）在肝臟（長期禁食時也在腎）合成葡萄糖；乙醯輔酶 A 與偶數碳脂肪酸不能做成葡萄糖。</p>
+  <p>去胺基後的碳骨架依胺基酸種類，轉成丙酮酸、乙醯輔酶 A 或克氏循環的中間物：</p>
+  <ul class="dots">
+    <li><b>生糖胺基酸</b> <i class="en-term">glucogenic amino acids</i>：碳骨架能轉成丙酮酸或克氏循環中間物，可經<b>糖質新生</b>做成葡萄糖（如丙胺酸、麩醯胺酸）。</li>
+    <li><b>生酮胺基酸</b> <i class="en-term">ketogenic amino acids</i>：碳骨架變成乙醯輔酶 A 或乙醯乙酸，只能產能或做成脂肪、酮體（白胺酸、離胺酸是純生酮）。</li>
+  </ul>
+  <p><b>糖質新生</b> <i class="en-term">gluconeogenesis</i>：由<b>非醣類</b>的原料在<b>肝臟</b>合成新的葡萄糖（長期禁食時腎臟也參與），原料有：<b>乳酸</b>（柯氏循環）、<b>甘油</b>（脂肪分解）、<b>生糖胺基酸</b>（主要來自肌肉蛋白分解，以丙胺酸送到肝臟）。升糖素、皮質醇促進；胰島素抑制。</p>
+  <div class="eg"><b class="t">回答開頭問題（後半）：</b>脂肪酸經 β 氧化變成乙醯輔酶 A，而人體<b>沒有能把乙醯輔酶 A 變回丙酮酸的酵素</b>（丙酮酸 → 乙醯輔酶 A 是單向的），所以<b>脂肪酸不能做成葡萄糖</b>。只有三酸甘油酯中的<b>甘油</b>（占很小比例）能做成葡萄糖。因此長時間飢餓時，為了供應腦和紅血球葡萄糖，身體必須分解<b>肌肉蛋白</b>做糖質新生；直到酮體增加、腦改用酮體，肌肉分解才會減緩（第 19 章）。</div>
+
+  <h3 id="h12">不同能量來源的利用 Uses of Different Energy Sources</h3>
+  <p class="core">腦：葡萄糖（禁食久了用酮體）；紅血球：只用葡萄糖；肝：脂肪酸；心肌：脂肪酸為主；骨骼肌：休息時脂肪酸、運動時葡萄糖與肝醣。</p>
+  <p>三大營養素最終都匯集到<b>乙醯輔酶 A 與克氏循環</b>，所以可以互相支援；但各組織依酵素與構造不同，有各自偏好的燃料：</p>
+  <div class="tblwrap"><table>
+    <tr><th>組織</th><th>主要燃料</th><th>說明</th></tr>
+    <tr><td><b>腦</b></td><td>葡萄糖（約每天 100–120 克）</td><td>脂肪酸無法通過血腦障壁；禁食數天後可大量改用<b>酮體</b></td></tr>
+    <tr><td><b>紅血球</b></td><td><b>只用葡萄糖</b>（乳酸路徑）</td><td>沒有粒線體</td></tr>
+    <tr><td>心肌</td><td>脂肪酸為主，也用乳酸、酮體、葡萄糖</td><td>粒線體非常多</td></tr>
+    <tr><td>骨骼肌</td><td>休息：脂肪酸；運動：肝醣、葡萄糖、脂肪酸</td><td>依運動強度改變比例（第 12 章）</td></tr>
+    <tr><td>肝臟</td><td>脂肪酸</td><td>產生酮體但自己不用</td></tr>
+  </table></div>
+  <p>某一燃料在血中的濃度與激素狀態（胰島素 vs 升糖素等）決定了身體當下用哪一種。飯後以葡萄糖為主並把多餘的存起來；空腹時改以脂肪酸為主，把葡萄糖留給腦與紅血球——這個「節省葡萄糖」的整合調節，第 19 章會詳細說明。</p>
+
+  <details class="stop"><summary>想一想：只吃蛋白質、不吃醣類，身體可以維持血糖嗎？代價是什麼？</summary>
+    <div>可以，肝臟能用生糖胺基酸做糖質新生維持血糖。但過程中胺基被轉成尿素，肝臟與腎臟負擔增加、需要更多水分排出；而且如果熱量不足，身體也會分解自己的肌肉蛋白。所以飲食建議中，醣類有「節省蛋白質」的作用。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>脂肪生成：多餘葡萄糖 → 乙醯輔酶 A → 脂肪酸 → 三酸甘油酯（肝、脂肪組織；胰島素促進；VLDL 運送）。</li>
+      <li>脂肪分解：激素敏感性脂解酶 → 甘油（可糖質新生）＋游離脂肪酸（白蛋白攜帶）；胰島素抑制。</li>
+      <li>β 氧化（粒線體，肉鹼協助）：每次切 2 碳成乙醯輔酶 A＋NADH＋FADH₂；棕櫚酸約 106 ATP。</li>
+      <li>酮體：肝臟在乙醯輔酶 A 過多時產生；供心、肌、腎、禁食時的腦；肝臟不用；過多酮酸中毒。</li>
+      <li>棕色脂肪：粒線體多、UCP1 解偶聯 → 產熱（新生兒）。</li>
+      <li>胺基酸：轉胺（B6；ALT、AST；合成非必需胺基酸）→ 麩胺酸氧化去胺 → NH₃ → 肝尿素循環 → 尿素經腎排出。</li>
+      <li>生糖 vs 生酮胺基酸；糖質新生原料：乳酸、甘油、生糖胺基酸；脂肪酸（乙醯輔酶 A）不能做成葡萄糖。</li>
+      <li>腦用葡萄糖（禁食用酮體）、紅血球只用葡萄糖、心肌與肝以脂肪酸為主。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>脂肪生成</td><td>lipogenesis</td><td>脂肪分解</td><td>lipolysis</td></tr>
+      <tr><td>激素敏感性脂解酶</td><td>hormone-sensitive lipase</td><td>游離脂肪酸</td><td>free fatty acid</td></tr>
+      <tr><td>β 氧化</td><td>β-oxidation</td><td>肉鹼</td><td>carnitine</td></tr>
+      <tr><td>生酮作用</td><td>ketogenesis</td><td>棕色脂肪</td><td>brown adipose tissue</td></tr>
+      <tr><td>胺基酸庫</td><td>amino acid pool</td><td>氮平衡</td><td>nitrogen balance</td></tr>
+      <tr><td>轉胺作用</td><td>transamination</td><td>氧化去胺作用</td><td>oxidative deamination</td></tr>
+      <tr><td>尿素循環</td><td>urea cycle</td><td>糖質新生</td><td>gluconeogenesis</td></tr>
+      <tr><td>生糖／生酮胺基酸</td><td>glucogenic / ketogenic amino acid</td><td>麩胺酸</td><td>glutamic acid</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s4">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>糖解</td><td>細胞質、不需氧；葡萄糖 → 2 丙酮酸；淨 2 ATP＋2 NADH；PFK 速率限制</td></tr>
+    <tr><td>乳酸路徑</td><td>缺氧：丙酮酸＋NADH → 乳酸＋NAD⁺；紅血球只能走此路</td></tr>
+    <tr><td>肝醣</td><td>合成（胰島素）／分解（升糖素、腎上腺素）；葡萄糖-6-磷酸酶只在肝（腎）</td></tr>
+    <tr><td>柯氏循環</td><td>肌肉乳酸 → 肝糖質新生 → 葡萄糖 → 肌肉</td></tr>
+    <tr><td>克氏循環</td><td>粒線體基質；每葡萄糖 2 圈；產出 CO₂、NADH、FADH₂</td></tr>
+    <tr><td>電子傳遞鏈</td><td>內膜；O₂ 是最終電子接受者 → H₂O；化學滲透：H⁺ 梯度驅動 ATP 合成酶</td></tr>
+    <tr><td>ATP 總數</td><td>NADH≈2.5、FADH₂≈1.5；葡萄糖約 30–32（舊 36–38）；無氧 2</td></tr>
+    <tr><td>脂質</td><td>脂肪生成（胰島素）；脂肪分解（激素敏感性脂解酶，胰島素抑制）；β 氧化每次 2 碳；棕櫚酸 106 ATP</td></tr>
+    <tr><td>酮體</td><td>肝產生、肝不用；腦禁食時使用；過多酮酸中毒</td></tr>
+    <tr><td>胺基酸</td><td>轉胺（B6、ALT、AST）→ 去胺 → NH₃ → 肝尿素循環 → 腎排尿素</td></tr>
+    <tr><td>糖質新生</td><td>原料：乳酸、甘油、生糖胺基酸；脂肪酸不能做成葡萄糖</td></tr>
+    <tr><td>燃料偏好</td><td>腦：葡萄糖／酮體；紅血球：只葡萄糖；心、肝：脂肪酸</td></tr>
+  </table></div>
+  <h3 id="h13">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說出糖解的位置、產物與淨 ATP？</li>
+    <li>□ 解釋缺氧時為什麼要把丙酮酸變成乳酸？</li>
+    <li>□ 說明為什麼肝醣能維持血糖、肌肝醣不能？</li>
+    <li>□ 畫出柯氏循環？</li>
+    <li>□ 說出 CO₂ 在哪些步驟產生、O₂ 在哪裡被用掉？</li>
+    <li>□ 用「水壩」比喻說明化學滲透？</li>
+    <li>□ 解釋為什麼脂肪酸不能做成葡萄糖，飢餓時腦的燃料從哪來？</li>
+    <li>□ 說出胺基酸的胺基最後變成什麼、在哪裡產生、由哪裡排出？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 5 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"糖解作用（glycolysis）進行的位置與每個葡萄糖的淨 ATP 產量為？",o:["粒線體基質，2 ATP","細胞質，2 ATP","細胞質，4 ATP","粒線體內膜，32 ATP"],a:1,
+  e:"糖解在<b>細胞質</b>、不需氧；總產 4 ATP、投資 2 ATP，<b>淨得 2 ATP</b>＋2 NADH。"},
+ {q:"缺氧時丙酮酸被還原成乳酸，最主要的意義是？",o:["產生大量 ATP","讓 NAD⁺ 再生，糖解得以繼續","把乳酸儲存成肝醣","產生 CO₂"],a:1,
+  e:"丙酮酸接受 NADH 的電子變乳酸，<b>NAD⁺ 再生</b>，糖解才能持續產生少量 ATP。"},
+ {q:"下列哪一種細胞只能靠糖解與乳酸路徑取得能量？",o:["肝細胞","心肌細胞","成熟紅血球","神經元"],a:2,
+  e:"<b>成熟紅血球沒有粒線體</b>，只能用葡萄糖走糖解產生 ATP。"},
+ {q:"肌肉肝醣分解後無法釋出葡萄糖到血液，是因為缺乏？",o:["肝醣磷酸化酶","己糖激酶","葡萄糖-6-磷酸酶","磷酸果糖激酶"],a:2,
+  e:"<b>葡萄糖-6-磷酸酶</b>只存在肝臟（與腎），能把葡萄糖-6-磷酸變回葡萄糖送入血液；肌肉沒有。"},
+ {q:"柯氏循環（Cori cycle）是指？",o:["肝臟的乳酸送到肌肉","肌肉產生的乳酸送到肝臟做成葡萄糖，再送回肌肉","脂肪酸在肝臟變成酮體","胺基酸在肝臟變成尿素"],a:1,
+  e:"肌肉乳酸 → 血液 → <b>肝臟糖質新生</b> → 葡萄糖 → 回肌肉。"},
+ {q:"克氏循環（Krebs cycle）進行的位置是？",o:["細胞質","粒線體基質","粒線體外膜","細胞核"],a:1,
+  e:"克氏循環在<b>粒線體基質</b>；電子傳遞鏈在粒線體內膜。"},
+ {q:"一個葡萄糖完全氧化，克氏循環要轉幾圈？",o:["1 圈","2 圈","3 圈","6 圈"],a:1,
+  e:"一個葡萄糖產生 2 個丙酮酸 → <b>2 個乙醯輔酶 A</b>，所以轉 2 圈。"},
+ {q:"在電子傳遞鏈中，最終接受電子的分子是？",o:["NAD⁺","FAD","氧（O₂）","二氧化碳"],a:2,
+  e:"<b>O₂ 是最終電子接受者</b>，接受電子並與 H⁺ 結合成水；缺氧或氰化物會使鏈停擺。"},
+ {q:"根據化學滲透理論，直接推動 ATP 合成酶產生 ATP 的是？",o:["電子流經 ATP 合成酶","H⁺ 順著濃度梯度由膜間腔流回基質","O₂ 進入粒線體","CO₂ 離開粒線體"],a:1,
+  e:"電子傳遞把 H⁺ 打到膜間腔；<b>H⁺ 經 ATP 合成酶流回基質</b>時推動 ATP 合成。"},
+ {q:"棕色脂肪能產熱，主要是因為？",o:["含大量肝醣","粒線體的解偶聯蛋白讓 H⁺ 不經 ATP 合成酶回流","沒有粒線體","大量進行糖解"],a:1,
+  e:"<b>解偶聯蛋白（UCP1）</b>讓 H⁺ 直接漏回基質，能量變成熱而非 ATP；新生兒較多。"},
+ {q:"脂肪酸在粒線體中每次切下 2 個碳形成乙醯輔酶 A 的過程稱為？",o:["脂肪生成","β 氧化","生酮作用","糖質新生"],a:1,
+  e:"<b>β 氧化</b>每次切 2 碳成乙醯輔酶 A，同時產生 NADH 與 FADH₂；需肉鹼送入粒線體。"},
+ {q:"下列何者<b>不能</b>經糖質新生轉變成葡萄糖？",o:["乳酸","甘油","丙胺酸","偶數碳脂肪酸"],a:3,
+  e:"脂肪酸分解成<b>乙醯輔酶 A</b>，人體無法把它變回丙酮酸，所以不能做成葡萄糖；甘油可以。"},
+ {q:"胺基酸分解時產生的氨，主要在哪個器官轉成尿素？",o:["腎臟","肝臟","肌肉","小腸"],a:1,
+  e:"<b>肝臟</b>以尿素循環把有毒的氨變成尿素，再由腎臟排出；肝衰竭時血氨上升。"},
+ {q:"轉胺酶（如 ALT、AST）需要哪一種維生素做成的輔酶？",o:["維生素 B1","維生素 B2","維生素 B6","維生素 B12"],a:2,
+  e:"轉胺酶需要<b>維生素 B6</b> 做成的磷酸吡哆醛（PLP）。"},
+ {q:"長期禁食數天後，腦部可以大量利用哪一種燃料以減少對葡萄糖的需求？",o:["游離脂肪酸","酮體","乳酸","胺基酸"],a:1,
+  e:"脂肪酸不能通過血腦障壁；禁食時肝臟產生的<b>酮體</b>可被腦利用，減少肌肉蛋白分解。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>

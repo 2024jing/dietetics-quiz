@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 7 章 神經系統：神經元與突觸</title>
+<link rel="stylesheet" href="fox.css">
+</head>
+<body id="top" data-ch="7">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 7 章　神經系統：神經元與突觸</h1>
+  <div class="en">Chapter 7 The Nervous System: Neurons and Synapses（課本 p.171–216）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：為什麼這樣排？</a>
+  <a href="#s1">7.1 神經元與支持細胞</a>
+  <a class="sub" href="#h1">神經系統的分區</a>
+  <a class="sub" href="#h2">神經元 Neurons</a>
+  <a class="sub" href="#h3">支持細胞（神經膠細胞）Supporting Cells</a>
+  <a class="sub" href="#h4">神經膜與髓鞘 Neurilemma and Myelin Sheath</a>
+  <a class="sub" href="#h5">神經營養因子 Neurotrophins</a>
+  <a class="sub" href="#h6">血腦障壁 Blood-Brain Barrier</a>
+  <a href="#s2">7.2 軸突的電活動</a>
+  <a class="sub" href="#h7">分級電位與動作電位</a>
+  <a class="sub" href="#h8">離子閘控 Ion Gating in Axons</a>
+  <a class="sub" href="#h9">動作電位 Action Potentials</a>
+  <a class="sub" href="#h10">全有全無定律與強度編碼 All-or-None Law and Coding for Stimulus Intensity</a>
+  <a class="sub" href="#h11">不反應期 Refractory Periods</a>
+  <a class="sub" href="#h12">纜線性質與動作電位的傳導 Cable Properties and Conduction of Action Potentials</a>
+  <a href="#s3">7.3 突觸</a>
+  <a class="sub" href="#h13">突觸的種類</a>
+  <a class="sub" href="#h14">電突觸：間隙接合 Electrical Synapses: Gap Junctions</a>
+  <a class="sub" href="#h15">化學突觸 Chemical Synapses</a>
+  <a href="#s4">7.4 乙醯膽鹼</a>
+  <a class="sub" href="#h16">ACh 的受體</a>
+  <a class="sub" href="#h17">乙醯膽鹼酯酶 Acetylcholinesterase</a>
+  <a class="sub" href="#h18">ACh 在周邊與中樞神經系統 ACh in the PNS and CNS</a>
+  <a href="#s5">7.5 單胺類神經傳遞物質</a>
+  <a class="sub" href="#h19">單胺類的合成與終止</a>
+  <a class="sub" href="#h20">血清素 Serotonin</a>
+  <a class="sub" href="#h21">多巴胺 Dopamine</a>
+  <a class="sub" href="#h22">正腎上腺素 Norepinephrine</a>
+  <a href="#s6">7.6 其他神經傳遞物質</a>
+  <a class="sub" href="#h23">胺基酸類 Amino Acids as Neurotransmitters</a>
+  <a class="sub" href="#h24">胜肽類 Polypeptides as Neurotransmitters</a>
+  <a class="sub" href="#h25">內生性大麻素 Endocannabinoids</a>
+  <a class="sub" href="#h26">氣體 Gases as Neurotransmitters</a>
+  <a class="sub" href="#h27">ATP 與腺苷 ATP and Adenosine</a>
+  <a href="#s7">7.7 突觸整合</a>
+  <a class="sub" href="#h28">EPSP 與 IPSP 的加成 Summation</a>
+  <a class="sub" href="#h29">突觸可塑性 Synaptic Plasticity</a>
+  <a class="sub" href="#h30">突觸抑制 Synaptic Inhibition</a>
+  <a href="#s8">本章重點整理</a>
+  <a class="sub" href="#h31">讀完請自我檢查：我能不能……</a>
+  <a href="#quizsec">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章說回饋要有人「傳訊」；第 6 章說細胞有膜電位。這一章把兩者結合：<span class="key">神經元怎麼把膜電位的快速變化（動作電位）沿著軸突傳下去，又怎麼在突觸用化學物質把訊號傳給下一個細胞？</span>這是第 8 章（腦）、第 9 章（自主神經）、第 10 章（感覺）、第 12 章（肌肉）的共同基礎。</div>
+  <div class="path">
+    <div class="step"><span class="sn">7.1</span><div><b>神經元與支持細胞</b><br><span class="sq">神經元的構造與分類；膠細胞的種類、髓鞘、血腦障壁。</span></div></div>
+    <div class="arr">↓ 認識了「電線」，看電訊號怎麼在上面跑</div>
+    <div class="step"><span class="sn">7.2</span><div><b>軸突的電活動</b><br><span class="sq">離子通道、動作電位、全有全無、不反應期、跳躍式傳導。</span></div></div>
+    <div class="arr">↓ 訊號到了軸突末端，怎麼傳給下一個細胞？</div>
+    <div class="step"><span class="sn">7.3</span><div><b>突觸</b><br><span class="sq">電突觸與化學突觸；Ca²⁺ 觸發神經傳遞物質釋放。</span></div></div>
+    <div class="arr">↓ 接著認識各種神經傳遞物質，先從最經典的開始</div>
+    <div class="step"><span class="sn">7.4</span><div><b>乙醯膽鹼</b><br><span class="sq">菸鹼型與毒蕈鹼型受體、乙醯膽鹼酯酶。</span></div></div>
+    <div class="arr">↓</div>
+    <div class="step"><span class="sn">7.5～7.6</span><div><b>單胺類與其他神經傳遞物質</b><br><span class="sq">血清素、多巴胺、正腎上腺素；麩胺酸、GABA、甘胺酸；胜肽、內生性大麻素、氣體、ATP。</span></div></div>
+    <div class="arr">↓ 一個神經元同時收到很多訊號，最後要不要發射？</div>
+    <div class="step"><span class="sn">7.7</span><div><b>突觸整合</b><br><span class="sq">EPSP、IPSP 的加成；突觸可塑性（學習記憶）；突觸前與突觸後抑制。</span></div></div>
+  </div>
+</section>
+
+<!-- ============ 7.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">7.1</span>神經元與支持細胞</h2>
+  <div class="en">Neurons and Supporting Cells</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>神經系統的分區、神經元的構造與功能／構造分類、各種<b>膠細胞</b>的工作、<b>髓鞘</b>與神經再生、<b>血腦障壁</b>。</div><div><span class="lt lt2">為什麼放第一節？</span>先認識負責傳訊的細胞長什麼樣子、由誰保護與絕緣，才能理解電訊號怎麼在它上面跑得快或慢。</div></div>
+  <div class="oneline">神經系統分中樞（腦、脊髓）與周邊；神經元負責傳遞訊號，膠細胞負責支持、絕緣與保護；髓鞘在周邊由許旺細胞、在中樞由寡突膠細胞形成。</div>
+  <div class="think">手指被割傷後神經可以慢慢長回來，脊髓受傷卻常常無法恢復，為什麼？</div>
+
+  <h3 id="h1">神經系統的分區</h3>
+  <p class="core">中樞神經系統（CNS）＝腦＋脊髓；周邊神經系統（PNS）＝腦神經、脊神經、神經節；PNS 又分體神經（骨骼肌）與自主神經（交感、副交感）。</p>
+  <ul class="dots">
+    <li><b>中樞神經系統</b> <i class="en-term">central nervous system, CNS</i>：<b>腦</b>與<b>脊髓</b>，負責整合與決策。</li>
+    <li><b>周邊神經系統</b> <i class="en-term">peripheral nervous system, PNS</i>：腦神經、脊神經與<b>神經節</b>（周邊的神經細胞本體群集）。
+      <ul>
+        <li><b>體神經系統</b>：支配<b>骨骼肌</b>，可隨意控制。</li>
+        <li><b>自主神經系統</b>：支配心肌、平滑肌、腺體，不隨意；分為<b>交感</b>（戰或逃）與<b>副交感</b>（休息消化）（第 9 章）。</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3 id="h2">神經元 Neurons</h3>
+  <p class="core">細胞本體（含尼氏小體）＋樹突（接收）＋軸突（從軸丘發出，傳出動作電位，可分出側枝）；軸突運輸：順向（驅動蛋白）、逆向（動力蛋白）。</p>
+  <p><b>神經元</b>是神經系統傳遞訊號的基本單位，成熟後通常<b>不再分裂</b>（少數區域有神經幹細胞，見第 8 章）。</p>
+  <ul class="dots">
+    <li><b>細胞本體</b> <i class="en-term">cell body（soma）</i>：含細胞核，是代謝中心；有大量粗糙內質網形成的<b>尼氏小體</b> <i class="en-term">Nissl bodies</i>，大量合成蛋白質（如神經傳遞物質相關酵素）。</li>
+    <li><b>樹突</b> <i class="en-term">dendrites</i>：多而短，<b>接收</b>訊號並傳向細胞本體（產生分級電位）。</li>
+    <li><b>軸突</b> <i class="en-term">axon</i>：通常一條，起點稱<b>軸丘</b> <i class="en-term">axon hillock</i>（動作電位在附近的起始段產生），負責把<b>動作電位傳出</b>；可分出<b>側枝</b> <i class="en-term">axon collaterals</i>，末端分支成許多軸突末梢。</li>
+  </ul>
+  <p>蛋白質在細胞本體製造，要送到可能長達一公尺的軸突末梢，靠沿著微管的<b>軸突運輸</b> <i class="en-term">axonal transport</i>：</p>
+  <ul class="dots">
+    <li><b>順向運輸</b>（細胞本體 → 末梢）：由驅動蛋白 <i class="en-term">kinesin</i> 運送囊泡、粒線體等。</li>
+    <li><b>逆向運輸</b>（末梢 → 細胞本體）：由動力蛋白 <i class="en-term">dynein</i> 運送。某些病毒與毒素（如<b>狂犬病毒、皰疹病毒、破傷風毒素</b>）利用逆向運輸從末梢進入中樞（老師強調）。</li>
+  </ul>
+  <h4>神經元的分類</h4>
+  <div class="tblwrap"><table>
+    <tr><th>依功能</th><th>方向</th><th>位置</th></tr>
+    <tr><td><b>感覺（傳入）神經元</b> sensory / afferent</td><td>把感受器的訊號傳<b>入</b> CNS</td><td>細胞本體在背根神經節等（周邊）</td></tr>
+    <tr><td><b>運動（傳出）神經元</b> motor / efferent</td><td>把 CNS 的命令傳<b>出</b>到動器：體運動（骨骼肌）、自主運動（平滑肌、心肌、腺體）</td><td>細胞本體在 CNS（自主神經節後神經元在神經節）</td></tr>
+    <tr><td><b>聯絡（中間）神經元</b> interneurons / association</td><td>在 CNS 內連接、整合</td><td><b>只在 CNS</b>，數量最多</td></tr>
+  </table></div>
+  <div class="tblwrap"><table>
+    <tr><th>依構造</th><th>特點</th><th>例子</th></tr>
+    <tr><td><b>偽單極</b> pseudounipolar</td><td>一條突起分成兩支，細胞本體在旁邊</td><td><b>感覺神經元</b></td></tr>
+    <tr><td><b>雙極</b> bipolar</td><td>樹突、軸突各一條在兩端</td><td>視網膜、嗅覺上皮</td></tr>
+    <tr><td><b>多極</b> multipolar</td><td>很多樹突、一條軸突，<b>最常見</b></td><td><b>運動神經元</b>、聯絡神經元</td></tr>
+  </table></div>
+  <p>名詞提醒：<b>神經</b> <i class="en-term">nerve</i> 是周邊許多軸突成束；在 CNS 中成束的軸突叫<b>徑</b> <i class="en-term">tract</i>；細胞本體群集在 PNS 叫<b>神經節</b> <i class="en-term">ganglion</i>，在 CNS 叫<b>神經核</b> <i class="en-term">nucleus</i>。</p>
+
+  <h3 id="h3">支持細胞（神經膠細胞）Supporting Cells</h3>
+  <p class="core">膠細胞數量約為神經元的 5 倍、可分裂（腦瘤多源自膠細胞）；PNS：許旺細胞、衛星細胞；CNS：寡突膠細胞、星狀膠細胞、微膠細胞、室管膜細胞。</p>
+  <div class="tblwrap"><table>
+    <tr><th>位置</th><th>膠細胞</th><th>功能</th></tr>
+    <tr><td rowspan="2"><b>PNS</b></td><td><b>許旺細胞</b> Schwann cells</td><td>形成周邊軸突的<b>髓鞘</b>與神經膜；協助周邊神經<b>再生</b></td></tr>
+    <tr><td><b>衛星細胞</b> satellite cells</td><td>包圍神經節中的細胞本體，提供支持</td></tr>
+    <tr><td rowspan="4"><b>CNS</b></td><td><b>寡突膠細胞</b> oligodendrocytes</td><td>形成中樞軸突的<b>髓鞘</b>；一個細胞可包好幾條軸突</td></tr>
+    <tr><td><b>星狀膠細胞</b> astrocytes</td><td>數量最多：誘導並維持<b>血腦障壁</b>、吸收多餘 K⁺ 與神經傳遞物質（如麩胺酸）、提供乳酸等養分給神經元、參與突觸功能、形成疤痕</td></tr>
+    <tr><td><b>微膠細胞</b> microglia</td><td>中樞的<b>吞噬細胞</b>（免疫防禦）</td></tr>
+    <tr><td><b>室管膜細胞</b> ependymal cells</td><td>襯在腦室與中央管；參與<b>腦脊髓液</b>的形成</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">國考考過：</b>周邊神經的支持細胞＝<b>許旺細胞、衛星細胞</b>。成人腦瘤多源自膠細胞，因為膠細胞仍能分裂（老師強調）。</div>
+
+  <h3 id="h4">神經膜與髓鞘 Neurilemma and Myelin Sheath</h3>
+  <p class="core">髓鞘＝膠細胞的細胞膜一層層包住軸突（富含脂質、白色）；周邊：許旺細胞＋外層神經膜（可引導再生）；中樞：寡突膠細胞、無神經膜、再生困難。</p>
+  <ul class="dots">
+    <li><b>周邊</b>：<b>許旺細胞</b>沿著軸突一段一段地把自己的細胞膜纏繞許多圈，形成<b>髓鞘</b> <i class="en-term">myelin sheath</i>；最外層含細胞核與細胞質的部分叫<b>神經膜</b> <i class="en-term">neurilemma</i>。兩段髓鞘之間的空隙叫<b>蘭氏結</b> <i class="en-term">nodes of Ranvier</i>。沒有髓鞘的軸突也被許旺細胞包著（但不纏繞多層）。</li>
+    <li><b>中樞</b>：由<b>寡突膠細胞</b>伸出多條突起包住不同的軸突形成髓鞘，<b>沒有神經膜</b>。</li>
+    <li>有髓鞘的軸突集中處顏色白，稱為<b>白質</b>；神經元細胞本體與樹突集中處稱為<b>灰質</b>。</li>
+  </ul>
+  <h4>神經再生</h4>
+  <p class="core">周邊：許旺細胞＋神經膜形成再生管 → 可再生；中樞：無神經膜、有抑制分子與疤痕 → 難再生。</p>
+  <p>周邊神經的軸突被切斷後，遠端部分會退化，但<b>許旺細胞與神經膜</b>會形成一條<b>再生管</b>，引導軸突以每天約數公釐的速度長回去。中樞神經<b>沒有神經膜</b>，而且寡突膠細胞與星狀膠細胞形成的疤痕會分泌<b>抑制生長的分子</b>，所以脊髓與腦的損傷很難恢復。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>手指的神經是周邊神經，有許旺細胞形成的神經膜引導再生；脊髓是中樞神經，缺乏神經膜，又有抑制生長的分子與疤痕，所以難以再生。</div>
+  <div class="nut"><b class="t">臨床連結：</b><b>多發性硬化症</b>（MS）是免疫系統攻擊中樞的髓鞘；<b>格林-巴利症候群</b>則是周邊髓鞘受損。兩者都使神經傳導變慢或中斷。髓鞘形成需要脂質，嬰兒期的髓鞘化需要足夠的營養（包括脂肪酸）；維生素 B12 缺乏也會造成髓鞘病變（亞急性脊髓合併退化）。</div>
+
+  <h3 id="h5">神經營養因子 Neurotrophins</h3>
+  <p class="core">神經營養因子（NGF、BDNF 等）促進神經元的生長、存活與突觸可塑性。</p>
+  <p><b>神經營養因子</b> <i class="en-term">neurotrophins</i> 是促進神經元生長與存活的蛋白質，例如<b>神經生長因子</b>（NGF）與<b>腦源性神經營養因子</b>（BDNF）。胚胎發育時，得不到足夠神經營養因子的神經元會凋亡；成人腦中它們參與學習記憶與損傷修復。運動能增加 BDNF。</p>
+
+  <h3 id="h6">血腦障壁 Blood-Brain Barrier</h3>
+  <p class="core">腦微血管內皮細胞之間有緊密連接、沒有開孔，加上星狀膠細胞誘導 → 限制物質從血液進入腦；脂溶性物質（O₂、CO₂、酒精、麻醉劑）可通過，葡萄糖靠 GLUT1。</p>
+  <p>腦部的微血管和身體其他部位不同：<b>內皮細胞之間有緊密連接</b>、沒有小孔、很少胞飲作用，而且被星狀膠細胞的足突包圍（星狀膠細胞誘導這些特性）。這形成<b>血腦障壁</b> <i class="en-term">blood-brain barrier</i>，保護腦不受血中毒物、激素與藥物波動的影響。</p>
+  <ul class="dots">
+    <li><b>能通過</b>：脂溶性物質（O₂、CO₂、酒精、尼古丁、麻醉劑、海洛因）。</li>
+    <li><b>需要載體</b>：葡萄糖（GLUT1）、胺基酸等。</li>
+    <li><b>不易通過</b>：大多數水溶性藥物、蛋白質、大部分抗生素。例如帕金森氏症病人缺多巴胺，但多巴胺無法通過血腦障壁，所以給它的前驅物 <b>L-多巴</b>（可經胺基酸載體進入腦）。</li>
+  </ul>
+  <p>新生兒的血腦障壁尚未完全成熟，膽紅素可進入腦部造成<b>核黃疸</b>。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>CNS＝腦＋脊髓；PNS＝腦神經、脊神經、神經節；體神經（骨骼肌）vs 自主神經（交感、副交感）。</li>
+      <li>神經元：細胞本體（尼氏小體）、樹突（接收）、軸突（軸丘起始、傳出）；軸突運輸：順向 kinesin、逆向 dynein（狂犬病毒、破傷風毒素）。</li>
+      <li>功能分類：感覺（傳入）、運動（傳出）、聯絡（只在 CNS）；構造分類：偽單極（感覺）、雙極（視網膜）、多極（運動，最常見）。</li>
+      <li>膠細胞：PNS 許旺、衛星；CNS 寡突、星狀（血腦障壁、清 K⁺ 與麩胺酸）、微膠（吞噬）、室管膜（腦脊髓液）。</li>
+      <li>髓鞘：周邊許旺（有神經膜、可再生）、中樞寡突（無神經膜、難再生）；蘭氏結；白質＝髓鞘、灰質＝細胞本體。</li>
+      <li>血腦障壁：腦微血管緊密連接＋星狀膠細胞；脂溶性可過，葡萄糖靠 GLUT1；L-多巴可過、多巴胺不行。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>中樞／周邊神經系統</td><td>CNS / PNS</td><td>神經節</td><td>ganglion</td></tr>
+      <tr><td>尼氏小體</td><td>Nissl bodies</td><td>軸丘</td><td>axon hillock</td></tr>
+      <tr><td>軸突運輸</td><td>axonal transport</td><td>側枝</td><td>collateral</td></tr>
+      <tr><td>感覺／運動／聯絡神經元</td><td>sensory / motor / interneuron</td><td>偽單極／雙極／多極</td><td>pseudounipolar / bipolar / multipolar</td></tr>
+      <tr><td>星狀膠細胞</td><td>astrocyte</td><td>微膠細胞</td><td>microglia</td></tr>
+      <tr><td>室管膜細胞</td><td>ependymal cell</td><td>神經膜</td><td>neurilemma</td></tr>
+      <tr><td>蘭氏結</td><td>node of Ranvier</td><td>白質／灰質</td><td>white / gray matter</td></tr>
+      <tr><td>神經營養因子</td><td>neurotrophin</td><td>血腦障壁</td><td>blood-brain barrier</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">7.2</span>軸突的電活動</h2>
+  <div class="en">Electrical Activity in Axons</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>電壓閘控離子通道怎麼開關、<b>動作電位</b>的三個階段、<b>全有全無</b>與強度編碼、<b>不反應期</b>，以及動作電位在無髓鞘與有髓鞘軸突上怎麼<b>傳導</b>（跳躍式傳導）。</div><div><span class="lt lt2">為什麼接在 7.1 後面？</span>7.1 認識了「電線」；第 6 章學了靜止膜電位 −70 mV。這一節看膜電位怎麼在 1 毫秒內從 −70 衝到 +30 再回來，並一路傳到軸突末端。</div></div>
+  <div class="oneline">刺激使膜去極化達到閾值時，電壓閘控 Na⁺ 通道打開、Na⁺ 湧入（去極化到約 +30 mV），接著 Na⁺ 通道失活、K⁺ 通道打開、K⁺ 流出（再極化），稍微過頭（過極化）；動作電位全有全無，強度靠頻率表現；髓鞘使它在蘭氏結之間跳躍，傳得更快。</div>
+  <div class="think">牙醫打的局部麻醉藥，為什麼能讓你感覺不到痛？</div>
+
+  <h3 id="h7">分級電位與動作電位</h3>
+  <p class="core">分級電位：大小隨刺激強度而變、會衰減（樹突、細胞本體）；動作電位：達到閾值才產生、大小固定、不衰減地傳到末梢（軸突）。</p>
+  <p>膜電位的變化有兩種：</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>分級電位 graded potential</th><th>動作電位 action potential</th></tr>
+    <tr><td>位置</td><td>樹突、細胞本體（突觸後電位、感受器電位）</td><td>軸突（從起始段開始）</td></tr>
+    <tr><td>大小</td><td>隨刺激強度<b>變化</b></td><td><b>固定</b>（全有全無）</td></tr>
+    <tr><td>方向</td><td>可去極化或過極化</td><td>只有去極化型的固定波形</td></tr>
+    <tr><td>傳播</td><td>距離越遠越小（會<b>衰減</b>）</td><td>一路再生，<b>不衰減</b></td></tr>
+    <tr><td>可加成</td><td>可以</td><td>不行（有不反應期）</td></tr>
+  </table></div>
+
+  <h3 id="h8">離子閘控 Ion Gating in Axons</h3>
+  <p class="core">電壓閘控 Na⁺ 通道：去極化時快速打開、隨即失活；電壓閘控 K⁺ 通道：較慢打開；兩者造成動作電位的上升與下降。</p>
+  <p>軸突膜上有依<b>膜電位</b>開關的<b>電壓閘控通道</b> <i class="en-term">voltage-gated channels</i>：</p>
+  <ul class="dots">
+    <li><b>電壓閘控 Na⁺ 通道</b>：有兩個閘門。去極化到閾值時<b>活化閘</b>迅速打開，Na⁺ 湧入；約 1 毫秒後<b>失活閘</b>關上，通道進入「失活」狀態，要等膜電位回到靜止附近才能恢復。</li>
+    <li><b>電壓閘控 K⁺ 通道</b>：同樣被去極化打開，但<b>比較慢</b>，在 Na⁺ 通道失活時才大開，K⁺ 流出。</li>
+  </ul>
+
+  <h3 id="h9">動作電位 Action Potentials</h3>
+  <p class="core">靜止 −70 → 去極化到閾值（約 −55）→ Na⁺ 湧入，衝到約 +30（去極化／超射）→ Na⁺ 失活、K⁺ 流出（再極化）→ 短暫比靜止更負（後過極化）→ 鈉鉀幫浦長期維持梯度。</p>
+  <figure class="pic"><svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <line x1="60" y1="20" x2="60" y2="270" stroke="#374151" stroke-width="2"/><line x1="60" y1="270" x2="470" y2="270" stroke="#374151" stroke-width="2"/>
+    <g font-size="12" text-anchor="end"><text x="54" y="50">+30</text><text x="54" y="104">0</text><text x="54" y="172">−55</text><text x="54" y="208">−70</text><text x="54" y="240">−85</text></g>
+    <text x="470" y="290" font-size="12" text-anchor="end">時間（約 2–3 毫秒）→</text>
+    <line x1="60" y1="100" x2="470" y2="100" stroke="#e5e7eb"/><line x1="60" y1="168" x2="470" y2="168" stroke="#9ca3af" stroke-dasharray="5 4"/><text x="466" y="162" font-size="12" text-anchor="end" fill="#6b7280">閾值</text>
+    <path d="M60,205 L130,205 C150,205 150,170 165,168 C175,150 180,60 195,46 C210,40 215,60 225,110 C240,190 250,236 275,236 C310,236 330,210 360,206 L470,205" fill="none" stroke="#111827" stroke-width="3.5"/>
+    <rect x="130" y="40" width="65" height="200" fill="#e11d48" opacity=".08"/><rect x="195" y="40" width="70" height="200" fill="#2563eb" opacity=".08"/>
+    <text x="150" y="30" font-size="13" fill="#be123c" font-weight="bold" text-anchor="middle">① 去極化</text>
+    <text x="232" y="30" font-size="13" fill="#1d4ed8" font-weight="bold" text-anchor="middle">② 再極化</text>
+    <text x="310" y="256" font-size="13" fill="#6d28d9" font-weight="bold" text-anchor="middle">③ 後過極化</text>
+    <text x="100" y="196" font-size="11" text-anchor="middle">刺激</text>
+    <g font-size="12">
+      <text x="88" y="130" fill="#be123c">Na⁺ 通道開</text><text x="88" y="146" fill="#be123c">Na⁺ 湧入 ↓</text>
+      <text x="265" y="120" fill="#1d4ed8">Na⁺ 通道失活</text><text x="265" y="136" fill="#1d4ed8">K⁺ 通道開、K⁺ 流出 ↑</text>
+      <text x="330" y="190" fill="#6d28d9">K⁺ 通道關得慢</text></g>
+    <text x="212" y="62" font-size="11" fill="#374151">超射</text>
+  </svg><figcaption>動作電位的波形。上升靠 Na⁺ 流入（膜電位往 E<sub>Na</sub> 衝），下降靠 K⁺ 流出（往 E<sub>K</sub> 拉）——呼應第 6 章「誰的通道開，就靠近誰的平衡電位」。</figcaption></figure>
+  <ol class="steps">
+    <li><b>達到閾值</b>：刺激（例如突觸傳來的 EPSP）使軸突起始段去極化到約 <b>−55 mV</b>的<b>閾值</b> <i class="en-term">threshold</i>。</li>
+    <li><b>去極化</b> <i class="en-term">depolarization</i>：電壓閘控 Na⁺ 通道大量打開，Na⁺ 順著濃度與電位梯度<b>湧入</b>，更多去極化又打開更多 Na⁺ 通道（<b>正回饋</b>），膜電位迅速衝向 E<sub>Na</sub>，達到約 <b>+30 mV</b>（超過 0 的部分叫超射 overshoot）。</li>
+    <li><b>再極化</b> <i class="en-term">repolarization</i>：Na⁺ 通道<b>失活</b>，同時電壓閘控 K⁺ 通道打開，K⁺ <b>流出</b>，膜電位回到負值。</li>
+    <li><b>後過極化</b> <i class="en-term">after-hyperpolarization</i>：K⁺ 通道關得慢，K⁺ 多流出一點，膜電位短暫比靜止時更負（接近 E<sub>K</sub>），之後回到 −70 mV。</li>
+  </ol>
+  <p>一次動作電位真正進出的離子量非常少，不會明顯改變細胞內外濃度；長期的梯度靠<b>鈉鉀幫浦</b>維持。</p>
+  <div class="eg"><b class="t">回答開頭問題：</b>局部麻醉藥（如利多卡因 lidocaine、普魯卡因）會<b>阻斷電壓閘控 Na⁺ 通道</b>，痛覺神經無法產生動作電位，訊號傳不到腦，所以不痛。河豚毒素（TTX）也是阻斷 Na⁺ 通道，劇毒（國考考過「鈉通道阻斷劑」）。</div>
+
+  <h3 id="h10">全有全無定律與強度編碼 All-or-None Law and Coding for Stimulus Intensity</h3>
+  <p class="core">動作電位全有全無：未達閾值不發生，達到閾值就一定是同樣大小；刺激越強 → 頻率越高＋被活化的神經纖維越多（徵召）。</p>
+  <p>刺激未達閾值，就不會產生動作電位；只要達到閾值，產生的動作電位<b>大小都一樣</b>，不會因刺激更強而變大，這叫<b>全有全無定律</b> <i class="en-term">all-or-none law</i>。那神經怎麼表示「很痛」和「有點痛」？</p>
+  <ul class="dots">
+    <li><b>頻率編碼</b>：刺激越強，單位時間內產生的動作電位<b>越多（頻率越高）</b>。</li>
+    <li><b>徵召</b> <i class="en-term">recruitment</i>：刺激越強，被活化的<b>神經纖維數量越多</b>（閾值較高的纖維也被活化）。</li>
+  </ul>
+
+  <h3 id="h11">不反應期 Refractory Periods</h3>
+  <p class="core">絕對不反應期（Na⁺ 通道失活，再強的刺激也無法引發）；相對不反應期（需更強刺激）；確保動作電位單向傳導、不會加成。</p>
+  <ul class="dots">
+    <li><b>絕對不反應期</b> <i class="en-term">absolute refractory period</i>：從動作電位開始到再極化的大部分時間，Na⁺ 通道正處於打開或<b>失活</b>狀態，<b>再強的刺激也無法</b>引發另一個動作電位。</li>
+    <li><b>相對不反應期</b> <i class="en-term">relative refractory period</i>：後過極化期間，部分 Na⁺ 通道已恢復，但膜電位比較負、離閾值較遠，需要<b>比平常更強</b>的刺激才能引發。</li>
+  </ul>
+  <p>不反應期的意義：①動作電位不會加成（每一個都是獨立的）；②限制了最高頻率；③讓動作電位只能<b>往前</b>傳，不會倒流（剛發生過的地方還在不反應期）。</p>
+
+  <h3 id="h12">纜線性質與動作電位的傳導 Cable Properties and Conduction of Action Potentials</h3>
+  <p class="core">無髓鞘：動作電位在每一小段膜上依序再生，慢（約 1 m/s）；有髓鞘：只在蘭氏結再生，跳躍式傳導，快（可達 100 m/s 以上）；軸突越粗越快。</p>
+  <p>軸突像一條漏電的電線（<b>纜線性質</b>）：電流沿著軸突內部傳播時會從膜上漏掉而衰減，所以動作電位必須沿途不斷<b>再生</b>。</p>
+  <figure class="pic"><svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a71" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#dc2626"/></marker></defs>
+    <text x="10" y="22" font-size="14" font-weight="bold" fill="#374151">無髓鞘：一小段一小段依序觸發（慢）</text>
+    <rect x="10" y="40" width="460" height="20" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <g fill="#fca5a5">
+      <rect x="30" y="40" width="16" height="20"/><rect x="60" y="40" width="16" height="20"/><rect x="90" y="40" width="16" height="20"/><rect x="120" y="40" width="16" height="20"/><rect x="150" y="40" width="16" height="20" fill="#dc2626"/></g>
+    <path d="M30,74 C60,90 120,90 158,74" fill="none" stroke="#dc2626" stroke-width="2" marker-end="url(#a71)"/>
+    <text x="10" y="102" font-size="14" font-weight="bold" fill="#374151">有髓鞘：在蘭氏結之間跳躍（快）</text>
+    <rect x="10" y="150" width="460" height="14" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <g fill="#ede9fe" stroke="#7c3aed" stroke-width="2"><rect x="20" y="140" width="90" height="34" rx="14"/><rect x="128" y="140" width="90" height="34" rx="14"/><rect x="236" y="140" width="90" height="34" rx="14"/><rect x="344" y="140" width="90" height="34" rx="14"/></g>
+    <g fill="#dc2626"><rect x="112" y="150" width="14" height="14"/><rect x="220" y="150" width="14" height="14"/><rect x="328" y="150" width="14" height="14"/></g>
+    <path d="M119,140 C150,118 190,118 225,140" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a71)"/>
+    <path d="M227,140 C258,118 298,118 333,140" fill="none" stroke="#dc2626" stroke-width="2.5" marker-end="url(#a71)"/>
+    <text x="230" y="200" font-size="13" text-anchor="middle">紅色＝蘭氏結（電壓閘控 Na⁺ 通道集中在這裡）</text>
+    <text x="230" y="216" font-size="12" text-anchor="middle" fill="#6d28d9">紫色＝髓鞘（絕緣，電流不會漏出）</text>
+  </svg><figcaption>髓鞘像電線的絕緣皮：電流在髓鞘下快速傳到下一個蘭氏結，只在結上再生動作電位，所以快得多也省能量。</figcaption></figure>
+  <ul class="dots">
+    <li><b>無髓鞘軸突</b>：動作電位使相鄰一小段膜去極化到閾值，那一段再產生動作電位，如此一段接一段<b>依序再生</b>，像骨牌一樣。速度慢（約 1 m/s）。</li>
+    <li><b>有髓鞘軸突</b>：髓鞘絕緣，電流不會從髓鞘處漏出；Na⁺ 通道集中在<b>蘭氏結</b>，動作電位只在結上產生，看起來像從一個結<b>跳</b>到下一個結，稱為<b>跳躍式傳導</b> <i class="en-term">saltatory conduction</i>。速度可達 100 m/s 以上，而且只有結上的離子進出，<b>較省能量</b>（幫浦工作少）。</li>
+    <li><b>軸突直徑</b>：越粗，內部電阻越小，傳得越快。</li>
+  </ul>
+  <div class="eg"><b class="t">例子：</b>手被燙到時，「尖銳痛」由有髓鞘的 Aδ 纖維快速傳送，緊接著的「鈍痛、灼熱痛」由無髓鞘的 C 纖維較慢傳送，所以你會先感到刺痛、再感到持續的灼痛（第 10 章）。</div>
+
+  <details class="stop"><summary>想一想：如果細胞外 Na⁺ 濃度降低很多（嚴重低血鈉），動作電位會怎樣？</summary>
+    <div>Na⁺ 往內衝的驅動力變小，去極化變得較慢、超射較低，神經與肌肉的興奮性下降；臨床上嚴重低血鈉會出現意識混亂、抽搐、昏迷（也與腦細胞水腫有關）。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>分級電位：大小可變、會衰減（樹突、細胞本體）；動作電位：全有全無、不衰減（軸突）。</li>
+      <li>電壓閘控 Na⁺ 通道快開快失活；K⁺ 通道慢開。</li>
+      <li>動作電位：閾值約 −55 mV → Na⁺ 湧入去極化（正回饋）至 +30 mV → Na⁺ 失活＋K⁺ 流出再極化 → 後過極化。</li>
+      <li>局部麻醉藥、河豚毒素阻斷 Na⁺ 通道。</li>
+      <li>強度編碼：頻率＋徵召。不反應期：絕對（Na⁺ 失活）、相對（需較強刺激）；保證單向、不加成。</li>
+      <li>傳導：無髓鞘依序再生（慢）；有髓鞘跳躍式傳導（快、省能）；直徑越大越快。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>分級電位</td><td>graded potential</td><td>動作電位</td><td>action potential</td></tr>
+      <tr><td>電壓閘控通道</td><td>voltage-gated channel</td><td>閾值</td><td>threshold</td></tr>
+      <tr><td>去極化／再極化</td><td>depolarization / repolarization</td><td>超射</td><td>overshoot</td></tr>
+      <tr><td>後過極化</td><td>after-hyperpolarization</td><td>全有全無定律</td><td>all-or-none law</td></tr>
+      <tr><td>徵召</td><td>recruitment</td><td>絕對／相對不反應期</td><td>absolute / relative refractory period</td></tr>
+      <tr><td>跳躍式傳導</td><td>saltatory conduction</td><td>纜線性質</td><td>cable properties</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">7.3</span>突觸</h2>
+  <div class="en">The Synapse</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>突觸</b>的兩種形式：<b>電突觸</b>（間隙接合）與<b>化學突觸</b>；化學突觸怎麼靠 <b>Ca²⁺ 觸發胞吐</b>釋放神經傳遞物質，以及突觸後細胞怎麼反應。</div><div><span class="lt lt2">為什麼接在 7.2 後面？</span>動作電位到了軸突末梢，要「跨過去」影響下一個細胞。突觸是神經系統做出判斷、學習、被藥物影響的地方。</div></div>
+  <div class="oneline">化學突觸：動作電位到末梢 → 電壓閘控 Ca²⁺ 通道開 → Ca²⁺ 進入 → 突觸小泡胞吐釋放神經傳遞物質 → 跨過突觸間隙結合突觸後受體 → 產生 EPSP 或 IPSP → 神經傳遞物質被分解或回收而停止作用。</div>
+  <div class="think">電訊號為什麼不直接傳過去就好，還要「換成化學物質」再換回電訊號？</div>
+
+  <h3 id="h13">突觸的種類</h3>
+  <p class="core">突觸＝神經元與另一細胞的連接點；突觸前→突觸後；依位置分軸突—樹突、軸突—細胞本體、軸突—軸突；神經肌肉接合處也是突觸。</p>
+  <p><b>突觸</b> <i class="en-term">synapse</i> 是神經元和另一個細胞（神經元、肌肉或腺體）的功能連接處。送出訊號的是<b>突觸前神經元</b>，接收的是<b>突觸後細胞</b>。神經與骨骼肌的突觸叫<b>神經肌肉接合處</b> <i class="en-term">neuromuscular junction</i>。</p>
+
+  <h3 id="h14">電突觸：間隙接合 Electrical Synapses: Gap Junctions</h3>
+  <p class="core">電突觸以間隙接合直接讓離子流過 → 傳遞極快、雙向、使細胞同步（心肌、平滑肌、部分腦區）。</p>
+  <p>相鄰細胞以<b>間隙接合</b>（連接蛋白形成的通道）直接相連，離子電流直接流到下一個細胞，<b>沒有延遲</b>、可以雙向。常見於<b>心肌</b>與<b>單一單元平滑肌</b>，使整群細胞同步收縮（第 12、13 章），也存在於腦中某些需要同步活動的區域。</p>
+
+  <h3 id="h15">化學突觸 Chemical Synapses</h3>
+  <p class="core">突觸前末梢有突觸小泡；突觸間隙約 20–40 nm；Ca²⁺ 進入觸發胞吐；神經傳遞物質與突觸後受體結合，打開或關閉離子通道。</p>
+  <figure class="pic"><svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a72" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <path d="M140,10 L140,90 Q60,110 60,170 Q60,220 140,225 L340,225 Q420,220 420,170 Q420,110 340,90 L340,10 Z" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/>
+    <text x="240" y="30" font-size="14" text-anchor="middle" font-weight="bold" fill="#92400e">突觸前末梢</text>
+    <path d="M240,40 L240,70" stroke="#dc2626" stroke-width="3" marker-end="url(#a72)"/><text x="250" y="60" font-size="12" fill="#b91c1c">① 動作電位到達</text>
+    <g fill="#fff" stroke="#7c3aed" stroke-width="2"><circle cx="150" cy="150" r="16"/><circle cx="200" cy="120" r="16"/><circle cx="300" cy="125" r="16"/><circle cx="340" cy="160" r="16"/><circle cx="250" cy="160" r="16"/></g>
+    <g fill="#8b5cf6"><circle cx="146" cy="146" r="3"/><circle cx="154" cy="154" r="3"/><circle cx="196" cy="116" r="3"/><circle cx="204" cy="124" r="3"/><circle cx="296" cy="121" r="3"/><circle cx="304" cy="129" r="3"/><circle cx="336" cy="156" r="3"/><circle cx="344" cy="164" r="3"/><circle cx="246" cy="156" r="3"/><circle cx="254" cy="164" r="3"/></g>
+    <text x="250" y="104" font-size="12" text-anchor="middle" fill="#6d28d9">突觸小泡</text>
+    <rect x="95" y="210" width="24" height="18" fill="#22c55e"/><text x="70" y="250" font-size="12" text-anchor="middle" fill="#15803d">② Ca²⁺ 通道</text>
+    <g fill="#16a34a"><circle cx="107" cy="200" r="4"/><circle cx="112" cy="190" r="4"/></g>
+    <path d="M200,225 Q220,240 240,225" fill="#fff" stroke="#7c3aed" stroke-width="2"/><g fill="#8b5cf6"><circle cx="215" cy="252" r="3.5"/><circle cx="230" cy="258" r="3.5"/><circle cx="222" cy="266" r="3.5"/><circle cx="240" cy="250" r="3.5"/><circle cx="210" cy="262" r="3.5"/></g>
+    <text x="270" y="256" font-size="12" fill="#6d28d9">③ 胞吐釋放傳遞物質</text>
+    <text x="20" y="262" font-size="11" fill="#6b7280">突觸間隙</text>
+    <rect x="40" y="275" width="400" height="50" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2.5"/>
+    <g fill="#f59e0b" stroke="#b45309"><rect x="185" y="268" width="14" height="18" rx="3"/><rect x="225" y="268" width="14" height="18" rx="3"/><rect x="265" y="268" width="14" height="18" rx="3"/></g>
+    <text x="240" y="312" font-size="13" text-anchor="middle" fill="#1e3a8a">④ 突觸後膜的受體 → 離子通道開 → EPSP 或 IPSP</text>
+  </svg><figcaption>化學突觸的四步驟：電（動作電位）→ 化學（Ca²⁺ 與神經傳遞物質）→ 電（突觸後電位）。</figcaption></figure>
+  <ol class="steps">
+    <li>動作電位傳到<b>突觸前末梢</b>（終端鈕）。</li>
+    <li>去極化打開末梢膜上的<b>電壓閘控 Ca²⁺ 通道</b>，Ca²⁺ 從細胞外流入。</li>
+    <li>Ca²⁺ 觸發<b>突觸小泡</b> <i class="en-term">synaptic vesicles</i> 與膜融合（靠 SNARE 蛋白），以<b>胞吐</b>方式把<b>神經傳遞物質</b>釋放到<b>突觸間隙</b> <i class="en-term">synaptic cleft</i>。</li>
+    <li>神經傳遞物質擴散過間隙，與<b>突觸後膜</b>上的<b>受體</b>結合，直接或間接打開（或關閉）離子通道，產生<b>突觸後電位</b>：
+      <ul>
+        <li><b>興奮性突觸後電位（EPSP）</b>：去極化（通常 Na⁺ 流入），使突觸後神經元較容易達到閾值。</li>
+        <li><b>抑制性突觸後電位（IPSP）</b>：過極化（K⁺ 流出或 Cl⁻ 流入），使其較難達到閾值。</li>
+      </ul>
+    </li>
+    <li>訊號必須<b>快速結束</b>：神經傳遞物質被酵素<b>分解</b>（如乙醯膽鹼酯酶）、被突觸前末梢<b>回收</b>（再攝取）、或<b>擴散</b>離開。</li>
+  </ol>
+  <div class="eg"><b class="t">例子：</b><b>肉毒桿菌毒素</b>破壞 SNARE 蛋白，使乙醯膽鹼無法釋放，造成肌肉麻痺（醫美用來減少皺紋）；<b>破傷風毒素</b>則阻斷脊髓中抑制性神經傳遞物質的釋放，使肌肉持續痙攣。</div>
+  <div class="eg"><b class="t">回答開頭問題：</b>化學突觸雖然慢一點（約 0.5–1 毫秒的突觸延遲），但能<b>單向傳遞</b>、<b>放大或抑制</b>訊號、<b>整合</b>許多輸入，也能隨經驗<b>改變強度</b>（學習記憶），還是藥物調整神經功能的作用點。這些都是電突觸做不到的。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>突觸＝神經元與另一細胞的連接；神經肌肉接合處是神經與骨骼肌的突觸。</li>
+      <li>電突觸：間隙接合、快、雙向、同步（心肌、單一單元平滑肌）。</li>
+      <li>化學突觸：動作電位 → 電壓閘控 Ca²⁺ 通道開 → Ca²⁺ 觸發突觸小泡胞吐 → 神經傳遞物質結合突觸後受體 → EPSP（去極化）或 IPSP（過極化）→ 分解、回收、擴散而終止。</li>
+      <li>肉毒桿菌毒素阻斷乙醯膽鹼釋放（麻痺）；破傷風毒素阻斷抑制性傳遞物質釋放（痙攣）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>突觸</td><td>synapse</td><td>突觸前／突觸後</td><td>presynaptic / postsynaptic</td></tr>
+      <tr><td>神經肌肉接合處</td><td>neuromuscular junction</td><td>電突觸／化學突觸</td><td>electrical / chemical synapse</td></tr>
+      <tr><td>突觸小泡</td><td>synaptic vesicle</td><td>突觸間隙</td><td>synaptic cleft</td></tr>
+      <tr><td>興奮性／抑制性突觸後電位</td><td>EPSP / IPSP</td><td>再攝取</td><td>reuptake</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">7.4</span>乙醯膽鹼</h2>
+  <div class="en">Acetylcholine as a Neurotransmitter</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>乙醯膽鹼</b>（ACh）的兩類受體——<b>菸鹼型</b>（離子通道）與<b>毒蕈鹼型</b>（G 蛋白）——在哪裡、作用有何不同；<b>乙醯膽鹼酯酶</b>怎麼終止訊號；以及 ACh 在 PNS 與 CNS 的角色。</div><div><span class="lt lt2">為什麼接在 7.3 後面？</span>7.3 講突觸的一般原理；ACh 是第一個被發現、也是最清楚的神經傳遞物質，用它當例子，可以把「受體類型決定反應」這個觀念學清楚，第 9 章自主神經也直接用到。</div></div>
+  <div class="oneline">乙醯膽鹼作用在兩種受體：菸鹼型是配體閘控離子通道（骨骼肌、自主神經節），快速去極化；毒蕈鹼型經 G 蛋白（副交感的標的器官），可興奮或抑制；乙醯膽鹼酯酶在突觸間隙迅速分解 ACh。</div>
+  <div class="think">為什麼同樣是乙醯膽鹼，讓骨骼肌收縮，卻讓心跳變慢？</div>
+
+  <h3 id="h16">ACh 的受體</h3>
+  <p class="core">菸鹼型（尼古丁可活化；離子通道；骨骼肌、自主神經節；箭毒阻斷）vs 毒蕈鹼型（毒蕈鹼可活化；G 蛋白；副交感標的器官；阿托平阻斷）。</p>
+  <p><b>乙醯膽鹼</b> <i class="en-term">acetylcholine, ACh</i> 由<b>膽鹼</b>與乙醯輔酶 A 合成。它的受體依能被哪種植物毒素活化而命名：</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>菸鹼型受體 nicotinic</th><th>毒蕈鹼型受體 muscarinic</th></tr>
+    <tr><td>可被何者活化</td><td>尼古丁（菸草）</td><td>毒蕈鹼（某些毒菇）</td></tr>
+    <tr><td>受體類型</td><td><b>配體閘控離子通道</b>：ACh 結合後通道直接打開，Na⁺ 流入（較多）、K⁺ 流出 → 去極化</td><td><b>G 蛋白偶聯受體</b>：經 G 蛋白打開或關閉通道、改變酵素</td></tr>
+    <tr><td>速度</td><td>快</td><td>較慢、較持久</td></tr>
+    <tr><td>效果</td><td><b>興奮</b>（EPSP）</td><td>依組織可<b>興奮或抑制</b></td></tr>
+    <tr><td>位置</td><td><b>骨骼肌</b>（神經肌肉接合處）、<b>所有自主神經節</b>、部分腦區</td><td>副交感神經的<b>標的器官</b>（心、平滑肌、腺體）、腦</td></tr>
+    <tr><td>阻斷劑</td><td><b>箭毒</b>（curare，使骨骼肌麻痺）、手術用肌肉鬆弛劑</td><td><b>阿托平</b>（atropine，使瞳孔放大、心跳加快、口乾）</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>骨骼肌上是<b>菸鹼型</b>受體（離子通道 → Na⁺ 流入 → 去極化 → 收縮）；心臟的節律細胞上是<b>毒蕈鹼型</b>受體，經 G 蛋白打開 <b>K⁺ 通道</b>，K⁺ 流出使細胞過極化 → <b>心跳變慢</b>（第 6 章 G 蛋白的例子）。同一種神經傳遞物質，效果取決於<b>受體的種類</b>。</div>
+
+  <h3 id="h17">乙醯膽鹼酯酶 Acetylcholinesterase</h3>
+  <p class="core">AChE 在突觸間隙把 ACh 分解成乙酸與膽鹼（膽鹼被回收再利用）；抑制 AChE → ACh 作用延長（有機磷農藥、神經毒氣中毒；重症肌無力與阿茲海默症的治療）。</p>
+  <p><b>乙醯膽鹼酯酶</b> <i class="en-term">acetylcholinesterase, AChE</i> 位在突觸間隙與突觸後膜上，能在極短時間內把 ACh 水解成<b>乙酸</b>與<b>膽鹼</b>，終止訊號；膽鹼被突觸前末梢回收，再合成新的 ACh。</p>
+  <ul class="dots">
+    <li><b>抑制 AChE 的毒物</b>：<b>有機磷農藥</b>、沙林等神經毒氣 → ACh 堆積 → 肌肉痙攣後麻痺（含呼吸肌）、大量流涎、流淚、腹瀉、瞳孔縮小，可致命；解毒劑之一是<b>阿托平</b>（阻斷毒蕈鹼型受體）。</li>
+    <li><b>可逆的 AChE 抑制劑當藥物</b>：治療<b>重症肌無力</b>（自體抗體破壞骨骼肌的菸鹼型受體）；治療<b>阿茲海默症</b>（腦中膽鹼性神經元退化）。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>合成 ACh 需要<b>膽鹼</b> <i class="en-term">choline</i>，可來自飲食（蛋黃、肝臟、黃豆）或體內合成；膽鹼也是卵磷脂與甲基供給者，對胎兒腦發育很重要，國人膳食營養素參考攝取量有列出建議量。</div>
+
+  <h3 id="h18">ACh 在周邊與中樞神經系統 ACh in the PNS and CNS</h3>
+  <p class="core">PNS：體運動神經 → 骨骼肌（菸鹼型）；所有自主神經節前神經元；副交感節後神經元（毒蕈鹼型）。CNS：記憶、學習、清醒（阿茲海默症時減少）。</p>
+  <h4>神經肌肉接合處</h4>
+  <p class="core">運動神經釋放 ACh → 骨骼肌菸鹼型受體 → 終板電位 → 肌纖維動作電位 → 收縮。</p>
+  <p>體運動神經元的末梢釋放 ACh，結合骨骼肌細胞膜（<b>運動終板</b> <i class="en-term">motor end plate</i>）上的菸鹼型受體，產生大的去極化，稱為<b>終板電位</b> <i class="en-term">end-plate potential</i>，一定會使肌纖維產生動作電位而收縮（第 12 章）。</p>
+  <h4>自主神經</h4>
+  <p class="core">所有自主節前神經元釋放 ACh（節後菸鹼型）；副交感節後也釋放 ACh（標的器官毒蕈鹼型）。</p>
+  <p>所有自主神經的<b>節前</b>神經元都釋放 ACh（作用在節後神經元的菸鹼型受體）；<b>副交感</b>的節後神經元也釋放 ACh（作用在標的器官的毒蕈鹼型受體）（第 9 章）。</p>
+  <h4>中樞神經</h4>
+  <p class="core">膽鹼性神經元參與學習、記憶、注意力；阿茲海默症時退化。</p>
+  <p>腦中的膽鹼性神經元參與<b>學習、記憶、注意力與清醒</b>。阿茲海默症時，基底前腦的膽鹼性神經元大量退化（第 8 章）。</p>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>ACh 由膽鹼＋乙醯輔酶 A 合成。</li>
+      <li>菸鹼型：離子通道、快、興奮；骨骼肌、自主神經節；箭毒阻斷。</li>
+      <li>毒蕈鹼型：G 蛋白、可興奮或抑制；副交感標的器官（心跳變慢＝開 K⁺ 通道）；阿托平阻斷。</li>
+      <li>AChE 分解 ACh；抑制劑：有機磷、神經毒氣（中毒）；藥物治療重症肌無力、阿茲海默症。</li>
+      <li>運動終板 → 終板電位 → 肌肉動作電位。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>乙醯膽鹼</td><td>acetylcholine (ACh)</td><td>膽鹼</td><td>choline</td></tr>
+      <tr><td>菸鹼型受體</td><td>nicotinic receptor</td><td>毒蕈鹼型受體</td><td>muscarinic receptor</td></tr>
+      <tr><td>配體閘控通道</td><td>ligand-gated channel</td><td>乙醯膽鹼酯酶</td><td>acetylcholinesterase</td></tr>
+      <tr><td>箭毒／阿托平</td><td>curare / atropine</td><td>重症肌無力</td><td>myasthenia gravis</td></tr>
+      <tr><td>運動終板</td><td>motor end plate</td><td>終板電位</td><td>end-plate potential</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.5 ============ -->
+<section class="sec det" id="s5">
+  <h2><span class="no">7.5</span>單胺類神經傳遞物質</h2>
+  <div class="en">Monoamines as Neurotransmitters</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span><b>單胺類</b>——<b>血清素</b>、<b>多巴胺</b>、<b>正腎上腺素</b>——由哪個胺基酸做成、怎麼被終止（再攝取、MAO、COMT）、各參與什麼功能，以及相關藥物與疾病。</div><div><span class="lt lt2">為什麼接在 7.4 後面？</span>ACh 之後，最重要的一群神經傳遞物質就是單胺類：它們調節情緒、動機、睡眠、運動，是許多精神科藥物的作用點，也和營養（胺基酸前驅物、維生素 B6）直接相關。</div></div>
+  <div class="oneline">單胺類由胺基酸做成：色胺酸 → 血清素；酪胺酸 → 多巴胺 → 正腎上腺素（→ 腎上腺素）；主要靠突觸前再攝取終止，再被 MAO、COMT 分解；多經 G 蛋白與 cAMP 作用。</div>
+  <div class="think">為什麼服用某些抗憂鬱藥（MAO 抑制劑）的人，不能吃大量起司和醃漬發酵食物？</div>
+
+  <h3 id="h19">單胺類的合成與終止</h3>
+  <p class="core">兒茶酚胺＝多巴胺、正腎上腺素、腎上腺素（來自酪胺酸）；血清素來自色胺酸；合成需維生素 B6（脫羧酶）；終止：再攝取，再由 MAO、COMT 分解。</p>
+  <figure class="pic"><svg viewBox="0 0 480 230" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <defs><marker id="a73" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M0,0 L12,6 L0,12 z" fill="#374151"/></marker></defs>
+    <g font-size="13" text-anchor="middle" font-weight="bold">
+      <rect x="10" y="30" width="90" height="34" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="55" y="52">苯丙胺酸</text>
+      <rect x="128" y="30" width="80" height="34" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="168" y="52">酪胺酸</text>
+      <rect x="236" y="30" width="80" height="34" rx="10" fill="#fff" stroke="#6b7280" stroke-width="2"/><text x="276" y="52">L-多巴</text>
+      <rect x="344" y="30" width="80" height="34" rx="10" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><text x="384" y="52">多巴胺</text>
+      <rect x="320" y="100" width="128" height="34" rx="10" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/><text x="384" y="122">正腎上腺素</text>
+      <rect x="320" y="166" width="128" height="34" rx="10" fill="#fce7f3" stroke="#db2777" stroke-width="2"/><text x="384" y="188">腎上腺素</text>
+      <rect x="10" y="166" width="90" height="34" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="55" y="188">色胺酸</text>
+      <rect x="140" y="166" width="90" height="34" rx="10" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/><text x="185" y="188">血清素</text></g>
+    <g stroke="#374151" stroke-width="2.2"><path d="M100,47 L124,47" marker-end="url(#a73)"/><path d="M208,47 L232,47" marker-end="url(#a73)"/><path d="M316,47 L340,47" marker-end="url(#a73)"/><path d="M384,64 L384,96" marker-end="url(#a73)"/><path d="M384,134 L384,162" marker-end="url(#a73)"/><path d="M100,183 L136,183" marker-end="url(#a73)"/></g>
+    <text x="326" y="88" font-size="11" fill="#6b7280">需維生素 C</text>
+    <text x="300" y="155" font-size="11" fill="#6b7280" text-anchor="end">（主要在腎上腺髓質）</text>
+    <text x="232" y="80" font-size="11" fill="#6b7280" text-anchor="middle">需維生素 B6</text>
+    <text x="118" y="162" font-size="11" fill="#6b7280" text-anchor="middle">B6</text>
+    <rect x="10" y="92" width="290" height="42" rx="8" fill="#f8fafc" stroke="#cbd5e1"/>
+    <text x="155" y="110" font-size="12" text-anchor="middle">藍、紅、粉＝<tspan font-weight="bold">兒茶酚胺</tspan>（來自酪胺酸）</text>
+    <text x="155" y="126" font-size="12" text-anchor="middle">綠＝血清素（來自色胺酸）</text>
+    <text x="240" y="222" font-size="12" text-anchor="middle" fill="#374151">苯酮尿症缺「苯丙胺酸 → 酪胺酸」這一步</text>
+  </svg><figcaption>單胺類的合成路線：兩個胺基酸、一條主線。營養素（B6、維生素 C、胺基酸前驅物）直接參與。</figcaption></figure>
+  <ul class="dots">
+    <li><b>兒茶酚胺</b> <i class="en-term">catecholamines</i>：<b>多巴胺</b>、<b>正腎上腺素</b>、<b>腎上腺素</b>，都由<b>酪胺酸</b>（可由苯丙胺酸轉來）合成；「酪胺酸 → L-多巴」由酪胺酸羥化酶催化（速率限制步驟），「L-多巴 → 多巴胺」需維生素 <b>B6</b>，「多巴胺 → 正腎上腺素」需維生素 <b>C</b>。</li>
+    <li><b>血清素</b> <i class="en-term">serotonin, 5-HT</i>：由<b>色胺酸</b>合成（也需 B6）；在松果腺可再轉成<b>褪黑激素</b>。</li>
+    <li><b>終止</b>：主要被突觸前末梢<b>再攝取</b> <i class="en-term">reuptake</i>，回到末梢後被<b>單胺氧化酶</b> <i class="en-term">monoamine oxidase, MAO</i> 分解；兒茶酚胺也可被<b>兒茶酚-O-甲基轉移酶</b>（COMT）分解。</li>
+    <li>作用機制：大多數單胺受體是 <b>G 蛋白偶聯受體</b>，常經 cAMP 等第二傳訊者作用（血清素 5-HT₃ 受體例外，是離子通道）。</li>
+  </ul>
+  <div class="nut"><b class="t">回答開頭問題（老師強調）：</b><b>酪胺</b>（tyramine）存在熟成起司、醃漬與發酵食物、紅酒、煙燻肉品中，會促使交感神經末梢釋放正腎上腺素。平常它在腸道與肝臟被 <b>MAO</b> 分解；服用 <b>MAO 抑制劑</b>的人無法分解酪胺，大量吃進後會使正腎上腺素大量釋放，造成<b>高血壓危象</b>（劇烈頭痛、血壓暴升）。所以這類病人需要限制高酪胺食物——這是膳食療養中藥物與食物交互作用的經典例子。</div>
+
+  <h3 id="h20">血清素 Serotonin</h3>
+  <p class="core">血清素：情緒、睡眠、食慾、體溫；SSRI（如百憂解）抑制再攝取治療憂鬱症；腸道中的血清素最多。</p>
+  <p>腦中的血清素神經元集中在腦幹的<b>中縫核</b>，投射到全腦，參與調節<b>情緒、睡眠、食慾、體溫、痛覺</b>。</p>
+  <ul class="dots">
+    <li><b>選擇性血清素再攝取抑制劑（SSRI）</b>，如百憂解（fluoxetine），阻止血清素被回收，延長它在突觸的作用，用於治療<b>憂鬱症</b>與焦慮。</li>
+    <li>身體約 90% 的血清素在<b>腸道</b>（腸嗜鉻細胞），調節腸道蠕動；血小板也攜帶血清素，參與血管收縮。</li>
+    <li>LSD 等迷幻藥作用在血清素受體。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>色胺酸是必需胺基酸，也是菸鹼酸的前驅物；高醣餐後胰島素使其他大型中性胺基酸進入肌肉，色胺酸相對較容易進入腦部，這是「吃碳水化合物會想睡」說法的生理依據之一。</div>
+
+  <h3 id="h21">多巴胺 Dopamine</h3>
+  <p class="core">黑質紋狀體路徑（運動控制，退化 → 帕金森氏症，用 L-多巴治療）；中腦邊緣路徑（獎賞、動機、成癮；過度活躍與思覺失調有關）。</p>
+  <p>腦中的多巴胺神經元主要在中腦，形成兩條重要路徑：</p>
+  <div class="tblwrap"><table>
+    <tr><th>路徑</th><th>功能</th><th>相關疾病與藥物</th></tr>
+    <tr><td><b>黑質紋狀體路徑</b><br>中腦黑質 → 基底核的紋狀體</td><td><b>運動控制</b>：啟動與協調動作</td><td><b>帕金森氏症</b>：黑質多巴胺神經元退化 → 靜止型顫抖、僵硬、動作遲緩；治療用 <b>L-多巴</b>（可通過血腦障壁，在腦中轉成多巴胺）</td></tr>
+    <tr><td><b>中腦邊緣路徑</b><br>腹側被蓋區 → 伏隔核等邊緣系統</td><td><b>獎賞、動機、愉悅</b></td><td><b>成癮</b>：古柯鹼、安非他命、尼古丁、酒精都增加這條路徑的多巴胺；<b>思覺失調症</b>與多巴胺過度活躍有關，抗精神病藥阻斷多巴胺受體</td></tr>
+  </table></div>
+  <p>古柯鹼的作用是<b>阻斷多巴胺（及正腎上腺素、血清素）的再攝取</b>，使它們停留在突觸間隙。多巴胺也是下視丘的激素，能抑制腦垂腺分泌泌乳素（第 11 章）。</p>
+
+  <h3 id="h22">正腎上腺素 Norepinephrine</h3>
+  <p class="core">正腎上腺素：交感神經節後的神經傳遞物質；腦中藍斑核 → 清醒、注意力、警覺；作用在 α、β 腎上腺素性受體。</p>
+  <p><b>正腎上腺素</b> <i class="en-term">norepinephrine（noradrenaline）</i>：</p>
+  <ul class="dots">
+    <li>在 <b>PNS</b>：是<b>交感神經節後神經元</b>的神經傳遞物質，作用在標的器官的 <b>α 與 β 腎上腺素性受體</b>（第 9 章）。</li>
+    <li>在 <b>CNS</b>：腦幹<b>藍斑核</b>的神經元投射到全腦，參與<b>清醒、注意力、警覺</b>。安非他命促進其釋放；部分抗憂鬱藥（如 SNRI）抑制其再攝取。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>兒茶酚胺（多巴胺、正腎上腺素、腎上腺素）← 酪胺酸；血清素 ← 色胺酸；合成需 B6，正腎上腺素需維生素 C。</li>
+      <li>終止：再攝取 → MAO（及 COMT）分解；多經 G 蛋白作用。</li>
+      <li>MAO 抑制劑＋高酪胺食物（熟成起司、發酵醃漬、紅酒）→ 高血壓危象。</li>
+      <li>血清素：情緒、睡眠、食慾；SSRI 治療憂鬱；體內 90% 在腸道。</li>
+      <li>多巴胺：黑質紋狀體（運動，退化 → 帕金森氏症，用 L-多巴）；中腦邊緣（獎賞、成癮；過度 → 思覺失調）；古柯鹼阻斷再攝取。</li>
+      <li>正腎上腺素：交感節後神經傳遞物質；腦中藍斑核 → 清醒、警覺。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>單胺類</td><td>monoamines</td><td>兒茶酚胺</td><td>catecholamines</td></tr>
+      <tr><td>血清素</td><td>serotonin (5-HT)</td><td>多巴胺</td><td>dopamine</td></tr>
+      <tr><td>正腎上腺素</td><td>norepinephrine</td><td>單胺氧化酶</td><td>monoamine oxidase (MAO)</td></tr>
+      <tr><td>酪胺</td><td>tyramine</td><td>再攝取抑制劑</td><td>reuptake inhibitor (SSRI)</td></tr>
+      <tr><td>黑質紋狀體／中腦邊緣路徑</td><td>nigrostriatal / mesolimbic pathway</td><td>帕金森氏症</td><td>Parkinson's disease</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.6 ============ -->
+<section class="sec det" id="s6">
+  <h2><span class="no">7.6</span>其他神經傳遞物質</h2>
+  <div class="en">Other Neurotransmitters</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>其他類型的神經傳遞物質：<b>胺基酸類</b>（麩胺酸、GABA、甘胺酸）、<b>胜肽類</b>（P 物質、內生性鴉片、神經胜肽 Y）、<b>內生性大麻素</b>、<b>氣體</b>（NO、CO、H₂S）、<b>嘌呤類</b>（ATP、腺苷）。</div><div><span class="lt lt2">為什麼接在 7.5 後面？</span>腦中最多的興奮與抑制訊號其實來自胺基酸類；而胜肽、氣體等「非典型」傳遞物質則調節痛覺、食慾、血管。了解它們，7.7 的「興奮與抑制如何加總」才完整。</div></div>
+  <div class="oneline">麩胺酸是 CNS 主要的興奮性傳遞物質；GABA（腦）與甘胺酸（脊髓）是主要的抑制性傳遞物質；胜肽類調節痛覺與食慾；NO 等氣體直接擴散作用；ATP 常與其他傳遞物質一起釋放。</div>
+  <div class="think">為什麼鎮靜安眠藥和酒精一起使用非常危險？</div>
+
+  <h3 id="h23">胺基酸類 Amino Acids as Neurotransmitters</h3>
+  <p class="core">興奮性：麩胺酸、天門冬胺酸（AMPA、NMDA 受體，學習記憶；過量 → 興奮毒性）；抑制性：GABA（腦）、甘胺酸（脊髓），打開 Cl⁻ 通道 → 過極化。</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>傳遞物質</th><th>受體與作用</th><th>臨床</th></tr>
+    <tr><td rowspan="1"><b>興奮性</b></td><td><b>麩胺酸</b>（CNS 最主要）、天門冬胺酸</td><td>AMPA、NMDA 等離子通道型受體 → Na⁺（及 Ca²⁺）流入 → EPSP；NMDA 受體與<b>學習記憶</b>（LTP）有關</td><td>中風時麩胺酸大量釋放、Ca²⁺ 大量湧入 → 神經元死亡（<b>興奮毒性</b>）；星狀膠細胞負責清除麩胺酸</td></tr>
+    <tr><td rowspan="2"><b>抑制性</b></td><td><b>GABA</b>（γ-胺基丁酸；腦中最主要）</td><td>GABA<sub>A</sub> 受體為 <b>Cl⁻ 通道</b> → Cl⁻ 流入 → 過極化（IPSP）</td><td><b>苯二氮平類</b>（安眠鎮靜藥）、巴比妥類、<b>酒精</b>都增強 GABA<sub>A</sub> 作用；GABA 太少 → 癲癇</td></tr>
+    <tr><td><b>甘胺酸</b>（脊髓、腦幹最主要）</td><td>打開 Cl⁻ 通道 → 過極化，抑制脊髓運動神經元</td><td><b>番木鱉鹼</b>（strychnine）阻斷甘胺酸受體 → 肌肉痙攣；破傷風毒素阻斷甘胺酸與 GABA 釋放</td></tr>
+  </table></div>
+  <div class="eg"><b class="t">回答開頭問題：</b>苯二氮平類、巴比妥類安眠藥與<b>酒精</b>都作用在 GABA<sub>A</sub> 受體，增強抑制；一起使用時效果相加甚至相乘，可能嚴重抑制腦幹的呼吸中樞，造成呼吸停止。</div>
+  <div class="nut"><b class="t">營養連結：</b>GABA 由<b>麩胺酸</b>脫羧而成，需要<b>維生素 B6</b>；嬰兒 B6 嚴重缺乏時 GABA 不足，可能抽搐。另外，部分人對大量<b>味精</b>（麩胺酸鈉）敏感，但食物中的麩胺酸幾乎不會通過血腦障壁。</div>
+
+  <h3 id="h24">胜肽類 Polypeptides as Neurotransmitters</h3>
+  <p class="core">P 物質（痛覺傳遞）；內生性鴉片（腦內啡、腦啡肽，止痛、跑者快感）；神經胜肽 Y（促進食慾）；CCK（飽足）；胜肽常與經典傳遞物質一起釋放。</p>
+  <p>許多胜肽也作為神經傳遞物質或<b>神經調節物質</b>，常和經典傳遞物質一起釋放，作用較慢而持久：</p>
+  <ul class="dots">
+    <li><b>P 物質</b> <i class="en-term">substance P</i>：痛覺感覺神經在脊髓釋放，傳遞<b>痛覺</b>。</li>
+    <li><b>內生性鴉片</b> <i class="en-term">endogenous opioids</i>：<b>β-腦內啡</b>、<b>腦啡肽</b>、強啡肽，和嗎啡作用在同一類鴉片受體，<b>抑制痛覺</b>（如抑制 P 物質釋放），並產生愉悅感；劇烈運動後的「跑者高潮」、壓力下的止痛與它們有關。<b>納洛酮</b>（naloxone）阻斷鴉片受體，可救嗎啡或海洛因過量。</li>
+    <li><b>神經胜肽 Y</b> <i class="en-term">neuropeptide Y</i>：下視丘中最強的<b>促進食慾</b>訊號之一（第 19 章）。</li>
+    <li><b>膽囊收縮素</b>（CCK）：在腸道是激素，在腦中與<b>飽足感</b>有關（第 18 章）。</li>
+    <li>其他：食慾素（orexin，清醒與食慾）、血管活性腸胜肽（VIP）等。</li>
+  </ul>
+
+  <h3 id="h25">內生性大麻素 Endocannabinoids</h3>
+  <p class="core">內生性大麻素（anandamide、2-AG）由突觸後細胞釋放，逆向作用在突觸前，減少傳遞物質釋放（逆行性抑制）；參與食慾、痛覺、記憶。</p>
+  <p>身體自己製造的<b>內生性大麻素</b> <i class="en-term">endocannabinoids</i>，如<b>花生四烯酸乙醇胺</b>（anandamide）與 2-AG，是由花生四烯酸衍生的脂質。它們很特別：由<b>突觸後</b>神經元在需要時合成，<b>逆向</b>擴散到突觸前末梢，結合 CB1 受體，<b>減少</b>突觸前釋放神經傳遞物質（逆行性抑制，如 DSI，約 20–40 秒的短期抑制）。它們參與<b>食慾</b>、痛覺、情緒與記憶。大麻中的 THC 就是作用在同一受體（所以會引起「嘴饞」）。</p>
+
+  <h3 id="h26">氣體 Gases as Neurotransmitters</h3>
+  <p class="core">一氧化氮（NO）：不儲存、合成後直接擴散穿膜，活化鳥苷酸環化酶 → cGMP → 平滑肌放鬆（血管擴張、勃起）；CO、H₂S 也有類似角色。</p>
+  <p><b>一氧化氮</b> <i class="en-term">nitric oxide, NO</i> 是氣體，不儲存在小泡中，需要時由<b>精胺酸</b>經一氧化氮合成酶產生，直接擴散穿過細胞膜，進入鄰近細胞活化鳥苷酸環化酶，產生 <b>cGMP</b>，使平滑肌<b>放鬆</b>。它參與血管擴張、陰莖勃起（威而鋼抑制分解 cGMP 的酵素，延長作用）、腸道蠕動，以及腦中的學習記憶。<b>一氧化碳</b>（CO）與<b>硫化氫</b>（H₂S）在微量時也有訊號作用。</p>
+
+  <h3 id="h27">ATP 與腺苷 ATP and Adenosine</h3>
+  <p class="core">ATP 常作為共同傳遞物質（與正腎上腺素、ACh 一起釋放）；腺苷累積促進睡意，咖啡因阻斷腺苷受體。</p>
+  <p><b>ATP</b> 常與其他傳遞物質一起被釋放（<b>共同傳遞物質</b> cotransmitter）：和正腎上腺素一起促進血管收縮、和 ACh 一起促進腸道收縮。受損組織釋放的 ATP 會刺激痛覺神經；味蕾細胞也用 ATP 傳遞味覺；血小板釋放 ADP 幫助凝血。ATP 分解成<b>腺苷</b>，腺苷在腦中隨清醒時間累積，<b>促進睡意</b>；<b>咖啡因</b>就是阻斷腺苷受體而提神。</p>
+
+  <div class="tblwrap"><table>
+    <tr><th colspan="3">快速複習（老師簡報）</th></tr>
+    <tr><th>類型</th><th>代表物質</th><th>功能重點</th></tr>
+    <tr><td>興奮性胺基酸</td><td>麩胺酸、天門冬胺酸</td><td>學習、記憶、EPSP</td></tr>
+    <tr><td>抑制性胺基酸</td><td>GABA、甘胺酸</td><td>過極化、抑制運動與突觸</td></tr>
+    <tr><td>多肽</td><td>CCK、P 物質、內生性鴉片、NPY</td><td>飽足、疼痛、壓力、進食</td></tr>
+    <tr><td>內生性大麻素</td><td>Anandamide、2-AG</td><td>逆行性抑制突觸、突觸可塑性</td></tr>
+    <tr><td>氣體</td><td>NO、CO、H₂S</td><td>血管舒張、神經可塑性</td></tr>
+    <tr><td>嘌呤</td><td>ATP、腺苷</td><td>共同傳遞、血管、腸道、疼痛</td></tr>
+  </table></div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>麩胺酸：CNS 主要興奮性（AMPA、NMDA；學習記憶；過量興奮毒性）。</li>
+      <li>GABA（腦）、甘胺酸（脊髓）：抑制性，開 Cl⁻ 通道 → 過極化；苯二氮平、酒精增強 GABA；番木鱉鹼阻斷甘胺酸。GABA 合成需 B6。</li>
+      <li>胜肽：P 物質（痛）、內生性鴉片（止痛；納洛酮阻斷）、NPY（促食慾）、CCK（飽足）。</li>
+      <li>內生性大麻素：突觸後產生、逆向抑制突觸前釋放；食慾、痛覺、記憶。</li>
+      <li>NO：由精胺酸產生、擴散作用、cGMP → 平滑肌放鬆。</li>
+      <li>ATP 共同傳遞；腺苷促睡意，咖啡因阻斷其受體。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>麩胺酸</td><td>glutamate</td><td>γ-胺基丁酸</td><td>GABA</td></tr>
+      <tr><td>甘胺酸</td><td>glycine</td><td>興奮毒性</td><td>excitotoxicity</td></tr>
+      <tr><td>P 物質</td><td>substance P</td><td>內生性鴉片</td><td>endogenous opioids</td></tr>
+      <tr><td>腦內啡／腦啡肽</td><td>endorphin / enkephalin</td><td>神經胜肽 Y</td><td>neuropeptide Y</td></tr>
+      <tr><td>內生性大麻素</td><td>endocannabinoid</td><td>一氧化氮</td><td>nitric oxide</td></tr>
+      <tr><td>共同傳遞物質</td><td>cotransmitter</td><td>腺苷</td><td>adenosine</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 7.7 ============ -->
+<section class="sec det" id="s7">
+  <h2><span class="no">7.7</span>突觸整合</h2>
+  <div class="en">Synaptic Integration</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>一個神經元怎麼把許多 <b>EPSP 與 IPSP 加總</b>（空間、時間加成），神經路徑的<b>發散與會聚</b>，突觸強度怎麼隨經驗改變（<b>LTP、LTD</b>），以及<b>突觸後抑制</b>與<b>突觸前抑制</b>。</div><div><span class="lt lt2">為什麼放最後？</span>前面講單一突觸；真實的神經元一次接收數千個突觸輸入。這一節講神經元怎麼「做決定」——這是腦能思考、學習的基礎，也接到第 8 章中樞神經系統。</div></div>
+  <div class="oneline">突觸後神經元把所有 EPSP 與 IPSP 代數加總，若軸丘處達到閾值就發出動作電位；突觸強度可因活動長期增強（LTP）或減弱（LTD），是學習記憶的基礎；抑制可在突觸後（過極化）或突觸前（減少釋放）。</div>
+  <div class="think">為什麼同一件事反覆練習，就越來越容易記住？</div>
+
+  <h3 id="h28">EPSP 與 IPSP 的加成 Summation</h3>
+  <p class="core">EPSP（去極化）＋IPSP（過極化）代數相加；空間加成：不同突觸同時輸入；時間加成：同一突觸快速連續輸入；軸丘處達閾值才產生動作電位。</p>
+  <figure class="pic"><svg viewBox="0 0 480 250" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#be123c">空間加成</text>
+    <text x="360" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#1d4ed8">時間加成</text>
+    <circle cx="120" cy="110" r="36" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <g stroke="#e11d48" stroke-width="3"><line x1="40" y1="50" x2="92" y2="88"/><line x1="40" y1="110" x2="84" y2="110"/><line x1="40" y1="170" x2="92" y2="132"/></g>
+    <g fill="#e11d48"><circle cx="92" cy="88" r="6"/><circle cx="84" cy="110" r="6"/><circle cx="92" cy="132" r="6"/></g>
+    <text x="30" y="46" font-size="12" text-anchor="end">A</text><text x="30" y="114" font-size="12" text-anchor="end">B</text><text x="30" y="174" font-size="12" text-anchor="end">C</text>
+    <line x1="156" y1="110" x2="220" y2="110" stroke="#b45309" stroke-width="3"/>
+    <text x="120" y="200" font-size="12" text-anchor="middle">三個不同突觸「同時」送 EPSP</text><text x="120" y="216" font-size="12" text-anchor="middle">→ 加起來達到閾值</text>
+    <circle cx="360" cy="110" r="36" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <line x1="270" y1="110" x2="324" y2="110" stroke="#2563eb" stroke-width="3"/><circle cx="324" cy="110" r="6" fill="#2563eb"/>
+    <g fill="#2563eb"><circle cx="280" cy="94" r="4"/><circle cx="292" cy="94" r="4"/><circle cx="304" cy="94" r="4"/></g><text x="292" y="84" font-size="11" text-anchor="middle">快速連發</text>
+    <line x1="396" y1="110" x2="460" y2="110" stroke="#b45309" stroke-width="3"/>
+    <text x="360" y="200" font-size="12" text-anchor="middle">同一個突觸「快速連續」送 EPSP</text><text x="360" y="216" font-size="12" text-anchor="middle">→ 前一個還沒消失就疊上去</text>
+    <text x="240" y="244" font-size="13" text-anchor="middle" fill="#374151">IPSP 也會被加進來（扣分），最後看軸丘的總和是否達到閾值</text>
+  </svg><figcaption>神經元像在「計分」：EPSP 加分、IPSP 扣分，總分在軸丘達到閾值（約 −55 mV）才發射動作電位。</figcaption></figure>
+  <p>單一個 EPSP 通常只有幾 mV，不足以讓突觸後神經元達到閾值。神經元會把所有輸入<b>代數加總</b>，這叫<b>突觸整合</b>：</p>
+  <ul class="dots">
+    <li><b>空間加成</b> <i class="en-term">spatial summation</i>：來自<b>不同</b>突觸、同時發生的 EPSP（或 IPSP）相加。</li>
+    <li><b>時間加成</b> <i class="en-term">temporal summation</i>：<b>同一個</b>突觸快速連續釋放，前一個 EPSP 還沒消失，下一個就疊上去。</li>
+    <li>EPSP 與 IPSP 會互相抵消。總和在<b>軸丘</b>處達到閾值，才會產生動作電位。</li>
+  </ul>
+  <h4>發散與會聚 Divergence and Convergence</h4>
+  <p class="core">發散＝一個神經元影響許多神經元；會聚＝許多神經元的訊號集中到一個神經元。</p>
+  <ul class="dots">
+    <li><b>發散</b> <i class="en-term">divergence</i>：一個神經元的軸突分支影響<b>許多</b>神經元，把訊號擴散出去。</li>
+    <li><b>會聚</b> <i class="en-term">convergence</i>：<b>許多</b>神經元的訊號集中到同一個神經元，由它整合。</li>
+  </ul>
+
+  <h3 id="h29">突觸可塑性 Synaptic Plasticity</h3>
+  <p class="core">長期增益（LTP）：反覆高頻刺激 → NMDA 受體讓 Ca²⁺ 快速大量進入 → 插入更多 AMPA 受體 → 突觸變強（海馬迴、學習記憶）；長期抑制（LTD）：Ca²⁺ 緩慢持續上升 → 移除 AMPA 受體 → 突觸變弱。</p>
+  <p>突觸傳遞的強度不是固定的，會隨使用而改變，稱為<b>突觸可塑性</b> <i class="en-term">synaptic plasticity</i>：</p>
+  <ul class="dots">
+    <li><b>長期增益</b> <i class="en-term">long-term potentiation, LTP</i>：突觸被反覆高頻刺激後，突觸後神經元的 <b>NMDA 型麩胺酸受體</b>打開，<b>Ca²⁺ 快速大量</b>進入，觸發更多 <b>AMPA 型受體</b>被插入突觸後膜，之後同樣的刺激產生更大的 EPSP，可持續數小時到數週以上。最早在<b>海馬迴</b>發現，是<b>學習與記憶</b>的重要機制。</li>
+    <li><b>長期抑制</b> <i class="en-term">long-term depression, LTD</i>：低頻刺激使 Ca²⁺ <b>緩慢但持續</b>上升，AMPA 受體被移除，突觸變弱。這也很重要：讓不重要的連結淡化，例如小腦的運動學習。</li>
+    <li>伴隨的結構變化：<b>樹突棘</b>變大或縮小、新增或消失。</li>
+  </ul>
+  <div class="eg"><b class="t">回答開頭問題：</b>反覆練習會反覆活化同一群突觸，引起 <b>LTP</b>，這些突觸變強、甚至長出新的樹突棘，下次同樣的訊號更容易通過——也就是「記住了」。睡眠對記憶鞏固也很重要。</div>
+
+  <h3 id="h30">突觸抑制 Synaptic Inhibition</h3>
+  <p class="core">突觸後抑制：GABA（腦）、甘胺酸（脊髓）使突觸後神經元過極化（IPSP）；突觸前抑制：另一軸突作用在突觸前末梢，減少 Ca²⁺ 流入而減少傳遞物質釋放（鴉片類減少痛覺傳遞）。</p>
+  <figure class="pic"><svg viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,sans-serif">
+    <text x="120" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#1d4ed8">突觸後抑制</text>
+    <text x="360" y="20" font-size="14" text-anchor="middle" font-weight="bold" fill="#6d28d9">突觸前抑制</text>
+    <circle cx="120" cy="120" r="40" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="120" y="125" font-size="12" text-anchor="middle">突觸後神經元</text>
+    <line x1="30" y1="60" x2="88" y2="96" stroke="#e11d48" stroke-width="3"/><circle cx="88" cy="96" r="7" fill="#e11d48"/><text x="30" y="52" font-size="12">興奮</text>
+    <line x1="210" y1="60" x2="152" y2="96" stroke="#2563eb" stroke-width="3"/><circle cx="152" cy="96" r="7" fill="#2563eb"/><text x="210" y="52" font-size="12" text-anchor="end">抑制（GABA）</text>
+    <text x="120" y="186" font-size="12" text-anchor="middle">直接讓突觸後細胞過極化</text><text x="120" y="202" font-size="12" text-anchor="middle">→ 所有輸入都被打折</text>
+    <circle cx="360" cy="150" r="30" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <line x1="290" y1="60" x2="345" y2="114" stroke="#e11d48" stroke-width="3"/><circle cx="345" cy="114" r="9" fill="#e11d48"/>
+    <line x1="450" y1="60" x2="356" y2="106" stroke="#7c3aed" stroke-width="3"/><circle cx="356" cy="106" r="6" fill="#7c3aed"/>
+    <text x="290" y="52" font-size="12">興奮性軸突</text><text x="450" y="52" font-size="12" text-anchor="end">抑制性軸突</text>
+    <text x="360" y="200" font-size="12" text-anchor="middle">作用在別人的末梢 → 只減少那一條的釋放</text>
+  </svg><figcaption>突觸後抑制像整台收音機調小聲；突觸前抑制像只把其中一個頻道調小聲。</figcaption></figure>
+  <ul class="dots">
+    <li><b>突觸後抑制</b> <i class="en-term">postsynaptic inhibition</i>：抑制性神經元釋放 <b>GABA（腦）或甘胺酸（脊髓）</b>，使突觸後神經元<b>過極化</b>（IPSP），降低它對所有興奮輸入的反應，減少動作電位產生的機率或頻率。</li>
+    <li><b>突觸前抑制</b> <i class="en-term">presynaptic inhibition</i>：抑制性軸突接在另一個神經元的<b>突觸前末梢</b>上（軸突—軸突突觸），使該末梢在動作電位到達時<b>Ca²⁺ 流入減少</b>，釋放的神經傳遞物質變少。它只影響那一條特定的輸入。例：<b>鴉片類</b>（內生性鴉片、嗎啡）在脊髓作用於痛覺神經的突觸前末梢，減少 P 物質釋放，<b>降低痛覺傳導</b>。</li>
+  </ul>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>EPSP＋IPSP 代數加總，軸丘達閾值才產生動作電位。</li>
+      <li>空間加成（不同突觸同時）、時間加成（同一突觸快速連續）；發散（一對多）、會聚（多對一）。</li>
+      <li>LTP：高頻刺激 → NMDA 受體、Ca²⁺ 快速大量 → 插入 AMPA → 突觸變強（海馬迴、學習記憶）；LTD：Ca²⁺ 緩慢持續 → 移除 AMPA。</li>
+      <li>突觸後抑制：GABA／甘胺酸 → 過極化；突觸前抑制：減少突觸前 Ca²⁺ 流入與釋放（鴉片類止痛）。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>突觸整合</td><td>synaptic integration</td><td>空間／時間加成</td><td>spatial / temporal summation</td></tr>
+      <tr><td>發散／會聚</td><td>divergence / convergence</td><td>突觸可塑性</td><td>synaptic plasticity</td></tr>
+      <tr><td>長期增益／長期抑制</td><td>LTP / LTD</td><td>樹突棘</td><td>dendritic spine</td></tr>
+      <tr><td>突觸後／突觸前抑制</td><td>postsynaptic / presynaptic inhibition</td><td>海馬迴</td><td>hippocampus</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s8">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>神經元</td><td>細胞本體、樹突（收）、軸突（軸丘起始、傳出）；感覺偽單極、運動多極、聯絡只在 CNS</td></tr>
+    <tr><td>膠細胞</td><td>PNS：許旺、衛星；CNS：寡突、星狀（血腦障壁）、微膠（吞噬）、室管膜（CSF）</td></tr>
+    <tr><td>髓鞘與再生</td><td>周邊許旺＋神經膜可再生；中樞寡突、無神經膜難再生</td></tr>
+    <tr><td>動作電位</td><td>閾值 −55 → Na⁺ 入 +30 → Na⁺ 失活＋K⁺ 出 → 後過極化；Na⁺ 通道阻斷劑（局麻、河豚毒）</td></tr>
+    <tr><td>特性</td><td>全有全無；強度＝頻率＋徵召；絕對／相對不反應期；跳躍式傳導</td></tr>
+    <tr><td>化學突觸</td><td>Ca²⁺ 進入 → 胞吐 → 受體 → EPSP／IPSP → 分解、回收</td></tr>
+    <tr><td>ACh</td><td>菸鹼型（離子通道；骨骼肌、神經節）；毒蕈鹼型（G 蛋白；副交感標的）；AChE 分解</td></tr>
+    <tr><td>單胺類</td><td>酪胺酸 → 多巴胺 → 正腎上腺素；色胺酸 → 血清素；MAO 分解；MAO 抑制劑忌高酪胺食物</td></tr>
+    <tr><td>胺基酸類</td><td>麩胺酸興奮；GABA（腦）、甘胺酸（脊髓）抑制（Cl⁻）</td></tr>
+    <tr><td>其他</td><td>內生性鴉片止痛；NPY 促食慾；NO → cGMP 放鬆平滑肌；腺苷促睡意（咖啡因阻斷）</td></tr>
+    <tr><td>整合</td><td>空間、時間加成；LTP（NMDA、AMPA）學習記憶；突觸前抑制（鴉片類）</td></tr>
+  </table></div>
+  <h3 id="h31">讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 說出 CNS 與 PNS 各有哪些膠細胞及功能？</li>
+    <li>□ 解釋為什麼周邊神經能再生、中樞神經很難？</li>
+    <li>□ 畫出動作電位並標出 Na⁺、K⁺ 通道的開關？</li>
+    <li>□ 說明局部麻醉藥為什麼能止痛？</li>
+    <li>□ 解釋跳躍式傳導為什麼較快又省能？</li>
+    <li>□ 依序說出化學突觸傳遞的五個步驟？</li>
+    <li>□ 比較菸鹼型與毒蕈鹼型受體，說明 ACh 為何讓心跳變慢？</li>
+    <li>□ 說明 MAO 抑制劑與酪胺食物的交互作用？</li>
+    <li>□ 說明 LTP 的機制與意義？</li>
+  </ul>
+</section>
+
+
+<section class="sec" id="quizsec">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 7 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+<script>
+const Q = [
+ {q:"周邊神經系統中，包圍神經節內細胞本體的支持細胞是？",o:["許旺細胞","衛星細胞","寡突膠細胞","星狀膠細胞"],a:1,
+  e:"PNS 的支持細胞：<b>許旺細胞</b>（髓鞘）與<b>衛星細胞</b>（包圍神經節細胞本體）。國考考過。"},
+ {q:"中樞神經系統中，負責吞噬作用的膠細胞是？",o:["星狀膠細胞","微膠細胞","室管膜細胞","寡突膠細胞"],a:1,
+  e:"<b>微膠細胞</b>是中樞的吞噬細胞；星狀膠細胞參與血腦障壁與清除 K⁺、麩胺酸。"},
+ {q:"周邊神經較中樞神經容易再生，主要原因是？",o:["周邊軸突比較粗","周邊有許旺細胞形成的神經膜引導再生","周邊神經元會分裂","中樞沒有髓鞘"],a:1,
+  e:"許旺細胞與<b>神經膜</b>形成再生管；中樞由寡突膠細胞形成髓鞘、無神經膜，且有抑制生長的分子。"},
+ {q:"狂犬病毒與破傷風毒素由神經末梢進入中樞，是利用？",o:["順向軸突運輸（kinesin）","逆向軸突運輸（dynein）","跳躍式傳導","胞吐作用"],a:1,
+  e:"由末梢往細胞本體的是<b>逆向運輸</b>，由動力蛋白 dynein 負責。"},
+ {q:"下列何者較容易通過血腦障壁？",o:["多巴胺","L-多巴","大部分蛋白質","大多數水溶性抗生素"],a:1,
+  e:"<b>L-多巴</b>可經胺基酸載體進入腦，再轉成多巴胺；多巴胺本身無法通過。"},
+ {q:"動作電位的去極化期主要是因為？",o:["K⁺ 通道打開、K⁺ 流出","電壓閘控 Na⁺ 通道打開、Na⁺ 流入","Cl⁻ 流入","鈉鉀幫浦停止"],a:1,
+  e:"達閾值後<b>電壓閘控 Na⁺ 通道</b>大開，Na⁺ 湧入；再極化則是 Na⁺ 失活＋K⁺ 流出。"},
+ {q:"局部麻醉藥（如利多卡因）止痛的作用機制是？",o:["阻斷電壓閘控 Na⁺ 通道","增強 GABA","阻斷乙醯膽鹼酯酶","活化 K⁺ 通道"],a:0,
+  e:"阻斷 <b>Na⁺ 通道</b>使痛覺神經無法產生動作電位（國考考過鈉通道阻斷劑）。"},
+ {q:"神經以什麼方式表示較強的刺激？",o:["動作電位變大","動作電位頻率增加，且活化更多纖維","動作電位變長","靜止膜電位變正"],a:1,
+  e:"動作電位<b>全有全無</b>、大小固定；強度靠<b>頻率</b>與<b>徵召</b>更多纖維。"},
+ {q:"在絕對不反應期中無法再產生動作電位，主要是因為？",o:["K⁺ 通道關閉","Na⁺ 通道正處於打開或失活狀態","Ca²⁺ 不足","軸突沒有髓鞘"],a:1,
+  e:"<b>Na⁺ 通道失活</b>，再強的刺激也無法打開它；這也使動作電位單向傳導。"},
+ {q:"跳躍式傳導發生在？",o:["無髓鞘軸突","有髓鞘軸突的蘭氏結之間","樹突","突觸間隙"],a:1,
+  e:"髓鞘絕緣，動作電位只在<b>蘭氏結</b>再生，傳得快又省能。"},
+ {q:"化學突觸中，直接觸發突觸小泡釋放神經傳遞物質的是？",o:["Na⁺ 流入","K⁺ 流出","Ca²⁺ 流入突觸前末梢","Cl⁻ 流入"],a:2,
+  e:"動作電位打開突觸前末梢的電壓閘控 <b>Ca²⁺ 通道</b>，Ca²⁺ 進入觸發胞吐。"},
+ {q:"乙醯膽鹼使心跳變慢，是作用在哪種受體？",o:["菸鹼型受體","毒蕈鹼型受體","α 腎上腺素性受體","GABA 受體"],a:1,
+  e:"心臟上是<b>毒蕈鹼型</b>受體，經 G 蛋白打開 K⁺ 通道 → 過極化 → 心跳變慢。"},
+ {q:"有機磷農藥中毒的主要機制是？",o:["阻斷菸鹼型受體","抑制乙醯膽鹼酯酶，使 ACh 堆積","阻斷 Na⁺ 通道","增強 GABA"],a:1,
+  e:"抑制 <b>AChE</b> → ACh 無法分解而堆積 → 痙攣後麻痺、流涎、瞳孔縮小；阿托平可拮抗毒蕈鹼作用。"},
+ {q:"服用 MAO 抑制劑者應避免大量攝取熟成起司、醃漬發酵食物，是因為其中富含？",o:["色胺酸","酪胺","麩胺酸","膽鹼"],a:1,
+  e:"<b>酪胺</b>促使正腎上腺素釋放，MAO 被抑制時無法分解 → 高血壓危象。"},
+ {q:"帕金森氏症主要是哪一條路徑的哪種神經傳遞物質不足？",o:["中腦邊緣路徑的血清素","黑質紋狀體路徑的多巴胺","海馬迴的乙醯膽鹼","脊髓的甘胺酸"],a:1,
+  e:"<b>黑質</b>多巴胺神經元退化，<b>黑質紋狀體路徑</b>多巴胺不足 → 顫抖、僵硬、動作遲緩。"},
+ {q:"腦中最主要的抑制性神經傳遞物質及其作用方式是？",o:["甘胺酸，打開 Na⁺ 通道","GABA，打開 Cl⁻ 通道使過極化","麩胺酸，打開 Ca²⁺ 通道","多巴胺，增加 cAMP"],a:1,
+  e:"<b>GABA</b>（腦）與甘胺酸（脊髓）打開 Cl⁻ 通道 → IPSP；苯二氮平、酒精增強 GABA 作用。"},
+ {q:"長期增益（LTP）的關鍵機制是？",o:["移除 AMPA 受體","NMDA 受體使 Ca²⁺ 大量流入，進而插入更多 AMPA 受體","阻斷 Na⁺ 通道","增加乙醯膽鹼酯酶"],a:1,
+  e:"高頻刺激 → <b>NMDA</b> 受體 → Ca²⁺ 快速上升 → 插入 <b>AMPA</b> → 突觸變強（學習記憶）。"},
+ {q:"鴉片類藥物在脊髓減少痛覺傳遞，屬於哪種機制？",o:["突觸後抑制","突觸前抑制（減少 P 物質釋放）","時間加成","長期增益"],a:1,
+  e:"作用在痛覺神經<b>突觸前末梢</b>，減少 Ca²⁺ 流入與 P 物質釋放 → 突觸前抑制。"}
+];
+
+</script>
+<script src="fox_core.js"></script>
+<script src="fox_gl.js"></script>
+</body>
+</html>
