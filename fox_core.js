@@ -83,3 +83,108 @@ const FOX_CH=["人體功能的研究","人體的化學組成","細胞結構與�
   const top=document.querySelector('a.top');
   if(top) top.addEventListener('click',e=>{e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'});});
 })();
+
+// ---- 全書搜尋、跳到該處、返回原處 ----
+const FOX_NOT='#quizsec, nav, .chnav, #biosum, svg, .bh';
+function foxBlocks(){return [...document.querySelectorAll('main p, main li, main td, main th, main figcaption, main dd, main dt, main div, main summary')].filter(e=>!e.closest(FOX_NOT)&&[...e.childNodes].some(n=>n.nodeType===3&&n.nodeValue.trim()));}
+(function(){
+  const blocks=foxBlocks;
+  const file=location.pathname.split('/').pop()||'fox_index.html';
+  const curCh=+document.body.dataset.ch||0;
+  const fOf=k=>`fox_ch${String(k).padStart(2,'0')}.html`;
+  const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  let stack=[]; try{stack=JSON.parse(sessionStorage.getItem('foxBack')||'[]');}catch(e){}
+  const save=()=>{try{sessionStorage.setItem('foxBack',JSON.stringify(stack));}catch(e){}};
+  const here=()=>{const bl=blocks(); for(let i=0;i<bl.length;i++){const r=bl[i].getBoundingClientRect(); if(r.height&&r.bottom>90) return i;} return 0;};
+
+  function reveal(el){
+    let d=el.closest('details'); while(d){d.open=true; d=d.parentElement&&d.parentElement.closest('details');}
+    if(!el.getClientRects().length){const sec=el.closest('.sec.det'); const b=sec&&sec.querySelector('.secbtn'); if(b&&!sec.classList.contains('open')) b.click();}
+  }
+  function mark(el,term){
+    el.classList.add('hitblk'); setTimeout(()=>el.classList.remove('hitblk'),5000);
+    if(!term) return; const lt=term.toLowerCase();
+    const w=document.createTreeWalker(el,NodeFilter.SHOW_TEXT); let n;
+    while((n=w.nextNode())){const i=n.nodeValue.toLowerCase().indexOf(lt); if(i<0) continue;
+      try{const r=document.createRange(); r.setStart(n,i); r.setEnd(n,i+term.length); const m=document.createElement('mark'); m.className='hit'; r.surroundContents(m);}catch(e){} break;}
+  }
+  function jump(i,term,hl){
+    const el=blocks()[i]; if(!el) return; reveal(el);
+    setTimeout(()=>{ if(window.markGl) markGl();
+      window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-120});
+      if(hl) mark(el,term);},80);
+  }
+  function go(f,i,term){
+    stack.push({f:file,i:here(),c:curCh}); if(stack.length>10) stack.shift(); save();
+    if(f===file){ jump(i,term,true); showBack(); }
+    else location.href=f+'?go='+i+'&hl='+encodeURIComponent(term||'');
+  }
+  // 返回鈕
+  const back=document.createElement('div'); back.className='backpill';
+  back.innerHTML='<button class="bk"></button><button class="bx" aria-label="不用返回">✕</button>';
+  document.body.appendChild(back);
+  function showBack(){
+    if(!stack.length){back.classList.remove('show'); return;}
+    const p=stack[stack.length-1];
+    back.querySelector('.bk').textContent='← 回到'+(p.c?`第 ${p.c} 章`:'目錄頁')+'剛剛讀的地方';
+    back.classList.add('show');
+  }
+  back.querySelector('.bk').onclick=()=>{const p=stack.pop(); save();
+    if(p.f===file){ jump(p.i,null,false); showBack(); } else location.href=p.f+'?ret='+p.i;};
+  back.querySelector('.bx').onclick=()=>{stack=[]; save(); showBack();};
+
+  // 搜尋視窗
+  const ss=document.createElement('div'); ss.id='srsheet';
+  ss.innerHTML=`<div class="box"><div class="hd"><input type="search" placeholder="輸入名詞，例如：內在因子、B12" enterkeyhint="search" aria-label="搜尋全書"><button class="x" aria-label="關閉">✕</button></div>
+    <div class="flt" hidden></div><div class="res"><p class="tip">可以搜尋中文或英文；結果會列出名詞小卡和各章出現的位置，點一下就會跳過去，讀完按左下角「回到…」就能回原處。</p></div></div>`;
+  document.body.appendChild(ss);
+  const inp=ss.querySelector('input'), res=ss.querySelector('.res'), flt=ss.querySelector('.flt');
+  let onlyCh=0;
+  const closeS=()=>ss.classList.remove('show');
+  function loadIdx(cb){ if(window.FOX_IDX) return cb();
+    res.innerHTML='<p class="tip">載入搜尋資料中…</p>';
+    const s=document.createElement('script'); s.src='fox_search.js'; s.onload=cb;
+    s.onerror=()=>{res.innerHTML='<p class="tip">搜尋資料載入失敗，請確認 fox_search.js 已一起上傳。</p>';}; document.head.appendChild(s);}
+  function snip(t,i,L){const a=Math.max(0,i-22), b=Math.min(t.length,i+L+38);
+    return (a>0?'…':'')+esc(t.slice(a,i))+'<mark>'+esc(t.slice(i,i+L))+'</mark>'+esc(t.slice(i+L,b))+(b<t.length?'…':'');}
+  function run(){
+    const q=inp.value.trim(); if(!q){res.innerHTML=''; return;}
+    const lq=q.toLowerCase(); let h='';
+    flt.hidden=!onlyCh; if(onlyCh) flt.innerHTML=`只看第 ${onlyCh} 章　<button>看全部章節</button>`;
+    if(typeof GL!=='undefined' && !onlyCh){ const ids=[];
+      for(const [k,v] of Object.entries(GL_ALIAS)) if(k.toLowerCase().includes(lq)&&!ids.includes(v)) ids.push(v);
+      for(const [id,g] of Object.entries(GL)) if(!ids.includes(id)&&g.t&&g.t.toLowerCase().includes(lq)) ids.push(id);
+      if(ids.length) h+='<div class="grp">名詞小卡</div>'+ids.slice(0,8).filter(id=>GL[id]).map(id=>`<a class="glr" data-id="${id}">📘 ${GL[id].t}</a>`).join('');}
+    const order=[...Array(20).keys()].map(x=>x+1).sort((a,b)=>(b===curCh)-(a===curCh));
+    let total=0;
+    order.forEach(k=>{ if(onlyCh&&k!==onlyCh) return; const C=FOX_IDX[k]; if(!C) return; const hits=[];
+      C.b.forEach(([i,l,t])=>{const p=t.toLowerCase().indexOf(lq); if(p>=0) hits.push([i,l,t,p]);});
+      if(!hits.length) return; total+=hits.length;
+      const lim=onlyCh?999:5;
+      h+=`<div class="grp">第 ${k} 章　${FOX_CH[k-1]}${k===curCh?'（本章）':''}<span>${hits.length} 處</span></div>`+
+        hits.map(([i,l,t,p],j)=>`<a class="hr${j>=lim?' more':''}" data-f="${fOf(k)}" data-i="${i}"><small>${esc(C.l[l]||'')}</small>${snip(t,p,q.length)}</a>`).join('')+
+        (hits.length>lim?`<button class="mr">再顯示 ${hits.length-lim} 處</button>`:'');});
+    if(!h) h='<p class="tip">找不到「'+esc(q)+'」。試試看較短的詞，或改用英文。</p>';
+    res.innerHTML=h;
+  }
+  let tm; inp.addEventListener('input',()=>{clearTimeout(tm); tm=setTimeout(()=>loadIdx(run),250);});
+  ss.addEventListener('click',e=>{
+    if(e.target===ss||e.target.closest('.x')) return closeS();
+    if(e.target.closest('.flt button')){onlyCh=0; return run();}
+    const mr=e.target.closest('.mr'); if(mr){let n=mr.previousElementSibling; while(n&&n.classList.contains('hr')){n.classList.remove('more'); n=n.previousElementSibling;} mr.remove(); return;}
+    const g=e.target.closest('.glr'); if(g){closeS(); if(window.openGl) openGl(g.dataset.id); return;}
+    const r=e.target.closest('.hr'); if(r){e.preventDefault(); closeS(); go(r.dataset.f,+r.dataset.i,inp.value.trim());}
+  });
+  window.openSearch=(q,ch)=>{onlyCh=ch||0; if(q!=null) inp.value=q; ss.classList.add('show'); loadIdx(run); if(!q) setTimeout(()=>inp.focus(),50);};
+  const mb=document.querySelector('.modebar');
+  if(mb){const b=document.createElement('button'); b.className='srbtn'; b.textContent='🔍'; b.setAttribute('aria-label','搜尋全書'); b.onclick=()=>openSearch(); mb.querySelector('.chbtn')?mb.querySelector('.chbtn').after(b):mb.prepend(b);}
+  if(curCh){const fab=document.createElement('button'); fab.className='chfab srfab'; fab.textContent='🔍'; fab.setAttribute('aria-label','搜尋全書'); fab.onclick=()=>openSearch(); document.body.appendChild(fab);}
+  const chl=document.getElementById('chl');
+  if(chl){const b=document.createElement('button'); b.className='srbar'; b.textContent='🔍 搜尋全書：輸入名詞，找出在哪一章、哪一段'; b.onclick=()=>openSearch(); chl.before(b);}
+  // 進頁時處理跳轉／返回
+  const P=new URLSearchParams(location.search);
+  if(P.has('go')) jump(+P.get('go'),P.get('hl'),true);
+  else if(P.has('ret')) jump(+P.get('ret'),null,false);
+  if(P.has('go')||P.has('ret')) history.replaceState(null,'',file+location.hash);
+  showBack();
+})();
