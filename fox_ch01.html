@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人體生理學導讀｜第 1 章 人體功能的研究</title>
+<style>
+  :root{
+    --ink:#1f2937; --sub:#4b5563; --line:#e5e7eb; --bg:#fafaf9; --card:#ffffff;
+    --rose:#e11d48; --rose-bg:#fff1f2; --blue:#2563eb; --blue-bg:#eff6ff;
+    --amber:#b45309; --amber-bg:#fffbeb; --purple:#7c3aed; --purple-bg:#f5f3ff;
+    --teal:#0f766e; --teal-bg:#f0fdfa; --green:#15803d; --green-bg:#f0fdf4;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+       color:var(--ink);background:var(--bg);line-height:1.85;font-size:17px}
+  header{background:linear-gradient(135deg,#be123c,#7c3aed);color:#fff;padding:28px 18px 22px}
+  header .book{font-size:14px;opacity:.9}
+  header h1{margin:6px 0 4px;font-size:26px;line-height:1.35}
+  header .en{font-size:15px;opacity:.9}
+  main{max-width:820px;margin:0 auto;padding:0 14px 60px}
+  .note{background:var(--amber-bg);border-left:4px solid var(--amber);padding:12px 14px;border-radius:8px;
+        font-size:15px;margin:18px 0;color:#78350f}
+  nav.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:18px 0}
+  nav.toc b{display:block;margin-bottom:6px}
+  nav.toc a{display:block;color:var(--blue);text-decoration:none;padding:3px 0}
+  nav.toc a.sub{padding-left:18px;font-size:15px;color:var(--sub)}
+  section.sec{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 16px;margin:26px 0}
+  h2{font-size:22px;margin:0 0 4px;color:#9f1239}
+  h2 .no{display:inline-block;background:#9f1239;color:#fff;border-radius:6px;padding:0 8px;margin-right:6px;font-size:17px}
+  h2 + .en{color:var(--sub);font-size:14px;margin-bottom:10px}
+  h3{font-size:19px;margin:26px 0 6px;color:#1e3a8a;border-bottom:2px solid var(--blue-bg);padding-bottom:3px}
+  h4{font-size:17px;margin:18px 0 4px;color:#374151}
+  .oneline{background:var(--rose-bg);border-radius:10px;padding:10px 14px;margin:10px 0 14px;font-weight:600;color:#881337}
+  .oneline::before{content:"一句話先懂　";color:var(--rose);font-weight:700}
+  .think{background:var(--purple-bg);border-radius:10px;padding:10px 14px;margin:12px 0;color:#4c1d95;font-size:16px}
+  .think::before{content:"讀前先想　";font-weight:700;color:var(--purple)}
+  .eg{background:var(--teal-bg);border-left:4px solid var(--teal);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:16px}
+  .eg b.t{color:var(--teal)}
+  .nut{background:var(--green-bg);border-left:4px solid var(--green);border-radius:8px;padding:10px 14px;margin:12px 0;font-size:16px}
+  .nut b.t{color:var(--green)}
+  .warn{background:#fef2f2;border-left:4px solid #dc2626;border-radius:8px;padding:10px 14px;margin:12px 0;font-size:16px}
+  .warn b.t{color:#b91c1c}
+  .en-term{color:var(--sub);font-size:.88em;font-style:normal}
+  .key{background:linear-gradient(transparent 60%,#fde68a 60%)}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:15px;background:#fff}
+  th,td{border:1px solid var(--line);padding:7px 8px;vertical-align:top;text-align:left}
+  th{background:#f3f4f6}
+  .tblwrap{overflow-x:auto}
+  details.stop{border:1px dashed var(--purple);border-radius:10px;padding:8px 12px;margin:14px 0;background:#fff}
+  details.stop summary{cursor:pointer;color:var(--purple);font-weight:600}
+  details.stop summary::before{content:"停下來想一想："}
+  details.stop div{margin-top:8px;color:#374151}
+  .sum{background:#fef9c3;border-radius:10px;padding:10px 14px 4px;margin:18px 0 4px}
+  .sum b.t{color:#854d0e}
+  .sum ul{margin:6px 0 8px;padding-left:22px}
+  .terms{margin-top:14px}
+  .terms summary{cursor:pointer;font-weight:600;color:var(--blue)}
+  figure{margin:14px 0;text-align:center}
+  figure svg{max-width:100%;height:auto}
+  figcaption{font-size:14px;color:var(--sub);margin-top:4px}
+  ol.steps li, ul.dots li{margin:4px 0}
+  /* quiz */
+  .q{border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin:14px 0;background:#fff}
+  .q .qt{font-weight:600;margin-bottom:8px}
+  .q button{display:block;width:100%;text-align:left;margin:6px 0;padding:9px 12px;border:1px solid #d1d5db;
+            border-radius:9px;background:#f9fafb;font-size:16px;font-family:inherit;cursor:pointer;color:var(--ink)}
+  .q button.ok{background:#dcfce7;border-color:#16a34a}
+  .q button.ng{background:#fee2e2;border-color:#dc2626}
+  .q .exp{display:none;margin-top:8px;padding:10px 12px;border-radius:9px;background:var(--blue-bg);font-size:15px}
+  .score{font-weight:700;text-align:center;margin:10px 0;color:#9f1239}
+  footer{text-align:center;color:var(--sub);font-size:13px;padding:20px}
+  .top{position:fixed;right:14px;bottom:16px;background:#9f1239;color:#fff;border-radius:50%;width:44px;height:44px;
+       display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:20px;box-shadow:0 2px 6px #0003}
+  /* 精簡／完整模式 */
+  .modebar{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:8px 12px;
+           display:flex;gap:8px;justify-content:center;align-items:center;box-shadow:0 1px 4px #0001}
+  .modebar span{font-size:14px;color:var(--sub)}
+  .modebar button{border:1px solid #9f1239;background:#fff;color:#9f1239;border-radius:20px;padding:5px 14px;
+                  font-size:15px;font-family:inherit;cursor:pointer}
+  .modebar button.on{background:#9f1239;color:#fff}
+  .briefhint{display:none;background:var(--blue-bg);border-radius:8px;padding:8px 12px;font-size:14px;color:#1e3a8a;margin:14px 0}
+  body.brief .briefhint{display:block}
+  .core{display:none;background:#f8fafc;border-left:4px solid #94a3b8;border-radius:6px;padding:8px 12px;font-size:16px}
+  body.brief .core{display:block}
+  body.brief .sec.open .core{display:none}
+  body.brief .sec.det:not(.open) p:not(.core), body.brief .sec.det:not(.open) ul.dots, body.brief .sec.det:not(.open) ol.steps,
+  body.brief .sec.det:not(.open) .eg, body.brief .sec.det:not(.open) .nut, body.brief .sec.det:not(.open) .think,
+  body.brief .sec.det:not(.open) details.stop{display:none}
+  .secbtn{display:none;margin:4px 0 10px;border:1px dashed var(--blue);background:var(--blue-bg);color:var(--blue);
+          border-radius:8px;padding:6px 12px;font-size:14px;font-family:inherit;cursor:pointer}
+  body.brief .secbtn{display:inline-block}
+  figure.pic{background:#fff;border-radius:10px;cursor:zoom-in}
+  figure.pic svg{width:100%}
+  figure.pic figcaption{text-align:left;font-size:15px;color:#374151;padding:0 4px}
+  figure.zoom{overflow-x:auto;cursor:zoom-out}
+  figure.zoom svg{width:720px;max-width:none}
+  .pichint{font-size:13px;color:var(--sub);text-align:center;margin:-4px 0 8px}
+  @media (max-width:520px){ main{padding:0 6px 60px} section.sec{padding:14px 10px} }
+  [data-gl]{cursor:pointer}
+  .gl{border-bottom:2px dotted #2563eb;cursor:pointer}
+  .gl::after{content:"ⓘ";font-size:.7em;color:#2563eb;margin-left:2px;vertical-align:super;font-weight:normal}
+  #glsheet{position:fixed;inset:0;background:#0006;display:none;z-index:20;align-items:flex-end;justify-content:center}
+  #glsheet.show{display:flex}
+  .glbox{background:#fff;width:100%;max-width:640px;max-height:75vh;overflow-y:auto;border-radius:16px 16px 0 0;padding:18px 16px 24px;position:relative;font-size:16px;line-height:1.75}
+  .glx{position:absolute;right:10px;top:8px;border:none;background:#f3f4f6;border-radius:50%;width:34px;height:34px;font-size:16px;cursor:pointer}
+  .glt{font-weight:700;font-size:18px;color:#9f1239;margin:0 40px 10px 0}
+  .glrow{display:flex;gap:10px;margin:8px 0}
+  .gllab{flex:0 0 auto;font-size:13px;font-weight:700;border-radius:6px;padding:1px 7px;height:fit-content;margin-top:3px}
+  .l1{background:#eff6ff;color:#1d4ed8}.l2{background:#f0fdfa;color:#0f766e}.l3{background:#fffbeb;color:#b45309}
+  .l4{background:#fff1f2;color:#be123c}.l0{background:#fef3c7;color:#92400e}.l6{background:#ecfdf5;color:#047857}.l5{background:#f5f3ff;color:#6d28d9}
+  .lead{background:#fff7ed;border:2px solid #fb923c;border-radius:12px;padding:10px 14px;margin:10px 0 12px;font-size:16px;line-height:1.8}
+  .lead > div + div{margin-top:6px}
+  .lead .lt{display:inline-block;background:#ea580c;color:#fff;border-radius:6px;padding:0 8px;font-size:14px;font-weight:700;margin-right:6px}
+  .lead .lt2{background:#9a3412}
+  .path{margin:10px 0}
+  .path .step{display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid #fdba74;border-radius:10px;padding:8px 12px}
+  .path .sn{flex:0 0 auto;background:#9f1239;color:#fff;border-radius:6px;padding:0 8px;font-weight:700;margin-top:3px}
+  .path .sq{font-size:15px;color:#4b5563}
+  .path .arr{color:#c2410c;font-size:14px;padding:4px 0 4px 18px}
+</style>
+</head>
+<body id="top">
+<header>
+  <div class="book">Fox《人體生理學》第十六版（偉明）・逐章導讀</div>
+  <h1>第 1 章　人體功能的研究</h1>
+  <div class="en">Chapter 1 The Study of Body Function（課本 p.1–24）</div>
+</header>
+
+<div class="modebar"><span>閱讀模式</span>
+  <button id="mBrief" onclick="setMode('brief')">精簡（核心路線）</button>
+  <button id="mFull" onclick="setMode('full')">完整</button>
+</div>
+<main>
+<div class="briefhint"><b>精簡模式</b>：每節只顯示「一句話先懂」、圖解、表格、易考／易混淆、本節重點與名詞，約 20–30 分鐘可讀完一章；讀完做章末測驗。答錯或看不懂時，按該節的「展開本節詳細內文」，或切換到完整模式。</div>
+
+<div class="note">
+<b>使用說明</b><br>
+這份導讀依照課本第 1 章的小節順序（1.1～1.4）寫成，用自己的話詳細說明，<b>不是課本原文</b>。內容根據一般生理學知識與國考常用教科書的寫法；小節內的小標題是依原文版架構整理，若和你手上的中譯本有出入，以課本為準。建議讀法：<b>先讀每節的「一句話先懂」→ 再讀內文 → 遇到「停下來想一想」先自己回答再點開 → 最後看「本節重點」</b>。章末有互動自我檢測。
+</div>
+
+<p class="pichint" style="margin:10px 0">小提示：① 手機上看不清楚的圖，點一下可以放大，左右滑動看；再點一下縮回。② 有<span style="border-bottom:2px dotted #2563eb">藍色虛線</span>ⓘ 的名詞可以點開「名詞小卡」：白話解釋、生活例子、名稱由來。</p>
+<nav class="toc">
+  <b>本章目錄</b>
+  <a href="#s0">本章地圖：這一章在做什麼？</a>
+  <a href="#s1">1.1 生理學導論 Introduction to Physiology</a>
+  <a class="sub" href="#s1a">科學方法</a>
+  <a class="sub" href="#s1b">新藥的開發與臨床試驗</a>
+  <a href="#s2">1.2 恆定與回饋控制 Homeostasis and Feedback Control</a>
+  <a class="sub" href="#s2a">生理學的歷史</a>
+  <a class="sub" href="#s2b">負回饋</a>
+  <a class="sub" href="#s2c">正回饋</a>
+  <a class="sub" href="#s2d">神經與內分泌調節</a>
+  <a class="sub" href="#s2e">激素分泌的回饋控制（血糖）</a>
+  <a href="#s3">1.3 主要組織 The Primary Tissues</a>
+  <a class="sub" href="#s3a">肌肉組織</a>
+  <a class="sub" href="#s3b">神經組織</a>
+  <a class="sub" href="#s3c">上皮組織</a>
+  <a class="sub" href="#s3d">結締組織</a>
+  <a href="#s4">1.4 器官與系統 Organs and Systems</a>
+  <a class="sub" href="#s4a">以皮膚為例看器官</a>
+  <a class="sub" href="#s4b">幹細胞</a>
+  <a class="sub" href="#s4c">器官系統</a>
+  <a class="sub" href="#s4d">體液區間</a>
+  <a href="#s5">本章重點整理</a>
+  <a href="#s6">自我檢測（互動）</a>
+</nav>
+
+<!-- ============ 本章地圖 ============ -->
+<section class="sec" id="s0">
+  <h2>本章地圖：為什麼這樣排？</h2>
+  <div class="en">Big picture — 先懂這一章要說什麼</div>
+  <div class="lead"><b>破題</b>　第 1 章要建立整本書都會用到的<b>一個觀念</b>：<span class="key">身體會把內在環境維持穩定（恆定），靠的是「偵測 → 判斷 → 執行」的回饋控制；而執行這些工作的，是由四種組織組成的器官與系統。</span>後面 19 章，每一章都是在講「某個系統怎麼幫忙維持恆定」。</div>
+  <p>四個小節是一步一步往上蓋的：</p>
+  <div class="path">
+    <div class="step"><span class="sn">1.1</span><div><b>生理學是什麼、知識怎麼來</b><br><span class="sq">先知道這門學問在問「怎麼運作」，而且答案要靠實驗證明。</span></div></div>
+    <div class="arr">↓ 知道要問什麼之後，先學整本書最核心的觀念</div>
+    <div class="step"><span class="sn">1.2</span><div><b>恆定與回饋：身體要做什麼、怎麼做</b><br><span class="sq">目標是「維持穩定」，方法是「回饋控制」。這是全書的主軸。</span></div></div>
+    <div class="arr">↓ 回饋需要有人偵測、有人執行——那是誰？由什麼做成的？</div>
+    <div class="step"><span class="sn">1.3</span><div><b>四大組織：執行工作的材料</b><br><span class="sq">神經負責偵測與傳訊、肌肉負責收縮、上皮與腺體負責分泌吸收、結締負責支撐連結。</span></div></div>
+    <div class="arr">↓ 材料組合起來，才是真正做事的單位</div>
+    <div class="step"><span class="sn">1.4</span><div><b>器官、系統與體液：組合起來的全貌</b><br><span class="sq">組織→器官→系統；而它們全都泡在「體液」裡，細胞外液就是要維持恆定的「內在環境」。</span></div></div>
+  </div>
+  <p>生物的構造由小到大：<b>化學層次（原子、分子）→ 細胞 → 組織 → 器官 → 器官系統 → 個體</b>。本章從組織往上講到系統；第 2～6 章會往下講分子與細胞，第 7 章以後再一個系統一個系統地講。</p>
+</section>
+
+<!-- ============ 1.1 ============ -->
+<section class="sec det" id="s1">
+  <h2><span class="no">1.1</span>生理學導論</h2>
+  <div class="en">Introduction to Physiology</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>「生理學」在研究什麼，以及這些知識是<b>怎麼被證明出來的</b>（科學方法、臨床試驗）。</div><div><span class="lt lt2">為什麼放第一節？</span>開始學任何內容之前，先知道這門學問問的問題是「怎麼運作、為什麼」，而答案必須有實驗證據。之後讀到「研究發現…」，你就知道它是怎麼來的。</div></div>
+  <div class="oneline">生理學研究「身體怎麼運作」，而且要用科學方法找出背後的因果機制。</div>
+  <div class="think">「知道心臟會跳」和「知道心臟<b>為什麼</b>會跳、<b>怎麼</b>加快或變慢」差在哪裡？</div>
+
+  <h3>什麼是生理學？</h3>
+  <p class="core">生理學 physiology＝研究身體的<b>功能與機制</b>（怎麼發生、為什麼），用物理、化學的因果來解釋。例：喝很多水 → 血液變稀 → <b>抗利尿激素</b>（ADH）分泌減少 → 腎臟回收的水變少 → 尿變多。</p>
+  <p><b>生理學</b> <i class="en-term">physiology</i> 這個字源自希臘文：<i>physis</i>（自然）＋ <i>logos</i>（研究），意思是研究生物體的<b>功能</b>。它關心的不是「長什麼樣子」，而是「<b>怎麼運作</b>」——從分子之間的化學反應、細胞怎麼收縮或分泌，到器官怎麼合作、整個人怎麼適應運動或飢餓。</p>
+  <p>生理學的核心是<b>機制</b> <i class="en-term">mechanism</i>：用物理和化學的因果關係來解釋生命現象。例如「喝了很多水→尿變多」只是現象；生理學要解釋中間的每一步：血液變稀→下視丘的感受器偵測到滲透壓下降→<b>抗利尿激素</b>（ADH）分泌減少→腎臟集尿管再吸收的水變少→尿量增加。整本書幾乎都是這種「一步接一步」的敘述方式。</p>
+
+  <h4>生理學和其他學科的關係</h4>
+  <p class="core">解剖學＝構造（構造決定功能）；病理生理學＝疾病時功能怎麼出錯；比較生理學＝比較不同動物。</p>
+  <ul class="dots">
+    <li><b>解剖學</b> <i class="en-term">anatomy</i>：研究構造。<span class="key">構造和功能密不可分</span>——例如小腸內壁有絨毛、微絨毛，構造上把表面積放大，功能上就能吸收更多養分。讀生理學時常要搭配構造一起想。</li>
+    <li><b>病理生理學</b> <i class="en-term">pathophysiology</i>：研究疾病時功能<b>怎麼出錯</b>。要先懂正常，才看得懂異常；例如懂了胰島素怎麼降血糖，才能理解糖尿病。醫學、護理、營養治療都建立在這個基礎上——這也是為什麼諾貝爾獎的名稱是「生理學或醫學獎」。</li>
+    <li><b>比較生理學</b> <i class="en-term">comparative physiology</i>：比較不同動物的生理。人體的許多知識最早來自動物研究，因為很多基本機制在動物和人身上相同，所以動物實驗是推論人體功能的重要基礎。</li>
+  </ul>
+
+  <h3 id="s1a">科學方法 Scientific Method</h3>
+  <p class="core">假說（可檢驗、可否證）→ 有<b>對照組</b>的實驗 → 定量測量 → 統計 → 同儕審查發表 → 可重複 → 成為理論（仍可修正）。</p>
+  <p>生理學的知識不是憑感覺或權威說了算，而是用<b>科學方法</b>一步步驗證出來的。課本強調科學方法有幾個特點：</p>
+  <ol class="steps">
+    <li><b>觀察與提出假說</b> <i class="en-term">hypothesis</i>：根據觀察，提出一個可能的解釋。好的假說必須<b>可以被檢驗</b>，而且<b>有可能被證明是錯的</b>（可否證 <i class="en-term">falsifiable</i>）。「人體有看不見、測不到的生命能量」就不是科學假說，因為無法用實驗推翻。</li>
+    <li><b>設計實驗</b>：把受試者分成<b>實驗組</b>和<b>對照組</b> <i class="en-term">control group</i>。兩組條件盡量相同，只改變要研究的那一個因素（變因 <i class="en-term">variable</i>）。如果結果有差，才能歸因於那個因素。</li>
+    <li><b>定量測量</b> <i class="en-term">quantitative measurement</i>：結果要用數字記錄（血壓幾 mmHg、血糖幾 mg/dL），而不是「好像比較好」。</li>
+    <li><b>統計分析</b> <i class="en-term">statistics</i>：個體本來就有差異，兩組平均值不同也可能只是巧合。統計用來判斷差異是不是「顯著」——也就是不太可能只是偶然。</li>
+    <li><b>發表與同儕審查</b> <i class="en-term">peer review</i>：研究結果投稿到科學期刊，由同領域專家審查方法和推論是否合理，通過才發表。</li>
+    <li><b>可重複</b> <i class="en-term">reproducible</i>：其他實驗室用同樣方法要能得到類似結果，結論才可靠。</li>
+  </ol>
+  <p>當一個解釋被大量、多方面的證據支持，就稱為<b>理論</b> <i class="en-term">theory</i>。要注意科學上的「理論」不是日常說的「只是猜猜看」，而是目前最可靠的解釋；但它仍然是<b>暫時的</b>，有新證據時就會被修正。課本內容也會隨研究更新，所以每一版都會改寫。</p>
+
+  <div class="eg"><b class="t">例子：</b>想知道「減少鈉攝取能不能降血壓」。假說：減鈉可降低收縮壓。設計：隨機把高血壓受試者分成兩組，一組低鈉飲食（實驗組）、一組一般飲食（對照組），其他飲食與活動盡量相同；八週後測量血壓，用統計比較兩組差異。結果若顯著且他人能重複，這個結論就會被納入飲食指引。</div>
+
+  <details class="stop"><summary>為什麼一定要有對照組？</summary>
+    <div>因為很多因素都會讓結果改變——時間經過、季節、受試者知道自己在被研究而改變行為。只有和「條件相同、只差那一個因素」的對照組比，才能確定差異來自你研究的因素。</div>
+  </details>
+
+  <h3 id="s1b">新藥的開發與臨床試驗 Development of Pharmaceutical Drugs</h3>
+  <p>課本用新藥開發說明科學方法怎麼應用在醫學。一個藥要上市，大致經過：</p>
+  <div class="tblwrap"><table>
+    <tr><th>階段</th><th>對象</th><th>主要目的</th></tr>
+    <tr><td><b>臨床前研究</b><br><i class="en-term">preclinical</i></td><td>細胞培養、實驗動物</td><td>找出作用機制、初步評估毒性與有效性</td></tr>
+    <tr><td><b>第一期</b><br><i class="en-term">Phase I</i></td><td>少數<b>健康自願者</b></td><td><b>安全性</b>：毒性、人體怎麼代謝藥物、合適的劑量範圍</td></tr>
+    <tr><td><b>第二期</b><br><i class="en-term">Phase II</i></td><td>有目標疾病的<b>病人</b>（人數較多）</td><td><b>療效</b>與副作用；常採雙盲、安慰劑對照</td></tr>
+    <tr><td><b>第三期</b><br><i class="en-term">Phase III</i></td><td>大量病人、多個醫療中心</td><td>大規模確認療效與安全性，和現有治療比較</td></tr>
+    <tr><td>核准上市</td><td>—</td><td>由主管機關審查（美國 FDA；台灣為食藥署 TFDA）</td></tr>
+    <tr><td><b>第四期</b><br><i class="en-term">Phase IV</i></td><td>上市後的一般使用者</td><td>上市後監測，找出少見或長期的副作用</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 310" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><rect x="4" y="220" width="76" height="80" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="42" y="194" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">臨床前</text><text x="42" y="212" font-size="13" fill="#6b21a8" text-anchor="middle">機制・毒性</text><text x="42" y="274" font-size="13" fill="#374151" text-anchor="middle">細胞</text><text x="42" y="290" font-size="13" fill="#374151" text-anchor="middle">動物</text><ellipse cx="42" cy="240" rx="22" ry="9" fill="#fff" stroke="#9ca3af"/><rect x="83" y="192" width="76" height="108" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="121" y="166" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">第一期</text><text x="121" y="184" font-size="13" fill="#6b21a8" text-anchor="middle">安全・劑量</text><text x="121" y="274" font-size="13" fill="#374151" text-anchor="middle">健康人</text><text x="121" y="290" font-size="13" fill="#374151" text-anchor="middle">少數</text><circle cx="95" cy="202" r="4.5" fill="#0f766e"/><path d="M89,218 Q89,208 95,208 Q101,208 101,218 Z" fill="#0f766e"/><circle cx="112" cy="202" r="4.5" fill="#0f766e"/><path d="M106,218 Q106,208 112,208 Q118,208 118,218 Z" fill="#0f766e"/><rect x="162" y="164" width="76" height="136" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="200" y="138" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">第二期</text><text x="200" y="156" font-size="13" fill="#6b21a8" text-anchor="middle">療效</text><text x="200" y="274" font-size="13" fill="#374151" text-anchor="middle">病人</text><text x="200" y="290" font-size="13" fill="#374151" text-anchor="middle"></text><circle cx="174" cy="174" r="4.5" fill="#e11d48"/><path d="M168,190 Q168,180 174,180 Q180,180 180,190 Z" fill="#e11d48"/><circle cx="191" cy="174" r="4.5" fill="#e11d48"/><path d="M185,190 Q185,180 191,180 Q197,180 197,190 Z" fill="#e11d48"/><circle cx="208" cy="174" r="4.5" fill="#e11d48"/><path d="M202,190 Q202,180 208,180 Q214,180 214,190 Z" fill="#e11d48"/><circle cx="225" cy="174" r="4.5" fill="#e11d48"/><path d="M219,190 Q219,180 225,180 Q231,180 231,190 Z" fill="#e11d48"/><rect x="241" y="136" width="76" height="164" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="279" y="110" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">第三期</text><text x="279" y="128" font-size="13" fill="#6b21a8" text-anchor="middle">大規模確認</text><text x="279" y="274" font-size="13" fill="#374151" text-anchor="middle">大量病人</text><text x="279" y="290" font-size="13" fill="#374151" text-anchor="middle">多中心</text><circle cx="253" cy="146" r="4.5" fill="#e11d48"/><path d="M247,162 Q247,152 253,152 Q259,152 259,162 Z" fill="#e11d48"/><circle cx="270" cy="146" r="4.5" fill="#e11d48"/><path d="M264,162 Q264,152 270,152 Q276,152 276,162 Z" fill="#e11d48"/><circle cx="287" cy="146" r="4.5" fill="#e11d48"/><path d="M281,162 Q281,152 287,152 Q293,152 293,162 Z" fill="#e11d48"/><circle cx="304" cy="146" r="4.5" fill="#e11d48"/><path d="M298,162 Q298,152 304,152 Q310,152 310,162 Z" fill="#e11d48"/><circle cx="253" cy="170" r="4.5" fill="#e11d48"/><path d="M247,186 Q247,176 253,176 Q259,176 259,186 Z" fill="#e11d48"/><circle cx="270" cy="170" r="4.5" fill="#e11d48"/><path d="M264,186 Q264,176 270,176 Q276,176 276,186 Z" fill="#e11d48"/><circle cx="287" cy="170" r="4.5" fill="#e11d48"/><path d="M281,186 Q281,176 287,176 Q293,176 293,186 Z" fill="#e11d48"/><circle cx="304" cy="170" r="4.5" fill="#e11d48"/><path d="M298,186 Q298,176 304,176 Q310,176 310,186 Z" fill="#e11d48"/><rect x="320" y="108" width="76" height="192" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="358" y="82" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">核准</text><text x="358" y="100" font-size="13" fill="#6b21a8" text-anchor="middle">審查</text><text x="358" y="274" font-size="13" fill="#374151" text-anchor="middle">TFDA</text><text x="358" y="290" font-size="13" fill="#374151" text-anchor="middle">FDA</text><text x="358" y="168" font-size="40" fill="#15803d" text-anchor="middle" font-weight="bold">✓</text><rect x="399" y="80" width="76" height="220" rx="6" fill="#f5f3ff" stroke="#7c3aed"/><text x="437" y="54" font-size="16" fill="#4c1d95" text-anchor="middle" font-weight="bold">第四期</text><text x="437" y="72" font-size="13" fill="#6b21a8" text-anchor="middle">長期監測</text><text x="437" y="274" font-size="13" fill="#374151" text-anchor="middle">上市後</text><text x="437" y="290" font-size="13" fill="#374151" text-anchor="middle">大眾</text><circle cx="411" cy="90" r="4.5" fill="#6b7280"/><path d="M405,106 Q405,96 411,96 Q417,96 417,106 Z" fill="#6b7280"/><circle cx="428" cy="90" r="4.5" fill="#6b7280"/><path d="M422,106 Q422,96 428,96 Q434,96 434,106 Z" fill="#6b7280"/><circle cx="445" cy="90" r="4.5" fill="#6b7280"/><path d="M439,106 Q439,96 445,96 Q451,96 451,106 Z" fill="#6b7280"/><circle cx="462" cy="90" r="4.5" fill="#6b7280"/><path d="M456,106 Q456,96 462,96 Q468,96 468,106 Z" fill="#6b7280"/><circle cx="411" cy="114" r="4.5" fill="#6b7280"/><path d="M405,130 Q405,120 411,120 Q417,120 417,130 Z" fill="#6b7280"/><circle cx="428" cy="114" r="4.5" fill="#6b7280"/><path d="M422,130 Q422,120 428,120 Q434,120 434,130 Z" fill="#6b7280"/><circle cx="445" cy="114" r="4.5" fill="#6b7280"/><path d="M439,130 Q439,120 445,120 Q451,120 451,130 Z" fill="#6b7280"/><circle cx="462" cy="114" r="4.5" fill="#6b7280"/><path d="M456,130 Q456,120 462,120 Q468,120 468,130 Z" fill="#6b7280"/><circle cx="411" cy="138" r="4.5" fill="#6b7280"/><path d="M405,154 Q405,144 411,144 Q417,144 417,154 Z" fill="#6b7280"/><circle cx="428" cy="138" r="4.5" fill="#6b7280"/><path d="M422,154 Q422,144 428,144 Q434,144 434,154 Z" fill="#6b7280"/><circle cx="445" cy="138" r="4.5" fill="#6b7280"/><path d="M439,154 Q439,144 445,144 Q451,144 451,154 Z" fill="#6b7280"/><circle cx="462" cy="138" r="4.5" fill="#6b7280"/><path d="M456,154 Q456,144 462,144 Q468,144 468,154 Z" fill="#6b7280"/><circle cx="12" cy="14" r="4.5" fill="#0f766e"/><path d="M6,30 Q6,20 12,20 Q18,20 18,30 Z" fill="#0f766e"/><text x="26" y="27" font-size="13" fill="#1f2937" text-anchor="start">健康人</text><circle cx="90" cy="14" r="4.5" fill="#e11d48"/><path d="M84,30 Q84,20 90,20 Q96,20 96,30 Z" fill="#e11d48"/><text x="104" y="27" font-size="13" fill="#1f2937" text-anchor="start">病人</text></svg><figcaption>新藥上市像爬樓梯：越往上，受試人數越多；第一期是健康人、第二期起才是病人。</figcaption></figure>
+  <ul class="dots">
+    <li><b>安慰劑</b> <i class="en-term">placebo</i>：外觀和真藥一樣但沒有活性成分。光是「以為自己吃了藥」就可能讓症狀改善，這叫<b>安慰劑效應</b> <i class="en-term">placebo effect</i>，所以要用安慰劑組當對照。</li>
+    <li><b>雙盲</b> <i class="en-term">double-blind</i>：受試者和直接接觸受試者的研究人員<b>都不知道</b>誰吃真藥、誰吃安慰劑，避免雙方的期待影響結果與判讀。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>保健食品、營養介入研究也用同樣邏輯判斷效果。讀研究報告時先看：有沒有對照組？是不是隨機、雙盲？人數多少？這些決定證據強弱。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>生理學研究身體的<b>功能與機制</b>，以物理、化學的因果關係解釋生命現象；構造與功能密不可分。</li>
+      <li>病理生理學研究疾病時功能如何異常，是醫學與營養治療的基礎。</li>
+      <li>科學方法：可檢驗、可否證的假說 → 有對照組的實驗 → 定量測量與統計 → 同儕審查發表 → 可重複驗證。</li>
+      <li>新藥開發：臨床前 → 第一期（健康人、安全）→ 第二期（病人、療效）→ 第三期（大規模）→ 核准 → 第四期（上市後監測）。</li>
+      <li><b>安慰劑</b>對照與雙盲設計用來排除期待心理造成的偏差。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>生理學</td><td>physiology</td><td>解剖學</td><td>anatomy</td></tr>
+      <tr><td>病理生理學</td><td>pathophysiology</td><td>比較生理學</td><td>comparative physiology</td></tr>
+      <tr><td>假說</td><td>hypothesis</td><td>理論</td><td>theory</td></tr>
+      <tr><td>對照組</td><td>control group</td><td>變因</td><td>variable</td></tr>
+      <tr><td>同儕審查</td><td>peer review</td><td>臨床試驗</td><td>clinical trial</td></tr>
+      <tr><td>安慰劑</td><td>placebo</td><td>雙盲</td><td>double-blind</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 1.2 ============ -->
+<section class="sec det" id="s2">
+  <h2><span class="no">1.2</span>恆定與回饋控制</h2>
+  <div class="en">Homeostasis and Feedback Control</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>整本書最重要的觀念：身體要維持<b>恆定</b>，主要方法是<b>負回饋</b>（偵測 → 判斷 → 執行）。</div><div><span class="lt lt2">為什麼接在 1.1 後面？</span>1.1 說生理學在問「怎麼運作」；這一節給出答案的總綱——幾乎每個器官的運作，最後都是為了把某個數值維持穩定。後面每章都會用「感受器、整合中心、動器」來分析。</div></div>
+  <div class="oneline">身體會把內在環境（體溫、血糖、血壓等）維持在一個範圍內，最主要的方法是負回饋。</div>
+  <div class="think">冷氣設定 26°C，房間溫度升到 27°C 時冷氣會怎樣？降到 25°C 時呢？身體是不是也有類似的「冷氣」？</div>
+
+  <h3 id="s2a">生理學的歷史 History of Physiology</h3>
+  <p>課本在這節先簡短回顧了幾位重要人物，重點是「恆定」這個概念是怎麼被提出的：</p>
+  <ul class="dots">
+    <li><b>希波克拉底</b> <i class="en-term">Hippocrates</i>（古希臘）：被稱為醫學之父，主張疾病有自然原因，而不是神靈懲罰。</li>
+    <li><b>蓋倫</b> <i class="en-term">Galen</i>（古羅馬）：用動物實驗研究身體功能，被視為最早的實驗生理學家之一；他的許多觀念影響了醫學一千多年。</li>
+    <li><b>哈維</b> <i class="en-term">William Harvey</i>（1628 年）：以實驗證明<b>血液在體內循環</b>，由心臟推動。</li>
+    <li><b>克勞德・伯納</b> <i class="en-term">Claude Bernard</i>（19 世紀法國）：提出<b>內在環境</b> <i class="en-term">milieu intérieur</i> 的觀念——細胞生活在體內的液體（細胞外液）中，<span class="key">內在環境保持穩定，生物才能不受外界變化影響、自由獨立地生活</span>。</li>
+    <li><b>坎農</b> <i class="en-term">Walter Cannon</i>（20 世紀美國）：延伸伯納的觀念，創造了<b>恆定</b> <i class="en-term">homeostasis</i> 這個詞（著作《身體的智慧》<i>The Wisdom of the Body</i>，1932），用來描述身體維持內在環境穩定的狀態與機制。</li>
+  </ul>
+  <div class="warn"><b class="t">易考：</b>「內在環境 milieu intérieur」→ 伯納；「homeostasis 這個詞」→ 坎農。兩人常被對調來考。</div>
+
+  <h3>恆定是「動態」的穩定</h3>
+  <p><b>恆定</b> <i class="en-term">homeostasis</i> 字面是「保持相同」，但不是數值完全不動。課本強調的是<b>動態恆定</b> <i class="en-term">dynamic constancy</i>：數值會一直上下小幅波動，但被控制在一個<b>正常範圍</b> <i class="en-term">normal range</i> 內，圍繞著一個平均值，稱為<b>設定點</b> <i class="en-term">set point</i>。</p>
+  <p>例如飯後血糖會上升、空腹久了會下降，但健康的人都會被拉回正常範圍。臨床檢驗正是利用這一點：<span class="key">數值長期超出正常範圍，代表恆定機制出了問題，也就是疾病</span>。</p>
+  <div class="tblwrap"><table>
+    <tr><th>項目（血液）</th><th>常見正常範圍</th><th>和本書哪一章有關</th></tr>
+    <tr><td>動脈血 pH</td><td>7.35–7.45</td><td>第 16、17 章 酸鹼平衡</td></tr>
+    <tr><td>鈉 Na⁺</td><td>約 135–145 mEq/L</td><td>第 17 章 腎臟</td></tr>
+    <tr><td>鉀 K⁺</td><td>約 3.5–5.0 mEq/L</td><td>第 6、7 章 膜電位</td></tr>
+    <tr><td>空腹血糖</td><td>約 70–100 mg/dL</td><td>第 19 章 代謝的調節</td></tr>
+    <tr><td>核心體溫</td><td>約 37°C（隨時間、部位小幅變動）</td><td>第 19 章</td></tr>
+  </table></div>
+  <p style="font-size:14px;color:var(--sub)">※ 表中數值為常用參考範圍，課本表格的數字與單位可能略有不同，考試以課本或老師講義為準。</p>
+
+  <h3 id="s2b">負回饋 Negative Feedback Loops</h3>
+  <p>身體維持恆定最主要的方法是<b>負回饋</b> <i class="en-term">negative feedback</i>。「負」的意思是：<span class="key">反應的方向和偏離的方向相反</span>——數值太高就把它往下拉，太低就往上推，結果是<b>減少偏離</b>、回到設定點。</p>
+  <p>一個負回饋迴路有三個基本角色（生理學每一章都會用到，一定要熟）：</p>
+  <div class="tblwrap"><table>
+    <tr><th>角色</th><th>英文</th><th>做什麼</th><th>體溫的例子</th></tr>
+    <tr><td><b>感受器</b>（感應器）</td><td>sensor / receptor</td><td><b>偵測</b>數值的變化</td><td>皮膚與下視丘的溫度感受器</td></tr>
+    <tr><td><b>整合中心</b></td><td>integrating center</td><td>把偵測到的值和設定點<b>比較</b>，<b>決定</b>要怎麼反應</td><td><b>下視丘</b>的體溫調節中樞</td></tr>
+    <tr><td><b>動器</b>（作用器）</td><td>effector</td><td><b>執行</b>反應，把數值拉回</td><td>汗腺、皮膚血管、骨骼肌（顫抖）</td></tr>
+  </table></div>
+
+  <figure>
+    <svg viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker></defs>
+      <rect x="225" y="10" width="190" height="52" rx="10" fill="#fff1f2" stroke="#e11d48"/>
+      <text x="320" y="33" text-anchor="middle" font-size="16" fill="#881337">刺激：體溫上升</text>
+      <text x="320" y="53" text-anchor="middle" font-size="13" fill="#881337">偏離設定點 37°C</text>
+      <rect x="440" y="110" width="185" height="56" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+      <text x="532" y="134" text-anchor="middle" font-size="16" fill="#1e3a8a">① 感受器</text>
+      <text x="532" y="155" text-anchor="middle" font-size="13" fill="#1e3a8a">溫度感受器偵測</text>
+      <rect x="225" y="225" width="190" height="56" rx="10" fill="#f5f3ff" stroke="#7c3aed"/>
+      <text x="320" y="249" text-anchor="middle" font-size="16" fill="#4c1d95">② 整合中心</text>
+      <text x="320" y="270" text-anchor="middle" font-size="13" fill="#4c1d95">下視丘比較、決定</text>
+      <rect x="15" y="110" width="185" height="56" rx="10" fill="#f0fdfa" stroke="#0f766e"/>
+      <text x="107" y="134" text-anchor="middle" font-size="16" fill="#134e4a">③ 動器</text>
+      <text x="107" y="155" text-anchor="middle" font-size="13" fill="#134e4a">流汗、皮膚血管擴張</text>
+      <path d="M415,40 Q520,50 530,105" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M530,170 Q520,245 420,252" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M222,252 Q115,245 107,172" fill="none" stroke="#374151" stroke-width="2" marker-end="url(#ar)"/>
+      <path d="M107,106 Q115,45 220,38" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+      <text x="95" y="62" font-size="15" fill="#dc2626" font-weight="bold">（−）散熱，體溫回降</text>
+    </svg>
+    <figcaption>負回饋迴路：反應（紅色虛線）抵銷了原本的刺激，所以叫「負」回饋。</figcaption>
+  </figure>
+
+  <h4>體溫的負回饋：兩個方向</h4>
+  <figure class="pic"><svg viewBox="0 0 480 365" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m3" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#374151"/></marker></defs><text x="240" y="20" font-size="15" fill="#374151" text-anchor="middle">感受器偵測體溫 → 告訴下視丘</text><circle cx="240" cy="78" r="44" fill="#f5f3ff" stroke="#7c3aed" stroke-width="3"/><text x="240" y="87" font-size="26" fill="#4c1d95" text-anchor="middle" font-weight="bold">37°C</text><text x="240" y="142" font-size="15" fill="#4c1d95" text-anchor="middle" font-weight="bold">下視丘（整合中心）</text><path d="M200,100 Q150,125 128,160" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#m3)"/><path d="M280,100 Q330,125 352,160" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#m3)"/><circle cx="38" cy="50" r="18" fill="#fbbf24"/><line x1="15.5" y1="50.0" x2="8" y2="50" stroke="#f59e0b" stroke-width="3"/><line x1="60.5" y1="50.0" x2="68" y2="50" stroke="#f59e0b" stroke-width="3"/><line x1="38.0" y1="27.5" x2="38" y2="20" stroke="#f59e0b" stroke-width="3"/><line x1="38.0" y1="72.5" x2="38" y2="80" stroke="#f59e0b" stroke-width="3"/><line x1="22.25" y1="34.25" x2="17" y2="29" stroke="#f59e0b" stroke-width="3"/><line x1="53.75" y1="65.75" x2="59" y2="71" stroke="#f59e0b" stroke-width="3"/><line x1="53.75" y1="34.25" x2="59" y2="29" stroke="#f59e0b" stroke-width="3"/><line x1="22.25" y1="65.75" x2="17" y2="71" stroke="#f59e0b" stroke-width="3"/><circle cx="95" cy="200" r="28" fill="#fecaca" stroke="#e11d48" stroke-width="2"/><path d="M55,285 Q55,232 95,232 Q135,232 135,285 Z" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><path d="M60,182 q-6,10 0,14 q6,-4 0,-14z" fill="#3b82f6"/><path d="M132,188 q-6,10 0,14 q6,-4 0,-14z" fill="#3b82f6"/><path d="M128,215 q-6,10 0,14 q6,-4 0,-14z" fill="#3b82f6"/><path d="M58,215 q-6,10 0,14 q6,-4 0,-14z" fill="#3b82f6"/><text x="95" y="312" font-size="17" fill="#be123c" text-anchor="middle" font-weight="bold">太熱</text><text x="95" y="334" font-size="14" fill="#881337" text-anchor="middle">流汗、皮膚血管擴張</text><text x="95" y="354" font-size="14" fill="#881337" text-anchor="middle">→ 散熱</text><circle cx="385" cy="200" r="28" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><path d="M345,285 Q345,232 385,232 Q425,232 425,285 Z" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/><path d="M338,180 l-7,9 l7,9 l-7,9 l7,9 l-7,9" fill="none" stroke="#2563eb" stroke-width="2.5"/><path d="M432,180 l-7,9 l7,9 l-7,9 l7,9 l-7,9" fill="none" stroke="#2563eb" stroke-width="2.5"/><text x="445" y="45" font-size="24" fill="#60a5fa" text-anchor="middle">❄</text><text x="465" y="80" font-size="18" fill="#60a5fa" text-anchor="middle">❄</text><text x="385" y="312" font-size="17" fill="#1d4ed8" text-anchor="middle" font-weight="bold">太冷</text><text x="385" y="334" font-size="14" fill="#1e3a8a" text-anchor="middle">顫抖、皮膚血管收縮</text><text x="385" y="354" font-size="14" fill="#1e3a8a" text-anchor="middle">→ 產熱、保熱</text></svg><figcaption>體溫的負回饋：同一個下視丘，兩邊用相反的動器（拮抗動器）把體溫拉回 37°C。</figcaption></figure>
+
+  <ul class="dots">
+    <li><b>體溫太高</b>：感受器偵測 → 下視丘 → 汗腺分泌汗水（蒸發散熱）、皮膚血管擴張（把熱帶到體表散掉）→ 體溫下降。</li>
+    <li><b>體溫太低</b>：感受器偵測 → 下視丘 → 皮膚血管收縮（減少散熱）、骨骼肌<b>顫抖</b> <i class="en-term">shivering</i>（產熱）→ 體溫上升。</li>
+  </ul>
+  <p>注意體溫不會「剛好停在」37°C，而是像冷氣一樣在設定點附近小幅來回擺動，這正是「動態」恆定的意思。</p>
+
+  <h4>拮抗動器 Antagonistic Effectors</h4>
+  <p class="core">方向相反的兩組動器，像油門和煞車：流汗↔顫抖、胰島素↔升糖素、<b>交感神經</b>↔<b>副交感神經</b>。</p>
+  <p>很多恆定不是只靠一個動器，而是有<b>方向相反的兩組動器</b>，稱為<b>拮抗動器</b> <i class="en-term">antagonistic effectors</i>。就像開車同時有油門和煞車，比只靠「放開油門」減速更精準。例子：</p>
+  <ul class="dots">
+    <li>體溫：流汗（降溫）↔ 顫抖（升溫）。</li>
+    <li>血糖：<b>胰島素</b> <i class="en-term">insulin</i>（降血糖）↔ <b>升糖素</b> <i class="en-term">glucagon</i>（升血糖）。</li>
+    <li>心跳：<b>交感神經</b>（加快）↔ <b>副交感神經</b>（減慢）（第 9 章）。</li>
+  </ul>
+
+  <details class="stop"><summary>冷氣的例子裡，誰是感受器、整合中心、動器？</summary>
+    <div>感受器＝溫度感測器；整合中心＝控制電路（把室溫和設定的 26°C 比較）；動器＝壓縮機與風扇。若同一台機器也會「暖房」，那冷氣和暖氣就是一對拮抗動器。</div>
+  </details>
+
+  <h3 id="s2c">正回饋 Positive Feedback</h3>
+  <figure class="pic"><svg viewBox="0 0 480 405" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m2" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#374151"/></marker></defs><text x="240" y="24" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">負回饋：碗裡的球，偏了會滾回中間</text><path d="M40,55 Q240,255 440,55" fill="none" stroke="#2563eb" stroke-width="5"/><line x1="240" y1="70" x2="240" y2="152" stroke="#2563eb" stroke-dasharray="5 4"/><text x="240" y="178" font-size="15" fill="#1e3a8a" text-anchor="middle">設定點（恆定）</text><circle cx="118" cy="104" r="13" fill="#e11d48"/><text x="100" y="78" font-size="15" fill="#e11d48" text-anchor="middle">偏離</text><path d="M135,112 Q180,142 222,146" fill="none" stroke="#374151" stroke-width="2.5" marker-end="url(#m2)"/><text x="240" y="222" font-size="17" fill="#92400e" text-anchor="middle" font-weight="bold">正回饋：雪球越滾越大，要有終點才停</text><line x1="30" y1="245" x2="400" y2="368" stroke="#b45309" stroke-width="5"/><circle cx="62" cy="248" r="7" fill="#fff" stroke="#b45309" stroke-width="2"/><circle cx="170" cy="279" r="13" fill="#fff" stroke="#b45309" stroke-width="2"/><circle cx="300" cy="316" r="21" fill="#fff" stroke="#b45309" stroke-width="2"/><path d="M78,252 L148,272" stroke="#374151" stroke-width="2" marker-end="url(#m2)"/><path d="M190,286 L270,307" stroke="#374151" stroke-width="2" marker-end="url(#m2)"/><rect x="408" y="300" width="14" height="80" fill="#374151"/><text x="415" y="292" font-size="15" fill="#374151" text-anchor="middle" font-weight="bold">終點</text><text x="30" y="396" font-size="15" fill="#92400e" text-anchor="start">例：分娩（催產素）、凝血、排卵前 LH 高峰</text></svg><figcaption>負回饋把偏離拉回設定點，維持恆定；正回饋把變化放大，直到某個終點才停。</figcaption></figure>
+  <p><b>正回饋</b> <i class="en-term">positive feedback</i> 剛好相反：<span class="key">反應的方向和偏離的方向相同，會讓變化越來越大</span>（放大）。所以正回饋<b>不能維持恆定</b>，通常只用在需要「快速衝到底、完成一件事」的情況，而且一定要有外在的<b>終止點</b>，迴路才會停下來。</p>
+  <ul class="dots">
+    <li><b>分娩</b>：胎頭壓迫子宮頸 → 神經訊號傳到下視丘 → 後<b>腦垂腺</b>釋放<b>催產素</b> <i class="en-term">oxytocin</i> → 子宮收縮更強 → 胎頭壓迫更多 → 更多催產素……直到胎兒產出，壓迫消失，迴路才停止。</li>
+    <li><b>血液凝固</b>：凝血因子一個活化下一個，越來越多，迅速形成血塊（第 13 章）；止血完成就停止。</li>
+    <li><b>排卵前的 LH 大量分泌</b>（LH surge）：雌激素升到一定程度，反而促進 LH 分泌，形成 LH 高峰而引發排卵（第 20 章）。</li>
+  </ul>
+  <p>正回饋常是更大的負回饋的一部分：例如凝血用正回饋快速止血，最終目的是阻止血液繼續流失、維持血量恆定。</p>
+  <div class="warn"><b class="t">易混淆：</b>「正」「負」不是指好壞，也不是指增加或減少，而是指反應和偏離的<b>方向是否相同</b>。負回饋＝方向相反、減少偏離；正回饋＝方向相同、放大偏離。</div>
+
+  <h3>內在調節與外在調節 Intrinsic and Extrinsic Regulation</h3>
+  <p class="core">內在＝器官自己調節（自我調節 autoregulation）；外在＝由<b>神經</b>與<b>內分泌</b>系統從外部調控。</p>
+  <ul class="dots">
+    <li><b>內在調節</b> <i class="en-term">intrinsic regulation</i>（也稱<b>自我調節</b> <i class="en-term">autoregulation</i>）：由器官本身的組織或細胞完成，不需要外來指令。例如運動時肌肉產生代謝產物，讓當地的血管擴張、血流增加（第 14 章）。</li>
+    <li><b>外在調節</b> <i class="en-term">extrinsic regulation</i>：由器官以外的系統來調控，也就是<b>神經系統</b>和<b>內分泌系統</b>。這兩者能同時協調許多器官。</li>
+  </ul>
+
+  <h3 id="s2d">神經與內分泌調節 Neural and Endocrine Regulation</h3>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>神經系統 nervous system</th><th>內分泌系統 endocrine system</th></tr>
+    <tr><td>訊號</td><td>沿神經纖維傳遞的電訊號＋突觸釋放的<b>神經傳遞物質</b> <i class="en-term">neurotransmitter</i></td><td>腺體分泌的<b>激素（荷爾蒙）</b> <i class="en-term">hormone</i>，由<b>血液</b>運送到全身</td></tr>
+    <tr><td>作用對象</td><td>神經直接連到的肌肉、腺體或其他神經元</td><td>只作用在有該激素<b>受體</b> <i class="en-term">receptor</i> 的<b>標的細胞</b> <i class="en-term">target cells</i></td></tr>
+    <tr><td>速度與持續</td><td>快速（毫秒）、通常短暫</td><td>較慢（數秒到數小時）、通常較持久</td></tr>
+  </table></div>
+  <p>兩個系統彼此密切合作：例如下視丘本身是腦的一部分，卻能分泌激素控制腦垂腺（第 11 章）；腎上腺髓質受交感神經刺激而分泌腎上腺素（第 9 章）。</p>
+
+  <h3 id="s2e">激素分泌的回饋控制 Feedback Control of Hormone Secretion</h3>
+  <p>激素的分泌量本身也受負回饋調控。課本用<b>血糖</b>當例子，這是營養系最重要的例子之一：</p>
+  <div class="tblwrap"><table>
+    <tr><th>情境</th><th>偏離</th><th>感受器＋整合中心</th><th>激素</th><th>動器的反應</th><th>結果</th></tr>
+    <tr><td><b>飯後</b></td><td>血糖↑</td><td>胰島的 <b>β 細胞</b>（beta cells）</td><td><b>胰島素</b>分泌↑</td><td>肌肉、脂肪細胞攝取葡萄糖增加；肝臟與肌肉合成<b>肝醣</b> <i class="en-term">glycogen</i>；脂肪組織合成脂肪</td><td>血糖↓ 回到正常</td></tr>
+    <tr><td><b>空腹／禁食</b></td><td>血糖↓</td><td>胰島的 <b>α 細胞</b>（alpha cells）</td><td><b>升糖素</b>分泌↑（胰島素↓）</td><td>肝臟分解肝醣（<b>肝醣分解</b> <i class="en-term">glycogenolysis</i>）、由胺基酸等合成葡萄糖（<b>糖質新生</b> <i class="en-term">gluconeogenesis</i>）並釋放入血</td><td>血糖↑ 回到正常</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 505" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m4" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#374151"/></marker></defs><text x="122" y="24" font-size="19" fill="#be123c" text-anchor="middle" font-weight="bold">飯後</text><text x="357" y="24" font-size="19" fill="#1d4ed8" text-anchor="middle" font-weight="bold">空腹</text><line x1="240" y1="8" x2="240" y2="500" stroke="#e5e7eb" stroke-width="2"/><path d="M122,136 L122,152" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><path d="M122,251 L122,267" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><path d="M122,366 L122,382" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><ellipse cx="122" cy="88" rx="58" ry="18" fill="#fff" stroke="#9ca3af" stroke-width="2"/><ellipse cx="122" cy="78" rx="32" ry="17" fill="#fef3c7" stroke="#d97706"/><text x="122" y="128" font-size="15" fill="#1f2937" text-anchor="middle">吃飯：葡萄糖進入血液</text><rect x="27" y="167" width="190" height="46" rx="23" fill="#fee2e2" stroke="#e11d48" stroke-width="2"/><polygon points="60.0,183.0 56.0,189.9 48.0,189.9 44.0,183.0 48.0,176.1 56.0,176.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="85.0,199.0 81.0,205.9 73.0,205.9 69.0,199.0 73.0,192.1 81.0,192.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="110.0,181.0 106.0,187.9 98.0,187.9 94.0,181.0 98.0,174.1 106.0,174.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="135.0,197.0 131.0,203.9 123.0,203.9 119.0,197.0 123.0,190.1 131.0,190.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="160.0,182.0 156.0,188.9 148.0,188.9 144.0,182.0 148.0,175.1 156.0,175.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="185.0,198.0 181.0,204.9 173.0,204.9 169.0,198.0 173.0,191.1 181.0,191.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="205.0,184.0 201.0,190.9 193.0,190.9 189.0,184.0 193.0,177.1 201.0,177.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><text x="122" y="243" font-size="15" fill="#be123c" text-anchor="middle" font-weight="bold">血糖↑（糖很多）</text><circle cx="72" cy="308" r="30" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="72" y="317" font-size="26" fill="#92400e" text-anchor="middle" font-weight="bold">β</text><circle cx="127" cy="295" r="6" fill="none" stroke="#d97706" stroke-width="3"/><line x1="133" y1="295" x2="147" y2="295" stroke="#d97706" stroke-width="3"/><line x1="143" y1="295" x2="143" y2="301" stroke="#d97706" stroke-width="3"/><circle cx="155" cy="317" r="6" fill="none" stroke="#d97706" stroke-width="3"/><line x1="161" y1="317" x2="175" y2="317" stroke="#d97706" stroke-width="3"/><line x1="171" y1="317" x2="171" y2="323" stroke="#d97706" stroke-width="3"/><circle cx="183" cy="295" r="6" fill="none" stroke="#d97706" stroke-width="3"/><line x1="189" y1="295" x2="203" y2="295" stroke="#d97706" stroke-width="3"/><line x1="199" y1="295" x2="199" y2="301" stroke="#d97706" stroke-width="3"/><text x="122" y="358" font-size="15" fill="#1f2937" text-anchor="middle">β 細胞放出胰島素（鑰匙）</text><circle cx="67" cy="421" r="30" fill="#f0fdfa" stroke="#0f766e" stroke-width="2"/><rect x="92" y="413" width="10" height="16" fill="#fff"/><polygon points="67.0,415.0 63.5,421.1 56.5,421.1 53.0,415.0 56.5,408.9 63.5,408.9" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="81.0,431.0 77.5,437.1 70.5,437.1 67.0,431.0 70.5,424.9 77.5,424.9" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><path d="M130,410 Q135,388 170,395 Q210,401 206,423 Q180,451 140,441 Q124,431 130,410 Z" fill="#e7c9a9" stroke="#92400e" stroke-width="2"/><circle cx="162" cy="410" r="4" fill="#fbbf24" stroke="#b45309"/><circle cx="170" cy="417" r="4" fill="#fbbf24" stroke="#b45309"/><circle cx="178" cy="411" r="4" fill="#fbbf24" stroke="#b45309"/><circle cx="168" cy="425" r="4" fill="#fbbf24" stroke="#b45309"/><circle cx="182" cy="421" r="4" fill="#fbbf24" stroke="#b45309"/><circle cx="158" cy="421" r="4" fill="#fbbf24" stroke="#b45309"/><text x="122" y="473" font-size="15" fill="#1f2937" text-anchor="middle">細胞開門吃糖；肝存成肝醣</text><text x="122" y="497" font-size="16" fill="#be123c" text-anchor="middle" font-weight="bold">→ 血糖回降</text><path d="M357,136 L357,152" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><path d="M357,251 L357,267" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><path d="M357,366 L357,382" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><circle cx="357" cy="78" r="28" fill="#fff" stroke="#6b7280" stroke-width="3"/><line x1="357" y1="78" x2="357" y2="58" stroke="#374151" stroke-width="3"/><line x1="357" y1="78" x2="372" y2="84" stroke="#374151" stroke-width="3"/><text x="357" y="128" font-size="15" fill="#1f2937" text-anchor="middle">很久沒吃東西</text><rect x="262" y="167" width="190" height="46" rx="23" fill="#fee2e2" stroke="#e11d48" stroke-width="2"/><polygon points="325.0,190.0 321.0,196.9 313.0,196.9 309.0,190.0 313.0,183.1 321.0,183.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="405.0,190.0 401.0,196.9 393.0,196.9 389.0,190.0 393.0,183.1 401.0,183.1" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><text x="357" y="243" font-size="15" fill="#1d4ed8" text-anchor="middle" font-weight="bold">血糖↓（糖很少）</text><circle cx="307" cy="308" r="30" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><text x="307" y="317" font-size="26" fill="#92400e" text-anchor="middle" font-weight="bold">α</text><polygon points="362,287 378,295 362,303" fill="#a78bfa" stroke="#6d28d9"/><polygon points="390,309 406,317 390,325" fill="#a78bfa" stroke="#6d28d9"/><polygon points="418,287 434,295 418,303" fill="#a78bfa" stroke="#6d28d9"/><text x="357" y="358" font-size="15" fill="#1f2937" text-anchor="middle">α 細胞放出升糖素</text><path d="M277,410 Q282,388 317,395 Q357,401 353,423 Q327,451 287,441 Q271,431 277,410 Z" fill="#e7c9a9" stroke="#92400e" stroke-width="2"/><path d="M357,420 L397,420" stroke="#374151" stroke-width="2.5" marker-end="url(#m4)"/><polygon points="424.0,410.0 420.5,416.1 413.5,416.1 410.0,410.0 413.5,403.9 420.5,403.9" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="442.0,427.0 438.5,433.1 431.5,433.1 428.0,427.0 431.5,420.9 438.5,420.9" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><polygon points="422.0,435.0 418.5,441.1 411.5,441.1 408.0,435.0 411.5,428.9 418.5,428.9" fill="#fbbf24" stroke="#b45309" stroke-width="1.5"/><text x="357" y="473" font-size="15" fill="#1f2937" text-anchor="middle">肝分解肝醣、糖質新生</text><text x="357" y="497" font-size="16" fill="#1d4ed8" text-anchor="middle" font-weight="bold">→ 血糖回升</text></svg><figcaption>血糖的負回饋：飯後靠胰島素把糖收進細胞，空腹靠升糖素讓肝臟把糖放出來。黃色六角形＝葡萄糖。</figcaption></figure>
+  <p>關鍵在於「回饋」：飯後胰島素讓血糖下降後，刺激 β 細胞的因素（高血糖）就變弱了，於是<span class="key">胰島素分泌也跟著減少</span>——激素降低了自己分泌的刺激，這就是激素分泌的負回饋。同時胰島素和升糖素是一對拮抗激素。</p>
+  <div class="nut"><b class="t">營養連結：</b>糖尿病就是這個負回饋失效——第 1 型是 β 細胞被破壞、胰島素不足；第 2 型主要是標的細胞對胰島素反應變差（胰島素阻抗）。第 19 章會詳細說明飽食與禁食時的整體代謝調節。</div>
+
+  <details class="stop"><summary>發燒時體溫 39°C，身體還有在做負回饋嗎？</summary>
+    <div>有。發燒時下視丘的<b>設定點被調高</b>了（例如調到 39°C），身體會用顫抖、血管收縮把體溫「拉上去」並維持在新的設定點，所以發燒初期會覺得冷、會發抖。退燒時設定點回到 37°C，身體就會流汗散熱。這說明設定點本身是可以被改變的。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>伯納提出「內在環境」；坎農創造「恆定 homeostasis」一詞。</li>
+      <li>恆定是<b>動態恆定</b>：數值在正常範圍內圍繞設定點波動。</li>
+      <li>負回饋三要素：<b>感受器（偵測）→ 整合中心（比較、決定）→ 動器（執行）</b>；反應方向與偏離相反，用來維持恆定。</li>
+      <li>拮抗動器（流汗／顫抖、胰島素／升糖素、交感／副交感）讓調節更精細。</li>
+      <li>正回饋放大變化，不能維持恆定，需有終點：分娩（<b>腦垂腺</b>後葉釋放<b>催產素</b>）、凝血、<b>排卵前的 LH 大量分泌</b>（LH 高峰）。</li>
+      <li>內在調節（器官自我調節）vs 外在調節（神經、內分泌）。神經快而短暫；激素經血液作用在有受體的標的細胞，較慢而持久。</li>
+      <li>血糖：飯後 β 細胞分泌胰島素降血糖；空腹 α 細胞分泌升糖素升血糖；激素分泌本身受負回饋調控。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>恆定</td><td>homeostasis</td><td>內在環境</td><td>milieu intérieur / internal environment</td></tr>
+      <tr><td>動態恆定</td><td>dynamic constancy</td><td>設定點</td><td>set point</td></tr>
+      <tr><td>負回饋</td><td>negative feedback</td><td>正回饋</td><td>positive feedback</td></tr>
+      <tr><td>感受器</td><td>sensor / receptor</td><td>整合中心</td><td>integrating center</td></tr>
+      <tr><td>動器</td><td>effector</td><td>拮抗動器</td><td>antagonistic effectors</td></tr>
+      <tr><td>內在／外在調節</td><td>intrinsic / extrinsic regulation</td><td>自我調節</td><td>autoregulation</td></tr>
+      <tr><td>神經傳遞物質</td><td>neurotransmitter</td><td>激素</td><td>hormone</td></tr>
+      <tr><td>標的細胞</td><td>target cell</td><td>胰島素／升糖素</td><td>insulin / glucagon</td></tr>
+      <tr><td>肝醣分解</td><td>glycogenolysis</td><td>糖質新生</td><td>gluconeogenesis</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 1.3 ============ -->
+<section class="sec det" id="s3">
+  <h2><span class="no">1.3</span>主要組織</h2>
+  <div class="en">The Primary Tissues</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>身體由哪些「材料」做成：<b>肌肉、神經、上皮、結締</b>四大組織，各自的長相與功能。</div><div><span class="lt lt2">為什麼接在 1.2 後面？</span>1.2 說回饋要有人偵測、有人傳訊、有人執行。這一節告訴你是誰：神經組織偵測與傳訊，肌肉與腺體（上皮）執行，結締組織支撐並運送（血液）。</div></div>
+  <div class="oneline">全身兩百多種細胞，可以歸成四大基本組織：肌肉、神經、上皮、結締。</div>
+  <div class="think">皮膚、肌腱、骨頭、血液，哪些是同一類組織？（答案可能和你想的不一樣）</div>
+
+  <p><b>組織</b> <i class="en-term">tissue</i> 是一群構造相似、功能相同的細胞，加上它們周圍的<b>細胞外物質</b>。研究組織的學科叫<b>組織學</b> <i class="en-term">histology</i>。人體雖然有兩百多種特化細胞，但都可以歸入四種<b>主要組織（基本組織）</b> <i class="en-term">primary tissues</i>：</p>
+  <div class="tblwrap"><table>
+    <tr><th>組織</th><th>最主要的特性</th></tr>
+    <tr><td><b>肌肉組織</b> muscle tissue</td><td>能<b>收縮</b></td></tr>
+    <tr><td><b>神經組織</b> nervous tissue</td><td>能產生並傳遞<b>電訊號</b></td></tr>
+    <tr><td><b>上皮組織</b> epithelial tissue</td><td>覆蓋表面、形成腺體；細胞<b>緊密排列</b></td></tr>
+    <tr><td><b>結締組織</b> connective tissue</td><td>細胞之間有<b>大量細胞外基質</b>；支持、連結、保護</td></tr>
+  </table></div>
+
+  <figure class="pic"><svg viewBox="0 0 480 330" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><rect x="10" y="36" width="220" height="130" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="120" y="26" font-size="17" fill="#be123c" text-anchor="middle" font-weight="bold">肌肉：會收縮</text><rect x="250" y="36" width="220" height="130" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="360" y="26" font-size="17" fill="#92400e" text-anchor="middle" font-weight="bold">神經：傳電訊號</text><rect x="10" y="196" width="220" height="130" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="120" y="186" font-size="17" fill="#1d4ed8" text-anchor="middle" font-weight="bold">上皮：緊密排列</text><rect x="250" y="196" width="220" height="130" rx="10" fill="#fff" stroke="#e5e7eb"/><text x="360" y="186" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">結締：基質多</text><rect x="26" y="62" width="188" height="20" rx="10" fill="#fecdd3" stroke="#e11d48"/><line x1="36" y1="64" x2="36" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="44" y1="64" x2="44" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="52" y1="64" x2="52" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="60" y1="64" x2="60" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="68" y1="64" x2="68" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="76" y1="64" x2="76" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="84" y1="64" x2="84" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="92" y1="64" x2="92" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="100" y1="64" x2="100" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="108" y1="64" x2="108" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="116" y1="64" x2="116" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="124" y1="64" x2="124" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="132" y1="64" x2="132" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="140" y1="64" x2="140" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="148" y1="64" x2="148" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="156" y1="64" x2="156" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="164" y1="64" x2="164" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="172" y1="64" x2="172" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="180" y1="64" x2="180" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="188" y1="64" x2="188" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="196" y1="64" x2="196" y2="80" stroke="#e11d48" stroke-opacity=".5"/><line x1="204" y1="64" x2="204" y2="80" stroke="#e11d48" stroke-opacity=".5"/><rect x="26" y="90" width="188" height="20" rx="10" fill="#fecdd3" stroke="#e11d48"/><line x1="36" y1="92" x2="36" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="44" y1="92" x2="44" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="52" y1="92" x2="52" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="60" y1="92" x2="60" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="68" y1="92" x2="68" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="76" y1="92" x2="76" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="84" y1="92" x2="84" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="92" y1="92" x2="92" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="100" y1="92" x2="100" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="108" y1="92" x2="108" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="116" y1="92" x2="116" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="124" y1="92" x2="124" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="132" y1="92" x2="132" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="140" y1="92" x2="140" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="148" y1="92" x2="148" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="156" y1="92" x2="156" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="164" y1="92" x2="164" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="172" y1="92" x2="172" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="180" y1="92" x2="180" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="188" y1="92" x2="188" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="196" y1="92" x2="196" y2="108" stroke="#e11d48" stroke-opacity=".5"/><line x1="204" y1="92" x2="204" y2="108" stroke="#e11d48" stroke-opacity=".5"/><rect x="26" y="118" width="188" height="20" rx="10" fill="#fecdd3" stroke="#e11d48"/><line x1="36" y1="120" x2="36" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="44" y1="120" x2="44" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="52" y1="120" x2="52" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="60" y1="120" x2="60" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="68" y1="120" x2="68" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="76" y1="120" x2="76" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="84" y1="120" x2="84" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="92" y1="120" x2="92" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="100" y1="120" x2="100" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="108" y1="120" x2="108" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="116" y1="120" x2="116" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="124" y1="120" x2="124" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="132" y1="120" x2="132" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="140" y1="120" x2="140" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="148" y1="120" x2="148" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="156" y1="120" x2="156" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="164" y1="120" x2="164" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="172" y1="120" x2="172" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="180" y1="120" x2="180" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="188" y1="120" x2="188" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="196" y1="120" x2="196" y2="136" stroke="#e11d48" stroke-opacity=".5"/><line x1="204" y1="120" x2="204" y2="136" stroke="#e11d48" stroke-opacity=".5"/><circle cx="300" cy="100" r="20" fill="#fef3c7" stroke="#b45309" stroke-width="2"/><circle cx="300" cy="100" r="7" fill="#b45309"/><line x1="300" y1="100" x2="268" y2="62" stroke="#b45309" stroke-width="3"/><line x1="300" y1="100" x2="264" y2="104" stroke="#b45309" stroke-width="3"/><line x1="300" y1="100" x2="272" y2="140" stroke="#b45309" stroke-width="3"/><line x1="300" y1="100" x2="300" y2="56" stroke="#b45309" stroke-width="3"/><line x1="300" y1="100" x2="330" y2="66" stroke="#b45309" stroke-width="3"/><line x1="320" y1="100" x2="430" y2="100" stroke="#b45309" stroke-width="3"/><line x1="430" y1="100" x2="455" y2="78" stroke="#b45309" stroke-width="2"/><circle cx="455" cy="78" r="4" fill="#b45309"/><line x1="430" y1="100" x2="455" y2="100" stroke="#b45309" stroke-width="2"/><circle cx="455" cy="100" r="4" fill="#b45309"/><line x1="430" y1="100" x2="455" y2="122" stroke="#b45309" stroke-width="2"/><circle cx="455" cy="122" r="4" fill="#b45309"/><rect x="22" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="33" cy="257" r="5" fill="#1d4ed8"/><rect x="44" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="55" cy="257" r="5" fill="#1d4ed8"/><rect x="66" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="77" cy="257" r="5" fill="#1d4ed8"/><rect x="88" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="99" cy="257" r="5" fill="#1d4ed8"/><rect x="110" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="121" cy="257" r="5" fill="#1d4ed8"/><rect x="132" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="143" cy="257" r="5" fill="#1d4ed8"/><rect x="154" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="165" cy="257" r="5" fill="#1d4ed8"/><rect x="176" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="187" cy="257" r="5" fill="#1d4ed8"/><rect x="198" y="226" width="22" height="62" fill="#dbeafe" stroke="#2563eb"/><circle cx="209" cy="257" r="5" fill="#1d4ed8"/><line x1="20" y1="292" x2="220" y2="292" stroke="#b45309" stroke-width="5"/><text x="120" y="316" font-size="14" fill="#92400e" text-anchor="middle">基底膜</text><rect x="258" y="210" width="204" height="108" fill="#f0fdfa"/><path d="M262,225 q20,-12 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M262,250 q20,-12 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M262,275 q20,-12 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M262,300 q20,-12 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><ellipse cx="290" cy="238" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="360" cy="262" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="420" cy="236" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="330" cy="290" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="440" cy="288" rx="8" ry="5" fill="#f59e0b"/></svg><figcaption>四大基本組織的樣子：肌肉細胞長條有紋路；神經元有長長的軸突；上皮細胞一個挨一個排在基底膜上；結締組織的細胞（橘點）稀疏地散在纖維之間。</figcaption></figure>
+  <h3 id="s3a">肌肉組織 Muscle Tissue</h3>
+  <p>肌肉細胞特化成能<b>收縮</b>的細胞。肌肉細胞又長又細，所以也叫<b>肌纖維</b> <i class="en-term">muscle fiber / myofiber</i>。分成三種：</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>骨骼肌<br><i class="en-term">skeletal muscle</i></th><th>心肌<br><i class="en-term">cardiac muscle</i></th><th>平滑肌<br><i class="en-term">smooth muscle</i></th></tr>
+    <tr><td>橫紋 striations</td><td>有</td><td>有</td><td><b>無</b></td></tr>
+    <tr><td>控制</td><td><b>隨意</b>（voluntary）</td><td>不隨意</td><td>不隨意</td></tr>
+    <tr><td>細胞形狀與核</td><td>長圓柱形、<b>多核</b>（由許多細胞融合而成）</td><td>短、有分支，通常一個核</td><td>紡錘形、一個核</td></tr>
+    <tr><td>特殊構造</td><td>兩端以肌腱附著在骨骼上</td><td><b>間盤</b> <i class="en-term">intercalated discs</i>：相鄰細胞的連接處，含<b>間隙接合</b>，電訊號直接傳過去，讓心臟同步收縮</td><td>細胞間也常有間隙接合</td></tr>
+    <tr><td>位置與功能</td><td>附在骨骼上，產生動作、呼吸</td><td>只在心臟（心肌層 myocardium）</td><td>中空器官與管道的壁：消化道、血管、支氣管、膀胱、子宮；控制管徑與蠕動</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 335" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><text x="296" y="50" font-size="18" fill="#be123c" text-anchor="start" font-weight="bold">骨骼肌</text><text x="296" y="74" font-size="14" fill="#1f2937" text-anchor="start">橫紋・多核・隨意</text><text x="296" y="96" font-size="14" fill="#4b5563" text-anchor="start">附著在骨骼上</text><text x="296" y="160" font-size="18" fill="#be123c" text-anchor="start" font-weight="bold">心肌</text><text x="296" y="184" font-size="14" fill="#1f2937" text-anchor="start">橫紋・有分支・不隨意</text><text x="296" y="206" font-size="14" fill="#4b5563" text-anchor="start">間盤連接相鄰細胞</text><text x="296" y="270" font-size="18" fill="#6d28d9" text-anchor="start" font-weight="bold">平滑肌</text><text x="296" y="294" font-size="14" fill="#1f2937" text-anchor="start">無橫紋・紡錘形・單核</text><text x="296" y="316" font-size="14" fill="#4b5563" text-anchor="start">中空器官壁、血管</text><rect x="10" y="42" width="268" height="48" rx="22" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><line x1="22" y1="45" x2="22" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="29" y1="45" x2="29" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="36" y1="45" x2="36" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="43" y1="45" x2="43" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="50" y1="45" x2="50" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="57" y1="45" x2="57" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="64" y1="45" x2="64" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="71" y1="45" x2="71" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="78" y1="45" x2="78" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="85" y1="45" x2="85" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="92" y1="45" x2="92" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="99" y1="45" x2="99" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="106" y1="45" x2="106" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="113" y1="45" x2="113" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="120" y1="45" x2="120" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="127" y1="45" x2="127" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="134" y1="45" x2="134" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="141" y1="45" x2="141" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="148" y1="45" x2="148" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="155" y1="45" x2="155" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="162" y1="45" x2="162" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="169" y1="45" x2="169" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="176" y1="45" x2="176" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="183" y1="45" x2="183" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="190" y1="45" x2="190" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="197" y1="45" x2="197" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="204" y1="45" x2="204" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="211" y1="45" x2="211" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="218" y1="45" x2="218" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="225" y1="45" x2="225" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="232" y1="45" x2="232" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="239" y1="45" x2="239" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="246" y1="45" x2="246" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="253" y1="45" x2="253" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="260" y1="45" x2="260" y2="87" stroke="#e11d48" stroke-opacity=".45"/><line x1="267" y1="45" x2="267" y2="87" stroke="#e11d48" stroke-opacity=".45"/><ellipse cx="55" cy="48" rx="9" ry="4" fill="#9f1239"/><ellipse cx="120" cy="48" rx="9" ry="4" fill="#9f1239"/><ellipse cx="185" cy="48" rx="9" ry="4" fill="#9f1239"/><ellipse cx="245" cy="48" rx="9" ry="4" fill="#9f1239"/><path d="M85,165 L150,135 L162,150 L105,174 Z" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><rect x="10" y="165" width="128" height="38" rx="8" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><rect x="143" y="165" width="135" height="38" rx="8" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/><line x1="20" y1="168" x2="20" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="27" y1="168" x2="27" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="34" y1="168" x2="34" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="41" y1="168" x2="41" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="48" y1="168" x2="48" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="55" y1="168" x2="55" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="62" y1="168" x2="62" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="69" y1="168" x2="69" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="76" y1="168" x2="76" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="83" y1="168" x2="83" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="90" y1="168" x2="90" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="97" y1="168" x2="97" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="104" y1="168" x2="104" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="111" y1="168" x2="111" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="118" y1="168" x2="118" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="125" y1="168" x2="125" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="132" y1="168" x2="132" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="152" y1="168" x2="152" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="159" y1="168" x2="159" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="166" y1="168" x2="166" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="173" y1="168" x2="173" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="180" y1="168" x2="180" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="187" y1="168" x2="187" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="194" y1="168" x2="194" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="201" y1="168" x2="201" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="208" y1="168" x2="208" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="215" y1="168" x2="215" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="222" y1="168" x2="222" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="229" y1="168" x2="229" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="236" y1="168" x2="236" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="243" y1="168" x2="243" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="250" y1="168" x2="250" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="257" y1="168" x2="257" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="264" y1="168" x2="264" y2="200" stroke="#e11d48" stroke-opacity=".45"/><line x1="271" y1="168" x2="271" y2="200" stroke="#e11d48" stroke-opacity=".45"/><rect x="136" y="161" width="9" height="46" fill="#1f2937"/><text x="140" y="228" font-size="14" fill="#1f2937" text-anchor="middle" font-weight="bold">間盤</text><ellipse cx="70" cy="184" rx="9" ry="5" fill="#9f1239"/><ellipse cx="210" cy="184" rx="9" ry="5" fill="#9f1239"/><path d="M10,270 Q90,248 175,270 Q90,292 10,270 Z" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/><ellipse cx="92" cy="270" rx="11" ry="4" fill="#5b21b6"/><path d="M110,288 Q190,266 275,288 Q190,310 110,288 Z" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/><ellipse cx="192" cy="288" rx="11" ry="4" fill="#5b21b6"/><path d="M55,308 Q135,286 220,308 Q135,330 55,308 Z" fill="#ddd6fe" stroke="#7c3aed" stroke-width="2"/><ellipse cx="137" cy="308" rx="11" ry="4" fill="#5b21b6"/></svg><figcaption>三種肌肉：骨骼肌和心肌有橫紋；心肌細胞有分支，接頭處是間盤（黑色）；平滑肌是沒有紋路的紡錘形細胞。</figcaption></figure>
+  <p>心肌和平滑肌的收縮都是「不隨意」的，受自主神經與激素調節（第 9 章）。三種肌肉的收縮機制會在第 12 章詳細說明，國考考過<b>單一單元平滑肌</b>與<b>多單元平滑肌</b>的差別，到時要特別注意。</p>
+
+  <h3 id="s3b">神經組織 Nervous Tissue</h3>
+  <p class="core">兩類細胞：<b>神經元</b>（產生、傳遞訊號）＋<b>支持細胞（神經膠細胞）</b>。</p>
+  <p>神經組織由兩類細胞組成：</p>
+  <h4>1. 神經元 Neurons</h4>
+  <p>負責產生和傳導電訊號（神經衝動）。一個典型的神經元有三個部分：</p>
+  <ul class="dots">
+    <li><b>細胞本體</b> <i class="en-term">cell body</i>：含細胞核，是神經元的代謝中心。</li>
+    <li><b>樹突</b> <i class="en-term">dendrites</i>：從細胞本體伸出的短分支，<b>接收</b>訊號並傳<b>向</b>細胞本體。</li>
+    <li><b>軸突</b> <i class="en-term">axon</i>：通常一條、可以很長，把訊號<b>傳離</b>細胞本體，送到其他神經元、肌肉或腺體。</li>
+  </ul>
+  <p>在周邊，許多軸突集合成束，就是我們說的<b>神經</b> <i class="en-term">nerve</i>。</p>
+  <figure class="pic"><svg viewBox="0 0 480 210" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m7" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#b45309"/></marker></defs><path d="M65,80 L30,52 L14,58" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><path d="M30,52 L26,30" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><path d="M62,100 L28,124 L12,118" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><path d="M28,124 L30,148" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><path d="M72,68 L64,36" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><path d="M98,70 L110,40" fill="none" stroke="#b45309" stroke-width="3" stroke-linecap="round"/><circle cx="85" cy="90" r="27" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/><circle cx="85" cy="90" r="9" fill="#b45309"/><line x1="112" y1="90" x2="405" y2="90" stroke="#b45309" stroke-width="3"/><rect x="130" y="80" width="54" height="20" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="192" y="80" width="54" height="20" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="254" y="80" width="54" height="20" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><rect x="316" y="80" width="54" height="20" rx="10" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/><line x1="405" y1="90" x2="445" y2="62" stroke="#b45309" stroke-width="2.5"/><circle cx="447" cy="62" r="7" fill="#b45309"/><line x1="405" y1="90" x2="445" y2="90" stroke="#b45309" stroke-width="2.5"/><circle cx="447" cy="90" r="7" fill="#b45309"/><line x1="405" y1="90" x2="445" y2="118" stroke="#b45309" stroke-width="2.5"/><circle cx="447" cy="118" r="7" fill="#b45309"/><text x="22" y="172" font-size="15" fill="#92400e" text-anchor="start" font-weight="bold">樹突（接收）</text><text x="100" y="136" font-size="15" fill="#92400e" text-anchor="middle">細胞本體</text><text x="250" y="68" font-size="14" fill="#6d28d9" text-anchor="middle">髓鞘（周邊由許旺細胞形成）</text><text x="250" y="124" font-size="15" fill="#92400e" text-anchor="middle" font-weight="bold">軸突（傳出）</text><text x="440" y="148" font-size="14" fill="#92400e" text-anchor="middle">軸突末梢</text><line x1="160" y1="196" x2="380" y2="196" stroke="#b45309" stroke-width="3" marker-end="url(#m7)"/><text x="270" y="186" font-size="14" fill="#92400e" text-anchor="middle">訊號方向</text></svg><figcaption>神經元：樹突收訊號 → 細胞本體 → 軸突把訊號送出去。軸突外一段一段的是髓鞘。</figcaption></figure>
+  <h4>2. 支持細胞（神經膠細胞）Supporting Cells / Neuroglia</h4>
+  <p>不傳遞神經衝動，但負責支持、保護、提供營養、形成髓鞘等，對神經元功能不可缺少。</p>
+  <div class="tblwrap"><table>
+    <tr><th>位置</th><th>支持細胞</th><th>主要功能</th></tr>
+    <tr><td rowspan="2"><b>周邊神經系統</b> PNS</td><td><b>許旺細胞</b> Schwann cells</td><td>在周邊軸突外形成<b>髓鞘</b> myelin sheath</td></tr>
+    <tr><td>衛星細胞 satellite cells</td><td>包圍神經節內的細胞本體，提供支持</td></tr>
+    <tr><td rowspan="4"><b>中樞神經系統</b> CNS</td><td><b>寡突膠細胞</b> oligodendrocytes</td><td>在中樞軸突外形成<b>髓鞘</b></td></tr>
+    <tr><td>星狀膠細胞 astrocytes</td><td>調節神經元周圍環境、參與血腦障壁、提供代謝支持</td></tr>
+    <tr><td>微膠細胞 microglia</td><td>中樞的吞噬細胞（免疫防衛）</td></tr>
+    <tr><td>室管膜細胞 ependymal cells</td><td>襯在腦室與脊髓中央管，與腦脊髓液有關</td></tr>
+  </table></div>
+  <div class="warn"><b class="t">國考考過：</b>周邊神經的支持細胞（許旺細胞、衛星細胞）。記法：<b>髓鞘——周邊是許旺、中樞是寡突</b>。第 7 章會再深入。</div>
+
+  <h3 id="s3c">上皮組織 Epithelial Tissue</h3>
+  <p class="core">兩大類：<b>上皮膜</b>（覆蓋體表、襯在管腔）＋<b>腺體</b>（上皮特化成的分泌構造）。</p>
+  <p>上皮組織分成兩大類：<b>上皮膜</b> <i class="en-term">epithelial membranes</i>（覆蓋與襯裡）和<b>腺體</b> <i class="en-term">glands</i>（由上皮特化而成的分泌構造）。</p>
+
+  <h4>上皮膜的共同特性</h4>
+  <p class="core">緊密排列・有<b>基底膜</b>・<b>無血管</b>（養分靠下方擴散）・<b>更新快</b>（胃上皮約 2–3 天）。</p>
+  <ul class="dots">
+    <li><b>覆蓋體表、襯在體腔與管道內面</b>：例如皮膚表層、消化道內面、血管內面。凡是物質要進出身體（吸收養分、排出廢物、交換氣體），都得<b>穿過上皮</b>。</li>
+    <li><b>細胞緊密排列</b>，細胞之間幾乎沒有細胞外物質，靠各種細胞連結接在一起（見下方）。</li>
+    <li>有方向性：朝向表面或管腔的一側叫<b>頂端面</b>（apical surface），另一側貼著<b>基底膜</b> <i class="en-term">basement membrane</i>——一層由醣蛋白等構成的薄層，把上皮固定在下方的結締組織上。</li>
+    <li><b>無血管</b> <i class="en-term">avascular</i>：上皮內沒有血管，養分和氧氣要從下方結締組織的微血管<b>擴散</b>過來。</li>
+    <li><b>更新快</b>：上皮細胞會不斷脫落、由分裂產生的新細胞取代。例如胃的上皮約 2～3 天更新一次，皮膚表皮約數週。</li>
+  </ul>
+  <div class="nut"><b class="t">營養連結：</b>因為上皮更新快，需要持續供應蛋白質、鋅、葉酸、維生素 A 等。營養不良或化療（抑制快速分裂的細胞）時，口腔、腸道黏膜最先受損，出現口腔炎、腹瀉。維生素 A 缺乏則會使上皮角質化異常。</div>
+
+  <h4>上皮膜的分類：層數 ＋ 細胞形狀</h4>
+  <p>命名規則很簡單：<b>先說幾層，再說最表層細胞的形狀</b>。</p>
+  <ul class="dots">
+    <li>層數：<b>單層</b> <i class="en-term">simple</i>（一層）、<b>複層</b> <i class="en-term">stratified</i>（多層）。</li>
+    <li>形狀：<b>鱗狀</b> <i class="en-term">squamous</i>（扁平）、<b>立方</b> <i class="en-term">cuboidal</i>、<b>柱狀</b> <i class="en-term">columnar</i>（高）。</li>
+  </ul>
+  <p>規律：<span class="key">單層、扁平 → 適合物質快速通過（擴散、過濾）；較厚或多層 → 適合分泌、吸收或抗摩擦保護。</span></p>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>例子（位置）</th><th>功能</th></tr>
+    <tr><td><b>單層鱗狀上皮</b><br>simple squamous</td><td>肺泡壁、微血管壁（血管內面的叫<b>內皮</b> endothelium）</td><td>擴散、過濾（氣體交換、物質進出血液）</td></tr>
+    <tr><td><b>單層立方上皮</b><br>simple cuboidal</td><td>腎小管、腺體的導管、甲狀腺濾泡</td><td>分泌、再吸收</td></tr>
+    <tr><td><b>單層柱狀上皮</b><br>simple columnar</td><td>胃、小腸、大腸的內面（小腸細胞頂端有<b>微絨毛</b> microvilli，中間散布分泌黏液的<b>杯狀細胞</b> goblet cells）；有纖毛的柱狀上皮見於輸卵管</td><td>吸收、分泌；纖毛推動卵子</td></tr>
+    <tr><td><b>偽複層纖毛柱狀上皮</b><br>pseudostratified ciliated columnar</td><td>氣管、支氣管等呼吸道</td><td>看起來像很多層（細胞核高低不齊），其實<b>每個細胞都接觸基底膜</b>，所以仍是單層。纖毛把黏液和灰塵往喉嚨方向推出</td></tr>
+    <tr><td><b>複層鱗狀上皮（角質化）</b><br>keratinized stratified squamous</td><td>皮膚的表皮</td><td>表層細胞充滿<b>角蛋白</b>、已死亡，防水、防磨損、防微生物</td></tr>
+    <tr><td><b>複層鱗狀上皮（非角質化）</b><br>nonkeratinized</td><td>口腔、食道、陰道</td><td>抗摩擦，表面保持濕潤</td></tr>
+    <tr><td><b>移行上皮</b><br>transitional epithelium</td><td>膀胱、輸尿管</td><td>屬於<b>複層</b>上皮；細胞形狀可隨器官充盈而由圓變扁，允許大幅伸展</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m8" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#16a34a"/></marker></defs><text x="123" y="28" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">單層鱗狀</text><rect x="22" y="114" width="41" height="12" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="42" cy="114" rx="9" ry="5" fill="#1d4ed8"/><rect x="63" y="114" width="41" height="12" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="83" cy="114" rx="9" ry="5" fill="#1d4ed8"/><rect x="104" y="114" width="41" height="12" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="124" cy="114" rx="9" ry="5" fill="#1d4ed8"/><rect x="145" y="114" width="41" height="12" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="165" cy="114" rx="9" ry="5" fill="#1d4ed8"/><rect x="186" y="114" width="41" height="12" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="206" cy="114" rx="9" ry="5" fill="#1d4ed8"/><path d="M70,58 L70,98" stroke="#16a34a" stroke-width="3" marker-end="url(#m8)"/><path d="M160,58 L160,98" stroke="#16a34a" stroke-width="3" marker-end="url(#m8)"/><line x1="18" y1="128" x2="228" y2="128" stroke="#b45309" stroke-width="4"/><text x="123" y="154" font-size="14" fill="#374151" text-anchor="middle">肺泡、微血管：物質快速通過</text><text x="363" y="28" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">單層立方</text><rect x="261" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="278" cy="109" r="6" fill="#1d4ed8"/><rect x="295" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="312" cy="109" r="6" fill="#1d4ed8"/><rect x="329" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="346" cy="109" r="6" fill="#1d4ed8"/><rect x="363" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="380" cy="109" r="6" fill="#1d4ed8"/><rect x="397" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="414" cy="109" r="6" fill="#1d4ed8"/><rect x="431" y="92" width="34" height="34" fill="#dbeafe" stroke="#2563eb"/><circle cx="448" cy="109" r="6" fill="#1d4ed8"/><line x1="258" y1="128" x2="468" y2="128" stroke="#b45309" stroke-width="4"/><text x="363" y="154" font-size="14" fill="#374151" text-anchor="middle">腎小管、腺體導管</text><text x="123" y="198" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">單層柱狀</text><rect x="20" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="34" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="23" y1="230" x2="23" y2="224" stroke="#2563eb"/><line x1="27" y1="230" x2="27" y2="224" stroke="#2563eb"/><line x1="31" y1="230" x2="31" y2="224" stroke="#2563eb"/><line x1="35" y1="230" x2="35" y2="224" stroke="#2563eb"/><line x1="39" y1="230" x2="39" y2="224" stroke="#2563eb"/><line x1="43" y1="230" x2="43" y2="224" stroke="#2563eb"/><line x1="47" y1="230" x2="47" y2="224" stroke="#2563eb"/><rect x="49" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="63" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="52" y1="230" x2="52" y2="224" stroke="#2563eb"/><line x1="56" y1="230" x2="56" y2="224" stroke="#2563eb"/><line x1="60" y1="230" x2="60" y2="224" stroke="#2563eb"/><line x1="64" y1="230" x2="64" y2="224" stroke="#2563eb"/><line x1="68" y1="230" x2="68" y2="224" stroke="#2563eb"/><line x1="72" y1="230" x2="72" y2="224" stroke="#2563eb"/><line x1="76" y1="230" x2="76" y2="224" stroke="#2563eb"/><rect x="78" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="92" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="81" y1="230" x2="81" y2="224" stroke="#2563eb"/><line x1="85" y1="230" x2="85" y2="224" stroke="#2563eb"/><line x1="89" y1="230" x2="89" y2="224" stroke="#2563eb"/><line x1="93" y1="230" x2="93" y2="224" stroke="#2563eb"/><line x1="97" y1="230" x2="97" y2="224" stroke="#2563eb"/><line x1="101" y1="230" x2="101" y2="224" stroke="#2563eb"/><line x1="105" y1="230" x2="105" y2="224" stroke="#2563eb"/><rect x="107" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="121" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="110" y1="230" x2="110" y2="224" stroke="#2563eb"/><line x1="114" y1="230" x2="114" y2="224" stroke="#2563eb"/><line x1="118" y1="230" x2="118" y2="224" stroke="#2563eb"/><line x1="122" y1="230" x2="122" y2="224" stroke="#2563eb"/><line x1="126" y1="230" x2="126" y2="224" stroke="#2563eb"/><line x1="130" y1="230" x2="130" y2="224" stroke="#2563eb"/><line x1="134" y1="230" x2="134" y2="224" stroke="#2563eb"/><rect x="136" y="230" width="29" height="66" fill="#fce7f3" stroke="#2563eb"/><ellipse cx="150" cy="280" rx="5" ry="7" fill="#1d4ed8"/><ellipse cx="150" cy="248" rx="10" ry="14" fill="#f9a8d4"/><rect x="165" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="179" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="168" y1="230" x2="168" y2="224" stroke="#2563eb"/><line x1="172" y1="230" x2="172" y2="224" stroke="#2563eb"/><line x1="176" y1="230" x2="176" y2="224" stroke="#2563eb"/><line x1="180" y1="230" x2="180" y2="224" stroke="#2563eb"/><line x1="184" y1="230" x2="184" y2="224" stroke="#2563eb"/><line x1="188" y1="230" x2="188" y2="224" stroke="#2563eb"/><line x1="192" y1="230" x2="192" y2="224" stroke="#2563eb"/><rect x="194" y="230" width="29" height="66" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="208" cy="280" rx="5" ry="7" fill="#1d4ed8"/><line x1="197" y1="230" x2="197" y2="224" stroke="#2563eb"/><line x1="201" y1="230" x2="201" y2="224" stroke="#2563eb"/><line x1="205" y1="230" x2="205" y2="224" stroke="#2563eb"/><line x1="209" y1="230" x2="209" y2="224" stroke="#2563eb"/><line x1="213" y1="230" x2="213" y2="224" stroke="#2563eb"/><line x1="217" y1="230" x2="217" y2="224" stroke="#2563eb"/><line x1="221" y1="230" x2="221" y2="224" stroke="#2563eb"/><line x1="18" y1="298" x2="228" y2="298" stroke="#b45309" stroke-width="4"/><text x="123" y="324" font-size="14" fill="#374151" text-anchor="middle">胃腸道（有微絨毛、杯狀細胞）</text><text x="363" y="198" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">偽複層纖毛柱狀</text><rect x="260" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="273" cy="254" rx="5" ry="7" fill="#1d4ed8"/><line x1="262" y1="216" x2="260" y2="206" stroke="#2563eb"/><line x1="266" y1="216" x2="264" y2="206" stroke="#2563eb"/><line x1="270" y1="216" x2="268" y2="206" stroke="#2563eb"/><line x1="274" y1="216" x2="272" y2="206" stroke="#2563eb"/><line x1="278" y1="216" x2="276" y2="206" stroke="#2563eb"/><line x1="282" y1="216" x2="280" y2="206" stroke="#2563eb"/><rect x="286" y="262" width="10" height="34" fill="#bfdbfe" stroke="#2563eb"/><circle cx="291" cy="282" r="4" fill="#1d4ed8"/><rect x="296" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="309" cy="238" rx="5" ry="7" fill="#1d4ed8"/><line x1="298" y1="216" x2="296" y2="206" stroke="#2563eb"/><line x1="302" y1="216" x2="300" y2="206" stroke="#2563eb"/><line x1="306" y1="216" x2="304" y2="206" stroke="#2563eb"/><line x1="310" y1="216" x2="308" y2="206" stroke="#2563eb"/><line x1="314" y1="216" x2="312" y2="206" stroke="#2563eb"/><line x1="318" y1="216" x2="316" y2="206" stroke="#2563eb"/><rect x="322" y="262" width="10" height="34" fill="#bfdbfe" stroke="#2563eb"/><circle cx="327" cy="282" r="4" fill="#1d4ed8"/><rect x="332" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="345" cy="254" rx="5" ry="7" fill="#1d4ed8"/><line x1="334" y1="216" x2="332" y2="206" stroke="#2563eb"/><line x1="338" y1="216" x2="336" y2="206" stroke="#2563eb"/><line x1="342" y1="216" x2="340" y2="206" stroke="#2563eb"/><line x1="346" y1="216" x2="344" y2="206" stroke="#2563eb"/><line x1="350" y1="216" x2="348" y2="206" stroke="#2563eb"/><line x1="354" y1="216" x2="352" y2="206" stroke="#2563eb"/><rect x="358" y="262" width="10" height="34" fill="#bfdbfe" stroke="#2563eb"/><circle cx="363" cy="282" r="4" fill="#1d4ed8"/><rect x="368" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="381" cy="238" rx="5" ry="7" fill="#1d4ed8"/><line x1="370" y1="216" x2="368" y2="206" stroke="#2563eb"/><line x1="374" y1="216" x2="372" y2="206" stroke="#2563eb"/><line x1="378" y1="216" x2="376" y2="206" stroke="#2563eb"/><line x1="382" y1="216" x2="380" y2="206" stroke="#2563eb"/><line x1="386" y1="216" x2="384" y2="206" stroke="#2563eb"/><line x1="390" y1="216" x2="388" y2="206" stroke="#2563eb"/><rect x="394" y="262" width="10" height="34" fill="#bfdbfe" stroke="#2563eb"/><circle cx="399" cy="282" r="4" fill="#1d4ed8"/><rect x="404" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="417" cy="254" rx="5" ry="7" fill="#1d4ed8"/><line x1="406" y1="216" x2="404" y2="206" stroke="#2563eb"/><line x1="410" y1="216" x2="408" y2="206" stroke="#2563eb"/><line x1="414" y1="216" x2="412" y2="206" stroke="#2563eb"/><line x1="418" y1="216" x2="416" y2="206" stroke="#2563eb"/><line x1="422" y1="216" x2="420" y2="206" stroke="#2563eb"/><line x1="426" y1="216" x2="424" y2="206" stroke="#2563eb"/><rect x="430" y="262" width="10" height="34" fill="#bfdbfe" stroke="#2563eb"/><circle cx="435" cy="282" r="4" fill="#1d4ed8"/><rect x="440" y="216" width="26" height="80" fill="#dbeafe" stroke="#2563eb"/><ellipse cx="453" cy="238" rx="5" ry="7" fill="#1d4ed8"/><line x1="442" y1="216" x2="440" y2="206" stroke="#2563eb"/><line x1="446" y1="216" x2="444" y2="206" stroke="#2563eb"/><line x1="450" y1="216" x2="448" y2="206" stroke="#2563eb"/><line x1="454" y1="216" x2="452" y2="206" stroke="#2563eb"/><line x1="458" y1="216" x2="456" y2="206" stroke="#2563eb"/><line x1="462" y1="216" x2="460" y2="206" stroke="#2563eb"/><line x1="258" y1="298" x2="468" y2="298" stroke="#b45309" stroke-width="4"/><text x="363" y="324" font-size="14" fill="#374151" text-anchor="middle">氣管：每個細胞都貼基底膜</text><text x="123" y="368" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">複層鱗狀</text><rect x="22" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="34" cy="457" r="4" fill="#1d4ed8"/><rect x="47" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="59" cy="457" r="4" fill="#1d4ed8"/><rect x="72" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="84" cy="457" r="4" fill="#1d4ed8"/><rect x="97" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="109" cy="457" r="4" fill="#1d4ed8"/><rect x="122" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="134" cy="457" r="4" fill="#1d4ed8"/><rect x="147" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="159" cy="457" r="4" fill="#1d4ed8"/><rect x="172" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="184" cy="457" r="4" fill="#1d4ed8"/><rect x="197" y="448" width="25" height="18" fill="#bfdbfe" stroke="#2563eb"/><circle cx="209" cy="457" r="4" fill="#1d4ed8"/><rect x="22.0" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="38.0" cy="439" r="4" fill="#1d4ed8"/><rect x="55.3" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="71.3" cy="439" r="4" fill="#1d4ed8"/><rect x="88.6" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="104.6" cy="439" r="4" fill="#1d4ed8"/><rect x="121.9" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="137.9" cy="439" r="4" fill="#1d4ed8"/><rect x="155.2" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="171.2" cy="439" r="4" fill="#1d4ed8"/><rect x="188.5" y="430" width="33.3" height="18" fill="#dbeafe" stroke="#2563eb"/><circle cx="204.5" cy="439" r="4" fill="#1d4ed8"/><rect x="22" y="418" width="50" height="12" fill="#eff6ff" stroke="#2563eb"/><ellipse cx="47" cy="424" rx="6" ry="3" fill="#1d4ed8"/><rect x="72" y="418" width="50" height="12" fill="#eff6ff" stroke="#2563eb"/><ellipse cx="97" cy="424" rx="6" ry="3" fill="#1d4ed8"/><rect x="122" y="418" width="50" height="12" fill="#eff6ff" stroke="#2563eb"/><ellipse cx="147" cy="424" rx="6" ry="3" fill="#1d4ed8"/><rect x="172" y="418" width="50" height="12" fill="#eff6ff" stroke="#2563eb"/><ellipse cx="197" cy="424" rx="6" ry="3" fill="#1d4ed8"/><rect x="22.0" y="410" width="66.7" height="8" fill="#f8fafc" stroke="#2563eb"/><rect x="88.7" y="410" width="66.7" height="8" fill="#f8fafc" stroke="#2563eb"/><rect x="155.4" y="410" width="66.7" height="8" fill="#f8fafc" stroke="#2563eb"/><line x1="18" y1="468" x2="228" y2="468" stroke="#b45309" stroke-width="4"/><text x="123" y="494" font-size="14" fill="#374151" text-anchor="middle">表皮、口腔、食道：抗磨損</text><text x="363" y="368" font-size="17" fill="#1e3a8a" text-anchor="middle" font-weight="bold">移行上皮（複層）</text><rect x="262" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="274" cy="456" r="4" fill="#1d4ed8"/><rect x="287" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="299" cy="456" r="4" fill="#1d4ed8"/><rect x="312" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="324" cy="456" r="4" fill="#1d4ed8"/><rect x="337" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="349" cy="456" r="4" fill="#1d4ed8"/><rect x="362" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="374" cy="456" r="4" fill="#1d4ed8"/><rect x="387" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="399" cy="456" r="4" fill="#1d4ed8"/><rect x="412" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="424" cy="456" r="4" fill="#1d4ed8"/><rect x="437" y="446" width="25" height="20" fill="#bfdbfe" stroke="#2563eb"/><circle cx="449" cy="456" r="4" fill="#1d4ed8"/><rect x="262.0" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="278.0" cy="435" r="4" fill="#1d4ed8"/><rect x="295.3" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="311.3" cy="435" r="4" fill="#1d4ed8"/><rect x="328.6" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="344.6" cy="435" r="4" fill="#1d4ed8"/><rect x="361.9" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="377.9" cy="435" r="4" fill="#1d4ed8"/><rect x="395.2" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="411.2" cy="435" r="4" fill="#1d4ed8"/><rect x="428.5" y="424" width="33.3" height="22" fill="#dbeafe" stroke="#2563eb"/><circle cx="444.5" cy="435" r="4" fill="#1d4ed8"/><path d="M262,424 Q262,394 287,394 Q312,394 312,424 Z" fill="#eff6ff" stroke="#2563eb"/><circle cx="287" cy="410" r="5" fill="#1d4ed8"/><path d="M312,424 Q312,394 337,394 Q362,394 362,424 Z" fill="#eff6ff" stroke="#2563eb"/><circle cx="337" cy="410" r="5" fill="#1d4ed8"/><path d="M362,424 Q362,394 387,394 Q412,394 412,424 Z" fill="#eff6ff" stroke="#2563eb"/><circle cx="387" cy="410" r="5" fill="#1d4ed8"/><path d="M412,424 Q412,394 437,394 Q462,394 462,424 Z" fill="#eff6ff" stroke="#2563eb"/><circle cx="437" cy="410" r="5" fill="#1d4ed8"/><line x1="258" y1="468" x2="468" y2="468" stroke="#b45309" stroke-width="4"/><text x="363" y="494" font-size="14" fill="#374151" text-anchor="middle">膀胱：可以撐開</text></svg><figcaption>上皮的六種樣子。最下面的咖啡色線是基底膜。偽複層的細胞高高低低，但每個都踩在基底膜上；移行上皮最上層是會被撐扁的大圓頂細胞。</figcaption></figure>
+  <div class="warn"><b class="t">易混淆：</b>①「偽複層」其實是單層（全部細胞貼基底膜）；② <b>移行上皮是複層上皮</b>，不是偽複層（上課簡報這裡寫錯過，以此為準）。</div>
+
+  <h4>細胞連結 Cell Junctions（連接複合體）</h4>
+  <p>上皮細胞之間靠幾種連結固定在一起，由頂端往下依序是：</p>
+  <div class="tblwrap"><table>
+    <tr><th>連結</th><th>構成</th><th>功能（比喻）</th></tr>
+    <tr><td><b>緊密連接</b><br>tight junction（zonula occludens）</td><td>相鄰細胞膜上的蛋白（如 occludin、claudin）緊緊扣合，像一圈拉鍊</td><td><b>封住細胞之間的縫隙</b>，阻止物質任意從細胞間通過，像「防水密封條」</td></tr>
+    <tr><td><b>黏附連接</b><br>adherens junction</td><td>鈣黏蛋白 cadherin，與細胞內的肌動蛋白相連</td><td>把細胞黏在一起</td></tr>
+    <tr><td><b>胞橋小體</b><br>desmosome</td><td>鈣黏蛋白家族，與細胞內的中間絲（角蛋白）相連</td><td>像「鉚釘」，抵抗拉扯；皮膚、心肌特別多</td></tr>
+    <tr><td><b>間隙接合</b><br>gap junction</td><td>連接蛋白 connexin 形成貫穿兩細胞膜的小通道</td><td>像「兩個房間之間的小門」，離子和小分子直接流到隔壁細胞，讓<b>心肌、平滑肌同步</b></td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 325" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><text x="145" y="24" font-size="15" fill="#374151" text-anchor="middle">管腔（頂端面）</text><rect x="40" y="38" width="100" height="250" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><rect x="150" y="38" width="100" height="250" rx="6" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/><circle cx="90" cy="180" r="14" fill="#1d4ed8"/><circle cx="200" cy="180" r="14" fill="#1d4ed8"/><rect x="139" y="46" width="12" height="2.5" fill="#7c3aed"/><rect x="139" y="51" width="12" height="2.5" fill="#7c3aed"/><rect x="139" y="56" width="12" height="2.5" fill="#7c3aed"/><rect x="139" y="61" width="12" height="2.5" fill="#7c3aed"/><rect x="139" y="66" width="12" height="2.5" fill="#7c3aed"/><line x1="140" y1="92" x2="150" y2="92" stroke="#0f766e" stroke-width="2"/><line x1="140" y1="97" x2="150" y2="97" stroke="#0f766e" stroke-width="2"/><line x1="140" y1="102" x2="150" y2="102" stroke="#0f766e" stroke-width="2"/><rect x="130" y="132" width="9" height="26" fill="#374151"/><rect x="151" y="132" width="9" height="26" fill="#374151"/><line x1="139" y1="136" x2="151" y2="136" stroke="#374151"/><line x1="139" y1="145" x2="151" y2="145" stroke="#374151"/><line x1="139" y1="154" x2="151" y2="154" stroke="#374151"/><path d="M130,138 L100,118" stroke="#6b7280" stroke-width="1.5"/><path d="M130,152 L100,168" stroke="#6b7280" stroke-width="1.5"/><path d="M160,138 L190,118" stroke="#6b7280" stroke-width="1.5"/><path d="M160,152 L190,168" stroke="#6b7280" stroke-width="1.5"/><rect x="137" y="220" width="16" height="7" rx="2" fill="#f59e0b" stroke="#b45309"/><rect x="137" y="234" width="16" height="7" rx="2" fill="#f59e0b" stroke="#b45309"/><rect x="137" y="248" width="16" height="7" rx="2" fill="#f59e0b" stroke="#b45309"/><circle cx="128" cy="238" r="3" fill="#e11d48"/><circle cx="162" cy="224" r="3" fill="#e11d48"/><line x1="30" y1="292" x2="260" y2="292" stroke="#b45309" stroke-width="5"/><text x="145" y="314" font-size="14" fill="#92400e" text-anchor="middle">基底膜</text><line x1="156" y1="56" x2="268" y2="56" stroke="#6d28d9" stroke-dasharray="3 3"/><text x="274" y="58" font-size="16" fill="#6d28d9" text-anchor="start" font-weight="bold">緊密連接</text><text x="274" y="77" font-size="14" fill="#374151" text-anchor="start">封住縫隙（像拉鍊）</text><line x1="156" y1="98" x2="268" y2="98" stroke="#0f766e" stroke-dasharray="3 3"/><text x="274" y="100" font-size="16" fill="#0f766e" text-anchor="start" font-weight="bold">黏附連接</text><text x="274" y="119" font-size="14" fill="#374151" text-anchor="start">把細胞黏住</text><line x1="156" y1="146" x2="268" y2="146" stroke="#374151" stroke-dasharray="3 3"/><text x="274" y="148" font-size="16" fill="#374151" text-anchor="start" font-weight="bold">胞橋小體</text><text x="274" y="167" font-size="14" fill="#374151" text-anchor="start">抗拉扯（像鉚釘）</text><line x1="156" y1="236" x2="268" y2="236" stroke="#b45309" stroke-dasharray="3 3"/><text x="274" y="238" font-size="16" fill="#b45309" text-anchor="start" font-weight="bold">間隙接合</text><text x="274" y="257" font-size="14" fill="#374151" text-anchor="start">細胞間的小通道</text><text x="274" y="278" font-size="13" fill="#92400e" text-anchor="start">心肌、平滑肌靠它同步</text></svg><figcaption>兩個相鄰的上皮細胞，從頂端往下依序是緊密連接、黏附連接、胞橋小體；間隙接合讓離子（紅點）直接流到隔壁。</figcaption></figure>
+  <p>因為有緊密連接，物質要通過上皮有兩條路：</p>
+  <ul class="dots">
+    <li><b>穿細胞運輸</b> <i class="en-term">transcellular transport</i>：從頂端膜進入細胞，再從基底側膜出去，<b>穿過細胞本身</b>。</li>
+    <li><b>細胞旁運輸</b> <i class="en-term">paracellular transport</i>：從兩個細胞之間的縫隙通過；緊密連接越鬆，這條路越容易走。</li>
+  </ul>
+  <p>小腸吸收養分、腎小管再吸收都會用到這兩條路（第 6、17、18 章）。國考考過「細胞間連結」，記住四種連結各自的功能。</p>
+
+  <h4>外分泌腺與內分泌腺 Exocrine and Endocrine Glands</h4>
+  <p>腺體在胚胎時由上皮向內凹陷、長入下方結締組織而形成。依分泌去向分兩種：</p>
+  <div class="tblwrap"><table>
+    <tr><th></th><th>外分泌腺 exocrine glands</th><th>內分泌腺 endocrine glands</th></tr>
+    <tr><td>導管</td><td><b>有導管</b> duct</td><td><b>無導管</b>（ductless）</td></tr>
+    <tr><td>分泌去向</td><td>經導管送到<b>體表或管腔</b>（消化道內等）</td><td>分泌到細胞外液，再進入<b>血液</b></td></tr>
+    <tr><td>分泌物</td><td>汗、皮脂、唾液、黏液、消化酶、膽汁等</td><td><b>激素</b></td></tr>
+    <tr><td>例子</td><td>汗腺、皮脂腺、唾液腺、胃腺、胰臟腺泡；肝臟分泌膽汁也屬外分泌功能</td><td>甲狀腺、腎上腺、腦垂腺等</td></tr>
+  </table></div>
+  <figure class="pic"><svg viewBox="0 0 480 280" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><defs><marker id="m10" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto"><path d="M0,0 L14,7 L0,14 z" fill="#2563eb"/></marker></defs><rect x="10" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="32" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="54" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="76" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="142" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="164" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="186" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><rect x="208" y="40" width="22" height="22" fill="#dbeafe" stroke="#2563eb"/><path d="M100,62 L100,125 M132,62 L132,125" stroke="#b45309" stroke-width="3"/><circle cx="116" cy="160" r="40" fill="#fef3c7" stroke="#b45309" stroke-width="2.5"/><circle cx="146.0" cy="160.0" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="140.3" cy="177.6" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="125.3" cy="188.5" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="106.7" cy="188.5" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="91.7" cy="177.6" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="86.0" cy="160.0" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="91.7" cy="142.4" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="106.7" cy="131.5" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="125.3" cy="131.5" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="140.3" cy="142.4" r="7" fill="#fde68a" stroke="#b45309"/><circle cx="116" cy="145" r="5" fill="#60a5fa"/><circle cx="116" cy="112" r="5" fill="#60a5fa"/><circle cx="116" cy="84" r="5" fill="#60a5fa"/><path d="M116,52 L116,14" stroke="#2563eb" stroke-width="2.5" marker-end="url(#m10)"/><text x="165" y="22" font-size="14" fill="#1d4ed8" text-anchor="middle">分泌物</text><text x="116" y="228" font-size="18" fill="#92400e" text-anchor="middle" font-weight="bold">外分泌腺</text><text x="116" y="250" font-size="15" fill="#1f2937" text-anchor="middle">有導管→體表或管腔</text><text x="116" y="270" font-size="13" fill="#4b5563" text-anchor="middle">汗腺、唾液腺、胰臟腺泡</text><circle cx="325" cy="130" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="303" cy="118" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="347" cy="118" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="303" cy="144" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="347" cy="144" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="325" cy="104" r="12" fill="#fde68a" stroke="#b45309"/><circle cx="325" cy="156" r="12" fill="#fde68a" stroke="#b45309"/><rect x="395" y="30" width="44" height="180" rx="22" fill="#fee2e2" stroke="#e11d48" stroke-width="2"/><text x="417" y="22" font-size="15" fill="#be123c" text-anchor="middle" font-weight="bold">血管</text><circle cx="355" cy="120" r="5" fill="#8b5cf6"/><circle cx="372" cy="136" r="5" fill="#8b5cf6"/><circle cx="415" cy="95" r="5" fill="#8b5cf6"/><circle cx="420" cy="140" r="5" fill="#8b5cf6"/><circle cx="412" cy="175" r="5" fill="#8b5cf6"/><path d="M430,60 L430,200" stroke="#be123c" stroke-width="2" marker-end="url(#m10)" opacity=".6"/><text x="360" y="228" font-size="18" fill="#6d28d9" text-anchor="middle" font-weight="bold">內分泌腺</text><text x="360" y="250" font-size="15" fill="#1f2937" text-anchor="middle">無導管→激素進血液</text><text x="360" y="270" font-size="13" fill="#4b5563" text-anchor="middle">甲狀腺、腎上腺、胰島</text></svg><figcaption>外分泌腺經導管把分泌物送到表面；內分泌腺沒有導管，激素（紫點）直接進入血液。</figcaption></figure>
+  <p><b>胰臟</b>同時有兩種功能：大部分是分泌消化酶的<b>腺泡</b> <i class="en-term">acini</i>（外分泌，經胰管送到十二指腸）；散布其間的小群細胞叫<b>胰島（蘭氏小島）</b> <i class="en-term">pancreatic islets / islets of Langerhans</i>（內分泌，分泌胰島素、升糖素入血）。此外，心臟、胃腸、腎臟、脂肪組織等器官雖然不以「腺體」為名，也會分泌激素（第 11 章）。</p>
+
+  <h3 id="s3d">結締組織 Connective Tissue</h3>
+  <p>結締組織的最大特點是：<span class="key">細胞之間有大量的細胞外物質，稱為細胞外基質</span> <i class="en-term">extracellular matrix</i>，細胞反而分布得比較稀疏。基質由兩部分組成：</p>
+  <ul class="dots">
+    <li><b>蛋白纖維</b>：<b>膠原蛋白</b> <i class="en-term">collagen</i>（抗拉扯，是人體含量最多的蛋白質）與<b>彈性蛋白</b> <i class="en-term">elastin</i>（可拉長再回彈）。</li>
+    <li><b>基底物質</b> <i class="en-term">ground substance</i>：含醣蛋白、<b>蛋白聚醣</b> <i class="en-term">proteoglycans</i> 的膠狀物質，可保水。</li>
+  </ul>
+  <p>結締組織的種類差異，主要來自基質的不同——液體、膠狀、纖維狀或礦化成硬的。分成四大類：</p>
+
+  <figure class="pic"><svg viewBox="0 0 480 576" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><text x="123" y="26" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">疏鬆（蜂窩）</text><rect x="10" y="34" width="225" height="82" rx="8" fill="#f8fafc" stroke="#e5e7eb"/><path d="M18,54 q20,-10 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M18,79 q20,-10 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M18,99 q20,-10 40,0 t40,0 t40,0 t40,0 t40,0" fill="none" stroke="#0f766e" stroke-width="2"/><ellipse cx="50" cy="66" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="130" cy="92" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="200" cy="64" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="100" cy="108" rx="8" ry="5" fill="#f59e0b"/><ellipse cx="180" cy="106" rx="8" ry="5" fill="#f59e0b"/><text x="123" y="138" font-size="14" fill="#374151" text-anchor="middle">皮下、器官之間</text><text x="363" y="26" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">緻密規則</text><rect x="250" y="34" width="225" height="82" rx="8" fill="#f8fafc" stroke="#e5e7eb"/><path d="M256,42 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,50 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,58 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,66 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,74 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,82 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,90 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,98 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><path d="M256,106 q27,-3 54,0 t54,0 t54,0 t54,0" fill="none" stroke="#0f766e" stroke-width="2"/><ellipse cx="290" cy="54" rx="10" ry="2.5" fill="#b45309"/><ellipse cx="360" cy="70" rx="10" ry="2.5" fill="#b45309"/><ellipse cx="430" cy="54" rx="10" ry="2.5" fill="#b45309"/><ellipse cx="320" cy="86" rx="10" ry="2.5" fill="#b45309"/><ellipse cx="400" cy="102" rx="10" ry="2.5" fill="#b45309"/><text x="363" y="138" font-size="14" fill="#374151" text-anchor="middle">肌腱、韌帶：纖維平行</text><text x="123" y="168" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">緻密不規則</text><rect x="10" y="176" width="225" height="82" rx="8" fill="#f8fafc" stroke="#e5e7eb"/><g transform="rotate(20 50 201)"><line x1="24" y1="195" x2="76" y2="195" stroke="#0f766e" stroke-width="2.5"/><line x1="24" y1="201" x2="76" y2="201" stroke="#0f766e" stroke-width="2.5"/><line x1="24" y1="207" x2="76" y2="207" stroke="#0f766e" stroke-width="2.5"/></g><g transform="rotate(-40 120 206)"><line x1="94" y1="200" x2="146" y2="200" stroke="#0f766e" stroke-width="2.5"/><line x1="94" y1="206" x2="146" y2="206" stroke="#0f766e" stroke-width="2.5"/><line x1="94" y1="212" x2="146" y2="212" stroke="#0f766e" stroke-width="2.5"/></g><g transform="rotate(60 190 204)"><line x1="164" y1="198" x2="216" y2="198" stroke="#0f766e" stroke-width="2.5"/><line x1="164" y1="204" x2="216" y2="204" stroke="#0f766e" stroke-width="2.5"/><line x1="164" y1="210" x2="216" y2="210" stroke="#0f766e" stroke-width="2.5"/></g><g transform="rotate(-15 70 236)"><line x1="44" y1="230" x2="96" y2="230" stroke="#0f766e" stroke-width="2.5"/><line x1="44" y1="236" x2="96" y2="236" stroke="#0f766e" stroke-width="2.5"/><line x1="44" y1="242" x2="96" y2="242" stroke="#0f766e" stroke-width="2.5"/></g><g transform="rotate(35 150 238)"><line x1="124" y1="232" x2="176" y2="232" stroke="#0f766e" stroke-width="2.5"/><line x1="124" y1="238" x2="176" y2="238" stroke="#0f766e" stroke-width="2.5"/><line x1="124" y1="244" x2="176" y2="244" stroke="#0f766e" stroke-width="2.5"/></g><g transform="rotate(-60 210 238)"><line x1="184" y1="232" x2="236" y2="232" stroke="#0f766e" stroke-width="2.5"/><line x1="184" y1="238" x2="236" y2="238" stroke="#0f766e" stroke-width="2.5"/><line x1="184" y1="244" x2="236" y2="244" stroke="#0f766e" stroke-width="2.5"/></g><text x="123" y="280" font-size="14" fill="#374151" text-anchor="middle">真皮：纖維交錯</text><text x="363" y="168" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">脂肪</text><rect x="250" y="176" width="225" height="82" rx="8" fill="#f8fafc" stroke="#e5e7eb"/><circle cx="278" cy="200" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="294" cy="200" rx="3" ry="6" fill="#92400e"/><circle cx="322" cy="200" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="338" cy="200" rx="3" ry="6" fill="#92400e"/><circle cx="366" cy="200" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="382" cy="200" rx="3" ry="6" fill="#92400e"/><circle cx="410" cy="200" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="426" cy="200" rx="3" ry="6" fill="#92400e"/><circle cx="454" cy="200" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="470" cy="200" rx="3" ry="6" fill="#92400e"/><circle cx="300" cy="236" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="316" cy="236" rx="3" ry="6" fill="#92400e"/><circle cx="344" cy="236" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="360" cy="236" rx="3" ry="6" fill="#92400e"/><circle cx="388" cy="236" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="404" cy="236" rx="3" ry="6" fill="#92400e"/><circle cx="432" cy="236" r="20" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/><ellipse cx="448" cy="236" rx="3" ry="6" fill="#92400e"/><text x="363" y="280" font-size="14" fill="#374151" text-anchor="middle">核被油滴擠到邊緣</text><text x="123" y="310" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">軟骨</text><rect x="10" y="318" width="225" height="82" rx="8" fill="#e0f2fe" stroke="#e5e7eb"/><ellipse cx="45" cy="343" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="45" cy="343" r="5" fill="#0369a1"/><ellipse cx="105" cy="348" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="105" cy="348" r="5" fill="#0369a1"/><ellipse cx="170" cy="340" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="170" cy="340" r="5" fill="#0369a1"/><ellipse cx="70" cy="378" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="70" cy="378" r="5" fill="#0369a1"/><ellipse cx="140" cy="380" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="140" cy="380" r="5" fill="#0369a1"/><ellipse cx="205" cy="376" rx="14" ry="10" fill="#fff" stroke="#0284c7"/><circle cx="205" cy="376" r="5" fill="#0369a1"/><text x="123" y="422" font-size="14" fill="#374151" text-anchor="middle">細胞住在陷窩、無血管</text><text x="363" y="310" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">骨</text><rect x="250" y="318" width="225" height="82" rx="8" fill="#f8fafc" stroke="#e5e7eb"/><circle cx="362" cy="359" r="37" fill="none" stroke="#a8a29e" stroke-width="2"/><circle cx="362" cy="359" r="29" fill="none" stroke="#a8a29e" stroke-width="2"/><circle cx="362" cy="359" r="21" fill="none" stroke="#a8a29e" stroke-width="2"/><circle cx="362" cy="359" r="13" fill="none" stroke="#a8a29e" stroke-width="2"/><circle cx="362" cy="359" r="7" fill="#fecaca" stroke="#dc2626"/><circle cx="386.8" cy="355.7" r="2.5" fill="#57534e"/><circle cx="377.3" cy="378.8" r="2.5" fill="#57534e"/><circle cx="352.5" cy="382.1" r="2.5" fill="#57534e"/><circle cx="337.2" cy="362.3" r="2.5" fill="#57534e"/><circle cx="346.7" cy="339.2" r="2.5" fill="#57534e"/><circle cx="371.5" cy="335.9" r="2.5" fill="#57534e"/><circle cx="361.6" cy="392.0" r="2.5" fill="#57534e"/><circle cx="333.2" cy="375.1" r="2.5" fill="#57534e"/><circle cx="333.6" cy="342.1" r="2.5" fill="#57534e"/><circle cx="362.4" cy="326.0" r="2.5" fill="#57534e"/><circle cx="390.8" cy="342.9" r="2.5" fill="#57534e"/><circle cx="390.4" cy="375.9" r="2.5" fill="#57534e"/><text x="280" y="364" font-size="12" fill="#57534e" text-anchor="middle">中央管</text><line x1="298" y1="360" x2="354" y2="359" stroke="#57534e"/><text x="363" y="422" font-size="14" fill="#374151" text-anchor="middle">同心圓骨板＝骨元</text><text x="123" y="452" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">血液</text><rect x="10" y="460" width="225" height="82" rx="8" fill="#fef3c7" stroke="#e5e7eb"/><circle cx="40" cy="485" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="40" cy="485" r="4" fill="#fecaca"/><circle cx="90" cy="515" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="90" cy="515" r="4" fill="#fecaca"/><circle cx="150" cy="485" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="150" cy="485" r="4" fill="#fecaca"/><circle cx="200" cy="518" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="200" cy="518" r="4" fill="#fecaca"/><circle cx="120" cy="522" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="120" cy="522" r="4" fill="#fecaca"/><circle cx="65" cy="490" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="65" cy="490" r="4" fill="#fecaca"/><circle cx="180" cy="490" r="10" fill="#fca5a5" stroke="#dc2626"/><circle cx="180" cy="490" r="4" fill="#fecaca"/><circle cx="160" cy="518" r="12" fill="#ddd6fe" stroke="#7c3aed"/><circle cx="160" cy="518" r="5" fill="#7c3aed"/><circle cx="25" cy="520" r="2.5" fill="#9ca3af"/><circle cx="110" cy="480" r="2.5" fill="#9ca3af"/><circle cx="215" cy="478" r="2.5" fill="#9ca3af"/><text x="123" y="564" font-size="14" fill="#374151" text-anchor="middle">基質是液體（血漿）</text><rect x="250" y="460" width="225" height="82" rx="8" fill="#f0fdfa" stroke="#0f766e" stroke-dasharray="4 3"/><text x="363" y="452" font-size="17" fill="#0f766e" text-anchor="middle" font-weight="bold">共同點</text><text x="363" y="494" font-size="16" fill="#134e4a" text-anchor="middle" font-weight="bold">細胞少、基質多</text><text x="363" y="520" font-size="14" fill="#134e4a" text-anchor="middle">基質＝纖維＋基底物質</text></svg><figcaption>結締組織的七種樣子。綠線是膠原纖維；差別在纖維的排法，以及基質是軟的、硬的還是液體。</figcaption></figure>
+  <h4>1. 固有結締組織 Connective Tissue Proper</h4>
+  <div class="tblwrap"><table>
+    <tr><th>類型</th><th>構造特點</th><th>位置</th></tr>
+    <tr><td><b>疏鬆（蜂窩）結締組織</b><br>loose / areolar</td><td>纖維稀疏、排列鬆散，空間中有基底物質；含<b>纖維母細胞</b> fibroblasts（製造纖維）與巨噬細胞等</td><td>皮膚下、器官之間、上皮下方，填充與支撐</td></tr>
+    <tr><td><b>緻密規則結締組織</b><br>dense regular</td><td>膠原纖維<b>平行排列</b>，單一方向抗拉力強；血管少</td><td><b>肌腱</b> tendon（肌肉連骨）、<b>韌帶</b> ligament（骨連骨）</td></tr>
+    <tr><td><b>緻密不規則結締組織</b><br>dense irregular</td><td>膠原纖維<b>交錯排列</b>，可抵抗各方向的拉力</td><td>皮膚的<b>真皮</b>、器官外的被膜</td></tr>
+    <tr><td><b>脂肪組織</b><br>adipose tissue</td><td>特化的疏鬆結締組織，主要由<b>脂肪細胞</b> adipocytes 構成，細胞內大油滴儲存三酸甘油酯，把細胞核擠到邊緣</td><td>皮下、內臟周圍</td></tr>
+  </table></div>
+  <p>肌腱與韌帶血流少，受傷後癒合慢，這也是「構造決定功能」的例子。</p>
+  <div class="nut"><b class="t">營養連結：</b>脂肪組織不只是儲存能量，也會分泌激素（如瘦體素 leptin），參與食慾調節（第 19 章）。<b>白色脂肪</b>主要儲能；<b>棕色脂肪</b>粒線體多，能產熱。合成膠原蛋白需要<b>維生素 C</b>（使脯胺酸、離胺酸羥化），缺乏時膠原不穩定，出現壞血病：牙齦出血、傷口癒合不良。</div>
+
+  <h4>2. 軟骨 Cartilage</h4>
+  <p class="core">軟骨細胞住在<b>陷窩</b>；基質富含膠原與<b>蛋白聚醣</b>；<b>無血管</b> → 受傷難修復。</p>
+  <p><b>軟骨細胞</b> <i class="en-term">chondrocytes</i> 位在基質中的小腔室——<b>陷窩</b> <i class="en-term">lacunae</i> 裡。基質富含膠原和蛋白聚醣，堅韌又有彈性（例如關節面、肋軟骨、氣管的軟骨環）。軟骨<b>沒有血管</b>，營養靠擴散，所以受損後很難修復。</p>
+
+  <h4>3. 骨 Bone</h4>
+  <p class="core">骨細胞住在陷窩、以<b>小管</b>相連；基質＝膠原（韌性）＋<b>磷酸鈣的結晶（氫氧基磷灰石</b>）（硬度）；同心圓骨板繞<b>中央管</b>＝<b>骨元</b>；有血管，骨折能癒合。</p>
+  <p><b>骨細胞</b> <i class="en-term">osteocytes</i> 也位在陷窩中，彼此以細小的<b>小管</b> <i class="en-term">canaliculi</i> 相連，養分經小管傳遞。骨的基質是膠原蛋白加上<b>磷酸鈣的結晶（氫氧基磷灰石</b> <i class="en-term">hydroxyapatite</i>），膠原提供韌性、礦物質提供硬度。緻密骨中，基質呈同心圓的骨板圍繞<b>中央管</b> <i class="en-term">central canal</i>（內有血管和神經），構成一個個<b>骨元</b> <i class="en-term">osteon</i>。骨有豐富血管，所以骨折能癒合。</p>
+  <div class="nut"><b class="t">營養連結：</b>骨基質需要鈣、磷，以及幫助鈣吸收的維生素 D；骨中的鈣也是血鈣的儲存庫，由副甲狀腺素等激素調控（第 11、19 章）。</div>
+
+  <h4>4. 血液 Blood</h4>
+  <p class="core">細胞（紅血球、白血球、血小板）浮在液體基質<b>血漿</b>中，所以歸為結締組織。</p>
+  <p>血液被歸為結締組織，因為它的細胞（紅血球、白血球、血小板）懸浮在大量的細胞外物質中——只是這個基質是<b>液體</b>，也就是<b>血漿</b> <i class="en-term">plasma</i>。第 13 章會詳細介紹。</p>
+
+  <details class="stop"><summary>回到開頭的問題：皮膚、肌腱、骨頭、血液，哪些是同一類組織？</summary>
+    <div>肌腱、骨頭、血液都是<b>結締組織</b>（都有大量細胞外基質，只是基質分別是纖維、礦化物、液體）。皮膚則是一個<b>器官</b>，由四種組織共同構成（下一節）。</div>
+  </details>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>四大基本組織：肌肉（收縮）、神經（電訊號）、上皮（覆蓋、腺體）、結締（大量細胞外基質）。</li>
+      <li>肌肉：骨骼肌（橫紋、隨意、多核）、心肌（橫紋、不隨意、間盤含間隙接合）、平滑肌（無橫紋、不隨意、中空器官壁）。</li>
+      <li>神經組織：神經元（細胞本體、樹突接收、軸突傳出）＋支持細胞；髓鞘在周邊由許旺細胞、在中樞由寡突膠細胞形成。</li>
+      <li>上皮：緊密排列、有基底膜、無血管、更新快；依層數＋形狀命名；偽複層其實是單層；移行上皮屬複層。</li>
+      <li>細胞連結：緊密連接（封縫）、黏附連接、胞橋小體（鉚釘）、間隙接合（細胞間通道）；物質可走穿細胞或細胞旁路徑。</li>
+      <li>外分泌腺有導管、分泌到體表或管腔；內分泌腺無導管、分泌激素入血；胰臟兩者兼具（<b>腺泡</b>／<b>胰島（蘭氏小島）</b>）。</li>
+      <li>結締組織：固有（疏鬆、緻密規則、緻密不規則、脂肪）、軟骨、骨、血液；基質＝<b>膠原蛋白</b>／<b>彈性蛋白</b>纖維＋基底物質。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>組織學</td><td>histology</td><td>基本組織</td><td>primary tissues</td></tr>
+      <tr><td>骨骼肌／心肌／平滑肌</td><td>skeletal / cardiac / smooth muscle</td><td>間盤</td><td>intercalated disc</td></tr>
+      <tr><td>神經元</td><td>neuron</td><td>樹突／軸突</td><td>dendrite / axon</td></tr>
+      <tr><td>神經膠細胞</td><td>neuroglia</td><td>許旺細胞／寡突膠細胞</td><td>Schwann cell / oligodendrocyte</td></tr>
+      <tr><td>基底膜</td><td>basement membrane</td><td>內皮</td><td>endothelium</td></tr>
+      <tr><td>單層／複層</td><td>simple / stratified</td><td>鱗狀／立方／柱狀</td><td>squamous / cuboidal / columnar</td></tr>
+      <tr><td>偽複層</td><td>pseudostratified</td><td>移行上皮</td><td>transitional epithelium</td></tr>
+      <tr><td>緊密連接</td><td>tight junction</td><td>胞橋小體</td><td>desmosome</td></tr>
+      <tr><td>間隙接合</td><td>gap junction</td><td>細胞旁運輸</td><td>paracellular transport</td></tr>
+      <tr><td>外分泌腺／內分泌腺</td><td>exocrine / endocrine gland</td><td>胰島</td><td>pancreatic islets</td></tr>
+      <tr><td>細胞外基質</td><td>extracellular matrix</td><td>基底物質</td><td>ground substance</td></tr>
+      <tr><td>膠原蛋白／彈性蛋白</td><td>collagen / elastin</td><td>纖維母細胞</td><td>fibroblast</td></tr>
+      <tr><td>脂肪細胞</td><td>adipocyte</td><td>軟骨細胞／骨細胞</td><td>chondrocyte / osteocyte</td></tr>
+      <tr><td>陷窩</td><td>lacunae</td><td>骨元</td><td>osteon</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 1.4 ============ -->
+<section class="sec det" id="s4">
+  <h2><span class="no">1.4</span>器官與系統</h2>
+  <div class="en">Organs and Systems</div>
+  <div class="lead"><div><span class="lt">這節要說明什麼？</span>組織怎麼組合成<b>器官</b>和<b>器官系統</b>，以及全身的水分怎麼分在<b>細胞內液、細胞外液</b>。</div><div><span class="lt lt2">為什麼放最後？</span>有了材料（1.3），才能組裝成器官和系統——這就是之後各章的主角。最後講體液，是因為細胞外液正是 1.2 說的「內在環境」：所有系統要維持穩定的，就是它。</div></div>
+  <div class="oneline">兩種以上的組織組成器官，多個器官合作組成系統；全身的水分則分在細胞內和細胞外兩大區間。</div>
+  <div class="think">皮膚只是一層「皮」嗎？如果皮膚是器官，它裡面應該找得到哪幾種組織？</div>
+
+  <h3 id="s4a">以皮膚為例看器官 An Example of an Organ: The Skin</h3>
+  <p class="core">器官＝兩種以上基本組織組成；皮膚是最大的器官，四種組織都有。</p>
+  <p><b>器官</b> <i class="en-term">organ</i> 是由<b>兩種以上的基本組織</b>組成、執行特定功能的構造。大部分器官四種組織都有。課本選<b>皮膚</b>當例子，因為它是全身最大的器官，又很容易看到四種組織如何合作。</p>
+  <h4>皮膚的分層</h4>
+  <ul class="dots">
+    <li><b>表皮</b> <i class="en-term">epidermis</i>：角質化複層鱗狀上皮。最深層（基底層）的細胞不斷分裂，新細胞往上推，一路累積<b>角蛋白</b> <i class="en-term">keratin</i> 並逐漸死亡；最外層是扁平、死亡、充滿角蛋白的細胞，能<b>防止水分散失</b>、抵抗磨損與微生物，並持續脫落、被下方新細胞取代。表皮沒有血管。</li>
+    <li><b>真皮</b> <i class="en-term">dermis</i>：位於表皮下方，主要是緻密不規則結締組織。有<b>血管</b>（養分擴散給表皮；擴張或收縮以調節散熱）、<b>神經纖維與感覺受器</b>（觸、壓、溫度、痛覺）、<b>毛囊</b>、<b>汗腺</b>與<b>皮脂腺</b>（都是由表皮向下長入真皮的外分泌腺），以及讓毛髮豎起的<b>豎毛肌</b> <i class="en-term">arrector pili muscle</i>（平滑肌）。</li>
+    <li><b>皮下組織</b> <i class="en-term">hypodermis / subcutaneous tissue</i>：真皮下方，以疏鬆結締組織和脂肪組織為主，保溫、儲能、緩衝。</li>
+  </ul>
+  <figure class="pic"><svg viewBox="0 0 480 382" xmlns="http://www.w3.org/2000/svg" font-family="Noto Sans TC,PingFang TC,Microsoft JhengHei,sans-serif"><rect x="20" y="30" width="280" height="44" fill="#fecdd3"/><rect x="20" y="30" width="280" height="10" fill="#fda4af"/><line x1="30" y1="44" x2="30" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="46" y1="44" x2="46" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="62" y1="44" x2="62" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="78" y1="44" x2="78" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="94" y1="44" x2="94" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="110" y1="44" x2="110" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="126" y1="44" x2="126" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="142" y1="44" x2="142" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="158" y1="44" x2="158" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="174" y1="44" x2="174" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="190" y1="44" x2="190" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="206" y1="44" x2="206" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="222" y1="44" x2="222" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="238" y1="44" x2="238" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="254" y1="44" x2="254" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="270" y1="44" x2="270" y2="74" stroke="#fb7185" stroke-opacity=".5"/><line x1="286" y1="44" x2="286" y2="74" stroke="#fb7185" stroke-opacity=".5"/><rect x="20" y="74" width="280" height="136" fill="#ffedd5"/><rect x="20" y="210" width="280" height="110" fill="#fef9c3"/><circle cx="38" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="68" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="98" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="128" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="158" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="188" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="218" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="248" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="278" cy="232" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="53" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="83" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="113" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="143" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="173" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="203" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="233" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="263" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="293" cy="262" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="38" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="68" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="98" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="128" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="158" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="188" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="218" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="248" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><circle cx="278" cy="294" r="13" fill="#fef08a" stroke="#ca8a04"/><path d="M70,150 L55,4" stroke="#451a03" stroke-width="3"/><ellipse cx="72" cy="172" rx="13" ry="24" fill="#fde68a" stroke="#92400e" stroke-width="2"/><circle cx="94" cy="124" r="9" fill="#fef08a" stroke="#ca8a04"/><circle cx="98" cy="140" r="8" fill="#fef08a" stroke="#ca8a04"/><line x1="80" y1="168" x2="120" y2="92" stroke="#be123c" stroke-width="5" stroke-linecap="round"/><path d="M152,205 L154,92 Q160,80 168,92" fill="none" stroke="#dc2626" stroke-width="4"/><path d="M168,92 L171,205" fill="none" stroke="#2563eb" stroke-width="4"/><path d="M212,330 L213,150 M213,150 L200,96 M213,150 L228,98" fill="none" stroke="#ca8a04" stroke-width="2.5"/><path d="M252,30 C246,60 258,90 252,120 C246,150 258,165 252,178" fill="none" stroke="#2563eb" stroke-width="2.5"/><ellipse cx="252" cy="186" rx="15" ry="8" fill="none" stroke="#2563eb" stroke-width="2.5"/><ellipse cx="252" cy="196" rx="15" ry="8" fill="none" stroke="#2563eb" stroke-width="2.5"/><circle cx="48" cy="200" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="48" y="205" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">1</text><circle cx="118" cy="130" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="118" y="135" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">2</text><circle cx="132" cy="104" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="132" y="109" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">3</text><circle cx="186" cy="92" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="186" y="97" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">4</text><circle cx="236" cy="128" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="236" y="133" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">5</text><circle cx="280" cy="196" r="10" fill="#fff" stroke="#374151" stroke-width="1.5"/><text x="280" y="201" font-size="13" fill="#1f2937" text-anchor="middle" font-weight="bold">6</text><text x="312" y="50" font-size="17" fill="#be123c" text-anchor="start" font-weight="bold">表皮</text><text x="312" y="70" font-size="14" fill="#1f2937" text-anchor="start">上皮組織</text><text x="312" y="138" font-size="17" fill="#c2410c" text-anchor="start" font-weight="bold">真皮</text><text x="312" y="158" font-size="14" fill="#1f2937" text-anchor="start">結締組織</text><text x="312" y="262" font-size="17" fill="#a16207" text-anchor="start" font-weight="bold">皮下組織</text><text x="312" y="282" font-size="14" fill="#1f2937" text-anchor="start">脂肪組織</text><text x="20" y="348" font-size="15" fill="#1f2937" text-anchor="start">① 毛囊　② 皮脂腺　③ 豎毛肌（平滑肌）</text><text x="20" y="372" font-size="15" fill="#1f2937" text-anchor="start">④ 微血管　⑤ 神經　⑥ 汗腺（外分泌腺）</text></svg><figcaption>皮膚剖面：一個器官裡四種組織都有——表皮與腺體（上皮）、真皮與脂肪（結締）、豎毛肌（肌肉）、神經（神經）。</figcaption></figure>
+  <div class="tblwrap"><table>
+    <tr><th>基本組織</th><th>在皮膚的哪裡</th></tr>
+    <tr><td>上皮組織</td><td>表皮；汗腺、皮脂腺、毛囊</td></tr>
+    <tr><td>結締組織</td><td>真皮（緻密不規則）、皮下脂肪、血管中的血液</td></tr>
+    <tr><td>肌肉組織</td><td><b>豎毛肌</b>、血管壁的平滑肌</td></tr>
+    <tr><td>神經組織</td><td>感覺受器與神經纖維</td></tr>
+  </table></div>
+  <div class="nut"><b class="t">營養連結：</b>皮膚經紫外線照射可將 7-脫氫膽固醇轉成維生素 D₃ 的前身，所以日照是維生素 D 的重要來源（第 19 章）；汗腺分泌汗水，大量流汗會流失水分與鈉。</div>
+  <p>皮膚的功能也呼應了 1.2 的恆定：真皮血管與汗腺是<b>體溫調節的動器</b>，感覺受器則是<b>感受器</b>。</p>
+
+  <h3 id="s4b">幹細胞 Stem Cells</h3>
+  <p style="font-size:14px;color:var(--sub)">※ 部分版本把幹細胞放在這一節討論，若你的中譯本此處沒有，可當作補充。</p>
+  <p>表皮基底層之所以能一直產生新細胞，是因為那裡有<b>幹細胞</b> <i class="en-term">stem cells</i>。幹細胞有兩個特性：①能<b>自我更新</b>（分裂後仍保有幹細胞），②能<b>分化</b>成特化的細胞。依分化潛力分成：</p>
+  <div class="tblwrap"><table>
+    <tr><th>種類</th><th>能分化成</th><th>例子</th></tr>
+    <tr><td><b>全能</b> totipotent</td><td>所有細胞，包括胎盤等胚外組織</td><td>受精卵及最早期的分裂細胞</td></tr>
+    <tr><td><b>多能（萬能）</b> pluripotent</td><td>身體所有種類的細胞（不含胚外組織）</td><td><b>胚胎幹細胞</b> embryonic stem cells（囊胚的內細胞團）；<b>誘導性多能幹細胞</b> iPS cells（把成體細胞重新編程而來）</td></tr>
+    <tr><td><b>多潛能</b> multipotent</td><td>某一類組織中的數種細胞</td><td><b>成體幹細胞</b> adult stem cells：骨髓的造血幹細胞、表皮基底層、小腸腺窩的幹細胞</td></tr>
+  </table></div>
+
+  <h3 id="s4c">器官系統 Systems</h3>
+  <p>功能相關的器官合作，組成<b>器官系統</b> <i class="en-term">organ system</i>。整本書的後半就是一個系統一個系統地講：</p>
+  <div class="tblwrap"><table>
+    <tr><th>系統</th><th>主要器官</th><th>主要功能</th><th>本書章節</th></tr>
+    <tr><td>皮膚（體被）系統 integumentary</td><td>皮膚、毛髮、指甲</td><td>保護、體溫調節</td><td>1</td></tr>
+    <tr><td>神經系統 nervous</td><td>腦、脊髓、神經</td><td>快速調控、整合、感覺</td><td>7–10</td></tr>
+    <tr><td>內分泌系統 endocrine</td><td>分泌激素的腺體</td><td>以激素調控</td><td>11</td></tr>
+    <tr><td>骨骼系統 skeletal</td><td>骨、軟骨、韌帶</td><td>支撐、保護、造血、儲鈣</td><td>19（鈣磷）</td></tr>
+    <tr><td>肌肉系統 muscular</td><td>骨骼肌</td><td>運動、產熱</td><td>12</td></tr>
+    <tr><td>循環系統 circulatory</td><td>心臟、血管、血液</td><td>運送物質</td><td>13–14</td></tr>
+    <tr><td>淋巴系統 lymphatic</td><td>淋巴管、淋巴結</td><td>回收組織液、免疫</td><td>13、15</td></tr>
+    <tr><td>免疫系統 immune</td><td>白血球、脾臟、胸腺等</td><td>防禦</td><td>15</td></tr>
+    <tr><td>呼吸系統 respiratory</td><td>肺、氣管</td><td>氣體交換、酸鹼調節</td><td>16</td></tr>
+    <tr><td>泌尿系統 urinary</td><td>腎、輸尿管、膀胱</td><td>調節血量與成分、排除廢物</td><td>17</td></tr>
+    <tr><td>消化系統 digestive</td><td>消化道、肝、胰</td><td>消化、吸收</td><td>18</td></tr>
+    <tr><td>生殖系統 reproductive</td><td>性腺、生殖器官</td><td>產生配子、生殖</td><td>20</td></tr>
+  </table></div>
+
+  <h3 id="s4d">體液區間 Body-Fluid Compartments</h3>
+  <p>人體的組織、器官都浸在水裡。<b>體內總水量</b>約占成年人體重的 <b>60%</b>（女性、老人、肥胖者比例較低，因為脂肪組織含水少）。這些水分被細胞膜與微血管壁分隔成幾個<b>區間</b> <i class="en-term">compartments</i>：</p>
+  <figure>
+    <svg viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+      <text x="320" y="20" text-anchor="middle" font-size="15" fill="#374151">體內總水量（約體重 60%）</text>
+      <rect x="20" y="32" width="400" height="70" fill="#eff6ff" stroke="#2563eb"/>
+      <text x="220" y="62" text-anchor="middle" font-size="17" fill="#1e3a8a">細胞內液 ICF</text>
+      <text x="220" y="86" text-anchor="middle" font-size="14" fill="#1e3a8a">約 2/3｜K⁺ 多</text>
+      <rect x="420" y="32" width="200" height="70" fill="#f0fdfa" stroke="#0f766e"/>
+      <text x="520" y="62" text-anchor="middle" font-size="17" fill="#134e4a">細胞外液 ECF</text>
+      <text x="520" y="86" text-anchor="middle" font-size="14" fill="#134e4a">約 1/3｜Na⁺ 多</text>
+      <line x1="420" y1="26" x2="420" y2="110" stroke="#dc2626" stroke-width="3"/>
+      <text x="420" y="125" text-anchor="middle" font-size="13" fill="#dc2626">細胞膜分隔</text>
+      <path d="M420,102 L360,150" stroke="#9ca3af"/><path d="M620,102 L620,150" stroke="#9ca3af"/>
+      <rect x="360" y="150" width="200" height="62" fill="#ecfeff" stroke="#0f766e"/>
+      <text x="460" y="176" text-anchor="middle" font-size="15" fill="#134e4a">組織間液</text>
+      <text x="460" y="198" text-anchor="middle" font-size="13" fill="#134e4a">約 ECF 的 80%</text>
+      <rect x="560" y="150" width="60" height="62" fill="#fff1f2" stroke="#e11d48"/>
+      <text x="590" y="176" text-anchor="middle" font-size="14" fill="#881337">血漿</text>
+      <text x="590" y="198" text-anchor="middle" font-size="12" fill="#881337">約20%</text>
+      <line x1="560" y1="144" x2="560" y2="218" stroke="#7c3aed" stroke-width="3"/>
+      <text x="300" y="226" font-size="13" fill="#7c3aed">微血管壁分隔 →</text>
+    </svg>
+    <figcaption>體液區間。區塊寬度大致代表比例。</figcaption>
+  </figure>
+  <ul class="dots">
+    <li><b>細胞內液</b> <i class="en-term">intracellular fluid, ICF</i>：在細胞裡面，約占總水量 <b>2/3</b>。</li>
+    <li><b>細胞外液</b> <i class="en-term">extracellular fluid, ECF</i>：在細胞外面，約占 <b>1/3</b>。又分成：
+      <ul>
+        <li><b>血漿</b> <i class="en-term">plasma</i>：血管內血液的液體部分，約占 ECF 的 20%。</li>
+        <li><b>組織間液（組織液）</b> <i class="en-term">interstitial fluid / tissue fluid</i>：在微血管外、包圍著細胞，約占 ECF 的 80%。細胞直接接觸的就是組織間液——這就是伯納所說的「內在環境」。</li>
+      </ul>
+    </li>
+  </ul>
+  <p><b>分隔它們的構造</b>：ICF 與 ECF 之間是<b>細胞膜</b>；血漿與組織間液之間是<b>微血管壁</b>。血漿中的水和小分子可以穿過微血管壁形成組織液，組織液大部分再回到微血管，多出來的由<b>淋巴管</b>回收成為淋巴（第 14 章）。</p>
+  <p><b>成分差異</b>：細胞內液以 <b>K⁺</b> 為主要陽離子，細胞外液以 <b>Na⁺</b> 為主。血漿含較多蛋白質（如白蛋白），組織間液蛋白質很少——這個差異和水腫的形成有關（第 14 章）。</p>
+  <div class="warn"><b class="t">數字提醒：</b>細胞外液內部的比例，不同書寫法略有不同（血漿：組織間液 ≈ 1:4 或 1:3）。ICF 2/3、ECF 1/3 這兩個數字則一致，是最常考的。</div>
+
+  <details class="stop"><summary>算算看：70 公斤的成年男性，各區間大約有多少水？</summary>
+    <div>總水量 70 × 60% = <b>42 L</b>；細胞內液 42 × 2/3 = <b>28 L</b>；細胞外液 42 × 1/3 = <b>14 L</b>；其中組織間液 14 × 80% ≈ <b>11.2 L</b>，血漿 14 × 20% ≈ <b>2.8 L</b>（血漿約 3 L，再加上血球，血液總量約 5 L）。</div>
+  </details>
+  <div class="nut"><b class="t">營養連結：</b>脫水、腹瀉嘔吐會先減少細胞外液；靜脈點滴或口服補液也是在補充細胞外液。肥胖者體脂比例高，體水百分比較低，所以藥物或輸液計算有時要考慮體組成。</div>
+
+  <div class="sum"><b class="t">本節重點</b>
+    <ul>
+      <li>器官由兩種以上基本組織組成；皮膚含四大組織：表皮（上皮）、真皮（結締、血管、神經、腺體、豎毛肌）、皮下（脂肪）。</li>
+      <li>表皮為角質化複層鱗狀上皮，基底層幹細胞持續分裂，外層角質化細胞防水並脫落。</li>
+      <li>幹細胞：自我更新＋分化；全能（受精卵）→ 多能（胚胎幹細胞、iPS）→ 多潛能（成體幹細胞）。</li>
+      <li>功能相關的器官組成器官系統，各章依系統介紹。</li>
+      <li>體內水分約體重 60%；ICF 2/3（<b>K⁺</b> 多）、ECF 1/3（Na⁺ 多）；ECF 包括組織間液與血漿。細胞膜分隔 ICF/ECF，微血管壁分隔血漿/組織間液。ICF 以 K⁺ 為主、ECF 以 Na⁺ 為主。</li>
+    </ul>
+  </div>
+  <details class="terms"><summary>本節名詞中英對照</summary>
+    <div class="tblwrap"><table>
+      <tr><td>器官</td><td>organ</td><td>器官系統</td><td>organ system</td></tr>
+      <tr><td>表皮／真皮</td><td>epidermis / dermis</td><td>皮下組織</td><td>hypodermis</td></tr>
+      <tr><td>角蛋白</td><td>keratin</td><td>豎毛肌</td><td>arrector pili</td></tr>
+      <tr><td>幹細胞</td><td>stem cell</td><td>誘導性多能幹細胞</td><td>induced pluripotent stem cell (iPS)</td></tr>
+      <tr><td>全能／多能／多潛能</td><td>totipotent / pluripotent / multipotent</td><td>體內總水量</td><td>total body water</td></tr>
+      <tr><td>細胞內液</td><td>intracellular fluid (ICF)</td><td>細胞外液</td><td>extracellular fluid (ECF)</td></tr>
+      <tr><td>組織間液</td><td>interstitial fluid</td><td>血漿</td><td>plasma</td></tr>
+    </table></div>
+  </details>
+</section>
+
+<!-- ============ 本章重點整理 ============ -->
+<section class="sec" id="s5">
+  <h2>本章重點整理</h2>
+  <div class="en">Chapter Summary</div>
+  <div class="tblwrap"><table>
+    <tr><th>主題</th><th>必背內容</th></tr>
+    <tr><td>生理學</td><td>研究功能與機制；構造決定功能；病理生理學研究疾病時的功能異常</td></tr>
+    <tr><td>科學方法</td><td>可否證的假說、對照組、定量、統計、同儕審查、可重複</td></tr>
+    <tr><td>臨床試驗</td><td>I 期健康人／安全；II 期病人／療效（雙盲、安慰劑）；III 期大規模；IV 期上市後監測</td></tr>
+    <tr><td>人物</td><td>伯納＝內在環境；坎農＝homeostasis 一詞；哈維＝血液循環</td></tr>
+    <tr><td>負回饋</td><td>感受器 → 整合中心 → 動器；反應方向與偏離相反；維持恆定</td></tr>
+    <tr><td>正回饋</td><td>放大變化；分娩催產素、凝血、LH 高峰</td></tr>
+    <tr><td>拮抗</td><td>流汗／顫抖；胰島素（β）／升糖素（α）；交感／副交感</td></tr>
+    <tr><td>四大組織</td><td>肌肉、神經、上皮、結締</td></tr>
+    <tr><td>肌肉</td><td>骨骼肌（橫紋、隨意、多核）；心肌（橫紋、間盤）；平滑肌（無橫紋、中空器官）</td></tr>
+    <tr><td>神經</td><td>樹突收、軸突送；髓鞘：周邊許旺、中樞寡突</td></tr>
+    <tr><td>上皮</td><td>層數＋形狀命名；偽複層＝單層（呼吸道）；移行＝複層（膀胱）；無血管、有基底膜</td></tr>
+    <tr><td>細胞連結</td><td>緊密連接封縫；胞橋小體鉚釘；間隙接合通道（心肌、平滑肌同步）</td></tr>
+    <tr><td>腺體</td><td>外分泌有導管；內分泌無導管、分泌激素；胰臟兩者兼具</td></tr>
+    <tr><td>結締</td><td>大量基質；疏鬆、緻密規則（肌腱韌帶）、緻密不規則（真皮）、脂肪、軟骨、骨、血液</td></tr>
+    <tr><td>體液</td><td>總水量 60% 體重；ICF 2/3（K⁺）、ECF 1/3（Na⁺）＝組織間液＋血漿</td></tr>
+  </table></div>
+
+  <h3>讀完請自我檢查：我能不能……</h3>
+  <ul class="dots">
+    <li>□ 用自己的話說出「負回饋」與「正回饋」的差別，各舉兩個例子？</li>
+    <li>□ 畫出體溫負回饋的三個角色，並說出體溫太高、太低時各有哪些動器？</li>
+    <li>□ 說出飯後與空腹時，胰島分泌哪種激素、肝臟做了什麼？</li>
+    <li>□ 比較三種肌肉組織的橫紋、控制方式、位置？</li>
+    <li>□ 看到「單層鱗狀、偽複層纖毛柱狀、移行上皮」立刻說出位置與功能？</li>
+    <li>□ 說出四種細胞連結各自的功能？</li>
+    <li>□ 計算 60 公斤的人細胞內液與細胞外液各約多少公升？</li>
+  </ul>
+  <p style="font-size:15px">想用圖解方式複習，可搭配「圖解生理生化」的〈開始之前：恆定與回饋〉與〈基本組織與細胞〉兩個單元。</p>
+</section>
+
+<!-- ============ 自我檢測 ============ -->
+<section class="sec" id="s6">
+  <h2>自我檢測</h2>
+  <div class="en">Self-check — 先選答案，再看解析</div>
+  <div id="quiz"></div>
+  <div class="score" id="score"></div>
+</section>
+
+</main>
+<a class="top" href="#top" aria-label="回到頂端">↑</a>
+<footer>Fox《人體生理學》16 版 第 1 章導讀｜依一般生理學知識撰寫，非課本原文；如有出入以課本與老師講義為準</footer>
+
+<script>
+function setMode(m){
+  document.body.classList.toggle('brief',m==='brief');
+  document.getElementById('mBrief').classList.toggle('on',m==='brief');
+  document.getElementById('mFull').classList.toggle('on',m==='full');
+  try{localStorage.setItem('foxMode',m);}catch(e){}
+  if(window.markGl)markGl();
+}
+document.querySelectorAll('.sec.det').forEach(sec=>{
+  const b=document.createElement('button'); b.className='secbtn'; b.textContent='▼ 展開本節詳細內文';
+  b.onclick=()=>{const o=sec.classList.toggle('open'); b.textContent=o?'▲ 收起本節詳細內文':'▼ 展開本節詳細內文'; if(window.markGl)markGl();};
+  const one=sec.querySelector('.oneline'); one.after(b);
+});
+let saved='brief'; try{saved=localStorage.getItem('foxMode')||'brief';}catch(e){}
+setMode(saved);
+document.querySelectorAll('figure').forEach(f=>{f.addEventListener('click',()=>f.classList.toggle('zoom'));});
+const Q = [
+ {q:"負回饋迴路中，負責把目前的數值和設定點比較、並決定如何反應的是？（Which component compares the value with the set point?）",
+  o:["感受器 sensor","整合中心 integrating center","動器 effector","標的細胞 target cell"],a:1,
+  e:"感受器只負責「偵測」，動器負責「執行」，<b>整合中心</b>負責「比較與決定」。體溫調節的整合中心是下視丘。"},
+ {q:"下列何者是<b>正回饋</b>的例子？",
+  o:["飯後胰島素分泌使血糖下降","天熱時流汗散熱","分娩時催產素使子宮收縮越來越強","天冷時顫抖產熱"],a:2,
+  e:"正回饋會<b>放大</b>原本的變化：子宮頸受壓 → 催產素 → 收縮更強 → 更多壓迫……直到胎兒產出才停止。其他三項都是讓數值回到設定點的負回饋。"},
+ {q:"提出「內在環境（milieu intérieur）」觀念的是誰？",
+  o:["Walter Cannon","Claude Bernard","William Harvey","Galen"],a:1,
+  e:"<b>伯納（Claude Bernard）</b>提出內在環境的穩定是生物自由獨立生活的條件；<b>坎農（Cannon）</b>後來創造了 homeostasis 這個詞；哈維證明血液循環。"},
+ {q:"新藥第一期（Phase I）臨床試驗的主要對象與目的是？",
+  o:["少數健康自願者，評估安全性與劑量","大量病人，與現有藥物比較","上市後的一般使用者，監測罕見副作用","實驗動物，找出作用機制"],a:0,
+  e:"第一期：<b>少數健康自願者、安全性與劑量</b>。第二期：病人、療效；第三期：大規模多中心；第四期：上市後監測；動物實驗屬於臨床前。"},
+ {q:"飯後血糖上升時，胰臟哪一種細胞分泌哪一種激素？",
+  o:["α 細胞分泌升糖素","β 細胞分泌胰島素","腺泡細胞分泌胰島素","β 細胞分泌升糖素"],a:1,
+  e:"<b>β 細胞 → 胰島素</b>（降血糖）；α 細胞 → 升糖素（升血糖）。腺泡屬外分泌，分泌消化酶。"},
+ {q:"心肌細胞之間能讓離子直接流通、使心臟同步收縮的構造是？",
+  o:["緊密連接 tight junction","胞橋小體 desmosome","間隙接合 gap junction","基底膜 basement membrane"],a:2,
+  e:"<b>間隙接合</b>由 connexin 形成細胞間通道，電訊號（離子）直接傳到隔壁細胞。心肌的間盤裡有間隙接合，也有抗拉扯的胞橋小體。緊密連接則負責封住細胞間隙。"},
+ {q:"氣管內面的上皮看起來像多層，但每個細胞都接觸基底膜，這是？",
+  o:["複層鱗狀上皮","移行上皮","偽複層纖毛柱狀上皮","單層立方上皮"],a:2,
+  e:"<b>偽複層纖毛柱狀上皮</b>：細胞核高低不齊看似多層，其實是單層。纖毛把黏液往喉嚨推。"},
+ {q:"膀胱的移行上皮（transitional epithelium）屬於？",
+  o:["複層上皮","偽複層上皮","單層柱狀上皮","結締組織"],a:0,
+  e:"移行上皮是<b>複層上皮</b>的一種，可隨膀胱充盈而伸展。不要和偽複層混淆。"},
+ {q:"周邊神經系統中形成髓鞘的細胞是？",
+  o:["寡突膠細胞 oligodendrocyte","星狀膠細胞 astrocyte","許旺細胞 Schwann cell","微膠細胞 microglia"],a:2,
+  e:"髓鞘：<b>周邊＝許旺細胞</b>，中樞＝寡突膠細胞。星狀膠細胞與微膠細胞都在中樞。"},
+ {q:"肌腱（tendon）屬於哪一種組織？",
+  o:["緻密規則結締組織","緻密不規則結締組織","疏鬆結締組織","平滑肌"],a:0,
+  e:"肌腱、韌帶的膠原纖維<b>平行排列</b>，屬緻密規則結締組織，單一方向抗拉力強；真皮則是緻密不規則。"},
+ {q:"下列何者<b>不是</b>上皮組織的特性？",
+  o:["細胞緊密排列","有基底膜","富含血管","細胞更新快"],a:2,
+  e:"上皮組織<b>無血管</b>，養分從下方結締組織的微血管擴散而來。"},
+ {q:"一位 70 公斤成年男性，體水占體重 60%，細胞內液約為多少？",
+  o:["42 L","28 L","14 L","2.8 L"],a:1,
+  e:"總水量 42 L × 2/3 = <b>28 L</b>。細胞外液 14 L，其中血漿約 2.8 L。"}
+];
+let answered=0, correct=0;
+const box=document.getElementById('quiz');
+Q.forEach((it,i)=>{
+  const d=document.createElement('div'); d.className='q';
+  d.innerHTML=`<div class="qt">${i+1}. ${it.q}</div>`;
+  const exp=document.createElement('div'); exp.className='exp';
+  it.o.forEach((t,j)=>{
+    const b=document.createElement('button');
+    b.textContent=String.fromCharCode(65+j)+'. '+t;
+    b.onclick=()=>{
+      if(d.dataset.done) return;
+      d.dataset.done=1; answered++;
+      const btns=d.querySelectorAll('button');
+      btns[it.a].classList.add('ok');
+      if(j===it.a){correct++; exp.innerHTML='<b>答對了！</b> '+it.e;}
+      else{b.classList.add('ng'); exp.innerHTML='<b>答案是 '+String.fromCharCode(65+it.a)+'。</b> '+it.e;}
+      exp.style.display='block';
+      if(answered===Q.length) document.getElementById('score').textContent=`完成！答對 ${correct} / ${Q.length} 題`;
+    };
+    d.appendChild(b);
+  });
+  d.appendChild(exp); box.appendChild(d);
+});
+</script>
+<script>
+const GL = {
+ beta:{t:"β 細胞 beta cells",
+  w:"胰臟裡的<b>胰島（蘭氏小島）</b>。胰島是一小團一小團的內分泌細胞，散布在分泌消化酶的腺泡之間，只占胰臟很小一部分。β 細胞是胰島裡數量最多的細胞（約六到七成）。",
+  f:"感受血糖升高，分泌<b>胰島素</b>，讓血糖下降。",
+  n:"1907 年美國學者 Lane 用不同的固定液處理胰島，發現胰島細胞裡的顆粒有兩種溶解性，於是把細胞分成 A、B 兩類；後來又找到 D 細胞等，再改寫成希臘字母 α、β、δ。所以字母只是<b>當年辨認出來的編號</b>，和功能無關。",
+  m:"口訣：<b>α 餓、β 飽</b>——α 像「啊，好餓」→ 升糖素升血糖；β 像「飽（bǎo）」→ 飯後胰島素降血糖。",
+  c:"第 11 章（胰島）、第 19 章（代謝的調節）"},
+ alpha:{t:"α 細胞 alpha cells",
+  w:"同樣在胰臟的<b>胰島（蘭氏小島）</b>裡，數量比 β 細胞少（約兩成），多分布在胰島周邊（人類的分布較混雜）。",
+  f:"血糖降低時分泌<b>升糖素</b>，主要作用在肝臟，讓血糖上升。",
+  n:"命名來源同 β 細胞：1907 年依顆粒的溶解性分成 A、B 兩類細胞，A 細胞後來寫作 α 細胞。胰島裡還有 δ（D）細胞分泌體抑素 somatostatin、PP 細胞分泌胰多胜肽。",
+  m:"口訣：<b>α 餓、β 飽</b>。",
+  c:"第 11、19 章"},
+ islet:{t:"胰島（蘭氏小島）pancreatic islets / islets of Langerhans",
+  w:"胰臟裡。胰臟大部分是外分泌的腺泡，胰島像小島一樣散落其中，總量只占胰臟約 1–2%。",
+  f:"胰臟的<b>內分泌</b>部分，含 α、β、δ 等細胞，分泌升糖素、胰島素、體抑素，直接進入血液。",
+  n:"1869 年德國醫學生 Paul Langerhans 在顯微鏡下首先描述，後人以他命名。胰島素 insulin 的字根就是拉丁文 <i>insula</i>（島）。",
+  c:"第 11 章"},
+ insulin:{t:"胰島素 insulin",
+  w:"由胰島的 <b>β 細胞</b>分泌。",
+  f:"降血糖：讓肌肉與脂肪細胞把葡萄糖轉運蛋白（GLUT4）移到細胞膜上，吸收更多葡萄糖；促進肝與肌肉合成肝醣、脂肪組織合成脂肪、細胞合成蛋白質。是「飽食時的儲存激素」。",
+  n:"拉丁文 <i>insula</i>（島）＋ -in，意思是「胰島分泌的物質」。",
+  c:"第 11、19 章"},
+ glucagon:{t:"升糖素 glucagon",
+  w:"由胰島的 <b>α 細胞</b>分泌。",
+  f:"升血糖：主要作用在<b>肝臟</b>，促進肝醣分解與糖質新生，把葡萄糖放進血液。",
+  n:"一般認為來自 glucose agonist（讓葡萄糖上升的物質）的縮寫；中文「升糖素」直接說出作用。",
+  c:"第 11、19 章"},
+ glycogen:{t:"肝醣 glycogen",
+  w:"主要存在<b>肝臟</b>和<b>骨骼肌</b>。",
+  f:"許多葡萄糖接成的分支狀多醣，是動物儲存葡萄糖的形式。肝醣分解後可把葡萄糖釋放到血液，維持全身血糖；肌肉缺少把葡萄糖送出細胞的酵素（葡萄糖-6-磷酸酶），所以肌肝醣只給自己用。",
+  n:"glyco-（糖）＋ -gen（產生）＝「能產生糖的物質」。",
+  c:"第 5 章（代謝）、第 19 章"},
+ glyco:{t:"肝醣分解 glycogenolysis",
+  w:"主要在肝臟（肌肉也會，但只供自己用）。",
+  f:"把肝醣切成葡萄糖。空腹初期（約一天內）血糖主要靠它維持。升糖素、腎上腺素會促進它。",
+  n:"glycogen（肝醣）＋ -lysis（分解）。",
+  c:"第 5、19 章"},
+ gng:{t:"糖質新生 gluconeogenesis",
+  w:"主要在<b>肝臟</b>，長期禁食時腎臟也會參與。",
+  f:"用<b>非醣類</b>原料（胺基酸、乳酸、甘油）製造新的葡萄糖。肝醣用完後，靠它維持血糖供應腦和紅血球。",
+  n:"gluco-（葡萄糖）＋ neo-（新）＋ genesis（生成）＝「新做出葡萄糖」。",
+  c:"第 5、19 章"},
+ hypo:{t:"下視丘 hypothalamus",
+  w:"腦的深處、<b>視丘的下方</b>、腦垂腺的正上方，大小約一顆杏仁。",
+  f:"身體恆定的總指揮：調節體溫、飢餓與飽足、口渴、生理時鐘；還分泌激素控制腦垂腺，是神經系統和內分泌系統的橋樑。",
+  n:"hypo-（下）＋ thalamus（視丘）＝「視丘下面」。",
+  c:"第 8 章（中樞神經）、第 11 章（內分泌）"},
+ pit:{t:"腦垂腺 pituitary gland",
+  w:"掛在下視丘下方，坐在顱骨的「蝶鞍」凹窩裡，分前葉與後葉。",
+  f:"前葉分泌多種調控其他內分泌腺的激素（如 TSH、ACTH、LH、FSH）；後葉釋放下視丘做好的<b>催產素</b>與<b>抗利尿激素</b>。",
+  n:"拉丁文 <i>pituita</i>（黏液）——古人誤以為它分泌鼻涕。中文「垂」是因為它像垂掛在腦下。",
+  c:"第 11 章"},
+ adh:{t:"抗利尿激素 ADH（antidiuretic hormone，又稱血管加壓素 vasopressin）",
+  w:"下視丘製造，由<b>腦垂腺後葉</b>釋放。",
+  f:"讓腎臟集尿管再吸收更多水，尿量減少、尿變濃。血液太濃（滲透壓高）或脫水時分泌增加。",
+  n:"diuresis＝利尿（尿量增加），anti-＝對抗，所以是「對抗利尿」。",
+  c:"第 11、17 章"},
+ oxy:{t:"催產素 oxytocin",
+  w:"下視丘製造，由<b>腦垂腺後葉</b>釋放。",
+  f:"使子宮強烈收縮（分娩）、使乳腺周圍細胞收縮把乳汁擠出（噴乳反射）；也和親子依附有關。",
+  n:"希臘文 <i>oxys</i>（快速）＋ <i>tokos</i>（分娩）＝「讓分娩加快」。",
+  c:"第 11、20 章"},
+ lh:{t:"黃體生成素 LH（luteinizing hormone）",
+  w:"由<b>腦垂腺前葉</b>分泌。",
+  f:"女性：排卵前大量分泌（LH 高峰）引發排卵，並使破裂的濾泡變成黃體。男性：刺激睪丸分泌睪固酮。",
+  n:"lutein＝黃色素；黃體 corpus luteum 因含黃色色素而得名，LH 就是「讓黃體生成的激素」。",
+  c:"第 20 章"},
+ sym:{t:"交感神經 sympathetic nerves",
+  w:"自主神經系統的一支，從胸、腰段脊髓發出。",
+  f:"「<b>戰或逃</b>」fight-or-flight：心跳加快、血壓上升、瞳孔放大、血糖上升、消化變慢。",
+  n:"sympathetic 來自 sympathy（同感、共鳴），古人觀察到它讓全身各器官「一起」反應。",
+  m:"和副交感是一對<b>拮抗</b>系統。",
+  c:"第 9 章"},
+ para:{t:"副交感神經 parasympathetic nerves",
+  w:"自主神經系統的另一支，從腦幹（如迷走神經）和薦椎段脊髓發出。",
+  f:"「<b>休息與消化</b>」rest-and-digest：心跳減慢、促進消化液分泌與腸胃蠕動。",
+  n:"para-（旁邊）＋ sympathetic：位在交感神經「旁邊」（腦和薦部，兩端）的另一套系統。",
+  c:"第 9 章"},
+ myelin:{t:"髓鞘 myelin sheath",
+  w:"包在許多神經軸突外面，一段一段的；段與段之間的空隙叫蘭氏結 nodes of Ranvier。",
+  f:"由膠細胞的細胞膜一圈圈纏繞而成，富含脂質，像電線的絕緣皮，讓訊號在蘭氏結之間「跳躍」傳導，速度快很多。腦的「白質」就是因為髓鞘而呈白色。",
+  n:"英文 myelin 來自希臘文 <i>myelos</i>（骨髓），因為它富含脂質、顏色白，像骨髓；中文「髓鞘」也是這個意思。周邊由許旺細胞、中樞由寡突膠細胞形成。",
+  c:"第 7 章"},
+ schwann:{t:"許旺細胞 Schwann cells",
+  w:"<b>周邊神經系統</b>。",
+  f:"一個許旺細胞包住一段軸突形成髓鞘；也協助受損的周邊神經再生（中樞神經較難再生）。",
+  n:"以德國生理學家 Theodor Schwann 命名，他也是「細胞學說」的提出者之一。",
+  c:"第 7 章"},
+ oligo:{t:"寡突膠細胞 oligodendrocytes",
+  w:"<b>中樞神經系統</b>（腦、脊髓）。",
+  f:"伸出幾條突起，<b>一個細胞可同時包好幾條軸突</b>形成髓鞘（許旺細胞一次只包一段）。",
+  n:"oligo-（少）＋ dendro-（樹枝）＋ -cyte（細胞）＝「突起不多的細胞」。",
+  c:"第 7 章"},
+ disc:{t:"間盤 intercalated discs",
+  w:"<b>心肌</b>細胞與細胞的接頭處，在顯微鏡下呈深色橫線。",
+  f:"含<b>胞橋小體</b>（抗拉扯，心臟一直收縮也不會扯開）和<b>間隙接合</b>（電訊號直接傳到下一個細胞），讓整個心臟像一個單位同步收縮。",
+  n:"intercalated＝「插在中間的」，指插在兩個細胞之間的盤狀構造。",
+  c:"第 12、13 章"},
+ mv:{t:"微絨毛 microvilli",
+  w:"<b>小腸</b>吸收細胞的頂端面（腎小管細胞也有）。",
+  f:"細胞膜上密密麻麻的微小指狀突起，在顯微鏡下像刷子，稱為<b>刷狀緣</b> brush border，大幅增加吸收面積；膜上還有消化雙醣與胜肽的酵素。",
+  n:"micro-（微小）＋ villi（絨毛）。小腸還有更大的「絨毛」villi，微絨毛是長在細胞上的更小一級。",
+  c:"第 18 章"},
+ goblet:{t:"杯狀細胞 goblet cells",
+  w:"腸道與呼吸道的上皮之間。",
+  f:"分泌<b>黏液</b>，潤滑並保護上皮；在呼吸道黏住灰塵和微生物，再由纖毛推出去。",
+  n:"細胞上半部裝滿黏液而膨大，形狀像高腳杯 goblet。",
+  c:"第 16、18 章"},
+ endo:{t:"內皮 endothelium",
+  w:"所有血管、淋巴管與心臟的內面。",
+  f:"一層單層鱗狀上皮，讓物質在血液與組織間交換；還會分泌一氧化氮（NO）等物質調節血管擴張與凝血。",
+  n:"endo-（內）＋ -thelium（上皮）＝「襯在內面的上皮」。",
+  c:"第 13、14 章"},
+ bm:{t:"基底膜 basement membrane",
+  w:"上皮的底部，夾在上皮和下方結締組織之間。",
+  f:"把上皮固定在結締組織上，並當作分子的過濾層（例如腎絲球）。",
+  n:"注意：它<b>不是細胞膜</b>，而是由醣蛋白（如第四型膠原、層黏蛋白 laminin）構成的細胞外薄層，「膜」只是形容它很薄。",
+  c:"第 17 章（腎絲球過濾）"},
+ keratin:{t:"角蛋白 keratin",
+  w:"表皮細胞、頭髮、指甲。",
+  f:"堅韌的纖維狀蛋白，含很多雙硫鍵，讓表皮最外層防水、耐磨。",
+  n:"希臘文 <i>keras</i>（角）——動物的角也由它構成。",
+  c:"第 1 章"},
+ collagen:{t:"膠原蛋白 collagen",
+  w:"所有結締組織：真皮、肌腱、韌帶、軟骨、骨。",
+  f:"人體含量最多的蛋白質，三股螺旋，<b>抗拉扯</b>。合成時要用維生素 C 把脯胺酸、離胺酸羥化，缺乏時膠原不穩定→壞血病。",
+  n:"希臘文 <i>kolla</i>（膠）＋ -gen（產生）——古人熬煮動物皮骨得到膠。",
+  c:"第 1 章；營養學維生素 C"},
+ elastin:{t:"彈性蛋白 elastin",
+  w:"大動脈壁、肺、皮膚、某些韌帶。",
+  f:"可以被拉長再彈回，讓動脈能撐開又回縮、肺吸氣後能自動回彈。",
+  n:"elastic（有彈性的）。",
+  c:"第 14、16 章"},
+ pg:{t:"蛋白聚醣 proteoglycans",
+  w:"結締組織的基底物質，軟骨特別多。",
+  f:"一條核心蛋白接上許多長串的醣（如硫酸軟骨素），帶負電、會吸住大量水分，形成凝膠，讓組織抗壓、有彈性。",
+  n:"protein（蛋白）＋ glycan（多醣）。",
+  c:"第 1 章"},
+ fibro:{t:"纖維母細胞 fibroblasts",
+  w:"疏鬆與緻密結締組織。",
+  f:"製造膠原纖維、彈性纖維和基底物質；受傷時增生，形成疤痕組織。",
+  n:"fibro-（纖維）＋ -blast（製造者、幼細胞）＝「製造纖維的細胞」。",
+  c:"第 1 章"},
+ ha:{t:"氫氧基磷灰石 hydroxyapatite",
+  w:"骨與牙齒的礦物質部分。",
+  f:"鈣和磷酸根組成的結晶，讓骨頭堅硬；骨也因此是全身鈣、磷的儲存庫。",
+  n:"hydroxy（含氫氧基）＋ apatite（磷灰石，一類含磷酸鈣的礦物）。",
+  c:"第 11、19 章（鈣磷調節）"},
+ osteon:{t:"骨元 osteon（哈氏系統 Haversian system）",
+  w:"緻密骨。",
+  f:"骨的基本單位：一層層同心圓骨板圍著中央管（內有血管、神經），骨細胞位在骨板之間的陷窩，以小管互通養分。",
+  n:"osteo-（骨）。別名來自 17 世紀英國醫師 Clopton Havers，中央管也稱哈氏管。",
+  c:"第 19 章"},
+ lac:{t:"陷窩 lacunae",
+  w:"軟骨與骨的基質中。",
+  f:"包住軟骨細胞或骨細胞的小腔室。",
+  n:"拉丁文「小湖、小凹」，細胞就像住在基質裡的小湖中。",
+  c:"第 1 章"},
+ arrector:{t:"豎毛肌 arrector pili muscle",
+  w:"真皮，一端連毛囊、一端連表皮下方。",
+  f:"一小束<b>平滑肌</b>，受交感神經控制；冷或害怕時收縮，把毛拉直，皮膚出現雞皮疙瘩。",
+  n:"拉丁文 arrector（使豎起者）＋ pili（毛髮）。",
+  c:"第 9 章"},
+ acini:{t:"腺泡 acini（單數 acinus）",
+  w:"胰臟、唾液腺等外分泌腺的末端。",
+  f:"一群分泌細胞圍成的小囊，把分泌物（如胰臟的消化酶）送入導管。",
+  n:"拉丁文 <i>acinus</i>＝葡萄；一串串腺泡連在導管上，像葡萄串。",
+  c:"第 18 章"},
+ kna:{t:"細胞內外的 K⁺ 與 Na⁺",
+  w:"細胞內液以 K⁺ 為主，細胞外液以 Na⁺ 為主。",
+  f:"這個差異由細胞膜上的<b>鈉鉀幫浦</b>（Na⁺/K⁺-ATPase）消耗 ATP 維持：每次把 3 個 Na⁺ 送出、2 個 K⁺ 送入。它是膜電位、神經訊號、養分吸收的基礎。",
+  n:"Na 來自拉丁文 natrium，K 來自 kalium，所以符號和英文名 sodium、potassium 不同。",
+  c:"第 6 章"},
+ plasma:{t:"血漿 plasma",
+  w:"血管內，血液去掉血球後的液體部分。",
+  f:"約九成是水，溶有白蛋白等血漿蛋白、葡萄糖、電解質、激素、凝血因子，負責運送。",
+  n:"易混淆：<b>血清 serum</b>＝血液凝固後析出的液體，也就是血漿去掉凝血因子（纖維蛋白原）。",
+  c:"第 13 章"},
+ home:{t:"恆定 homeostasis",
+  w:"指身體的內在環境（細胞外液）。",
+  f:"讓體溫、血糖、pH、滲透壓等維持在正常範圍內的狀態與機制。",
+  n:"希臘文 <i>homoios</i>（相同）＋ <i>stasis</i>（停留）。1920–30 年代由坎農提出這個詞。",
+  c:"全書"},
+ placebo:{t:"安慰劑 placebo",
+  w:"臨床試驗的對照組。",
+  f:"外觀和真藥一樣但不含有效成分，用來排除「以為吃了藥就覺得好」的心理作用。",
+  n:"拉丁文「我將使（人）高興」。",
+  c:"第 1 章"},
+ multi:{t:"骨骼肌為什麼是多核？",
+  w:"骨骼肌纖維。",
+  f:"一條骨骼肌纖維可以長達數公分，需要很多細胞核來指揮蛋白質合成。",
+  n:"胚胎發育時，許多單核的<b>肌母細胞</b> myoblasts 融合成一條長纖維，所以保留了多個核。",
+  c:"第 12 章"}
+};
+Object.assign(GL,{
+ neg:{t:"負回饋 negative feedback",
+  d:"「回饋」＝結果回頭影響原因。「負」＝反應的方向和變化<b>相反</b>：數值太高就把它往下拉，太低就往上推，結果把偏離<b>抵銷掉</b>，回到原來的設定點。",
+  e:"冷氣設定 26°C：房間 27°C 就開始吹冷氣，降到 26°C 就停。體溫、血糖、血壓都是這樣被維持的。",
+  n:"「負」是數學上的「相反方向」，不是「不好」的意思。",
+  m:"負回饋＝<b>拉回來</b>，用來維持恆定。",c:"全書；1.2"},
+ pos:{t:"正回饋 positive feedback",
+  d:"反應的方向和變化<b>相同</b>，會讓變化越來越大（放大），所以不能維持穩定，必須有一個<b>終點</b>才會停。",
+  e:"分娩：子宮收縮→催產素→收縮更強……直到嬰兒產出。像麥克風對著喇叭，聲音越來越大的嘯叫。",
+  n:"「正」＝同方向，不是「好」。",
+  m:"正回饋＝<b>推到底</b>：分娩、凝血、排卵前 LH 高峰。",c:"1.2；第 13、20 章"},
+ milieu:{t:"內在環境 internal environment（milieu intérieur）",
+  d:"細胞直接接觸的那一圈液體，也就是<b>細胞外液</b>（主要是組織間液）。細胞從這裡拿養分、氧氣，也把廢物排到這裡。",
+  e:"就像魚缸裡的水：水溫、酸鹼、乾淨程度要穩定，魚（細胞）才能活。身體要維持恆定的，就是這缸「水」。",
+  n:"法國生理學家伯納（Claude Bernard）提出的觀念，原文是法文 milieu intérieur。",c:"1.2、1.4"},
+ setpt:{t:"設定點 set point",
+  d:"身體想要維持的那個<b>目標值</b>，例如體溫約 37°C。負回饋就是一直把數值拉回設定點附近。",
+  e:"冷氣遙控器上設定的 26°C。發燒時，就像有人把設定點調高到 39°C。",c:"1.2"},
+ dyn:{t:"動態恆定 dynamic constancy",
+  d:"恆定不是數值一動也不動，而是在設定點附近<b>小幅上下擺動</b>，但不超出正常範圍。",
+  e:"飯後血糖會升高、餓久了會下降，但健康的人都會回到正常範圍。",c:"1.2"},
+ sensor:{t:"感受器（感應器）sensor / receptor",
+  d:"回饋迴路的第一步：負責<b>偵測</b>數值的變化，再把訊息送給整合中心。",
+  e:"冷氣裡的溫度感測器；身體裡例如皮膚與下視丘的溫度感受器、血管壁上感測血壓的壓力感受器。",
+  n:"注意：這裡的 receptor 指「偵測變化的細胞或構造」，和激素作用的「受體（受體蛋白）」不同，中文用字不同可幫助區分。",
+  m:"感受器＝<b>眼睛</b>（看）。",c:"1.2；第 10 章"},
+ ic:{t:"整合中心 integrating center",
+  d:"回饋迴路的第二步：收到感受器的訊息後，<b>和設定點比較</b>，再<b>決定</b>要做什麼反應。通常是腦的某個區域或內分泌腺。",
+  e:"冷氣的控制電路；體溫的整合中心是下視丘；血糖的感受器與整合中心都在胰島細胞本身。",
+  m:"整合中心＝<b>大腦</b>（判斷）。",c:"1.2"},
+ eff:{t:"動器（作用器）effector",
+  d:"回饋迴路的第三步：<b>真正執行</b>反應、把數值拉回來的器官或細胞，通常是肌肉或腺體。",
+  e:"冷氣的壓縮機；體溫太高時的汗腺、皮膚血管；體溫太低時顫抖的骨骼肌。",
+  n:"effect＝效果，effector＝「產生效果的東西」。",
+  m:"動器＝<b>手腳</b>（做）。",c:"1.2；第 9、12 章"},
+ antag:{t:"拮抗 antagonistic",
+  d:"兩者作用<b>方向相反</b>、互相抵銷。拮抗動器就是一組讓數值上升、一組讓數值下降，像油門和煞車。",
+  e:"胰島素降血糖 ↔ 升糖素升血糖；交感神經讓心跳加快 ↔ 副交感神經讓心跳變慢。",
+  n:"「拮」「抗」都有對抗的意思；英文 antagonist 也是「對手」。",c:"1.2；第 9、11 章"},
+ intr:{t:"內在調節（自我調節）intrinsic regulation / autoregulation",
+  d:"器官<b>自己</b>就能調整，不需要神經或激素從外面下指令。",
+  e:"運動時肌肉產生的代謝產物讓附近血管自己擴張，血流變多。",c:"1.2；第 14 章"},
+ extr:{t:"外在調節 extrinsic regulation",
+  d:"由器官<b>以外</b>的系統來調控，也就是<b>神經系統</b>和<b>內分泌系統</b>，可以同時協調很多器官。",
+  e:"緊張時交感神經同時讓心跳加快、血壓上升、消化變慢。",c:"1.2；第 9、11 章"},
+ horm:{t:"激素（荷爾蒙）hormone",
+  d:"內分泌腺分泌、經<b>血液</b>送到全身的化學訊號；只有具備對應受體的細胞才會反應。",
+  e:"胰島素、升糖素、甲狀腺素、腎上腺素、雌激素。",
+  n:"希臘文 hormao＝「激發、促動」。「荷爾蒙」是音譯。",c:"第 11 章"},
+ nt:{t:"神經傳遞物質 neurotransmitter",
+  d:"神經末梢釋放的化學物質，跨過極小的縫隙（突觸）去刺激或抑制下一個細胞。作用距離很短、很快。",
+  e:"乙醯膽鹼、正腎上腺素、多巴胺、血清素。",c:"第 7 章"},
+ target:{t:"標的細胞 target cell",
+  d:"激素「要找的對象」——細胞上有該激素的<b>受體</b>，激素才能對它起作用。",
+  e:"激素像廣播傳遍全身，但只有「有收音機」（受體）的細胞聽得到。",c:"第 11 章"},
+ receptor:{t:"受體 receptor（受體蛋白）",
+  d:"細胞膜上或細胞內的特定蛋白質，能和某種激素或神經傳遞物質<b>專一結合</b>，結合後細胞才會產生反應。",
+  e:"像鎖和鑰匙：胰島素是鑰匙，胰島素受體是鎖。",c:"第 6、11 章"},
+ tissue:{t:"組織 tissue",
+  d:"一群構造相似、功能相同的細胞，加上它們周圍的細胞外物質。人體只有四大類：肌肉、神經、上皮、結締。",
+  n:"組織學 histology 的 histo- 來自希臘文「布、網」——組織在顯微鏡下像織成的布。",c:"1.3"},
+ epi:{t:"上皮 epithelium",
+  d:"<b>覆蓋</b>身體表面、<b>襯在</b>管道與體腔內面的一層細胞，細胞一個挨一個排得很緊。腺體也是由上皮變來的。",
+  e:"皮膚最外層、口腔與腸道的內面、血管內面。",
+  n:"epi-（在上面）＋ thele（乳頭狀突起）——最早用來描述嘴唇表面的組織。",c:"1.3"},
+ ct:{t:"結締組織 connective tissue",
+  d:"負責<b>連結、支撐、保護</b>的組織。特色是細胞少、細胞之間的「基質」很多。",
+  e:"肌腱、韌帶、脂肪、軟骨、骨頭、血液，都是結締組織。",
+  n:"「結締」＝結合、締結，把其他組織連在一起。",c:"1.3"},
+ ecm:{t:"細胞外基質 extracellular matrix",
+  d:"細胞和細胞之間的「填充物」，由<b>蛋白纖維</b>（膠原、彈性蛋白）和<b>基底物質</b>組成。結締組織的性質（軟、硬、液體）主要由它決定。",
+  e:"像混凝土：細胞是石頭，基質是水泥和鋼筋。",c:"1.3"},
+ gs:{t:"基底物質 ground substance",
+  d:"基質中纖維以外的部分，是含醣蛋白、蛋白聚醣的<b>膠狀物</b>，能吸住大量水分。",
+  e:"像果凍：纖維是果凍裡的果肉絲，基底物質是果凍本身。",c:"1.3"},
+ diff:{t:"擴散 diffusion",
+  d:"分子自然從<b>濃度高</b>的地方往<b>濃度低</b>的地方移動，不需要消耗能量。",
+  e:"一滴墨水滴進水裡會慢慢散開；肺泡裡的氧氣擴散進血液。",c:"第 6 章"},
+ tj:{t:"緊密連接 tight junction",
+  d:"相鄰上皮細胞的細胞膜在靠近頂端處緊緊扣在一起，<b>封住細胞之間的縫隙</b>，物質就不能隨便從縫裡溜過去。",
+  e:"像拉鍊或防水密封條。",c:"1.3；第 6、18 章"},
+ aj:{t:"黏附連接 adherens junction",
+  d:"靠鈣黏蛋白把相鄰細胞<b>黏在一起</b>，並連到細胞內的肌動蛋白骨架。",c:"1.3"},
+ desmo:{t:"胞橋小體 desmosome",
+  d:"相鄰細胞之間像<b>鉚釘</b>的連結點，連到細胞內的中間絲，讓組織被拉扯也不會撕開。",
+  e:"皮膚、心肌特別多，因為它們常被拉扯、一直收縮。",
+  n:"desmos（綁）＋ soma（體）＝「綁住的小體」。",c:"1.3"},
+ gap:{t:"間隙接合 gap junction",
+  d:"兩個細胞之間的<b>小通道</b>，離子和小分子可以直接流到隔壁細胞，所以電訊號能一路傳過去。",
+  e:"像兩個房間中間開了小門。心肌靠它讓整個心臟同時收縮。",c:"1.3；第 7、12、13 章"},
+ para_t:{t:"細胞旁運輸 paracellular transport",
+  d:"物質從<b>兩個細胞之間的縫隙</b>通過上皮。緊密連接越鬆，這條路越好走。",
+  e:"像從兩棟房子中間的小巷穿過去。",c:"第 6、17、18 章"},
+ trans_t:{t:"穿細胞運輸 transcellular transport",
+  d:"物質<b>穿過細胞本身</b>：先從頂端膜進入細胞，再從底側膜出去。",
+  e:"像走進一棟房子的前門、從後門出去。小腸吸收葡萄糖就是這樣。",c:"第 6、18 章"},
+ exo:{t:"外分泌腺 exocrine gland",
+  d:"有<b>導管</b>，把分泌物送到身體表面或管腔（消化道等）。",
+  e:"汗腺、皮脂腺、唾液腺、胰臟分泌消化酶的腺泡。",
+  n:"exo-（外）＋ krinein（分泌）。",c:"1.3；第 18 章"},
+ endoG:{t:"內分泌腺 endocrine gland",
+  d:"<b>沒有導管</b>，分泌物（激素）直接進入血液，運送到全身。",
+  e:"甲狀腺、腎上腺、腦垂腺、胰島。",
+  n:"endo-（內）＋ krinein（分泌）。",c:"第 11 章"},
+ hyp:{t:"假說 hypothesis",
+  d:"根據觀察提出的「可能的解釋」，必須能用實驗檢驗，而且有可能被證明是錯的。",
+  e:"「減少吃鹽可以降低血壓」就是一個可以做實驗檢驗的假說。",c:"1.1"},
+ ctrl:{t:"對照組 control group",
+  d:"實驗中<b>不接受</b>要測試的處理、其他條件都和實驗組相同的一組，用來比較。",
+  e:"測試新藥時，對照組吃外觀一樣的安慰劑。",c:"1.1"},
+ db:{t:"雙盲 double-blind",
+  d:"受試者和接觸受試者的研究人員<b>都不知道</b>誰在哪一組，避免雙方的期待影響結果。",
+  n:"「盲」＝不知道。只有受試者不知道叫「單盲」。",c:"1.1"},
+ peer:{t:"同儕審查 peer review",
+  d:"研究投稿到期刊後，由<b>同領域的其他專家</b>審查方法和結論是否合理，通過才刊登。",c:"1.1"},
+ patho:{t:"病理生理學 pathophysiology",
+  d:"研究生病時，身體的功能<b>哪裡出錯、怎麼出錯</b>。",
+  e:"懂了胰島素怎麼降血糖（生理），才能理解糖尿病為什麼血糖高（病理生理）。",
+  n:"patho-（疾病）＋ physiology。",c:"全書"},
+ mech:{t:"機制 mechanism",
+  d:"一件事「一步接一步」發生的因果過程。生理學不只問「會怎樣」，還要問「怎麼做到的」。",
+  e:"喝水多 → 血液變稀 → ADH 減少 → 腎臟回收水變少 → 尿變多。這一串就是機制。",c:"全書"},
+ theory:{t:"理論 theory",
+  d:"被大量證據支持、目前最可靠的解釋。和日常說的「只是理論」（猜測）不同，但有新證據時仍會修正。",c:"1.1"},
+ shape:{t:"鱗狀、立方、柱狀 squamous / cuboidal / columnar",
+  d:"上皮細胞的三種形狀：<b>鱗狀</b>＝扁平（像魚鱗）；<b>立方</b>＝高寬差不多；<b>柱狀</b>＝又高又窄。",
+  e:"扁平的適合物質快速通過（肺泡）；高的細胞內有空間放更多胞器，適合分泌與吸收（腸道）。",c:"1.3"},
+ layer:{t:"單層、複層 simple / stratified",
+  d:"<b>單層</b>＝只有一層細胞，每個都接觸基底膜；<b>複層</b>＝好幾層疊起來，只有最下層接觸基底膜。",
+  e:"單層薄、適合交換物質；複層厚、適合抗磨損（皮膚、食道）。",c:"1.3"},
+ pseudo:{t:"偽複層 pseudostratified",
+  d:"看起來像很多層（細胞高矮不一、細胞核高高低低），但其實<b>每個細胞都踩在基底膜上</b>，所以本質是單層。",
+  e:"氣管、支氣管的內面。",n:"pseudo-＝假的。",c:"1.3；第 16 章"},
+ trans_e:{t:"移行上皮 transitional epithelium",
+  d:"一種<b>複層</b>上皮，表層細胞可以從圓頂狀被撐成扁平，讓器官大幅撐開又縮回。",
+  e:"膀胱：裝滿尿時撐開變薄，排空後縮回變厚。",
+  n:"「移行」＝形狀可以在兩種樣子之間轉變。",c:"1.3；第 17 章"},
+ icf:{t:"細胞內液 intracellular fluid（ICF）",
+  d:"在細胞<b>裡面</b>的水分，約占全身水分的 2/3，主要陽離子是 K⁺。",c:"1.4；第 6、17 章"},
+ ecf:{t:"細胞外液 extracellular fluid（ECF）",
+  d:"在細胞<b>外面</b>的水分，約占 1/3，包括組織間液和血漿，主要陽離子是 Na⁺。它就是要維持恆定的「內在環境」。",c:"1.4；第 14、17 章"},
+ isf:{t:"組織間液（組織液）interstitial fluid",
+  d:"在微血管外、<b>包圍著細胞</b>的液體，約占細胞外液的 80%。血液中的養分先進到這裡，細胞再從這裡拿。",
+  e:"水腫就是組織間液積太多。",c:"1.4；第 14 章"},
+ stem:{t:"幹細胞 stem cell",
+  d:"能<b>自我更新</b>（分裂後仍有幹細胞）又能<b>分化</b>成各種特化細胞的細胞，是組織更新、修復的來源。",
+  e:"骨髓的造血幹細胞不斷做出新的血球；表皮最底層的幹細胞不斷做出新皮膚。",
+  n:"stem＝樹幹，其他細胞像從樹幹長出的分枝。",c:"1.4"},
+ differ:{t:"分化 differentiation",
+  d:"一般的細胞變成具有特定構造與功能的細胞（例如變成肌肉細胞、神經細胞）的過程。",c:"1.4；分生"},
+ potency:{t:"全能、多能、多潛能 totipotent / pluripotent / multipotent",
+  d:"幹細胞「能變成多少種細胞」：<b>全能</b>＝所有細胞連胎盤都可以（受精卵）；<b>多能</b>＝身體所有細胞（胚胎幹細胞、iPS）；<b>多潛能</b>＝只能變成某一類組織的幾種細胞（成體幹細胞）。",
+  m:"能力由大到小：全能 ＞ 多能 ＞ 多潛能。",c:"1.4"},
+ ips:{t:"誘導性多能幹細胞 iPS cells",
+  d:"把已經分化的成體細胞（如皮膚細胞）用特定基因<b>重新編程</b>，變回像胚胎幹細胞一樣的多能幹細胞。",
+  n:"2006 年日本學者山中伸彌發表，2012 年獲諾貝爾獎。",c:"1.4"},
+ neuron:{t:"神經元 neuron",
+  d:"神經系統負責<b>產生與傳遞電訊號</b>的細胞，由細胞本體、樹突、軸突組成。",c:"1.3；第 7 章"},
+ dend:{t:"樹突 dendrite",
+  d:"神經元上短而多分支的突起，負責<b>接收</b>訊號並傳向細胞本體。",n:"希臘文 dendron＝樹。",c:"第 7 章"},
+ axon:{t:"軸突 axon",
+  d:"神經元上通常只有一條、可以很長的突起，把訊號<b>傳出去</b>給下一個細胞。",
+  e:"從脊髓到腳趾的軸突可長達 1 公尺。",c:"第 7 章"},
+ glia:{t:"神經膠細胞 neuroglia（支持細胞）",
+  d:"神經組織裡<b>不傳遞訊號</b>、但負責支持、保護、供應養分、形成髓鞘的細胞。",
+  n:"glia＝希臘文「膠水」，以前以為它們只是把神經元黏在一起。",c:"第 7 章"},
+ striae:{t:"橫紋 striations",
+  d:"骨骼肌和心肌在顯微鏡下看到的一條條明暗相間的紋路，來自肌纖維內排列整齊的收縮蛋白。平滑肌的收縮蛋白排列不整齊，所以沒有橫紋。",c:"第 12 章"},
+ vol:{t:"隨意、不隨意 voluntary / involuntary",
+  d:"<b>隨意</b>＝可以用自己的意志控制（骨骼肌）；<b>不隨意</b>＝無法用意志控制，由自主神經和激素調節（心肌、平滑肌）。",
+  e:"你可以決定舉手，但不能命令心跳變慢或腸子停止蠕動。",c:"第 9、12 章"},
+ smooth:{t:"平滑肌 smooth muscle",
+  d:"沒有橫紋、紡錘形、不隨意的肌肉，在<b>中空器官與管道的壁</b>上，控制管徑與蠕動。",
+  e:"腸胃蠕動、血管收縮、支氣管收縮、子宮收縮。",c:"1.3；第 12 章"},
+ epider:{t:"表皮 epidermis",
+  d:"皮膚最外層，是<b>角質化複層鱗狀上皮</b>，沒有血管。最底層不斷產生新細胞往上推，最外層是死掉的角質細胞，防水又耐磨。",
+  n:"epi-（在上面）＋ derma（皮膚）。",c:"1.4"},
+ dermis:{t:"真皮 dermis",
+  d:"表皮下方的厚層，主要是緻密不規則結締組織，有血管、神經、毛囊、汗腺、皮脂腺。",
+  e:"刺青的墨水打在真皮層，所以不會隨表皮脫落而消失。",c:"1.4"}
+});
+const GL_ALIAS = {
+ "β 細胞":"beta","α 細胞":"alpha","胰島（蘭氏小島）":"islet","蘭氏小島":"islet","胰島素":"insulin","升糖素":"glucagon",
+ "肝醣":"glycogen","肝醣分解":"glyco","糖質新生":"gng","下視丘":"hypo","腦垂腺":"pit","抗利尿激素":"adh","催產素":"oxy",
+ "LH":"lh","交感神經":"sym","副交感神經":"para","髓鞘":"myelin","許旺細胞":"schwann","寡突膠細胞":"oligo",
+ "間盤":"disc","微絨毛":"mv","杯狀細胞":"goblet","內皮":"endo","基底膜":"bm","角蛋白":"keratin","膠原蛋白":"collagen",
+ "彈性蛋白":"elastin","蛋白聚醣":"pg","纖維母細胞":"fibro","氫氧基磷灰石":"ha","骨元":"osteon","陷窩":"lac",
+ "豎毛肌":"arrector","腺泡":"acini","K⁺":"kna","Na⁺":"kna","血漿":"plasma","恆定":"home","安慰劑":"placebo","多核":"multi",
+ "負回饋":"neg","正回饋":"pos","內在環境":"milieu","設定點":"setpt","動態恆定":"dyn","感受器":"sensor","整合中心":"ic",
+ "動器":"eff","拮抗動器":"antag","拮抗":"antag","內在調節":"intr","自我調節":"intr","外在調節":"extr","激素":"horm",
+ "神經傳遞物質":"nt","標的細胞":"target","受體":"receptor","基本組織":"tissue","主要組織":"tissue","上皮":"epi","上皮組織":"epi",
+ "結締組織":"ct","細胞外基質":"ecm","基質":"ecm","基底物質":"gs","擴散":"diff","緊密連接":"tj","黏附連接":"aj","胞橋小體":"desmo",
+ "間隙接合":"gap","細胞旁運輸":"para_t","穿細胞運輸":"trans_t","外分泌腺":"exo","內分泌腺":"endoG","假說":"hyp","對照組":"ctrl",
+ "雙盲":"db","同儕審查":"peer","病理生理學":"patho","機制":"mech","理論":"theory","鱗狀":"shape","立方":"shape","柱狀":"shape",
+ "單層":"layer","複層":"layer","偽複層":"pseudo","移行上皮":"trans_e","細胞內液":"icf","細胞外液":"ecf","組織間液":"isf",
+ "幹細胞":"stem","分化":"differ","全能":"potency","多能":"potency","多潛能":"potency","誘導性多能幹細胞":"ips","iPS":"ips",
+ "神經元":"neuron","樹突":"dend","軸突":"axon","神經膠細胞":"glia","橫紋":"striae","不隨意":"vol","隨意":"vol","平滑肌":"smooth",
+ "表皮":"epider","真皮":"dermis"
+};
+(function(){
+  const sheet=document.createElement('div'); sheet.id='glsheet';
+  sheet.innerHTML='<div class="glbox"><button class="glx" aria-label="關閉">✕</button><div class="glbody"></div></div>';
+  document.body.appendChild(sheet);
+  const close=()=>sheet.classList.remove('show');
+  sheet.addEventListener('click',e=>{if(e.target===sheet||e.target.classList.contains('glx'))close();});
+  const row=(lab,cls,txt)=>txt?`<div class="glrow"><span class="gllab ${cls}">${lab}</span><div>${txt}</div></div>`:'';
+  window.openGl=id=>{const g=GL[id]; if(!g)return;
+    sheet.querySelector('.glbody').innerHTML=`<div class="glt">${g.t}</div>`+row('白話','l0',g.d)+row('在哪裡','l1',g.w)+row('做什麼','l2',g.f)+row('生活例子','l6',g.e)+row('名稱由來','l3',g.n)+row('記法','l4',g.m)+row('詳讀','l5',g.c);
+    sheet.classList.add('show');};
+  // 把正文中的名詞包成可點的 span
+  const keys=Object.keys(GL_ALIAS).sort((a,b)=>b.length-a.length);
+  const re=new RegExp(keys.map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')).join('|'),'g');
+  const SKIP='script,style,svg,nav,header,footer,h1,h2,h3,h4,.modebar,.q,#glsheet,.en,.en-term,.pichint,.briefhint,.lt,.secbtn,.top,details.terms,.note';
+  const walker=document.createTreeWalker(document.querySelector('main'),NodeFilter.SHOW_TEXT,{acceptNode:n=>{
+    const p=n.parentElement; if(!p||p.closest(SKIP))return NodeFilter.FILTER_REJECT;
+    re.lastIndex=0; return re.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;}});
+  const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach(n=>{
+    const t=n.nodeValue, frag=document.createDocumentFragment(); let last=0; re.lastIndex=0; let m;
+    while((m=re.exec(t))){
+      if(m.index>last) frag.appendChild(document.createTextNode(t.slice(last,m.index)));
+      const sp=document.createElement('span'); sp.dataset.gl=GL_ALIAS[m[0]]; sp.textContent=m[0]; frag.appendChild(sp);
+      last=m.index+m[0].length;}
+    if(last<t.length) frag.appendChild(document.createTextNode(t.slice(last)));
+    n.parentNode.replaceChild(frag,n);
+  });
+  document.addEventListener('click',e=>{const el=e.target.closest('[data-gl]'); if(el){e.preventDefault(); openGl(el.dataset.gl);}});
+  window.markGl=()=>{
+    document.querySelectorAll('[data-gl]').forEach(b=>{b.classList.remove('gl'); b.removeAttribute('role'); b.removeAttribute('tabindex');});
+    document.querySelectorAll('main section').forEach(sec=>{const seen={},seen1={};
+      sec.querySelectorAll('[data-gl]').forEach(b=>{
+        const sc=b.closest('.oneline')?seen1:seen;
+        if(!b.offsetParent||sc[b.dataset.gl])return; sc[b.dataset.gl]=1; b.classList.add('gl'); b.setAttribute('role','button'); b.tabIndex=0;});});
+  };
+  markGl();
+})();
+</script>
+</body>
+</html>
