@@ -214,3 +214,50 @@ function foxBlocks(){return [...document.querySelectorAll('main p, main li, main
   };
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
 })();
+/* 手機表格：放不下的表格改成「卡片式」逐列排列；純數字的小表格保留表格、可左右滑 */
+(function(){
+  const isMobile=()=>innerWidth<=600;
+  const prep=t=>{
+    if(t.dataset.prep)return;t.dataset.prep=1;
+    const rows=[...t.rows];if(!rows.length)return;
+    if(t.querySelector('[rowspan]')){
+      if(!isMobile()){t.dataset.kind='grid';return;}
+      // 手機：把跨列儲存格複製到下面各列，才能改成卡片式
+      const grid=[];rows.forEach((r,ri)=>{grid[ri]=grid[ri]||[];});
+      rows.forEach((r,ri)=>{let ci=0;[...r.cells].forEach(c=>{while(grid[ri][ci])ci++;const rs=+c.getAttribute('rowspan')||1,cs=c.colSpan||1;
+        for(let a=0;a<rs;a++)for(let b=0;b<cs;b++){if(!grid[ri+a])grid[ri+a]=[];grid[ri+a][ci+b]=a===0?'own':{src:c,col:ci};}ci+=cs;});});
+      rows.forEach((r,ri)=>{(grid[ri]||[]).forEach((g,ci)=>{if(g&&g!=='own'&&ci===g.col){const cl=g.src.cloneNode(true);cl.removeAttribute('rowspan');cl.classList.add('dup');
+        const after=[...r.cells].find(x=>x._ci>ci);r.insertBefore(cl,after||null);}});
+        let k=0;[...r.cells].forEach(c=>{c._ci=k;k+=c.colSpan||1;});});
+      t.querySelectorAll('[rowspan]').forEach(c=>c.removeAttribute('rowspan'));rows.splice(0,rows.length,...t.rows);
+    }
+    let hdr=null;
+    for(const r of rows.slice(0,2)){const cs=[...r.cells];if(cs.length&&cs.every(c=>c.tagName==='TH')){
+      if(cs.length===1&&cs[0].colSpan>1){r.classList.add('tcap');continue;}hdr=r;break;}}
+    if(hdr){hdr.classList.add('thdr');const labels=[...hdr.cells].map(c=>c.textContent.trim().replace(/\s+/g,' '));
+      rows.forEach(r=>{if(r===hdr||r.classList.contains('tcap'))return;let k=0;[...r.cells].forEach(c=>{if(labels[k])c.dataset.label=labels[k];k+=c.colSpan||1;});});}
+    rows.forEach(r=>[...r.cells].forEach((c,i)=>{if(i>0&&c.textContent.trim().length<=10&&!c.querySelector('ul,ol,p,br'))c.classList.add('sh');}));
+    const cols=Math.max(...rows.map(r=>r.cells.length));
+    if(cols<=2)t.classList.add('two');
+    const body=rows.filter(r=>r!==hdr&&!r.classList.contains('tcap'));
+    const cells=body.flatMap(r=>[...r.cells].slice(1));
+    const avg=cells.length?cells.reduce((s,c)=>s+c.textContent.trim().length,0)/cells.length:0;
+    const numish=cells.filter(c=>/^[\d\s.,%~～–\-+×約≈<>≤≥]*$/.test(c.textContent.trim())).length;
+    const mx=cells.length?Math.max(...cells.map(c=>c.textContent.trim().length)):0;
+    t.dataset.kind=(cells.length&&numish/cells.length>=.8)?'num':(mx<=10?'tiny':'text');
+  };
+  const layout=()=>{
+    document.querySelectorAll('main table').forEach(t=>{
+      prep(t);const w=t.closest('.tblwrap')||t.parentElement;
+      t.classList.remove('stack','tnum');w.classList&&w.classList.remove('stackwrap');
+      if(!isMobile()||t.dataset.kind==='grid')return;
+      if(t.dataset.kind!=='text'&&t.scrollWidth<=w.clientWidth+2)return;
+      if(t.dataset.kind==='num'&&t.scrollWidth<=w.clientWidth+2&&!t.querySelector('th:first-child')){t.classList.add('tnum');return;}
+      t.classList.add('stack');w.classList&&w.classList.add('stackwrap');
+    });
+    document.querySelectorAll('.tblwrap').forEach(w=>w.classList.toggle('scroll',w.scrollWidth>w.clientWidth+4&&!w.classList.contains('stackwrap')));
+  };
+  const go=()=>{layout();let to;addEventListener('resize',()=>{clearTimeout(to);to=setTimeout(layout,150);});
+    document.addEventListener('click',e=>{if(e.target.closest('.fzbtn,.modebar button,.secbtn,summary'))setTimeout(layout,80);});};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
+})();
