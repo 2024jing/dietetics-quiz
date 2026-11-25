@@ -182,3 +182,13 @@ a.glch{color:#1d4ed8;text-decoration:underline;cursor:pointer}
 .n4{background:#fae8ff;color:#86198f}.n5{background:#e0f2fe;color:#075985}.n6{background:#ffe4e6;color:#9f1239}
 .gltag{display:inline-block;font-size:12px;background:#166534;color:#fff;border-radius:999px;padding:0 8px;margin-right:6px;vertical-align:middle}
 .n7{background:#fef9c3;color:#854d0e}
+/* 國考英文＋發音 */
+.gllab.n8{background:#e8eefc;color:#2b4a9a}
+.saybar{display:flex;flex-wrap:wrap;gap:6px}
+.say{display:inline-flex;align-items:baseline;gap:4px;border:1px solid #c9d6f5;background:#f5f8ff;color:#1d2f5e;border-radius:14px;padding:4px 10px;font:inherit;font-size:.92em;cursor:pointer;text-align:left}
+.say:active{background:#dde7ff}
+.say small{color:#5a6a8a;font-weight:400}
+.say .sayzh{color:#777}
+.sayi{font-size:.9em}
+@media (prefers-color-scheme:dark){.say{background:#1f2738;border-color:#34405a;color:#dbe5ff}.say small{color:#9fb0d0}.gllab.n8{background:#25314d;color:#bcd0ff}}
+#foxtip{position:fixed;left:12px;right:12px;bottom:18px;z-index:9999;background:#222;color:#fff;border-radius:12px;padding:12px 14px;font-size:.95em;line-height:1.6;box-shadow:0 6px 20px rgba(0,0,0,.3)}
