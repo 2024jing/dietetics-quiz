@@ -126,7 +126,7 @@ function foxBlocks(){return [...document.querySelectorAll('main p, main li, main
   function showBack(){
     if(!stack.length){back.classList.remove('show'); return;}
     const p=stack[stack.length-1];
-    back.querySelector('.bk').textContent='← 回到'+(p.c?`第 ${p.c} 章`:'目錄頁')+'剛剛讀的地方';
+    back.querySelector('.bk').textContent='← 回到'+(p.c?`第 ${p.c} 章`:'目錄頁')+(innerWidth<600?'原處':'剛剛讀的地方');
     back.classList.add('show');
   }
   back.querySelector('.bk').onclick=()=>{const p=stack.pop(); save();
@@ -187,4 +187,30 @@ function foxBlocks(){return [...document.querySelectorAll('main p, main li, main
   else if(P.has('ret')) jump(+P.get('ret'),null,false);
   if(P.has('go')||P.has('ret')) history.replaceState(null,'',file+location.hash);
   showBack();
+})();
+/* 手機閱讀改善：英文副標縮小、表格可左右滑、模式按鈕縮短、字級切換 */
+(function(){
+  const run=()=>{
+    document.querySelectorAll('main h3').forEach(h=>{
+      if(h.querySelector('.h3en'))return;
+      const tn=[...h.childNodes].filter(n=>n.nodeType===3);const last=tn[tn.length-1];if(!last)return;
+      const m=last.textContent.match(/^(.*?[^\x00-\x7F])\s+([A-Za-z][\x00-\x7F’'–—]*)$/);
+      if(!m)return;last.textContent=m[1];const sp=document.createElement('span');sp.className='h3en';sp.textContent=m[2];h.insertBefore(sp,last.nextSibling);
+    });
+    const mark=()=>document.querySelectorAll('.tblwrap').forEach(w=>{
+      w.classList.toggle('scroll',w.scrollWidth>w.clientWidth+4);
+      if(!w.nextElementSibling||!w.nextElementSibling.classList.contains('tblhint')){const d=document.createElement('div');d.className='tblhint';d.textContent='← 表格可左右滑動 →';w.after(d);}
+    });
+    mark();addEventListener('resize',mark);document.addEventListener('click',()=>setTimeout(mark,50));
+    const mb=document.querySelector('.modebar');
+    if(mb){
+      if(innerWidth<600){const b=document.getElementById('mBrief');if(b)b.textContent='精簡';}
+      const fz=document.createElement('button');fz.className='fzbtn';
+      const L={s:'字小',m:'字中',l:'字大'};let cur='m';try{cur=localStorage.getItem('foxFz')||'m';}catch(_){}
+      const apply=()=>{document.body.classList.remove('fz-s','fz-l');if(cur!=='m')document.body.classList.add('fz-'+cur);fz.textContent='Aa '+L[cur];setTimeout(mark,50);};
+      fz.onclick=()=>{cur={m:'s',s:'l',l:'m'}[cur];try{localStorage.setItem('foxFz',cur);}catch(_){}apply();};
+      mb.appendChild(fz);apply();
+    }
+  };
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',run);else run();
 })();

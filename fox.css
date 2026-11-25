@@ -192,3 +192,24 @@ a.glch{color:#1d4ed8;text-decoration:underline;cursor:pointer}
 .sayi{font-size:.9em}
 @media (prefers-color-scheme:dark){.say{background:#1f2738;border-color:#34405a;color:#dbe5ff}.say small{color:#9fb0d0}.gllab.n8{background:#25314d;color:#bcd0ff}}
 #foxtip{position:fixed;left:12px;right:12px;bottom:18px;z-index:9999;background:#222;color:#fff;border-radius:12px;padding:12px 14px;font-size:.95em;line-height:1.6;box-shadow:0 6px 20px rgba(0,0,0,.3)}
+/* 手機閱讀改善（2026-11-25） */
+.tblwrap{-webkit-overflow-scrolling:touch;position:relative}
+.tblwrap th,.tblwrap td{min-width:4.2em}
+.tblwrap th:first-child,.tblwrap td:first-child{min-width:7.5em}
+.tblhint{display:none;font-size:13px;color:var(--sub);text-align:right;margin:-6px 0 8px}
+.tblwrap.scroll + .tblhint{display:block}
+h3 .h3en{display:block;font-size:.66em;font-weight:500;color:var(--sub);margin-top:2px;line-height:1.35}
+.modebar .fzbtn{border-color:#64748b;color:#334155;padding-left:10px;padding-right:10px}
+body.fz-s main{zoom:.88} body.fz-l main{zoom:1.12}
+@media(max-width:600px){
+  .chfab{display:none}              /* 章節與搜尋都在上方工具列，手機不再浮在內文上 */
+  .top{width:38px;height:38px;right:10px;bottom:12px;opacity:.85}
+  .backpill{left:8px;bottom:12px;max-width:calc(100% - 70px)}
+  .backpill button{font-size:14px;padding:8px 4px 8px 12px}
+  .backpill .bx{padding:8px 10px 8px 4px}
+  .tblwrap table{font-size:14px}
+  .tblwrap th,.tblwrap td{padding:6px 6px}
+  h2{font-size:20px} h3{font-size:18px}
+  .modebar{overflow-x:auto;justify-content:flex-start;flex-wrap:nowrap}
+  .modebar button{flex:0 0 auto}
+}
