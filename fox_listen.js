@@ -19,9 +19,15 @@
     [/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]],[/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>'0123456789'['⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)]],[/[⁺⁻]/g,''],
     [/ⓘ|✓|✗|★|☆|•|·|□|☐|■/g,''],[/[|｜]/g,'，']];
   const say=t=>{
-    t=t.replace(/（[^（）]*）|\([^()]*\)/g,m=>/[一-鿿]/.test(m)?m:'');   // 拿掉純英文的括號
+    // 括號：交叉參照（第 12 章、圖 5-3、見 13.2）和純英文／縮寫直接略過；其他改成逗號，念起來才連貫
+    for(let g=0;g<3;g++)t=t.replace(/[（(]([^（）()]*)[）)]/g,(m,x)=>{x=x.trim();
+      if(!/[\u4e00-\u9fff]/.test(x))return '';
+      if(/第\s*\d+[\s\d、，,–\-～至和與及]*[章節張頁冊]|[圖表]\s*\d|^見|^參見|^參考|^詳見|^詳讀|^\d+(\.\d+)+$|^\d+(\.\d+)+\s*節/.test(x))return '';
+      x=x.replace(/^(即|也就是|就是)/,'也就是');
+      return '，'+x+'，';});
     t=t.replace(/[A-Za-z][A-Za-z'’\-]*(?:[\s\/,]+[A-Za-z][A-Za-z'’\-]*)*/g,m=>/\b[a-z][a-z\-]{2,}\b/.test(m)?' ':m);  // 拿掉英文詞組（保留 ATP、NADH 這類縮寫與人名）
     for(const [a,b] of MAP)t=t.replace(a,b);
+    t=t.replace(/，\s*([。；：！？、」])/g,'$1').replace(/([「])\s*，/g,'$1').replace(/，\s*，/g,'，').replace(/^，/,'');
     return t.replace(/\s+/g,' ').replace(/([，。；：、])\s*[，、]/g,'$1').replace(/\s+([，。；：、）」])/g,'$1').replace(/（\s*）/g,'').replace(/^[，、\s]+/,'').trim();
   };
   const plain=el=>{const c=el.cloneNode(true);c.querySelectorAll('.en,.h3en,i.en-term,svg,.tblhint,sup,.lv,.lvkey,.sayi').forEach(x=>x.remove());
@@ -49,7 +55,7 @@
     if(el.matches('.oneline'))return '簡單講一句話，'+say(plain(el));
     return talk(say(plain(el)));
   };
-  const TALK=[[/^本節重點[:：]?/,'這一節的重點整理一下，'],[/^營養連結[（(]回答開頭問題[)）][:：]/,'跟營養連起來，也回到一開始的問題，'],[/^營養連結[:：]?/,'跟營養學連起來看，'],[/^回答開頭問題[^:：]*[:：]/,'回到一開始的問題，'],[/^例子[:：]/,'舉個例子，'],[/^更正與易混淆[:：]/,'這裡要更正一個常見的誤會，'],[/^更正[:：]/,'這裡要更正一個常見的誤會，'],
+  const TALK=[[/^破題\s*/,'先破題一下，'],[/^本節重點[:：]?/,'這一節的重點整理一下，'],[/^營養連結[（(]回答開頭問題[)）][:：]/,'跟營養連起來，也回到一開始的問題，'],[/^營養連結[:：]?/,'跟營養學連起來看，'],[/^回答開頭問題[^:：]*[:：]/,'回到一開始的問題，'],[/^例子[:：]/,'舉個例子，'],[/^更正與易混淆[:：]/,'這裡要更正一個常見的誤會，'],[/^更正[:：]/,'這裡要更正一個常見的誤會，'],
     [/^易混淆[:：]/,'這裡很容易搞混喔，'],[/^易錯[:：]/,'這裡很容易錯，'],[/^易考[:：]/,'這邊考試很愛考，'],[/^國考考過[:：]?/,'這個國考考過，'],[/^國考重點[:：]?/,'國考重點，'],[/^臨床連結[:：]/,'在臨床上，'],[/^藥物連結[:：]/,'跟藥物有關的是，'],[/^老師的超級簡單記法[:：]/,'老師有個超簡單的記法，'],[/^老師強調[^:：]*[:：]/,m=>'老師特別強調，'+m.replace(/^老師強調[＋+]?(國考考過)?[:：]?/,'').replace(/[:：]$/,'，')],
     [/^記法[:：]/,'有個好記的方法，'],[/^數字提醒[:：]/,'數字要記一下，'],[/^特別注意[:：]|^注意[:：]/,'特別注意喔，'],[/^算算看[:：]/,'我們來算算看，'],[/^補充[:：]/,'補充一下，'],[/^生理上的意義[:：]/,'這在生理上的意義是，']];
   const talk=t=>{for(const [a,b] of TALK)if(a.test(t))return t.replace(a,b);return t;};
@@ -61,8 +67,26 @@
     const set=new Set(all);
     return all.filter(el=>{for(const d of el.querySelectorAll(SEL))if(set.has(d)&&d!==el)return false;  // 只取最內層
       if(el.tagName!=='TR'&&el.closest('tr'))return false; return true;})
-      .map(el=>({el,text:segText(el)})).filter(s=>s.text&&s.text.replace(/[【】：，。\s]/g,'').length>1);
+      .map(el=>({el,text:segText(el)})).filter(s=>s.text&&s.text.replace(/[【】：，。\s]/g,'').length>1)
+      .map((sg,i,arr)=>{sg.text=(opener(sg,arr[i-1])+sg.text).replace(/，\s*([。；：！？、])/g,'$1').replace(/(，\s*){2,}/g,'，').replace(/，\s*$/,'。');return sg;});
   };
+  /* 口語連接詞：讓段落之間接得順 */
+  const NUM='一二三四五六七八九十';let pn=0;
+  const CONN=/^(但|而|所以|因此|因為|另外|此外|也|這|那|例如|比如|同樣|相反|不過|然而|其實|如果|當|在|先|再|接著|最後|第|好，|我們|跟|回到|舉個|這邊|這裡|有個|老師|先想|簡單講|特別)/;
+  const opener=(sg,prev)=>{const el=sg.el,t=sg.text;
+    if(el.tagName==='LI'){const list=el.parentElement;const items=[...list.children].filter(x=>x.tagName==='LI');const k=items.indexOf(el),n=items.length;
+      if(list.tagName==='OL'&&n>1)return k<10?'第'+NUM[k]+'步，':'';
+      if(n<2||CONN.test(t))return '';
+      if(k===0)return n>=3?'這裡分幾點來說。首先，':'';
+      if(k===n-1)return '最後，';
+      return ['再來，','另外，','還有，'][k%3];}
+    if(el.matches('p.core'))return '先講重點，';
+    if(el.tagName==='P'&&prev&&prev.el.tagName==='P'&&!CONN.test(t)&&!/^[^，。]{1,8}[：:]/.test(t)){
+      const o=['那，','接著，','','我們再來看，','','也就是說，'][pn++%6];
+      return o==='也就是說，'&&!/[是為]/.test(t.slice(0,20))?'':o;}
+    if(el.tagName==='TR'&&!t.startsWith('我們用表格')&&!el.classList.contains('tcap')){const rows=[...el.parentElement.children].filter(r=>!r.classList.contains('thdr')&&!r.classList.contains('tcap'));
+      const k=rows.indexOf(el);if(k===rows.length-1&&rows.length>2)return '最後是，';if(k>0)return ['再來是，','接著是，','還有，'][k%3];}
+    return '';};
 
   /* ---------- 說話 ---------- */
   const zhVoices=()=>{const v=(ss&&ss.getVoices())||[];const tw=v.filter(x=>/zh[-_]TW|cmn[-_]Hant|zh[-_]Hant/i.test(x.lang));const other=v.filter(x=>/^(zh|cmn)/i.test(x.lang)&&!tw.includes(x));
