@@ -261,3 +261,12 @@ function foxBlocks(){return [...document.querySelectorAll('main p, main li, main
     document.addEventListener('click',e=>{if(e.target.closest('.fzbtn,.modebar button,.secbtn,summary'))setTimeout(layout,80);});};
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',go);else go();
 })();
+/* 🎧 聽讀模式：工具列按鈕，按下才載入 fox_listen.js */
+(function(){
+  window.foxListenLoad=cb=>{if(window.foxListen)return cb();const sc=document.createElement('script');sc.src='fox_listen.js';sc.onload=()=>cb();sc.onerror=()=>alert('聽讀功能載入失敗，請確認 fox_listen.js 已上傳。');document.head.appendChild(sc);};
+  const add=()=>{const mb=document.querySelector('.modebar');if(!mb||!document.querySelector('main section.sec'))return;
+    const b=document.createElement('button');b.className='lisbtn';b.textContent='🎧 聽讀';
+    b.onclick=()=>foxListenLoad(()=>foxListen.start());
+    const fz=mb.querySelector('.fzbtn');mb.insertBefore(b,fz||null);};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',add);else add();
+})();

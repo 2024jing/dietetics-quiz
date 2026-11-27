@@ -1376,6 +1376,7 @@ Object.assign(GL_ALIAS,{"SRY":"sry","性染色體":"sexchrom","沃爾夫氏管":
   sheet.addEventListener('click',e=>{if(e.target===sheet||e.target.classList.contains('glx'))return close();
     const q=e.target.closest('.glsr'), c=e.target.closest('.glch'); const term=(GL_ALIAS&&Object.keys(GL_ALIAS).find(k=>0))||sheet.querySelector('.glt').lastChild.textContent.split(/[ （(]/)[0];
     const sy=e.target.closest('.say'); if(sy){foxSay(sy.dataset.say);return;}
+    const gy=e.target.closest('.glsay'); if(gy){window.foxListenLoad&&foxListenLoad(()=>foxListen.readCard(gy.dataset.id));return;}
     if(q){close(); openSearch(q.dataset.q);} else if(c){close(); openSearch(term,+c.dataset.ch);}});
   // 英文發音（瀏覽器內建語音）
   let enVoice=null;const pickV=()=>{const v=(window.speechSynthesis&&speechSynthesis.getVoices())||[];enVoice=v.find(x=>/^en[-_]US/i.test(x.lang)&&/Samantha|Google|Microsoft|Aria|Jenny/i.test(x.name))||v.find(x=>/^en[-_]US/i.test(x.lang))||v.find(x=>/^en/i.test(x.lang))||null;};
@@ -1403,7 +1404,7 @@ Object.assign(GL_ALIAS,{"SRY":"sry","性染色體":"sexchrom","沃爾夫氏管":
     return items.length?row('國考英文','n8',`<div class="saybar">${items.join('')}</div>`):'';};
   const row=(lab,cls,txt)=>txt?`<div class="glrow"><span class="gllab ${cls}">${lab}</span><div>${txt}</div></div>`:'';
   window.openGl=id=>{const g=GL[id]; if(!g)return; try{foxLoadAudFor(id);}catch(_){}
-    sheet.querySelector('.glbody').innerHTML=`<div class="glt">${g.tag?`<span class="gltag">${g.tag}</span>`:''}${g.t}</div>`+row('白話','l0',g.d)+enRow(g)+row('營養學','n1',g.nu)+row('化學','n2',g.ch)+row('生化','n3',g.bc)+row('分生','n4',g.mb)+row('生理','n5',g.ph)+row('膳療','n7',g.dt)+row('在哪裡','l1',g.w)+row('做什麼','l2',g.f)+row('生活例子','l6',g.e)+row('名稱由來','l3',g.n)+row('記法','l4',g.m)+row('國考提醒','n6',g.ex)+row('詳讀','l5',g.c&&g.c.replace(/第 ([\d、 ]+) 章/g,m=>m.replace(/\d+/g,d=>`<a class="glch" data-ch="${d}">${d}</a>`)).replace(/(^|[；、\s])(\d{1,2})\.(\d{1,2})/g,(m,a,c1,c2)=>`${a}<a class="glch" data-ch="${c1}">${c1}.${c2}</a>`))+(window.openSearch?`<button class="glsr" data-q="${g.t.split(/[ （(]/)[0]}">🔍 在各章找「${g.t.split(/[ （(]/)[0]}」</button>`:'');
+    sheet.querySelector('.glbody').innerHTML=`<div class="glt">${g.tag?`<span class="gltag">${g.tag}</span>`:''}${g.t}</div>`+row('白話','l0',g.d)+enRow(g)+row('營養學','n1',g.nu)+row('化學','n2',g.ch)+row('生化','n3',g.bc)+row('分生','n4',g.mb)+row('生理','n5',g.ph)+row('膳療','n7',g.dt)+row('在哪裡','l1',g.w)+row('做什麼','l2',g.f)+row('生活例子','l6',g.e)+row('名稱由來','l3',g.n)+row('記法','l4',g.m)+row('國考提醒','n6',g.ex)+row('詳讀','l5',g.c&&g.c.replace(/第 ([\d、 ]+) 章/g,m=>m.replace(/\d+/g,d=>`<a class="glch" data-ch="${d}">${d}</a>`)).replace(/(^|[；、\s])(\d{1,2})\.(\d{1,2})/g,(m,a,c1,c2)=>`${a}<a class="glch" data-ch="${c1}">${c1}.${c2}</a>`))+(window.openSearch?`<button class="glsr" data-q="${g.t.split(/[ （(]/)[0]}">🔍 在各章找「${g.t.split(/[ （(]/)[0]}」</button>`:'')+`<button class="glsay" data-id="${id}">🎧 念給我聽</button>`;
     sheet.classList.add('show');};
   // 把正文中的名詞包成可點的 span
   const keys=Object.keys(GL_ALIAS).sort((a,b)=>b.length-a.length);
