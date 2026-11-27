@@ -27,10 +27,11 @@
       return '，'+x+'，';});
     t=t.replace(/[A-Za-z][A-Za-z'’\-]*(?:[\s\/,]+[A-Za-z][A-Za-z'’\-]*)*/g,m=>/\b[a-z][a-z\-]{2,}\b/.test(m)?' ':m);  // 拿掉英文詞組（保留 ATP、NADH 這類縮寫與人名）
     for(const [a,b] of MAP)t=t.replace(a,b);
+    if(!/⟦/.test(t))t=t.replace(/(特別是|尤其是|尤其|重點是|關鍵是|關鍵在於|最重要的是|一定要|千萬不要|要特別注意)([^。；！？⟦⟧，]{2,30})/g,'$1⟦$2⟧');
     t=t.replace(/，\s*([。；：！？、」])/g,'$1').replace(/([「])\s*，/g,'$1').replace(/，\s*，/g,'，').replace(/^，/,'');
     return t.replace(/\s+/g,' ').replace(/([，。；：、])\s*[，、]/g,'$1').replace(/\s+([，。；：、）」])/g,'$1').replace(/（\s*）/g,'').replace(/^[，、\s]+/,'').trim();
   };
-  const plain=el=>{const c=el.cloneNode(true);c.querySelectorAll('.en,.h3en,i.en-term,svg,.tblhint,sup,.lv,.lvkey,.sayi').forEach(x=>x.remove());
+  const plain=el=>{const c=el.cloneNode(true);c.querySelectorAll('.key').forEach(x=>{x.prepend('⟦');x.append('⟧');});c.querySelectorAll('.en,.h3en,i.en-term,svg,.tblhint,sup,.lv,.lvkey,.sayi').forEach(x=>x.remove());
     c.querySelectorAll('br').forEach(b=>b.replaceWith('。'));return c.textContent;};
   const vis=el=>!!(el.offsetParent||el.getClientRects().length)&&getComputedStyle(el).visibility!=='hidden';
   const segText=el=>{
@@ -45,17 +46,26 @@
       return (first&&!el.classList.contains('tcap')?'我們用表格整理一下。':'')+cs.map((c,i)=>{const v=say(plain(c));if(!v)return '';if(i===0)return v+'，';return (labels[i]&&cs.length>2?labels[i]+'是':'')+v+'。';}).join('');
     }
     if(tag==='H2'){const no=el.querySelector('.no');const c=el.cloneNode(true);c.querySelector('.no')?.remove();const ti=say(plain(c)).replace(/\s*[A-Za-z][\x00-\x7F]*$/,'');
-      return no?`好，我們進入第 ${no.textContent.trim()} 節，${ti}。`:`我們先來看，${ti}`;}
+      if(/本章地圖/.test(ti))return '';
+      if(/重點整理/.test(ti))return '最後，我們把這一章的重點整理一下。';
+      return no?`好，我們進入第 ${no.textContent.trim()} 節，${ti}。`:`我們來看，${ti}。`;}
     if(tag==='H3'||tag==='H4'){const ti=say(plain(el)).replace(/\s+[A-Za-z][\x00-\x7F’'–—]*$/,'');const k=(h3n++)%4;
       return ['接下來看「'+ti+'」。','再來講「'+ti+'」。','下一個重點，「'+ti+'」。','我們來看「'+ti+'」。'][k];}
-    if(el.matches('.lead>div')){const c=el.cloneNode(true);c.querySelectorAll('.lt').forEach(x=>{x.textContent=x.textContent.replace(/^這節要說明什麼？$/,'這一節要講什麼呢？');x.append(' ');});return say(plain(c));}
+    if(el.matches('.lead>div')){const c=el.cloneNode(true);
+      const h=el.closest('section')&&el.closest('section').querySelector('h2');let ti='';if(h){const hc=h.cloneNode(true);hc.querySelector('.no')?.remove();ti=say(plain(hc)).replace(/\s*[A-Za-z][\x00-\x7F]*$/,'').replace(/[。，]$/,'');}
+      c.querySelectorAll('.lt').forEach(x=>{const q=x.textContent.trim();let o=q;
+        if(/^這節要說明什麼/.test(q))o='這一節要講什麼呢？';
+        else if(/^為什麼放第一節/.test(q))o=ti?`為什麼第一節要先討論${ti}呢？`:'為什麼要先講這一節呢？';
+        else if(/^為什麼放最後/.test(q))o=ti?`為什麼把${ti}放在最後呢？`:'為什麼把這一節放在最後呢？';
+        else{const m=q.match(/^為什麼接在\s*([\d.]+)\s*後面/);if(m)o=ti?`為什麼${ti}要接在 ${m[1]} 節後面呢？`:`為什麼這一節要接在 ${m[1]} 節後面呢？`;}
+        x.textContent=o+' ';});return say(plain(c));}
     if(el.matches('.path .arr'))return '接著，'+say(plain(el).replace(/^[\s↓→⬇]+/,''));
     if(el.matches('.think'))return '先想一個問題喔，'+say(plain(el));
     if(el.matches('figcaption'))return '我們看一下圖，'+say(plain(el));
     if(el.matches('.oneline'))return '簡單講一句話，'+say(plain(el));
     return talk(say(plain(el)));
   };
-  const TALK=[[/^破題\s*/,'先破題一下，'],[/^本節重點[:：]?/,'這一節的重點整理一下，'],[/^營養連結[（(]回答開頭問題[)）][:：]/,'跟營養連起來，也回到一開始的問題，'],[/^營養連結[:：]?/,'跟營養學連起來看，'],[/^回答開頭問題[^:：]*[:：]/,'回到一開始的問題，'],[/^例子[:：]/,'舉個例子，'],[/^更正與易混淆[:：]/,'這裡要更正一個常見的誤會，'],[/^更正[:：]/,'這裡要更正一個常見的誤會，'],
+  const TALK=[[/^破題\s*/,''],[/^本節重點[:：]?/,'這一節的重點整理一下，'],[/^營養連結[（(]回答開頭問題[)）][:：]/,'跟營養連起來，也回到一開始的問題，'],[/^營養連結[:：]?/,'跟營養學連起來看，'],[/^回答開頭問題[^:：]*[:：]/,'回到一開始的問題，'],[/^例子[:：]/,'舉個例子，'],[/^更正與易混淆[:：]/,'這裡要更正一個常見的誤會，'],[/^更正[:：]/,'這裡要更正一個常見的誤會，'],
     [/^易混淆[:：]/,'這裡很容易搞混喔，'],[/^易錯[:：]/,'這裡很容易錯，'],[/^易考[:：]/,'這邊考試很愛考，'],[/^國考考過[:：]?/,'這個國考考過，'],[/^國考重點[:：]?/,'國考重點，'],[/^臨床連結[:：]/,'在臨床上，'],[/^藥物連結[:：]/,'跟藥物有關的是，'],[/^老師的超級簡單記法[:：]/,'老師有個超簡單的記法，'],[/^老師強調[^:：]*[:：]/,m=>'老師特別強調，'+m.replace(/^老師強調[＋+]?(國考考過)?[:：]?/,'').replace(/[:：]$/,'，')],
     [/^記法[:：]/,'有個好記的方法，'],[/^數字提醒[:：]/,'數字要記一下，'],[/^特別注意[:：]|^注意[:：]/,'特別注意喔，'],[/^算算看[:：]/,'我們來算算看，'],[/^補充[:：]/,'補充一下，'],[/^生理上的意義[:：]/,'這在生理上的意義是，']];
   const talk=t=>{for(const [a,b] of TALK)if(a.test(t))return t.replace(a,b);return t;};
@@ -94,10 +104,13 @@
     return [...tw.sort((a,b)=>good(a)-good(b)),...other.sort((a,b)=>good(a)-good(b))];};
   const pickVoice=()=>{const z=zhVoices();voice=(voiceName&&z.find(x=>x.name===voiceName))||z[0]||null;};
   if(ss){pickVoice();ss.addEventListener?ss.addEventListener('voiceschanged',pickVoice):(ss.onvoiceschanged=pickVoice);}
-  const chunks=t=>{const out=[];t.replace(/([。！？；，])[。，\s]+/g,'$1').split(/(?<=[。！？；])/).forEach(p=>{p=p.trim();if(!p||!/[\u4e00-\u9fffA-Za-z0-9]/.test(p))return;while(p.length>110){let k=p.lastIndexOf('，',110);if(k<40)k=110;out.push(p.slice(0,k+1));p=p.slice(k+1);}if(p)out.push(p);});return out;};
+  const chunks0=t=>{const out=[];t.replace(/([。！？；，])[。，\s]+/g,'$1').split(/(?<=[。！？；])/).forEach(p=>{p=p.trim();if(!p||!/[\u4e00-\u9fffA-Za-z0-9]/.test(p))return;while(p.length>110){let k=p.lastIndexOf('，',110);if(k<40)k=110;out.push(p.slice(0,k+1));p=p.slice(k+1);}if(p)out.push(p);});return out;};
+  const chunks=t=>{const out=[];t.split(/(⟦[^⟧]*⟧)/).forEach(p=>{if(!p)return;
+      if(p.startsWith('⟦')){const x=p.slice(1,-1).trim();if(/[\u4e00-\u9fffA-Za-z0-9]/.test(x))chunks0(x).forEach(c=>out.push({t:c,em:true}));}
+      else chunks0(p.replace(/[⟦⟧]/g,'')).forEach(c=>out.push({t:c,em:false}));});return out;};
   const speak=(text,done)=>{stopRec();ss.cancel();queue=chunks(text);afterSpeak=done;next();};
   const next=()=>{if(!queue.length){const d=afterSpeak;afterSpeak=null;d&&d();return;}
-    const u=new SpeechSynthesisUtterance(queue.shift());u.lang=voice?voice.lang:'zh-TW';u.rate=rate;u.pitch=1;if(voice)u.voice=voice;
+    const it=queue.shift();const u=new SpeechSynthesisUtterance(it.t);u.lang=voice?voice.lang:'zh-TW';u.rate=it.em?Math.max(.6,rate*.86):rate;u.pitch=it.em?1.15:1;u.volume=1;if(voice)u.voice=voice;
     u.onend=()=>{if(state==='speaking'||state==='card')setTimeout(()=>{if(state==='speaking'||state==='card')next();},120);};u.onerror=e=>{if(e.error!=='interrupted'&&e.error!=='canceled')tip('語音播放失敗（'+e.error+'），請改用手機的 Chrome 開啟。');};
     window._lisU=u;ss.speak(u);};
 
