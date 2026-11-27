@@ -141,6 +141,7 @@
   let textSave=null;
   const cardText=(id,n,N)=>{const g=GL[id];const dv=document.createElement('div');const strip=h=>{dv.innerHTML=String(h||'');return say(dv.textContent);};
     const name=strip(g.t).split(/\s+[A-Za-z]/)[0].replace(/[（(].*$/,'').trim();
+    const sc=window.FOX_LISC&&FOX_LISC[id];if(sc)return (`第 ${n} 張，${name}。`+sc+(n===N?'好，這一章的小卡就到這裡。':'')).replace(/。+/g,'。');
     let t=`第 ${n} 張，${name}。`+strip(g.d)+'。';const f=strip(g.f||g.nu||'');if(f)t+='它的作用是，'+f+'。';if(g.m)t+='記法，'+strip(g.m)+'。';
     if(n===N)t+='好，這一章的小卡就到這裡。';return t.replace(/。+/g,'。');};
   const cardMode=()=>{if(typeof GL==='undefined')return;const aub=window.FOX_AUB||{};const mine=b=>b===chNo||(chNo==='01'&&b==='00');const seen=new Set(),ids=[];
@@ -158,6 +159,7 @@
     const dv=document.createElement('div');const strip=h=>{dv.innerHTML=String(h||'');return say(dv.textContent);};
     const name=strip(g.t).split(/\s+[A-Za-z]/)[0];
     let t='小卡：'+name+'。'+strip(g.d);if(g.m)t+='。記法：'+strip(g.m);
+    const sc=window.FOX_LISC&&FOX_LISC[id];if(sc)t='小卡：'+name+'。'+sc;
     if(!ss)return tip('這個瀏覽器不支援朗讀，請改用 Chrome 開啟。');
     if(state==='off'){state='card';speak(t,()=>{state='off';});return;}
     clearGap();state='card';ui('正在念小卡：'+name);
