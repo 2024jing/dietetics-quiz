@@ -143,9 +143,9 @@
     const name=strip(g.t).split(/\s+[A-Za-z]/)[0].replace(/[（(].*$/,'').trim();
     let t=`第 ${n} 張，${name}。`+strip(g.d)+'。';const f=strip(g.f||g.nu||'');if(f)t+='它的作用是，'+f+'。';if(g.m)t+='記法，'+strip(g.m)+'。';
     if(n===N)t+='好，這一章的小卡就到這裡。';return t.replace(/。+/g,'。');};
-  const cardMode=()=>{if(typeof GL==='undefined')return;const aub=window.FOX_AUB||{};const seen=new Set(),ids=[];
-    document.querySelectorAll('main [data-gl]').forEach(e=>{const id=e.dataset.gl;if(GL[id]&&!seen.has(id)&&(!chNo||!aub[id]||aub[id]===chNo)){seen.add(id);ids.push(id);}});
-    if(chNo)for(const id in aub)if(aub[id]===chNo&&GL[id]&&!seen.has(id)){seen.add(id);ids.push(id);}
+  const cardMode=()=>{if(typeof GL==='undefined')return;const aub=window.FOX_AUB||{};const mine=b=>b===chNo||(chNo==='01'&&b==='00');const seen=new Set(),ids=[];
+    document.querySelectorAll('main [data-gl]').forEach(e=>{const id=e.dataset.gl;if(GL[id]&&!seen.has(id)&&(!chNo||!aub[id]||mine(aub[id]))){seen.add(id);ids.push(id);}});
+    if(chNo)for(const id in aub)if(mine(aub[id])&&GL[id]&&!seen.has(id)){seen.add(id);ids.push(id);}
     if(!ids.length){brief('這一章沒有小卡');return;}
     if(!textSave)textSave={segs,cur};
     segs=ids.map((id,i)=>({card:id,el:null,text:cardText(id,i+1,ids.length)}));
