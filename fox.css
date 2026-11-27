@@ -251,3 +251,6 @@ tr.lisnow td,tr.lisnow th{background:#fef9c3!important}
 body.listening{padding-bottom:120px}
 body.listening .top,body.listening .backpill,body.listening .chfab{display:none!important}
 .glsay{display:block;width:100%;margin:8px 0 0;padding:9px;border:1px solid #14b8a6;background:#f0fdfa;color:#0f766e;border-radius:10px;font:inherit;font-size:15px;cursor:pointer}
+#lisbar .lisset{display:flex;gap:6px;margin-top:6px}
+#lisbar .lisset[hidden]{display:none}
+#lisbar .lisset button{font-size:13px;padding:8px 4px;flex-direction:row;justify-content:center}

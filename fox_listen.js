@@ -1,4 +1,4 @@
-/* 🎧 聽讀模式：一段一段念，念完停下來等指令（按鈕或語音）。
+/* 🎧 聽讀模式：預設整章連續念；按 🎤 可隨時打斷發問（問小卡、上一段、停），問完自動接著念。也可切換成「逐段停」。
    指令：繼續／下一段、重複、上一段、下一節、停；「什麼是○○」「○○是什麼」「小卡○○」念名詞小卡；「快一點／慢一點」。 */
 (function(){
   if(window.foxListen)return;
@@ -6,8 +6,8 @@
   const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
   const SEL='h2,h3,h4,p,li,.lead>div,.lead,.oneline,.think,.warn,.eg,.nut,.note,figcaption,.path .step,.path .arr,tr,dd,dt,.bio>summary .one';
   const SKIP='nav,#quizsec,#biosum,svg,.en,.chnav,.modebar,#lisbar,.tblhint,.secbtn,script,style,header,footer';
-  let segs=[],cur=-1,state='off',rate=1,voice=null,micOn=true,rec=null,recTries=0,queue=[],afterSpeak=null;
-  try{rate=+localStorage.getItem('foxLisRate')||1;micOn=localStorage.getItem('foxLisMic')!=='0';}catch(_){}
+  let segs=[],cur=-1,state='off',rate=1,voice=null,micOn=true,rec=null,recTries=0,queue=[],afterSpeak=null,cont=true,gapT=null,asked=false,voiceName='',wake=null;
+  try{rate=+localStorage.getItem('foxLisRate')||1;micOn=localStorage.getItem('foxLisMic')!=='0';cont=localStorage.getItem('foxLisCont')!=='0';voiceName=localStorage.getItem('foxLisVoice')||'';}catch(_){}
 
   /* ---------- 文字轉成適合念的句子 ---------- */
   const MAP=[[/Na⁺\/K⁺/g,'鈉鉀'],[/H⁺\/K⁺/g,'氫鉀'],[/Na⁺/g,'鈉離子'],[/K⁺/g,'鉀離子'],[/Ca²⁺/g,'鈣離子'],[/Mg²⁺/g,'鎂離子'],[/Fe²⁺/g,'亞鐵離子'],[/Fe³⁺/g,'三價鐵離子'],[/Cl⁻/g,'氯離子'],[/HCO₃⁻/g,'碳酸氫根'],[/H₂CO₃/g,'碳酸'],[/H⁺/g,'氫離子'],[/NAD⁺/g,'NAD'],[/NADP⁺/g,'NADP'],[/FADH₂/g,'FADH2'],
@@ -32,21 +32,29 @@
     if(tag==='TR'){
       if(el.classList.contains('thdr'))return '';
       const cs=[...el.cells];if(!cs.length)return '';
-      if(cs.length===1)return say(plain(cs[0]));
+      if(cs.length===1)return (el.classList.contains('tcap')?'這張表整理的是，':'')+say(plain(cs[0]));
       const t=el.closest('table');const hdr=t&&t.querySelector('tr.thdr');const labels=hdr?[...hdr.cells].map(c=>say(plain(c))):[];
       const allTh=cs.every(c=>c.tagName==='TH');if(allTh&&!hdr)return '';
-      return cs.map((c,i)=>{const v=say(plain(c));if(!v)return '';if(i===0)return v+'：';return (labels[i]&&cs.length>2?labels[i]+'，':'')+v+'。';}).join('');
+      const first=!el.previousElementSibling||el.previousElementSibling.classList.contains('thdr')||el.previousElementSibling.classList.contains('tcap');
+      return (first&&!el.classList.contains('tcap')?'我們用表格整理一下。':'')+cs.map((c,i)=>{const v=say(plain(c));if(!v)return '';if(i===0)return v+'，';return (labels[i]&&cs.length>2?labels[i]+'是':'')+v+'。';}).join('');
     }
-    if(tag==='H2'){const no=el.querySelector('.no');const c=el.cloneNode(true);c.querySelector('.no')?.remove();return (no?'第 '+no.textContent.trim()+' 節，':'')+say(plain(c)).replace(/\s*[A-Za-z][\x00-\x7F]*$/,'');}
-    if(tag==='H3'||tag==='H4')return '【'+say(plain(el)).replace(/\s+[A-Za-z][\x00-\x7F’'–—]*$/,'')+'】';
-    if(el.matches('.lead>div')){const c=el.cloneNode(true);c.querySelectorAll('.lt').forEach(x=>x.append('：'));return say(plain(c));}
+    if(tag==='H2'){const no=el.querySelector('.no');const c=el.cloneNode(true);c.querySelector('.no')?.remove();const ti=say(plain(c)).replace(/\s*[A-Za-z][\x00-\x7F]*$/,'');
+      return no?`好，我們進入第 ${no.textContent.trim()} 節，${ti}。`:`我們先來看，${ti}`;}
+    if(tag==='H3'||tag==='H4'){const ti=say(plain(el)).replace(/\s+[A-Za-z][\x00-\x7F’'–—]*$/,'');const k=(h3n++)%4;
+      return ['接下來看「'+ti+'」。','再來講「'+ti+'」。','下一個重點，「'+ti+'」。','我們來看「'+ti+'」。'][k];}
+    if(el.matches('.lead>div')){const c=el.cloneNode(true);c.querySelectorAll('.lt').forEach(x=>{x.textContent=x.textContent.replace(/^這節要說明什麼？$/,'這一節要講什麼呢？');x.append(' ');});return say(plain(c));}
     if(el.matches('.path .arr'))return '接著，'+say(plain(el).replace(/^[\s↓→⬇]+/,''));
-    if(el.matches('.think'))return '想一想：'+say(plain(el));
-    if(el.matches('figcaption'))return '圖說：'+say(plain(el));
-    if(el.matches('.oneline'))return '一句話重點：'+say(plain(el));
-    return say(plain(el));
+    if(el.matches('.think'))return '先想一個問題喔，'+say(plain(el));
+    if(el.matches('figcaption'))return '我們看一下圖，'+say(plain(el));
+    if(el.matches('.oneline'))return '簡單講一句話，'+say(plain(el));
+    return talk(say(plain(el)));
   };
-  const collect=()=>{
+  const TALK=[[/^本節重點[:：]?/,'這一節的重點整理一下，'],[/^營養連結[（(]回答開頭問題[)）][:：]/,'跟營養連起來，也回到一開始的問題，'],[/^營養連結[:：]?/,'跟營養學連起來看，'],[/^回答開頭問題[^:：]*[:：]/,'回到一開始的問題，'],[/^例子[:：]/,'舉個例子，'],[/^更正與易混淆[:：]/,'這裡要更正一個常見的誤會，'],[/^更正[:：]/,'這裡要更正一個常見的誤會，'],
+    [/^易混淆[:：]/,'這裡很容易搞混喔，'],[/^易錯[:：]/,'這裡很容易錯，'],[/^易考[:：]/,'這邊考試很愛考，'],[/^國考考過[:：]?/,'這個國考考過，'],[/^國考重點[:：]?/,'國考重點，'],[/^臨床連結[:：]/,'在臨床上，'],[/^藥物連結[:：]/,'跟藥物有關的是，'],[/^老師的超級簡單記法[:：]/,'老師有個超簡單的記法，'],[/^老師強調[^:：]*[:：]/,m=>'老師特別強調，'+m.replace(/^老師強調[＋+]?(國考考過)?[:：]?/,'').replace(/[:：]$/,'，')],
+    [/^記法[:：]/,'有個好記的方法，'],[/^數字提醒[:：]/,'數字要記一下，'],[/^特別注意[:：]|^注意[:：]/,'特別注意喔，'],[/^算算看[:：]/,'我們來算算看，'],[/^補充[:：]/,'補充一下，'],[/^生理上的意義[:：]/,'這在生理上的意義是，']];
+  const talk=t=>{for(const [a,b] of TALK)if(a.test(t))return t.replace(a,b);return t;};
+  let h3n=0;
+  const collect=()=>{h3n=0;
     const main=document.querySelector('main');if(!main)return [];
     const enTbl=new Set([...main.querySelectorAll('table')].filter(t=>{const x=t.textContent.replace(/\s/g,'');const a=(x.match(/[A-Za-z]/g)||[]).length;return x.length&&a/x.length>.3;}));
     const all=[...main.querySelectorAll(SEL)].filter(el=>!el.closest(SKIP)&&vis(el)&&!(el.closest('table')&&enTbl.has(el.closest('table'))));
@@ -57,21 +65,31 @@
   };
 
   /* ---------- 說話 ---------- */
-  const pickVoice=()=>{const v=(ss&&ss.getVoices())||[];
-    voice=v.find(x=>/zh[-_]TW|cmn[-_]Hant/i.test(x.lang))||v.find(x=>/zh[-_]HK/i.test(x.lang)&&/Mandarin|國語/i.test(x.name))||v.find(x=>/^zh/i.test(x.lang))||null;};
+  const zhVoices=()=>{const v=(ss&&ss.getVoices())||[];const tw=v.filter(x=>/zh[-_]TW|cmn[-_]Hant|zh[-_]Hant/i.test(x.lang));const other=v.filter(x=>/^(zh|cmn)/i.test(x.lang)&&!tw.includes(x));
+    const good=x=>/Natural|Neural|Online|Premium|Enhanced|優化|高品質/i.test(x.name)?0:/Google/i.test(x.name)?1:2;
+    return [...tw.sort((a,b)=>good(a)-good(b)),...other.sort((a,b)=>good(a)-good(b))];};
+  const pickVoice=()=>{const z=zhVoices();voice=(voiceName&&z.find(x=>x.name===voiceName))||z[0]||null;};
   if(ss){pickVoice();ss.addEventListener?ss.addEventListener('voiceschanged',pickVoice):(ss.onvoiceschanged=pickVoice);}
-  const chunks=t=>{const out=[];t.split(/(?<=[。！？；])/).forEach(p=>{p=p.trim();if(!p)return;while(p.length>110){let k=p.lastIndexOf('，',110);if(k<40)k=110;out.push(p.slice(0,k+1));p=p.slice(k+1);}if(p)out.push(p);});return out;};
+  const chunks=t=>{const out=[];t.replace(/([。！？；，])[。，\s]+/g,'$1').split(/(?<=[。！？；])/).forEach(p=>{p=p.trim();if(!p||!/[\u4e00-\u9fffA-Za-z0-9]/.test(p))return;while(p.length>110){let k=p.lastIndexOf('，',110);if(k<40)k=110;out.push(p.slice(0,k+1));p=p.slice(k+1);}if(p)out.push(p);});return out;};
   const speak=(text,done)=>{stopRec();ss.cancel();queue=chunks(text);afterSpeak=done;next();};
   const next=()=>{if(!queue.length){const d=afterSpeak;afterSpeak=null;d&&d();return;}
-    const u=new SpeechSynthesisUtterance(queue.shift());u.lang='zh-TW';u.rate=rate;if(voice)u.voice=voice;
-    u.onend=()=>{if(state==='speaking'||state==='card')next();};u.onerror=e=>{if(e.error!=='interrupted'&&e.error!=='canceled')tip('語音播放失敗（'+e.error+'），請改用手機的 Chrome 開啟。');};
+    const u=new SpeechSynthesisUtterance(queue.shift());u.lang=voice?voice.lang:'zh-TW';u.rate=rate;u.pitch=1;if(voice)u.voice=voice;
+    u.onend=()=>{if(state==='speaking'||state==='card')setTimeout(()=>{if(state==='speaking'||state==='card')next();},120);};u.onerror=e=>{if(e.error!=='interrupted'&&e.error!=='canceled')tip('語音播放失敗（'+e.error+'），請改用手機的 Chrome 開啟。');};
     window._lisU=u;ss.speak(u);};
 
   /* ---------- 流程 ---------- */
   const mark=()=>{document.querySelectorAll('.lisnow').forEach(x=>x.classList.remove('lisnow'));const s=segs[cur];if(!s)return;
     s.el.classList.add('lisnow');const r=s.el.getBoundingClientRect();if(r.top<90||r.bottom>innerHeight-150)s.el.scrollIntoView({block:'center',behavior:'smooth'});};
-  const play=i=>{if(i<0)i=0;if(i>=segs.length){state='wait';ui('全章念完了。說「上一段」或「重複」可以再聽，說「停」結束。');listen();return;}
-    cur=i;mark();state='speaking';ui();speak(segs[cur].text,()=>{state='wait';ui();listen();});};
+  const clearGap=()=>{if(gapT){clearTimeout(gapT);gapT=null;}};
+  const play=i=>{clearGap();asked=false;if(i<0)i=0;if(i>=segs.length){state='card';ui();speak('這一章念完囉，辛苦了。',()=>{state='wait';ui('全章念完了。按 ⏮ 可以回去重聽，按 ✕ 結束。');});return;}
+    cur=i;mark();state='speaking';ui();
+    speak(segs[cur].text,()=>{
+      if(cont){const nx=segs[cur+1];const isH=x=>x&&/^H[234]$/.test(x.el.tagName);
+        gapT=setTimeout(()=>{gapT=null;if(state==='speaking')play(cur+1);},isH(nx)?1100:isH(segs[cur])?650:450);}
+      else{state='wait';ui();listen();}});};
+  /* 打斷：停下來聽一句話；連續模式下沒聽到指令就自動接著念 */
+  const interrupt=()=>{clearGap();ss.cancel();queue=[];afterSpeak=null;state='wait';asked=true;ui();if(SR&&micOn)listen();else ui('沒有麥克風可用，按 ▶ 繼續。');};
+  const resume=()=>play(asked?cur:cur+1);
   const nextSection=()=>{for(let i=cur+1;i<segs.length;i++)if(/^H[23]$/.test(segs[i].el.tagName))return play(i);play(segs.length);};
   const readCard=(id,back)=>{const g=(typeof GL!=='undefined')&&GL[id];if(!g)return;
     const strip=h=>say(String(h||'').replace(/<[^>]+>/g,''));
@@ -79,7 +97,9 @@
     let t='小卡：'+name+'。'+strip(g.d);if(g.m)t+='。記法：'+strip(g.m);
     if(!ss)return tip('這個瀏覽器不支援朗讀，請改用 Chrome 開啟。');
     if(state==='off'){state='card';speak(t,()=>{state='off';});return;}
-    state='card';ui('正在念小卡：'+name);speak(t,()=>{state='wait';ui(segs.length?'小卡念完了。說「繼續」回到原本的段落。':'');if(segs.length)listen();});};
+    clearGap();state='card';ui('正在念小卡：'+name);
+    speak(t,()=>{if(cont&&segs.length){state='card';speak('好，我們接著剛剛的地方。',()=>{state='speaking';play(cur);});}
+      else{state='wait';ui(segs.length?'小卡念完了。說「繼續」回到原本的段落。':'');if(segs.length)listen();}});};
   /* 同音字容錯：語音辨識常把「柯氏」聽成「科氏、柯式」，用拼音比對 */
   const nz=p=>p.replace(/^zh/,'z').replace(/^ch/,'c').replace(/^sh/,'s').replace(/^n(?=[aeiou])/,'l').replace(/ing$/,'in').replace(/eng$/,'en').replace(/v/,'u');
   const toPy=t=>{const out=[];const P=window.FOX_PY||{};for(const ch of t){if(P[ch])out.push(nz(P[ch]));else if(/[A-Za-z0-9]/.test(ch))out.push(ch.toLowerCase());}return out;};
@@ -108,46 +128,56 @@
     if(/下一節|下一個標題|跳過/.test(t))return nextSection();
     if(/快一點|快點|加快/.test(t)){setRate(Math.min(1.6,rate+.15));return play(cur);}
     if(/慢一點|慢點|放慢/.test(t)){setRate(Math.max(.6,rate-.15));return play(cur);}
-    if(/繼續|下一段|下一個|好|可以|OK|ok|往下/.test(t))return play(cur+1);
+    if(/逐段|一段一段/.test(t)){cont=false;saveCont();return resume();}
+    if(/連續|一直念|不要停/.test(t)){cont=true;saveCont();return resume();}
+    if(/繼續|下一段|下一個|好|可以|OK|ok|往下|沒事|沒有/.test(t))return resume();
     const id=findCard(t);if(id)return readCard(id);
     ui('沒聽懂「'+raw+'」。可以說：繼續、重複、上一段、什麼是○○、停');brief('沒聽懂，請再說一次');};
   const brief=t=>{state='card';speak(t,()=>{state='wait';listen();});};
+  const saveCont=()=>{try{localStorage.setItem('foxLisCont',cont?'1':'0');}catch(_){}};
   const setRate=r=>{rate=Math.round(r*100)/100;try{localStorage.setItem('foxLisRate',rate);}catch(_){}};
 
   /* ---------- 語音指令（只在等待時聽） ---------- */
   const stopRec=()=>{if(rec){rec.onend=null;try{rec.abort();}catch(_){}rec=null;}};
-  const listen=()=>{if(!SR||!micOn||state!=='wait')return ui();recTries=0;startRec();};
+  const listen=()=>{if(!SR||!micOn||state!=='wait'||(cont&&!asked&&state==='wait'&&false))return ui();recTries=0;startRec();};
   const startRec=()=>{stopRec();if(state!=='wait')return;
     try{rec=new SR();rec.lang='zh-TW';rec.interimResults=false;rec.maxAlternatives=3;rec.continuous=false;}catch(_){return;}
     let got=false;
     rec.onresult=e=>{got=true;const r=e.results[0];const alts=[...r].map(a=>a.transcript);const known=alts.find(a=>/繼續|下一|重複|再|上一|停|結束|什麼|甚麼|小卡|快|慢|好/.test(a))||alts.find(a=>findCard(a))||alts[0];stopRec();command(known);};
     rec.onerror=e=>{if(e.error==='not-allowed'||e.error==='service-not-allowed'){micOn=false;ui('麥克風沒有開放，請用下面的按鈕操作。');}};
-    rec.onend=()=>{rec=null;if(!got&&state==='wait'&&micOn){if(++recTries<25)setTimeout(startRec,250);else ui('等太久了，麥克風先關掉；按 🎤 或「繼續」。');}};
+    rec.onend=()=>{rec=null;if(!got&&state==='wait'&&micOn){const lim=(cont&&asked)?3:25;if(++recTries<lim)setTimeout(startRec,250);else if(cont&&asked){ui('沒聽到問題，接著念。');resume();}else ui('等太久了，麥克風先關掉；按 🎤 或「繼續」。');}};
     try{rec.start();ui();}catch(_){}};
 
   /* ---------- 介面 ---------- */
   let bar=null;
   const ensureBar=()=>{if(bar)return;bar=document.createElement('div');bar.id='lisbar';
     bar.innerHTML=`<div class="lisst"></div><div class="lisbtns">
-      <button data-a="prev" title="上一段">⏮<span>上一段</span></button><button data-a="rep" title="重複">🔁<span>重複</span></button>
-      <button data-a="go" class="lisgo">▶<span>繼續</span></button><button data-a="sec" title="下一節">⏭<span>下一節</span></button>
-      <button data-a="mic" class="lismic">🎤</button><button data-a="rate" class="lisrate"></button><button data-a="stop" title="結束">✕</button></div>`;
+      <button data-a="prev">⏮<span>上一段</span></button><button data-a="go" class="lisgo">⏸<span>暫停</span></button><button data-a="sec">⏭<span>下一節</span></button>
+      <button data-a="mic" class="lismic">🎤<span>發問</span></button><button data-a="set">⚙<span>設定</span></button><button data-a="stop">✕<span>結束</span></button></div>
+      <div class="lisset" hidden><button data-a="cont" class="liscont"></button><button data-a="rate" class="lisrate"></button><button data-a="voice" class="lisvoice"></button></div>`;
     document.body.appendChild(bar);document.body.classList.add('listening');
     bar.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;const a=b.dataset.a;
-      if(a==='go'){if(state==='speaking'||state==='card'){ss.cancel();queue=[];state='wait';ui();listen();}else play(cur+1);}
-      else if(a==='prev')play(cur-1);else if(a==='rep')play(cur);else if(a==='sec')nextSection();else if(a==='stop')stop();
-      else if(a==='mic'&&(state==='speaking'||state==='card')){ss.cancel();queue=[];state='wait';micOn=true;if(SR)listen();else ui();}
-      else if(a==='mic'){micOn=!micOn;try{localStorage.setItem('foxLisMic',micOn?'1':'0');}catch(_){}if(micOn&&state==='wait')listen();else{stopRec();ui();}}
-      else if(a==='rate'){setRate(rate>=1.3?0.8:rate+0.15>1.31?1.3:rate+0.15);ui();}});};
+      if(a==='go'){if(state==='speaking'||state==='card'){clearGap();ss.cancel();queue=[];afterSpeak=null;state='wait';asked=true;stopRec();ui('已暫停。按 ▶ 從這段接著念。');}else resume();}
+      else if(a==='prev')play(cur-1);else if(a==='sec')nextSection();else if(a==='stop')stop();
+      else if(a==='mic'){if(state==='speaking'||state==='card'||(state==='wait'&&!rec))interrupt();else{stopRec();ui();}}
+      else if(a==='set'){const p=bar.querySelector('.lisset');p.hidden=!p.hidden;ui();}
+      else if(a==='cont'){cont=!cont;saveCont();ui();}
+      else if(a==='rate'){setRate(rate>=1.3?0.8:Math.round((rate+0.1)*10)/10);ui();}
+      else if(a==='voice'){const z=zhVoices();if(z.length<2){tip('這支手機只有一個中文聲音。可到手機「設定 → 文字轉語音」安裝或切換其他中文（台灣）聲音。');return;}
+        const i=z.findIndex(x=>voice&&x.name===voice.name);voice=z[(i+1)%z.length];voiceName=voice.name;try{localStorage.setItem('foxLisVoice',voiceName);}catch(_){}ui();
+        const keep=state;clearGap();state='card';speak('你好，這是現在的聲音。',()=>{state=keep==='speaking'?'speaking':'wait';if(keep==='speaking')play(cur);else ui();});}});};
   const ui=msg=>{if(!bar)return;const st=bar.querySelector('.lisst');const go=bar.querySelector('.lisgo');
-    const pos=segs.length?`第 ${cur+1}／${segs.length} 段`:'';
+    const pos=segs.length?`${cur+1}／${segs.length}`:'';
     go.innerHTML=(state==='speaking'||state==='card')?'⏸<span>暫停</span>':'▶<span>繼續</span>';
-    bar.querySelector('.lismic').classList.toggle('on',!!(rec&&micOn));bar.querySelector('.lismic').style.display=SR?'':'none';
-    bar.querySelector('.lismic').classList.toggle('off',!micOn);
-    bar.querySelector('.lisrate').textContent=rate.toFixed(2).replace(/0$/,'')+'x';
-    st.innerHTML=msg?msg:(state==='speaking'?`🔊 ${pos} 念讀中…（要發問先按 🎤）`:state==='card'?'🔊 念小卡中…':state==='wait'?(rec&&micOn?`${pos}　🎤 請說：<b>繼續</b>、重複、上一段、什麼是○○`:`${pos}　按 ▶ 繼續`):'');};
+    const mic=bar.querySelector('.lismic');mic.classList.toggle('on',!!rec);mic.style.display=SR?'':'none';
+    bar.querySelector('.liscont').textContent=cont?'▶▶ 連續念':'⏯ 逐段停';
+    bar.querySelector('.lisrate').textContent='速度 '+rate.toFixed(1)+'x';
+    bar.querySelector('.lisvoice').textContent='聲音：'+(voice?voice.name.replace(/Google|Microsoft|\(.*?\)|（.*?）|-.*$/g,'').trim().slice(0,14)||voice.name:'預設');
+    st.innerHTML=msg?msg:(state==='speaking'?`🔊 ${pos}　念讀中… 想問問題按 🎤`:state==='card'?'🔊 說明中…':state==='wait'?(rec?`🎤 請說：<b>什麼是○○</b>、上一段、繼續、停`:`${pos}　按 ▶ 繼續`):'');};
   const tip=t=>{window.foxTip?foxTip(t):alert(t);};
-  const stop=()=>{state='off';stopRec();ss&&ss.cancel();queue=[];document.querySelectorAll('.lisnow').forEach(x=>x.classList.remove('lisnow'));
+  const lockOn=async()=>{try{if(navigator.wakeLock&&!wake)wake=await navigator.wakeLock.request('screen');}catch(_){}};
+  const lockOff=()=>{try{wake&&wake.release();}catch(_){}wake=null;};
+  const stop=()=>{lockOff();clearGap();state='off';stopRec();ss&&ss.cancel();queue=[];document.querySelectorAll('.lisnow').forEach(x=>x.classList.remove('lisnow'));
     if(bar){bar.remove();bar=null;}document.body.classList.remove('listening');};
   const loadPy=()=>{if(window.FOX_PY)return;const sc=document.createElement('script');sc.src='fox_py.js';document.head.appendChild(sc);};
   const start=()=>{loadPy();
@@ -155,9 +185,9 @@
     if(state!=='off'){stop();return;}
     pickVoice();segs=collect();if(!segs.length){tip('這一頁沒有可以朗讀的內容。');return;}
     let i=segs.findIndex(s=>s.el.getBoundingClientRect().top>=95);if(i<0)i=0;
-    ensureBar();
+    ensureBar();lockOn();
     if(!voice)ui('找不到國語語音，會用預設聲音念。Android 可到「設定 → 文字轉語音」下載中文（台灣）。');
     play(i);};
   loadPy();
-  window.foxListen={start,stop,readCard,_segs:()=>segs,_cmd:command};
+  window.foxListen={start,stop,readCard,_segs:()=>segs,_cmd:command,_interrupt:()=>interrupt()};
 })();
