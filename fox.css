@@ -254,3 +254,6 @@ body.listening .top,body.listening .backpill,body.listening .chfab{display:none!
 #lisbar .lisset{display:flex;gap:6px;margin-top:6px}
 #lisbar .lisset[hidden]{display:none}
 #lisbar .lisset button{font-size:13px;padding:8px 4px;flex-direction:row;justify-content:center}
+#lisbar .lisset2{display:flex;margin-top:6px}
+#lisbar .lisset2 button{font-size:14px;padding:9px 4px;flex-direction:row;justify-content:center;background:#334155}
+#lisbar .lisset[hidden]+.lisset2{display:none}

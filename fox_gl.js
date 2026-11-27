@@ -1386,7 +1386,8 @@ Object.assign(GL_ALIAS,{"SRY":"sry","性染色體":"sexchrom","沃爾夫氏管":
   const loadAud=b=>{if(!b||FOX_AUD[b]||audLoading[b])return;audLoading[b]=1;const sc=document.createElement('script');sc.src='fox_aud_'+b+'.js';sc.onerror=()=>{audLoading[b]=0;};document.head.appendChild(sc);};
   window.foxLoadAudFor=id=>loadAud((window.FOX_AUB&&FOX_AUB[id])||'00');
   const audEl=new Audio();audEl.preload='auto';
-  window.foxSay=t=>{for(const b in FOX_AUD){const x=FOX_AUD[b][t];if(x){try{audEl.pause();audEl.src='data:audio/mpeg;base64,'+x;audEl.currentTime=0;audEl.volume=1;const pr=audEl.play();if(pr&&pr.catch)pr.catch(()=>foxSpeak(t));}catch(_){foxSpeak(t);}return;}}foxSpeak(t);};
+  let lastSay='',lastAt=0;
+  window.foxSay=t=>{const again=(t===lastSay&&Date.now()-lastAt<5000);lastSay=t;lastAt=Date.now();for(const b in FOX_AUD){const x=FOX_AUD[b][t];if(x){try{audEl.pause();audEl.src='data:audio/mpeg;base64,'+x;audEl.currentTime=0;audEl.volume=1;audEl.playbackRate=again?0.7:1;try{audEl.preservesPitch=true;}catch(_){}const pr=audEl.play();if(pr&&pr.catch)pr.catch(()=>foxSpeak(t));}catch(_){foxSpeak(t);}return;}}foxSpeak(t);};
   window.foxSpeak=t=>{const ss=window.speechSynthesis;
     if(!ss||!window.SpeechSynthesisUtterance){foxTip('這個瀏覽器不支援語音。請用右上角「⋯」選「用預設瀏覽器開啟」，改用 Safari 或 Chrome 再試。');return;}
     t=t.replace(/\b([A-Z]{2,5})(?=\d|s?\b)/g,m=>m.split('').join(' '));
