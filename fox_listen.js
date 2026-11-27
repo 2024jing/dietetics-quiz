@@ -78,7 +78,7 @@
     return all.filter(el=>{for(const d of el.querySelectorAll(SEL))if(set.has(d)&&d!==el)return false;  // 只取最內層
       if(el.tagName!=='TR'&&el.closest('tr'))return false; return true;})
       .map(el=>({el,text:segText(el)})).filter(s=>s.text&&s.text.replace(/[【】：，。\s]/g,'').length>1)
-      .map((sg,i,arr)=>{sg.text=(opener(sg,arr[i-1])+sg.text).replace(/，\s*([。；：！？、])/g,'$1').replace(/(，\s*){2,}/g,'，').replace(/，\s*$/,'。');return sg;});
+      .map((sg,i,arr)=>{sg.text=(opener(sg,arr[i-1])+sg.text).replace(/，\s*([。；：！？、])/g,'$1').replace(/(，\s*){2,}/g,'，').replace(/，\s*$/,'。').replace(/([。！？])\s*。+/g,'$1').replace(/(變成\s*){2,}/g,'變成 ').replace(/變成\s+(分解成|變成|形成|轉成|生成)/g,'$1');return sg;});
   };
   /* 口語連接詞：讓段落之間接得順 */
   const NUM='一二三四五六七八九十';let pn=0;
