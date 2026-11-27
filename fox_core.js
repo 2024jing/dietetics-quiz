@@ -194,7 +194,7 @@ function foxBlocks(){return [...document.querySelectorAll('main p, main li, main
     document.querySelectorAll('main h3').forEach(h=>{
       if(h.querySelector('.h3en'))return;
       const tn=[...h.childNodes].filter(n=>n.nodeType===3);const last=tn[tn.length-1];if(!last)return;
-      const m=last.textContent.match(/^(.*?[^\x00-\x7F])\s+([A-Za-z][\x00-\x7F’'–—]*)$/);
+      const m=last.textContent.match(/^(.*?[^\x00-\x7F](?:\s*pH)?)\s+([A-Z][\x00-\x7F’'–—]*)$/);
       if(!m)return;last.textContent=m[1];const sp=document.createElement('span');sp.className='h3en';sp.textContent=m[2];h.insertBefore(sp,last.nextSibling);
     });
     const mark=()=>document.querySelectorAll('.tblwrap').forEach(w=>{

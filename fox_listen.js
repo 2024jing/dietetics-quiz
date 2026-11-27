@@ -19,6 +19,7 @@
     [/[₀-₉]/g,c=>'0123456789'['₀₁₂₃₄₅₆₇₈₉'.indexOf(c)]],[/[⁰¹²³⁴⁵⁶⁷⁸⁹]/g,c=>'0123456789'['⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c)]],[/[⁺⁻]/g,''],
     [/ⓘ|✓|✗|★|☆|•|·|□|☐|■/g,''],[/[|｜]/g,'，']];
   const say=t=>{
+    t=t.replace(/pH\s*值?/g,'pH 值');
     // 括號：交叉參照（第 12 章、圖 5-3、見 13.2）和純英文／縮寫直接略過；其他改成逗號，念起來才連貫
     for(let g=0;g<3;g++)t=t.replace(/[（(]([^（）()]*)[）)]/g,(m,x)=>{x=x.trim();
       if(!/[\u4e00-\u9fff]/.test(x))return '';
@@ -70,6 +71,7 @@
     [/^記法[:：]/,'有個好記的方法，'],[/^數字提醒[:：]/,'數字要記一下，'],[/^特別注意[:：]|^注意[:：]/,'特別注意喔，'],[/^算算看[:：]/,'我們來算算看，'],[/^補充[:：]/,'補充一下，'],[/^生理上的意義[:：]/,'這在生理上的意義是，']];
   const talk=t=>{for(const [a,b] of TALK)if(a.test(t))return t.replace(a,b);return t;};
   let h3n=0;
+  const sig=el=>{const t=el.textContent.replace(/\s+/g,'');return t.slice(0,24)+'|'+t.length;};
   const collect=()=>{h3n=0;
     const main=document.querySelector('main');if(!main)return [];
     const enTbl=new Set([...main.querySelectorAll('table')].filter(t=>{const x=t.textContent.replace(/\s/g,'');const a=(x.match(/[A-Za-z]/g)||[]).length;return x.length&&a/x.length>.3;}));
@@ -77,8 +79,8 @@
     const set=new Set(all);
     return all.filter(el=>{for(const d of el.querySelectorAll(SEL))if(set.has(d)&&d!==el)return false;  // 只取最內層
       if(el.tagName!=='TR'&&el.closest('tr'))return false; return true;})
-      .map(el=>({el,text:segText(el)})).filter(s=>s.text&&s.text.replace(/[【】：，。\s]/g,'').length>1)
-      .map((sg,i,arr)=>{sg.text=(opener(sg,arr[i-1])+sg.text).replace(/，\s*([。；：！？、])/g,'$1').replace(/(，\s*){2,}/g,'，').replace(/，\s*$/,'。').replace(/([。！？])\s*。+/g,'$1').replace(/(變成\s*){2,}/g,'變成 ').replace(/變成\s+(分解成|變成|形成|轉成|生成)/g,'$1');return sg;});
+      .map(el=>{const sg=sig(el);const sc=window.FOX_LIS&&FOX_LIS[sg];return {el,sig:sg,script:!!sc,text:sc!=null?sc:segText(el)};}).filter(s=>s.text&&s.text.replace(/[【】：，。\s]/g,'').length>1)
+      .map((sg,i,arr)=>{sg.text=((sg.script?'':opener(sg,arr[i-1]))+sg.text).replace(/，\s*([。；：！？、])/g,'$1').replace(/(，\s*){2,}/g,'，').replace(/，\s*$/,'。').replace(/([。！？])\s*。+/g,'$1').replace(/(變成\s*){2,}/g,'變成 ').replace(/變成\s+(分解成|變成|形成|轉成|生成)/g,'$1');return sg;});
   };
   /* 口語連接詞：讓段落之間接得順 */
   const NUM='一二三四五六七八九十';let pn=0;
@@ -110,7 +112,7 @@
       else chunks0(p.replace(/[⟦⟧]/g,'')).forEach(c=>out.push({t:c,em:false}));});return out;};
   const speak=(text,done)=>{stopRec();ss.cancel();queue=chunks(text);afterSpeak=done;next();};
   const next=()=>{if(!queue.length){const d=afterSpeak;afterSpeak=null;d&&d();return;}
-    const it=queue.shift();const u=new SpeechSynthesisUtterance(it.t);u.lang=voice?voice.lang:'zh-TW';u.rate=it.em?Math.max(.6,rate*.86):rate;u.pitch=it.em?1.15:1;u.volume=1;if(voice)u.voice=voice;
+    const it=queue.shift();const u=new SpeechSynthesisUtterance(it.t.replace(/、/g,'，'));u.lang=voice?voice.lang:'zh-TW';u.rate=it.em?Math.max(.6,rate*.86):rate;u.pitch=it.em?1.15:1;u.volume=1;if(voice)u.voice=voice;
     u.onend=()=>{if(state==='speaking'||state==='card')setTimeout(()=>{if(state==='speaking'||state==='card')next();},120);};u.onerror=e=>{if(e.error!=='interrupted'&&e.error!=='canceled')tip('語音播放失敗（'+e.error+'），請改用手機的 Chrome 開啟。');};
     window._lisU=u;ss.speak(u);};
 
@@ -217,7 +219,10 @@
   const stop=()=>{lockOff();clearGap();state='off';stopRec();ss&&ss.cancel();queue=[];document.querySelectorAll('.lisnow').forEach(x=>x.classList.remove('lisnow'));
     if(bar){bar.remove();bar=null;}document.body.classList.remove('listening');};
   const loadPy=()=>{if(window.FOX_PY)return;const sc=document.createElement('script');sc.src='fox_py.js';document.head.appendChild(sc);};
-  const start=()=>{loadPy();
+  const chNo=(location.pathname.match(/fox_ch(\d+)/)||[])[1];
+  const loadScript=cb=>{if(!chNo||window.FOX_LIS_CH===chNo)return cb();const sc=document.createElement('script');sc.src='fox_lis_'+chNo+'.js';
+    sc.onload=()=>{window.FOX_LIS_CH=chNo;cb();};sc.onerror=()=>{window.FOX_LIS_CH=chNo;cb();};document.head.appendChild(sc);};
+  const start=()=>{loadPy();if(window.FOX_LIS_CH!==chNo&&chNo)return loadScript(start);
     if(!ss||!window.SpeechSynthesisUtterance){tip('這個瀏覽器不支援朗讀。請點右上角「⋯」選「用預設瀏覽器開啟」，改用 Chrome 開啟。');return;}
     if(state!=='off'){stop();return;}
     pickVoice();segs=collect();if(!segs.length){tip('這一頁沒有可以朗讀的內容。');return;}
@@ -226,5 +231,5 @@
     if(!voice)ui('找不到國語語音，會用預設聲音念。Android 可到「設定 → 文字轉語音」下載中文（台灣）。');
     play(i);};
   loadPy();
-  window.foxListen={start,stop,readCard,_segs:()=>segs,_cmd:command,_interrupt:()=>interrupt()};
+  window.foxListen={_dump:()=>collect().map(s=>({sig:s.sig,tag:s.el.tagName+'.'+s.el.className,raw:s.el.textContent.replace(/\s+/g,' ').trim(),auto:s.text})),start,stop,readCard,_segs:()=>segs,_cmd:command,_interrupt:()=>interrupt()};
 })();
